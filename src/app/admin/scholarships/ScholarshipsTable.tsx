@@ -3,18 +3,20 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { ContentStatusBadge } from "@/components/admin/ContentStatusBadge";
-import {
-  SCHOLARSHIP_SCOPES,
-  type MockScholarship,
-} from "@/lib/mock-scholarships-data";
+import type { ScholarshipListRow } from "@/lib/queries/scholarships";
 
 export function ScholarshipsTable({
   scholarships,
 }: {
-  scholarships: MockScholarship[];
+  scholarships: ScholarshipListRow[];
 }) {
   const [search, setSearch] = useState("");
   const [scopeFilter, setScopeFilter] = useState("all");
+
+  const scopes = useMemo(
+    () => Array.from(new Set(scholarships.map((s) => s.scope))).sort(),
+    [scholarships],
+  );
 
   const filtered = useMemo(() => {
     return scholarships.filter((s) => {
@@ -41,7 +43,7 @@ export function ScholarshipsTable({
           className="rounded-md border border-ink/20 bg-paper px-3 py-1.5 font-body text-sm text-ink"
         >
           <option value="all">All scopes</option>
-          {SCHOLARSHIP_SCOPES.map((s) => (
+          {scopes.map((s) => (
             <option key={s} value={s}>
               {s}
             </option>
@@ -93,11 +95,11 @@ export function ScholarshipsTable({
                 <td className="px-3 py-2.5 text-slate">{s.scope}</td>
                 <td className="px-3 py-2.5 text-ink">{s.amount}</td>
                 <td className="px-3 py-2.5 font-utility text-ink">
-                  {s.deadlineDate ?? "—"}
+                  {s.deadline_date ?? "—"}
                 </td>
                 <td className="px-3 py-2.5 text-slate">
-                  {s.universitySlugs.length > 0
-                    ? s.universitySlugs.length
+                  {s.scholarship_universities.length > 0
+                    ? s.scholarship_universities.length
                     : "—"}
                 </td>
                 <td className="px-3 py-2.5">

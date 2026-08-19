@@ -1,7 +1,13 @@
-import { MOCK_SCHOLARSHIPS } from "@/lib/mock-scholarships-data";
+import { listScholarships } from "@/lib/queries/scholarships";
+import { createClient } from "@/lib/supabase/server";
 import { ScholarshipsTable } from "./ScholarshipsTable";
 
-export default function ScholarshipsPage() {
+export const dynamic = "force-dynamic";
+
+export default async function ScholarshipsPage() {
+  const supabase = await createClient();
+  const scholarships = await listScholarships(supabase);
+
   return (
     <div className="p-8">
       <div className="mb-6 flex items-center justify-between">
@@ -16,7 +22,7 @@ export default function ScholarshipsPage() {
         </button>
       </div>
 
-      <ScholarshipsTable scholarships={MOCK_SCHOLARSHIPS} />
+      <ScholarshipsTable scholarships={scholarships} />
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { getGuide, listGuides } from "@/lib/queries/guides";
+import { getGuide, getGuideRelatedLinks, listGuides } from "@/lib/queries/guides";
 import { listUniversities } from "@/lib/queries/universities";
 import { createClient } from "@/lib/supabase/server";
 import { GuideEditor } from "./GuideEditor";
@@ -14,10 +14,11 @@ export default async function GuideDetailPage({
   const { id } = await params;
   const supabase = await createClient();
 
-  const [guide, allGuides, universities] = await Promise.all([
+  const [guide, allGuides, universities, relatedLinks] = await Promise.all([
     getGuide(supabase, id),
     listGuides(supabase),
     listUniversities(supabase),
+    getGuideRelatedLinks(supabase, id),
   ]);
 
   if (!guide) notFound();
@@ -30,6 +31,7 @@ export default async function GuideDetailPage({
         guide={guide}
         otherGuides={otherGuides}
         universities={universities}
+        relatedLinks={relatedLinks}
       />
     </div>
   );

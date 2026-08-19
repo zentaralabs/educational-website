@@ -255,17 +255,13 @@ export interface Database {
           qa_firsthand_detail_added?: boolean;
         }
       >;
-      guide_related_links: Table<
-        {
-          guide_id: string;
-          related_guide_id: string;
-          related_university_id: string;
-        },
-        {
-          guide_id: string;
-          related_guide_id: string;
-          related_university_id: string;
-        }
+      guide_related_guides: Table<
+        { guide_id: string; related_guide_id: string },
+        { guide_id: string; related_guide_id: string }
+      >;
+      guide_related_universities: Table<
+        { guide_id: string; related_university_id: string },
+        { guide_id: string; related_university_id: string }
       >;
       activity_log: Table<
         {

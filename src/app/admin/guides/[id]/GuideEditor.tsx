@@ -4,7 +4,11 @@ import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import { ContentStatusBadge } from "@/components/admin/ContentStatusBadge";
 import type { GuideDetailRow, GuideListRow } from "@/lib/queries/guides";
-import { updateGuide } from "@/lib/queries/guides";
+import {
+  syncGuideRelatedGuides,
+  syncGuideRelatedUniversities,
+  updateGuide,
+} from "@/lib/queries/guides";
 import type { UniversityListRow } from "@/lib/queries/universities";
 import { createClient } from "@/lib/supabase/client";
 import type { ContentStatus } from "@/lib/supabase/types";
@@ -76,10 +80,12 @@ export function GuideEditor({
   guide,
   otherGuides,
   universities,
+  relatedLinks,
 }: {
   guide: GuideDetailRow;
   otherGuides: GuideListRow[];
   universities: UniversityListRow[];
+  relatedLinks: { relatedGuideIds: string[]; relatedUniversityIds: string[] };
 }) {
   const router = useRouter();
   const [content, setContent] = useState(guide.content);
@@ -92,13 +98,12 @@ export function GuideEditor({
   const [message, setMessage] = useState<string | null>(null);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
-  // Related-content picker: local UI only for now. guide_related_links has
-  // a 3-column composite primary key (guide_id, related_guide_id,
-  // related_university_id) which forces every column NOT NULL, so it can't
-  // actually store a guide-only or university-only link as specified. Needs
-  // a follow-up migration (two separate join tables) before this persists.
-  const [relatedGuideIds, setRelatedGuideIds] = useState<Set<string>>(new Set());
-  const [relatedUniSlugs, setRelatedUniSlugs] = useState<Set<string>>(new Set());
+  const [relatedGuideIds, setRelatedGuideIds] = useState(
+    new Set(relatedLinks.relatedGuideIds),
+  );
+  const [relatedUniIds, setRelatedUniIds] = useState(
+    new Set(relatedLinks.relatedUniversityIds),
+  );
 
   const words = useMemo(() => wordCount(content), [content]);
   const previewHtml = useMemo(() => renderMarkdownPreview(content), [content]);
@@ -114,11 +119,11 @@ export function GuideEditor({
     });
   }
 
-  function toggleRelatedUni(slug: string) {
-    setRelatedUniSlugs((prev) => {
+  function toggleRelatedUni(id: string) {
+    setRelatedUniIds((prev) => {
       const next = new Set(prev);
-      if (next.has(slug)) next.delete(slug);
-      else next.add(slug);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
       return next;
     });
   }
@@ -140,6 +145,10 @@ export function GuideEditor({
           ? { last_verified_at: new Date().toISOString().slice(0, 10) }
           : {}),
       });
+      await Promise.all([
+        syncGuideRelatedGuides(supabase, guide.id, Array.from(relatedGuideIds)),
+        syncGuideRelatedUniversities(supabase, guide.id, Array.from(relatedUniIds)),
+      ]);
       setStatus(targetStatus);
       setMessage(targetStatus === "published" ? "Published." : "Draft saved.");
       router.refresh();
@@ -248,12 +257,9 @@ export function GuideEditor({
           </div>
 
           <div className="rounded-md border border-ink/15 p-4">
-            <h2 className="mb-1 font-body text-xs font-semibold tracking-wide text-slate uppercase">
+            <h2 className="mb-3 font-body text-xs font-semibold tracking-wide text-slate uppercase">
               Related guides
             </h2>
-            <p className="mb-3 font-body text-xs text-slate">
-              Not saved yet — pending a join-table migration fix.
-            </p>
             <div className="flex flex-col gap-2">
               {otherGuides.map((g) => (
                 <label
@@ -273,12 +279,9 @@ export function GuideEditor({
           </div>
 
           <div className="rounded-md border border-ink/15 p-4">
-            <h2 className="mb-1 font-body text-xs font-semibold tracking-wide text-slate uppercase">
+            <h2 className="mb-3 font-body text-xs font-semibold tracking-wide text-slate uppercase">
               Related universities
             </h2>
-            <p className="mb-3 font-body text-xs text-slate">
-              Not saved yet — pending a join-table migration fix.
-            </p>
             <div className="flex flex-col gap-2">
               {universities.map((u) => (
                 <label
@@ -287,8 +290,8 @@ export function GuideEditor({
                 >
                   <input
                     type="checkbox"
-                    checked={relatedUniSlugs.has(u.slug)}
-                    onChange={() => toggleRelatedUni(u.slug)}
+                    checked={relatedUniIds.has(u.id)}
+                    onChange={() => toggleRelatedUni(u.id)}
                     className="mt-0.5"
                   />
                   {u.name}

@@ -53,3 +53,72 @@ export async function updateGuide(
   const { error } = await supabase.from("guides").update(patch).eq("id", id);
   if (error) throw error;
 }
+
+export async function getGuideRelatedLinks(
+  supabase: SupabaseClient<Database>,
+  guideId: string,
+) {
+  const [relatedGuides, relatedUniversities] = await Promise.all([
+    supabase
+      .from("guide_related_guides")
+      .select("related_guide_id")
+      .eq("guide_id", guideId),
+    supabase
+      .from("guide_related_universities")
+      .select("related_university_id")
+      .eq("guide_id", guideId),
+  ]);
+
+  if (relatedGuides.error) throw relatedGuides.error;
+  if (relatedUniversities.error) throw relatedUniversities.error;
+
+  return {
+    relatedGuideIds: (relatedGuides.data ?? []).map((r) => r.related_guide_id),
+    relatedUniversityIds: (relatedUniversities.data ?? []).map(
+      (r) => r.related_university_id,
+    ),
+  };
+}
+
+export async function syncGuideRelatedGuides(
+  supabase: SupabaseClient<Database>,
+  guideId: string,
+  relatedGuideIds: string[],
+) {
+  const { error: deleteError } = await supabase
+    .from("guide_related_guides")
+    .delete()
+    .eq("guide_id", guideId);
+  if (deleteError) throw deleteError;
+
+  if (relatedGuideIds.length === 0) return;
+
+  const { error: insertError } = await supabase
+    .from("guide_related_guides")
+    .insert(relatedGuideIds.map((related_guide_id) => ({ guide_id: guideId, related_guide_id })));
+  if (insertError) throw insertError;
+}
+
+export async function syncGuideRelatedUniversities(
+  supabase: SupabaseClient<Database>,
+  guideId: string,
+  relatedUniversityIds: string[],
+) {
+  const { error: deleteError } = await supabase
+    .from("guide_related_universities")
+    .delete()
+    .eq("guide_id", guideId);
+  if (deleteError) throw deleteError;
+
+  if (relatedUniversityIds.length === 0) return;
+
+  const { error: insertError } = await supabase
+    .from("guide_related_universities")
+    .insert(
+      relatedUniversityIds.map((related_university_id) => ({
+        guide_id: guideId,
+        related_university_id,
+      })),
+    );
+  if (insertError) throw insertError;
+}

@@ -1,21 +1,32 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { ContentStatusBadge } from "@/components/admin/ContentStatusBadge";
-import type { MockUniversity } from "@/lib/mock-admin-data";
+import type { UniversityListRow } from "@/lib/queries/universities";
 import {
-  SCHOLARSHIP_SCOPES,
-  type MockScholarship,
-  type ScholarshipScope,
-} from "@/lib/mock-scholarships-data";
+  syncScholarshipUniversities,
+  updateScholarship,
+  type ScholarshipDetailRow,
+} from "@/lib/queries/scholarships";
+import { createClient } from "@/lib/supabase/client";
+import type { ContentStatus } from "@/lib/supabase/types";
+
+const SCHOLARSHIP_SCOPES = [
+  "university-specific",
+  "national",
+  "external/foundation",
+];
 
 function Field({
   label,
   value,
+  onChange,
   hint,
 }: {
   label: string;
   value: string;
+  onChange: (v: string) => void;
   hint?: string;
 }) {
   return (
@@ -24,7 +35,8 @@ function Field({
         {label}
       </span>
       <input
-        defaultValue={value}
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
         className="w-full rounded-md border border-ink/20 bg-paper px-3 py-1.5 font-body text-sm text-ink focus-visible:border-status-open"
       />
       {hint && <span className="mt-1 block text-xs text-slate">{hint}</span>}
@@ -36,21 +48,64 @@ export function ScholarshipEditForm({
   scholarship,
   universities,
 }: {
-  scholarship: MockScholarship;
-  universities: MockUniversity[];
+  scholarship: ScholarshipDetailRow;
+  universities: UniversityListRow[];
 }) {
-  const [scope, setScope] = useState<ScholarshipScope>(scholarship.scope);
-  const [universitySlugs, setUniversitySlugs] = useState(
-    new Set(scholarship.universitySlugs),
+  const router = useRouter();
+  const [name, setName] = useState(scholarship.name);
+  const [scope, setScope] = useState(scholarship.scope);
+  const [amount, setAmount] = useState(scholarship.amount ?? "");
+  const [eligibility, setEligibility] = useState(scholarship.eligibility ?? "");
+  const [deadlineDate, setDeadlineDate] = useState(scholarship.deadline_date ?? "");
+  const [externalUrl, setExternalUrl] = useState(scholarship.external_url ?? "");
+  const [status, setStatus] = useState<ContentStatus>(scholarship.status);
+  const [universityIds, setUniversityIds] = useState(
+    new Set(scholarship.scholarship_universities.map((su) => su.university_id)),
   );
+  const [saving, setSaving] = useState<"draft" | "publish" | null>(null);
+  const [message, setMessage] = useState<string | null>(null);
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
-  function toggleUniversity(slug: string) {
-    setUniversitySlugs((prev) => {
+  function toggleUniversity(id: string) {
+    setUniversityIds((prev) => {
       const next = new Set(prev);
-      if (next.has(slug)) next.delete(slug);
-      else next.add(slug);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
       return next;
     });
+  }
+
+  async function save(targetStatus: ContentStatus, kind: "draft" | "publish") {
+    setSaving(kind);
+    setErrorMsg(null);
+    setMessage(null);
+    try {
+      const supabase = createClient();
+      await updateScholarship(supabase, scholarship.id, {
+        name,
+        scope,
+        amount: amount || null,
+        eligibility: eligibility || null,
+        deadline_date: deadlineDate || null,
+        external_url: externalUrl || null,
+        status: targetStatus,
+        ...(targetStatus === "published"
+          ? { last_verified_at: new Date().toISOString().slice(0, 10) }
+          : {}),
+      });
+      await syncScholarshipUniversities(
+        supabase,
+        scholarship.id,
+        Array.from(universityIds),
+      );
+      setStatus(targetStatus);
+      setMessage(targetStatus === "published" ? "Published." : "Draft saved.");
+      router.refresh();
+    } catch (err) {
+      setErrorMsg(err instanceof Error ? err.message : "Save failed");
+    } finally {
+      setSaving(null);
+    }
   }
 
   return (
@@ -61,28 +116,38 @@ export function ScholarshipEditForm({
             {scholarship.name}
           </h1>
           <div className="mt-1 flex items-center gap-2">
-            <ContentStatusBadge status={scholarship.status} />
+            <ContentStatusBadge status={status} />
           </div>
         </div>
-        <div className="flex gap-2">
+        <div className="flex items-center gap-2">
+          {message && (
+            <span className="font-body text-xs text-status-open">{message}</span>
+          )}
+          {errorMsg && (
+            <span className="font-body text-xs text-status-closed">{errorMsg}</span>
+          )}
           <button
             type="button"
-            className="rounded-md border border-ink/20 px-3 py-1.5 font-body text-sm text-ink transition-colors duration-150 hover:border-status-open"
+            disabled={saving !== null}
+            onClick={() => save("draft", "draft")}
+            className="rounded-md border border-ink/20 px-3 py-1.5 font-body text-sm text-ink transition-colors duration-150 hover:border-status-open disabled:opacity-50"
           >
-            Save draft
+            {saving === "draft" ? "Saving…" : "Save draft"}
           </button>
           <button
             type="button"
-            className="rounded-md bg-status-open px-3 py-1.5 font-body text-sm font-medium text-paper transition-opacity duration-150 hover:opacity-90"
+            disabled={saving !== null}
+            onClick={() => save("published", "publish")}
+            className="rounded-md bg-status-open px-3 py-1.5 font-body text-sm font-medium text-paper transition-opacity duration-150 hover:opacity-90 disabled:opacity-50"
           >
-            Publish
+            {saving === "publish" ? "Publishing…" : "Publish"}
           </button>
         </div>
       </div>
 
       <div className="grid gap-8 lg:grid-cols-[1fr_280px]">
         <div className="grid max-w-2xl gap-4 sm:grid-cols-2">
-          <Field label="Name" value={scholarship.name} />
+          <Field label="Name" value={name} onChange={setName} />
 
           <label className="block">
             <span className="mb-1 block font-body text-xs font-semibold tracking-wide text-slate uppercase">
@@ -90,7 +155,7 @@ export function ScholarshipEditForm({
             </span>
             <select
               value={scope}
-              onChange={(e) => setScope(e.target.value as ScholarshipScope)}
+              onChange={(e) => setScope(e.target.value)}
               className="w-full rounded-md border border-ink/20 bg-paper px-3 py-1.5 font-body text-sm text-ink"
             >
               {SCHOLARSHIP_SCOPES.map((s) => (
@@ -101,17 +166,17 @@ export function ScholarshipEditForm({
             </select>
           </label>
 
-          <Field label="Amount" value={scholarship.amount} />
+          <Field label="Amount" value={amount} onChange={setAmount} />
           <Field
             label="Deadline"
-            value={scholarship.deadlineDate ?? ""}
+            value={deadlineDate}
+            onChange={setDeadlineDate}
             hint="YYYY-MM-DD, leave blank if not fixed"
           />
           <div className="sm:col-span-2">
-            <Field label="Eligibility" value={scholarship.eligibility} />
+            <Field label="Eligibility" value={eligibility} onChange={setEligibility} />
           </div>
-          <Field label="Country" value={scholarship.country ?? ""} />
-          <Field label="External URL" value={scholarship.externalUrl} />
+          <Field label="External URL" value={externalUrl} onChange={setExternalUrl} />
         </div>
 
         <aside>
@@ -132,8 +197,8 @@ export function ScholarshipEditForm({
                 >
                   <input
                     type="checkbox"
-                    checked={universitySlugs.has(u.slug)}
-                    onChange={() => toggleUniversity(u.slug)}
+                    checked={universityIds.has(u.id)}
+                    onChange={() => toggleUniversity(u.id)}
                     className="mt-0.5"
                   />
                   {u.name}

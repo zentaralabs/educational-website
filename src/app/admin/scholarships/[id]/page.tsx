@@ -1,7 +1,10 @@
 import { notFound } from "next/navigation";
-import { MOCK_UNIVERSITIES } from "@/lib/mock-admin-data";
-import { MOCK_SCHOLARSHIPS } from "@/lib/mock-scholarships-data";
+import { getScholarship } from "@/lib/queries/scholarships";
+import { listUniversities } from "@/lib/queries/universities";
+import { createClient } from "@/lib/supabase/server";
 import { ScholarshipEditForm } from "./ScholarshipEditForm";
+
+export const dynamic = "force-dynamic";
 
 export default async function ScholarshipDetailPage({
   params,
@@ -9,16 +12,18 @@ export default async function ScholarshipDetailPage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const scholarship = MOCK_SCHOLARSHIPS.find((s) => s.id === id);
+  const supabase = await createClient();
+
+  const [scholarship, universities] = await Promise.all([
+    getScholarship(supabase, id),
+    listUniversities(supabase),
+  ]);
 
   if (!scholarship) notFound();
 
   return (
     <div className="p-8">
-      <ScholarshipEditForm
-        scholarship={scholarship}
-        universities={MOCK_UNIVERSITIES}
-      />
+      <ScholarshipEditForm scholarship={scholarship} universities={universities} />
     </div>
   );
 }
