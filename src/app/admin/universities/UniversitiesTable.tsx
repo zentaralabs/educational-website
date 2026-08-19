@@ -2,12 +2,14 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import { useRouter } from "next/navigation";
 import { ContentStatusBadge } from "@/components/admin/ContentStatusBadge";
 import {
-  COUNTRY_LABELS,
-  type ContentStatus,
-  type MockUniversity,
-} from "@/lib/mock-admin-data";
+  bulkUpdateUniversityStatus,
+  type UniversityListRow,
+} from "@/lib/queries/universities";
+import { createClient } from "@/lib/supabase/client";
+import type { ContentStatus } from "@/lib/supabase/types";
 
 const STATUS_OPTIONS: ContentStatus[] = [
   "draft",
@@ -19,29 +21,34 @@ const STATUS_OPTIONS: ContentStatus[] = [
 
 export function UniversitiesTable({
   initialUniversities,
+  countries,
 }: {
-  initialUniversities: MockUniversity[];
+  initialUniversities: UniversityListRow[];
+  countries: { id: number; code: string; name: string }[];
 }) {
-  const [universities, setUniversities] = useState(initialUniversities);
+  const router = useRouter();
   const [search, setSearch] = useState("");
   const [countryFilter, setCountryFilter] = useState<string>("all");
   const [statusFilter, setStatusFilter] = useState<string>("all");
   const [selected, setSelected] = useState<Set<string>>(new Set());
+  const [pending, setPending] = useState(false);
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
   const filtered = useMemo(() => {
-    return universities.filter((u) => {
+    return initialUniversities.filter((u) => {
       if (
         search &&
         !u.name.toLowerCase().includes(search.toLowerCase()) &&
-        !u.city.toLowerCase().includes(search.toLowerCase())
+        !(u.city ?? "").toLowerCase().includes(search.toLowerCase())
       ) {
         return false;
       }
-      if (countryFilter !== "all" && u.country !== countryFilter) return false;
+      if (countryFilter !== "all" && u.country?.code !== countryFilter)
+        return false;
       if (statusFilter !== "all" && u.status !== statusFilter) return false;
       return true;
     });
-  }, [universities, search, countryFilter, statusFilter]);
+  }, [initialUniversities, search, countryFilter, statusFilter]);
 
   function toggleAll() {
     if (selected.size === filtered.length) {
@@ -60,11 +67,19 @@ export function UniversitiesTable({
     });
   }
 
-  function bulkSetStatus(status: ContentStatus) {
-    setUniversities((prev) =>
-      prev.map((u) => (selected.has(u.id) ? { ...u, status } : u)),
-    );
-    setSelected(new Set());
+  async function bulkSetStatus(status: ContentStatus) {
+    setPending(true);
+    setErrorMsg(null);
+    try {
+      const supabase = createClient();
+      await bulkUpdateUniversityStatus(supabase, Array.from(selected), status);
+      setSelected(new Set());
+      router.refresh();
+    } catch (err) {
+      setErrorMsg(err instanceof Error ? err.message : "Update failed");
+    } finally {
+      setPending(false);
+    }
   }
 
   return (
@@ -84,9 +99,9 @@ export function UniversitiesTable({
           className="rounded-md border border-ink/20 bg-paper px-3 py-1.5 font-body text-sm text-ink"
         >
           <option value="all">All countries</option>
-          {Object.entries(COUNTRY_LABELS).map(([code, label]) => (
-            <option key={code} value={code}>
-              {label}
+          {countries.map((c) => (
+            <option key={c.id} value={c.code}>
+              {c.name}
             </option>
           ))}
         </select>
@@ -105,22 +120,29 @@ export function UniversitiesTable({
         </select>
 
         <span className="ml-auto font-body text-xs text-slate">
-          {filtered.length} of {universities.length}
+          {filtered.length} of {initialUniversities.length}
         </span>
       </div>
+
+      {errorMsg && (
+        <p className="mb-3 font-body text-sm text-status-closed">{errorMsg}</p>
+      )}
 
       {selected.size > 0 && (
         <div className="mb-3 flex items-center gap-3 rounded-md border border-status-pending/40 bg-status-pending/10 px-3 py-2">
           <span className="font-body text-sm text-ink">
             {selected.size} selected
           </span>
-          <span className="font-body text-xs text-slate">Set status:</span>
+          <span className="font-body text-xs text-slate">
+            {pending ? "Saving…" : "Set status:"}
+          </span>
           {STATUS_OPTIONS.map((s) => (
             <button
               key={s}
               type="button"
+              disabled={pending}
               onClick={() => bulkSetStatus(s)}
-              className="rounded border border-ink/20 bg-paper px-2 py-1 font-body text-xs text-ink transition-colors duration-150 hover:border-status-open"
+              className="rounded border border-ink/20 bg-paper px-2 py-1 font-body text-xs text-ink transition-colors duration-150 hover:border-status-open disabled:opacity-50"
             >
               {s.replace("_", " ")}
             </button>
@@ -187,17 +209,21 @@ export function UniversitiesTable({
                     {u.city}
                   </div>
                 </td>
-                <td className="px-3 py-2.5 text-ink">{u.country}</td>
+                <td className="px-3 py-2.5 text-ink">
+                  {u.country?.code ?? "—"}
+                </td>
                 <td className="px-3 py-2.5">
                   <ContentStatusBadge status={u.status} />
                 </td>
                 <td className="px-3 py-2.5 font-utility text-ink">
-                  {u.acceptanceRate !== null ? `${u.acceptanceRate}%` : "—"}
+                  {u.acceptance_rate !== null ? `${u.acceptance_rate}%` : "—"}
                 </td>
                 <td className="px-3 py-2.5 font-utility text-slate">
-                  {u.lastVerifiedAt ?? "never"}
+                  {u.last_verified_at ?? "never"}
                 </td>
-                <td className="px-3 py-2.5 text-slate">{u.author}</td>
+                <td className="px-3 py-2.5 text-slate">
+                  {u.author?.name ?? "—"}
+                </td>
               </tr>
             ))}
             {filtered.length === 0 && (

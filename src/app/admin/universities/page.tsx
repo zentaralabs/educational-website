@@ -1,7 +1,16 @@
-import { MOCK_UNIVERSITIES } from "@/lib/mock-admin-data";
+import { listCountries, listUniversities } from "@/lib/queries/universities";
+import { createClient } from "@/lib/supabase/server";
 import { UniversitiesTable } from "./UniversitiesTable";
 
-export default function UniversitiesPage() {
+export const dynamic = "force-dynamic";
+
+export default async function UniversitiesPage() {
+  const supabase = await createClient();
+  const [universities, countries] = await Promise.all([
+    listUniversities(supabase),
+    listCountries(supabase),
+  ]);
+
   return (
     <div className="p-8">
       <div className="mb-6 flex items-center justify-between">
@@ -16,7 +25,10 @@ export default function UniversitiesPage() {
         </button>
       </div>
 
-      <UniversitiesTable initialUniversities={MOCK_UNIVERSITIES} />
+      <UniversitiesTable
+        initialUniversities={universities}
+        countries={countries}
+      />
     </div>
   );
 }

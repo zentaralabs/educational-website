@@ -37,8 +37,8 @@ Do not assume defaults that contradict either file — the design direction, mon
 
 ## Status
 
-User accounts scope resolved: **deferred** to a later phase (not modeled in initial schema). Next.js app scaffolded (TypeScript, App Router, Tailwind). Homepage built (search + live deadline card, per Section 7). Full admin panel built per Section 6 — Universities, Deadlines, Guides, Scholarships, Review Queue, and Dashboard — all currently running on mock data in `src/lib/mock-*.ts`, with no auth gate yet.
+User accounts scope resolved: **deferred** to a later phase (not modeled in initial schema). Next.js app scaffolded (TypeScript, App Router, Tailwind). Homepage built (search + live deadline card, per Section 7). Full admin panel built per Section 6 — Universities, Deadlines, Guides, Scholarships, Review Queue, and Dashboard.
 
-Supabase project not yet provisioned — schema exists as migration files under `supabase/migrations/`, ready to apply once a project is created. That's the next real dependency: swapping the mock data for live queries, and adding the Supabase-auth gate on `/admin`.
+Supabase project provisioned, both migrations applied, lookup tables seeded. Auth is live — `/admin` is gated (via `src/proxy.ts`), with a working login page and a first admin account. **Universities** is fully wired to live Supabase queries (list, detail edit, bulk status, publish) — the pattern proven end-to-end. Deadlines, Guides, and Scholarships still run on mock data in `src/lib/mock-*.ts` and need the same swap.
 
 Public-facing templates (university profile, deadline calendar, guide page, comparison page) and legal pages are not yet built.
