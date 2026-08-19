@@ -42,7 +42,3 @@ User accounts scope resolved: **deferred** to a later phase (not modeled in init
 Supabase project not yet provisioned — schema exists as migration files under `supabase/migrations/`, ready to apply once a project is created. That's the next real dependency: swapping the mock data for live queries, and adding the Supabase-auth gate on `/admin`.
 
 Public-facing templates (university profile, deadline calendar, guide page, comparison page) and legal pages are not yet built.
-# educational-website
-# educational-website
-# educational-website
-# educational-website
