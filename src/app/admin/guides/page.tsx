@@ -1,7 +1,13 @@
-import { MOCK_GUIDES } from "@/lib/mock-guides-data";
+import { listGuides } from "@/lib/queries/guides";
+import { createClient } from "@/lib/supabase/server";
 import { GuidesTable } from "./GuidesTable";
 
-export default function GuidesPage() {
+export const dynamic = "force-dynamic";
+
+export default async function GuidesPage() {
+  const supabase = await createClient();
+  const guides = await listGuides(supabase);
+
   return (
     <div className="p-8">
       <div className="mb-6 flex items-center justify-between">
@@ -16,7 +22,7 @@ export default function GuidesPage() {
         </button>
       </div>
 
-      <GuidesTable guides={MOCK_GUIDES} />
+      <GuidesTable guides={guides} />
     </div>
   );
 }

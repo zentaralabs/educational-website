@@ -3,20 +3,25 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { ContentStatusBadge } from "@/components/admin/ContentStatusBadge";
-import { GUIDE_CATEGORIES, type MockGuide } from "@/lib/mock-guides-data";
+import type { GuideListRow } from "@/lib/queries/guides";
 
-function qaCompleteness(g: MockGuide): string {
+function qaCompleteness(g: GuideListRow): string {
   const total = 3;
   const done =
-    Number(g.qaFactsVerified) +
-    Number(g.qaSentenceVariationChecked) +
-    Number(g.qaFirsthandDetailAdded);
+    Number(g.qa_facts_verified) +
+    Number(g.qa_sentence_variation_checked) +
+    Number(g.qa_firsthand_detail_added);
   return `${done}/${total}`;
 }
 
-export function GuidesTable({ guides }: { guides: MockGuide[] }) {
+export function GuidesTable({ guides }: { guides: GuideListRow[] }) {
   const [search, setSearch] = useState("");
   const [categoryFilter, setCategoryFilter] = useState("all");
+
+  const categories = useMemo(
+    () => Array.from(new Set(guides.map((g) => g.category))).sort(),
+    [guides],
+  );
 
   const filtered = useMemo(() => {
     return guides.filter((g) => {
@@ -44,7 +49,7 @@ export function GuidesTable({ guides }: { guides: MockGuide[] }) {
           className="rounded-md border border-ink/20 bg-paper px-3 py-1.5 font-body text-sm text-ink"
         >
           <option value="all">All categories</option>
-          {GUIDE_CATEGORIES.map((c) => (
+          {categories.map((c) => (
             <option key={c} value={c}>
               {c}
             </option>
@@ -100,7 +105,9 @@ export function GuidesTable({ guides }: { guides: MockGuide[] }) {
                 <td className="px-3 py-2.5 font-utility text-ink">
                   {qaCompleteness(g)}
                 </td>
-                <td className="px-3 py-2.5 text-slate">{g.author}</td>
+                <td className="px-3 py-2.5 text-slate">
+                  {g.author?.name ?? "—"}
+                </td>
               </tr>
             ))}
             {filtered.length === 0 && (

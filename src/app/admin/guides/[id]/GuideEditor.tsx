@@ -1,9 +1,13 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { useRouter } from "next/navigation";
 import { ContentStatusBadge } from "@/components/admin/ContentStatusBadge";
-import type { MockGuide } from "@/lib/mock-guides-data";
-import type { MockUniversity } from "@/lib/mock-admin-data";
+import type { GuideDetailRow, GuideListRow } from "@/lib/queries/guides";
+import { updateGuide } from "@/lib/queries/guides";
+import type { UniversityListRow } from "@/lib/queries/universities";
+import { createClient } from "@/lib/supabase/client";
+import type { ContentStatus } from "@/lib/supabase/types";
 
 function wordCount(text: string): number {
   return text.trim().split(/\s+/).filter(Boolean).length;
@@ -73,21 +77,28 @@ export function GuideEditor({
   otherGuides,
   universities,
 }: {
-  guide: MockGuide;
-  otherGuides: MockGuide[];
-  universities: MockUniversity[];
+  guide: GuideDetailRow;
+  otherGuides: GuideListRow[];
+  universities: UniversityListRow[];
 }) {
+  const router = useRouter();
   const [content, setContent] = useState(guide.content);
   const [showPreview, setShowPreview] = useState(false);
-  const [qaFacts, setQaFacts] = useState(guide.qaFactsVerified);
-  const [qaSentence, setQaSentence] = useState(guide.qaSentenceVariationChecked);
-  const [qaFirsthand, setQaFirsthand] = useState(guide.qaFirsthandDetailAdded);
-  const [relatedGuideIds, setRelatedGuideIds] = useState(
-    new Set(guide.relatedGuideIds),
-  );
-  const [relatedUniSlugs, setRelatedUniSlugs] = useState(
-    new Set(guide.relatedUniversitySlugs),
-  );
+  const [qaFacts, setQaFacts] = useState(guide.qa_facts_verified);
+  const [qaSentence, setQaSentence] = useState(guide.qa_sentence_variation_checked);
+  const [qaFirsthand, setQaFirsthand] = useState(guide.qa_firsthand_detail_added);
+  const [status, setStatus] = useState<ContentStatus>(guide.status);
+  const [saving, setSaving] = useState<"draft" | "publish" | null>(null);
+  const [message, setMessage] = useState<string | null>(null);
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
+
+  // Related-content picker: local UI only for now. guide_related_links has
+  // a 3-column composite primary key (guide_id, related_guide_id,
+  // related_university_id) which forces every column NOT NULL, so it can't
+  // actually store a guide-only or university-only link as specified. Needs
+  // a follow-up migration (two separate join tables) before this persists.
+  const [relatedGuideIds, setRelatedGuideIds] = useState<Set<string>>(new Set());
+  const [relatedUniSlugs, setRelatedUniSlugs] = useState<Set<string>>(new Set());
 
   const words = useMemo(() => wordCount(content), [content]);
   const previewHtml = useMemo(() => renderMarkdownPreview(content), [content]);
@@ -112,6 +123,33 @@ export function GuideEditor({
     });
   }
 
+  async function save(targetStatus: ContentStatus, kind: "draft" | "publish") {
+    setSaving(kind);
+    setErrorMsg(null);
+    setMessage(null);
+    try {
+      const supabase = createClient();
+      await updateGuide(supabase, guide.id, {
+        content,
+        word_count: words,
+        qa_facts_verified: qaFacts,
+        qa_sentence_variation_checked: qaSentence,
+        qa_firsthand_detail_added: qaFirsthand,
+        status: targetStatus,
+        ...(targetStatus === "published"
+          ? { last_verified_at: new Date().toISOString().slice(0, 10) }
+          : {}),
+      });
+      setStatus(targetStatus);
+      setMessage(targetStatus === "published" ? "Published." : "Draft saved.");
+      router.refresh();
+    } catch (err) {
+      setErrorMsg(err instanceof Error ? err.message : "Save failed");
+    } finally {
+      setSaving(null);
+    }
+  }
+
   return (
     <div>
       <div className="mb-6 flex items-center justify-between">
@@ -120,13 +158,19 @@ export function GuideEditor({
             {guide.title}
           </h1>
           <div className="mt-1 flex items-center gap-2">
-            <ContentStatusBadge status={guide.status} />
+            <ContentStatusBadge status={status} />
             <span className="font-utility text-xs text-slate">
               /{guide.slug} · {words} words
             </span>
           </div>
         </div>
-        <div className="flex gap-2">
+        <div className="flex items-center gap-2">
+          {message && (
+            <span className="font-body text-xs text-status-open">{message}</span>
+          )}
+          {errorMsg && (
+            <span className="font-body text-xs text-status-closed">{errorMsg}</span>
+          )}
           <button
             type="button"
             onClick={() => setShowPreview((v) => !v)}
@@ -136,21 +180,24 @@ export function GuideEditor({
           </button>
           <button
             type="button"
-            className="rounded-md border border-ink/20 px-3 py-1.5 font-body text-sm text-ink transition-colors duration-150 hover:border-status-open"
+            disabled={saving !== null}
+            onClick={() => save("draft", "draft")}
+            className="rounded-md border border-ink/20 px-3 py-1.5 font-body text-sm text-ink transition-colors duration-150 hover:border-status-open disabled:opacity-50"
           >
-            Save draft
+            {saving === "draft" ? "Saving…" : "Save draft"}
           </button>
           <button
             type="button"
-            disabled={!readyToPublish}
+            disabled={!readyToPublish || saving !== null}
             title={
               readyToPublish
                 ? undefined
                 : "Complete the QA checklist before publishing"
             }
+            onClick={() => save("published", "publish")}
             className="rounded-md bg-status-open px-3 py-1.5 font-body text-sm font-medium text-paper transition-opacity duration-150 hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40"
           >
-            Publish
+            {saving === "publish" ? "Publishing…" : "Publish"}
           </button>
         </div>
       </div>
@@ -201,9 +248,12 @@ export function GuideEditor({
           </div>
 
           <div className="rounded-md border border-ink/15 p-4">
-            <h2 className="mb-3 font-body text-xs font-semibold tracking-wide text-slate uppercase">
+            <h2 className="mb-1 font-body text-xs font-semibold tracking-wide text-slate uppercase">
               Related guides
             </h2>
+            <p className="mb-3 font-body text-xs text-slate">
+              Not saved yet — pending a join-table migration fix.
+            </p>
             <div className="flex flex-col gap-2">
               {otherGuides.map((g) => (
                 <label
@@ -223,9 +273,12 @@ export function GuideEditor({
           </div>
 
           <div className="rounded-md border border-ink/15 p-4">
-            <h2 className="mb-3 font-body text-xs font-semibold tracking-wide text-slate uppercase">
+            <h2 className="mb-1 font-body text-xs font-semibold tracking-wide text-slate uppercase">
               Related universities
             </h2>
+            <p className="mb-3 font-body text-xs text-slate">
+              Not saved yet — pending a join-table migration fix.
+            </p>
             <div className="flex flex-col gap-2">
               {universities.map((u) => (
                 <label

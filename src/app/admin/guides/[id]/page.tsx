@@ -1,7 +1,10 @@
 import { notFound } from "next/navigation";
-import { MOCK_UNIVERSITIES } from "@/lib/mock-admin-data";
-import { MOCK_GUIDES } from "@/lib/mock-guides-data";
+import { getGuide, listGuides } from "@/lib/queries/guides";
+import { listUniversities } from "@/lib/queries/universities";
+import { createClient } from "@/lib/supabase/server";
 import { GuideEditor } from "./GuideEditor";
+
+export const dynamic = "force-dynamic";
 
 export default async function GuideDetailPage({
   params,
@@ -9,18 +12,24 @@ export default async function GuideDetailPage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const guide = MOCK_GUIDES.find((g) => g.id === id);
+  const supabase = await createClient();
+
+  const [guide, allGuides, universities] = await Promise.all([
+    getGuide(supabase, id),
+    listGuides(supabase),
+    listUniversities(supabase),
+  ]);
 
   if (!guide) notFound();
 
-  const otherGuides = MOCK_GUIDES.filter((g) => g.id !== id);
+  const otherGuides = allGuides.filter((g) => g.id !== id);
 
   return (
     <div className="p-8">
       <GuideEditor
         guide={guide}
         otherGuides={otherGuides}
-        universities={MOCK_UNIVERSITIES}
+        universities={universities}
       />
     </div>
   );
