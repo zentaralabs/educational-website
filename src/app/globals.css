@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens — PROJECT_STATUS.md Section 7 ("application dossier meets
+ * live status tracker"). Derive all UI from these; don't introduce new
+ * colors/fonts ad hoc.
+ */
+:root {
+  --color-paper: #ffffff;
+  --color-ink: #1b2a4a;
+  --color-slate: #4a5d7e;
+
+  --color-status-open: #3f6b4f;
+  --color-status-pending: #b8823d;
+  --color-status-closed: #8b3a3a;
+}
+
+@theme inline {
+  --color-paper: var(--color-paper);
+  --color-ink: var(--color-ink);
+  --color-slate: var(--color-slate);
+
+  --color-status-open: var(--color-status-open);
+  --color-status-pending: var(--color-status-pending);
+  --color-status-closed: var(--color-status-closed);
+
+  /* Display: headlines only, used sparingly. Body: default UI text.
+     Utility: dates, countdowns, other data-dense text. */
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-utility: var(--font-utility);
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-status-pending);
+  outline-offset: 2px;
+}
+
+/*
+ * Page-load stagger + the deadline tracker's signature animated moment —
+ * PROJECT_STATUS.md Section 7 "Motion principles". Deliberate, not
+ * scattered: used here and on the deadline calendar, not sprinkled
+ * everywhere.
+ */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-status-open) 45%, transparent);
+  }
+  50% {
+    opacity: 0.75;
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-status-open) 0%, transparent);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.5s cubic-bezier(0.2, 0.7, 0.3, 1) both;
+}
+
+.animate-pulse-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
