@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { ContentStatusBadge } from "@/components/admin/ContentStatusBadge";
 import { updateUniversity, type UniversityDetailRow } from "@/lib/queries/universities";
+import { logActivity } from "@/lib/queries/activity";
 import { createClient } from "@/lib/supabase/client";
 import type { ContentStatus, Database } from "@/lib/supabase/types";
 
@@ -159,6 +160,19 @@ export function UniversityEditForm({
     try {
       const supabase = createClient();
       await updateUniversity(supabase, university.id, toPatch(form, targetStatus));
+      const {
+        data: { user },
+      } = await supabase.auth.getUser();
+      await logActivity(supabase, {
+        author_id: user?.id ?? null,
+        entity_type: "university",
+        entity_id: university.id,
+        action: kind === "publish" ? "status_changed" : "updated",
+        detail:
+          kind === "publish"
+            ? `Published ${form.name}`
+            : `Saved draft: ${form.name}`,
+      });
       setStatus(targetStatus);
       setMessage(targetStatus === "published" ? "Published." : "Draft saved.");
       router.refresh();

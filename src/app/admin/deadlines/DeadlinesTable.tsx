@@ -9,6 +9,7 @@ import {
   updateDeadlineDate,
   type DeadlineListRow,
 } from "@/lib/queries/deadlines";
+import { logActivity } from "@/lib/queries/activity";
 import { createClient } from "@/lib/supabase/client";
 import type { ContentStatus } from "@/lib/supabase/types";
 
@@ -174,8 +175,23 @@ export function DeadlinesTable({
 
   function applyBulkStatus(status: ContentStatus) {
     const supabase = createClient();
+    const targets = filtered.filter((d) => selected.has(d.id));
     runMutation(async () => {
       await bulkUpdateDeadlines(supabase, Array.from(selected), { status });
+      const {
+        data: { user },
+      } = await supabase.auth.getUser();
+      await Promise.all(
+        targets.map((d) =>
+          logActivity(supabase, {
+            author_id: user?.id ?? null,
+            entity_type: "deadline",
+            entity_id: d.id,
+            action: "status_changed",
+            detail: `${d.university?.name ?? "Deadline"} — ${d.deadline_type?.name ?? ""} set to ${status.replace("_", " ")}`,
+          }),
+        ),
+      );
     });
   }
 

@@ -10,6 +10,7 @@ import {
   updateGuide,
 } from "@/lib/queries/guides";
 import type { UniversityListRow } from "@/lib/queries/universities";
+import { logActivity } from "@/lib/queries/activity";
 import { createClient } from "@/lib/supabase/client";
 import type { ContentStatus } from "@/lib/supabase/types";
 
@@ -149,6 +150,19 @@ export function GuideEditor({
         syncGuideRelatedGuides(supabase, guide.id, Array.from(relatedGuideIds)),
         syncGuideRelatedUniversities(supabase, guide.id, Array.from(relatedUniIds)),
       ]);
+      const {
+        data: { user },
+      } = await supabase.auth.getUser();
+      await logActivity(supabase, {
+        author_id: user?.id ?? null,
+        entity_type: "guide",
+        entity_id: guide.id,
+        action: kind === "publish" ? "status_changed" : "updated",
+        detail:
+          kind === "publish"
+            ? `Published "${guide.title}"`
+            : `Saved draft: "${guide.title}"`,
+      });
       setStatus(targetStatus);
       setMessage(targetStatus === "published" ? "Published." : "Draft saved.");
       router.refresh();

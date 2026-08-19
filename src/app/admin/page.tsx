@@ -4,9 +4,10 @@ import { ContentStatusBadge } from "@/components/admin/ContentStatusBadge";
 // Widgets depend on new Date() (stale content, time-ago, upcoming cycles) —
 // force per-request rendering so this doesn't get frozen at build time.
 export const dynamic = "force-dynamic";
-import { getStaleContent, getUpcomingDeadlines } from "@/lib/dashboard";
-import { MOCK_ACTIVITY } from "@/lib/mock-activity-log";
-import { getReviewQueue } from "@/lib/review-queue";
+import { listRecentActivity } from "@/lib/queries/activity";
+import { getStaleContent, getUpcomingDeadlines } from "@/lib/queries/dashboard";
+import { getReviewQueue } from "@/lib/queries/review-queue";
+import { createClient } from "@/lib/supabase/server";
 
 function WidgetCard({
   title,
@@ -44,11 +45,15 @@ function timeAgo(iso: string, now: Date): string {
   return `${days}d ago`;
 }
 
-export default function AdminDashboard() {
+export default async function AdminDashboard() {
   const now = new Date();
-  const stale = getStaleContent(now);
-  const upcoming = getUpcomingDeadlines(now);
-  const reviewQueue = getReviewQueue();
+  const supabase = await createClient();
+  const [stale, upcoming, reviewQueue, activity] = await Promise.all([
+    getStaleContent(supabase, now),
+    getUpcomingDeadlines(supabase, now),
+    getReviewQueue(supabase),
+    listRecentActivity(supabase, 5),
+  ]);
 
   return (
     <div className="p-8">
@@ -159,16 +164,21 @@ export default function AdminDashboard() {
         </WidgetCard>
 
         <WidgetCard title="Recent activity">
-          <ul className="flex flex-col gap-2.5">
-            {MOCK_ACTIVITY.map((a) => (
-              <li key={a.id} className="font-body text-sm text-ink">
-                <span className="text-slate">{a.author}</span> — {a.detail}
-                <span className="ml-2 font-utility text-xs text-slate">
-                  {timeAgo(a.createdAt, now)}
-                </span>
-              </li>
-            ))}
-          </ul>
+          {activity.length === 0 ? (
+            <EmptyState label="No activity yet." />
+          ) : (
+            <ul className="flex flex-col gap-2.5">
+              {activity.map((a) => (
+                <li key={a.id} className="font-body text-sm text-ink">
+                  <span className="text-slate">{a.author?.name ?? "Someone"}</span> —{" "}
+                  {a.detail}
+                  <span className="ml-2 font-utility text-xs text-slate">
+                    {timeAgo(a.created_at, now)}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          )}
         </WidgetCard>
       </div>
     </div>

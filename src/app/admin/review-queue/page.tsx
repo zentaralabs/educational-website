@@ -1,8 +1,12 @@
-import { getReviewQueue } from "@/lib/review-queue";
+import { getReviewQueue } from "@/lib/queries/review-queue";
+import { createClient } from "@/lib/supabase/server";
 import { ReviewQueueTable } from "./ReviewQueueTable";
 
-export default function ReviewQueuePage() {
-  const items = getReviewQueue();
+export const dynamic = "force-dynamic";
+
+export default async function ReviewQueuePage() {
+  const supabase = await createClient();
+  const items = await getReviewQueue(supabase);
 
   return (
     <div className="p-8">

@@ -9,6 +9,7 @@ import {
   updateScholarship,
   type ScholarshipDetailRow,
 } from "@/lib/queries/scholarships";
+import { logActivity } from "@/lib/queries/activity";
 import { createClient } from "@/lib/supabase/client";
 import type { ContentStatus } from "@/lib/supabase/types";
 
@@ -98,6 +99,17 @@ export function ScholarshipEditForm({
         scholarship.id,
         Array.from(universityIds),
       );
+      const {
+        data: { user },
+      } = await supabase.auth.getUser();
+      await logActivity(supabase, {
+        author_id: user?.id ?? null,
+        entity_type: "scholarship",
+        entity_id: scholarship.id,
+        action: kind === "publish" ? "status_changed" : "updated",
+        detail:
+          kind === "publish" ? `Published ${name}` : `Saved draft: ${name}`,
+      });
       setStatus(targetStatus);
       setMessage(targetStatus === "published" ? "Published." : "Draft saved.");
       router.refresh();

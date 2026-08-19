@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { ContentStatusBadge } from "@/components/admin/ContentStatusBadge";
-import type { EntityType, ReviewQueueItem } from "@/lib/review-queue";
+import type { EntityType, ReviewQueueItem } from "@/lib/queries/review-queue";
 
 const ENTITY_LABELS: Record<EntityType, string> = {
   university: "University",
