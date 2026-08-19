@@ -44,3 +44,4 @@ Supabase project not yet provisioned — schema exists as migration files under 
 Public-facing templates (university profile, deadline calendar, guide page, comparison page) and legal pages are not yet built.
 # educational-website
 # educational-website
+# educational-website
