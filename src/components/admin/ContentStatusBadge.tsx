@@ -1,4 +1,4 @@
-import type { ContentStatus } from "@/lib/mock-admin-data";
+import type { ContentStatus } from "@/lib/supabase/types";
 
 const CONFIG: Record<ContentStatus, { label: string; color: string }> = {
   draft: { label: "Draft", color: "var(--color-slate)" },
