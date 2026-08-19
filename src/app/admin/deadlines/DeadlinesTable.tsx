@@ -1,16 +1,16 @@
 "use client";
 
 import { useMemo, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 import { ContentStatusBadge } from "@/components/admin/ContentStatusBadge";
-import type { ContentStatus } from "@/lib/mock-admin-data";
 import {
-  APPLICATION_PLATFORMS,
-  DEADLINE_TYPES,
-  DEGREE_LEVELS,
-  type ApplicationPlatform,
-  type DeadlineType,
-  type MockDeadline,
-} from "@/lib/mock-deadlines-data";
+  bulkUpdateDeadlines,
+  insertDeadlines,
+  updateDeadlineDate,
+  type DeadlineListRow,
+} from "@/lib/queries/deadlines";
+import { createClient } from "@/lib/supabase/client";
+import type { ContentStatus } from "@/lib/supabase/types";
 
 const STATUS_OPTIONS: ContentStatus[] = [
   "draft",
@@ -20,19 +20,23 @@ const STATUS_OPTIONS: ContentStatus[] = [
   "archived",
 ];
 
+type Lookups = {
+  degreeLevels: { id: number; name: string }[];
+  deadlineTypes: { id: number; name: string }[];
+  applicationPlatforms: { id: number; name: string }[];
+  universities: { id: string; name: string; slug: string }[];
+};
+
 function shiftDate(iso: string, days: number): string {
   const d = new Date(`${iso}T00:00:00`);
   d.setDate(d.getDate() + days);
-  // Build the string from local getters, not toISOString() — toISOString()
-  // converts to UTC first, which rolls the date back a day in any timezone
-  // ahead of UTC (e.g. local midnight Oct 25 in UTC+5:30 is Oct 24 UTC).
   const year = d.getFullYear();
   const month = String(d.getMonth() + 1).padStart(2, "0");
   const day = String(d.getDate()).padStart(2, "0");
   return `${year}-${month}-${day}`;
 }
 
-function toCsv(rows: MockDeadline[]): string {
+function toCsv(rows: DeadlineListRow[]): string {
   const header = [
     "university_slug",
     "degree_level",
@@ -43,11 +47,11 @@ function toCsv(rows: MockDeadline[]): string {
   ];
   const lines = rows.map((r) =>
     [
-      r.universitySlug,
-      r.degreeLevel,
-      r.deadlineType,
-      r.deadlineDate,
-      r.applicationPlatform,
+      r.university?.slug ?? "",
+      r.degree_level?.name ?? "",
+      r.deadline_type?.name ?? "",
+      r.deadline_date,
+      r.application_platform?.name ?? "",
       r.status,
     ].join(","),
   );
@@ -66,36 +70,43 @@ function downloadCsv(filename: string, csv: string) {
 
 export function DeadlinesTable({
   initialDeadlines,
+  lookups,
 }: {
-  initialDeadlines: MockDeadline[];
+  initialDeadlines: DeadlineListRow[];
+  lookups: Lookups;
 }) {
-  const [deadlines, setDeadlines] = useState(initialDeadlines);
+  const router = useRouter();
   const [view, setView] = useState<"list" | "calendar">("list");
   const [search, setSearch] = useState("");
   const [degreeFilter, setDegreeFilter] = useState("all");
   const [typeFilter, setTypeFilter] = useState("all");
   const [selected, setSelected] = useState<Set<string>>(new Set());
   const [shiftDays, setShiftDays] = useState("7");
-  const [month, setMonth] = useState(() => new Date(2026, 9, 1)); // Oct 2026
+  const [month, setMonth] = useState(() => {
+    const now = new Date();
+    return new Date(now.getFullYear(), now.getMonth(), 1);
+  });
+  const [pending, setPending] = useState(false);
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [importSummary, setImportSummary] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const filtered = useMemo(() => {
-    return deadlines
+    return initialDeadlines
       .filter((d) => {
         if (
           search &&
-          !d.universityName.toLowerCase().includes(search.toLowerCase())
+          !(d.university?.name ?? "").toLowerCase().includes(search.toLowerCase())
         )
           return false;
-        if (degreeFilter !== "all" && d.degreeLevel !== degreeFilter)
+        if (degreeFilter !== "all" && d.degree_level?.name !== degreeFilter)
           return false;
-        if (typeFilter !== "all" && d.deadlineType !== typeFilter)
+        if (typeFilter !== "all" && d.deadline_type?.name !== typeFilter)
           return false;
         return true;
       })
-      .sort((a, b) => a.deadlineDate.localeCompare(b.deadlineDate));
-  }, [deadlines, search, degreeFilter, typeFilter]);
+      .sort((a, b) => a.deadline_date.localeCompare(b.deadline_date));
+  }, [initialDeadlines, search, degreeFilter, typeFilter]);
 
   function toggleAll() {
     if (selected.size === filtered.length) setSelected(new Set());
@@ -111,38 +122,61 @@ export function DeadlinesTable({
     });
   }
 
+  async function runMutation(fn: () => Promise<void>) {
+    setPending(true);
+    setErrorMsg(null);
+    try {
+      await fn();
+      setSelected(new Set());
+      router.refresh();
+    } catch (err) {
+      setErrorMsg(err instanceof Error ? err.message : "Update failed");
+    } finally {
+      setPending(false);
+    }
+  }
+
   function applyShift() {
     const n = parseInt(shiftDays, 10);
     if (Number.isNaN(n)) return;
-    setDeadlines((prev) =>
-      prev.map((d) =>
-        selected.has(d.id)
-          ? { ...d, deadlineDate: shiftDate(d.deadlineDate, n) }
-          : d,
-      ),
-    );
+    const supabase = createClient();
+    const targets = filtered.filter((d) => selected.has(d.id));
+    runMutation(async () => {
+      await Promise.all(
+        targets.map((d) =>
+          updateDeadlineDate(supabase, d.id, shiftDate(d.deadline_date, n)),
+        ),
+      );
+    });
   }
 
-  function applyBulkType(type: DeadlineType) {
-    setDeadlines((prev) =>
-      prev.map((d) =>
-        selected.has(d.id) ? { ...d, deadlineType: type } : d,
-      ),
-    );
+  function applyBulkType(typeName: string) {
+    const match = lookups.deadlineTypes.find((t) => t.name === typeName);
+    if (!match) return;
+    const supabase = createClient();
+    runMutation(async () => {
+      await bulkUpdateDeadlines(supabase, Array.from(selected), {
+        deadline_type_id: match.id,
+      });
+    });
   }
 
-  function applyBulkPlatform(platform: ApplicationPlatform) {
-    setDeadlines((prev) =>
-      prev.map((d) =>
-        selected.has(d.id) ? { ...d, applicationPlatform: platform } : d,
-      ),
-    );
+  function applyBulkPlatform(platformName: string) {
+    const match = lookups.applicationPlatforms.find((p) => p.name === platformName);
+    if (!match) return;
+    const supabase = createClient();
+    runMutation(async () => {
+      await bulkUpdateDeadlines(supabase, Array.from(selected), {
+        application_platform_id: match.id,
+      });
+    });
   }
 
   function applyBulkStatus(status: ContentStatus) {
-    setDeadlines((prev) =>
-      prev.map((d) => (selected.has(d.id) ? { ...d, status } : d)),
-    );
+    const supabase = createClient();
+    runMutation(async () => {
+      await bulkUpdateDeadlines(supabase, Array.from(selected), { status });
+    });
   }
 
   function handleExport() {
@@ -160,31 +194,53 @@ export function DeadlinesTable({
     const reader = new FileReader();
     reader.onload = () => {
       const text = String(reader.result ?? "");
-      const lines = text.trim().split("\n").slice(1); // skip header
-      let count = 0;
-      const imported: MockDeadline[] = [];
+      const lines = text.trim().split("\n").slice(1);
+      const rows: {
+        university_id: string;
+        degree_level_id: number;
+        deadline_type_id: number;
+        deadline_date: string;
+        application_platform_id: number | null;
+        is_rolling: boolean;
+        status: ContentStatus;
+      }[] = [];
+      let skipped = 0;
+
       for (const line of lines) {
-        const [slug, degreeLevel, deadlineType, deadlineDate, platform] =
-          line.split(",").map((v) => v.trim());
-        if (!slug || !deadlineDate) continue;
-        imported.push({
-          id: `import-${Date.now()}-${count}`,
-          universityName: slug,
-          universitySlug: slug,
-          country: "US",
-          degreeLevel: (degreeLevel as MockDeadline["degreeLevel"]) || "Undergraduate",
-          deadlineType: (deadlineType as MockDeadline["deadlineType"]) || "Regular Decision",
-          deadlineDate,
-          isRolling: deadlineType === "Rolling",
-          applicationPlatform:
-            (platform as MockDeadline["applicationPlatform"]) || "Direct",
+        const [slug, degreeLevel, deadlineType, deadlineDate, platform] = line
+          .split(",")
+          .map((v) => v.trim());
+        const university = lookups.universities.find((u) => u.slug === slug);
+        const degree = lookups.degreeLevels.find((d) => d.name === degreeLevel);
+        const type = lookups.deadlineTypes.find((t) => t.name === deadlineType);
+        const platformMatch = lookups.applicationPlatforms.find(
+          (p) => p.name === platform,
+        );
+
+        if (!university || !degree || !type || !deadlineDate) {
+          skipped++;
+          continue;
+        }
+
+        rows.push({
+          university_id: university.id,
+          degree_level_id: degree.id,
+          deadline_type_id: type.id,
+          deadline_date: deadlineDate,
+          application_platform_id: platformMatch?.id ?? null,
+          is_rolling: deadlineType === "Rolling",
           status: "draft",
-          lastVerifiedAt: null,
         });
-        count++;
       }
-      setDeadlines((prev) => [...imported, ...prev]);
-      setImportSummary(`Imported ${count} row${count === 1 ? "" : "s"} as drafts.`);
+
+      const supabase = createClient();
+      runMutation(async () => {
+        await insertDeadlines(supabase, rows);
+        setImportSummary(
+          `Imported ${rows.length} row${rows.length === 1 ? "" : "s"} as drafts` +
+            (skipped > 0 ? `, skipped ${skipped} (unresolved university/degree/type).` : "."),
+        );
+      });
     };
     reader.readAsText(file);
     e.target.value = "";
@@ -194,20 +250,12 @@ export function DeadlinesTable({
     month: "long",
     year: "numeric",
   });
-  const daysInMonth = new Date(
-    month.getFullYear(),
-    month.getMonth() + 1,
-    0,
-  ).getDate();
-  const firstWeekday = new Date(
-    month.getFullYear(),
-    month.getMonth(),
-    1,
-  ).getDay();
+  const daysInMonth = new Date(month.getFullYear(), month.getMonth() + 1, 0).getDate();
+  const firstWeekday = new Date(month.getFullYear(), month.getMonth(), 1).getDay();
   const deadlinesByDay = useMemo(() => {
-    const map = new Map<number, MockDeadline[]>();
+    const map = new Map<number, DeadlineListRow[]>();
     for (const d of filtered) {
-      const date = new Date(`${d.deadlineDate}T00:00:00`);
+      const date = new Date(`${d.deadline_date}T00:00:00`);
       if (
         date.getFullYear() === month.getFullYear() &&
         date.getMonth() === month.getMonth()
@@ -243,9 +291,9 @@ export function DeadlinesTable({
           className="rounded-md border border-ink/20 bg-paper px-3 py-1.5 font-body text-sm text-ink"
         >
           <option value="all">All degree levels</option>
-          {DEGREE_LEVELS.map((l) => (
-            <option key={l} value={l}>
-              {l}
+          {lookups.degreeLevels.map((l) => (
+            <option key={l.id} value={l.name}>
+              {l.name}
             </option>
           ))}
         </select>
@@ -255,9 +303,9 @@ export function DeadlinesTable({
           className="rounded-md border border-ink/20 bg-paper px-3 py-1.5 font-body text-sm text-ink"
         >
           <option value="all">All deadline types</option>
-          {DEADLINE_TYPES.map((t) => (
-            <option key={t} value={t}>
-              {t}
+          {lookups.deadlineTypes.map((t) => (
+            <option key={t.id} value={t.name}>
+              {t.name}
             </option>
           ))}
         </select>
@@ -307,16 +355,17 @@ export function DeadlinesTable({
         </div>
       </div>
 
+      {errorMsg && (
+        <p className="mb-3 font-body text-xs text-status-closed">{errorMsg}</p>
+      )}
       {importSummary && (
-        <p className="mb-3 font-body text-xs text-status-open">
-          {importSummary}
-        </p>
+        <p className="mb-3 font-body text-xs text-status-open">{importSummary}</p>
       )}
 
       {selected.size > 0 && (
         <div className="mb-3 flex flex-wrap items-center gap-4 rounded-md border border-status-pending/40 bg-status-pending/10 px-3 py-2.5">
           <span className="font-body text-sm text-ink">
-            {selected.size} selected
+            {selected.size} selected {pending && "· Saving…"}
           </span>
 
           <div className="flex items-center gap-1.5">
@@ -330,8 +379,9 @@ export function DeadlinesTable({
             <span className="font-body text-xs text-slate">days</span>
             <button
               type="button"
+              disabled={pending}
               onClick={applyShift}
-              className="rounded border border-ink/20 bg-paper px-2 py-1 font-body text-xs text-ink transition-colors duration-150 hover:border-status-open"
+              className="rounded border border-ink/20 bg-paper px-2 py-1 font-body text-xs text-ink transition-colors duration-150 hover:border-status-open disabled:opacity-50"
             >
               Apply
             </button>
@@ -340,16 +390,17 @@ export function DeadlinesTable({
           <label className="flex items-center gap-1.5 font-body text-xs text-slate">
             Set type
             <select
-              onChange={(e) => applyBulkType(e.target.value as DeadlineType)}
+              onChange={(e) => applyBulkType(e.target.value)}
               defaultValue=""
+              disabled={pending}
               className="rounded border border-ink/20 bg-paper px-2 py-1 font-body text-xs text-ink"
             >
               <option value="" disabled>
                 choose…
               </option>
-              {DEADLINE_TYPES.map((t) => (
-                <option key={t} value={t}>
-                  {t}
+              {lookups.deadlineTypes.map((t) => (
+                <option key={t.id} value={t.name}>
+                  {t.name}
                 </option>
               ))}
             </select>
@@ -358,18 +409,17 @@ export function DeadlinesTable({
           <label className="flex items-center gap-1.5 font-body text-xs text-slate">
             Set platform
             <select
-              onChange={(e) =>
-                applyBulkPlatform(e.target.value as ApplicationPlatform)
-              }
+              onChange={(e) => applyBulkPlatform(e.target.value)}
               defaultValue=""
+              disabled={pending}
               className="rounded border border-ink/20 bg-paper px-2 py-1 font-body text-xs text-ink"
             >
               <option value="" disabled>
                 choose…
               </option>
-              {APPLICATION_PLATFORMS.map((p) => (
-                <option key={p} value={p}>
-                  {p}
+              {lookups.applicationPlatforms.map((p) => (
+                <option key={p.id} value={p.name}>
+                  {p.name}
                 </option>
               ))}
             </select>
@@ -380,6 +430,7 @@ export function DeadlinesTable({
             <select
               onChange={(e) => applyBulkStatus(e.target.value as ContentStatus)}
               defaultValue=""
+              disabled={pending}
               className="rounded border border-ink/20 bg-paper px-2 py-1 font-body text-xs text-ink"
             >
               <option value="" disabled>
@@ -403,9 +454,7 @@ export function DeadlinesTable({
                 <th className="w-10 px-3 py-2">
                   <input
                     type="checkbox"
-                    checked={
-                      filtered.length > 0 && selected.size === filtered.length
-                    }
+                    checked={filtered.length > 0 && selected.size === filtered.length}
                     onChange={toggleAll}
                     aria-label="Select all"
                   />
@@ -441,19 +490,19 @@ export function DeadlinesTable({
                       type="checkbox"
                       checked={selected.has(d.id)}
                       onChange={() => toggleOne(d.id)}
-                      aria-label={`Select ${d.universityName} ${d.deadlineType}`}
+                      aria-label={`Select ${d.university?.name} ${d.deadline_type?.name}`}
                     />
                   </td>
                   <td className="px-3 py-2.5 font-medium text-ink">
-                    {d.universityName}
+                    {d.university?.name ?? "—"}
                   </td>
-                  <td className="px-3 py-2.5 text-slate">{d.degreeLevel}</td>
-                  <td className="px-3 py-2.5 text-ink">{d.deadlineType}</td>
+                  <td className="px-3 py-2.5 text-slate">{d.degree_level?.name}</td>
+                  <td className="px-3 py-2.5 text-ink">{d.deadline_type?.name}</td>
                   <td className="px-3 py-2.5 font-utility text-ink">
-                    {d.isRolling ? "Rolling" : d.deadlineDate}
+                    {d.is_rolling ? "Rolling" : d.deadline_date}
                   </td>
                   <td className="px-3 py-2.5 text-slate">
-                    {d.applicationPlatform}
+                    {d.application_platform?.name ?? "—"}
                   </td>
                   <td className="px-3 py-2.5">
                     <ContentStatusBadge status={d.status} />
@@ -462,10 +511,7 @@ export function DeadlinesTable({
               ))}
               {filtered.length === 0 && (
                 <tr>
-                  <td
-                    colSpan={7}
-                    className="px-3 py-8 text-center font-body text-sm text-slate"
-                  >
+                  <td colSpan={7} className="px-3 py-8 text-center font-body text-sm text-slate">
                     No deadlines match these filters.
                   </td>
                 </tr>
@@ -478,22 +524,16 @@ export function DeadlinesTable({
           <div className="mb-3 flex items-center justify-between">
             <button
               type="button"
-              onClick={() =>
-                setMonth((m) => new Date(m.getFullYear(), m.getMonth() - 1, 1))
-              }
+              onClick={() => setMonth((m) => new Date(m.getFullYear(), m.getMonth() - 1, 1))}
               className="rounded border border-ink/20 px-2 py-1 font-body text-xs text-ink"
               aria-label="Previous month"
             >
               ←
             </button>
-            <span className="font-body text-sm font-semibold text-ink">
-              {monthLabel}
-            </span>
+            <span className="font-body text-sm font-semibold text-ink">{monthLabel}</span>
             <button
               type="button"
-              onClick={() =>
-                setMonth((m) => new Date(m.getFullYear(), m.getMonth() + 1, 1))
-              }
+              onClick={() => setMonth((m) => new Date(m.getFullYear(), m.getMonth() + 1, 1))}
               className="rounded border border-ink/20 px-2 py-1 font-body text-xs text-ink"
               aria-label="Next month"
             >
@@ -517,20 +557,17 @@ export function DeadlinesTable({
               const day = i + 1;
               const dayDeadlines = deadlinesByDay.get(day) ?? [];
               return (
-                <div
-                  key={day}
-                  className="min-h-20 rounded border border-ink/10 p-1"
-                >
+                <div key={day} className="min-h-20 rounded border border-ink/10 p-1">
                   <div className="font-utility text-xs text-slate">{day}</div>
                   <div className="mt-1 flex flex-col gap-0.5">
                     {dayDeadlines.map((d) => (
                       <span
                         key={d.id}
-                        title={`${d.universityName} — ${d.deadlineType}`}
+                        title={`${d.university?.name} — ${d.deadline_type?.name}`}
                         className="truncate rounded px-1 py-0.5 font-body text-[10px] text-paper"
                         style={{ backgroundColor: statusColor[d.status] }}
                       >
-                        {d.universityName}
+                        {d.university?.name}
                       </span>
                     ))}
                   </div>

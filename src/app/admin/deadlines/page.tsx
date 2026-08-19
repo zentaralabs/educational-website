@@ -1,7 +1,16 @@
-import { MOCK_DEADLINES } from "@/lib/mock-deadlines-data";
+import { listDeadlineLookups, listDeadlines } from "@/lib/queries/deadlines";
+import { createClient } from "@/lib/supabase/server";
 import { DeadlinesTable } from "./DeadlinesTable";
 
-export default function DeadlinesPage() {
+export const dynamic = "force-dynamic";
+
+export default async function DeadlinesPage() {
+  const supabase = await createClient();
+  const [deadlines, lookups] = await Promise.all([
+    listDeadlines(supabase),
+    listDeadlineLookups(supabase),
+  ]);
+
   return (
     <div className="p-8">
       <div className="mb-6 flex items-center justify-between">
@@ -16,7 +25,7 @@ export default function DeadlinesPage() {
         </button>
       </div>
 
-      <DeadlinesTable initialDeadlines={MOCK_DEADLINES} />
+      <DeadlinesTable initialDeadlines={deadlines} lookups={lookups} />
     </div>
   );
 }
