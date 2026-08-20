@@ -16,15 +16,19 @@ export type DeadlineFilters = {
   type?: string;
 };
 
+const PAGE_SIZE = 10;
+
 export async function listPublishedDeadlines(
   filters: DeadlineFilters = {},
-): Promise<PublicDeadlineRow[]> {
+  page = 1,
+): Promise<{ rows: PublicDeadlineRow[]; totalCount: number; pageSize: number }> {
   const supabase = createPublicClient(["deadlines:list"]);
 
   let query = supabase
     .from("deadlines")
     .select(
-      "id, deadline_date, is_rolling, university:universities!inner(name, slug, country:countries!inner(code, name)), deadline_type:deadline_types(name), degree_level:degree_levels(name)",
+      "id, deadline_date, is_rolling, university:universities!inner(name, slug, country:countries!inner(code, name)), deadline_type:deadline_types!inner(name), degree_level:degree_levels!inner(name)",
+      { count: "exact" },
     )
     .eq("status", "published")
     .order("deadline_date");
@@ -32,27 +36,25 @@ export async function listPublishedDeadlines(
   if (filters.country) {
     query = query.eq("university.country.code", filters.country);
   }
+  if (filters.degreeLevel) {
+    query = query.eq("degree_level.name", filters.degreeLevel);
+  }
+  if (filters.type) {
+    query = query.eq("deadline_type.name", filters.type);
+  }
 
-  const { data, error } = await query;
+  const from = (page - 1) * PAGE_SIZE;
+  const { data, error, count } = await query.range(from, from + PAGE_SIZE - 1);
   if (error) throw error;
 
-  let rows = ((data ?? []) as unknown as (Omit<PublicDeadlineRow, "country"> & {
+  const rows = ((data ?? []) as unknown as (Omit<PublicDeadlineRow, "country"> & {
     university: { name: string; slug: string; country: { code: string; name: string } | null } | null;
-    degree_level: { name: string } | null;
-    deadline_type: { name: string } | null;
   })[]).map((row) => ({
     ...row,
     country: row.university?.country ?? null,
   }));
 
-  if (filters.degreeLevel) {
-    rows = rows.filter((r) => r.degree_level?.name === filters.degreeLevel);
-  }
-  if (filters.type) {
-    rows = rows.filter((r) => r.deadline_type?.name === filters.type);
-  }
-
-  return rows;
+  return { rows, totalCount: count ?? 0, pageSize: PAGE_SIZE };
 }
 
 export async function listDeadlineFilterOptions() {

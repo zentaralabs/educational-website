@@ -4,6 +4,7 @@ import { deadlineBadgeStatus, formatDeadlineDate } from "@/lib/deadline-status";
 import {
   listDeadlineFilterOptions,
   listPublishedDeadlines,
+  type PublicDeadlineRow,
 } from "@/lib/queries/public-deadlines";
 
 export const metadata = {
@@ -12,10 +13,8 @@ export const metadata = {
     "Filterable, sourced application deadlines for universities in the US, UK, Canada, Australia, and New Zealand.",
 };
 
-function groupByMonth(
-  deadlines: Awaited<ReturnType<typeof listPublishedDeadlines>>,
-) {
-  const groups = new Map<string, typeof deadlines>();
+function groupByMonth(deadlines: PublicDeadlineRow[]) {
+  const groups = new Map<string, PublicDeadlineRow[]>();
   for (const d of deadlines) {
     const key = d.is_rolling
       ? "Rolling"
@@ -29,18 +28,38 @@ function groupByMonth(
   return groups;
 }
 
+function buildPageHref(
+  filters: { country?: string; degreeLevel?: string; type?: string },
+  page: number,
+): string {
+  const params = new URLSearchParams();
+  if (filters.country) params.set("country", filters.country);
+  if (filters.degreeLevel) params.set("degreeLevel", filters.degreeLevel);
+  if (filters.type) params.set("type", filters.type);
+  if (page > 1) params.set("page", String(page));
+  const qs = params.toString();
+  return qs ? `/deadlines?${qs}` : "/deadlines";
+}
+
 export default async function DeadlinesPage({
   searchParams,
 }: {
-  searchParams: Promise<{ country?: string; degreeLevel?: string; type?: string }>;
+  searchParams: Promise<{
+    country?: string;
+    degreeLevel?: string;
+    type?: string;
+    page?: string;
+  }>;
 }) {
-  const filters = await searchParams;
+  const { page: pageParam, ...filters } = await searchParams;
+  const page = Math.max(1, Number(pageParam) || 1);
 
-  const [deadlines, options] = await Promise.all([
-    listPublishedDeadlines(filters),
+  const [{ rows: deadlines, totalCount, pageSize }, options] = await Promise.all([
+    listPublishedDeadlines(filters, page),
     listDeadlineFilterOptions(),
   ]);
 
+  const totalPages = Math.max(1, Math.ceil(totalCount / pageSize));
   const grouped = groupByMonth(deadlines);
 
   const jsonLd = {
@@ -63,8 +82,8 @@ export default async function DeadlinesPage({
         Application deadline calendar
       </h1>
       <p className="mt-2 font-body text-base text-slate">
-        {deadlines.length} sourced deadlines, filterable by country, degree
-        level, and application type.
+        {totalCount} sourced deadlines, filterable by country, degree level,
+        and application type.
       </p>
 
       <form
@@ -171,6 +190,36 @@ export default async function DeadlinesPage({
           </section>
         ))}
       </div>
+
+      {totalPages > 1 && (
+        <div className="mt-8 flex items-center justify-between border-t border-ink/10 pt-4">
+          {page > 1 ? (
+            <Link
+              href={buildPageHref(filters, page - 1)}
+              className="rounded-md border border-ink/20 px-3 py-1.5 font-body text-sm text-ink transition-colors duration-150 hover:border-status-open"
+            >
+              ← Previous
+            </Link>
+          ) : (
+            <span />
+          )}
+
+          <span className="font-utility text-xs text-slate">
+            Page {page} of {totalPages}
+          </span>
+
+          {page < totalPages ? (
+            <Link
+              href={buildPageHref(filters, page + 1)}
+              className="rounded-md border border-ink/20 px-3 py-1.5 font-body text-sm text-ink transition-colors duration-150 hover:border-status-open"
+            >
+              Next →
+            </Link>
+          ) : (
+            <span />
+          )}
+        </div>
+      )}
     </main>
   );
 }
