@@ -9,13 +9,18 @@ export function StudentTypePrompt() {
   if (studentType) {
     return (
       <p className="mt-4 font-body text-sm text-slate">
-        Showing fees for {studentType} students.{" "}
+        Showing information for {studentType} students.{" "}
         <button
           type="button"
-          onClick={() => setStudentType(studentType === "domestic" ? "international" : "domestic")}
+          onClick={() =>
+            setStudentType(
+              studentType === "domestic" ? "international" : "domestic",
+            )
+          }
           className="underline decoration-slate/40 underline-offset-2 hover:text-ink hover:decoration-ink"
         >
-          Not right? Switch to {studentType === "domestic" ? "international" : "domestic"}.
+          Not right? Switch to{" "}
+          {studentType === "domestic" ? "international" : "domestic"}.
         </button>
       </p>
     );
@@ -24,7 +29,7 @@ export function StudentTypePrompt() {
   return (
     <div className="mt-4 flex flex-col items-center gap-2">
       <p className="font-body text-sm text-slate">
-        Are you a domestic or international applicant? We&rsquo;ll show the right tuition fee for you.
+        Are you a domestic or international applicant?
       </p>
       <div className="flex items-center gap-3">
         <button

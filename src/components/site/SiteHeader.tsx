@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { StudentTypeToggle } from "@/components/site/StudentTypeToggle";
 
 const NAV = [
   { label: "Deadlines", href: "/deadlines" },
@@ -11,6 +10,8 @@ const NAV = [
 /**
  * Persistent minimal top nav — 4-5 items max, per PROJECT_STATUS.md Section 4.
  * Faceted filtering lives on listing pages instead of deep menus here.
+ * Domestic/international toggle lives on the homepage under the search box now,
+ * not here — see StudentTypeToggle usage in app/page.tsx.
  */
 export function SiteHeader() {
   return (
@@ -33,7 +34,6 @@ export function SiteHeader() {
               {item.label}
             </Link>
           ))}
-          <StudentTypeToggle />
         </nav>
       </div>
     </header>

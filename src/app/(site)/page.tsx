@@ -3,6 +3,7 @@ import { SearchBar } from "@/components/site/SearchBar";
 import { StudentTypePrompt } from "@/components/site/StudentTypePrompt";
 import { listPublicCountries } from "@/lib/queries/public-countries";
 import { getHomepageStats } from "@/lib/queries/public-stats";
+import { StudentTypeToggle } from "@/components/site/StudentTypeToggle";
 
 export default async function Home() {
   const [stats, countries] = await Promise.all([
@@ -26,6 +27,10 @@ export default async function Home() {
         </h1>
 
         <SearchBar />
+
+        <div className="mt-3 flex justify-center">
+          <StudentTypeToggle />
+        </div>
 
         <StudentTypePrompt />
 

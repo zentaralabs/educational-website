@@ -23,7 +23,8 @@ export function SearchBar({ defaultValue = "" }: { defaultValue?: string }) {
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (value.trim()) router.push(`/search?q=${encodeURIComponent(value.trim())}`);
+    if (value.trim())
+      router.push(`/search?q=${encodeURIComponent(value.trim())}`);
   }
 
   return (
@@ -48,9 +49,14 @@ export function SearchBar({ defaultValue = "" }: { defaultValue?: string }) {
           className="flex-1 bg-transparent font-body text-lg text-ink outline-hidden!"
         />
       </div>
-      <kbd className="hidden rounded border border-slate/40 px-2 py-1 font-utility text-sm text-slate sm:inline-block">
+      <button
+        type="submit"
+        disabled={!value.trim()}
+        aria-label="Search"
+        className="hidden shrink-0 rounded border border-slate/40 px-2 py-1 font-utility text-sm text-slate transition-colors duration-150 hover:border-ink hover:text-ink disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:border-slate/40 disabled:hover:text-slate sm:inline-block"
+      >
         Enter
-      </kbd>
+      </button>
     </form>
   );
 }

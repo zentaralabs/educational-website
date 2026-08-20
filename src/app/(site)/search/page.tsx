@@ -12,8 +12,13 @@ export default async function SearchPage({
   searchParams: Promise<{ q?: string }>;
 }) {
   const { q = "" } = await searchParams;
-  const results = q.trim() ? await searchSite(q) : { universities: [], guides: [] };
-  const total = results.universities.length + results.guides.length;
+  const results = q.trim()
+    ? await searchSite(q)
+    : { universities: [], guides: [], programs: [] };
+  const total =
+    results.universities.length +
+    results.guides.length +
+    results.programs.length;
 
   return (
     <main className="mx-auto w-full max-w-2xl px-6 py-12">
@@ -45,7 +50,33 @@ export default async function SearchPage({
                 >
                   {u.name}
                 </Link>
-                {u.city && <p className="mt-0.5 text-sm text-slate">{u.city}</p>}
+                {u.city && (
+                  <p className="mt-0.5 text-sm text-slate">{u.city}</p>
+                )}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {results.programs.length > 0 && (
+        <section className="mt-8">
+          <h2 className="mb-3 font-body text-xs font-semibold tracking-wide text-slate uppercase">
+            Programs
+          </h2>
+          <ul className="flex flex-col gap-3">
+            {results.programs.map((p) => (
+              <li key={p.id} className="border-b border-ink/10 pb-3">
+                <Link
+                  href={`/universities/${p.universitySlug}`}
+                  className="font-body text-base text-ink hover:underline"
+                >
+                  {p.name}
+                </Link>
+                <p className="mt-0.5 text-sm text-slate">
+                  {p.universityName}
+                  {p.subjectName && ` · ${p.subjectName}`}
+                </p>
               </li>
             ))}
           </ul>
@@ -79,7 +110,11 @@ export default async function SearchPage({
           <Link href="/deadlines" className="underline">
             deadline calendar
           </Link>{" "}
-          or <Link href="/guides" className="underline">guides</Link> directly.
+          or{" "}
+          <Link href="/guides" className="underline">
+            guides
+          </Link>{" "}
+          directly.
         </p>
       )}
     </main>
