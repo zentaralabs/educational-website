@@ -12,6 +12,7 @@ import {
 import { logActivity } from "@/lib/queries/activity";
 import { createClient } from "@/lib/supabase/client";
 import type { ContentStatus } from "@/lib/supabase/types";
+import { NewDeadlineForm } from "./NewDeadlineForm";
 
 const STATUS_OPTIONS: ContentStatus[] = [
   "draft",
@@ -21,7 +22,7 @@ const STATUS_OPTIONS: ContentStatus[] = [
   "archived",
 ];
 
-type Lookups = {
+export type Lookups = {
   degreeLevels: { id: number; name: string }[];
   deadlineTypes: { id: number; name: string }[];
   applicationPlatforms: { id: number; name: string }[];
@@ -77,6 +78,7 @@ export function DeadlinesTable({
   lookups: Lookups;
 }) {
   const router = useRouter();
+  const [showNewForm, setShowNewForm] = useState(false);
   const [view, setView] = useState<"list" | "calendar">("list");
   const [search, setSearch] = useState("");
   const [degreeFilter, setDegreeFilter] = useState("all");
@@ -368,8 +370,25 @@ export function DeadlinesTable({
             className="hidden"
             onChange={handleImportFile}
           />
+          <button
+            type="button"
+            onClick={() => setShowNewForm((v) => !v)}
+            className="rounded-md bg-ink px-3 py-1.5 font-body text-sm font-medium text-paper transition-opacity duration-150 hover:opacity-90"
+          >
+            {showNewForm ? "Cancel" : "New deadline"}
+          </button>
         </div>
       </div>
+
+      {showNewForm && (
+        <NewDeadlineForm
+          lookups={lookups}
+          onCreated={() => {
+            setShowNewForm(false);
+            router.refresh();
+          }}
+        />
+      )}
 
       {errorMsg && (
         <p className="mb-3 font-body text-xs text-status-closed">{errorMsg}</p>

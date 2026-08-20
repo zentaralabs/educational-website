@@ -88,3 +88,91 @@ body {
 .animate-pulse-dot {
   animation: pulse-dot 2s ease-in-out infinite;
 }
+
+/*
+ * Guide markdown body — no typography plugin installed, so the handful of
+ * elements guide content actually uses (headings, paragraphs, lists, links,
+ * tables, code) are styled directly from the design tokens above.
+ */
+.prose-guide > * + * {
+  margin-top: 1em;
+}
+
+.prose-guide h1,
+.prose-guide h2,
+.prose-guide h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--color-ink);
+  margin-top: 1.75em;
+}
+
+.prose-guide h1 {
+  font-size: 1.5rem;
+}
+.prose-guide h2 {
+  font-size: 1.25rem;
+}
+.prose-guide h3 {
+  font-size: 1.1rem;
+}
+
+.prose-guide ul,
+.prose-guide ol {
+  padding-left: 1.25em;
+}
+.prose-guide ul {
+  list-style: disc;
+}
+.prose-guide ol {
+  list-style: decimal;
+}
+.prose-guide li + li {
+  margin-top: 0.35em;
+}
+
+.prose-guide a {
+  color: var(--color-status-open);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.prose-guide blockquote {
+  border-left: 2px solid var(--color-status-pending);
+  padding-left: 1em;
+  color: var(--color-slate);
+}
+
+.prose-guide code {
+  font-family: var(--font-utility);
+  font-size: 0.85em;
+  background: color-mix(in srgb, var(--color-ink) 6%, transparent);
+  padding: 0.1em 0.35em;
+  border-radius: 0.25em;
+}
+
+.prose-guide pre {
+  background: color-mix(in srgb, var(--color-ink) 6%, transparent);
+  padding: 1em;
+  border-radius: 0.375em;
+  overflow-x: auto;
+}
+.prose-guide pre code {
+  background: none;
+  padding: 0;
+}
+
+.prose-guide table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9em;
+}
+.prose-guide th,
+.prose-guide td {
+  border: 1px solid color-mix(in srgb, var(--color-ink) 15%, transparent);
+  padding: 0.5em 0.75em;
+  text-align: left;
+}
+.prose-guide th {
+  background: color-mix(in srgb, var(--color-ink) 4%, transparent);
+}

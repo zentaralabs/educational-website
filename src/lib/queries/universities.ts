@@ -70,6 +70,22 @@ export async function updateUniversity(
   if (error) throw error;
 }
 
+export async function createUniversity(
+  supabase: SupabaseClient<Database>,
+  input: Pick<
+    Database["public"]["Tables"]["universities"]["Insert"],
+    "name" | "slug" | "country_id" | "author_id"
+  >,
+): Promise<string> {
+  const { data, error } = await supabase
+    .from("universities")
+    .insert({ ...input, status: "draft" })
+    .select("id")
+    .single();
+  if (error) throw error;
+  return data.id;
+}
+
 export async function listCountries(supabase: SupabaseClient<Database>) {
   const { data, error } = await supabase
     .from("countries")

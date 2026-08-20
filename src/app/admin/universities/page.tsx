@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { listCountries, listUniversities } from "@/lib/queries/universities";
 import { createClient } from "@/lib/supabase/server";
 import { UniversitiesTable } from "./UniversitiesTable";
@@ -17,12 +18,12 @@ export default async function UniversitiesPage() {
         <h1 className="font-display text-2xl font-semibold text-ink">
           Universities
         </h1>
-        <button
-          type="button"
+        <Link
+          href="/admin/universities/new"
           className="rounded-md bg-ink px-3 py-1.5 font-body text-sm font-medium text-paper transition-opacity duration-150 hover:opacity-90"
         >
           New university
-        </button>
+        </Link>
       </div>
 
       <UniversitiesTable

@@ -1,6 +1,25 @@
 import type { SupabaseClient } from "@supabase/supabase-js";
 import type { ContentStatus, Database } from "@/lib/supabase/types";
 
+export const SCHOLARSHIP_SCOPES = [
+  "university-specific",
+  "national",
+  "external/foundation",
+];
+
+export async function createScholarship(
+  supabase: SupabaseClient<Database>,
+  input: Pick<Database["public"]["Tables"]["scholarships"]["Insert"], "name" | "scope">,
+): Promise<string> {
+  const { data, error } = await supabase
+    .from("scholarships")
+    .insert({ ...input, status: "draft" })
+    .select("id")
+    .single();
+  if (error) throw error;
+  return data.id;
+}
+
 export type ScholarshipListRow = Database["public"]["Tables"]["scholarships"]["Row"] & {
   scholarship_universities: { university_id: string }[];
 };

@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { ContentStatusBadge } from "@/components/admin/ContentStatusBadge";
 import type { UniversityListRow } from "@/lib/queries/universities";
 import {
+  SCHOLARSHIP_SCOPES,
   syncScholarshipUniversities,
   updateScholarship,
   type ScholarshipDetailRow,
@@ -12,12 +13,6 @@ import {
 import { logActivity } from "@/lib/queries/activity";
 import { createClient } from "@/lib/supabase/client";
 import type { ContentStatus } from "@/lib/supabase/types";
-
-const SCHOLARSHIP_SCOPES = [
-  "university-specific",
-  "national",
-  "external/foundation",
-];
 
 function Field({
   label,

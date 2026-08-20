@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { listScholarships } from "@/lib/queries/scholarships";
 import { createClient } from "@/lib/supabase/server";
 import { ScholarshipsTable } from "./ScholarshipsTable";
@@ -14,12 +15,12 @@ export default async function ScholarshipsPage() {
         <h1 className="font-display text-2xl font-semibold text-ink">
           Scholarships
         </h1>
-        <button
-          type="button"
+        <Link
+          href="/admin/scholarships/new"
           className="rounded-md bg-ink px-3 py-1.5 font-body text-sm font-medium text-paper transition-opacity duration-150 hover:opacity-90"
         >
           New scholarship
-        </button>
+        </Link>
       </div>
 
       <ScholarshipsTable scholarships={scholarships} />

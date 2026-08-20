@@ -181,3 +181,29 @@ Full schema in `database-schema.md` (companion file). Key confirmed decisions:
 - [ ] Visual mockup of the design direction in Section 7 (token system decided, not yet built)
 - [ ] `llms.txt` content draft
 - [ ] Legal page copy (Privacy Policy, Terms, Disclaimer)
+
+---
+
+## 12. Homepage & search expansion (proposed, not scoped for build yet)
+
+Proposed backlog, captured 2026-08-20. Not prioritized against the rest of this doc yet — treat as a wishlist to pull from, not a commitment. Split by what the current schema already supports vs what needs new data modeling first.
+
+**Buildable against the current schema (no new tables needed):**
+- Featured universities (homepage section)
+- Latest scholarships (homepage section)
+- Application deadlines (homepage section — was removed from the homepage per design feedback, but the query/data support still exists)
+- University comparison CTA (homepage entry point into `/compare`)
+- Student guides/articles (homepage section)
+- Global search across universities, countries, cities, scholarships, articles/guides, deadlines (search currently covers universities + guides only, per Section 4; scholarships/deadlines/countries/cities as search result types are additive, not blocked by schema)
+- Search-by-university, search-by-country, search-by-city (all real columns already)
+- Filters: Country, Ranking, University type, International/domestic (data exists in `universities`/`rankings`, just not wired into a faceted filter UI yet)
+
+**Needs new data modeling first — not just a UI task:**
+- "Popular courses" homepage section, and search/filter by **course/degree** or **subject** — `universities.popular_majors` is a loose text array today, not a structured, filterable catalog. Needs `courses` and/or `subjects` tables plus a `university_courses` join (with its own tuition, intake, and delivery-mode fields) before this is real.
+- Filters: **Subject**, **Tuition fee** (per-course, not just the university-level tuition columns that exist now), **Intake**, **Online/on-campus** — all depend on the course-level model above.
+- "Popular destinations" — doable at country level today; city-level would benefit from cities being a proper lookup/dimension rather than free text on `universities.city`.
+
+**Its own small feature, not just a homepage section:**
+- "Find the right university for me" quiz — needs its own question/scoring logic. Buildable against current data (country, degree level, budget, etc.) without new tables, but scope it separately rather than bundling into homepage work.
+
+**Open question this raises:** the original brief (Section 1) scopes this as a university-level aggregator with deadlines/guides as the flagship differentiator, not a course marketplace. Building out course/subject-level browsing is a meaningful product expansion (StudyPortals-style), not incremental polish — worth a deliberate yes/no before starting, same as the user-accounts decision in Section 10.1.

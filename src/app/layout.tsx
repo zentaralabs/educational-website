@@ -21,7 +21,7 @@ const ibmPlexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   title: "University Guidance Platform",
   description:
-    "Deadlines, application requirements, scholarships, and how-to guides for applying to universities in the US, UK, Canada, and Australia.",
+    "Deadlines, application requirements, scholarships, and how-to guides for applying to universities in the US, UK, Canada, Australia, and New Zealand.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

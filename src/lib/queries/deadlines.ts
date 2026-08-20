@@ -48,6 +48,27 @@ export async function bulkUpdateDeadlines(
   if (error) throw error;
 }
 
+export async function createDeadline(
+  supabase: SupabaseClient<Database>,
+  input: Pick<
+    Database["public"]["Tables"]["deadlines"]["Insert"],
+    | "university_id"
+    | "degree_level_id"
+    | "deadline_type_id"
+    | "deadline_date"
+    | "application_platform_id"
+    | "is_rolling"
+  >,
+): Promise<string> {
+  const { data, error } = await supabase
+    .from("deadlines")
+    .insert({ ...input, status: "draft" })
+    .select("id")
+    .single();
+  if (error) throw error;
+  return data.id;
+}
+
 export async function insertDeadlines(
   supabase: SupabaseClient<Database>,
   rows: Database["public"]["Tables"]["deadlines"]["Insert"][],

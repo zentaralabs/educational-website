@@ -1,13 +1,35 @@
-export default function AuthorsPage() {
+import Link from "next/link";
+import { listAuthors } from "@/lib/queries/authors";
+import { createClient } from "@/lib/supabase/server";
+import { AuthorsTable } from "./AuthorsTable";
+
+export const dynamic = "force-dynamic";
+
+export default async function AuthorsPage() {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  const [authors, { data: currentAuthor }] = await Promise.all([
+    listAuthors(supabase),
+    supabase.from("authors").select("is_admin").eq("id", user?.id ?? "").maybeSingle(),
+  ]);
+
   return (
     <div className="p-8">
-      <h1 className="font-display text-2xl font-semibold text-ink">
-        Authors
-      </h1>
-      <p className="mt-2 max-w-md font-body text-sm text-slate">
-        Not built yet — see the README build order (Universities first, then
-        Deadlines, Guides, Scholarships, Review Queue, Dashboard last).
-      </p>
+      <div className="mb-6 flex items-center justify-between">
+        <h1 className="font-display text-2xl font-semibold text-ink">Authors</h1>
+        {currentAuthor?.is_admin && (
+          <Link
+            href="/admin/authors/new"
+            className="rounded-md bg-ink px-3 py-1.5 font-body text-sm font-medium text-paper transition-opacity duration-150 hover:opacity-90"
+          >
+            New author
+          </Link>
+        )}
+      </div>
+
+      <AuthorsTable authors={authors} />
     </div>
   );
 }

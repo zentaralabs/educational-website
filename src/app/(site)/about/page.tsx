@@ -1,0 +1,52 @@
+import { LegalPage } from "@/components/site/LegalPage";
+
+export const metadata = {
+  title: "About",
+  description:
+    "Why Where To Apply exists, how content is fact-checked, and who writes it.",
+};
+
+export default function AboutPage() {
+  return (
+    <LegalPage title="About" updated="August 20, 2026">
+      <p>
+        Where To Apply exists because application deadlines, requirements,
+        and costs for studying abroad are scattered across hundreds of
+        university websites, each formatted differently and each easy to
+        miss a change on. We aggregate that information into one place,
+        structured and kept current, so applicants and families can plan
+        without hunting through a dozen admissions portals.
+      </p>
+
+      <h2>How we fact-check</h2>
+      <p>
+        Every deadline, tuition figure, and admissions requirement on this
+        site is sourced from an official university page, application
+        platform, or government source at the time it was verified. We link
+        that source and show a &ldquo;last verified&rdquo; date on every
+        fact-bearing page. Nothing is generated without a human checking it
+        against the original source first — see our{" "}
+        <a href="/disclaimer">disclaimer</a> for what that does and
+        doesn&rsquo;t guarantee.
+      </p>
+
+      <h2>Narrative content</h2>
+      <p>
+        Guides and university write-ups are drafted with AI assistance and
+        then substantively rewritten and fact-checked by a human editor
+        before publishing — not lightly proofread. Real bylines are on every
+        guide and university profile so you know who stands behind it.
+      </p>
+
+      <h2>How this site is funded</h2>
+      <p>
+        Where To Apply is supported by display advertising and, in some
+        cases, affiliate or referral relationships with scholarship and
+        financial-aid providers. Editorial content is not influenced by
+        those relationships — a scholarship or program appearing on this
+        site is not an endorsement, and inclusion criteria are the same
+        whether or not a relationship exists.
+      </p>
+    </LegalPage>
+  );
+}

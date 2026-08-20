@@ -27,6 +27,22 @@ export async function listGuides(
   return (data ?? []) as unknown as GuideListRow[];
 }
 
+export async function createGuide(
+  supabase: SupabaseClient<Database>,
+  input: Pick<
+    Database["public"]["Tables"]["guides"]["Insert"],
+    "title" | "slug" | "category" | "country_id" | "author_id"
+  >,
+): Promise<string> {
+  const { data, error } = await supabase
+    .from("guides")
+    .insert({ ...input, content: "", status: "draft" })
+    .select("id")
+    .single();
+  if (error) throw error;
+  return data.id;
+}
+
 export type GuideDetailRow = Database["public"]["Tables"]["guides"]["Row"] & {
   author: { name: string } | null;
 };
