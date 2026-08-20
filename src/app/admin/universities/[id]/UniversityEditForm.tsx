@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { ContentStatusBadge } from "@/components/admin/ContentStatusBadge";
+import { createProgram, updateProgramStatus, type ProgramRow } from "@/lib/queries/programs";
 import { updateUniversity, type UniversityDetailRow } from "@/lib/queries/universities";
 import { logActivity } from "@/lib/queries/activity";
 import { createClient } from "@/lib/supabase/client";
@@ -134,12 +135,257 @@ function TextAreaField({
   );
 }
 
+function ProgramsPanel({
+  universityId,
+  degreeLevels,
+  subjects,
+  initialPrograms,
+}: {
+  universityId: string;
+  degreeLevels: { id: number; name: string }[];
+  subjects: { id: number; name: string }[];
+  initialPrograms: ProgramRow[];
+}) {
+  const router = useRouter();
+  const [programs, setPrograms] = useState(initialPrograms);
+  const [name, setName] = useState("");
+  const [degreeLevelId, setDegreeLevelId] = useState(String(degreeLevels[0]?.id ?? ""));
+  const [subjectId, setSubjectId] = useState("");
+  const [durationYears, setDurationYears] = useState("");
+  const [tuition, setTuition] = useState("");
+  const [saving, setSaving] = useState(false);
+  const [busyId, setBusyId] = useState<string | null>(null);
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
+
+  async function handleAdd(e: React.FormEvent) {
+    e.preventDefault();
+    if (!name.trim() || !degreeLevelId) return;
+    setSaving(true);
+    setErrorMsg(null);
+    try {
+      const supabase = createClient();
+      const id = await createProgram(supabase, {
+        university_id: universityId,
+        name: name.trim(),
+        degree_level_id: Number(degreeLevelId),
+        subject_id: subjectId ? Number(subjectId) : null,
+        duration_years: durationYears ? Number(durationYears) : null,
+        tuition_international: tuition ? Number(tuition) : null,
+      });
+      const degree_level = degreeLevels.find((d) => d.id === Number(degreeLevelId)) ?? null;
+      const subject = subjects.find((s) => s.id === Number(subjectId)) ?? null;
+      setPrograms((prev) => [
+        ...prev,
+        {
+          id,
+          university_id: universityId,
+          name: name.trim(),
+          degree_level_id: Number(degreeLevelId),
+          degree_level,
+          subject_id: subjectId ? Number(subjectId) : null,
+          subject,
+          duration_years: durationYears ? Number(durationYears) : null,
+          tuition_international: tuition ? Number(tuition) : null,
+          status: "draft",
+          last_verified_at: null,
+          source_url: null,
+          created_at: new Date().toISOString(),
+          updated_at: new Date().toISOString(),
+        },
+      ]);
+      setName("");
+      setSubjectId("");
+      setDurationYears("");
+      setTuition("");
+      router.refresh();
+    } catch (err) {
+      setErrorMsg(err instanceof Error ? err.message : "Could not add program");
+    } finally {
+      setSaving(false);
+    }
+  }
+
+  async function handleStatusChange(programId: string, status: ContentStatus) {
+    setBusyId(programId);
+    setErrorMsg(null);
+    try {
+      const supabase = createClient();
+      await updateProgramStatus(supabase, programId, status);
+      setPrograms((prev) =>
+        prev.map((p) => (p.id === programId ? { ...p, status } : p)),
+      );
+      router.refresh();
+    } catch (err) {
+      setErrorMsg(err instanceof Error ? err.message : "Update failed");
+    } finally {
+      setBusyId(null);
+    }
+  }
+
+  return (
+    <div className="max-w-2xl">
+      <p className="mb-4 font-body text-sm text-slate">
+        Structured degree offerings (e.g. &ldquo;Bachelor of Computer
+        Science&rdquo;) shown on the public profile, separate from the free-text
+        popular majors below.
+      </p>
+
+      {programs.length > 0 && (
+        <div className="mb-4 overflow-hidden rounded-md border border-ink/15">
+          <table className="w-full border-collapse text-left">
+            <thead>
+              <tr className="border-b border-ink/15 bg-ink/[0.03]">
+                <th className="px-3 py-2 font-body text-xs font-semibold tracking-wide text-slate uppercase">
+                  Program
+                </th>
+                <th className="px-3 py-2 font-body text-xs font-semibold tracking-wide text-slate uppercase">
+                  Degree
+                </th>
+                <th className="px-3 py-2 font-body text-xs font-semibold tracking-wide text-slate uppercase">
+                  Subject
+                </th>
+                <th className="px-3 py-2 font-body text-xs font-semibold tracking-wide text-slate uppercase">
+                  Status
+                </th>
+                <th className="px-3 py-2 font-body text-xs font-semibold tracking-wide text-slate uppercase">
+                  Actions
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {programs.map((p) => (
+                <tr key={p.id} className="border-b border-ink/10 text-sm last:border-b-0">
+                  <td className="px-3 py-2.5 text-ink">{p.name}</td>
+                  <td className="px-3 py-2.5 text-slate">{p.degree_level?.name}</td>
+                  <td className="px-3 py-2.5 text-slate">{p.subject?.name ?? "—"}</td>
+                  <td className="px-3 py-2.5">
+                    <ContentStatusBadge status={p.status} />
+                  </td>
+                  <td className="px-3 py-2.5">
+                    {p.status !== "published" ? (
+                      <button
+                        type="button"
+                        disabled={busyId === p.id}
+                        onClick={() => handleStatusChange(p.id, "published")}
+                        className="font-body text-xs text-status-open underline underline-offset-2 disabled:opacity-50"
+                      >
+                        Publish
+                      </button>
+                    ) : (
+                      <button
+                        type="button"
+                        disabled={busyId === p.id}
+                        onClick={() => handleStatusChange(p.id, "archived")}
+                        className="font-body text-xs text-slate underline underline-offset-2 hover:text-status-closed disabled:opacity-50"
+                      >
+                        Archive
+                      </button>
+                    )}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+
+      <form
+        onSubmit={handleAdd}
+        className="flex flex-wrap items-end gap-3 rounded-md border border-ink/15 bg-ink/[0.02] p-4"
+      >
+        <label className="block">
+          <span className="mb-1 block font-body text-xs font-semibold tracking-wide text-slate uppercase">
+            Name
+          </span>
+          <input
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            placeholder="Bachelor of Computer Science"
+            className="min-w-48 rounded-md border border-ink/20 bg-paper px-2 py-1.5 font-body text-sm text-ink placeholder:text-slate/60"
+          />
+        </label>
+        <label className="block">
+          <span className="mb-1 block font-body text-xs font-semibold tracking-wide text-slate uppercase">
+            Degree level
+          </span>
+          <select
+            value={degreeLevelId}
+            onChange={(e) => setDegreeLevelId(e.target.value)}
+            className="rounded-md border border-ink/20 bg-paper px-2 py-1.5 font-body text-sm text-ink"
+          >
+            {degreeLevels.map((d) => (
+              <option key={d.id} value={d.id}>
+                {d.name}
+              </option>
+            ))}
+          </select>
+        </label>
+        <label className="block">
+          <span className="mb-1 block font-body text-xs font-semibold tracking-wide text-slate uppercase">
+            Subject
+          </span>
+          <select
+            value={subjectId}
+            onChange={(e) => setSubjectId(e.target.value)}
+            className="rounded-md border border-ink/20 bg-paper px-2 py-1.5 font-body text-sm text-ink"
+          >
+            <option value="">None</option>
+            {subjects.map((s) => (
+              <option key={s.id} value={s.id}>
+                {s.name}
+              </option>
+            ))}
+          </select>
+        </label>
+        <label className="block">
+          <span className="mb-1 block font-body text-xs font-semibold tracking-wide text-slate uppercase">
+            Duration (yrs)
+          </span>
+          <input
+            value={durationYears}
+            onChange={(e) => setDurationYears(e.target.value)}
+            placeholder="4"
+            className="w-20 rounded-md border border-ink/20 bg-paper px-2 py-1.5 font-body text-sm text-ink placeholder:text-slate/60"
+          />
+        </label>
+        <label className="block">
+          <span className="mb-1 block font-body text-xs font-semibold tracking-wide text-slate uppercase">
+            Tuition (intl., optional)
+          </span>
+          <input
+            value={tuition}
+            onChange={(e) => setTuition(e.target.value)}
+            placeholder="Falls back to university tuition"
+            className="rounded-md border border-ink/20 bg-paper px-2 py-1.5 font-body text-sm text-ink placeholder:text-slate/60"
+          />
+        </label>
+        <button
+          type="submit"
+          disabled={saving}
+          className="rounded-md bg-ink px-3 py-1.5 font-body text-sm font-medium text-paper transition-opacity duration-150 hover:opacity-90 disabled:opacity-50"
+        >
+          {saving ? "Adding…" : "Add program"}
+        </button>
+        {errorMsg && (
+          <p className="w-full font-body text-xs text-status-closed">{errorMsg}</p>
+        )}
+      </form>
+    </div>
+  );
+}
+
 export function UniversityEditForm({
   university,
   countries,
+  degreeLevels,
+  programs,
+  subjects,
 }: {
   university: UniversityDetailRow;
   countries: { id: number; code: string; name: string }[];
+  degreeLevels: { id: number; name: string }[];
+  programs: ProgramRow[];
+  subjects: { id: number; name: string }[];
 }) {
   const router = useRouter();
   const [tab, setTab] = useState<Tab>("Overview");
@@ -317,12 +563,12 @@ export function UniversityEditForm({
       )}
 
       {tab === "Academic" && (
-        <div className="max-w-2xl">
-          <p className="font-body text-sm text-slate">
-            Popular majors, student-faculty ratio, degree levels offered —
-            same pattern as the other tabs, not wired up yet.
-          </p>
-        </div>
+        <ProgramsPanel
+          universityId={university.id}
+          degreeLevels={degreeLevels}
+          subjects={subjects}
+          initialPrograms={programs}
+        />
       )}
 
       {tab === "Narrative" && (

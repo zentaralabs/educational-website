@@ -126,6 +126,38 @@ export interface Database {
         { university_id: string; degree_level_id: number },
         { university_id: string; degree_level_id: number }
       >;
+      programs: Table<
+        {
+          id: string;
+          university_id: string;
+          name: string;
+          degree_level_id: number;
+          subject_id: number | null;
+          duration_years: number | null;
+          tuition_international: number | null;
+          status: ContentStatus;
+          last_verified_at: string | null;
+          source_url: string | null;
+          created_at: string;
+          updated_at: string;
+        },
+        {
+          id?: string;
+          university_id: string;
+          name: string;
+          degree_level_id: number;
+          subject_id?: number | null;
+          duration_years?: number | null;
+          tuition_international?: number | null;
+          status?: ContentStatus;
+          last_verified_at?: string | null;
+          source_url?: string | null;
+        }
+      >;
+      subjects: Table<
+        { id: number; name: string },
+        { id?: number; name: string }
+      >;
       ranking_bodies: Table<
         { id: number; name: string; website_url: string | null },
         { id?: number; name: string; website_url?: string | null }

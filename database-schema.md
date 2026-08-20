@@ -118,6 +118,36 @@ CREATE TABLE university_degree_levels (   -- many-to-many
 
 ---
 
+## Programs
+
+Added in migration `0004_add_programs.sql`. Structured per-university degree
+offerings — addresses the "course/subject" gap noted in PROJECT_STATUS.md
+Section 12: `universities.popular_majors` is a loose text array, not real
+program data. `field_of_study` is still free text, not a controlled
+vocabulary (no `subjects` lookup table yet).
+
+```sql
+CREATE TABLE programs (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  university_id UUID REFERENCES universities(id) ON DELETE CASCADE NOT NULL,
+  name TEXT NOT NULL,                -- 'Bachelor of Computer Science'
+  degree_level_id INT REFERENCES degree_levels(id) NOT NULL,
+  field_of_study TEXT,               -- free text, e.g. 'Computer Science'
+  duration_years NUMERIC(3,1),
+  tuition_international NUMERIC,     -- optional per-program override; falls
+                                      -- back to universities.tuition_international
+
+  status content_status DEFAULT 'draft',
+  last_verified_at DATE,
+  source_url TEXT,
+
+  created_at TIMESTAMPTZ DEFAULT now(),
+  updated_at TIMESTAMPTZ DEFAULT now()
+);
+```
+
+---
+
 ## Rankings
 
 Structured, sourced, dated — enables trend display ("up 3 places since last year") and keeps every ranking claim citable, which matters for both reader trust and AI-answer-engine citation (see GEO notes).

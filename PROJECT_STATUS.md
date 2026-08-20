@@ -198,9 +198,11 @@ Proposed backlog, captured 2026-08-20. Not prioritized against the rest of this 
 - Search-by-university, search-by-country, search-by-city (all real columns already)
 - Filters: Country, Ranking, University type, International/domestic (data exists in `universities`/`rankings`, just not wired into a faceted filter UI yet)
 
+**Done:** `programs` table added (`supabase/migrations/0004_add_programs.sql`) — per-university structured degree offerings (name, degree level, field of study, duration, optional per-program tuition override), same draft/published workflow as everything else. Admin: `/admin/universities/[id]` "Academic" tab manages them. Public: shown on each university profile under "Academics", falling back to the university-level `tuition_international` when a program doesn't set its own. `field_of_study` is still free text, not a controlled vocabulary — see below.
+
 **Needs new data modeling first — not just a UI task:**
-- "Popular courses" homepage section, and search/filter by **course/degree** or **subject** — `universities.popular_majors` is a loose text array today, not a structured, filterable catalog. Needs `courses` and/or `subjects` tables plus a `university_courses` join (with its own tuition, intake, and delivery-mode fields) before this is real.
-- Filters: **Subject**, **Tuition fee** (per-course, not just the university-level tuition columns that exist now), **Intake**, **Online/on-campus** — all depend on the course-level model above.
+- "Popular courses" homepage section, and search/filter by **subject** — `programs.field_of_study` is free text, not a controlled vocabulary yet. Needs a `subjects` lookup table (mirroring `degree_levels`) before subject filtering/faceting is real.
+- Filters: **Intake**, **Online/on-campus** — `programs` doesn't model either yet; would need new columns or a join.
 - "Popular destinations" — doable at country level today; city-level would benefit from cities being a proper lookup/dimension rather than free text on `universities.city`.
 
 **Its own small feature, not just a homepage section:**

@@ -5,6 +5,7 @@ import { Fact, ProfileSection } from "@/components/site/ProfileSection";
 import { LastVerified } from "@/components/site/LastVerified";
 import { deadlineBadgeStatus, formatDeadlineDate } from "@/lib/deadline-status";
 import { formatCurrency, formatPercent } from "@/lib/format";
+import { getPublishedProgramsForUniversity } from "@/lib/queries/public-programs";
 import {
   getPublishedDeadlinesForUniversity,
   getPublishedScholarshipsForUniversity,
@@ -45,9 +46,10 @@ export default async function UniversityProfilePage({
   const university = await getPublishedUniversity(slug);
   if (!university) notFound();
 
-  const [deadlines, scholarships] = await Promise.all([
+  const [deadlines, scholarships, programs] = await Promise.all([
     getPublishedDeadlinesForUniversity(university.id),
     getPublishedScholarshipsForUniversity(university.id),
+    getPublishedProgramsForUniversity(university.id),
   ]);
 
   const nextDeadline = deadlines.find(
@@ -199,6 +201,40 @@ export default async function UniversityProfilePage({
           />
           <Fact label="Student:faculty ratio" value={university.student_faculty_ratio} />
         </dl>
+
+        {programs.length > 0 && (
+          <div className="mt-4 overflow-hidden rounded-md border border-ink/15">
+            {programs.map((p, i) => (
+              <div
+                key={p.id}
+                className="flex items-center justify-between gap-4 px-4 py-3 text-sm"
+                style={{
+                  borderBottomWidth: i < programs.length - 1 ? 1 : 0,
+                  borderBottomColor:
+                    "color-mix(in srgb, var(--color-ink) 10%, transparent)",
+                }}
+              >
+                <span className="text-ink">
+                  {p.name}
+                  {p.degree_level && (
+                    <span className="text-slate"> — {p.degree_level.name}</span>
+                  )}
+                  {p.subject && (
+                    <span className="text-slate"> · {p.subject.name}</span>
+                  )}
+                </span>
+                <div className="flex items-center gap-3 font-utility text-xs text-slate">
+                  {p.duration_years && <span>{p.duration_years} yr</span>}
+                  <span>
+                    {formatCurrency(
+                      p.tuition_international ?? university.tuition_international,
+                    ) ?? "—"}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
       </ProfileSection>
 
       {university.international_student_notes && (

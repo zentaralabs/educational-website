@@ -8,10 +8,12 @@ import {
   addCountry,
   addDeadlineType,
   addDegreeLevel,
+  addSubject,
   deleteApplicationPlatform,
   deleteCountry,
   deleteDeadlineType,
   deleteDegreeLevel,
+  deleteSubject,
   type ApplicationPlatformRow,
 } from "@/lib/queries/vocab";
 import { createClient } from "@/lib/supabase/client";
@@ -20,6 +22,7 @@ import type { Database } from "@/lib/supabase/types";
 type Country = Database["public"]["Tables"]["countries"]["Row"];
 type DegreeLevel = Database["public"]["Tables"]["degree_levels"]["Row"];
 type DeadlineType = Database["public"]["Tables"]["deadline_types"]["Row"];
+type Subject = Database["public"]["Tables"]["subjects"]["Row"];
 
 function Panel({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -399,6 +402,7 @@ export function SettingsView({
   degreeLevels,
   deadlineTypes,
   applicationPlatforms,
+  subjects,
 }: {
   currentUserId: string;
   authors: AuthorListRow[];
@@ -406,6 +410,7 @@ export function SettingsView({
   degreeLevels: DegreeLevel[];
   deadlineTypes: DeadlineType[];
   applicationPlatforms: ApplicationPlatformRow[];
+  subjects: Subject[];
 }) {
   return (
     <div className="grid gap-6 sm:grid-cols-2">
@@ -438,6 +443,19 @@ export function SettingsView({
         }}
       />
       <PlatformsPanel platforms={applicationPlatforms} countries={countries} />
+      <NameOnlyVocabPanel
+        title="Subjects"
+        placeholder="e.g. Astronomy"
+        items={subjects}
+        onAdd={async (name) => {
+          const supabase = createClient();
+          return addSubject(supabase, name);
+        }}
+        onDelete={async (id) => {
+          const supabase = createClient();
+          await deleteSubject(supabase, id);
+        }}
+      />
     </div>
   );
 }

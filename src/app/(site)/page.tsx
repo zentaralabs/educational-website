@@ -12,7 +12,7 @@ export default async function Home() {
   return (
     <main className="flex flex-1 items-center px-6 py-16">
       <div
-        className="animate-fade-up mx-auto w-full max-w-2xl text-center"
+        className="animate-fade-up mx-auto w-full max-w-3xl text-center"
         style={{ animationDelay: "0ms" }}
       >
         <p className="mb-3 font-utility text-xs font-semibold tracking-widest text-status-open uppercase">

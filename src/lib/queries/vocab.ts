@@ -68,6 +68,27 @@ export async function deleteDeadlineType(supabase: SupabaseClient<Database>, id:
   if (error) throw error;
 }
 
+export async function listSubjects(supabase: SupabaseClient<Database>) {
+  const { data, error } = await supabase.from("subjects").select("*").order("name");
+  if (error) throw error;
+  return data ?? [];
+}
+
+export async function addSubject(supabase: SupabaseClient<Database>, name: string) {
+  const { data, error } = await supabase
+    .from("subjects")
+    .insert({ name })
+    .select("*")
+    .single();
+  if (error) throw error;
+  return data;
+}
+
+export async function deleteSubject(supabase: SupabaseClient<Database>, id: number) {
+  const { error } = await supabase.from("subjects").delete().eq("id", id);
+  if (error) throw error;
+}
+
 export type ApplicationPlatformRow = {
   id: number;
   name: string;

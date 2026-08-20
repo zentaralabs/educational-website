@@ -17,6 +17,7 @@ const ENTITY_TAG_PREFIX: Record<string, string> = {
   deadlines: "deadline",
   guides: "guide",
   scholarships: "scholarship",
+  programs: "program",
 };
 
 type SupabaseWebhookPayload = {

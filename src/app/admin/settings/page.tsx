@@ -5,6 +5,7 @@ import {
   listCountries,
   listDeadlineTypes,
   listDegreeLevels,
+  listSubjects,
 } from "@/lib/queries/vocab";
 import { createClient } from "@/lib/supabase/server";
 import { SettingsView } from "./SettingsView";
@@ -41,13 +42,14 @@ export default async function SettingsPage() {
     );
   }
 
-  const [authors, countries, degreeLevels, deadlineTypes, applicationPlatforms] =
+  const [authors, countries, degreeLevels, deadlineTypes, applicationPlatforms, subjects] =
     await Promise.all([
       listAuthors(supabase),
       listCountries(supabase),
       listDegreeLevels(supabase),
       listDeadlineTypes(supabase),
       listApplicationPlatforms(supabase),
+      listSubjects(supabase),
     ]);
 
   return (
@@ -62,6 +64,7 @@ export default async function SettingsPage() {
         degreeLevels={degreeLevels}
         deadlineTypes={deadlineTypes}
         applicationPlatforms={applicationPlatforms}
+        subjects={subjects}
       />
     </div>
   );
