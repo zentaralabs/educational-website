@@ -287,6 +287,40 @@ export interface Database {
           qa_firsthand_detail_added?: boolean;
         }
       >;
+      blog_posts: Table<
+        {
+          id: string;
+          slug: string;
+          title: string;
+          content: string;
+          excerpt: string | null;
+          tags: string[] | null;
+          word_count: number | null;
+          author_id: string | null;
+          reviewed_by_id: string | null;
+          status: ContentStatus;
+          published_at: string | null;
+          last_verified_at: string | null;
+          source_urls: string[] | null;
+          created_at: string;
+          updated_at: string;
+        },
+        {
+          id?: string;
+          slug: string;
+          title: string;
+          content: string;
+          excerpt?: string | null;
+          tags?: string[] | null;
+          word_count?: number | null;
+          author_id?: string | null;
+          reviewed_by_id?: string | null;
+          status?: ContentStatus;
+          published_at?: string | null;
+          last_verified_at?: string | null;
+          source_urls?: string[] | null;
+        }
+      >;
       guide_related_guides: Table<
         { guide_id: string; related_guide_id: string },
         { guide_id: string; related_guide_id: string }
