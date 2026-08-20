@@ -1,8 +1,11 @@
-export function formatCurrency(amount: number | null): string | null {
+export function formatCurrency(
+  amount: number | null,
+  currency: string = "USD",
+): string | null {
   if (amount === null) return null;
   return new Intl.NumberFormat("en-US", {
     style: "currency",
-    currency: "USD",
+    currency,
     maximumFractionDigits: 0,
   }).format(amount);
 }

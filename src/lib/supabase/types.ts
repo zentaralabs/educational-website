@@ -78,6 +78,9 @@ export interface Database {
           tuition_in_state: number | null;
           tuition_out_state: number | null;
           tuition_international: number | null;
+          tuition_domestic: number | null;
+          currency: string;
+          apply_url: string | null;
           est_cost_of_attendance: number | null;
           popular_majors: string[] | null;
           student_faculty_ratio: string | null;
@@ -110,6 +113,9 @@ export interface Database {
           tuition_in_state?: number | null;
           tuition_out_state?: number | null;
           tuition_international?: number | null;
+          tuition_domestic?: number | null;
+          currency?: string;
+          apply_url?: string | null;
           est_cost_of_attendance?: number | null;
           popular_majors?: string[] | null;
           student_faculty_ratio?: string | null;
@@ -135,6 +141,9 @@ export interface Database {
           subject_id: number | null;
           duration_years: number | null;
           tuition_international: number | null;
+          tuition_domestic: number | null;
+          currency: string | null;
+          application_url: string | null;
           status: ContentStatus;
           last_verified_at: string | null;
           source_url: string | null;
@@ -149,6 +158,9 @@ export interface Database {
           subject_id?: number | null;
           duration_years?: number | null;
           tuition_international?: number | null;
+          tuition_domestic?: number | null;
+          currency?: string | null;
+          application_url?: string | null;
           status?: ContentStatus;
           last_verified_at?: string | null;
           source_url?: string | null;

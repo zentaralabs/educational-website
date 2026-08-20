@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { StudentTypeToggle } from "@/components/site/StudentTypeToggle";
 
 const NAV = [
   { label: "Deadlines", href: "/deadlines" },
@@ -32,6 +33,7 @@ export function SiteHeader() {
               {item.label}
             </Link>
           ))}
+          <StudentTypeToggle />
         </nav>
       </div>
     </header>

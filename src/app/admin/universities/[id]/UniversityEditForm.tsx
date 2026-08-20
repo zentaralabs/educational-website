@@ -32,6 +32,9 @@ type FormState = {
   tuition_in_state: string;
   tuition_out_state: string;
   tuition_international: string;
+  tuition_domestic: string;
+  currency: string;
+  apply_url: string;
   distinctive_summary: string;
   international_student_notes: string;
 };
@@ -51,6 +54,9 @@ function toFormState(u: UniversityDetailRow): FormState {
     tuition_out_state: u.tuition_out_state !== null ? String(u.tuition_out_state) : "",
     tuition_international:
       u.tuition_international !== null ? String(u.tuition_international) : "",
+    tuition_domestic: u.tuition_domestic !== null ? String(u.tuition_domestic) : "",
+    currency: u.currency ?? "USD",
+    apply_url: u.apply_url ?? "",
     distinctive_summary: u.distinctive_summary ?? "",
     international_student_notes: u.international_student_notes ?? "",
   };
@@ -77,6 +83,9 @@ function toPatch(
     tuition_international: form.tuition_international
       ? Number(form.tuition_international)
       : null,
+    tuition_domestic: form.tuition_domestic ? Number(form.tuition_domestic) : null,
+    currency: form.currency || "USD",
+    apply_url: form.apply_url || null,
     distinctive_summary: form.distinctive_summary || null,
     international_student_notes: form.international_student_notes || null,
     status,
@@ -153,6 +162,10 @@ function ProgramsPanel({
   const [subjectId, setSubjectId] = useState("");
   const [durationYears, setDurationYears] = useState("");
   const [tuition, setTuition] = useState("");
+  const [tuitionDomestic, setTuitionDomestic] = useState("");
+  const [currency, setCurrency] = useState("");
+  const [applicationUrl, setApplicationUrl] = useState("");
+  const [sourceUrl, setSourceUrl] = useState("");
   const [saving, setSaving] = useState(false);
   const [busyId, setBusyId] = useState<string | null>(null);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
@@ -171,6 +184,10 @@ function ProgramsPanel({
         subject_id: subjectId ? Number(subjectId) : null,
         duration_years: durationYears ? Number(durationYears) : null,
         tuition_international: tuition ? Number(tuition) : null,
+        tuition_domestic: tuitionDomestic ? Number(tuitionDomestic) : null,
+        currency: currency ? currency.toUpperCase() : null,
+        application_url: applicationUrl || null,
+        source_url: sourceUrl || null,
       });
       const degree_level = degreeLevels.find((d) => d.id === Number(degreeLevelId)) ?? null;
       const subject = subjects.find((s) => s.id === Number(subjectId)) ?? null;
@@ -186,9 +203,12 @@ function ProgramsPanel({
           subject,
           duration_years: durationYears ? Number(durationYears) : null,
           tuition_international: tuition ? Number(tuition) : null,
+          tuition_domestic: tuitionDomestic ? Number(tuitionDomestic) : null,
+          currency: currency ? currency.toUpperCase() : null,
+          application_url: applicationUrl || null,
           status: "draft",
           last_verified_at: null,
-          source_url: null,
+          source_url: sourceUrl || null,
           created_at: new Date().toISOString(),
           updated_at: new Date().toISOString(),
         },
@@ -197,6 +217,10 @@ function ProgramsPanel({
       setSubjectId("");
       setDurationYears("");
       setTuition("");
+      setTuitionDomestic("");
+      setCurrency("");
+      setApplicationUrl("");
+      setSourceUrl("");
       router.refresh();
     } catch (err) {
       setErrorMsg(err instanceof Error ? err.message : "Could not add program");
@@ -357,6 +381,50 @@ function ProgramsPanel({
             onChange={(e) => setTuition(e.target.value)}
             placeholder="Falls back to university tuition"
             className="rounded-md border border-ink/20 bg-paper px-2 py-1.5 font-body text-sm text-ink placeholder:text-slate/60"
+          />
+        </label>
+        <label className="block">
+          <span className="mb-1 block font-body text-xs font-semibold tracking-wide text-slate uppercase">
+            Tuition (domestic, optional)
+          </span>
+          <input
+            value={tuitionDomestic}
+            onChange={(e) => setTuitionDomestic(e.target.value)}
+            placeholder="Falls back to university tuition"
+            className="rounded-md border border-ink/20 bg-paper px-2 py-1.5 font-body text-sm text-ink placeholder:text-slate/60"
+          />
+        </label>
+        <label className="block">
+          <span className="mb-1 block font-body text-xs font-semibold tracking-wide text-slate uppercase">
+            Currency (optional)
+          </span>
+          <input
+            value={currency}
+            onChange={(e) => setCurrency(e.target.value)}
+            placeholder="Falls back to university currency"
+            className="w-40 rounded-md border border-ink/20 bg-paper px-2 py-1.5 font-body text-sm text-ink placeholder:text-slate/60"
+          />
+        </label>
+        <label className="block">
+          <span className="mb-1 block font-body text-xs font-semibold tracking-wide text-slate uppercase">
+            Application URL (optional)
+          </span>
+          <input
+            value={applicationUrl}
+            onChange={(e) => setApplicationUrl(e.target.value)}
+            placeholder="Falls back to university apply URL"
+            className="min-w-56 rounded-md border border-ink/20 bg-paper px-2 py-1.5 font-body text-sm text-ink placeholder:text-slate/60"
+          />
+        </label>
+        <label className="block">
+          <span className="mb-1 block font-body text-xs font-semibold tracking-wide text-slate uppercase">
+            Source URL
+          </span>
+          <input
+            value={sourceUrl}
+            onChange={(e) => setSourceUrl(e.target.value)}
+            placeholder="Official page the fee was verified against"
+            className="min-w-56 rounded-md border border-ink/20 bg-paper px-2 py-1.5 font-body text-sm text-ink placeholder:text-slate/60"
           />
         </label>
         <button
@@ -548,16 +616,36 @@ export function UniversityEditForm({
             label="Tuition (in-state)"
             value={form.tuition_in_state}
             onChange={(v) => set("tuition_in_state", v)}
+            hint="US only"
           />
           <Field
             label="Tuition (out-of-state)"
             value={form.tuition_out_state}
             onChange={(v) => set("tuition_out_state", v)}
+            hint="US only"
           />
           <Field
             label="Tuition (international)"
             value={form.tuition_international}
             onChange={(v) => set("tuition_international", v)}
+          />
+          <Field
+            label="Tuition (domestic)"
+            value={form.tuition_domestic}
+            onChange={(v) => set("tuition_domestic", v)}
+            hint="AU/UK/CA home-student rate"
+          />
+          <Field
+            label="Currency"
+            value={form.currency}
+            onChange={(v) => set("currency", v.toUpperCase())}
+            hint="ISO code, e.g. AUD, GBP, CAD, USD"
+          />
+          <Field
+            label="Apply URL"
+            value={form.apply_url}
+            onChange={(v) => set("apply_url", v)}
+            hint="Fallback application link when a program has none of its own"
           />
         </div>
       )}

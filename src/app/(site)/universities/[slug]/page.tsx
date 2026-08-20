@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import { StatusBadge } from "@/components/StatusBadge";
 import { Fact, ProfileSection } from "@/components/site/ProfileSection";
 import { LastVerified } from "@/components/site/LastVerified";
+import { ProgramsList } from "@/components/site/ProgramsList";
+import { TuitionFact } from "@/components/site/TuitionFact";
 import { deadlineBadgeStatus, formatDeadlineDate } from "@/lib/deadline-status";
 import { formatCurrency, formatPercent } from "@/lib/format";
 import { getPublishedProgramsForUniversity } from "@/lib/queries/public-programs";
@@ -115,16 +117,28 @@ export default async function UniversityProfilePage({
         ))}
       </div>
 
-      {university.website_url && (
-        <a
-          href={university.website_url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-3 inline-block font-body text-base text-status-open underline underline-offset-2"
-        >
-          Official website ↗
-        </a>
-      )}
+      <div className="mt-3 flex flex-wrap items-center gap-4">
+        {university.website_url && (
+          <a
+            href={university.website_url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block font-body text-base text-status-open underline underline-offset-2"
+          >
+            Official website ↗
+          </a>
+        )}
+        {university.apply_url && (
+          <a
+            href={university.apply_url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block rounded-md bg-ink px-4 py-1.5 font-body text-sm font-medium text-paper transition-opacity duration-150 hover:opacity-90"
+          >
+            Apply ↗
+          </a>
+        )}
+      </div>
 
       {university.distinctive_summary && (
         <ProfileSection title="Overview">
@@ -168,13 +182,14 @@ export default async function UniversityProfilePage({
             label="Tuition (out-of-state)"
             value={formatCurrency(university.tuition_out_state)}
           />
-          <Fact
-            label="Tuition (international)"
-            value={formatCurrency(university.tuition_international)}
+          <TuitionFact
+            domestic={university.tuition_domestic}
+            international={university.tuition_international}
+            currency={university.currency}
           />
           <Fact
             label="Est. cost of attendance"
-            value={formatCurrency(university.est_cost_of_attendance)}
+            value={formatCurrency(university.est_cost_of_attendance, university.currency)}
           />
         </dl>
 
@@ -203,37 +218,15 @@ export default async function UniversityProfilePage({
         </dl>
 
         {programs.length > 0 && (
-          <div className="mt-4 overflow-hidden rounded-md border border-ink/15">
-            {programs.map((p, i) => (
-              <div
-                key={p.id}
-                className="flex items-center justify-between gap-4 px-4 py-3 text-sm"
-                style={{
-                  borderBottomWidth: i < programs.length - 1 ? 1 : 0,
-                  borderBottomColor:
-                    "color-mix(in srgb, var(--color-ink) 10%, transparent)",
-                }}
-              >
-                <span className="text-ink">
-                  {p.name}
-                  {p.degree_level && (
-                    <span className="text-slate"> — {p.degree_level.name}</span>
-                  )}
-                  {p.subject && (
-                    <span className="text-slate"> · {p.subject.name}</span>
-                  )}
-                </span>
-                <div className="flex items-center gap-3 font-utility text-xs text-slate">
-                  {p.duration_years && <span>{p.duration_years} yr</span>}
-                  <span>
-                    {formatCurrency(
-                      p.tuition_international ?? university.tuition_international,
-                    ) ?? "—"}
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
+          <ProgramsList
+            programs={programs}
+            universityFallback={{
+              tuition_domestic: university.tuition_domestic,
+              tuition_international: university.tuition_international,
+              currency: university.currency,
+              apply_url: university.apply_url,
+            }}
+          />
         )}
       </ProfileSection>
 

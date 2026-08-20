@@ -10,11 +10,15 @@ const ROWS: {
   { label: "Acceptance rate", value: (u) => formatPercent(u.acceptance_rate) },
   {
     label: "Tuition (international)",
-    value: (u) => formatCurrency(u.tuition_international),
+    value: (u) => formatCurrency(u.tuition_international, u.currency),
+  },
+  {
+    label: "Tuition (domestic)",
+    value: (u) => formatCurrency(u.tuition_domestic, u.currency),
   },
   {
     label: "Est. cost of attendance",
-    value: (u) => formatCurrency(u.est_cost_of_attendance),
+    value: (u) => formatCurrency(u.est_cost_of_attendance, u.currency),
   },
   { label: "Student:faculty ratio", value: (u) => u.student_faculty_ratio },
   { label: "Required tests", value: (u) => u.required_tests?.join(", ") ?? null },

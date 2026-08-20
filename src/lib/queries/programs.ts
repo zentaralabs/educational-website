@@ -24,7 +24,16 @@ export async function createProgram(
   supabase: SupabaseClient<Database>,
   input: Pick<
     Database["public"]["Tables"]["programs"]["Insert"],
-    "university_id" | "name" | "degree_level_id" | "subject_id" | "duration_years" | "tuition_international"
+    | "university_id"
+    | "name"
+    | "degree_level_id"
+    | "subject_id"
+    | "duration_years"
+    | "tuition_international"
+    | "tuition_domestic"
+    | "currency"
+    | "application_url"
+    | "source_url"
   >,
 ): Promise<string> {
   const { data, error } = await supabase

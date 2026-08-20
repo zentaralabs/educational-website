@@ -69,6 +69,8 @@ export type ComparisonUniversityRow = {
   country: { code: string; name: string } | null;
   acceptance_rate: number | null;
   tuition_international: number | null;
+  tuition_domestic: number | null;
+  currency: string;
   est_cost_of_attendance: number | null;
   student_faculty_ratio: string | null;
   required_tests: string[] | null;
@@ -82,7 +84,7 @@ export async function getUniversitiesForComparison(
   const { data, error } = await supabase
     .from("universities")
     .select(
-      "id, slug, name, country:countries(code, name), acceptance_rate, tuition_international, est_cost_of_attendance, student_faculty_ratio, required_tests",
+      "id, slug, name, country:countries(code, name), acceptance_rate, tuition_international, tuition_domestic, currency, est_cost_of_attendance, student_faculty_ratio, required_tests",
     )
     .in("id", ids)
     .eq("status", "published");
@@ -99,7 +101,7 @@ export async function getUniversitiesForComparisonBySlugs(
   const { data, error } = await supabase
     .from("universities")
     .select(
-      "id, slug, name, country:countries(code, name), acceptance_rate, tuition_international, est_cost_of_attendance, student_faculty_ratio, required_tests",
+      "id, slug, name, country:countries(code, name), acceptance_rate, tuition_international, tuition_domestic, currency, est_cost_of_attendance, student_faculty_ratio, required_tests",
     )
     .in("slug", slugs)
     .eq("status", "published");
