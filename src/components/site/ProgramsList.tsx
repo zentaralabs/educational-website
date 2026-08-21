@@ -11,6 +11,7 @@ export function ProgramsList({
   programs: PublicProgramRow[];
   universityFallback: {
     tuition_domestic: number | null;
+    tuition_domestic_is_csp: boolean | null;
     tuition_international: number | null;
     currency: string;
     apply_url: string | null;
@@ -24,9 +25,12 @@ export function ProgramsList({
         const domestic = p.tuition_domestic ?? universityFallback.tuition_domestic;
         const international =
           p.tuition_international ?? universityFallback.tuition_international;
+        const showingDomestic = resolved === "domestic" && domestic !== null;
         const amount = resolved === "domestic" ? (domestic ?? international) : (international ?? domestic);
         const currency = p.currency ?? universityFallback.currency;
         const applyUrl = p.application_url ?? universityFallback.apply_url;
+        const isCsp =
+          p.tuition_domestic_is_csp ?? universityFallback.tuition_domestic_is_csp;
 
         return (
           <div
@@ -66,6 +70,18 @@ export function ProgramsList({
                       </a>
                     </>
                   )}
+                </p>
+              )}
+              {showingDomestic && isCsp && (
+                <p className="mt-0.5 font-utility text-xs text-slate">
+                  Commonwealth Supported Place rate — places are limited and not guaranteed; without one you pay the full domestic fee.
+                </p>
+              )}
+              {(p.admission_requirements || p.english_requirements) && (
+                <p className="mt-1 max-w-md font-body text-xs text-slate">
+                  {p.admission_requirements}
+                  {p.admission_requirements && p.english_requirements && " · "}
+                  {p.english_requirements}
                 </p>
               )}
             </div>

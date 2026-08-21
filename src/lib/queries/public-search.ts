@@ -35,20 +35,23 @@ export async function searchSite(query: string): Promise<SearchResults> {
   if (subjectMatches.error) throw subjectMatches.error;
   const subjectIds = subjectMatches.data?.map((s) => s.id) ?? [];
 
-  let programsQuery = supabase
+  // Always filter via a single .or() call (rather than branching between
+  // .or() and .ilike()) so both code paths chain the exact same builder
+  // methods — mixing them here confuses supabase-js's generic inference
+  // and collapses `programs.data`'s element type to `never`.
+  const programFilter = subjectIds.length
+    ? `name.ilike.${like},subject_id.in.(${subjectIds.join(",")})`
+    : `name.ilike.${like}`;
+
+  const programsQuery = supabase
     .from("programs")
     .select(
       "id, name, university:universities(slug, name), subject:subjects(name)",
     )
     .eq("status", "published")
+    .or(programFilter)
     .order("name")
     .limit(20);
-
-  programsQuery = subjectIds.length
-    ? programsQuery.or(
-        `name.ilike.${like},subject_id.in.(${subjectIds.join(",")})`,
-      )
-    : programsQuery.ilike("name", like);
 
   const [universities, guides, programs] = await Promise.all([
     supabase
@@ -73,25 +76,27 @@ export async function searchSite(query: string): Promise<SearchResults> {
   if (guides.error) throw guides.error;
   if (programs.error) throw programs.error;
 
+  // The hand-written Database type (src/lib/supabase/types.ts) leaves every
+  // table's `Relationships` empty, so supabase-js can't infer embedded-select
+  // shapes like `university:universities(...)` and types `.data` as `never`.
+  // Every other query in this codebase casts through `unknown` for the same
+  // reason (see public-programs.ts, public-universities.ts).
+  const programRows = (programs.data ?? []) as unknown as {
+    id: string;
+    name: string;
+    university: { slug: string; name: string } | null;
+    subject: { name: string } | null;
+  }[];
+
   return {
     universities: universities.data ?? [],
     guides: guides.data ?? [],
-    programs: (programs.data ?? []).map((p) => {
-      // Supabase types these embedded relations as arrays even for a
-      // to-one join; university_id/subject_id are both NOT NULL-ish here
-      // (subject_id is nullable in schema, university_id isn't), so guard
-      // defensively rather than assume shape.
-      const university = Array.isArray(p.university)
-        ? p.university[0]
-        : p.university;
-      const subject = Array.isArray(p.subject) ? p.subject[0] : p.subject;
-      return {
-        id: p.id,
-        name: p.name,
-        universitySlug: university?.slug ?? "",
-        universityName: university?.name ?? "",
-        subjectName: subject?.name ?? null,
-      };
-    }),
+    programs: programRows.map((p) => ({
+      id: p.id,
+      name: p.name,
+      universitySlug: p.university?.slug ?? "",
+      universityName: p.university?.name ?? "",
+      subjectName: p.subject?.name ?? null,
+    })),
   };
 }

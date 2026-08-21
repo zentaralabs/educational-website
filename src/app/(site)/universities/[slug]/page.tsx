@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { StatusBadge } from "@/components/StatusBadge";
 import { Fact, ProfileSection } from "@/components/site/ProfileSection";
 import { LastVerified } from "@/components/site/LastVerified";
@@ -12,6 +12,7 @@ import {
   getPublishedDeadlinesForUniversity,
   getPublishedScholarshipsForUniversity,
   getPublishedUniversity,
+  getUniversityRedirect,
   listPublishedUniversitySlugs,
 } from "@/lib/queries/public-universities";
 
@@ -46,7 +47,11 @@ export default async function UniversityProfilePage({
 }) {
   const { slug } = await params;
   const university = await getPublishedUniversity(slug);
-  if (!university) notFound();
+  if (!university) {
+    const newSlug = await getUniversityRedirect(slug);
+    if (newSlug) redirect(`/universities/${newSlug}`);
+    notFound();
+  }
 
   const [deadlines, scholarships, programs] = await Promise.all([
     getPublishedDeadlinesForUniversity(university.id),
@@ -184,6 +189,7 @@ export default async function UniversityProfilePage({
           />
           <TuitionFact
             domestic={university.tuition_domestic}
+            domesticIsCsp={university.tuition_domestic_is_csp}
             international={university.tuition_international}
             currency={university.currency}
           />
@@ -222,6 +228,7 @@ export default async function UniversityProfilePage({
             programs={programs}
             universityFallback={{
               tuition_domestic: university.tuition_domestic,
+              tuition_domestic_is_csp: university.tuition_domestic_is_csp,
               tuition_international: university.tuition_international,
               currency: university.currency,
               apply_url: university.apply_url,

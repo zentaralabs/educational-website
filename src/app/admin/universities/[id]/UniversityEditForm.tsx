@@ -33,6 +33,7 @@ type FormState = {
   tuition_out_state: string;
   tuition_international: string;
   tuition_domestic: string;
+  tuition_domestic_is_csp: boolean;
   currency: string;
   apply_url: string;
   distinctive_summary: string;
@@ -55,6 +56,7 @@ function toFormState(u: UniversityDetailRow): FormState {
     tuition_international:
       u.tuition_international !== null ? String(u.tuition_international) : "",
     tuition_domestic: u.tuition_domestic !== null ? String(u.tuition_domestic) : "",
+    tuition_domestic_is_csp: u.tuition_domestic_is_csp ?? false,
     currency: u.currency ?? "USD",
     apply_url: u.apply_url ?? "",
     distinctive_summary: u.distinctive_summary ?? "",
@@ -84,6 +86,7 @@ function toPatch(
       ? Number(form.tuition_international)
       : null,
     tuition_domestic: form.tuition_domestic ? Number(form.tuition_domestic) : null,
+    tuition_domestic_is_csp: form.tuition_domestic ? form.tuition_domestic_is_csp : null,
     currency: form.currency || "USD",
     apply_url: form.apply_url || null,
     distinctive_summary: form.distinctive_summary || null,
@@ -163,8 +166,11 @@ function ProgramsPanel({
   const [durationYears, setDurationYears] = useState("");
   const [tuition, setTuition] = useState("");
   const [tuitionDomestic, setTuitionDomestic] = useState("");
+  const [tuitionDomesticIsCsp, setTuitionDomesticIsCsp] = useState(false);
   const [currency, setCurrency] = useState("");
   const [applicationUrl, setApplicationUrl] = useState("");
+  const [admissionRequirements, setAdmissionRequirements] = useState("");
+  const [englishRequirements, setEnglishRequirements] = useState("");
   const [sourceUrl, setSourceUrl] = useState("");
   const [saving, setSaving] = useState(false);
   const [busyId, setBusyId] = useState<string | null>(null);
@@ -185,8 +191,11 @@ function ProgramsPanel({
         duration_years: durationYears ? Number(durationYears) : null,
         tuition_international: tuition ? Number(tuition) : null,
         tuition_domestic: tuitionDomestic ? Number(tuitionDomestic) : null,
+        tuition_domestic_is_csp: tuitionDomestic ? tuitionDomesticIsCsp : null,
         currency: currency ? currency.toUpperCase() : null,
         application_url: applicationUrl || null,
+        admission_requirements: admissionRequirements || null,
+        english_requirements: englishRequirements || null,
         source_url: sourceUrl || null,
       });
       const degree_level = degreeLevels.find((d) => d.id === Number(degreeLevelId)) ?? null;
@@ -204,8 +213,11 @@ function ProgramsPanel({
           duration_years: durationYears ? Number(durationYears) : null,
           tuition_international: tuition ? Number(tuition) : null,
           tuition_domestic: tuitionDomestic ? Number(tuitionDomestic) : null,
+          tuition_domestic_is_csp: tuitionDomestic ? tuitionDomesticIsCsp : null,
           currency: currency ? currency.toUpperCase() : null,
           application_url: applicationUrl || null,
+          admission_requirements: admissionRequirements || null,
+          english_requirements: englishRequirements || null,
           status: "draft",
           last_verified_at: null,
           source_url: sourceUrl || null,
@@ -218,8 +230,11 @@ function ProgramsPanel({
       setDurationYears("");
       setTuition("");
       setTuitionDomestic("");
+      setTuitionDomesticIsCsp(false);
       setCurrency("");
       setApplicationUrl("");
+      setAdmissionRequirements("");
+      setEnglishRequirements("");
       setSourceUrl("");
       router.refresh();
     } catch (err) {
@@ -394,6 +409,17 @@ function ProgramsPanel({
             className="rounded-md border border-ink/20 bg-paper px-2 py-1.5 font-body text-sm text-ink placeholder:text-slate/60"
           />
         </label>
+        <label className="flex items-center gap-2 self-end pb-1.5">
+          <input
+            type="checkbox"
+            checked={tuitionDomesticIsCsp}
+            onChange={(e) => setTuitionDomesticIsCsp(e.target.checked)}
+            disabled={!tuitionDomestic}
+          />
+          <span className="font-body text-xs text-slate">
+            Domestic fee is a CSP (subsidised, limited) rate
+          </span>
+        </label>
         <label className="block">
           <span className="mb-1 block font-body text-xs font-semibold tracking-wide text-slate uppercase">
             Currency (optional)
@@ -425,6 +451,28 @@ function ProgramsPanel({
             onChange={(e) => setSourceUrl(e.target.value)}
             placeholder="Official page the fee was verified against"
             className="min-w-56 rounded-md border border-ink/20 bg-paper px-2 py-1.5 font-body text-sm text-ink placeholder:text-slate/60"
+          />
+        </label>
+        <label className="block w-full">
+          <span className="mb-1 block font-body text-xs font-semibold tracking-wide text-slate uppercase">
+            Admission requirements (optional)
+          </span>
+          <input
+            value={admissionRequirements}
+            onChange={(e) => setAdmissionRequirements(e.target.value)}
+            placeholder="e.g. WAM 75% in a cognate bachelor's degree, plus 25 points of maths/statistics"
+            className="w-full rounded-md border border-ink/20 bg-paper px-2 py-1.5 font-body text-sm text-ink placeholder:text-slate/60"
+          />
+        </label>
+        <label className="block w-full">
+          <span className="mb-1 block font-body text-xs font-semibold tracking-wide text-slate uppercase">
+            English requirements (optional)
+          </span>
+          <input
+            value={englishRequirements}
+            onChange={(e) => setEnglishRequirements(e.target.value)}
+            placeholder="e.g. IELTS 6.5 overall, no band below 6.0"
+            className="w-full rounded-md border border-ink/20 bg-paper px-2 py-1.5 font-body text-sm text-ink placeholder:text-slate/60"
           />
         </label>
         <button
@@ -635,6 +683,17 @@ export function UniversityEditForm({
             onChange={(v) => set("tuition_domestic", v)}
             hint="AU/UK/CA home-student rate"
           />
+          <label className="flex items-center gap-2 self-end pb-1.5">
+            <input
+              type="checkbox"
+              checked={form.tuition_domestic_is_csp}
+              onChange={(e) => set("tuition_domestic_is_csp", e.target.checked)}
+              disabled={!form.tuition_domestic}
+            />
+            <span className="font-body text-xs text-slate">
+              Domestic fee is a CSP (subsidised, limited) rate
+            </span>
+          </label>
           <Field
             label="Currency"
             value={form.currency}

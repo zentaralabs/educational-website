@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { SearchBar } from "@/components/site/SearchBar";
-import { StudentTypePrompt } from "@/components/site/StudentTypePrompt";
 import { listPublicCountries } from "@/lib/queries/public-countries";
 import { getHomepageStats } from "@/lib/queries/public-stats";
 import { StudentTypeToggle } from "@/components/site/StudentTypeToggle";
@@ -31,8 +30,6 @@ export default async function Home() {
         <div className="mt-3 flex justify-center">
           <StudentTypeToggle />
         </div>
-
-        <StudentTypePrompt />
 
         <p className="mt-3 text-base text-slate">
           Or browse by country:{" "}

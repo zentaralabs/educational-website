@@ -79,6 +79,7 @@ export interface Database {
           tuition_out_state: number | null;
           tuition_international: number | null;
           tuition_domestic: number | null;
+          tuition_domestic_is_csp: boolean | null;
           currency: string;
           apply_url: string | null;
           est_cost_of_attendance: number | null;
@@ -114,6 +115,7 @@ export interface Database {
           tuition_out_state?: number | null;
           tuition_international?: number | null;
           tuition_domestic?: number | null;
+          tuition_domestic_is_csp?: boolean | null;
           currency?: string;
           apply_url?: string | null;
           est_cost_of_attendance?: number | null;
@@ -142,8 +144,11 @@ export interface Database {
           duration_years: number | null;
           tuition_international: number | null;
           tuition_domestic: number | null;
+          tuition_domestic_is_csp: boolean | null;
           currency: string | null;
           application_url: string | null;
+          admission_requirements: string | null;
+          english_requirements: string | null;
           status: ContentStatus;
           last_verified_at: string | null;
           source_url: string | null;
@@ -159,8 +164,11 @@ export interface Database {
           duration_years?: number | null;
           tuition_international?: number | null;
           tuition_domestic?: number | null;
+          tuition_domestic_is_csp?: boolean | null;
           currency?: string | null;
           application_url?: string | null;
+          admission_requirements?: string | null;
+          english_requirements?: string | null;
           status?: ContentStatus;
           last_verified_at?: string | null;
           source_url?: string | null;
@@ -340,6 +348,10 @@ export interface Database {
       guide_related_universities: Table<
         { guide_id: string; related_university_id: string },
         { guide_id: string; related_university_id: string }
+      >;
+      university_redirects: Table<
+        { old_slug: string; new_slug: string; created_at: string },
+        { old_slug: string; new_slug: string }
       >;
       activity_log: Table<
         {

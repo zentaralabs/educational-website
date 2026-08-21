@@ -9,10 +9,12 @@ import { useStudentType } from "@/lib/student-type";
  */
 export function TuitionFact({
   domestic,
+  domesticIsCsp,
   international,
   currency,
 }: {
   domestic: number | null;
+  domesticIsCsp?: boolean | null;
   international: number | null;
   currency: string;
 }) {
@@ -22,6 +24,7 @@ export function TuitionFact({
   const fallback = resolved === "domestic" ? international : domestic;
   const amount = primary ?? fallback;
   const usedFallback = primary === null && fallback !== null;
+  const showingDomestic = resolved === "domestic" && !usedFallback;
 
   const formatted = formatCurrency(amount, currency);
   if (!formatted) return null;
@@ -32,6 +35,11 @@ export function TuitionFact({
         Tuition {usedFallback ? `(${resolved === "domestic" ? "international" : "domestic"})` : `(${resolved})`}
       </dt>
       <dd className="font-utility text-sm text-ink">{formatted}</dd>
+      {showingDomestic && domesticIsCsp && (
+        <dd className="font-utility text-xs text-slate">
+          Commonwealth Supported Place rate — limited, not guaranteed; full domestic fee otherwise.
+        </dd>
+      )}
     </div>
   );
 }

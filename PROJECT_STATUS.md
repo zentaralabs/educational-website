@@ -209,3 +209,69 @@ Proposed backlog, captured 2026-08-20. Not prioritized against the rest of this 
 - "Find the right university for me" quiz — needs its own question/scoring logic. Buildable against current data (country, degree level, budget, etc.) without new tables, but scope it separately rather than bundling into homepage work.
 
 **Open question this raises:** the original brief (Section 1) scopes this as a university-level aggregator with deadlines/guides as the flagship differentiator, not a course marketplace. Building out course/subject-level browsing is a meaningful product expansion (StudyPortals-style), not incremental polish — worth a deliberate yes/no before starting, same as the user-accounts decision in Section 10.1.
+
+---
+
+## 13. Australia fact-check tracker
+
+Last updated: 2026-08-21. Tracks per-program data quality for Australia specifically — 57 AU institutions exist in `universities` (all `currency = 'AUD'`, corrected from an earlier USD-labeling bug), but **programs are opt-in, one at a time, hand-verified** — there is no bulk import. This section is the source of truth for "have we actually fact-checked this school" so work doesn't get silently re-done or skipped.
+
+### Methodology (apply this to every new AU program)
+
+1. Find the program's own official fee page on the university's `.edu.au` domain (not aggregators like Mastersportal/Yocket/Collegedunia/Shiksha — they're useful for *finding* the right page, never as the cited source).
+2. Get **international** tuition (annual) and confirm the **admission_url**/apply link.
+3. Get **domestic** tuition. Australian postgrad coursework fees are not one flat number — check whether the program offers a **Commonwealth Supported Place (CSP)**:
+   - If yes: use the CSP student-contribution rate (government-set per discipline band, published either on the course page or the university's "student contribution amounts" page) and set `tuition_domestic_is_csp = true`. Note the CSP band rate is *nationally standardized* (e.g. Computing/IT/Engineering = A$9,537/yr for 2026) — the same figure is valid across universities if a program-specific page doesn't restate it, as long as you've confirmed CSP eligibility for that specific program.
+   - If no CSP, or CSP eligibility can't be confirmed: leave `tuition_domestic` **null** rather than guess. The UI already falls back to showing the international figure with an honest "(international)" label.
+4. Get admission requirements (GPA/WAM cutoff, prerequisite subjects) and English test score (IELTS/TOEFL/PTE) **from the program's own entry-requirements page**. If only aggregator sites have a number, leave the field blank — don't populate `admission_requirements`/`english_requirements` from anything you can't trace to an official page.
+5. Set `last_verified_at` to today and `source_url` to the specific page the *tuition* figures came from.
+6. Enter via the admin panel (`/admin/universities/[id]` → Academic tab) or a one-off script against the Supabase REST API with the service-role key (direct Postgres port is IPv6-only and unreachable from this environment and from at least one home network tested — use the REST API or the Supabase dashboard's SQL Editor for schema changes).
+
+### Done (15 of 57)
+
+| University | Program | Intl fee | Domestic fee | Requirements |
+|---|---|---|---|---|
+| University of Melbourne | Master of Computer Science | A$62,976 | A$9,537 (CSP) | ✅ WAM 75% cognate + maths prereq; IELTS 6.5 |
+| University of Sydney | Master of Computer Science | A$60,650 | A$8,989 (CSP) | ✅ Credit avg 65%, any discipline; IELTS 6.5 |
+| University of Queensland | Master of Computer Science | A$60,952 | A$9,540 (CSP) | ✅ GPA 5.0/7.0 in CS/SE; IELTS 6.5 |
+| Australian National University | Master of Computing | A$56,120 (2027 figure — recheck) | *(blank — no CSP confirmed)* | ✅ GPA 5.0/7.0, or 4.0/7.0 + 3yrs experience; English blank (program-specific tier not confirmed) |
+| UNSW Sydney | Master of Information Technology | A$60,960 | A$9,500 (CSP) | ✅ WAM 65% cognate bachelor's; English blank (not confirmed) |
+| Monash University | Master of Information Technology | A$43,600 | A$9,537 (CSP) | Requirements blank — only aggregator figures found, didn't meet the bar |
+| Queensland University of Technology | Master of IT (Computer Science) | *(blank — see note)* | A$9,537 (CSP) | ✅ GPA 4.0/7.0 (varies by pathway); IELTS 6.5 |
+| University of Technology Sydney | Master of Information Technology | A$55,376 | A$36,670 (confirmed **not** CSP-eligible) | English ✅ IELTS 6.5/writing 6.0; GPA requirement blank — not found on an official page |
+| Adelaide University | Master of Computer Science | A$57,100 | A$9,537 (CSP) | ✅ GPA 4.5/7.0 in CS/related field; IELTS 6.5 |
+| RMIT University | Master of Information Technology | A$47,040 | A$38,400 (confirmed **not** CSP-eligible) | ✅ GPA 2.0/4.0 (RMIT's own 4-point scale) or 5+ yrs IT experience; IELTS 6.5 |
+| Deakin University | Master of Information Technology | A$44,200 | A$9,537 (CSP, exact match to national band, confirmed on Deakin's own handbook page) | ✅ Bachelor's any discipline (reduced-credit pathways for related field/experience); IELTS 6.5 |
+| Curtin University | Master of Computing | A$39,074 | *(blank — no CSP confirmed, no static full-fee page found)* | ✅ Bachelor's + programming/OS/computing-maths knowledge; IELTS 6.5 |
+| Flinders University | Master of Computer Science | A$42,900 | A$34,700 (confirmed **not** CSP-eligible) | ✅ Bachelor's in CS/IT/ICT-engineering/related; IELTS 6.5 |
+| La Trobe University | Master of Information Technology | A$45,600 | A$35,800 (confirmed **not** CSP-eligible) | ✅ Bachelor's any discipline (2yr) or cognate bachelor's (1.5yr); IELTS 6.5 |
+| Swinburne University of Technology | Master of Information Technology | A$42,240 (cross-corroborated, not directly page-verified) | A$9,537 (CSP, exact match to national band, confirmed on Swinburne's own fees tab) | ✅ Bachelor's any discipline, or Grad Cert/Dip IT; IELTS 6.5 |
+| Western Sydney University | Master of Information and Communications Technology | A$39,256 (cross-corroborated, not directly page-verified) | A$38,224 (official course page; no CSP split shown, treated as full-fee) | Admission requirement broad (any-discipline bachelor's, pathway length varies) — GPA not confirmed; English ✅ IELTS 6.5 |
+
+QUT note: the program fact-checked is QUT Online's fully-online delivery, which is **domestic-only** (QUT's own page: "QUT online courses are not available to International Students") — so `tuition_international` is genuinely blank, not a data gap. The on-campus QUT Master of IT (which does take international students) is separate and not yet fact-checked; `qut.edu.au` itself is Cloudflare-blocked for automated access, only the `online.qut.edu.au` subdomain was reachable.
+
+Adelaide University merger is fully executed (not just staged): new row created, both predecessor rows (`university-of-adelaide`, `university-of-south-australia`) archived, and both old slugs verified to redirect correctly on the live site — see merger note below for how the redirect mechanism works.
+
+Curtin's toggle widget (Aus&NZ vs International) would not switch state under automated clicks despite several attempts (screenshots confirmed the click landed but the underlying content stayed on International) — its domestic figure is genuinely unconfirmed, not skipped out of laziness. Worth a manual look if it matters.
+
+### Not started (41 of 57)
+
+No program rows at all yet — only the base `universities` row (name, city, acceptance rate, website, international tuition, currency). Alphabetically:
+
+Australian Catholic University, Australian Institute of Business, Australian Institute of Music, Avondale University, Bond University, Box Hill Institute, Charles Darwin University, Charles Sturt University, CQUniversity Australia, Edith Cowan University, Federation University Australia, Greenwich College, Griffith University, Holmes Institute, International College of Management Sydney, James Cook University, Kaplan Business School, Macquarie University, Melbourne Institute of Technology, Melbourne Polytechnic, Murdoch University, National Institute of Dramatic Art (NIDA), South Metropolitan TAFE, Southern Cross University, TAFE NSW, TAFE Queensland, Torrens University Australia, University of Canberra, University of Divinity, University of New England, University of Newcastle, University of Notre Dame Australia, University of Southern Queensland, University of Tasmania, University of the Sunshine Coast, University of Western Australia, University of Wollongong, Victoria University, Victoria University Polytechnic, William Angliss Institute.
+
+(University of Adelaide and University of South Australia intentionally excluded — see merger note, replaced by Adelaide University above.)
+
+**Griffith University and Macquarie University were attempted and skipped (twice now)**: both `griffith.edu.au` (including the `www148`/`my` subdomains) and `mq.edu.au` (including `students.mq.edu.au`) are fully Cloudflare-blocked for automated access — no page on either domain was reachable. Third-party aggregators gave conflicting numbers for both (Griffith international: $39,500/$41,500/$43,500 depending on source; no reliable Macquarie figure at all) and weren't used. Revisit these two only if there's a way to get a human to grab the numbers manually, or if Cloudflare's block lifts.
+
+**Suggested next batch**: Charles Darwin University, Edith Cowan University, James Cook University, University of Newcastle, University of Wollongong — continuing to prioritize research-intensive/high-traffic institutions, skipping Griffith/Macquarie/UWA (all blocked or calculator-only, see notes above).
+
+### University of Adelaide + University of South Australia merger — fully executed
+
+Confirmed via web search (2026-08-21): **University of Adelaide and University of South Australia merged into a single institution, "Adelaide University," effective 1 January 2026.** Executed (2026-08-21): created one new `adelaide-university` row with its own fact-checked Master of Computer Science program (see table above), archived both predecessor rows (`university-of-adelaide`, `university-of-south-australia` — kept for history, not deleted), and inserted redirect mappings for both old slugs.
+
+This needed one schema addition beyond what "archived" already supported: archived rows are invisible to the public site (RLS blocks anon reads of non-published rows), so without an explicit redirect mechanism, "archived" would have meant 404, not a redirect. Added migration `0010_add_university_redirects.sql` — a small standalone `university_redirects(old_slug, new_slug)` table (public-readable, admin-writable) plus a check in `[slug]/page.tsx`: when a slug isn't found among published universities, look it up in this table and `redirect()` if there's a match, before falling through to `notFound()`. **Verified working on the live site** — both `/universities/university-of-adelaide` and `/universities/university-of-south-australia` correctly redirect to `/universities/adelaide-university`.
+
+### Note on Cloudflare-blocked domains
+
+`qut.edu.au`, `mq.edu.au`, `griffith.edu.au`, and `deakin.edu.au` all run Cloudflare bot-challenge pages that block automated browsing entirely on their main domain. In three of four cases a separate subdomain (`online.qut.edu.au`, `handbook.deakin.edu.au`) was reachable and had the needed data officially — **always try the university's handbook/online-delivery/course-search subdomain before giving up**, not just the main marketing site. Griffith and Macquarie had no such reachable alternative this round. `fees.uwa.edu.au` is technically reachable but is a JS calculator tool with no static per-course page, a different kind of blocker — its international figure for Master of IT (course 62510) is still outstanding.

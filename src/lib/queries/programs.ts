@@ -31,8 +31,11 @@ export async function createProgram(
     | "duration_years"
     | "tuition_international"
     | "tuition_domestic"
+    | "tuition_domestic_is_csp"
     | "currency"
     | "application_url"
+    | "admission_requirements"
+    | "english_requirements"
     | "source_url"
   >,
 ): Promise<string> {

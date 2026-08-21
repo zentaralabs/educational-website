@@ -17,6 +17,17 @@ export type PublicUniversityRow = Database["public"]["Tables"]["universities"]["
   }[];
 };
 
+export async function getUniversityRedirect(oldSlug: string): Promise<string | null> {
+  const supabase = createPublicClient(["universities:list"]);
+  const { data, error } = await supabase
+    .from("university_redirects")
+    .select("new_slug")
+    .eq("old_slug", oldSlug)
+    .maybeSingle();
+  if (error) throw error;
+  return data?.new_slug ?? null;
+}
+
 export async function listPublishedUniversitySlugs(): Promise<string[]> {
   const supabase = createPublicClient(["universities:list"]);
   const { data, error } = await supabase
