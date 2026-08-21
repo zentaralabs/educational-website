@@ -214,7 +214,7 @@ Proposed backlog, captured 2026-08-20. Not prioritized against the rest of this 
 
 ## 13. Australia fact-check tracker
 
-Last updated: 2026-08-21. Tracks per-program data quality for Australia specifically — 57 AU institutions exist in `universities` (all `currency = 'AUD'`, corrected from an earlier USD-labeling bug), but **programs are opt-in, one at a time, hand-verified** — there is no bulk import. This section is the source of truth for "have we actually fact-checked this school" so work doesn't get silently re-done or skipped.
+Last updated: 2026-08-21 (evening pass). Tracks per-program data quality for Australia specifically — 57 AU institutions exist in `universities` (all `currency = 'AUD'`, corrected from an earlier USD-labeling bug), but **programs are opt-in, one at a time, hand-verified** — there is no bulk import. This section is the source of truth for "have we actually fact-checked this school" so work doesn't get silently re-done or skipped.
 
 ### Methodology (apply this to every new AU program)
 
@@ -227,7 +227,7 @@ Last updated: 2026-08-21. Tracks per-program data quality for Australia specific
 5. Set `last_verified_at` to today and `source_url` to the specific page the *tuition* figures came from.
 6. Enter via the admin panel (`/admin/universities/[id]` → Academic tab) or a one-off script against the Supabase REST API with the service-role key (direct Postgres port is IPv6-only and unreachable from this environment and from at least one home network tested — use the REST API or the Supabase dashboard's SQL Editor for schema changes).
 
-### Done (15 of 57)
+### Done (16 of 57, plus 4 more with international-only data)
 
 | University | Program | Intl fee | Domestic fee | Requirements |
 |---|---|---|---|---|
@@ -247,6 +247,10 @@ Last updated: 2026-08-21. Tracks per-program data quality for Australia specific
 | La Trobe University | Master of Information Technology | A$45,600 | A$35,800 (confirmed **not** CSP-eligible) | ✅ Bachelor's any discipline (2yr) or cognate bachelor's (1.5yr); IELTS 6.5 |
 | Swinburne University of Technology | Master of Information Technology | A$42,240 (cross-corroborated, not directly page-verified) | A$9,537 (CSP, exact match to national band, confirmed on Swinburne's own fees tab) | ✅ Bachelor's any discipline, or Grad Cert/Dip IT; IELTS 6.5 |
 | Western Sydney University | Master of Information and Communications Technology | A$39,256 (cross-corroborated, not directly page-verified) | A$38,224 (official course page; no CSP split shown, treated as full-fee) | Admission requirement broad (any-discipline bachelor's, pathway length varies) — GPA not confirmed; English ✅ IELTS 6.5 |
+| Charles Darwin University | Master of Information Technology (Software Engineering) | A$31,688 (cross-corroborated: official per-unit fee schedule + IDP) | A$9,536 (CSP, computed from CDU's official 2026 per-unit HECS fee PDF — matches the national band) | ✅ From CDU's own course page (page was reachable): bachelor's degree, no specific field/GPA prerequisite published; IELTS 6.5 |
+| University of Wollongong | Master of Computer Science | A$43,440 (official 2026 international fees PDF) | *(blank — official "subsidised fees" page exists but its figure is ambiguous between total-program and annual, and it's UOW's own subsidy scheme, not government CSP; didn't want to guess)* | ✅ From UOW's own pages (reachable): WAM 60%+ any field; IELTS 6.5/6.0 per band |
+
+**Edith Cowan University, James Cook University, University of Newcastle** — `ecu.edu.au`, `jcu.edu.au`, and `newcastle.edu.au` (including its handbook subdomain and a Cloudflare-challenge retry via browser) were all fully blocked to automated access this round. International tuition was kept where 2+ independent aggregators agreed (ECU Master of Computer Science A$43,650; JCU Master of Information Technology A$38,008); Newcastle's Master of Information Technology international figure (A$41,650) is kept but flagged uncertain — sources disagreed significantly (A$41,650 / A$45,670 / A$49,980-total). Domestic tuition, CSP status, admission requirements, and English requirements were left **blank** for all three — only aggregator numbers were found, which doesn't meet the bar in the Methodology section above. Revisit if Cloudflare's block lifts or a human can grab the numbers manually.
 
 QUT note: the program fact-checked is QUT Online's fully-online delivery, which is **domestic-only** (QUT's own page: "QUT online courses are not available to International Students") — so `tuition_international` is genuinely blank, not a data gap. The on-campus QUT Master of IT (which does take international students) is separate and not yet fact-checked; `qut.edu.au` itself is Cloudflare-blocked for automated access, only the `online.qut.edu.au` subdomain was reachable.
 
@@ -254,17 +258,19 @@ Adelaide University merger is fully executed (not just staged): new row created,
 
 Curtin's toggle widget (Aus&NZ vs International) would not switch state under automated clicks despite several attempts (screenshots confirmed the click landed but the underlying content stayed on International) — its domestic figure is genuinely unconfirmed, not skipped out of laziness. Worth a manual look if it matters.
 
-### Not started (41 of 57)
+### Not started (37 of 57)
 
 No program rows at all yet — only the base `universities` row (name, city, acceptance rate, website, international tuition, currency). Alphabetically:
 
-Australian Catholic University, Australian Institute of Business, Australian Institute of Music, Avondale University, Bond University, Box Hill Institute, Charles Darwin University, Charles Sturt University, CQUniversity Australia, Edith Cowan University, Federation University Australia, Greenwich College, Griffith University, Holmes Institute, International College of Management Sydney, James Cook University, Kaplan Business School, Macquarie University, Melbourne Institute of Technology, Melbourne Polytechnic, Murdoch University, National Institute of Dramatic Art (NIDA), South Metropolitan TAFE, Southern Cross University, TAFE NSW, TAFE Queensland, Torrens University Australia, University of Canberra, University of Divinity, University of New England, University of Newcastle, University of Notre Dame Australia, University of Southern Queensland, University of Tasmania, University of the Sunshine Coast, University of Western Australia, University of Wollongong, Victoria University, Victoria University Polytechnic, William Angliss Institute.
+Australian Catholic University, Australian Institute of Business, Australian Institute of Music, Avondale University, Bond University, Box Hill Institute, Charles Sturt University, CQUniversity Australia, Federation University Australia, Greenwich College, Griffith University, Holmes Institute, International College of Management Sydney, Kaplan Business School, Macquarie University, Melbourne Institute of Technology, Melbourne Polytechnic, Murdoch University, National Institute of Dramatic Art (NIDA), South Metropolitan TAFE, Southern Cross University, TAFE NSW, TAFE Queensland, Torrens University Australia, University of Canberra, University of Divinity, University of New England, University of Notre Dame Australia, University of Southern Queensland, University of Tasmania, University of the Sunshine Coast, University of Western Australia, Victoria University, Victoria University Polytechnic, William Angliss Institute.
 
-(University of Adelaide and University of South Australia intentionally excluded — see merger note, replaced by Adelaide University above.)
+(University of Adelaide and University of South Australia intentionally excluded — see merger note, replaced by Adelaide University above. Edith Cowan, James Cook, and University of Newcastle are also excluded from this list — they have a program row with international tuition, just no domestic/requirements data yet; see the "Done" table above.)
 
 **Griffith University and Macquarie University were attempted and skipped (twice now)**: both `griffith.edu.au` (including the `www148`/`my` subdomains) and `mq.edu.au` (including `students.mq.edu.au`) are fully Cloudflare-blocked for automated access — no page on either domain was reachable. Third-party aggregators gave conflicting numbers for both (Griffith international: $39,500/$41,500/$43,500 depending on source; no reliable Macquarie figure at all) and weren't used. Revisit these two only if there's a way to get a human to grab the numbers manually, or if Cloudflare's block lifts.
 
-**Suggested next batch**: Charles Darwin University, Edith Cowan University, James Cook University, University of Newcastle, University of Wollongong — continuing to prioritize research-intensive/high-traffic institutions, skipping Griffith/Macquarie/UWA (all blocked or calculator-only, see notes above).
+Also note: a growing share of the AU list is TAFEs and vocational/specialist colleges (TAFE NSW, TAFE Queensland, South Metropolitan TAFE, Box Hill Institute, Holmes Institute, Kaplan Business School, William Angliss Institute, NIDA, Australian Institute of Music, University of Divinity, etc.) that likely don't offer a Master of CS/IT at all — the "flagship Master of CS/IT" approach used for the 20 above doesn't apply to them. Worth a short triage pass to sort the remaining 37 into "still a real CS/IT target" vs "needs a different flagship program or doesn't fit this exercise" before continuing head-down.
+
+**Suggested next batch**: Griffith University and Macquarie University are worth a fresh attempt (Cloudflare blocks can lift over time) before moving to the TAFE/vocational tail, which needs the triage pass above first.
 
 ### University of Adelaide + University of South Australia merger — fully executed
 
@@ -274,4 +280,4 @@ This needed one schema addition beyond what "archived" already supported: archiv
 
 ### Note on Cloudflare-blocked domains
 
-`qut.edu.au`, `mq.edu.au`, `griffith.edu.au`, and `deakin.edu.au` all run Cloudflare bot-challenge pages that block automated browsing entirely on their main domain. In three of four cases a separate subdomain (`online.qut.edu.au`, `handbook.deakin.edu.au`) was reachable and had the needed data officially — **always try the university's handbook/online-delivery/course-search subdomain before giving up**, not just the main marketing site. Griffith and Macquarie had no such reachable alternative this round. `fees.uwa.edu.au` is technically reachable but is a JS calculator tool with no static per-course page, a different kind of blocker — its international figure for Master of IT (course 62510) is still outstanding.
+`qut.edu.au`, `mq.edu.au`, `griffith.edu.au`, `deakin.edu.au`, `ecu.edu.au`, `jcu.edu.au`, and `newcastle.edu.au` all run Cloudflare bot-challenge pages that block automated browsing entirely on their main domain. In some cases a separate subdomain (`online.qut.edu.au`, `handbook.deakin.edu.au`) was reachable and had the needed data officially — **always try the university's handbook/online-delivery/course-search subdomain before giving up**, not just the main marketing site. For Newcastle, even the handbook subdomain (`handbook.newcastle.edu.au`) loaded but rendered no usable text (client-side JS app, empty on a plain fetch) — a real browser with JS execution might still get through where WebFetch can't. Griffith, Macquarie, ECU, and JCU had no reachable alternative this round. `fees.uwa.edu.au` is technically reachable but is a JS calculator tool with no static per-course page, a different kind of blocker — its international figure for Master of IT (course 62510) is still outstanding.
