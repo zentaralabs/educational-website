@@ -46,6 +46,7 @@ export async function getPublishedProgramsForUniversity(
 
 export type PublicProgramDetail = PublicProgramRow & {
   description: string | null;
+  curriculum: string | null;
   university: {
     id: string;
     slug: string;
@@ -84,7 +85,7 @@ export async function getPublishedProgram(
   const { data, error } = await supabase
     .from("programs")
     .select(
-      `id, name, description, duration_years, tuition_international, tuition_domestic, tuition_domestic_is_csp, currency, application_url, admission_requirements, english_requirements, ielts_overall, ielts_listening, ielts_reading, ielts_writing, ielts_speaking, pte_overall, pte_listening, pte_reading, pte_writing, pte_speaking, last_verified_at, source_url,
+      `id, name, description, curriculum, duration_years, tuition_international, tuition_domestic, tuition_domestic_is_csp, currency, application_url, admission_requirements, english_requirements, ielts_overall, ielts_listening, ielts_reading, ielts_writing, ielts_speaking, pte_overall, pte_listening, pte_reading, pte_writing, pte_speaking, last_verified_at, source_url,
       degree_level:degree_levels(name), subject:subjects(name),
       university:universities(id, slug, name, status, city, apply_url, tuition_international, tuition_domestic, tuition_domestic_is_csp, currency, ielts_overall, ielts_listening, ielts_reading, ielts_writing, ielts_speaking, pte_overall, pte_listening, pte_reading, pte_writing, pte_speaking, country:countries(code, name))`,
     )

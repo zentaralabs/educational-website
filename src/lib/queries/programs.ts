@@ -31,6 +31,7 @@ type ProgramEditableFields =
   | "currency"
   | "application_url"
   | "description"
+  | "curriculum"
   | "admission_requirements"
   | "english_requirements"
   | "ielts_overall"

@@ -45,11 +45,15 @@ export function ProgramRequirementFacts({
   const pteSummary = showEnglish
     ? formatEnglishScore(pteOverall, pteListening, pteReading, pteWriting, pteSpeaking)
     : null;
+  // The free-text note restates the same band scores in prose once either
+  // structured score is set — show it only when it's the sole source of
+  // English-requirement info, so the two don't repeat each other.
+  const showEnglishText = showEnglish && !ieltsSummary && !pteSummary;
 
   return (
     <>
       <Fact label="Admission requirements" value={admissionRequirements} />
-      {showEnglish && <Fact label="English requirements" value={englishRequirements} />}
+      {showEnglishText && <Fact label="English requirements" value={englishRequirements} />}
       {showEnglish && <Fact label="IELTS requirement" value={ieltsSummary} />}
       {showEnglish && <Fact label="PTE requirement" value={pteSummary} />}
     </>

@@ -174,6 +174,7 @@ export interface Database {
           currency: string | null;
           application_url: string | null;
           description: string | null;
+          curriculum: string | null;
           admission_requirements: string | null;
           english_requirements: string | null;
           ielts_overall: number | null;
@@ -205,6 +206,7 @@ export interface Database {
           currency?: string | null;
           application_url?: string | null;
           description?: string | null;
+          curriculum?: string | null;
           admission_requirements?: string | null;
           english_requirements?: string | null;
           ielts_overall?: number | null;

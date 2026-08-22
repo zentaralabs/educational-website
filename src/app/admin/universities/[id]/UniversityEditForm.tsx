@@ -225,6 +225,7 @@ function ProgramsPanel({
   const [currency, setCurrency] = useState("");
   const [applicationUrl, setApplicationUrl] = useState("");
   const [description, setDescription] = useState("");
+  const [curriculum, setCurriculum] = useState("");
   const [admissionRequirements, setAdmissionRequirements] = useState("");
   const [englishRequirements, setEnglishRequirements] = useState("");
   const [ieltsOverall, setIeltsOverall] = useState("");
@@ -274,6 +275,7 @@ function ProgramsPanel({
     setCurrency("");
     setApplicationUrl("");
     setDescription("");
+    setCurriculum("");
     setAdmissionRequirements("");
     setEnglishRequirements("");
     setIeltsOverall("");
@@ -301,6 +303,7 @@ function ProgramsPanel({
     setCurrency(p.currency ?? "");
     setApplicationUrl(p.application_url ?? "");
     setDescription(p.description ?? "");
+    setCurriculum(p.curriculum ?? "");
     setAdmissionRequirements(p.admission_requirements ?? "");
     setEnglishRequirements(p.english_requirements ?? "");
     setIeltsOverall(numToStr(p.ielts_overall));
@@ -343,6 +346,7 @@ function ProgramsPanel({
         currency: currency ? currency.toUpperCase() : null,
         application_url: applicationUrl || null,
         description: description || null,
+        curriculum: curriculum || null,
         admission_requirements: admissionRequirements || null,
         english_requirements: englishRequirements || null,
         ielts_overall: strToNum(ieltsOverall),
@@ -692,8 +696,22 @@ function ProgramsPanel({
           <textarea
             value={description}
             onChange={(e) => setDescription(e.target.value)}
-            placeholder="Prose shown on the program's own public page — what it covers, who it's for, notable features"
+            placeholder="Short prose overview — what it covers, who it's for, notable features. Keep course structure below, out of this field."
             rows={3}
+            className="w-full rounded-md border border-ink/20 bg-paper px-2 py-1.5 font-body text-sm text-ink placeholder:text-slate/60"
+          />
+        </label>
+        <label className="block w-full">
+          <span className="mb-1 block font-body text-xs font-semibold tracking-wide text-slate uppercase">
+            Course structure (optional)
+          </span>
+          <textarea
+            value={curriculum}
+            onChange={(e) => setCurriculum(e.target.value)}
+            placeholder={
+              "One entry per line, shown as its own list on the program page, e.g.\nYear 1, Semester 1 — COMP5004 Programming for AI and ML; 1 elective.\nYear 1, Semester 2 — ARTI6003 Machine Learning Algorithms; ..."
+            }
+            rows={4}
             className="w-full rounded-md border border-ink/20 bg-paper px-2 py-1.5 font-body text-sm text-ink placeholder:text-slate/60"
           />
         </label>

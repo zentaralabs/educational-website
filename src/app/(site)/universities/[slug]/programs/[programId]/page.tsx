@@ -113,15 +113,8 @@ export default async function ProgramDetailPage({
         </ProfileSection>
       )}
 
-      <ProfileSection title="Program details">
+      <ProfileSection title="Admissions">
         <FactBox>
-          <Fact label="Duration" value={program.duration_years ? `${program.duration_years} yr` : null} />
-          <TuitionFact
-            domestic={program.tuition_domestic ?? university.tuition_domestic}
-            domesticIsCsp={program.tuition_domestic_is_csp ?? university.tuition_domestic_is_csp}
-            international={program.tuition_international ?? university.tuition_international}
-            currency={program.currency ?? university.currency}
-          />
           <ProgramRequirementFacts
             admissionRequirements={program.admission_requirements}
             englishRequirements={program.english_requirements}
@@ -138,6 +131,47 @@ export default async function ProgramDetailPage({
           />
         </FactBox>
       </ProfileSection>
+
+      <ProfileSection title="Cost & duration">
+        <FactBox>
+          <Fact label="Duration" value={program.duration_years ? `${program.duration_years} yr` : null} />
+          <TuitionFact
+            domestic={program.tuition_domestic ?? university.tuition_domestic}
+            domesticIsCsp={program.tuition_domestic_is_csp ?? university.tuition_domestic_is_csp}
+            international={program.tuition_international ?? university.tuition_international}
+            currency={program.currency ?? university.currency}
+          />
+        </FactBox>
+      </ProfileSection>
+
+      {program.curriculum && (
+        <ProfileSection title="Course structure">
+          <ol className="flex flex-col gap-2">
+            {program.curriculum
+              .split("\n")
+              .map((line) => line.trim())
+              .filter(Boolean)
+              .map((line, i) => {
+                const separatorIndex = line.indexOf(" — ");
+                const label = separatorIndex === -1 ? null : line.slice(0, separatorIndex);
+                const body = separatorIndex === -1 ? line : line.slice(separatorIndex + 3);
+                return (
+                  <li
+                    key={i}
+                    className="rounded-lg border border-ink/10 bg-paper px-4 py-3 font-body text-sm"
+                  >
+                    {label && (
+                      <span className="block font-utility text-xs font-semibold tracking-wide text-status-open uppercase">
+                        {label}
+                      </span>
+                    )}
+                    <span className={label ? "mt-1 block text-ink" : "text-ink"}>{body}</span>
+                  </li>
+                );
+              })}
+          </ol>
+        </ProfileSection>
+      )}
 
       <div className="mt-8 border-t border-ink/10 pt-6">
         <LastVerified
