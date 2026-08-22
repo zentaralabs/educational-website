@@ -1,12 +1,39 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Fact, FactBox, ProfileSection } from "@/components/site/ProfileSection";
+import { ProfileSection } from "@/components/site/ProfileSection";
 import { LastVerified } from "@/components/site/LastVerified";
-import { ProgramRequirementFacts } from "@/components/site/ProgramRequirementFacts";
-import { TuitionFact } from "@/components/site/TuitionFact";
+import { ProgramAdmissionsBlock } from "@/components/site/ProgramAdmissionsBlock";
+import { ProgramSidebar } from "@/components/site/ProgramSidebar";
 import { getPublishedProgram } from "@/lib/queries/public-programs";
 
 export const revalidate = 3600;
+
+type CurriculumItem = { code: string | null; text: string; electiveCount: string | null };
+type CurriculumTerm = { label: string | null; units: string | null; items: CurriculumItem[] };
+
+/** Parses one "Label — CODE1 Name; CODE2 Name; 2 electives (24 units)." curriculum line. */
+function parseCurriculumLine(line: string): CurriculumTerm {
+  const separatorIndex = line.indexOf(" — ");
+  const label = separatorIndex === -1 ? null : line.slice(0, separatorIndex);
+  let body = separatorIndex === -1 ? line : line.slice(separatorIndex + 3);
+
+  const unitsMatch = body.match(/\((\d+)\s*units?\)\.?\s*$/i);
+  const units = unitsMatch ? `${unitsMatch[1]} units` : null;
+  if (unitsMatch) body = body.slice(0, unitsMatch.index).trim();
+
+  const items = body
+    .split(";")
+    .map((s) => s.trim().replace(/\.$/, ""))
+    .filter(Boolean)
+    .map((segment): CurriculumItem => {
+      const codeMatch = segment.match(/^([A-Z]{2,6}\d{3,4})\s+(.+)$/);
+      if (codeMatch) return { code: codeMatch[1], text: codeMatch[2], electiveCount: null };
+      const electiveMatch = segment.match(/^(\d+)\s+electives?$/i);
+      if (electiveMatch) return { code: null, text: "Elective", electiveCount: electiveMatch[1] };
+      return { code: null, text: segment, electiveCount: null };
+    });
+  return { label, units, items };
+}
 
 async function loadProgram(slug: string, programId: string) {
   const program = await getPublishedProgram(programId);
@@ -44,6 +71,16 @@ export default async function ProgramDetailPage({
   if (!program) notFound();
 
   const university = program.university!;
+  const curriculumTerms = program.curriculum
+    ?.split("\n")
+    .map((line) => line.trim())
+    .filter(Boolean)
+    .map(parseCurriculumLine);
+
+  const hasStructuredEnglishScore = Boolean(
+    (program.ielts_overall ?? university.ielts_overall) ||
+      (program.pte_overall ?? university.pte_overall),
+  );
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -74,104 +111,110 @@ export default async function ProgramDetailPage({
       <p className="mt-3 font-utility text-xs font-semibold tracking-widest text-status-open uppercase">
         {[program.degree_level?.name, program.subject?.name].filter(Boolean).join(" · ")}
       </p>
-      <h1 className="mt-2 font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
-        {program.name}
-      </h1>
-      <p className="mt-2 font-body text-base text-slate">
-        {university.name}
-        {university.city && `, ${university.city}`}
-        {university.country?.name && `, ${university.country.name}`}
-      </p>
-
-      <div className="mt-4 flex flex-wrap items-center gap-4">
+      <div className="mt-2 flex flex-wrap items-start justify-between gap-4">
+        <div>
+          <h1 className="font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
+            {program.name}
+          </h1>
+          <p className="mt-2 font-body text-base text-slate">
+            {university.name}
+            {university.city && `, ${university.city}`}
+            {university.country?.name && `, ${university.country.name}`}
+          </p>
+        </div>
         {(program.application_url ?? university.apply_url) && (
           <a
             href={program.application_url ?? university.apply_url!}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block rounded-md bg-ink px-4 py-1.5 font-body text-sm font-medium text-paper transition-opacity duration-150 hover:opacity-90"
+            className="inline-block flex-shrink-0 rounded-full bg-ink px-5 py-2 font-body text-sm font-medium text-paper transition-opacity duration-150 hover:opacity-90"
           >
             Apply ↗
           </a>
         )}
       </div>
 
-      {program.description && (
-        <ProfileSection title="Overview">
-          <div className="flex flex-col gap-4 rounded-xl bg-ink/[0.035] p-5 font-body text-base leading-relaxed text-ink">
-            {program.description.split("\n\n").map((paragraph, i) => (
-              <p key={i}>
-                {paragraph.split("\n").map((line, j, lines) => (
-                  <span key={j}>
-                    {line}
-                    {j < lines.length - 1 && <br />}
-                  </span>
-                ))}
-              </p>
+      <div className="mt-8 grid gap-6 border-t border-ink/10 pt-8 md:grid-cols-[2fr_1fr]">
+        <div className="flex flex-col gap-4 font-body text-base leading-relaxed text-ink">
+          {program.description?.split("\n\n").map((paragraph, i) => (
+            <p key={i}>
+              {paragraph.split("\n").map((line, j, lines) => (
+                <span key={j}>
+                  {line}
+                  {j < lines.length - 1 && <br />}
+                </span>
+              ))}
+            </p>
+          ))}
+        </div>
+        <ProgramSidebar
+          durationYears={program.duration_years}
+          tuitionDomestic={program.tuition_domestic ?? university.tuition_domestic}
+          tuitionDomesticIsCsp={program.tuition_domestic_is_csp ?? university.tuition_domestic_is_csp}
+          tuitionInternational={program.tuition_international ?? university.tuition_international}
+          currency={program.currency ?? university.currency}
+          ieltsOverall={program.ielts_overall ?? university.ielts_overall}
+          ieltsListening={program.ielts_listening ?? university.ielts_listening}
+          ieltsReading={program.ielts_reading ?? university.ielts_reading}
+          ieltsWriting={program.ielts_writing ?? university.ielts_writing}
+          ieltsSpeaking={program.ielts_speaking ?? university.ielts_speaking}
+          pteOverall={program.pte_overall ?? university.pte_overall}
+          pteListening={program.pte_listening ?? university.pte_listening}
+          pteReading={program.pte_reading ?? university.pte_reading}
+          pteWriting={program.pte_writing ?? university.pte_writing}
+          pteSpeaking={program.pte_speaking ?? university.pte_speaking}
+        />
+      </div>
+
+      {curriculumTerms && curriculumTerms.length > 0 && (
+        <ProfileSection title="Course structure">
+          <div className="grid gap-4 sm:grid-cols-2">
+            {curriculumTerms.map((term, i) => (
+              <div key={i} className="rounded-xl border border-ink/10 bg-ink/[0.02] p-4">
+                {(term.label || term.units) && (
+                  <div className="flex items-center justify-between gap-2 border-b border-ink/10 pb-2">
+                    {term.label && (
+                      <p className="font-utility text-xs font-semibold uppercase tracking-wide text-status-open">
+                        {term.label}
+                      </p>
+                    )}
+                    {term.units && (
+                      <span className="flex-shrink-0 rounded-full bg-ink/[0.05] px-2 py-0.5 font-utility text-[10px] text-slate">
+                        {term.units}
+                      </span>
+                    )}
+                  </div>
+                )}
+                <ul className={term.label || term.units ? "mt-2 flex flex-col gap-1.5" : "flex flex-col gap-1.5"}>
+                  {term.items.map((item, j) => (
+                    <li key={j} className="flex items-center gap-2 font-body text-sm text-ink">
+                      {item.code && (
+                        <span className="flex-shrink-0 rounded-full bg-ink/[0.05] px-2 py-0.5 font-utility text-[10px] text-slate">
+                          {item.code}
+                        </span>
+                      )}
+                      <span>{item.text}</span>
+                      {item.electiveCount && (
+                        <span className="ml-auto flex-shrink-0 rounded-full bg-status-open/10 px-2 py-0.5 font-utility text-[10px] text-status-open">
+                          {item.electiveCount} elective{item.electiveCount === "1" ? "" : "s"}
+                        </span>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
           </div>
         </ProfileSection>
       )}
 
       <ProfileSection title="Admissions">
-        <FactBox>
-          <ProgramRequirementFacts
-            admissionRequirements={program.admission_requirements}
-            englishRequirements={program.english_requirements}
-            ieltsOverall={program.ielts_overall ?? university.ielts_overall}
-            ieltsListening={program.ielts_listening ?? university.ielts_listening}
-            ieltsReading={program.ielts_reading ?? university.ielts_reading}
-            ieltsWriting={program.ielts_writing ?? university.ielts_writing}
-            ieltsSpeaking={program.ielts_speaking ?? university.ielts_speaking}
-            pteOverall={program.pte_overall ?? university.pte_overall}
-            pteListening={program.pte_listening ?? university.pte_listening}
-            pteReading={program.pte_reading ?? university.pte_reading}
-            pteWriting={program.pte_writing ?? university.pte_writing}
-            pteSpeaking={program.pte_speaking ?? university.pte_speaking}
-          />
-        </FactBox>
+        <ProgramAdmissionsBlock
+          admissionRequirements={program.admission_requirements}
+          englishRequirements={program.english_requirements}
+          hasStructuredEnglishScore={hasStructuredEnglishScore}
+        />
       </ProfileSection>
-
-      <ProfileSection title="Cost & duration">
-        <FactBox>
-          <Fact label="Duration" value={program.duration_years ? `${program.duration_years} yr` : null} />
-          <TuitionFact
-            domestic={program.tuition_domestic ?? university.tuition_domestic}
-            domesticIsCsp={program.tuition_domestic_is_csp ?? university.tuition_domestic_is_csp}
-            international={program.tuition_international ?? university.tuition_international}
-            currency={program.currency ?? university.currency}
-          />
-        </FactBox>
-      </ProfileSection>
-
-      {program.curriculum && (
-        <ProfileSection title="Course structure">
-          <ol className="flex flex-col gap-2">
-            {program.curriculum
-              .split("\n")
-              .map((line) => line.trim())
-              .filter(Boolean)
-              .map((line, i) => {
-                const separatorIndex = line.indexOf(" — ");
-                const label = separatorIndex === -1 ? null : line.slice(0, separatorIndex);
-                const body = separatorIndex === -1 ? line : line.slice(separatorIndex + 3);
-                return (
-                  <li
-                    key={i}
-                    className="rounded-lg border border-ink/10 bg-paper px-4 py-3 font-body text-sm"
-                  >
-                    {label && (
-                      <span className="block font-utility text-xs font-semibold tracking-wide text-status-open uppercase">
-                        {label}
-                      </span>
-                    )}
-                    <span className={label ? "mt-1 block text-ink" : "text-ink"}>{body}</span>
-                  </li>
-                );
-              })}
-          </ol>
-        </ProfileSection>
-      )}
 
       <div className="mt-8 border-t border-ink/10 pt-6">
         <LastVerified
