@@ -206,16 +206,6 @@ export default async function UniversityProfilePage({
               atarRequirement={university.atar_requirement}
               academicRequirement={university.academic_requirement}
               academicRequirementDomestic={university.academic_requirement_domestic}
-              ieltsOverall={university.ielts_overall}
-              ieltsListening={university.ielts_listening}
-              ieltsReading={university.ielts_reading}
-              ieltsWriting={university.ielts_writing}
-              ieltsSpeaking={university.ielts_speaking}
-              pteOverall={university.pte_overall}
-              pteListening={university.pte_listening}
-              pteReading={university.pte_reading}
-              pteWriting={university.pte_writing}
-              pteSpeaking={university.pte_speaking}
             />
             <Fact
               label="Required documents"
