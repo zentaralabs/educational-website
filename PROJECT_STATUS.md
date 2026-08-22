@@ -1,6 +1,6 @@
 # Project Status — University Guidance Platform
 
-Last updated: 2026-08-20
+Last updated: 2026-08-22
 Status: **Pre-build.** Planning complete for architecture, schema, design direction, and admin scope. No code written yet.
 
 ---
@@ -281,3 +281,19 @@ This needed one schema addition beyond what "archived" already supported: archiv
 ### Note on Cloudflare-blocked domains
 
 `qut.edu.au`, `mq.edu.au`, `griffith.edu.au`, `deakin.edu.au`, `ecu.edu.au`, `jcu.edu.au`, and `newcastle.edu.au` all run Cloudflare bot-challenge pages that block automated browsing entirely on their main domain. In some cases a separate subdomain (`online.qut.edu.au`, `handbook.deakin.edu.au`) was reachable and had the needed data officially — **always try the university's handbook/online-delivery/course-search subdomain before giving up**, not just the main marketing site. For Newcastle, even the handbook subdomain (`handbook.newcastle.edu.au`) loaded but rendered no usable text (client-side JS app, empty on a plain fetch) — a real browser with JS execution might still get through where WebFetch can't. Griffith, Macquarie, ECU, and JCU had no reachable alternative this round. `fees.uwa.edu.au` is technically reachable but is a JS calculator tool with no static per-course page, a different kind of blocker — its international figure for Master of IT (course 62510) is still outstanding.
+
+---
+
+## 14. Admin-save cache staleness fix + domestic/international admissions split (2026-08-22)
+
+**Bug: admin edits weren't showing up on the public site.** The public university page (`[slug]/page.tsx`) is ISR with `revalidate = 3600`, and `createPublicClient` tags every fetch (`university:${slug}`, `universities:list`) for on-demand invalidation via the Supabase-webhook-backed `/api/revalidate` route (see Section 3's revalidation pattern). That webhook is the intended production path, but nothing in the admin save flow (`UniversityEditForm.tsx`'s `save()`) ever called it or `revalidateTag` directly — so an admin edit hit the DB correctly but the public page kept serving the pre-edit cached version for up to an hour, regardless of whether the Supabase webhook was actually configured. Fixed by adding `src/app/admin/universities/[id]/actions.ts`, a server action (`revalidateUniversity`) that calls both `revalidateTag` (matching the webhook's tag names) and `revalidatePath` for the edited slug, invoked directly from `save()` after a successful write. Admin saves now bust the cache immediately and no longer depend on the external webhook being wired up correctly — verified end-to-end against the live DB and dev server.
+
+**Feature: admissions requirements now split by domestic/international**, following the existing `tuition_domestic`/`tuition_international` fallback pattern (`TuitionFact.tsx`) and the existing `useStudentType` localStorage toggle (set from the homepage, read anywhere via `StudentTypeProvider`). Three new nullable columns on `universities` (migrations `0012_add_academic_requirement_domestic.sql`, `0013_add_atar_requirement.sql`, applied directly to the live DB):
+
+- `academic_requirement_domestic` — prose override for the domestic entry bar; **falls back** to `academic_requirement` (the international/general text) when blank, since both are prose describing the same kind of thing.
+- `atar_requirement` — ATAR-based domestic entry score (e.g. "70+"). **No fallback** to `gpa_requirement` — GPA and ATAR are unrelated scales, so showing one as a stand-in for the other would be actively misleading, not just imprecise.
+- IELTS/PTE score facts, the `required_tests` list, and each program's free-text `english_requirements` are **hidden entirely** for domestic visitors (not overridden) — English proficiency tests are an international-applicant concept.
+
+New client component `src/components/site/AdmissionsRequirementFacts.tsx` owns all of this student-type-dependent switching for the university profile page; `ProgramsList.tsx` got the equivalent per-program IELTS/PTE/English-requirements hiding for domestic. Admin form (`UniversityEditForm.tsx`, Admissions tab) has matching split fields: "Academic requirement (international)" / "(domestic)", "GPA requirement (international)" / "ATAR requirement (domestic)". Acceptance rate and the general `required_documents`/`application_platform` facts were deliberately **not** split — no product need identified yet for those to differ by student type.
+
+Verified in-browser both directions (domestic hides IELTS/PTE/required-tests and shows ATAR; international shows GPA/IELTS/PTE as before) against University of Canberra's live data.

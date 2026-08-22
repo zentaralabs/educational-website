@@ -11,6 +11,16 @@ export type PublicProgramRow = {
   application_url: string | null;
   admission_requirements: string | null;
   english_requirements: string | null;
+  ielts_overall: number | null;
+  ielts_listening: number | null;
+  ielts_reading: number | null;
+  ielts_writing: number | null;
+  ielts_speaking: number | null;
+  pte_overall: number | null;
+  pte_listening: number | null;
+  pte_reading: number | null;
+  pte_writing: number | null;
+  pte_speaking: number | null;
   last_verified_at: string | null;
   source_url: string | null;
   degree_level: { name: string } | null;
@@ -24,7 +34,7 @@ export async function getPublishedProgramsForUniversity(
   const { data, error } = await supabase
     .from("programs")
     .select(
-      "id, name, duration_years, tuition_international, tuition_domestic, tuition_domestic_is_csp, currency, application_url, admission_requirements, english_requirements, last_verified_at, source_url, degree_level:degree_levels(name), subject:subjects(name)",
+      "id, name, duration_years, tuition_international, tuition_domestic, tuition_domestic_is_csp, currency, application_url, admission_requirements, english_requirements, ielts_overall, ielts_listening, ielts_reading, ielts_writing, ielts_speaking, pte_overall, pte_listening, pte_reading, pte_writing, pte_speaking, last_verified_at, source_url, degree_level:degree_levels(name), subject:subjects(name)",
     )
     .eq("university_id", universityId)
     .eq("status", "published")

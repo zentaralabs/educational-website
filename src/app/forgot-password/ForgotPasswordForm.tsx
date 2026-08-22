@@ -1,16 +1,12 @@
 "use client";
 
-import Link from "next/link";
-import { useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
 import { createClient } from "@/lib/supabase/client";
 
-export function LoginForm() {
-  const router = useRouter();
-  const searchParams = useSearchParams();
+export function ForgotPasswordForm() {
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
+  const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
 
   async function handleSubmit(e: React.FormEvent) {
@@ -19,9 +15,8 @@ export function LoginForm() {
     setLoading(true);
 
     const supabase = createClient();
-    const { error } = await supabase.auth.signInWithPassword({
-      email,
-      password,
+    const { error } = await supabase.auth.resetPasswordForEmail(email, {
+      redirectTo: `${window.location.origin}/reset-password`,
     });
 
     setLoading(false);
@@ -31,9 +26,21 @@ export function LoginForm() {
       return;
     }
 
-    const next = searchParams.get("next") || "/admin";
-    router.push(next);
-    router.refresh();
+    setSent(true);
+  }
+
+  if (sent) {
+    return (
+      <div className="flex w-full max-w-sm flex-col gap-4 rounded-md border border-ink/15 p-6">
+        <h1 className="font-display text-xl font-semibold text-ink">
+          Check your email
+        </h1>
+        <p className="font-body text-sm text-slate">
+          If an account exists for {email}, a password reset link is on its
+          way. It expires within an hour, so use it soon after it arrives.
+        </p>
+      </div>
+    );
   }
 
   return (
@@ -43,10 +50,10 @@ export function LoginForm() {
     >
       <div>
         <h1 className="font-display text-xl font-semibold text-ink">
-          Admin sign in
+          Reset password
         </h1>
         <p className="mt-1 font-body text-sm text-slate">
-          University Guidance Platform
+          Enter your admin email and we&rsquo;ll send you a reset link.
         </p>
       </div>
 
@@ -63,37 +70,15 @@ export function LoginForm() {
         />
       </label>
 
-      <label className="block">
-        <span className="mb-1 block font-body text-xs font-semibold tracking-wide text-slate uppercase">
-          Password
-        </span>
-        <input
-          type="password"
-          required
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          className="w-full rounded-md border border-ink/20 bg-paper px-3 py-1.5 font-body text-sm text-ink focus-visible:border-status-open"
-        />
-      </label>
-
-      {error && (
-        <p className="font-body text-sm text-status-closed">{error}</p>
-      )}
+      {error && <p className="font-body text-sm text-status-closed">{error}</p>}
 
       <button
         type="submit"
         disabled={loading}
         className="rounded-md bg-ink px-3 py-2 font-body text-sm font-medium text-paper transition-opacity duration-150 hover:opacity-90 disabled:opacity-50"
       >
-        {loading ? "Signing in…" : "Sign in"}
+        {loading ? "Sending…" : "Send reset link"}
       </button>
-
-      <Link
-        href="/forgot-password"
-        className="text-center font-body text-sm text-slate underline underline-offset-2 hover:text-ink"
-      >
-        Forgot password?
-      </Link>
     </form>
   );
 }

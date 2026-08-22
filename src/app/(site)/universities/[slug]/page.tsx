@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { StatusBadge } from "@/components/StatusBadge";
-import { Fact, ProfileSection } from "@/components/site/ProfileSection";
+import { AdmissionsRequirementFacts } from "@/components/site/AdmissionsRequirementFacts";
+import { Fact, FactBox, ProfileSection } from "@/components/site/ProfileSection";
 import { LastVerified } from "@/components/site/LastVerified";
 import { ProgramsList } from "@/components/site/ProgramsList";
 import { TuitionFact } from "@/components/site/TuitionFact";
@@ -63,6 +64,44 @@ export default async function UniversityProfilePage({
     (d) => !d.is_rolling && deadlineBadgeStatus(d.deadline_date, d.is_rolling) === "upcoming",
   );
 
+  // Overall admissions status for the header stamp — open beats upcoming
+  // beats closed, so a school with any rolling/open path reads as open.
+  const statusPriority = ["open", "upcoming", "closed"] as const;
+  const overallStatus = statusPriority.find((s) =>
+    deadlines.some((d) => deadlineBadgeStatus(d.deadline_date, d.is_rolling) === s),
+  );
+
+  // FactBox renders a visible tinted box even with zero facts inside, so
+  // each section needs to know up front whether it has anything to show —
+  // most AU universities in this dataset only have program-level facts, not
+  // these university-level ones, so this is the common case, not an edge case.
+  const hasAdmissionsData = [
+    university.acceptance_rate,
+    university.gpa_requirement,
+    university.atar_requirement,
+    university.academic_requirement,
+    university.academic_requirement_domestic,
+    university.required_tests?.length,
+    university.test_score_range,
+    university.ielts_overall,
+    university.pte_overall,
+    university.required_documents?.length,
+    university.application_platform?.name,
+    university.degree_levels.length,
+  ].some(Boolean);
+
+  const hasCostData = [
+    university.tuition_in_state,
+    university.tuition_out_state,
+    university.tuition_domestic,
+    university.tuition_international,
+    university.est_cost_of_attendance,
+  ].some((v) => v !== null && v !== undefined);
+
+  const hasAcademicsFacts = Boolean(
+    university.popular_majors?.length || university.student_faculty_ratio,
+  );
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "CollegeOrUniversity",
@@ -84,15 +123,18 @@ export default async function UniversityProfilePage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <p className="font-body text-base text-slate">
+      <p className="font-utility text-xs font-semibold tracking-widest text-status-open uppercase">
         {[university.city, university.region, university.country?.name]
           .filter(Boolean)
           .join(", ")}
         {university.institution_type && ` · ${university.institution_type}`}
       </p>
-      <h1 className="mt-1 font-display text-3xl font-semibold text-ink text-balance">
-        {university.name}
-      </h1>
+      <div className="mt-2 flex flex-wrap items-center gap-3">
+        <h1 className="font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
+          {university.name}
+        </h1>
+        {overallStatus && <StatusBadge status={overallStatus} />}
+      </div>
 
       {/* Answer-first fact, per GEO strategy Section 5 — lead with the direct
           fact so it's citable without context. */}
@@ -147,99 +189,137 @@ export default async function UniversityProfilePage({
 
       {university.distinctive_summary && (
         <ProfileSection title="Overview">
-          <p className="font-body text-base leading-relaxed text-ink">
+          <p className="rounded-xl bg-ink/[0.035] p-5 font-body text-base leading-relaxed text-ink">
             {university.distinctive_summary}
           </p>
         </ProfileSection>
       )}
 
-      <ProfileSection title="Admissions">
-        <dl className="grid grid-cols-2 gap-4 sm:grid-cols-3">
-          <Fact label="Acceptance rate" value={formatPercent(university.acceptance_rate)} />
-          <Fact label="GPA requirement" value={university.gpa_requirement} />
-          <Fact
-            label="Required tests"
-            value={university.required_tests?.join(", ")}
-          />
-          <Fact label="Test score range" value={university.test_score_range} />
-          <Fact
-            label="Required documents"
-            value={university.required_documents?.join(", ")}
-          />
-          <Fact
-            label="Application platform"
-            value={university.application_platform?.name}
-          />
-          <Fact
-            label="Degree levels"
-            value={university.degree_levels.map((d) => d.name).join(", ")}
-          />
-        </dl>
-      </ProfileSection>
+      {hasAdmissionsData && (
+        <ProfileSection title="Admissions">
+          <FactBox>
+            <Fact label="Acceptance rate" value={formatPercent(university.acceptance_rate)} />
+            <Fact label="Test score range" value={university.test_score_range} />
+            <AdmissionsRequirementFacts
+              requiredTests={university.required_tests}
+              gpaRequirement={university.gpa_requirement}
+              atarRequirement={university.atar_requirement}
+              academicRequirement={university.academic_requirement}
+              academicRequirementDomestic={university.academic_requirement_domestic}
+              ieltsOverall={university.ielts_overall}
+              ieltsListening={university.ielts_listening}
+              ieltsReading={university.ielts_reading}
+              ieltsWriting={university.ielts_writing}
+              ieltsSpeaking={university.ielts_speaking}
+              pteOverall={university.pte_overall}
+              pteListening={university.pte_listening}
+              pteReading={university.pte_reading}
+              pteWriting={university.pte_writing}
+              pteSpeaking={university.pte_speaking}
+            />
+            <Fact
+              label="Required documents"
+              value={university.required_documents?.join(", ")}
+            />
+            <Fact
+              label="Application platform"
+              value={university.application_platform?.name}
+            />
+            <Fact
+              label="Degree levels"
+              value={university.degree_levels.map((d) => d.name).join(", ")}
+            />
+          </FactBox>
+        </ProfileSection>
+      )}
 
-      <ProfileSection title="Cost & aid">
-        <dl className="grid grid-cols-2 gap-4 sm:grid-cols-3">
-          <Fact
-            label="Tuition (in-state)"
-            value={formatCurrency(university.tuition_in_state)}
-          />
-          <Fact
-            label="Tuition (out-of-state)"
-            value={formatCurrency(university.tuition_out_state)}
-          />
-          <TuitionFact
-            domestic={university.tuition_domestic}
-            domesticIsCsp={university.tuition_domestic_is_csp}
-            international={university.tuition_international}
-            currency={university.currency}
-          />
-          <Fact
-            label="Est. cost of attendance"
-            value={formatCurrency(university.est_cost_of_attendance, university.currency)}
-          />
-        </dl>
+      {(hasCostData || scholarships.length > 0) && (
+        <ProfileSection title="Cost & aid">
+          {hasCostData && (
+            <FactBox>
+              <Fact
+                accent
+                label="Tuition (in-state)"
+                value={formatCurrency(university.tuition_in_state)}
+              />
+              <Fact
+                accent
+                label="Tuition (out-of-state)"
+                value={formatCurrency(university.tuition_out_state)}
+              />
+              <TuitionFact
+                domestic={university.tuition_domestic}
+                domesticIsCsp={university.tuition_domestic_is_csp}
+                international={university.tuition_international}
+                currency={university.currency}
+              />
+              <Fact
+                label="Est. cost of attendance"
+                value={formatCurrency(university.est_cost_of_attendance, university.currency)}
+              />
+            </FactBox>
+          )}
 
-        {scholarships.length > 0 && (
-          <ul className="mt-4 flex flex-col gap-2">
-            {scholarships.map((s) => (
-              <li
-                key={s.id}
-                className="flex items-center justify-between gap-4 rounded-md border border-ink/10 px-3 py-2 text-sm"
-              >
-                <span className="text-ink">{s.name}</span>
-                {s.amount && <span className="font-utility text-xs text-slate">{s.amount}</span>}
-              </li>
-            ))}
-          </ul>
-        )}
-      </ProfileSection>
+          {scholarships.length > 0 && (
+            <ul className="mt-4 flex flex-wrap gap-2">
+              {scholarships.map((s) => (
+                <li
+                  key={s.id}
+                  className="flex items-center gap-3 rounded-full border border-ink/10 bg-ink/[0.02] px-4 py-2 text-sm"
+                >
+                  <span className="text-ink">{s.name}</span>
+                  {s.amount && (
+                    <span className="font-utility text-xs font-medium text-status-open">
+                      {s.amount}
+                    </span>
+                  )}
+                </li>
+              ))}
+            </ul>
+          )}
+        </ProfileSection>
+      )}
 
-      <ProfileSection title="Academics">
-        <dl className="grid grid-cols-2 gap-4 sm:grid-cols-3">
-          <Fact
-            label="Popular majors"
-            value={university.popular_majors?.join(", ")}
-          />
-          <Fact label="Student:faculty ratio" value={university.student_faculty_ratio} />
-        </dl>
+      {(hasAcademicsFacts || programs.length > 0) && (
+        <ProfileSection title="Academics">
+          {hasAcademicsFacts && (
+            <FactBox>
+              <Fact
+                label="Popular majors"
+                value={university.popular_majors?.join(", ")}
+              />
+              <Fact label="Student:faculty ratio" value={university.student_faculty_ratio} />
+            </FactBox>
+          )}
 
-        {programs.length > 0 && (
-          <ProgramsList
-            programs={programs}
-            universityFallback={{
-              tuition_domestic: university.tuition_domestic,
-              tuition_domestic_is_csp: university.tuition_domestic_is_csp,
-              tuition_international: university.tuition_international,
-              currency: university.currency,
-              apply_url: university.apply_url,
-            }}
-          />
-        )}
-      </ProfileSection>
+          {programs.length > 0 && (
+            <ProgramsList
+              programs={programs}
+              universityFallback={{
+                tuition_domestic: university.tuition_domestic,
+                tuition_domestic_is_csp: university.tuition_domestic_is_csp,
+                tuition_international: university.tuition_international,
+                currency: university.currency,
+                apply_url: university.apply_url,
+                ielts_overall: university.ielts_overall,
+                ielts_listening: university.ielts_listening,
+                ielts_reading: university.ielts_reading,
+                ielts_writing: university.ielts_writing,
+                ielts_speaking: university.ielts_speaking,
+                pte_overall: university.pte_overall,
+                pte_listening: university.pte_listening,
+                pte_reading: university.pte_reading,
+                pte_writing: university.pte_writing,
+                pte_speaking: university.pte_speaking,
+              }}
+            />
+          )}
+        </ProfileSection>
+      )}
 
       {university.international_student_notes && (
         <ProfileSection title="For international students">
-          <p className="font-body text-base leading-relaxed text-ink">
+          <p className="rounded-xl bg-ink/[0.035] p-5 font-body text-base leading-relaxed text-ink">
             {university.international_student_notes}
           </p>
         </ProfileSection>
@@ -247,7 +327,7 @@ export default async function UniversityProfilePage({
 
       {deadlines.length > 0 && (
         <ProfileSection title="All deadlines">
-          <div className="overflow-hidden rounded-md border border-ink/15">
+          <div className="overflow-hidden rounded-md border border-ink/10 bg-paper">
             {deadlines.map((d, i) => {
               const status = deadlineBadgeStatus(d.deadline_date, d.is_rolling);
               return (

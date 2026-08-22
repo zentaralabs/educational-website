@@ -36,6 +36,16 @@ export async function createProgram(
     | "application_url"
     | "admission_requirements"
     | "english_requirements"
+    | "ielts_overall"
+    | "ielts_listening"
+    | "ielts_reading"
+    | "ielts_writing"
+    | "ielts_speaking"
+    | "pte_overall"
+    | "pte_listening"
+    | "pte_reading"
+    | "pte_writing"
+    | "pte_speaking"
     | "source_url"
   >,
 ): Promise<string> {

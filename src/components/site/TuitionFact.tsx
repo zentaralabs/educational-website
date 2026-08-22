@@ -34,7 +34,7 @@ export function TuitionFact({
       <dt className="font-body text-xs font-semibold tracking-wide text-slate uppercase">
         Tuition {usedFallback ? `(${resolved === "domestic" ? "international" : "domestic"})` : `(${resolved})`}
       </dt>
-      <dd className="font-utility text-sm text-ink">{formatted}</dd>
+      <dd className="font-utility text-lg font-medium text-status-open">{formatted}</dd>
       {showingDomestic && domesticIsCsp && (
         <dd className="font-utility text-xs text-slate">
           Commonwealth Supported Place rate — limited, not guaranteed; full domestic fee otherwise.

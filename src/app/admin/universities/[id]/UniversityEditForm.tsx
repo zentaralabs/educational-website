@@ -5,6 +5,7 @@ import { useState } from "react";
 import { ContentStatusBadge } from "@/components/admin/ContentStatusBadge";
 import { createProgram, updateProgramStatus, type ProgramRow } from "@/lib/queries/programs";
 import { updateUniversity, type UniversityDetailRow } from "@/lib/queries/universities";
+import { revalidateUniversity } from "./actions";
 import { logActivity } from "@/lib/queries/activity";
 import { createClient } from "@/lib/supabase/client";
 import type { ContentStatus, Database } from "@/lib/supabase/types";
@@ -28,7 +29,20 @@ type FormState = {
   website_url: string;
   acceptance_rate: string;
   gpa_requirement: string;
+  atar_requirement: string;
+  academic_requirement: string;
+  academic_requirement_domestic: string;
   required_tests: string;
+  ielts_overall: string;
+  ielts_listening: string;
+  ielts_reading: string;
+  ielts_writing: string;
+  ielts_speaking: string;
+  pte_overall: string;
+  pte_listening: string;
+  pte_reading: string;
+  pte_writing: string;
+  pte_speaking: string;
   tuition_in_state: string;
   tuition_out_state: string;
   tuition_international: string;
@@ -40,6 +54,14 @@ type FormState = {
   international_student_notes: string;
 };
 
+function numToStr(n: number | null | undefined): string {
+  return n === null || n === undefined ? "" : String(n);
+}
+
+function strToNum(s: string): number | null {
+  return s ? Number(s) : null;
+}
+
 function toFormState(u: UniversityDetailRow): FormState {
   return {
     name: u.name,
@@ -50,7 +72,20 @@ function toFormState(u: UniversityDetailRow): FormState {
     website_url: u.website_url ?? "",
     acceptance_rate: u.acceptance_rate !== null ? String(u.acceptance_rate) : "",
     gpa_requirement: u.gpa_requirement ?? "",
+    atar_requirement: u.atar_requirement ?? "",
+    academic_requirement: u.academic_requirement ?? "",
+    academic_requirement_domestic: u.academic_requirement_domestic ?? "",
     required_tests: (u.required_tests ?? []).join(", "),
+    ielts_overall: numToStr(u.ielts_overall),
+    ielts_listening: numToStr(u.ielts_listening),
+    ielts_reading: numToStr(u.ielts_reading),
+    ielts_writing: numToStr(u.ielts_writing),
+    ielts_speaking: numToStr(u.ielts_speaking),
+    pte_overall: numToStr(u.pte_overall),
+    pte_listening: numToStr(u.pte_listening),
+    pte_reading: numToStr(u.pte_reading),
+    pte_writing: numToStr(u.pte_writing),
+    pte_speaking: numToStr(u.pte_speaking),
     tuition_in_state: u.tuition_in_state !== null ? String(u.tuition_in_state) : "",
     tuition_out_state: u.tuition_out_state !== null ? String(u.tuition_out_state) : "",
     tuition_international:
@@ -77,9 +112,22 @@ function toPatch(
     website_url: form.website_url || null,
     acceptance_rate: form.acceptance_rate ? Number(form.acceptance_rate) : null,
     gpa_requirement: form.gpa_requirement || null,
+    atar_requirement: form.atar_requirement || null,
+    academic_requirement: form.academic_requirement || null,
+    academic_requirement_domestic: form.academic_requirement_domestic || null,
     required_tests: form.required_tests
       ? form.required_tests.split(",").map((t) => t.trim()).filter(Boolean)
       : null,
+    ielts_overall: strToNum(form.ielts_overall),
+    ielts_listening: strToNum(form.ielts_listening),
+    ielts_reading: strToNum(form.ielts_reading),
+    ielts_writing: strToNum(form.ielts_writing),
+    ielts_speaking: strToNum(form.ielts_speaking),
+    pte_overall: strToNum(form.pte_overall),
+    pte_listening: strToNum(form.pte_listening),
+    pte_reading: strToNum(form.pte_reading),
+    pte_writing: strToNum(form.pte_writing),
+    pte_speaking: strToNum(form.pte_speaking),
     tuition_in_state: form.tuition_in_state ? Number(form.tuition_in_state) : null,
     tuition_out_state: form.tuition_out_state ? Number(form.tuition_out_state) : null,
     tuition_international: form.tuition_international
@@ -171,6 +219,16 @@ function ProgramsPanel({
   const [applicationUrl, setApplicationUrl] = useState("");
   const [admissionRequirements, setAdmissionRequirements] = useState("");
   const [englishRequirements, setEnglishRequirements] = useState("");
+  const [ieltsOverall, setIeltsOverall] = useState("");
+  const [ieltsListening, setIeltsListening] = useState("");
+  const [ieltsReading, setIeltsReading] = useState("");
+  const [ieltsWriting, setIeltsWriting] = useState("");
+  const [ieltsSpeaking, setIeltsSpeaking] = useState("");
+  const [pteOverall, setPteOverall] = useState("");
+  const [pteListening, setPteListening] = useState("");
+  const [pteReading, setPteReading] = useState("");
+  const [pteWriting, setPteWriting] = useState("");
+  const [pteSpeaking, setPteSpeaking] = useState("");
   const [sourceUrl, setSourceUrl] = useState("");
   const [saving, setSaving] = useState(false);
   const [busyId, setBusyId] = useState<string | null>(null);
@@ -196,6 +254,16 @@ function ProgramsPanel({
         application_url: applicationUrl || null,
         admission_requirements: admissionRequirements || null,
         english_requirements: englishRequirements || null,
+        ielts_overall: strToNum(ieltsOverall),
+        ielts_listening: strToNum(ieltsListening),
+        ielts_reading: strToNum(ieltsReading),
+        ielts_writing: strToNum(ieltsWriting),
+        ielts_speaking: strToNum(ieltsSpeaking),
+        pte_overall: strToNum(pteOverall),
+        pte_listening: strToNum(pteListening),
+        pte_reading: strToNum(pteReading),
+        pte_writing: strToNum(pteWriting),
+        pte_speaking: strToNum(pteSpeaking),
         source_url: sourceUrl || null,
       });
       const degree_level = degreeLevels.find((d) => d.id === Number(degreeLevelId)) ?? null;
@@ -218,6 +286,16 @@ function ProgramsPanel({
           application_url: applicationUrl || null,
           admission_requirements: admissionRequirements || null,
           english_requirements: englishRequirements || null,
+          ielts_overall: strToNum(ieltsOverall),
+          ielts_listening: strToNum(ieltsListening),
+          ielts_reading: strToNum(ieltsReading),
+          ielts_writing: strToNum(ieltsWriting),
+          ielts_speaking: strToNum(ieltsSpeaking),
+          pte_overall: strToNum(pteOverall),
+          pte_listening: strToNum(pteListening),
+          pte_reading: strToNum(pteReading),
+          pte_writing: strToNum(pteWriting),
+          pte_speaking: strToNum(pteSpeaking),
           status: "draft",
           last_verified_at: null,
           source_url: sourceUrl || null,
@@ -235,6 +313,16 @@ function ProgramsPanel({
       setApplicationUrl("");
       setAdmissionRequirements("");
       setEnglishRequirements("");
+      setIeltsOverall("");
+      setIeltsListening("");
+      setIeltsReading("");
+      setIeltsWriting("");
+      setIeltsSpeaking("");
+      setPteOverall("");
+      setPteListening("");
+      setPteReading("");
+      setPteWriting("");
+      setPteSpeaking("");
       setSourceUrl("");
       router.refresh();
     } catch (err) {
@@ -475,6 +563,38 @@ function ProgramsPanel({
             className="w-full rounded-md border border-ink/20 bg-paper px-2 py-1.5 font-body text-sm text-ink placeholder:text-slate/60"
           />
         </label>
+        <div className="w-full">
+          <span className="mb-1 block font-body text-xs font-semibold tracking-wide text-slate uppercase">
+            English test override (optional — blank falls back to university default)
+          </span>
+          <div className="flex flex-wrap gap-2">
+            {(
+              [
+                ["IELTS overall", ieltsOverall, setIeltsOverall],
+                ["IELTS listening", ieltsListening, setIeltsListening],
+                ["IELTS reading", ieltsReading, setIeltsReading],
+                ["IELTS writing", ieltsWriting, setIeltsWriting],
+                ["IELTS speaking", ieltsSpeaking, setIeltsSpeaking],
+                ["PTE overall", pteOverall, setPteOverall],
+                ["PTE listening", pteListening, setPteListening],
+                ["PTE reading", pteReading, setPteReading],
+                ["PTE writing", pteWriting, setPteWriting],
+                ["PTE speaking", pteSpeaking, setPteSpeaking],
+              ] as [string, string, (v: string) => void][]
+            ).map(([label, value, setValue]) => (
+              <label key={label} className="block">
+                <span className="mb-1 block font-body text-[10px] font-semibold tracking-wide text-slate uppercase">
+                  {label}
+                </span>
+                <input
+                  value={value}
+                  onChange={(e) => setValue(e.target.value)}
+                  className="w-20 rounded-md border border-ink/20 bg-paper px-2 py-1.5 font-body text-sm text-ink"
+                />
+              </label>
+            ))}
+          </div>
+        </div>
         <button
           type="submit"
           disabled={saving}
@@ -535,6 +655,11 @@ export function UniversityEditForm({
             ? `Published ${form.name}`
             : `Saved draft: ${form.name}`,
       });
+      try {
+        await revalidateUniversity(form.slug, university.slug);
+      } catch (revalidateErr) {
+        console.error("Failed to revalidate public university page:", revalidateErr);
+      }
       setStatus(targetStatus);
       setMessage(targetStatus === "published" ? "Published." : "Draft saved.");
       router.refresh();
@@ -637,24 +762,128 @@ export function UniversityEditForm({
       )}
 
       {tab === "Admissions" && (
-        <div className="grid max-w-2xl gap-4 sm:grid-cols-2">
-          <Field
-            label="Acceptance rate"
-            value={form.acceptance_rate}
-            onChange={(v) => set("acceptance_rate", v)}
-            hint="Percent, e.g. 8.6"
-          />
-          <Field
-            label="GPA requirement"
-            value={form.gpa_requirement}
-            onChange={(v) => set("gpa_requirement", v)}
-          />
-          <Field
-            label="Required tests"
-            value={form.required_tests}
-            onChange={(v) => set("required_tests", v)}
-            hint="Comma-separated, e.g. SAT, ACT"
-          />
+        <div className="max-w-2xl">
+          <div className="grid gap-4 sm:grid-cols-2">
+            <Field
+              label="Acceptance rate"
+              value={form.acceptance_rate}
+              onChange={(v) => set("acceptance_rate", v)}
+              hint="Percent, e.g. 8.6"
+            />
+            <Field
+              label="GPA requirement (international)"
+              value={form.gpa_requirement}
+              onChange={(v) => set("gpa_requirement", v)}
+            />
+            <Field
+              label="ATAR requirement (domestic)"
+              value={form.atar_requirement}
+              onChange={(v) => set("atar_requirement", v)}
+              hint="e.g. 70+ — shown to domestic visitors instead of GPA"
+            />
+            <Field
+              label="Required tests"
+              value={form.required_tests}
+              onChange={(v) => set("required_tests", v)}
+              hint="Comma-separated, e.g. SAT, ACT"
+            />
+          </div>
+
+          <div className="mt-5 grid gap-5 sm:grid-cols-2">
+            <div>
+              <TextAreaField
+                label="Academic requirement (international)"
+                value={form.academic_requirement}
+                onChange={(v) => set("academic_requirement", v)}
+              />
+              <p className="mt-1 font-body text-xs text-slate">
+                General university-wide academic entry bar for international students
+                (e.g. secondary schooling equivalent, minimum ATAR). Not a
+                program-specific cutoff — those live under Academic → Admission
+                requirements per program. Also used as the domestic fallback below
+                when that field is left blank.
+              </p>
+            </div>
+            <div>
+              <TextAreaField
+                label="Academic requirement (domestic)"
+                value={form.academic_requirement_domestic}
+                onChange={(v) => set("academic_requirement_domestic", v)}
+              />
+              <p className="mt-1 font-body text-xs text-slate">
+                Overrides the international requirement for domestic visitors (e.g. a
+                plain ATAR cutoff). Leave blank to reuse the international text for
+                domestic too.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-6">
+            <h3 className="mb-1 font-body text-sm font-semibold text-ink">
+              English test scores (default)
+            </h3>
+            <p className="mb-3 font-body text-xs text-slate">
+              Applied to all programs unless a program sets its own override under
+              Academic. International students only — hidden on the public site when
+              a visitor selects &ldquo;domestic&rdquo;.
+            </p>
+            <div className="grid gap-4 sm:grid-cols-5">
+              <Field
+                label="IELTS overall"
+                value={form.ielts_overall}
+                onChange={(v) => set("ielts_overall", v)}
+                hint="e.g. 6.5"
+              />
+              <Field
+                label="IELTS listening"
+                value={form.ielts_listening}
+                onChange={(v) => set("ielts_listening", v)}
+              />
+              <Field
+                label="IELTS reading"
+                value={form.ielts_reading}
+                onChange={(v) => set("ielts_reading", v)}
+              />
+              <Field
+                label="IELTS writing"
+                value={form.ielts_writing}
+                onChange={(v) => set("ielts_writing", v)}
+              />
+              <Field
+                label="IELTS speaking"
+                value={form.ielts_speaking}
+                onChange={(v) => set("ielts_speaking", v)}
+              />
+            </div>
+            <div className="mt-4 grid gap-4 sm:grid-cols-5">
+              <Field
+                label="PTE overall"
+                value={form.pte_overall}
+                onChange={(v) => set("pte_overall", v)}
+                hint="e.g. 58"
+              />
+              <Field
+                label="PTE listening"
+                value={form.pte_listening}
+                onChange={(v) => set("pte_listening", v)}
+              />
+              <Field
+                label="PTE reading"
+                value={form.pte_reading}
+                onChange={(v) => set("pte_reading", v)}
+              />
+              <Field
+                label="PTE writing"
+                value={form.pte_writing}
+                onChange={(v) => set("pte_writing", v)}
+              />
+              <Field
+                label="PTE speaking"
+                value={form.pte_speaking}
+                onChange={(v) => set("pte_speaking", v)}
+              />
+            </div>
+          </div>
         </div>
       )}
 

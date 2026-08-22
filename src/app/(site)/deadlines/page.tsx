@@ -178,7 +178,13 @@ export default async function DeadlinesPage({
                       {d.degree_level && ` (${d.degree_level.name})`}
                     </span>
                     <div className="flex items-center gap-3">
-                      <span className="font-utility text-xs text-slate">
+                      <span className="flex items-center gap-1.5 font-utility text-xs text-slate">
+                        {status === "open" && (
+                          <span
+                            aria-hidden="true"
+                            className="animate-pulse-dot h-1.5 w-1.5 rounded-full bg-status-open"
+                          />
+                        )}
                         {formatDeadlineDate(d.deadline_date, d.is_rolling)}
                       </span>
                       <StatusBadge status={status} />
