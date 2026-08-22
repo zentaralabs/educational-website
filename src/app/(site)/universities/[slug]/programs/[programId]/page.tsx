@@ -98,9 +98,11 @@ export default async function ProgramDetailPage({
 
       {program.description && (
         <ProfileSection title="Overview">
-          <p className="rounded-xl bg-ink/[0.035] p-5 font-body text-base leading-relaxed text-ink">
-            {program.description}
-          </p>
+          <div className="flex flex-col gap-4 rounded-xl bg-ink/[0.035] p-5 font-body text-base leading-relaxed text-ink">
+            {program.description.split("\n\n").map((paragraph, i) => (
+              <p key={i}>{paragraph}</p>
+            ))}
+          </div>
         </ProfileSection>
       )}
 
