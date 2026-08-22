@@ -5,7 +5,7 @@ import { useState } from "react";
 import { ContentStatusBadge } from "@/components/admin/ContentStatusBadge";
 import { createProgram, updateProgramStatus, type ProgramRow } from "@/lib/queries/programs";
 import { updateUniversity, type UniversityDetailRow } from "@/lib/queries/universities";
-import { revalidateUniversity } from "./actions";
+import { revalidateProgram, revalidateUniversity } from "./actions";
 import { logActivity } from "@/lib/queries/activity";
 import { createClient } from "@/lib/supabase/client";
 import type { ContentStatus, Database } from "@/lib/supabase/types";
@@ -197,11 +197,13 @@ function TextAreaField({
 
 function ProgramsPanel({
   universityId,
+  universitySlug,
   degreeLevels,
   subjects,
   initialPrograms,
 }: {
   universityId: string;
+  universitySlug: string;
   degreeLevels: { id: number; name: string }[];
   subjects: { id: number; name: string }[];
   initialPrograms: ProgramRow[];
@@ -324,6 +326,11 @@ function ProgramsPanel({
       setPteWriting("");
       setPteSpeaking("");
       setSourceUrl("");
+      try {
+        await revalidateProgram(id, universitySlug);
+      } catch (revalidateErr) {
+        console.error("Failed to revalidate public program page:", revalidateErr);
+      }
       router.refresh();
     } catch (err) {
       setErrorMsg(err instanceof Error ? err.message : "Could not add program");
@@ -341,6 +348,11 @@ function ProgramsPanel({
       setPrograms((prev) =>
         prev.map((p) => (p.id === programId ? { ...p, status } : p)),
       );
+      try {
+        await revalidateProgram(programId, universitySlug);
+      } catch (revalidateErr) {
+        console.error("Failed to revalidate public program page:", revalidateErr);
+      }
       router.refresh();
     } catch (err) {
       setErrorMsg(err instanceof Error ? err.message : "Update failed");
@@ -941,6 +953,7 @@ export function UniversityEditForm({
       {tab === "Academic" && (
         <ProgramsPanel
           universityId={university.id}
+          universitySlug={university.slug}
           degreeLevels={degreeLevels}
           subjects={subjects}
           initialPrograms={programs}

@@ -249,22 +249,12 @@ export default async function UniversityProfilePage({
           {programs.length > 0 && (
             <ProgramsList
               programs={programs}
+              universitySlug={university.slug}
               universityFallback={{
                 tuition_domestic: university.tuition_domestic,
                 tuition_domestic_is_csp: university.tuition_domestic_is_csp,
                 tuition_international: university.tuition_international,
                 currency: university.currency,
-                apply_url: university.apply_url,
-                ielts_overall: university.ielts_overall,
-                ielts_listening: university.ielts_listening,
-                ielts_reading: university.ielts_reading,
-                ielts_writing: university.ielts_writing,
-                ielts_speaking: university.ielts_speaking,
-                pte_overall: university.pte_overall,
-                pte_listening: university.pte_listening,
-                pte_reading: university.pte_reading,
-                pte_writing: university.pte_writing,
-                pte_speaking: university.pte_speaking,
               }}
             />
           )}
