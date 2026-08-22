@@ -86,8 +86,32 @@ export function AdmissionsRequirementFacts({
       {resolved !== "domestic" && (
         <Fact label="Required tests" value={requiredTests?.join(", ")} />
       )}
-      <Fact label="IELTS requirement" value={ieltsSummary} />
-      <Fact label="PTE requirement" value={pteSummary} />
+      <Fact
+        label="IELTS requirement (typical)"
+        value={
+          ieltsSummary && (
+            <>
+              {ieltsSummary}
+              <span className="mt-0.5 block font-body text-xs font-normal normal-case text-slate">
+                Some programs set a higher bar — see the program list below.
+              </span>
+            </>
+          )
+        }
+      />
+      <Fact
+        label="PTE requirement (typical)"
+        value={
+          pteSummary && (
+            <>
+              {pteSummary}
+              <span className="mt-0.5 block font-body text-xs font-normal normal-case text-slate">
+                Some programs set a higher bar — see the program list below.
+              </span>
+            </>
+          )
+        }
+      />
     </>
   );
 }
