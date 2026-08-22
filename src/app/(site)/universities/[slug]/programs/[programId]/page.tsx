@@ -100,7 +100,14 @@ export default async function ProgramDetailPage({
         <ProfileSection title="Overview">
           <div className="flex flex-col gap-4 rounded-xl bg-ink/[0.035] p-5 font-body text-base leading-relaxed text-ink">
             {program.description.split("\n\n").map((paragraph, i) => (
-              <p key={i}>{paragraph}</p>
+              <p key={i}>
+                {paragraph.split("\n").map((line, j, lines) => (
+                  <span key={j}>
+                    {line}
+                    {j < lines.length - 1 && <br />}
+                  </span>
+                ))}
+              </p>
             ))}
           </div>
         </ProfileSection>
