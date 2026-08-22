@@ -247,16 +247,7 @@ export default async function UniversityProfilePage({
           )}
 
           {programs.length > 0 && (
-            <ProgramsList
-              programs={programs}
-              universitySlug={university.slug}
-              universityFallback={{
-                tuition_domestic: university.tuition_domestic,
-                tuition_domestic_is_csp: university.tuition_domestic_is_csp,
-                tuition_international: university.tuition_international,
-                currency: university.currency,
-              }}
-            />
+            <ProgramsList programs={programs} universitySlug={university.slug} />
           )}
         </ProfileSection>
       )}

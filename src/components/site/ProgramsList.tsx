@@ -2,8 +2,6 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import { formatCurrency } from "@/lib/format";
-import { useStudentType } from "@/lib/student-type";
 import type { PublicProgramRow } from "@/lib/queries/public-programs";
 
 const PAGE_SIZE = 10;
@@ -11,18 +9,10 @@ const PAGE_SIZE = 10;
 export function ProgramsList({
   programs,
   universitySlug,
-  universityFallback,
 }: {
   programs: PublicProgramRow[];
   universitySlug: string;
-  universityFallback: {
-    tuition_domestic: number | null;
-    tuition_domestic_is_csp: boolean | null;
-    tuition_international: number | null;
-    currency: string;
-  };
 }) {
-  const { resolved } = useStudentType();
   const [query, setQuery] = useState("");
   const [page, setPage] = useState(1);
 
@@ -66,42 +56,27 @@ export function ProgramsList({
         </p>
       ) : (
         <div className="flex flex-col gap-2">
-          {pageItems.map((p) => {
-            const domestic = p.tuition_domestic ?? universityFallback.tuition_domestic;
-            const international =
-              p.tuition_international ?? universityFallback.tuition_international;
-            const amount =
-              resolved === "domestic" ? (domestic ?? international) : (international ?? domestic);
-            const currency = p.currency ?? universityFallback.currency;
-
-            return (
-              <Link
-                key={p.id}
-                href={`/universities/${universitySlug}/programs/${p.id}`}
-                className="group flex items-center justify-between gap-4 rounded-md border border-ink/10 bg-paper py-3 pr-3 pl-3 text-sm transition-colors duration-150 hover:border-status-open/60 hover:bg-ink/[0.015]"
-                style={{ borderLeftWidth: 3, borderLeftColor: "var(--color-status-open)" }}
+          {pageItems.map((p) => (
+            <Link
+              key={p.id}
+              href={`/universities/${universitySlug}/programs/${p.id}`}
+              className="group flex items-center justify-between gap-4 rounded-md border border-ink/10 bg-paper py-3 pr-3 pl-3 text-sm transition-colors duration-150 hover:border-status-open/60 hover:bg-ink/[0.015]"
+              style={{ borderLeftWidth: 3, borderLeftColor: "var(--color-status-open)" }}
+            >
+              <div className="min-w-0">
+                <p className="truncate text-ink">{p.name}</p>
+                <p className="mt-0.5 truncate font-utility text-xs text-slate">
+                  {[p.degree_level?.name, p.subject?.name].filter(Boolean).join(" · ")}
+                </p>
+              </div>
+              <span
+                aria-hidden="true"
+                className="flex-shrink-0 text-slate transition-transform duration-150 group-hover:translate-x-0.5 group-hover:text-status-open"
               >
-                <div className="min-w-0">
-                  <p className="truncate text-ink">{p.name}</p>
-                  <p className="mt-0.5 truncate font-utility text-xs text-slate">
-                    {[p.degree_level?.name, p.subject?.name].filter(Boolean).join(" · ")}
-                  </p>
-                </div>
-                <div className="flex flex-shrink-0 items-center gap-4">
-                  <div className="text-right font-utility text-xs text-slate">
-                    {p.duration_years && <div>{p.duration_years} yr</div>}
-                    <div className="text-ink">{formatCurrency(amount, currency) ?? "—"}</div>
-                  </div>
-                  <span
-                    aria-hidden="true"
-                    className="text-slate transition-transform duration-150 group-hover:translate-x-0.5 group-hover:text-status-open"
-                  >
-                    →
-                  </span>
-                </div>
-              </Link>
-            );
-          })}
+                →
+              </span>
+            </Link>
+          ))}
         </div>
       )}
 

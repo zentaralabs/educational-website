@@ -96,6 +96,14 @@ export default async function ProgramDetailPage({
         )}
       </div>
 
+      {program.description && (
+        <ProfileSection title="Overview">
+          <p className="rounded-xl bg-ink/[0.035] p-5 font-body text-base leading-relaxed text-ink">
+            {program.description}
+          </p>
+        </ProfileSection>
+      )}
+
       <ProfileSection title="Program details">
         <FactBox>
           <Fact label="Duration" value={program.duration_years ? `${program.duration_years} yr` : null} />

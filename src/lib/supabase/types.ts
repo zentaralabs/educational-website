@@ -173,6 +173,7 @@ export interface Database {
           tuition_domestic_is_csp: boolean | null;
           currency: string | null;
           application_url: string | null;
+          description: string | null;
           admission_requirements: string | null;
           english_requirements: string | null;
           ielts_overall: number | null;
@@ -203,6 +204,7 @@ export interface Database {
           tuition_domestic_is_csp?: boolean | null;
           currency?: string | null;
           application_url?: string | null;
+          description?: string | null;
           admission_requirements?: string | null;
           english_requirements?: string | null;
           ielts_overall?: number | null;

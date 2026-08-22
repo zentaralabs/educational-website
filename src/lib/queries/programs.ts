@@ -34,6 +34,7 @@ export async function createProgram(
     | "tuition_domestic_is_csp"
     | "currency"
     | "application_url"
+    | "description"
     | "admission_requirements"
     | "english_requirements"
     | "ielts_overall"

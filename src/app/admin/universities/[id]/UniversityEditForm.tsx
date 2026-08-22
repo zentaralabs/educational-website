@@ -219,6 +219,7 @@ function ProgramsPanel({
   const [tuitionDomesticIsCsp, setTuitionDomesticIsCsp] = useState(false);
   const [currency, setCurrency] = useState("");
   const [applicationUrl, setApplicationUrl] = useState("");
+  const [description, setDescription] = useState("");
   const [admissionRequirements, setAdmissionRequirements] = useState("");
   const [englishRequirements, setEnglishRequirements] = useState("");
   const [ieltsOverall, setIeltsOverall] = useState("");
@@ -254,6 +255,7 @@ function ProgramsPanel({
         tuition_domestic_is_csp: tuitionDomestic ? tuitionDomesticIsCsp : null,
         currency: currency ? currency.toUpperCase() : null,
         application_url: applicationUrl || null,
+        description: description || null,
         admission_requirements: admissionRequirements || null,
         english_requirements: englishRequirements || null,
         ielts_overall: strToNum(ieltsOverall),
@@ -286,6 +288,7 @@ function ProgramsPanel({
           tuition_domestic_is_csp: tuitionDomestic ? tuitionDomesticIsCsp : null,
           currency: currency ? currency.toUpperCase() : null,
           application_url: applicationUrl || null,
+          description: description || null,
           admission_requirements: admissionRequirements || null,
           english_requirements: englishRequirements || null,
           ielts_overall: strToNum(ieltsOverall),
@@ -313,6 +316,7 @@ function ProgramsPanel({
       setTuitionDomesticIsCsp(false);
       setCurrency("");
       setApplicationUrl("");
+      setDescription("");
       setAdmissionRequirements("");
       setEnglishRequirements("");
       setIeltsOverall("");
@@ -551,6 +555,18 @@ function ProgramsPanel({
             onChange={(e) => setSourceUrl(e.target.value)}
             placeholder="Official page the fee was verified against"
             className="min-w-56 rounded-md border border-ink/20 bg-paper px-2 py-1.5 font-body text-sm text-ink placeholder:text-slate/60"
+          />
+        </label>
+        <label className="block w-full">
+          <span className="mb-1 block font-body text-xs font-semibold tracking-wide text-slate uppercase">
+            Description (optional)
+          </span>
+          <textarea
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+            placeholder="Prose shown on the program's own public page — what it covers, who it's for, notable features"
+            rows={3}
+            className="w-full rounded-md border border-ink/20 bg-paper px-2 py-1.5 font-body text-sm text-ink placeholder:text-slate/60"
           />
         </label>
         <label className="block w-full">
