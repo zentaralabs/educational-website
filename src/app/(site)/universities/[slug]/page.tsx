@@ -5,9 +5,8 @@ import { AdmissionsRequirementFacts } from "@/components/site/AdmissionsRequirem
 import { Fact, FactBox, ProfileSection } from "@/components/site/ProfileSection";
 import { LastVerified } from "@/components/site/LastVerified";
 import { ProgramsList } from "@/components/site/ProgramsList";
-import { TuitionFact } from "@/components/site/TuitionFact";
 import { deadlineBadgeStatus, formatDeadlineDate } from "@/lib/deadline-status";
-import { formatCurrency, formatPercent } from "@/lib/format";
+import { formatPercent } from "@/lib/format";
 import { getPublishedProgramsForUniversity } from "@/lib/queries/public-programs";
 import {
   getPublishedDeadlinesForUniversity,
@@ -89,14 +88,6 @@ export default async function UniversityProfilePage({
     university.application_platform?.name,
     university.degree_levels.length,
   ].some(Boolean);
-
-  const hasCostData = [
-    university.tuition_in_state,
-    university.tuition_out_state,
-    university.tuition_domestic,
-    university.tuition_international,
-    university.est_cost_of_attendance,
-  ].some((v) => v !== null && v !== undefined);
 
   const hasAcademicsFacts = Boolean(
     university.popular_majors?.length || university.student_faculty_ratio,
@@ -223,50 +214,23 @@ export default async function UniversityProfilePage({
         </ProfileSection>
       )}
 
-      {(hasCostData || scholarships.length > 0) && (
-        <ProfileSection title="Cost & aid">
-          {hasCostData && (
-            <FactBox>
-              <Fact
-                accent
-                label="Tuition (in-state)"
-                value={formatCurrency(university.tuition_in_state)}
-              />
-              <Fact
-                accent
-                label="Tuition (out-of-state)"
-                value={formatCurrency(university.tuition_out_state)}
-              />
-              <TuitionFact
-                domestic={university.tuition_domestic}
-                domesticIsCsp={university.tuition_domestic_is_csp}
-                international={university.tuition_international}
-                currency={university.currency}
-              />
-              <Fact
-                label="Est. cost of attendance"
-                value={formatCurrency(university.est_cost_of_attendance, university.currency)}
-              />
-            </FactBox>
-          )}
-
-          {scholarships.length > 0 && (
-            <ul className="mt-4 flex flex-wrap gap-2">
-              {scholarships.map((s) => (
-                <li
-                  key={s.id}
-                  className="flex items-center gap-3 rounded-full border border-ink/10 bg-ink/[0.02] px-4 py-2 text-sm"
-                >
-                  <span className="text-ink">{s.name}</span>
-                  {s.amount && (
-                    <span className="font-utility text-xs font-medium text-status-open">
-                      {s.amount}
-                    </span>
-                  )}
-                </li>
-              ))}
-            </ul>
-          )}
+      {scholarships.length > 0 && (
+        <ProfileSection title="Financial aid & scholarships">
+          <ul className="flex flex-wrap gap-2">
+            {scholarships.map((s) => (
+              <li
+                key={s.id}
+                className="flex items-center gap-3 rounded-full border border-ink/10 bg-ink/[0.02] px-4 py-2 text-sm"
+              >
+                <span className="text-ink">{s.name}</span>
+                {s.amount && (
+                  <span className="font-utility text-xs font-medium text-status-open">
+                    {s.amount}
+                  </span>
+                )}
+              </li>
+            ))}
+          </ul>
         </ProfileSection>
       )}
 
