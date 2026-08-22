@@ -55,6 +55,7 @@ type FormState = {
   tuition_domestic_is_csp: boolean;
   currency: string;
   apply_url: string;
+  application_fee: string;
   distinctive_summary: string;
   international_student_notes: string;
 };
@@ -99,6 +100,7 @@ function toFormState(u: UniversityDetailRow): FormState {
     tuition_domestic_is_csp: u.tuition_domestic_is_csp ?? false,
     currency: u.currency ?? "USD",
     apply_url: u.apply_url ?? "",
+    application_fee: u.application_fee !== null ? String(u.application_fee) : "",
     distinctive_summary: u.distinctive_summary ?? "",
     international_student_notes: u.international_student_notes ?? "",
   };
@@ -142,6 +144,7 @@ function toPatch(
     tuition_domestic_is_csp: form.tuition_domestic ? form.tuition_domestic_is_csp : null,
     currency: form.currency || "USD",
     apply_url: form.apply_url || null,
+    application_fee: form.application_fee ? Number(form.application_fee) : null,
     distinctive_summary: form.distinctive_summary || null,
     international_student_notes: form.international_student_notes || null,
     status,
@@ -1119,6 +1122,12 @@ export function UniversityEditForm({
             value={form.apply_url}
             onChange={(v) => set("apply_url", v)}
             hint="Fallback application link when a program has none of its own"
+          />
+          <Field
+            label="Application fee"
+            value={form.application_fee}
+            onChange={(v) => set("application_fee", v)}
+            hint="Non-refundable, in the currency above — same for every program here"
           />
         </div>
       )}

@@ -48,6 +48,7 @@ export function ProgramSidebar({
   tuitionDomestic,
   tuitionDomesticIsCsp,
   tuitionInternational,
+  applicationFee,
   currency,
   ieltsOverall,
   ieltsListening,
@@ -64,6 +65,7 @@ export function ProgramSidebar({
   tuitionDomestic: number | null;
   tuitionDomesticIsCsp: boolean | null;
   tuitionInternational: number | null;
+  applicationFee: number | null;
   currency: string;
   ieltsOverall: number | null;
   ieltsListening: number | null;
@@ -98,6 +100,7 @@ export function ProgramSidebar({
       <Widget title="Cost & duration" icon={<CoinIcon className="h-3.5 w-3.5" />}>
         <Row label="Duration" value={durationYears ? `${durationYears} yr` : null} />
         <Row label={tuitionLabel} value={formatCurrency(tuitionAmount, currency)} />
+        <Row label="Application fee" value={formatCurrency(applicationFee, currency)} />
       </Widget>
       {showingDomestic && tuitionDomesticIsCsp && (
         <p className="-mt-1.5 px-1 font-body text-xs text-slate">

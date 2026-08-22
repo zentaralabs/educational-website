@@ -157,6 +157,7 @@ export default async function ProgramDetailPage({
           tuitionDomestic={program.tuition_domestic ?? university.tuition_domestic}
           tuitionDomesticIsCsp={program.tuition_domestic_is_csp ?? university.tuition_domestic_is_csp}
           tuitionInternational={program.tuition_international ?? university.tuition_international}
+          applicationFee={university.application_fee}
           currency={program.currency ?? university.currency}
           ieltsOverall={program.ielts_overall ?? university.ielts_overall}
           ieltsListening={program.ielts_listening ?? university.ielts_listening}

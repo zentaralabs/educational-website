@@ -95,6 +95,7 @@ export interface Database {
           tuition_domestic_is_csp: boolean | null;
           currency: string;
           apply_url: string | null;
+          application_fee: number | null;
           est_cost_of_attendance: number | null;
           popular_majors: string[] | null;
           student_faculty_ratio: string | null;
@@ -144,6 +145,7 @@ export interface Database {
           tuition_domestic_is_csp?: boolean | null;
           currency?: string;
           apply_url?: string | null;
+          application_fee?: number | null;
           est_cost_of_attendance?: number | null;
           popular_majors?: string[] | null;
           student_faculty_ratio?: string | null;

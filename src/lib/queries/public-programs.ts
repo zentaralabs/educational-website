@@ -54,6 +54,7 @@ export type PublicProgramDetail = PublicProgramRow & {
     status: string;
     city: string | null;
     apply_url: string | null;
+    application_fee: number | null;
     tuition_international: number | null;
     tuition_domestic: number | null;
     tuition_domestic_is_csp: boolean | null;
@@ -87,7 +88,7 @@ export async function getPublishedProgram(
     .select(
       `id, name, description, curriculum, duration_years, tuition_international, tuition_domestic, tuition_domestic_is_csp, currency, application_url, admission_requirements, english_requirements, ielts_overall, ielts_listening, ielts_reading, ielts_writing, ielts_speaking, pte_overall, pte_listening, pte_reading, pte_writing, pte_speaking, last_verified_at, source_url,
       degree_level:degree_levels(name), subject:subjects(name),
-      university:universities(id, slug, name, status, city, apply_url, tuition_international, tuition_domestic, tuition_domestic_is_csp, currency, ielts_overall, ielts_listening, ielts_reading, ielts_writing, ielts_speaking, pte_overall, pte_listening, pte_reading, pte_writing, pte_speaking, country:countries(code, name))`,
+      university:universities(id, slug, name, status, city, apply_url, application_fee, tuition_international, tuition_domestic, tuition_domestic_is_csp, currency, ielts_overall, ielts_listening, ielts_reading, ielts_writing, ielts_speaking, pte_overall, pte_listening, pte_reading, pte_writing, pte_speaking, country:countries(code, name))`,
     )
     .eq("id", programId)
     .eq("status", "published")
