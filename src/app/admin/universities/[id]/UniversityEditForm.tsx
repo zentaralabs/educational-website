@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { ContentStatusBadge } from "@/components/admin/ContentStatusBadge";
 import {
   createProgram,
@@ -242,6 +242,26 @@ function ProgramsPanel({
   const [busyId, setBusyId] = useState<string | null>(null);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [editingId, setEditingId] = useState<string | null>(null);
+  const [tableQuery, setTableQuery] = useState("");
+  const [tablePage, setTablePage] = useState(1);
+  const formRef = useRef<HTMLFormElement>(null);
+
+  const TABLE_PAGE_SIZE = 20;
+  const filteredPrograms = useMemo(() => {
+    const q = tableQuery.trim().toLowerCase();
+    if (!q) return programs;
+    return programs.filter((p) =>
+      [p.name, p.degree_level?.name, p.subject?.name]
+        .filter(Boolean)
+        .some((field) => field!.toLowerCase().includes(q)),
+    );
+  }, [programs, tableQuery]);
+  const tableTotalPages = Math.max(1, Math.ceil(filteredPrograms.length / TABLE_PAGE_SIZE));
+  const tableCurrentPage = Math.min(tablePage, tableTotalPages);
+  const pagedPrograms = filteredPrograms.slice(
+    (tableCurrentPage - 1) * TABLE_PAGE_SIZE,
+    tableCurrentPage * TABLE_PAGE_SIZE,
+  );
 
   function resetForm() {
     setName("");
@@ -295,6 +315,7 @@ function ProgramsPanel({
     setPteSpeaking(numToStr(p.pte_speaking));
     setSourceUrl(p.source_url ?? "");
     setErrorMsg(null);
+    formRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
   function cancelEdit() {
@@ -412,7 +433,20 @@ function ProgramsPanel({
       </p>
 
       {programs.length > 0 && (
-        <div className="mb-4 overflow-hidden rounded-md border border-ink/15">
+        <>
+          {programs.length > TABLE_PAGE_SIZE && (
+            <input
+              type="search"
+              value={tableQuery}
+              onChange={(e) => {
+                setTableQuery(e.target.value);
+                setTablePage(1);
+              }}
+              placeholder={`Search ${programs.length} programs by name, level, or subject…`}
+              className="mb-2 w-full rounded-md border border-ink/20 bg-paper px-3 py-1.5 font-body text-sm text-ink placeholder:text-slate/60 transition-colors duration-150 focus:border-status-open focus:outline-none"
+            />
+          )}
+          <div className="mb-1 overflow-hidden rounded-md border border-ink/15">
           <table className="w-full border-collapse text-left">
             <thead>
               <tr className="border-b border-ink/15 bg-ink/[0.03]">
@@ -434,7 +468,7 @@ function ProgramsPanel({
               </tr>
             </thead>
             <tbody>
-              {programs.map((p) => (
+              {pagedPrograms.map((p) => (
                 <tr key={p.id} className="border-b border-ink/10 text-sm last:border-b-0">
                   <td className="px-3 py-2.5 text-ink">{p.name}</td>
                   <td className="px-3 py-2.5 text-slate">{p.degree_level?.name}</td>
@@ -476,7 +510,40 @@ function ProgramsPanel({
               ))}
             </tbody>
           </table>
-        </div>
+          </div>
+
+          {tableTotalPages > 1 && (
+            <div className="mb-4 flex items-center justify-between">
+              {tableCurrentPage > 1 ? (
+                <button
+                  type="button"
+                  onClick={() => setTablePage(tableCurrentPage - 1)}
+                  className="rounded-md border border-ink/20 px-3 py-1.5 font-body text-sm text-ink transition-colors duration-150 hover:border-status-open"
+                >
+                  ← Previous
+                </button>
+              ) : (
+                <span />
+              )}
+
+              <span className="font-utility text-xs text-slate">
+                Page {tableCurrentPage} of {tableTotalPages} ({filteredPrograms.length} programs)
+              </span>
+
+              {tableCurrentPage < tableTotalPages ? (
+                <button
+                  type="button"
+                  onClick={() => setTablePage(tableCurrentPage + 1)}
+                  className="rounded-md border border-ink/20 px-3 py-1.5 font-body text-sm text-ink transition-colors duration-150 hover:border-status-open"
+                >
+                  Next →
+                </button>
+              ) : (
+                <span />
+              )}
+            </div>
+          )}
+        </>
       )}
 
       {editingId && (
@@ -493,6 +560,7 @@ function ProgramsPanel({
       )}
 
       <form
+        ref={formRef}
         onSubmit={handleSubmit}
         className="flex flex-wrap items-end gap-3 rounded-md border border-ink/15 bg-ink/[0.02] p-4"
       >
