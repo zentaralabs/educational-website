@@ -1,12 +1,27 @@
 "use client";
 
+import type { ReactNode } from "react";
 import { formatCurrency, formatEnglishScore } from "@/lib/format";
 import { useStudentType } from "@/lib/student-type";
+import { CoinIcon, GlobeIcon } from "@/components/site/icons";
 
-function Widget({ title, children }: { title: string; children: React.ReactNode }) {
+function Widget({
+  title,
+  icon,
+  children,
+}: {
+  title: string;
+  icon: ReactNode;
+  children: React.ReactNode;
+}) {
   return (
-    <div className="rounded-xl border border-ink/10 bg-ink/[0.02] p-4">
-      <p className="mb-2 font-body text-xs font-semibold uppercase tracking-wide text-slate">{title}</p>
+    <div className="group rounded-xl border border-ink/10 bg-ink/[0.02] p-4 transition-all duration-150 hover:border-status-open/30 hover:bg-ink/[0.03] hover:shadow-sm">
+      <div className="mb-2 flex items-center gap-2">
+        <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-status-open/10 text-status-open">
+          {icon}
+        </span>
+        <p className="font-body text-xs font-semibold uppercase tracking-wide text-slate">{title}</p>
+      </div>
       <div className="flex flex-col divide-y divide-ink/10">{children}</div>
     </div>
   );
@@ -80,7 +95,7 @@ export function ProgramSidebar({
 
   return (
     <div className="flex flex-col gap-3">
-      <Widget title="Cost & duration">
+      <Widget title="Cost & duration" icon={<CoinIcon className="h-3.5 w-3.5" />}>
         <Row label="Duration" value={durationYears ? `${durationYears} yr` : null} />
         <Row label={tuitionLabel} value={formatCurrency(tuitionAmount, currency)} />
       </Widget>
@@ -90,7 +105,7 @@ export function ProgramSidebar({
         </p>
       )}
       {(ieltsSummary || pteSummary) && (
-        <Widget title="English test scores">
+        <Widget title="English test scores" icon={<GlobeIcon className="h-3.5 w-3.5" />}>
           <Row label="IELTS" value={ieltsSummary} />
           <Row label="PTE" value={pteSummary} />
         </Widget>

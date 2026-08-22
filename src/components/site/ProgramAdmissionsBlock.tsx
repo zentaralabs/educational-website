@@ -1,6 +1,7 @@
 "use client";
 
 import { useStudentType } from "@/lib/student-type";
+import { CheckBadgeIcon } from "@/components/site/icons";
 
 /**
  * Admission requirements prose, plus the free-text English requirements
@@ -23,13 +24,16 @@ export function ProgramAdmissionsBlock({
   if (!admissionRequirements && !showEnglishText) return null;
 
   return (
-    <div className="flex flex-col gap-2 rounded-xl bg-ink/[0.035] p-5">
-      {admissionRequirements && (
-        <p className="font-body text-base leading-relaxed text-ink">{admissionRequirements}</p>
-      )}
-      {showEnglishText && (
-        <p className="font-body text-sm leading-relaxed text-slate">{englishRequirements}</p>
-      )}
+    <div className="flex gap-3 rounded-xl border-l-4 border-status-open bg-ink/[0.035] p-5">
+      <CheckBadgeIcon className="mt-0.5 h-5 w-5 text-status-open" />
+      <div className="flex flex-col gap-2">
+        {admissionRequirements && (
+          <p className="font-body text-base leading-relaxed text-ink">{admissionRequirements}</p>
+        )}
+        {showEnglishText && (
+          <p className="font-body text-sm leading-relaxed text-slate">{englishRequirements}</p>
+        )}
+      </div>
     </div>
   );
 }

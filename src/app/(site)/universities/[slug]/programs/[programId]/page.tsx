@@ -4,6 +4,7 @@ import { ProfileSection } from "@/components/site/ProfileSection";
 import { LastVerified } from "@/components/site/LastVerified";
 import { ProgramAdmissionsBlock } from "@/components/site/ProgramAdmissionsBlock";
 import { ProgramSidebar } from "@/components/site/ProgramSidebar";
+import { ArrowUpRightIcon, BookIcon, CheckBadgeIcon } from "@/components/site/icons";
 import { getPublishedProgram } from "@/lib/queries/public-programs";
 
 export const revalidate = 3600;
@@ -108,30 +109,34 @@ export default async function ProgramDetailPage({
         <span className="text-ink">{program.name}</span>
       </nav>
 
-      <p className="mt-3 font-utility text-xs font-semibold tracking-widest text-status-open uppercase">
-        {[program.degree_level?.name, program.subject?.name].filter(Boolean).join(" · ")}
-      </p>
-      <div className="mt-2 flex flex-wrap items-start justify-between gap-4">
-        <div>
-          <h1 className="font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
-            {program.name}
-          </h1>
-          <p className="mt-2 font-body text-base text-slate">
-            {university.name}
-            {university.city && `, ${university.city}`}
-            {university.country?.name && `, ${university.country.name}`}
-          </p>
+      <div className="mt-4 rounded-2xl bg-gradient-to-br from-ink/[0.04] via-ink/[0.02] to-transparent p-6 sm:p-8">
+        <p className="flex items-center gap-2 font-utility text-xs font-semibold tracking-widest text-status-open uppercase">
+          <span className="inline-block h-1.5 w-1.5 rounded-full bg-status-open" />
+          {[program.degree_level?.name, program.subject?.name].filter(Boolean).join(" · ")}
+        </p>
+        <div className="mt-2 flex flex-wrap items-start justify-between gap-4">
+          <div>
+            <h1 className="font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
+              {program.name}
+            </h1>
+            <p className="mt-2 font-body text-base text-slate">
+              {university.name}
+              {university.city && `, ${university.city}`}
+              {university.country?.name && `, ${university.country.name}`}
+            </p>
+          </div>
+          {(program.application_url ?? university.apply_url) && (
+            <a
+              href={program.application_url ?? university.apply_url!}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex flex-shrink-0 items-center gap-1.5 rounded-full bg-ink px-5 py-2.5 font-body text-sm font-medium text-paper shadow-md shadow-ink/10 transition-all duration-150 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-ink/15"
+            >
+              Apply
+              <ArrowUpRightIcon className="h-3.5 w-3.5" />
+            </a>
+          )}
         </div>
-        {(program.application_url ?? university.apply_url) && (
-          <a
-            href={program.application_url ?? university.apply_url!}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block flex-shrink-0 rounded-full bg-ink px-5 py-2 font-body text-sm font-medium text-paper transition-opacity duration-150 hover:opacity-90"
-          >
-            Apply ↗
-          </a>
-        )}
       </div>
 
       <div className="mt-8 grid gap-6 border-t border-ink/10 pt-8 md:grid-cols-[2fr_1fr]">
@@ -168,9 +173,18 @@ export default async function ProgramDetailPage({
 
       {curriculumTerms && curriculumTerms.length > 0 && (
         <ProfileSection title="Course structure">
+          <p className="mb-4 flex items-center gap-2 font-body text-sm text-slate">
+            <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-status-open/10 text-status-open">
+              <BookIcon className="h-3.5 w-3.5" />
+            </span>
+            {curriculumTerms.length} term{curriculumTerms.length === 1 ? "" : "s"} of coursework
+          </p>
           <div className="grid gap-4 sm:grid-cols-2">
             {curriculumTerms.map((term, i) => (
-              <div key={i} className="rounded-xl border border-ink/10 bg-ink/[0.02] p-4">
+              <div
+                key={i}
+                className="rounded-xl border border-ink/10 bg-ink/[0.02] p-4 transition-all duration-150 hover:-translate-y-0.5 hover:border-status-open/30 hover:bg-ink/[0.03] hover:shadow-sm"
+              >
                 {(term.label || term.units) && (
                   <div className="flex items-center justify-between gap-2 border-b border-ink/10 pb-2">
                     {term.label && (
@@ -216,7 +230,8 @@ export default async function ProgramDetailPage({
         />
       </ProfileSection>
 
-      <div className="mt-8 border-t border-ink/10 pt-6">
+      <div className="mt-8 flex items-center gap-2 rounded-xl bg-status-open/5 px-4 py-3">
+        <CheckBadgeIcon className="h-4 w-4 flex-shrink-0 text-status-open" />
         <LastVerified
           date={program.last_verified_at}
           sources={program.source_url ? [program.source_url] : null}
