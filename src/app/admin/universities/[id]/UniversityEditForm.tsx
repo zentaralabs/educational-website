@@ -3,7 +3,12 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { ContentStatusBadge } from "@/components/admin/ContentStatusBadge";
-import { createProgram, updateProgramStatus, type ProgramRow } from "@/lib/queries/programs";
+import {
+  createProgram,
+  updateProgram,
+  updateProgramStatus,
+  type ProgramRow,
+} from "@/lib/queries/programs";
 import { updateUniversity, type UniversityDetailRow } from "@/lib/queries/universities";
 import { revalidateProgram, revalidateUniversity } from "./actions";
 import { logActivity } from "@/lib/queries/activity";
@@ -236,16 +241,77 @@ function ProgramsPanel({
   const [saving, setSaving] = useState(false);
   const [busyId, setBusyId] = useState<string | null>(null);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
+  const [editingId, setEditingId] = useState<string | null>(null);
 
-  async function handleAdd(e: React.FormEvent) {
+  function resetForm() {
+    setName("");
+    setDegreeLevelId(String(degreeLevels[0]?.id ?? ""));
+    setSubjectId("");
+    setDurationYears("");
+    setTuition("");
+    setTuitionDomestic("");
+    setTuitionDomesticIsCsp(false);
+    setCurrency("");
+    setApplicationUrl("");
+    setDescription("");
+    setAdmissionRequirements("");
+    setEnglishRequirements("");
+    setIeltsOverall("");
+    setIeltsListening("");
+    setIeltsReading("");
+    setIeltsWriting("");
+    setIeltsSpeaking("");
+    setPteOverall("");
+    setPteListening("");
+    setPteReading("");
+    setPteWriting("");
+    setPteSpeaking("");
+    setSourceUrl("");
+  }
+
+  function startEdit(p: ProgramRow) {
+    setEditingId(p.id);
+    setName(p.name);
+    setDegreeLevelId(String(p.degree_level_id));
+    setSubjectId(p.subject_id ? String(p.subject_id) : "");
+    setDurationYears(p.duration_years !== null ? String(p.duration_years) : "");
+    setTuition(p.tuition_international !== null ? String(p.tuition_international) : "");
+    setTuitionDomestic(p.tuition_domestic !== null ? String(p.tuition_domestic) : "");
+    setTuitionDomesticIsCsp(p.tuition_domestic_is_csp ?? false);
+    setCurrency(p.currency ?? "");
+    setApplicationUrl(p.application_url ?? "");
+    setDescription(p.description ?? "");
+    setAdmissionRequirements(p.admission_requirements ?? "");
+    setEnglishRequirements(p.english_requirements ?? "");
+    setIeltsOverall(numToStr(p.ielts_overall));
+    setIeltsListening(numToStr(p.ielts_listening));
+    setIeltsReading(numToStr(p.ielts_reading));
+    setIeltsWriting(numToStr(p.ielts_writing));
+    setIeltsSpeaking(numToStr(p.ielts_speaking));
+    setPteOverall(numToStr(p.pte_overall));
+    setPteListening(numToStr(p.pte_listening));
+    setPteReading(numToStr(p.pte_reading));
+    setPteWriting(numToStr(p.pte_writing));
+    setPteSpeaking(numToStr(p.pte_speaking));
+    setSourceUrl(p.source_url ?? "");
+    setErrorMsg(null);
+  }
+
+  function cancelEdit() {
+    setEditingId(null);
+    resetForm();
+  }
+
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!name.trim() || !degreeLevelId) return;
     setSaving(true);
     setErrorMsg(null);
     try {
       const supabase = createClient();
-      const id = await createProgram(supabase, {
-        university_id: universityId,
+      const degree_level = degreeLevels.find((d) => d.id === Number(degreeLevelId)) ?? null;
+      const subject = subjects.find((s) => s.id === Number(subjectId)) ?? null;
+      const fields = {
         name: name.trim(),
         degree_level_id: Number(degreeLevelId),
         subject_id: subjectId ? Number(subjectId) : null,
@@ -269,67 +335,39 @@ function ProgramsPanel({
         pte_writing: strToNum(pteWriting),
         pte_speaking: strToNum(pteSpeaking),
         source_url: sourceUrl || null,
-      });
-      const degree_level = degreeLevels.find((d) => d.id === Number(degreeLevelId)) ?? null;
-      const subject = subjects.find((s) => s.id === Number(subjectId)) ?? null;
-      setPrograms((prev) => [
-        ...prev,
-        {
-          id,
-          university_id: universityId,
-          name: name.trim(),
-          degree_level_id: Number(degreeLevelId),
-          degree_level,
-          subject_id: subjectId ? Number(subjectId) : null,
-          subject,
-          duration_years: durationYears ? Number(durationYears) : null,
-          tuition_international: tuition ? Number(tuition) : null,
-          tuition_domestic: tuitionDomestic ? Number(tuitionDomestic) : null,
-          tuition_domestic_is_csp: tuitionDomestic ? tuitionDomesticIsCsp : null,
-          currency: currency ? currency.toUpperCase() : null,
-          application_url: applicationUrl || null,
-          description: description || null,
-          admission_requirements: admissionRequirements || null,
-          english_requirements: englishRequirements || null,
-          ielts_overall: strToNum(ieltsOverall),
-          ielts_listening: strToNum(ieltsListening),
-          ielts_reading: strToNum(ieltsReading),
-          ielts_writing: strToNum(ieltsWriting),
-          ielts_speaking: strToNum(ieltsSpeaking),
-          pte_overall: strToNum(pteOverall),
-          pte_listening: strToNum(pteListening),
-          pte_reading: strToNum(pteReading),
-          pte_writing: strToNum(pteWriting),
-          pte_speaking: strToNum(pteSpeaking),
-          status: "draft",
-          last_verified_at: null,
-          source_url: sourceUrl || null,
-          created_at: new Date().toISOString(),
-          updated_at: new Date().toISOString(),
-        },
-      ]);
-      setName("");
-      setSubjectId("");
-      setDurationYears("");
-      setTuition("");
-      setTuitionDomestic("");
-      setTuitionDomesticIsCsp(false);
-      setCurrency("");
-      setApplicationUrl("");
-      setDescription("");
-      setAdmissionRequirements("");
-      setEnglishRequirements("");
-      setIeltsOverall("");
-      setIeltsListening("");
-      setIeltsReading("");
-      setIeltsWriting("");
-      setIeltsSpeaking("");
-      setPteOverall("");
-      setPteListening("");
-      setPteReading("");
-      setPteWriting("");
-      setPteSpeaking("");
-      setSourceUrl("");
+      };
+
+      let id: string;
+      if (editingId) {
+        id = editingId;
+        await updateProgram(supabase, editingId, fields);
+        setPrograms((prev) =>
+          prev.map((p) =>
+            p.id === editingId
+              ? { ...p, ...fields, degree_level, subject, updated_at: new Date().toISOString() }
+              : p,
+          ),
+        );
+      } else {
+        id = await createProgram(supabase, { university_id: universityId, ...fields });
+        setPrograms((prev) => [
+          ...prev,
+          {
+            id,
+            university_id: universityId,
+            ...fields,
+            degree_level,
+            subject,
+            status: "draft",
+            last_verified_at: null,
+            created_at: new Date().toISOString(),
+            updated_at: new Date().toISOString(),
+          },
+        ]);
+      }
+
+      setEditingId(null);
+      resetForm();
       try {
         await revalidateProgram(id, universitySlug);
       } catch (revalidateErr) {
@@ -337,7 +375,7 @@ function ProgramsPanel({
       }
       router.refresh();
     } catch (err) {
-      setErrorMsg(err instanceof Error ? err.message : "Could not add program");
+      setErrorMsg(err instanceof Error ? err.message : "Could not save program");
     } finally {
       setSaving(false);
     }
@@ -405,25 +443,34 @@ function ProgramsPanel({
                     <ContentStatusBadge status={p.status} />
                   </td>
                   <td className="px-3 py-2.5">
-                    {p.status !== "published" ? (
+                    <div className="flex items-center gap-3">
                       <button
                         type="button"
-                        disabled={busyId === p.id}
-                        onClick={() => handleStatusChange(p.id, "published")}
-                        className="font-body text-xs text-status-open underline underline-offset-2 disabled:opacity-50"
+                        onClick={() => startEdit(p)}
+                        className="font-body text-xs text-ink underline underline-offset-2"
                       >
-                        Publish
+                        Edit
                       </button>
-                    ) : (
-                      <button
-                        type="button"
-                        disabled={busyId === p.id}
-                        onClick={() => handleStatusChange(p.id, "archived")}
-                        className="font-body text-xs text-slate underline underline-offset-2 hover:text-status-closed disabled:opacity-50"
-                      >
-                        Archive
-                      </button>
-                    )}
+                      {p.status !== "published" ? (
+                        <button
+                          type="button"
+                          disabled={busyId === p.id}
+                          onClick={() => handleStatusChange(p.id, "published")}
+                          className="font-body text-xs text-status-open underline underline-offset-2 disabled:opacity-50"
+                        >
+                          Publish
+                        </button>
+                      ) : (
+                        <button
+                          type="button"
+                          disabled={busyId === p.id}
+                          onClick={() => handleStatusChange(p.id, "archived")}
+                          className="font-body text-xs text-slate underline underline-offset-2 hover:text-status-closed disabled:opacity-50"
+                        >
+                          Archive
+                        </button>
+                      )}
+                    </div>
                   </td>
                 </tr>
               ))}
@@ -432,8 +479,21 @@ function ProgramsPanel({
         </div>
       )}
 
+      {editingId && (
+        <p className="mb-2 font-body text-sm text-ink">
+          Editing <strong className="font-semibold">{name}</strong> —{" "}
+          <button
+            type="button"
+            onClick={cancelEdit}
+            className="underline underline-offset-2 hover:text-status-closed"
+          >
+            cancel
+          </button>
+        </p>
+      )}
+
       <form
-        onSubmit={handleAdd}
+        onSubmit={handleSubmit}
         className="flex flex-wrap items-end gap-3 rounded-md border border-ink/15 bg-ink/[0.02] p-4"
       >
         <label className="block">
@@ -623,13 +683,24 @@ function ProgramsPanel({
             ))}
           </div>
         </div>
-        <button
-          type="submit"
-          disabled={saving}
-          className="rounded-md bg-ink px-3 py-1.5 font-body text-sm font-medium text-paper transition-opacity duration-150 hover:opacity-90 disabled:opacity-50"
-        >
-          {saving ? "Adding…" : "Add program"}
-        </button>
+        <div className="flex items-center gap-2">
+          <button
+            type="submit"
+            disabled={saving}
+            className="rounded-md bg-ink px-3 py-1.5 font-body text-sm font-medium text-paper transition-opacity duration-150 hover:opacity-90 disabled:opacity-50"
+          >
+            {saving ? "Saving…" : editingId ? "Save changes" : "Add program"}
+          </button>
+          {editingId && (
+            <button
+              type="button"
+              onClick={cancelEdit}
+              className="rounded-md border border-ink/20 px-3 py-1.5 font-body text-sm text-ink transition-colors duration-150 hover:border-status-closed"
+            >
+              Cancel
+            </button>
+          )}
+        </div>
         {errorMsg && (
           <p className="w-full font-body text-xs text-status-closed">{errorMsg}</p>
         )}
