@@ -1,11 +1,16 @@
 import Link from "next/link";
 import { StatusBadge } from "@/components/StatusBadge";
+import { Breadcrumbs } from "@/components/site/Breadcrumbs";
+import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import { deadlineBadgeStatus, formatDeadlineDate } from "@/lib/deadline-status";
 import {
   listDeadlineFilterOptions,
   listPublishedDeadlines,
   type PublicDeadlineRow,
 } from "@/lib/queries/public-deadlines";
+
+const SELECT_CLASS =
+  "rounded-lg border border-ink/15 bg-paper px-3 py-2 font-body text-sm text-ink transition-colors duration-150 hover:border-ink/30 focus-visible:border-status-open focus-visible:outline-none";
 
 export const metadata = {
   title: "Application Deadline Calendar",
@@ -72,30 +77,39 @@ export default async function DeadlinesPage({
     variableMeasured: "Application deadline date",
   };
 
+  const breadcrumbs = [{ label: "Home", href: "/" }, { label: "Deadlines" }];
+
   return (
     <main className="mx-auto w-full max-w-3xl px-6 py-12">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd(breadcrumbs)) }}
+      />
 
-      <h1 className="font-display text-3xl font-semibold text-ink text-balance">
-        Application deadline calendar
-      </h1>
-      <p className="mt-2 font-body text-base text-slate">
-        {totalCount} sourced deadlines, filterable by country, degree level,
-        and application type.
-      </p>
+      <Breadcrumbs items={breadcrumbs} />
+
+      <div className="rounded-2xl bg-gradient-to-br from-ink/[0.04] via-ink/[0.02] to-transparent p-6 sm:p-8">
+        <p className="flex items-center gap-2 font-utility text-xs font-semibold tracking-widest text-status-open uppercase">
+          <span className="inline-block h-1.5 w-1.5 rounded-full bg-status-open" />
+          {totalCount} sourced deadlines
+        </p>
+        <h1 className="mt-2 font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
+          Application deadline calendar
+        </h1>
+        <p className="mt-2 font-body text-base text-slate">
+          Filterable by country, degree level, and application type.
+        </p>
+      </div>
 
       <form
         method="GET"
-        className="mt-6 flex flex-wrap gap-3 border-y border-ink/10 py-4"
+        className="mt-6 flex flex-wrap items-center gap-3 rounded-xl bg-ink/[0.02] p-4"
       >
-        <select
-          name="country"
-          defaultValue={filters.country ?? ""}
-          className="rounded-md border border-ink/20 bg-paper px-3 py-1.5 font-body text-sm text-ink"
-        >
+        <select name="country" defaultValue={filters.country ?? ""} className={SELECT_CLASS}>
           <option value="">All countries</option>
           {options.countries.map((c) => (
             <option key={c.code} value={c.code}>
@@ -107,7 +121,7 @@ export default async function DeadlinesPage({
         <select
           name="degreeLevel"
           defaultValue={filters.degreeLevel ?? ""}
-          className="rounded-md border border-ink/20 bg-paper px-3 py-1.5 font-body text-sm text-ink"
+          className={SELECT_CLASS}
         >
           <option value="">All degree levels</option>
           {options.degreeLevels.map((d) => (
@@ -117,11 +131,7 @@ export default async function DeadlinesPage({
           ))}
         </select>
 
-        <select
-          name="type"
-          defaultValue={filters.type ?? ""}
-          className="rounded-md border border-ink/20 bg-paper px-3 py-1.5 font-body text-sm text-ink"
-        >
+        <select name="type" defaultValue={filters.type ?? ""} className={SELECT_CLASS}>
           <option value="">All deadline types</option>
           {options.deadlineTypes.map((t) => (
             <option key={t} value={t}>
@@ -132,25 +142,31 @@ export default async function DeadlinesPage({
 
         <button
           type="submit"
-          className="rounded-md border border-ink px-3 py-1.5 font-body text-sm text-ink transition-colors duration-150 hover:bg-ink hover:text-paper"
+          className="rounded-lg bg-ink px-4 py-2 font-body text-sm font-medium text-paper transition-opacity duration-150 hover:opacity-90"
         >
           Filter
         </button>
         {(filters.country || filters.degreeLevel || filters.type) && (
           <Link
             href="/deadlines"
-            className="flex items-center font-body text-sm text-slate underline underline-offset-2"
+            className="font-body text-sm text-slate underline underline-offset-2 hover:text-ink"
           >
-            Clear
+            Clear filters
           </Link>
         )}
       </form>
 
       <div className="mt-6 flex flex-col gap-8">
         {grouped.size === 0 && (
-          <p className="py-8 text-center font-body text-sm text-slate">
-            No deadlines match those filters.
-          </p>
+          <div className="rounded-2xl border border-dashed border-ink/15 px-6 py-10 text-center">
+            <p className="font-body text-base text-slate">
+              No deadlines match those filters —{" "}
+              <Link href="/deadlines" className="text-status-open underline underline-offset-2">
+                clear them
+              </Link>{" "}
+              to see the full calendar.
+            </p>
+          </div>
         )}
         {[...grouped.entries()].map(([month, rows]) => (
           <section key={month}>
