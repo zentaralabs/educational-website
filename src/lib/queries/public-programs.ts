@@ -98,3 +98,36 @@ export async function getPublishedProgram(
   if (!data) return null;
   return data as unknown as PublicProgramDetail;
 }
+
+export type SitemapProgramRow = {
+  id: string;
+  updated_at: string | null;
+  university: { slug: string; status: string } | null;
+};
+
+/**
+ * All published programs with their parent university's slug, for the
+ * sitemap. Paginated in pages of 1000 — PostgREST's default response cap,
+ * already hit once before by this project's own program count (see
+ * PROJECT_STATUS.md Section 13's "1,103 total AU program rows" note).
+ */
+export async function listPublishedProgramsForSitemap(): Promise<SitemapProgramRow[]> {
+  const supabase = createPublicClient(["programs:list"]);
+  const pageSize = 1000;
+  const rows: SitemapProgramRow[] = [];
+
+  for (let from = 0; ; from += pageSize) {
+    const { data, error } = await supabase
+      .from("programs")
+      .select("id, updated_at, university:universities!inner(slug, status)")
+      .eq("status", "published")
+      .eq("university.status", "published")
+      .range(from, from + pageSize - 1);
+
+    if (error) throw error;
+    rows.push(...((data ?? []) as unknown as SitemapProgramRow[]));
+    if (!data || data.length < pageSize) break;
+  }
+
+  return rows;
+}

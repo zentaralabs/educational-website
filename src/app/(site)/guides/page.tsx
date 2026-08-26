@@ -7,6 +7,7 @@ export const metadata = {
   title: "Guides",
   description:
     "How-to guides for personal statements, letters of recommendation, transfers, financial aid, and international applications.",
+  alternates: { canonical: "/guides" },
 };
 
 const CATEGORY_LABELS: Record<string, string> = {

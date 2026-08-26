@@ -9,6 +9,7 @@ export const metadata = {
   title: "Compare Universities",
   description:
     "Cross-country and cross-university comparisons — costs, acceptance rates, and requirements side by side.",
+  alternates: { canonical: "/compare" },
 };
 
 export default async function CompareIndexPage() {
@@ -44,9 +45,9 @@ export default async function CompareIndexPage() {
           {comparisons.map((c) => (
             <li key={c.slug} className="border-b border-ink/10 pb-4">
               <Link href={`/compare/${c.slug}`} className="group">
-                <h2 className="font-display text-lg font-semibold text-ink group-hover:underline">
+                <h3 className="font-display text-lg font-semibold text-ink group-hover:underline">
                   {c.title}
-                </h2>
+                </h3>
                 {c.excerpt && (
                   <p className="mt-1 font-body text-base text-slate">{c.excerpt}</p>
                 )}

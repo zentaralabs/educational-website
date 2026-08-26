@@ -11,6 +11,7 @@ export const metadata = {
   title: "Application Deadline Calendar",
   description:
     "Filterable, sourced application deadlines for universities in the US, UK, Canada, Australia, and New Zealand.",
+  alternates: { canonical: "/deadlines" },
 };
 
 function groupByMonth(deadlines: PublicDeadlineRow[]) {

@@ -3,6 +3,15 @@ import { SearchBar } from "@/components/site/SearchBar";
 import { listPublicCountries } from "@/lib/queries/public-countries";
 import { getHomepageStats } from "@/lib/queries/public-stats";
 import { StudentTypeToggle } from "@/components/site/StudentTypeToggle";
+import { SITE_DESCRIPTION } from "@/lib/site-config";
+
+export const metadata = {
+  title: {
+    absolute: "University Application Deadlines, Admissions & Costs — Where To Apply",
+  },
+  description: SITE_DESCRIPTION,
+  alternates: { canonical: "/" },
+};
 
 export default async function Home() {
   const [stats, countries] = await Promise.all([

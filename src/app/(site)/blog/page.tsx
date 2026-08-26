@@ -7,6 +7,7 @@ export const metadata = {
   title: "Blog",
   description:
     "Timely posts on deadline changes, policy updates, and application news — the fast-moving counterpart to our evergreen guides.",
+  alternates: { canonical: "/blog" },
 };
 
 export default async function BlogIndexPage() {

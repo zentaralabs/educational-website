@@ -4,6 +4,8 @@ import { getQuizMatches } from "@/lib/queries/public-quiz";
 
 export const metadata = {
   title: "Your University Matches",
+  description: "Universities matched to your country, degree level, and budget preferences.",
+  robots: { index: false, follow: true },
 };
 
 export default async function QuizResultsPage({

@@ -4,6 +4,7 @@ export const metadata = {
   title: "About",
   description:
     "Why Where To Apply exists, how content is fact-checked, and who writes it.",
+  alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {

@@ -3,6 +3,7 @@ import { LegalPage } from "@/components/site/LegalPage";
 export const metadata = {
   title: "Contact",
   description: "How to reach Where To Apply with corrections, questions, or feedback.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {

@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { ProfileSection } from "@/components/site/ProfileSection";
 import { LastVerified } from "@/components/site/LastVerified";
 import { ProgramAdmissionsBlock } from "@/components/site/ProgramAdmissionsBlock";
 import { ProgramSidebar } from "@/components/site/ProgramSidebar";
 import { ArrowUpRightIcon, BookIcon, CheckBadgeIcon } from "@/components/site/icons";
+import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import { getPublishedProgram } from "@/lib/queries/public-programs";
 
 export const revalidate = 3600;
@@ -58,8 +60,15 @@ export async function generateMetadata({
   const description = `${[program.degree_level?.name, program.subject?.name]
     .filter(Boolean)
     .join(" · ")} program at ${program.university!.name}: admission requirements, English test scores, duration, and tuition.`;
+  const url = `/universities/${slug}/programs/${programId}`;
 
-  return { title, description };
+  return {
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: { title, description, url, type: "website" },
+    twitter: { card: "summary", title, description },
+  };
 }
 
 export default async function ProgramDetailPage({
@@ -94,20 +103,24 @@ export default async function ProgramDetailPage({
     educationalProgramMode: program.degree_level?.name ?? undefined,
   };
 
+  const breadcrumbs = [
+    { label: "Home", href: "/" },
+    { label: university.name, href: `/universities/${university.slug}` },
+    { label: program.name },
+  ];
+
   return (
     <main className="mx-auto w-full max-w-3xl px-6 py-12">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd(breadcrumbs)) }}
+      />
 
-      <nav className="font-utility text-xs text-slate">
-        <Link href={`/universities/${university.slug}`} className="underline underline-offset-2 hover:text-ink">
-          {university.name}
-        </Link>
-        <span className="mx-1.5">/</span>
-        <span className="text-ink">{program.name}</span>
-      </nav>
+      <Breadcrumbs items={breadcrumbs} />
 
       <div className="mt-4 rounded-2xl bg-gradient-to-br from-ink/[0.04] via-ink/[0.02] to-transparent p-6 sm:p-8">
         <p className="flex items-center gap-2 font-utility text-xs font-semibold tracking-widest text-status-open uppercase">

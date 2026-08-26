@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { ComparisonTable } from "@/components/site/ComparisonTable";
 import { GuideContent } from "@/components/site/GuideContent";
 import { LastVerified } from "@/components/site/LastVerified";
+import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import {
   getGuideRelatedContent,
   getPublishedGuide,
@@ -25,9 +27,16 @@ export async function generateMetadata({
   const { slug } = await params;
   const guide = await getPublishedGuide(slug);
   if (!guide || guide.category !== "comparison") return {};
+  const title = guide.title;
+  const description = guide.excerpt ?? guide.content.slice(0, 155);
+  const url = `/compare/${slug}`;
+
   return {
-    title: guide.title,
-    description: guide.excerpt ?? guide.content.slice(0, 155),
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: { title, description, url, type: "article" },
+    twitter: { card: "summary", title, description },
   };
 }
 
@@ -45,8 +54,21 @@ export default async function ComparisonPage({
     related.universities.map((u) => u.id),
   );
 
+  const breadcrumbs = [
+    { label: "Home", href: "/" },
+    { label: "Compare", href: "/compare" },
+    { label: guide.title },
+  ];
+
   return (
     <main className="mx-auto w-full max-w-3xl px-6 py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd(breadcrumbs)) }}
+      />
+
+      <Breadcrumbs items={breadcrumbs} />
+
       <p className="font-utility text-xs font-semibold tracking-widest text-status-open uppercase">
         Comparison
         {guide.country && ` · ${guide.country.name}`}

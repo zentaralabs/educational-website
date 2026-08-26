@@ -4,6 +4,7 @@ export const metadata = {
   title: "Disclaimer",
   description:
     "Where To Apply provides informational content only — not official admissions, financial, or legal advice.",
+  alternates: { canonical: "/disclaimer" },
 };
 
 export default function DisclaimerPage() {

@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
+import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { GuideContent } from "@/components/site/GuideContent";
 import { LastVerified } from "@/components/site/LastVerified";
+import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import { extractFaqItems } from "@/lib/extract-faq";
 import {
   getGuideRelatedContent,
@@ -24,9 +26,16 @@ export async function generateMetadata({
   const { slug } = await params;
   const guide = await getPublishedGuide(slug);
   if (!guide) return {};
+  const title = guide.title;
+  const description = guide.excerpt ?? guide.content.slice(0, 155);
+  const url = `/guides/${slug}`;
+
   return {
-    title: guide.title,
-    description: guide.excerpt ?? guide.content.slice(0, 155),
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: { title, description, url, type: "article" },
+    twitter: { card: "summary", title, description },
   };
 }
 
@@ -45,7 +54,13 @@ export default async function GuidePage({
   const related = await getGuideRelatedContent(guide.id);
   const faqItems = extractFaqItems(guide.content);
 
-  const jsonLdBlocks: Record<string, unknown>[] = [];
+  const breadcrumbs = [
+    { label: "Home", href: "/" },
+    { label: "Guides", href: "/guides" },
+    { label: guide.title },
+  ];
+
+  const jsonLdBlocks: Record<string, unknown>[] = [breadcrumbJsonLd(breadcrumbs)];
   if (faqItems.length > 0) {
     jsonLdBlocks.push({
       "@context": "https://schema.org",
@@ -67,6 +82,8 @@ export default async function GuidePage({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(block) }}
         />
       ))}
+
+      <Breadcrumbs items={breadcrumbs} />
 
       <p className="font-utility text-xs font-semibold tracking-widest text-status-open uppercase">
         {guide.category}

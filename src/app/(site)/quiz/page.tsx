@@ -7,6 +7,7 @@ export const metadata = {
   title: "Find the Right University for Me",
   description:
     "Answer a few questions about country, degree level, budget, and institution type to get matched with real universities.",
+  alternates: { canonical: "/quiz" },
 };
 
 export default async function QuizPage() {

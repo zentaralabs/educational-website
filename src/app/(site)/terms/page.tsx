@@ -3,6 +3,7 @@ import { LegalPage } from "@/components/site/LegalPage";
 export const metadata = {
   title: "Terms of Service",
   description: "The terms governing use of the Where To Apply website.",
+  alternates: { canonical: "/terms" },
 };
 
 export default function TermsPage() {

@@ -4,6 +4,9 @@ import { searchSite } from "@/lib/queries/public-search";
 
 export const metadata = {
   title: "Search",
+  description: "Search universities, programs, guides, and scholarships.",
+  alternates: { canonical: "/search" },
+  robots: { index: false, follow: true },
 };
 
 export default async function SearchPage({

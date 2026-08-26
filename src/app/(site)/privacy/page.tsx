@@ -3,6 +3,7 @@ import { LegalPage } from "@/components/site/LegalPage";
 export const metadata = {
   title: "Privacy Policy",
   description: "How Where To Apply collects, uses, and protects visitor data.",
+  alternates: { canonical: "/privacy" },
 };
 
 export default function PrivacyPage() {

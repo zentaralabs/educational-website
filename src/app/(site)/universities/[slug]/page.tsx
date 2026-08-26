@@ -2,9 +2,11 @@ import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { StatusBadge } from "@/components/StatusBadge";
 import { AdmissionsRequirementFacts } from "@/components/site/AdmissionsRequirementFacts";
+import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { Fact, FactBox, ProfileSection } from "@/components/site/ProfileSection";
 import { LastVerified } from "@/components/site/LastVerified";
 import { ProgramsList } from "@/components/site/ProgramsList";
+import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import { deadlineBadgeStatus, formatDeadlineDate } from "@/lib/deadline-status";
 import { formatPercent } from "@/lib/format";
 import { getPublishedProgramsForUniversity } from "@/lib/queries/public-programs";
@@ -35,9 +37,16 @@ export async function generateMetadata({
   const title = `${university.name} — Deadlines, Admissions & Costs`;
   const description =
     university.distinctive_summary?.slice(0, 155) ??
-    `Application deadlines, admissions requirements, tuition, and scholarships for ${university.name}.`;
+    `Application deadlines, admissions requirements, tuition, and scholarships for ${university.name}${university.country?.name ? ` in ${university.country.name}` : ""}.`;
+  const url = `/universities/${slug}`;
 
-  return { title, description };
+  return {
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: { title, description, url, type: "website" },
+    twitter: { card: "summary", title, description },
+  };
 }
 
 export default async function UniversityProfilePage({
@@ -107,12 +116,26 @@ export default async function UniversityProfilePage({
     foundingDate: university.founded_year ? String(university.founded_year) : undefined,
   };
 
+  const breadcrumbs = [
+    { label: "Home", href: "/" },
+    ...(university.country
+      ? [{ label: university.country.name, href: `/deadlines?country=${university.country.code}` }]
+      : []),
+    { label: university.name },
+  ];
+
   return (
     <main className="mx-auto w-full max-w-3xl px-6 py-12">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd(breadcrumbs)) }}
+      />
+
+      <Breadcrumbs items={breadcrumbs} />
 
       <p className="font-utility text-xs font-semibold tracking-widest text-status-open uppercase">
         {[university.city, university.region, university.country?.name]

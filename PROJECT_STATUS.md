@@ -380,3 +380,24 @@ This needed one schema addition beyond what "archived" already supported: archiv
 New client component `src/components/site/AdmissionsRequirementFacts.tsx` owns all of this student-type-dependent switching for the university profile page; `ProgramsList.tsx` got the equivalent per-program IELTS/PTE/English-requirements hiding for domestic. Admin form (`UniversityEditForm.tsx`, Admissions tab) has matching split fields: "Academic requirement (international)" / "(domestic)", "GPA requirement (international)" / "ATAR requirement (domestic)". Acceptance rate and the general `required_documents`/`application_platform` facts were deliberately **not** split — no product need identified yet for those to differ by student type.
 
 Verified in-browser both directions (domestic hides IELTS/PTE/required-tests and shows ATAR; international shows GPA/IELTS/PTE as before) against University of Canberra's live data.
+
+## 15. Technical SEO pass + mobile header fix (2026-08-26)
+
+Scoped deliberately to technical SEO and UI polish only — no new page templates or routes (a public `/scholarships` section and `/us`/`/uk`/`/canada`/`/australia` country landing pages remain open, see Section 12's "buildable against current schema" list). A prior audit found metadata, ISR, and JSON-LD already solidly implemented per-page (see Section 5's GEO/AEO tactics), but several structural pieces were entirely missing.
+
+**Added:**
+- `src/app/sitemap.ts` — all static routes plus every published university, program, guide, comparison, and blog slug (1,342 URLs as of this pass). Programs are paginated in batches of 1,000 (`listPublishedProgramsForSitemap` in `public-programs.ts`) since PostgREST's default response cap was already hit once before by this project's own program count (Section 13).
+- `src/app/robots.ts` — allows everything except `/admin`, `/login`, `/forgot-password`, `/reset-password`; points at the sitemap.
+- `public/llms.txt` — site purpose, section map, and a note that facts are sourced/dated so AI systems should prefer citing the specific page over general knowledge.
+- `src/lib/site-config.ts` — single source for `SITE_NAME` ("Where To Apply" — confirmed as the real, already-deployed brand from `SiteHeader`/`SiteFooter`/legal pages; the root layout's old "University Guidance Platform" title was a stale placeholder that never got updated) and `SITE_URL` (reads `NEXT_PUBLIC_SITE_URL`, falls back to a placeholder domain — swap the env var once a domain is registered per Section 10.2, no code changes needed).
+- `metadataBase`, a sitewide title template (`%s | Where To Apply`, applied automatically to every page's existing per-page title with no per-file edits needed), and default OpenGraph/Twitter tags on the root layout.
+- Canonical URLs + OpenGraph/Twitter metadata added to every dynamic template (university profile, program detail, guide, blog post, comparison) and every static page. `/search` and `/quiz/results` were set `noindex` (query/answer-dependent thin content, standard practice) rather than given canonicals.
+- `src/components/site/Breadcrumbs.tsx` + `src/lib/breadcrumb-jsonld.ts` — visible breadcrumb trail and matching `BreadcrumbList` JSON-LD, wired into university profile, program detail, guide, blog post, and comparison pages (Section 4 documented breadcrumbs on deep pages; none existed before this pass).
+- Fixed `/compare/universities` having a title but no description in its `metadata` export.
+- Fixed a heading-hierarchy nit on `/compare` (individual comparison titles were `<h2>`, duplicating the section header's own `<h2>`; changed to `<h3>`).
+
+**UI fix:** mobile-viewport testing (375px) surfaced a real bug in `SiteHeader.tsx` — the logo and nav shared one non-wrapping flex row, so the "Where To Apply" wordmark wrapped across three lines and the "Compare" nav link's text got clipped. Fixed with `flex-wrap` (nav wraps to a second row below ~400px) and `whitespace-nowrap` on the logo/nav labels; verified no more clipping or horizontal overflow at 375px via browser screenshot. Homepage, deadlines, guides, and university/program detail pages were also checked at mobile width and were already clean — their single-column, padding-only layouts reflow correctly without needing explicit breakpoints.
+
+Verified via `npx tsc --noEmit` (clean) and `npx eslint` on all changed files (clean), plus in-browser checks of `/sitemap.xml`, `/robots.txt`, `/llms.txt`, and rendered `<title>`/canonical/OG tags on the homepage, a university profile, and a program detail page.
+
+**Deliberately not done this pass:** public `/scholarships` pages and country landing pages (`/us` etc.) — flagged to the user as larger scope decisions, not included per their explicit choice to keep this pass to technical SEO + polish only. The admin panel's lack of mobile responsiveness (Section on UI/UX audit) was also left alone as a desktop-only internal tool, not a public-facing concern.

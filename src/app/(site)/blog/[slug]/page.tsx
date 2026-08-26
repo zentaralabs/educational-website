@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { GuideContent } from "@/components/site/GuideContent";
 import { LastVerified } from "@/components/site/LastVerified";
+import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import {
   getPublishedBlogPost,
   listPublishedBlogPostSlugs,
@@ -22,9 +24,23 @@ export async function generateMetadata({
   const { slug } = await params;
   const post = await getPublishedBlogPost(slug);
   if (!post) return {};
+  const title = post.title;
+  const description = post.excerpt ?? post.content.slice(0, 155);
+  const url = `/blog/${slug}`;
+
   return {
-    title: post.title,
-    description: post.excerpt ?? post.content.slice(0, 155),
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      title,
+      description,
+      url,
+      type: "article",
+      publishedTime: post.published_at ?? undefined,
+      modifiedTime: post.last_verified_at ?? undefined,
+    },
+    twitter: { card: "summary", title, description },
   };
 }
 
@@ -46,12 +62,24 @@ export default async function BlogPostPage({
     author: post.author ? { "@type": "Person", name: post.author.name } : undefined,
   };
 
+  const breadcrumbs = [
+    { label: "Home", href: "/" },
+    { label: "Blog", href: "/blog" },
+    { label: post.title },
+  ];
+
   return (
     <main className="mx-auto w-full max-w-2xl px-6 py-12">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd(breadcrumbs)) }}
+      />
+
+      <Breadcrumbs items={breadcrumbs} />
 
       {post.published_at && (
         <p className="font-utility text-xs font-semibold tracking-widest text-status-open uppercase">
