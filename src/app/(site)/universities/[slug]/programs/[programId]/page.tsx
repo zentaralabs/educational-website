@@ -153,17 +153,33 @@ export default async function ProgramDetailPage({
       </div>
 
       <div className="mt-8 grid gap-6 border-t border-ink/10 pt-8 md:grid-cols-[2fr_1fr]">
-        <div className="flex flex-col gap-4 font-body text-base leading-relaxed text-ink">
-          {program.description?.split("\n\n").map((paragraph, i) => (
-            <p key={i}>
-              {paragraph.split("\n").map((line, j, lines) => (
-                <span key={j}>
-                  {line}
-                  {j < lines.length - 1 && <br />}
-                </span>
-              ))}
-            </p>
-          ))}
+        <div>
+          <h2 className="mb-4 flex items-center gap-2 font-display text-xl font-semibold text-ink">
+            <span
+              className="inline-block h-5 w-1 rounded-full"
+              style={{ backgroundColor: "color-mix(in srgb, var(--color-status-open) 60%, transparent)" }}
+            />
+            About this program
+          </h2>
+          <div className="flex flex-col gap-5 font-body text-ink">
+            {program.description?.split("\n\n").map((paragraph, i) => (
+              <p
+                key={i}
+                className={
+                  i === 0
+                    ? "text-lg leading-8 text-pretty"
+                    : "text-base leading-7 text-ink/85"
+                }
+              >
+                {paragraph.split("\n").map((line, j, lines) => (
+                  <span key={j}>
+                    {line}
+                    {j < lines.length - 1 && <br />}
+                  </span>
+                ))}
+              </p>
+            ))}
+          </div>
         </div>
         <ProgramSidebar
           durationYears={program.duration_years}
