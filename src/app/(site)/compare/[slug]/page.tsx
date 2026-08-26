@@ -4,7 +4,9 @@ import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { ComparisonTable } from "@/components/site/ComparisonTable";
 import { GuideContent } from "@/components/site/GuideContent";
 import { LastVerified } from "@/components/site/LastVerified";
+import { ArrowUpRightIcon, CheckBadgeIcon } from "@/components/site/icons";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
+import { authorInitials } from "@/lib/format";
 import {
   getGuideRelatedContent,
   getPublishedGuide,
@@ -69,24 +71,32 @@ export default async function ComparisonPage({
 
       <Breadcrumbs items={breadcrumbs} />
 
-      <p className="font-utility text-xs font-semibold tracking-widest text-status-open uppercase">
-        Comparison
-        {guide.country && ` · ${guide.country.name}`}
-      </p>
-      <h1 className="mt-1 font-display text-3xl font-semibold text-ink text-balance">
-        {guide.title}
-      </h1>
-
-      {guide.author && (
-        <p className="mt-3 font-body text-sm text-slate">
-          By {guide.author.name}
-          {guide.author.credentials && ` — ${guide.author.credentials}`}
-          {guide.reviewed_by && <>, reviewed by {guide.reviewed_by.name}</>}
+      <div className="rounded-2xl bg-gradient-to-br from-ink/[0.04] via-ink/[0.02] to-transparent p-6 sm:p-8">
+        <p className="flex items-center gap-2 font-utility text-xs font-semibold tracking-widest text-status-open uppercase">
+          <span className="inline-block h-1.5 w-1.5 rounded-full bg-status-open" />
+          Comparison
+          {guide.country && ` · ${guide.country.name}`}
         </p>
-      )}
+        <h1 className="mt-2 font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
+          {guide.title}
+        </h1>
+
+        {guide.author && (
+          <div className="mt-4 flex items-center gap-3">
+            <span className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-ink font-utility text-xs font-semibold text-paper">
+              {authorInitials(guide.author.name)}
+            </span>
+            <p className="font-body text-sm text-slate">
+              By <span className="font-medium text-ink">{guide.author.name}</span>
+              {guide.author.credentials && ` — ${guide.author.credentials}`}
+              {guide.reviewed_by && <>, reviewed by {guide.reviewed_by.name}</>}
+            </p>
+          </div>
+        )}
+      </div>
 
       {universities.length >= 2 && (
-        <div className="mt-6">
+        <div className="mt-8">
           <ComparisonTable universities={universities} />
         </div>
       )}
@@ -95,23 +105,25 @@ export default async function ComparisonPage({
         <GuideContent content={guide.content} />
       </div>
 
-      <div className="mt-10 border-t border-ink/10 pt-4">
+      <div className="mt-10 flex items-center gap-2 rounded-xl bg-status-open/5 px-4 py-3">
+        <CheckBadgeIcon className="h-4 w-4 flex-shrink-0 text-status-open" />
         <LastVerified date={guide.last_verified_at} sources={guide.source_urls} />
       </div>
 
       {related.guides.length > 0 && (
-        <div className="mt-8 border-t border-ink/10 pt-6">
-          <h2 className="mb-3 font-body text-xs font-semibold tracking-wide text-slate uppercase">
+        <div className="mt-10 border-t border-ink/10 pt-6">
+          <h2 className="mb-4 font-body text-xs font-semibold tracking-wide text-slate uppercase">
             Related guides
           </h2>
-          <ul className="flex flex-col gap-2">
+          <ul className="grid gap-3 sm:grid-cols-2">
             {related.guides.map((g) => (
               <li key={g.slug}>
                 <Link
                   href={`/guides/${g.slug}`}
-                  className="font-body text-sm text-status-open underline underline-offset-2"
+                  className="group flex items-center justify-between gap-2 rounded-xl border border-ink/10 bg-ink/[0.02] px-4 py-3 transition-all duration-150 hover:-translate-y-0.5 hover:border-status-open/30 hover:bg-ink/[0.03] hover:shadow-sm"
                 >
-                  {g.title}
+                  <span className="font-body text-sm font-medium text-ink">{g.title}</span>
+                  <ArrowUpRightIcon className="h-3.5 w-3.5 flex-shrink-0 text-slate transition-colors duration-150 group-hover:text-status-open" />
                 </Link>
               </li>
             ))}

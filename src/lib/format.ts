@@ -15,6 +15,16 @@ export function formatPercent(rate: number | null): string | null {
   return `${rate}%`;
 }
 
+/** Initials for a text avatar, e.g. "Roman Lama" → "RL". */
+export function authorInitials(name: string): string {
+  return name
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((part) => part[0]!.toUpperCase())
+    .join("");
+}
+
 /** Joins a list into "A, B, and C" prose (Oxford comma). */
 export function joinWithAnd(items: string[]): string {
   if (items.length === 0) return "";
