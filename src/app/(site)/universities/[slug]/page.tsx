@@ -3,6 +3,7 @@ import { notFound, redirect } from "next/navigation";
 import { StatusBadge } from "@/components/StatusBadge";
 import { AdmissionsRequirementFacts } from "@/components/site/AdmissionsRequirementFacts";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
+import { CheckBadgeIcon } from "@/components/site/icons";
 import { Fact, FactBox, ProfileSection } from "@/components/site/ProfileSection";
 import { LastVerified } from "@/components/site/LastVerified";
 import { ProgramsList } from "@/components/site/ProgramsList";
@@ -137,23 +138,62 @@ export default async function UniversityProfilePage({
 
       <Breadcrumbs items={breadcrumbs} />
 
-      <p className="font-utility text-xs font-semibold tracking-widest text-status-open uppercase">
-        {[university.city, university.region, university.country?.name]
-          .filter(Boolean)
-          .join(", ")}
-        {university.institution_type && ` · ${university.institution_type}`}
-      </p>
-      <div className="mt-2 flex flex-wrap items-center gap-3">
-        <h1 className="font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
-          {university.name}
-        </h1>
-        {overallStatus && <StatusBadge status={overallStatus} />}
+      <div className="rounded-2xl bg-gradient-to-br from-ink/[0.04] via-ink/[0.02] to-transparent p-6 sm:p-8">
+        <p className="flex items-center gap-2 font-utility text-xs font-semibold tracking-widest text-status-open uppercase">
+          <span className="inline-block h-1.5 w-1.5 rounded-full bg-status-open" />
+          {[university.city, university.region, university.country?.name]
+            .filter(Boolean)
+            .join(", ")}
+          {university.institution_type && ` · ${university.institution_type}`}
+        </p>
+        <div className="mt-2 flex flex-wrap items-center gap-3">
+          <h1 className="font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
+            {university.name}
+          </h1>
+          {overallStatus && <StatusBadge status={overallStatus} />}
+        </div>
+
+        {university.rankings.length > 0 && (
+          <div className="mt-3 flex flex-wrap items-center gap-2">
+            {university.rankings.slice(0, 3).map((r) => (
+              <span
+                key={r.id}
+                className="rounded-full border border-ink/15 bg-paper px-2.5 py-0.5 font-utility text-xs text-slate"
+              >
+                #{r.rank} {r.category ?? "Overall"} · {r.ranking_body?.name} {r.year}
+              </span>
+            ))}
+          </div>
+        )}
+
+        <div className="mt-4 flex flex-wrap items-center gap-4">
+          {university.website_url && (
+            <a
+              href={university.website_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block font-body text-base text-status-open underline underline-offset-2"
+            >
+              Official website ↗
+            </a>
+          )}
+          {university.apply_url && (
+            <a
+              href={university.apply_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-full bg-ink px-5 py-2.5 font-body text-sm font-medium text-paper shadow-md shadow-ink/10 transition-all duration-150 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-ink/15"
+            >
+              Apply ↗
+            </a>
+          )}
+        </div>
       </div>
 
       {/* Answer-first fact, per GEO strategy Section 5 — lead with the direct
           fact so it's citable without context. */}
       {nextDeadline && (
-        <p className="mt-4 rounded-md border border-ink/15 bg-ink/[0.02] px-4 py-3 font-body text-base text-ink">
+        <p className="mt-6 rounded-md border border-ink/15 bg-ink/[0.02] px-4 py-3 font-body text-base text-ink">
           {university.name}&rsquo;s {nextDeadline.deadline_type?.name ?? "next"} deadline
           is{" "}
           <strong className="font-semibold">
@@ -166,40 +206,6 @@ export default async function UniversityProfilePage({
           {nextDeadline.degree_level && ` for ${nextDeadline.degree_level.name}`}.
         </p>
       )}
-
-      <div className="mt-3 flex flex-wrap items-center gap-2">
-        {university.rankings.slice(0, 3).map((r) => (
-          <span
-            key={r.id}
-            className="rounded-sm border border-ink/15 px-2 py-0.5 font-utility text-xs text-slate"
-          >
-            #{r.rank} {r.category ?? "Overall"} · {r.ranking_body?.name} {r.year}
-          </span>
-        ))}
-      </div>
-
-      <div className="mt-3 flex flex-wrap items-center gap-4">
-        {university.website_url && (
-          <a
-            href={university.website_url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block font-body text-base text-status-open underline underline-offset-2"
-          >
-            Official website ↗
-          </a>
-        )}
-        {university.apply_url && (
-          <a
-            href={university.apply_url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block rounded-md bg-ink px-4 py-1.5 font-body text-sm font-medium text-paper transition-opacity duration-150 hover:opacity-90"
-          >
-            Apply ↗
-          </a>
-        )}
-      </div>
 
       {university.distinctive_summary && (
         <ProfileSection title="Overview">
@@ -318,17 +324,22 @@ export default async function UniversityProfilePage({
       )}
 
       <ProfileSection title="Sources">
-        <LastVerified
-          date={university.last_verified_at}
-          sources={university.source_urls}
-        />
-        {(university.author || university.reviewed_by) && (
-          <p className="mt-2 font-body text-xs text-slate">
-            {university.author && <>Written by {university.author.name}</>}
-            {university.author?.credentials && ` (${university.author.credentials})`}
-            {university.reviewed_by && <>{university.author ? " · " : ""}Reviewed by {university.reviewed_by.name}</>}
-          </p>
-        )}
+        <div className="flex items-start gap-2 rounded-xl bg-status-open/5 px-4 py-3">
+          <CheckBadgeIcon className="mt-0.5 h-4 w-4 flex-shrink-0 text-status-open" />
+          <div>
+            <LastVerified
+              date={university.last_verified_at}
+              sources={university.source_urls}
+            />
+            {(university.author || university.reviewed_by) && (
+              <p className="mt-2 font-body text-xs text-slate">
+                {university.author && <>Written by {university.author.name}</>}
+                {university.author?.credentials && ` (${university.author.credentials})`}
+                {university.reviewed_by && <>{university.author ? " · " : ""}Reviewed by {university.reviewed_by.name}</>}
+              </p>
+            )}
+          </div>
+        </div>
       </ProfileSection>
 
       <Link
