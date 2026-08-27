@@ -675,3 +675,34 @@ Per user request ("leave no stone unturned"). What was checked and the result:
 **Known, deliberately not fixed:**
 - **25 non-launched-country universities** (CA/NZ/UK/US) have em-dashes in `distinctive_summary` from an earlier pass. These rows are `status = 'published'` but **not publicly served** (gated behind `countries.is_launched`), and each of those countries needs a full content pass before launch anyway. Clean them at country-launch time, not now.
 - The **MIT scholarship** row (`mit-presidential-scholars-program`) has no description and links to the non-launched MIT university. Fully hidden on the public site (excluded from static params and 404s if hit directly). Left as planned-country scaffolding.
+
+## 23. SEO content pass — organic-traffic build-out (2026-08-27)
+
+Started working through an SEO/keyword review. Honest framing: ~1,000 organic visits/day is a 12-18 month goal for a fresh domain in this niche (the bottleneck is domain trust + backlinks, not page count). The incumbents ranking for the money terms are thin listicle blogs with no queryable data, which is the gap this site's structured database exploits.
+
+**Done so far:**
+
+### `/best` discoverability + footer rebuild
+`/best` (Decision guides) was only linked from the Guides page and `llms.txt` — effectively hidden. The footer was a 2-link stub. Rebuilt `SiteFooter` into a proper 4-column site map: brand + browse-by-country, **Explore** (Universities, Deadlines, Courses by subject, Scholarships, Decision guides, Compare, Quiz), **Guides & visas** (How-to guides, Visa subclasses, Invitation rounds, Blog), **Site** (legal). Uses the new `mist`/`line` tokens.
+
+### Subject landing pages — `/study` (SEO recommendation #1)
+The biggest content gap: programs were only reachable per-university, so "study computer science in australia" (high-volume, India-heavy query cluster) had no page to rank.
+- Migration `0022`: `slug` on the `subjects` lookup table.
+- `/study` hub + `/study/[slug]` for the 18 subjects with ≥6 published programs (computer science, nursing & health, business, engineering, IT, data science, law, psychology, education, architecture, arts & design, communications, life sciences, agriculture, hospitality, music, environmental science). Economics/Mathematics/Physics skipped (too thin).
+- Each page: editorial intro + "migration angle" callout (`src/lib/subjects.ts`, keyed by slug; templated fallback for any subject without an entry), a "most affordable [subject] programs" table built live from the program data (sorted by tuition, linking to program pages), universities offering it, typical entry requirements, and an FAQ section with `FAQPage` JSON-LD for the major subjects.
+- `public-subjects.ts` aggregates from `programs` gated on `is_launched`. Sitemap (+19 URLs), `llms.txt`, homepage CTA ("Courses by subject" replaces "Application guides" in the row), and the university Academics section all link in.
+
+### Title / meta pass (SEO recommendation #4)
+`SITE_YEAR` added to `site-config.ts` (`new Date().getFullYear()`, evaluated at build/revalidate so titles self-update each year — used only in `<title>`/description, never visible copy or dated facts). Every dynamic template's title reworked to front-load real search terms + "international students" + the year:
+- University: `X: Fees, Entry Requirements & Deadlines 2026`
+- Program: `X, University: Fees & Entry Requirements 2026`
+- Visa: `X (Subclass 189): Eligibility, Points & Cost 2026`
+- Scholarship: `X 2026: Value, Eligibility & How to Apply`
+- Subject: `Study X in Australia 2026: Costs, Universities & Requirements`
+- Best collections: `... (2026)`
+
+Descriptions rewritten to be specific and keyword-rich rather than generic.
+
+**Verified:** `tsc` + `eslint src` clean, production build passes (177-179 static pages across the commits), `/study/*` routes render with real data, new titles confirmed in rendered HTML, footer links resolve.
+
+**Still on the SEO list (not yet built):** more `/best` collection pages (no application fee, low IELTS, easiest admission, best-for-[subject], cheapest-in-[city]); a 189/190/491 points calculator (high-volume, very linkable); FAQ sections with schema on university/visa/scholarship pages; ~20 pre-built university comparison pages; per-city cost-of-living pages. Off-page (the real constraint): directory listings, Reddit/forum answers, pitching the invitation-rounds tracker to migration blogs.
