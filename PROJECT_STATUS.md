@@ -709,7 +709,9 @@ Descriptions rewritten to be specific and keyword-rich rather than generic.
 
 **Done (commit "SEO #3"):** `/visas/points-calculator` — an interactive 12-field calculator for the 189/190/491 points test (`src/components/site/PointsCalculator.tsx`), with an FAQ + `FAQPage` schema. Linked from the `/visas` index (new card), footer, invitation-rounds page, and every points-tested visa detail page. Targets "australia pr points calculator" / "how many points for 189" and is a backlink magnet. Options are index-keyed (point values aren't unique) and every field starts at zero so the score builds up; honest result framing separates "meets the 65 minimum" from "would be invited".
 
-**Still on the SEO list:** best-universities-for-[subject] sections on the `/study` pages; FAQ sections with schema on university/visa/scholarship detail pages; ~20 pre-built university comparison pages; per-city cost-of-living pages. Off-page (the real constraint): directory listings, Reddit/forum answers, pitching the invitation-rounds tracker to migration blogs.
+**Done (commit "SEO #5"):** data-driven FAQ sections (`src/lib/faq.ts` + `FaqSection` component + `FAQPage` JSON-LD) on every university (7 Qs), visa (5-6), and scholarship (2-4) detail page. Built entirely from each page's structured data, so all ~96 pages get accurate, specific "people also ask" content with zero hand-writing. `GO8_SLUGS` + `isRegionalCity` extracted to `src/lib/australia.ts`.
+
+**Still on the SEO list:** best-universities-for-[subject] sections on the `/study` pages; ~20 pre-built university comparison pages; per-city cost-of-living pages. Off-page (the real constraint): directory listings, Reddit/forum answers, pitching the invitation-rounds tracker to migration blogs.
 
 
 ### Section 23 follow-up: application-fee + IELTS data
