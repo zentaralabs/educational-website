@@ -62,6 +62,11 @@ export default async function SubjectPage({
 
   const cheapest = subject.programs.filter((p) => p.tuition != null).slice(0, 15);
 
+  const uniName = new Map(subject.universities.map((u) => [u.slug, u.name]));
+  const strongAt = (content?.strongAt ?? [])
+    .map((s) => ({ ...s, name: uniName.get(s.slug) }))
+    .filter((s): s is { slug: string; why: string; name: string } => Boolean(s.name));
+
   const breadcrumbs = [
     { label: "Home", href: "/" },
     { label: "Study by subject", href: "/study" },
@@ -185,9 +190,44 @@ export default async function SubjectPage({
         </section>
       )}
 
+      {strongAt.length > 0 && (
+        <section className="mt-10">
+          <h2 className="mb-3 font-display text-xl font-semibold text-ink">
+            Universities known for {subject.name}
+          </h2>
+          <p className="mb-4 font-body text-sm text-slate">
+            There is no official field-level ranking of Australian universities.
+            These are the ones with a recognised reputation in {subject.name},
+            strongest first.
+          </p>
+          <ol className="flex flex-col gap-3">
+            {strongAt.map((u, i) => (
+              <li key={u.slug}>
+                <Link
+                  href={`/universities/${u.slug}`}
+                  className="card card-hover group flex gap-3 p-4"
+                >
+                  <span className="font-display text-lg font-semibold text-slate">
+                    {i + 1}
+                  </span>
+                  <span>
+                    <span className="font-body text-[0.95rem] font-semibold text-ink group-hover:underline">
+                      {u.name}
+                    </span>
+                    <span className="mt-0.5 block font-body text-sm text-slate">
+                      {u.why}
+                    </span>
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ol>
+        </section>
+      )}
+
       <section className="mt-10">
         <h2 className="mb-3 font-display text-xl font-semibold text-ink">
-          Universities offering {subject.name}
+          All universities offering {subject.name}
         </h2>
         <ul className="flex flex-wrap gap-2">
           {subject.universities.map((u) => (

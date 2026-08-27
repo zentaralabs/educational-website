@@ -4,7 +4,23 @@ export type SubjectContent = {
   /** One line on graduate outcomes and skilled-migration relevance. */
   careers: string;
   faq: { q: string; a: string }[];
+  /**
+   * Universities with a recognised strength in this field, with a one-line
+   * reason. Curated from domain knowledge (there is no field-level ranking
+   * data). Order is deliberate, strongest first.
+   */
+  strongAt?: { slug: string; why: string }[];
 };
+
+/** Subjects that get a dedicated /best/best-australian-universities-for-X page. */
+export const SUBJECT_BEST_PAGES = [
+  "computer-science",
+  "information-technology",
+  "data-science",
+  "business",
+  "nursing-and-health-sciences",
+  "engineering",
+];
 
 /**
  * Editorial copy for the /study/[slug] subject landing pages, keyed by the
@@ -18,6 +34,14 @@ export const SUBJECT_CONTENT: Record<string, SubjectContent> = {
       "Tuition for a master's runs from the low AUD 30,000s at regional and newer universities to the high AUD 40,000s at the Group of Eight. Entry usually needs a credit average (around 65 percent) in your previous degree and IELTS 6.5, though conversion master's for non-computing graduates have gentler academic bars.",
     ],
     careers: "Software engineer, data engineer, and cybersecurity roles are on the skilled occupation lists, so a computing degree plus a year of work on a 485 graduate visa is a common route toward the 189, 190, or 491.",
+    strongAt: [
+      { slug: "unsw-sydney", why: "Australia's largest computer science and engineering faculty, with co-op programs and a big research output." },
+      { slug: "university-of-melbourne", why: "Strong across AI, machine learning, and distributed systems; the Melbourne Model routes CS through a Science or Design bachelor." },
+      { slug: "university-of-sydney", why: "Deep strength in AI, robotics, and human-centred computing." },
+      { slug: "australian-national-university", why: "Small, research-heavy school with close ties to national research institutes." },
+      { slug: "monash-university", why: "Large, well-resourced, with data science and cybersecurity specialisations and overseas campus options." },
+      { slug: "university-of-queensland", why: "Research-intensive with strong industry links in Brisbane's growing tech sector." },
+    ],
     faq: [
       {
         q: "Can I do a master's in computer science in Australia without a computing background?",
@@ -39,6 +63,13 @@ export const SUBJECT_CONTENT: Record<string, SubjectContent> = {
       "Fees sit a little below straight computer science at many universities, and several universities of technology (UTS, RMIT, QUT, Curtin, Swinburne) build a mandatory industry placement into the degree. Standard entry is a bachelor's in any field with a credit average and IELTS 6.5.",
     ],
     careers: "ICT business analyst, systems analyst, and software roles are skilled occupations. IT graduates often add a Professional Year in IT for extra migration points.",
+    strongAt: [
+      { slug: "university-of-technology-sydney", why: "Practice-based studios and one of the strongest industry-placement models for IT in the country." },
+      { slug: "rmit-university", why: "Applied, industry-linked IT with a central Melbourne campus and strong employer connections." },
+      { slug: "queensland-university-of-technology", why: "Mandatory industry placements built into most IT degrees, closer to a co-op model." },
+      { slug: "swinburne-university-of-technology", why: "Professional placement years and a genuine focus on work-integrated learning." },
+      { slug: "curtin-university", why: "Applied IT reflecting WA's resources and services economy, in a regional-classified city." },
+    ],
     faq: [
       {
         q: "What is the difference between a Master of IT and a Master of Computer Science?",
@@ -56,6 +87,13 @@ export const SUBJECT_CONTENT: Record<string, SubjectContent> = {
       "Entry typically requires a bachelor's with some quantitative content (mathematics, statistics, engineering, economics, or computing) and IELTS 6.5. A few universities offer a longer two-year version for applicants without that background.",
     ],
     careers: "Data scientist and data analyst roles feed into ICT and, in some states, dedicated data occupations on the nomination lists. The 485 graduate visa gives time to reach the experience most skilled visas want.",
+    strongAt: [
+      { slug: "university-of-melbourne", why: "Master of Data Science jointly run by computing, maths, and statistics." },
+      { slug: "monash-university", why: "Large data science program with business analytics and applied streams." },
+      { slug: "university-of-technology-sydney", why: "Industry-facing analytics with a strong placement component." },
+      { slug: "unsw-sydney", why: "Data science across the science and engineering faculties." },
+      { slug: "university-of-adelaide", why: "Machine learning research strength, with the Australian Institute for Machine Learning." },
+    ],
     faq: [
       {
         q: "Do I need to know programming before a data science master's in Australia?",
@@ -69,6 +107,14 @@ export const SUBJECT_CONTENT: Record<string, SubjectContent> = {
       "The MBA is the most expensive option and usually wants two or more years of work experience. Non-MBA business master's are more accessible: a bachelor's in any discipline, IELTS 6.5, and no work experience required at most universities. Fees range widely, from the mid AUD 30,000s at regional universities to over AUD 55,000 for a Go8 MBA.",
     ],
     careers: "Accounting is the business occupation most directly tied to skilled migration and needs a specific accredited degree plus a skills assessment. General management and marketing roles are harder to nominate for.",
+    strongAt: [
+      { slug: "university-of-melbourne", why: "Melbourne Business School and a highly ranked commerce faculty." },
+      { slug: "unsw-sydney", why: "The AGSM and particular strength in finance, actuarial studies, and accounting." },
+      { slug: "university-of-sydney", why: "Broad business school with strong finance and accounting programs." },
+      { slug: "monash-university", why: "Very large business faculty with accredited accounting pathways and overseas campuses." },
+      { slug: "bond-university", why: "Small classes and an accelerated calendar; MBA in about a year." },
+      { slug: "queensland-university-of-technology", why: "Practical business degrees with real-world projects, in lower-cost Brisbane." },
+    ],
     faq: [
       {
         q: "Is an MBA in Australia worth it for international students?",
@@ -90,6 +136,14 @@ export const SUBJECT_CONTENT: Record<string, SubjectContent> = {
       "Nursing has higher English requirements than most degrees, typically IELTS 7.0 with no band below 7.0, because registration with the Nursing and Midwifery Board depends on it. Clinical placements are built into every nursing program.",
     ],
     careers: "Registered nurse is one of the most reliably nominated occupations across every state. Placement hours during study count toward registration, and a 485 visa gives time to register and gain experience before applying for a skilled visa.",
+    strongAt: [
+      { slug: "university-of-technology-sydney", why: "One of the largest and highest-ranked nursing faculties in Australia." },
+      { slug: "monash-university", why: "Large nursing and midwifery school with extensive clinical placement networks." },
+      { slug: "university-of-sydney", why: "Research-intensive nursing with strong clinical partnerships." },
+      { slug: "deakin-university", why: "Big nursing intake, clinical simulation facilities, and flexible delivery." },
+      { slug: "australian-catholic-university", why: "Nursing is a core strength, taught across campuses in most states." },
+      { slug: "flinders-university", why: "Built its reputation on health sciences, including rural and remote nursing." },
+    ],
     faq: [
       {
         q: "What IELTS score do I need to study nursing in Australia?",
@@ -111,6 +165,14 @@ export const SUBJECT_CONTENT: Record<string, SubjectContent> = {
       "Civil, mechanical, electrical, and software engineering are the largest streams. Entry to a master's usually needs a cognate bachelor's with a credit average and IELTS 6.5. Fees are among the higher ones, commonly in the AUD 40,000s at established universities.",
     ],
     careers: "Most engineering disciplines are on the skilled occupation lists. An Engineers Australia skills assessment plus a year of experience on a 485 is the standard pre-invitation setup.",
+    strongAt: [
+      { slug: "unsw-sydney", why: "The largest engineering faculty in Australia, leaning hard into the discipline with co-op tracks." },
+      { slug: "university-of-melbourne", why: "Master of Engineering across all major streams, taken after a Science or Design bachelor." },
+      { slug: "university-of-queensland", why: "Research-intensive engineering with strong minerals, mechanical, and civil programs." },
+      { slug: "monash-university", why: "Broad engineering faculty with an overseas campus option and strong aerospace and materials work." },
+      { slug: "university-of-western-australia", why: "Particular strength in mining, petroleum, and marine engineering, in a regional-classified city." },
+      { slug: "university-of-technology-sydney", why: "Practice-based engineering with industry placement built in." },
+    ],
     faq: [
       {
         q: "Is an Australian engineering degree recognised for skilled migration?",
@@ -128,6 +190,12 @@ export const SUBJECT_CONTENT: Record<string, SubjectContent> = {
       "The JD is a three-year professional degree and one of the more expensive options, commonly over AUD 45,000 a year at the Group of Eight. Practising as a lawyer in Australia requires admission to a state legal profession, which involves practical legal training beyond the degree.",
     ],
     careers: "Legal roles are difficult to nominate for skilled migration unless you requalify and gain local experience. Many international law graduates use the degree for policy, compliance, or corporate roles rather than practice.",
+    strongAt: [
+      { slug: "university-of-melbourne", why: "Melbourne Law School and the graduate-entry Juris Doctor, consistently the top-ranked law school in the country." },
+      { slug: "university-of-sydney", why: "Long-established law school with strong international and commercial law programs." },
+      { slug: "unsw-sydney", why: "Known for social justice, human rights, and clinical legal education." },
+      { slug: "australian-national-university", why: "Strong in public law, international law, and legal theory, in the national capital." },
+    ],
     faq: [
       {
         q: "Can I practise law in Australia with an overseas law degree?",
@@ -158,6 +226,13 @@ export const SUBJECT_CONTENT: Record<string, SubjectContent> = {
       "Teaching has higher English requirements than most fields, usually IELTS 7.5 with 8.0 in speaking and listening, set by the regulators. Programs include supervised practicum in schools. Fees are moderate, often in the high AUD 20,000s to low AUD 30,000s.",
     ],
     careers: "Secondary teachers in maths, science, and languages are consistently on skilled lists and nominated by several states. Primary teaching is more variable. Registration with a state teaching authority is required to work.",
+    strongAt: [
+      { slug: "university-of-melbourne", why: "Melbourne Graduate School of Education, highly ranked, with the Master of Teaching as the main route." },
+      { slug: "monash-university", why: "Very large education faculty with primary, secondary, and early-childhood pathways." },
+      { slug: "university-of-sydney", why: "Research-intensive education school with strong practicum partnerships." },
+      { slug: "australian-catholic-university", why: "Teaching is a core ACU strength, with campuses in most states." },
+      { slug: "queensland-university-of-technology", why: "Practical teacher education with extensive school placement." },
+    ],
     faq: [
       {
         q: "What English score do I need to study teaching in Australia?",
@@ -188,6 +263,13 @@ export const SUBJECT_CONTENT: Record<string, SubjectContent> = {
       "Both stages usually require a portfolio. Registration as an architect needs the accredited master's plus logged practical experience and the Architectural Practice Examination. Fees are in the mid AUD 30,000s at most universities.",
     ],
     careers: "Architect is on the skilled occupation lists, assessed by the Architects Accreditation Council of Australia. The full path from study to registration takes several years.",
+    strongAt: [
+      { slug: "university-of-melbourne", why: "Melbourne School of Design, the leading architecture school in Australia." },
+      { slug: "university-of-sydney", why: "Long-established architecture and urban design programs." },
+      { slug: "rmit-university", why: "Studio-driven and design-focused, with a strong reputation in practice." },
+      { slug: "university-of-technology-sydney", why: "Practice-based architecture with industry studios." },
+      { slug: "university-of-queensland", why: "Well-regarded architecture school in subtropical Brisbane." },
+    ],
     faq: [
       {
         q: "Can I register as an architect in Australia with a master's from another country?",
@@ -227,6 +309,13 @@ export const SUBJECT_CONTENT: Record<string, SubjectContent> = {
       "Programs often include farm-based or industry placements. Entry is a science or agriculture background for postgraduate study and IELTS 6.5. Fees are among the lower ones, frequently in the mid to high AUD 20,000s.",
     ],
     careers: "Agricultural consultant, agronomist, and agricultural scientist appear on skilled lists and are nominated by several states, particularly for regional roles. Studying at a regional campus adds migration points.",
+    strongAt: [
+      { slug: "university-of-adelaide", why: "The Waite campus, one of the largest agricultural research precincts in the southern hemisphere." },
+      { slug: "charles-sturt-university", why: "Trains a large share of Australia's rural agronomists and vets, across regional NSW." },
+      { slug: "university-of-new-england", why: "Australia's first regional university, with deep strength in agriculture and rural science." },
+      { slug: "university-of-queensland", why: "Gatton campus and strong agricultural and animal science programs." },
+      { slug: "university-of-western-australia", why: "Agricultural science tied to WA's grain and livestock industries, in a regional-classified city." },
+    ],
     faq: [
       {
         q: "Is agriculture a good field for skilled migration to Australia?",
@@ -266,6 +355,13 @@ export const SUBJECT_CONTENT: Record<string, SubjectContent> = {
       "Programs combine fieldwork with policy and data skills. Entry is a science background for the master's and IELTS 6.5. Fees are moderate, generally low to mid AUD 30,000s.",
     ],
     careers: "Environmental consultant and environmental scientist appear on some skilled and regional lists. The pathway is less direct than engineering or health but exists.",
+    strongAt: [
+      { slug: "university-of-tasmania", why: "World-class marine, Antarctic, and land-management science, the whole state classified regional." },
+      { slug: "james-cook-university", why: "Tropical ecology and environmental science next to the Great Barrier Reef." },
+      { slug: "australian-national-university", why: "Fenner School of Environment and Society, strong in policy and climate science." },
+      { slug: "university-of-queensland", why: "Environmental management and ecology with major research centres." },
+      { slug: "murdoch-university", why: "Environmental and conservation science with a bushland campus and wildlife facilities." },
+    ],
     faq: [
       {
         q: "Is environmental science on the skilled occupation list in Australia?",

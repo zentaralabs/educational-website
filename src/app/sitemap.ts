@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { COLLECTIONS } from "@/lib/collections";
+import { COMPARISON_PAIRS, vsSlug } from "@/lib/comparisons";
 import { SITE_URL } from "@/lib/site-config";
 import { listPublishedBlogPostSlugs } from "@/lib/queries/public-blog-posts";
 import { listPublishedGuideSlugs } from "@/lib/queries/public-guides";
@@ -77,7 +78,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }));
 
-  const comparisonEntries: MetadataRoute.Sitemap = comparisonSlugs.map((slug) => ({
+  const comparisonEntries: MetadataRoute.Sitemap = [
+    ...comparisonSlugs,
+    ...COMPARISON_PAIRS.map(([a, b]) => vsSlug(a, b)),
+  ].map((slug) => ({
     url: `${SITE_URL}/compare/${slug}`,
     lastModified: now,
     changeFrequency: "monthly",

@@ -1,6 +1,7 @@
 import { GO8_SLUGS, isRegionalCity } from "@/lib/australia";
 import type { CollectionUniversity } from "@/lib/queries/public-collections";
 import { formatCurrency } from "@/lib/format";
+import { SUBJECT_BEST_PAGES, SUBJECT_CONTENT } from "@/lib/subjects";
 
 export type CollectionEntry = {
   slug: string;
@@ -31,6 +32,51 @@ function budget(u: CollectionUniversity): string {
   return u.firstYearBudget
     ? `${formatCurrency(u.firstYearBudget, "AUD")} first-year budget`
     : "Budget not available";
+}
+
+const SUBJECT_NAMES: Record<string, string> = {
+  "computer-science": "computer science",
+  "information-technology": "information technology",
+  "data-science": "data science",
+  business: "business and management",
+  "nursing-and-health-sciences": "nursing and health sciences",
+  engineering: "engineering",
+};
+
+/** Builds a "best universities for <subject>" collection from the curated
+ *  strongAt list in SUBJECT_CONTENT. */
+function subjectBestCollection(subjectSlug: string): Collection {
+  const name = SUBJECT_NAMES[subjectSlug] ?? subjectSlug.replace(/-/g, " ");
+  const curated = SUBJECT_CONTENT[subjectSlug]?.strongAt ?? [];
+  const order = new Map(curated.map((c, i) => [c.slug, i]));
+  const why = new Map(curated.map((c) => [c.slug, c.why]));
+  return {
+    slug: `best-australian-universities-for-${subjectSlug}`,
+    title: `The best Australian universities for ${name}`,
+    shortTitle: `Best for ${name}`,
+    metaDescription: `Australian universities with a recognised strength in ${name}, for international students. Reputation, cost, and the skilled-migration angle.`,
+    intro: [
+      `There is no official ranking of Australian universities by field of study, so "best for ${name}" comes down to research reputation, industry links, and how seriously a university invests in the area.`,
+      `This shortlist is the universities with a genuine reputation in ${name}, with a note on what sets each apart. For the full list of every university that teaches it, plus the cheapest programs, see the ${name} subject page.`,
+    ],
+    methodology: `Curated from the research strengths, specialist facilities, and industry links each university is known for in ${name}. It is not a league table, and a strong department at a lower-ranked university can beat a weak one at a famous name. Check the specific program.`,
+    build: (unis) =>
+      unis
+        .filter((u) => order.has(u.slug))
+        .sort((a, b) => (order.get(a.slug) ?? 99) - (order.get(b.slug) ?? 99))
+        .map((u) => ({
+          slug: u.slug,
+          name: u.name,
+          city: u.city,
+          headline:
+            u.firstYearBudget != null
+              ? `${formatCurrency(u.firstYearBudget, "AUD")} first-year budget`
+              : GO8_SLUGS.has(u.slug)
+                ? "Group of Eight"
+                : "",
+          note: why.get(u.slug) ?? `A recognised choice for ${name}.`,
+        })),
+  };
 }
 
 /** Builds a "cheapest universities in <city>" collection. */
@@ -326,6 +372,7 @@ export const COLLECTIONS: Collection[] = [
   cityCollection({ city: "Perth", match: /perth|fremantle/i, slug: "cheapest-universities-in-perth-for-international-students" }),
   cityCollection({ city: "Brisbane", match: /brisbane|gold coast/i, slug: "cheapest-universities-in-brisbane-for-international-students" }),
   cityCollection({ city: "Adelaide", match: /adelaide/i, slug: "cheapest-universities-in-adelaide-for-international-students" }),
+  ...SUBJECT_BEST_PAGES.map(subjectBestCollection),
 ];
 
 export function getCollection(slug: string): Collection | undefined {
