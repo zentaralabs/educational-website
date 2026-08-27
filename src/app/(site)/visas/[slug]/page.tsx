@@ -5,6 +5,7 @@ import { GuideContent } from "@/components/site/GuideContent";
 import { LastVerified } from "@/components/site/LastVerified";
 import { ArrowUpRightIcon, CheckBadgeIcon } from "@/components/site/icons";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
+import { SITE_YEAR } from "@/lib/site-config";
 import { extractFaqItems } from "@/lib/extract-faq";
 import { authorInitials } from "@/lib/format";
 import {
@@ -29,9 +30,13 @@ export async function generateMetadata({
   const { slug } = await params;
   const visa = await getPublishedVisa(slug);
   if (!visa) return {};
-  const title = `${visa.name} (subclass ${visa.code})`;
+  const title = `${visa.name} (Subclass ${visa.code}): Eligibility, ${
+    visa.is_points_tested ? "Points & Cost" : "Requirements & Cost"
+  } ${SITE_YEAR}`;
   const description =
-    visa.short_description ?? visa.summary?.slice(0, 155) ?? title;
+    visa.short_description ??
+    visa.summary?.slice(0, 155) ??
+    `${visa.name} (subclass ${visa.code}): who it is for, eligibility, cost, processing time, and the pathway to permanent residence.`;
   const url = `/visas/${slug}`;
   return {
     title,

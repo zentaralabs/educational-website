@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { ArrowUpRightIcon } from "@/components/site/icons";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
+import { SITE_YEAR } from "@/lib/site-config";
 import { formatCurrency } from "@/lib/format";
 import {
   getSubjectBySlug,
@@ -25,7 +26,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const subject = await getSubjectBySlug(slug);
   if (!subject) return {};
-  const title = `Study ${subject.name} in Australia`;
+  const title = `Study ${subject.name} in Australia ${SITE_YEAR}: Costs, Universities & Requirements`;
   const feeBit =
     subject.minTuition != null
       ? ` Tuition from ${formatCurrency(subject.minTuition, "AUD")}/year across ${subject.universities.length} universities.`

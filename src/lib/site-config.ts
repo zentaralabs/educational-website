@@ -10,6 +10,14 @@ export const SITE_URL = (
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.wheretoapply.xyz"
 ).replace(/\/$/, "");
 
+/**
+ * The year international students actually search with ("... in australia
+ * 2026"). Evaluated at build / ISR-revalidate time, so pages self-update
+ * each new year without a manual edit. Used only in <title>/description
+ * strings, never in visible page copy or dated facts.
+ */
+export const SITE_YEAR = new Date().getFullYear();
+
 // Launching country-by-country — see PROJECT_STATUS.md's 2026-08-27 note.
 // Update this once a second country goes live (currently Australia only).
 export const SITE_DESCRIPTION =

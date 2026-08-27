@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { ArrowUpRightIcon } from "@/components/site/icons";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
+import { SITE_YEAR } from "@/lib/site-config";
 import { COLLECTIONS, getCollection } from "@/lib/collections";
 import { listCollectionUniversities } from "@/lib/queries/public-collections";
 
@@ -21,12 +22,13 @@ export async function generateMetadata({
   const c = getCollection(slug);
   if (!c) return {};
   const url = `/best/${slug}`;
+  const title = `${c.title} (${SITE_YEAR})`;
   return {
-    title: c.title,
+    title,
     description: c.metaDescription,
     alternates: { canonical: url },
-    openGraph: { title: c.title, description: c.metaDescription, url, type: "article" },
-    twitter: { card: "summary", title: c.title, description: c.metaDescription },
+    openGraph: { title, description: c.metaDescription, url, type: "article" },
+    twitter: { card: "summary", title, description: c.metaDescription },
   };
 }
 

@@ -10,6 +10,7 @@ import { HowToApply } from "@/components/site/HowToApply";
 import { LastVerified } from "@/components/site/LastVerified";
 import { ProgramsList } from "@/components/site/ProgramsList";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
+import { SITE_YEAR } from "@/lib/site-config";
 import { deadlineBadgeStatus } from "@/lib/deadline-status";
 import { formatCurrency, formatPercent } from "@/lib/format";
 import { getPublishedProgramsForUniversity } from "@/lib/queries/public-programs";
@@ -53,10 +54,10 @@ export async function generateMetadata({
   const university = await getPublishedUniversity(slug);
   if (!university) return {};
 
-  const title = `${university.name} — Deadlines, Admissions & Costs`;
+  const title = `${university.name}: Fees, Entry Requirements & Deadlines ${SITE_YEAR}`;
   const description =
-    university.distinctive_summary?.slice(0, 155) ??
-    `Application deadlines, admissions requirements, tuition, and scholarships for ${university.name}${university.country?.name ? ` in ${university.country.name}` : ""}.`;
+    `${university.name} for international students${university.city ? ` in ${university.city.split(",")[0]}` : ""}: tuition fees, entry requirements, application deadlines, and scholarships. ` +
+    (university.distinctive_summary?.slice(0, 90) ?? "Independently researched and dated.");
   const url = `/universities/${slug}`;
 
   return {

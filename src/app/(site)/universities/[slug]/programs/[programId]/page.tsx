@@ -7,6 +7,7 @@ import { ProgramAdmissionsBlock } from "@/components/site/ProgramAdmissionsBlock
 import { ProgramSidebar } from "@/components/site/ProgramSidebar";
 import { ArrowUpRightIcon, BookIcon, CheckBadgeIcon } from "@/components/site/icons";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
+import { SITE_YEAR } from "@/lib/site-config";
 import { getPublishedProgram } from "@/lib/queries/public-programs";
 
 export const revalidate = 3600;
@@ -56,10 +57,8 @@ export async function generateMetadata({
   const program = await loadProgram(slug, programId);
   if (!program) return {};
 
-  const title = `${program.name} at ${program.university!.name} — Requirements & Cost`;
-  const description = `${[program.degree_level?.name, program.subject?.name]
-    .filter(Boolean)
-    .join(" · ")} program at ${program.university!.name}: admission requirements, English test scores, duration, and tuition.`;
+  const title = `${program.name}, ${program.university!.name}: Fees & Entry Requirements ${SITE_YEAR}`;
+  const description = `${program.name} at ${program.university!.name} for international students: tuition fees, entry requirements, English test score, duration${program.subject?.name ? `, and how it fits the ${program.subject.name} field` : ""}.`;
   const url = `/universities/${slug}/programs/${programId}`;
 
   return {

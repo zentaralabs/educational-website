@@ -5,6 +5,7 @@ import { GuideContent } from "@/components/site/GuideContent";
 import { LastVerified } from "@/components/site/LastVerified";
 import { CheckBadgeIcon } from "@/components/site/icons";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
+import { SITE_YEAR } from "@/lib/site-config";
 import {
   getPublishedScholarship,
   listPublishedScholarshipSlugs,
@@ -26,10 +27,10 @@ export async function generateMetadata({
   const { slug } = await params;
   const s = await getPublishedScholarship(slug);
   if (!s) return {};
-  const title = s.name;
+  const title = `${s.name} ${SITE_YEAR}: Value, Eligibility & How to Apply`;
   const description =
-    s.description?.slice(0, 155) ??
-    `${s.name}: ${s.amount ?? "scholarship"} for studying in Australia. Eligibility, value, and how to apply.`;
+    `${s.name}${s.amount ? ` (${s.amount})` : ""} for international students in Australia: who is eligible, what it covers, whether you need a separate application, and how to apply. ` +
+    (s.description?.slice(0, 60) ?? "");
   const url = `/scholarships/${slug}`;
   return {
     title,
