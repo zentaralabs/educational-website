@@ -133,7 +133,7 @@ export const SUBJECT_CONTENT: Record<string, SubjectContent> = {
   "nursing-and-health-sciences": {
     intro: [
       "Nursing and the allied health fields are strong choices in Australia because they lead to registered professions that appear on the skilled occupation lists and are in genuine shortage. The main routes are a Bachelor of Nursing, a two-year Master of Nursing for graduates of other fields, or specialist master's in public health, nutrition, and physiotherapy.",
-      "Nursing has higher English requirements than most degrees, typically IELTS 7.0 with no band below 7.0, because registration with the Nursing and Midwifery Board depends on it. Clinical placements are built into every nursing program.",
+      "Nursing has higher English requirements than most degrees, set by the Nursing and Midwifery Board of Australia: IELTS Academic 7.0 in listening, reading, and speaking, and at least 6.5 in writing, or the OET or PTE equivalent. Clinical placements are built into every nursing program.",
     ],
     careers: "Registered nurse is one of the most reliably nominated occupations across every state. Placement hours during study count toward registration, and a 485 visa gives time to register and gain experience before applying for a skilled visa.",
     strongAt: [
@@ -147,7 +147,7 @@ export const SUBJECT_CONTENT: Record<string, SubjectContent> = {
     faq: [
       {
         q: "What IELTS score do I need to study nursing in Australia?",
-        a: "Usually IELTS 7.0 overall with no individual band below 7.0, or an equivalent PTE score. This is set by the Nursing and Midwifery Board of Australia for registration, and universities apply it at admission.",
+        a: "The Nursing and Midwifery Board of Australia requires IELTS Academic 7.0 in listening, reading, and speaking, and at least 6.5 in writing, or an equivalent OET or PTE score. Results from two test sittings within six months can be combined. Universities apply this standard at admission.",
       },
       {
         q: "Can I become a registered nurse in Australia with an overseas nursing degree?",
