@@ -46,9 +46,10 @@ export async function searchSite(query: string): Promise<SearchResults> {
   const programsQuery = supabase
     .from("programs")
     .select(
-      "id, name, university:universities(slug, name), subject:subjects(name)",
+      "id, name, university:universities!inner(slug, name, country:countries!inner(is_launched)), subject:subjects(name)",
     )
     .eq("status", "published")
+    .eq("university.country.is_launched", true)
     .or(programFilter)
     .order("name")
     .limit(20);
@@ -56,14 +57,15 @@ export async function searchSite(query: string): Promise<SearchResults> {
   const [universities, guides, programs] = await Promise.all([
     supabase
       .from("universities")
-      .select("slug, name, city")
+      .select("slug, name, city, country:countries!inner(is_launched)")
       .eq("status", "published")
+      .eq("country.is_launched", true)
       .ilike("name", like)
       .order("name")
       .limit(20),
     supabase
       .from("guides")
-      .select("slug, title, category")
+      .select("slug, title, category, country:countries(is_launched)")
       .eq("status", "published")
       .neq("category", "comparison")
       .ilike("title", like)
@@ -88,9 +90,21 @@ export async function searchSite(query: string): Promise<SearchResults> {
     subject: { name: string } | null;
   }[];
 
+  // Guides are only country-scoped when they carry a country_id — global
+  // guides (country: null) are always shown; scoped ones are hidden until
+  // that country launches.
+  const guideRows = (guides.data ?? []) as unknown as {
+    slug: string;
+    title: string;
+    category: string;
+    country: { is_launched: boolean } | null;
+  }[];
+
   return {
     universities: universities.data ?? [],
-    guides: guides.data ?? [],
+    guides: guideRows
+      .filter((g) => !g.country || g.country.is_launched)
+      .map((g) => ({ slug: g.slug, title: g.title, category: g.category })),
     programs: programRows.map((p) => ({
       id: p.id,
       name: p.name,

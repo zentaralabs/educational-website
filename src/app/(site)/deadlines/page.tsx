@@ -14,8 +14,7 @@ const SELECT_CLASS =
 
 export const metadata = {
   title: "Application Deadline Calendar",
-  description:
-    "Filterable, sourced application deadlines for universities in the US, UK, Canada, Australia, and New Zealand.",
+  description: "Filterable, sourced application deadlines for universities in Australia.",
   alternates: { canonical: "/deadlines" },
 };
 
@@ -72,8 +71,7 @@ export default async function DeadlinesPage({
     "@context": "https://schema.org",
     "@type": "Dataset",
     name: "University application deadlines",
-    description:
-      "Aggregated, sourced application deadlines for universities in the US, UK, Canada, Australia, and New Zealand.",
+    description: "Aggregated, sourced application deadlines for universities in Australia.",
     variableMeasured: "Application deadline date",
   };
 

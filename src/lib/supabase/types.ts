@@ -24,8 +24,8 @@ export interface Database {
     CompositeTypes: Record<string, never>;
     Tables: {
       countries: Table<
-        { id: number; code: string; name: string },
-        { id?: number; code: string; name: string }
+        { id: number; code: string; name: string; is_launched: boolean },
+        { id?: number; code: string; name: string; is_launched?: boolean }
       >;
       degree_levels: Table<
         { id: number; name: string },

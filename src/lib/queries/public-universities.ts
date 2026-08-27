@@ -32,10 +32,11 @@ export async function listPublishedUniversitySlugs(): Promise<string[]> {
   const supabase = createPublicClient(["universities:list"]);
   const { data, error } = await supabase
     .from("universities")
-    .select("slug")
-    .eq("status", "published");
+    .select("slug, country:countries!inner(is_launched)")
+    .eq("status", "published")
+    .eq("country.is_launched", true);
   if (error) throw error;
-  return (data ?? []).map((r) => r.slug);
+  return ((data ?? []) as unknown as { slug: string }[]).map((r) => r.slug);
 }
 
 export async function getPublishedUniversity(
@@ -47,7 +48,7 @@ export async function getPublishedUniversity(
     .from("universities")
     .select(
       `*,
-      country:countries(code, name),
+      country:countries!inner(code, name, is_launched),
       author:authors!author_id(name, credentials),
       reviewed_by:authors!reviewed_by_id(name),
       application_platform:application_platforms(name),
@@ -56,6 +57,7 @@ export async function getPublishedUniversity(
     )
     .eq("slug", slug)
     .eq("status", "published")
+    .eq("country.is_launched", true)
     .maybeSingle();
 
   if (error) throw error;
@@ -93,7 +95,7 @@ export type ComparisonUniversityRow = {
 };
 
 const COMPARISON_SELECT =
-  "id, slug, name, country:countries(code, name), acceptance_rate, tuition_international, tuition_domestic, currency, required_tests";
+  "id, slug, name, country:countries!inner(code, name, is_launched), acceptance_rate, tuition_international, tuition_domestic, currency, required_tests";
 
 /** Matches standardized test names inside free-text admission/English
  * requirement strings, e.g. "IELTS 6.5 (no band below 6.0) or equivalent". */
@@ -187,7 +189,8 @@ export async function getUniversitiesForComparison(
     .from("universities")
     .select(COMPARISON_SELECT)
     .in("id", ids)
-    .eq("status", "published");
+    .eq("status", "published")
+    .eq("country.is_launched", true);
 
   if (error) throw error;
   return fillProgramFallbacks((data ?? []) as unknown as ComparisonUniversityRow[]);
@@ -202,7 +205,8 @@ export async function getUniversitiesForComparisonBySlugs(
     .from("universities")
     .select(COMPARISON_SELECT)
     .in("slug", slugs)
-    .eq("status", "published");
+    .eq("status", "published")
+    .eq("country.is_launched", true);
 
   if (error) throw error;
   const filled = await fillProgramFallbacks(
@@ -220,8 +224,9 @@ export async function listPublishedUniversityOptions(): Promise<PublicUniversity
   const supabase = createPublicClient(["universities:list"]);
   const { data, error } = await supabase
     .from("universities")
-    .select("slug, name, country:countries(name)")
+    .select("slug, name, country:countries!inner(name, is_launched)")
     .eq("status", "published")
+    .eq("country.is_launched", true)
     .order("name");
 
   if (error) throw error;

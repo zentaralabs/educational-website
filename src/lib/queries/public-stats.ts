@@ -6,12 +6,17 @@ export async function getHomepageStats() {
   const [universities, deadlines] = await Promise.all([
     supabase
       .from("universities")
-      .select("id", { count: "exact", head: true })
-      .eq("status", "published"),
+      .select("id, country:countries!inner(is_launched)", { count: "exact", head: true })
+      .eq("status", "published")
+      .eq("country.is_launched", true),
     supabase
       .from("deadlines")
-      .select("id", { count: "exact", head: true })
-      .eq("status", "published"),
+      .select("id, university:universities!inner(country:countries!inner(is_launched))", {
+        count: "exact",
+        head: true,
+      })
+      .eq("status", "published")
+      .eq("university.country.is_launched", true),
   ]);
 
   if (universities.error) throw universities.error;

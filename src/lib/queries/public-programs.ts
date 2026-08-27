@@ -88,10 +88,11 @@ export async function getPublishedProgram(
     .select(
       `id, name, description, curriculum, duration_years, tuition_international, tuition_domestic, tuition_domestic_is_csp, currency, application_url, admission_requirements, english_requirements, ielts_overall, ielts_listening, ielts_reading, ielts_writing, ielts_speaking, pte_overall, pte_listening, pte_reading, pte_writing, pte_speaking, last_verified_at, source_url,
       degree_level:degree_levels(name), subject:subjects(name),
-      university:universities(id, slug, name, status, city, apply_url, application_fee, tuition_international, tuition_domestic, tuition_domestic_is_csp, currency, ielts_overall, ielts_listening, ielts_reading, ielts_writing, ielts_speaking, pte_overall, pte_listening, pte_reading, pte_writing, pte_speaking, country:countries(code, name))`,
+      university:universities!inner(id, slug, name, status, city, apply_url, application_fee, tuition_international, tuition_domestic, tuition_domestic_is_csp, currency, ielts_overall, ielts_listening, ielts_reading, ielts_writing, ielts_speaking, pte_overall, pte_listening, pte_reading, pte_writing, pte_speaking, country:countries!inner(code, name, is_launched))`,
     )
     .eq("id", programId)
     .eq("status", "published")
+    .eq("university.country.is_launched", true)
     .maybeSingle();
 
   if (error) throw error;
@@ -119,9 +120,12 @@ export async function listPublishedProgramsForSitemap(): Promise<SitemapProgramR
   for (let from = 0; ; from += pageSize) {
     const { data, error } = await supabase
       .from("programs")
-      .select("id, updated_at, university:universities!inner(slug, status)")
+      .select(
+        "id, updated_at, university:universities!inner(slug, status, country:countries!inner(is_launched))",
+      )
       .eq("status", "published")
       .eq("university.status", "published")
+      .eq("university.country.is_launched", true)
       .range(from, from + pageSize - 1);
 
     if (error) throw error;

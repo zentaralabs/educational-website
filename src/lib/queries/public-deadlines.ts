@@ -31,6 +31,7 @@ export async function listPublishedDeadlines(
       { count: "exact" },
     )
     .eq("status", "published")
+    .eq("university.country.is_launched", true)
     .order("deadline_date");
 
   if (filters.country) {
@@ -60,7 +61,7 @@ export async function listPublishedDeadlines(
 export async function listDeadlineFilterOptions() {
   const supabase = createPublicClient(["deadlines:list"]);
   const [countries, degreeLevels, deadlineTypes] = await Promise.all([
-    supabase.from("countries").select("code, name").order("code"),
+    supabase.from("countries").select("code, name").eq("is_launched", true).order("code"),
     supabase.from("degree_levels").select("name").order("name"),
     supabase.from("deadline_types").select("name").order("name"),
   ]);

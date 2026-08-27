@@ -16,7 +16,7 @@ export async function listPublishedGuides(opts: {
   const supabase = createPublicClient(["guides:list"]);
   let query = supabase
     .from("guides")
-    .select("slug, title, category, excerpt, country:countries(code, name)")
+    .select("slug, title, category, excerpt, country:countries(code, name, is_launched)")
     .eq("status", "published")
     .order("title");
 
@@ -25,7 +25,18 @@ export async function listPublishedGuides(opts: {
 
   const { data, error } = await query;
   if (error) throw error;
-  return (data ?? []) as unknown as PublicGuideListRow[];
+  // Guides are only country-scoped when they carry a country_id — global
+  // guides (country: null) always show; scoped ones are hidden until that
+  // country launches.
+  const rows = (data ?? []) as unknown as (PublicGuideListRow & {
+    country: (PublicGuideListRow["country"] & { is_launched: boolean }) | null;
+  })[];
+  return rows
+    .filter((g) => !g.country || g.country.is_launched)
+    .map(({ country, ...g }) => ({
+      ...g,
+      country: country ? { code: country.code, name: country.name } : null,
+    }));
 }
 
 export async function listPublishedGuideSlugs(opts: {
@@ -47,14 +58,23 @@ export async function getPublishedGuide(slug: string): Promise<PublicGuideRow | 
   const { data, error } = await supabase
     .from("guides")
     .select(
-      "*, country:countries(code, name), author:authors!author_id(name, bio, credentials), reviewed_by:authors!reviewed_by_id(name)",
+      "*, country:countries(code, name, is_launched), author:authors!author_id(name, bio, credentials), reviewed_by:authors!reviewed_by_id(name)",
     )
     .eq("slug", slug)
     .eq("status", "published")
     .maybeSingle();
 
   if (error) throw error;
-  return data as unknown as PublicGuideRow | null;
+  if (!data) return null;
+
+  const row = data as unknown as PublicGuideRow & {
+    country: (PublicGuideRow["country"] & { is_launched: boolean }) | null;
+  };
+  // Country-scoped guides (country_id set) are hidden until that country
+  // launches — global guides (country: null) are unaffected.
+  if (row.country && !row.country.is_launched) return null;
+
+  return { ...row, country: row.country ? { code: row.country.code, name: row.country.name } : null };
 }
 
 export async function getGuideRelatedContent(guideId: string) {
@@ -69,10 +89,11 @@ export async function getGuideRelatedContent(guideId: string) {
     supabase
       .from("guide_related_universities")
       .select(
-        "university:universities!related_university_id!inner(id, slug, name, status)",
+        "university:universities!related_university_id!inner(id, slug, name, status, country:countries!inner(is_launched))",
       )
       .eq("guide_id", guideId)
-      .eq("university.status", "published"),
+      .eq("university.status", "published")
+      .eq("university.country.is_launched", true),
   ]);
 
   if (relatedGuides.error) throw relatedGuides.error;

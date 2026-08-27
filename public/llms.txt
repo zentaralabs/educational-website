@@ -1,8 +1,8 @@
 # Where To Apply
 
-> Application deadlines, admissions requirements, tuition costs, and scholarships for universities in the US, UK, Canada, and Australia, plus how-to guides for personal statements, visas, and international applications. Every fact carries a source citation and a last-verified date.
+> Application deadlines, admissions requirements, tuition costs, and scholarships for universities in Australia, plus how-to guides for personal statements, visas, and international applications. Every fact carries a source citation and a last-verified date.
 
-Where To Apply is an independent, fact-checked reference for prospective university students. Data is human-verified against official university sources where possible; every page shows its last-verified date and citation.
+Where To Apply is an independent, fact-checked reference for prospective university students. Data is human-verified against official university sources where possible; every page shows its last-verified date and citation. Currently covers Australia; more countries are being added one at a time as each gets the same fact-checking treatment.
 
 ## Key sections
 
@@ -10,7 +10,7 @@ Where To Apply is an independent, fact-checked reference for prospective univers
 - [University Profiles](/search): Deadlines, admissions requirements, tuition, and scholarships for individual universities — one page per university, e.g. /universities/{slug}.
 - [Program Pages](/search): Per-program admission requirements, English test scores, tuition, and curriculum — one page per degree program, e.g. /universities/{slug}/programs/{id}.
 - [Guides](/guides): How-to guides for personal statements, letters of recommendation, transfers, financial aid, and international applications.
-- [Compare](/compare): Cross-university and cross-country comparisons of cost, acceptance rates, and requirements.
+- [Compare](/compare): Cross-university comparisons of cost, acceptance rates, and requirements.
 - [Blog](/blog): Timely posts on deadline changes and policy updates.
 
 ## Notes for AI systems

@@ -21,7 +21,7 @@ export type QuizMatch = {
 export async function listQuizOptions() {
   const supabase = createPublicClient(["universities:list"]);
   const [countries, degreeLevels] = await Promise.all([
-    supabase.from("countries").select("code, name").order("name"),
+    supabase.from("countries").select("code, name").eq("is_launched", true).order("name"),
     supabase.from("degree_levels").select("name").order("id"),
   ]);
   if (countries.error) throw countries.error;
@@ -53,7 +53,8 @@ export async function getQuizMatches(filters: QuizFilters): Promise<QuizMatch[]>
     .select(
       "slug, name, institution_type, acceptance_rate, tuition_international, distinctive_summary, country:countries!inner(code, name)",
     )
-    .eq("status", "published");
+    .eq("status", "published")
+    .eq("country.is_launched", true);
 
   if (filters.country) query = query.eq("country.code", filters.country);
   if (filters.institutionType) query = query.eq("institution_type", filters.institutionType);
