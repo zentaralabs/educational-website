@@ -3,21 +3,39 @@ import { notFound, redirect } from "next/navigation";
 import { StatusBadge } from "@/components/StatusBadge";
 import { AdmissionsRequirementFacts } from "@/components/site/AdmissionsRequirementFacts";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
+import { GuideContent } from "@/components/site/GuideContent";
 import { CheckBadgeIcon } from "@/components/site/icons";
 import { Fact, FactBox, ProfileSection } from "@/components/site/ProfileSection";
+import { HowToApply } from "@/components/site/HowToApply";
 import { LastVerified } from "@/components/site/LastVerified";
 import { ProgramsList } from "@/components/site/ProgramsList";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import { deadlineBadgeStatus, formatDeadlineDate } from "@/lib/deadline-status";
-import { formatPercent } from "@/lib/format";
+import { formatCurrency, formatPercent } from "@/lib/format";
 import { getPublishedProgramsForUniversity } from "@/lib/queries/public-programs";
 import {
   getPublishedDeadlinesForUniversity,
   getPublishedScholarshipsForUniversity,
   getPublishedUniversity,
+  getRelatedUniversities,
   getUniversityRedirect,
   listPublishedUniversitySlugs,
 } from "@/lib/queries/public-universities";
+
+// Indicative single-student annual living cost in Australia when a
+// city-specific figure isn't set — anchored to the Home Affairs financial
+// capacity figure. Deliberately conservative/round.
+const NATIONAL_LIVING_COST_AUD = 29_710;
+
+// Guides that apply to essentially every Australian university — shown as
+// "related reading" on every AU profile. Kept as a short curated list rather
+// than a link table since they're universally relevant.
+const AU_RELATED_GUIDES = [
+  { slug: "real-cost-of-studying-in-australia", title: "The real cost of studying in Australia" },
+  { slug: "study-to-permanent-residence-pathway-australia", title: "The study-to-PR pathway in Australia" },
+  { slug: "proving-funds-for-an-australian-student-visa", title: "Proving you can afford to study in Australia" },
+  { slug: "ielts-vs-pte-for-australian-university-admission", title: "IELTS vs PTE for Australian admission" },
+];
 
 export const revalidate = 3600;
 
@@ -63,11 +81,41 @@ export default async function UniversityProfilePage({
     notFound();
   }
 
-  const [deadlines, scholarships, programs] = await Promise.all([
-    getPublishedDeadlinesForUniversity(university.id),
-    getPublishedScholarshipsForUniversity(university.id),
-    getPublishedProgramsForUniversity(university.id),
-  ]);
+  const [deadlines, scholarships, programs, relatedUniversities] =
+    await Promise.all([
+      getPublishedDeadlinesForUniversity(university.id),
+      getPublishedScholarshipsForUniversity(university.id),
+      getPublishedProgramsForUniversity(university.id),
+      getRelatedUniversities(
+        university.slug,
+        university.country_id,
+        university.tuition_international,
+      ),
+    ]);
+
+  // Tuition to anchor the budget estimate on: the university-level figure if
+  // set, otherwise the cheapest published program (matching the comparison
+  // table's fillProgramFallbacks approach).
+  const programTuitions = programs
+    .map((p) => p.tuition_international)
+    .filter((n): n is number => typeof n === "number" && n > 0);
+  const anchorTuition =
+    university.tuition_international ??
+    (programTuitions.length ? Math.min(...programTuitions) : null);
+  const tuitionIsFrom = university.tuition_international == null && anchorTuition != null;
+
+  const currency = university.currency ?? "AUD";
+  const livingCost = university.living_cost_annual ?? NATIONAL_LIVING_COST_AUD;
+  const appFee = university.application_fee ?? 0;
+  // First-year budget: tuition + living + application fee + a rough one-off
+  // setup allowance (visa, OSHC, flights, initial deposits).
+  const setupAllowance = 4_000;
+  const budgetLow = anchorTuition
+    ? Math.round((anchorTuition + livingCost + appFee + setupAllowance) / 1000) * 1000
+    : null;
+  const budgetHigh = budgetLow ? Math.round((budgetLow * 1.15) / 1000) * 1000 : null;
+
+  const hasCostData = Boolean(anchorTuition || university.application_fee);
 
   const nextDeadline = deadlines.find(
     (d) => !d.is_rolling && deadlineBadgeStatus(d.deadline_date, d.is_rolling) === "upcoming",
@@ -215,6 +263,14 @@ export default async function UniversityProfilePage({
         </ProfileSection>
       )}
 
+      {university.who_is_it_for && (
+        <ProfileSection title="Who is this university for?">
+          <div className="rounded-xl bg-ink/[0.035] p-5">
+            <GuideContent content={university.who_is_it_for} />
+          </div>
+        </ProfileSection>
+      )}
+
       {hasAdmissionsData && (
         <ProfileSection title="Admissions">
           <FactBox>
@@ -243,23 +299,108 @@ export default async function UniversityProfilePage({
         </ProfileSection>
       )}
 
+      {hasCostData && (
+        <ProfileSection title="Tuition & first-year budget">
+          <FactBox>
+            <Fact
+              label={
+                tuitionIsFrom
+                  ? "International tuition (from)"
+                  : "International tuition"
+              }
+              value={
+                anchorTuition
+                  ? `${formatCurrency(anchorTuition, currency)}/year`
+                  : null
+              }
+            />
+            <Fact
+              label="Application fee"
+              value={
+                university.application_fee != null
+                  ? university.application_fee === 0
+                    ? "None"
+                    : formatCurrency(university.application_fee, currency)
+                  : null
+              }
+            />
+            <Fact
+              label="Estimated living cost"
+              value={`${formatCurrency(livingCost, "AUD")}/year${
+                university.living_cost_annual == null ? " (national indicative)" : ""
+              }`}
+            />
+          </FactBox>
+
+          {budgetLow && budgetHigh && (
+            <div className="mt-4 rounded-xl border border-status-pending/25 bg-status-pending/5 p-5">
+              <p className="font-utility text-xs font-semibold tracking-widest text-slate uppercase">
+                Estimated first-year budget
+              </p>
+              <p className="mt-1 font-display text-2xl font-semibold text-ink">
+                {formatCurrency(budgetLow, "AUD")} to{" "}
+                {formatCurrency(budgetHigh, "AUD")}
+              </p>
+              <p className="mt-2 font-body text-sm text-slate">
+                Tuition{tuitionIsFrom ? " (cheapest published program)" : ""} plus
+                about {formatCurrency(livingCost, "AUD")} living costs, the
+                application fee, and roughly {formatCurrency(4000, "AUD")} in
+                one-off setup costs (visa, health cover, flights, initial
+                deposits). Tuition varies widely by course, so check your
+                specific program.
+              </p>
+            </div>
+          )}
+        </ProfileSection>
+      )}
+
       {scholarships.length > 0 && (
         <ProfileSection title="Financial aid & scholarships">
-          <ul className="flex flex-wrap gap-2">
-            {scholarships.map((s) => (
-              <li
-                key={s.id}
-                className="flex items-center gap-3 rounded-full border border-ink/10 bg-ink/[0.02] px-4 py-2 text-sm"
-              >
-                <span className="text-ink">{s.name}</span>
-                {s.amount && (
-                  <span className="font-utility text-xs font-medium text-status-open">
-                    {s.amount}
+          <ul className="flex flex-col gap-2">
+            {scholarships.map((s) => {
+              const inner = (
+                <>
+                  <span className="font-body text-sm font-medium text-ink">
+                    {s.name}
                   </span>
-                )}
-              </li>
-            ))}
+                  {s.amount && (
+                    <span className="font-utility text-xs font-medium text-status-open">
+                      {s.amount}
+                    </span>
+                  )}
+                </>
+              );
+              return (
+                <li key={s.id}>
+                  {s.slug ? (
+                    <Link
+                      href={`/scholarships/${s.slug}`}
+                      className="group flex flex-wrap items-center gap-x-3 gap-y-1 rounded-xl border border-ink/10 bg-ink/[0.02] px-4 py-3 transition-all duration-150 hover:-translate-y-0.5 hover:border-status-open/30"
+                    >
+                      {inner}
+                      <span className="ml-auto font-utility text-xs text-slate group-hover:text-status-open">
+                        Details →
+                      </span>
+                    </Link>
+                  ) : (
+                    <div className="flex flex-wrap items-center gap-x-3 gap-y-1 rounded-xl border border-ink/10 bg-ink/[0.02] px-4 py-3">
+                      {inner}
+                    </div>
+                  )}
+                </li>
+              );
+            })}
           </ul>
+          <p className="mt-3 font-body text-xs text-slate">
+            See all{" "}
+            <Link
+              href="/scholarships"
+              className="underline underline-offset-2 hover:text-ink"
+            >
+              scholarships for studying in Australia
+            </Link>
+            , including national government schemes.
+          </p>
         </ProfileSection>
       )}
 
@@ -289,8 +430,25 @@ export default async function UniversityProfilePage({
         </ProfileSection>
       )}
 
+      <ProfileSection title="How to apply">
+        <HowToApply
+          markdown={university.how_to_apply}
+          applyUrl={university.apply_url}
+          universityName={university.name}
+        />
+      </ProfileSection>
+
       {deadlines.length > 0 && (
-        <ProfileSection title="All deadlines">
+        <ProfileSection title="Application deadlines">
+          {deadlines.every((d) => d.is_rolling) && (
+            <p className="mb-3 font-body text-sm text-slate">
+              {university.name} assesses international applications on a rolling
+              basis rather than by a single fixed date. Apply as early as you
+              can: places in popular courses fill, and you need time afterward
+              for the offer, Confirmation of Enrolment, and Student visa before
+              your intake starts.
+            </p>
+          )}
           <div className="overflow-hidden rounded-md border border-ink/10 bg-paper">
             {deadlines.map((d, i) => {
               const status = deadlineBadgeStatus(d.deadline_date, d.is_rolling);
@@ -323,7 +481,57 @@ export default async function UniversityProfilePage({
         </ProfileSection>
       )}
 
-      <ProfileSection title="Sources">
+      {(relatedUniversities.length > 0 || university.country?.code === "AU") && (
+        <ProfileSection title="Related">
+          {relatedUniversities.length > 0 && (
+            <>
+              <h3 className="mb-2 font-body text-xs font-semibold tracking-wide text-slate uppercase">
+                Similar universities
+              </h3>
+              <ul className="mb-5 grid gap-2 sm:grid-cols-2">
+                {relatedUniversities.map((u) => (
+                  <li key={u.slug}>
+                    <Link
+                      href={`/universities/${u.slug}`}
+                      className="group flex flex-col gap-0.5 rounded-xl border border-ink/10 bg-ink/[0.02] px-4 py-3 transition-all duration-150 hover:-translate-y-0.5 hover:border-status-open/30"
+                    >
+                      <span className="font-body text-sm font-medium text-ink group-hover:underline">
+                        {u.name}
+                      </span>
+                      <span className="font-utility text-xs text-slate">
+                        {u.city}
+                        {u.tuition_international != null &&
+                          ` · from ${formatCurrency(u.tuition_international, u.currency ?? "AUD")}/yr`}
+                      </span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
+          {university.country?.code === "AU" && (
+            <>
+              <h3 className="mb-2 font-body text-xs font-semibold tracking-wide text-slate uppercase">
+                Guides
+              </h3>
+              <ul className="grid gap-2 sm:grid-cols-2">
+                {AU_RELATED_GUIDES.map((g) => (
+                  <li key={g.slug}>
+                    <Link
+                      href={`/guides/${g.slug}`}
+                      className="block rounded-xl border border-ink/10 bg-ink/[0.02] px-4 py-3 font-body text-sm font-medium text-ink transition-all duration-150 hover:-translate-y-0.5 hover:border-status-open/30 hover:underline"
+                    >
+                      {g.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
+        </ProfileSection>
+      )}
+
+      <ProfileSection title="Sources & verification">
         <div className="flex items-start gap-2 rounded-xl bg-status-open/5 px-4 py-3">
           <CheckBadgeIcon className="mt-0.5 h-4 w-4 flex-shrink-0 text-status-open" />
           <div>
@@ -340,6 +548,20 @@ export default async function UniversityProfilePage({
             )}
           </div>
         </div>
+        <p className="mt-3 font-body text-xs text-slate">
+          Spotted an out-of-date deadline, fee, or requirement?{" "}
+          <a
+            href={`mailto:admin@wheretoapply.xyz?subject=${encodeURIComponent(
+              `Update: ${university.name}`,
+            )}&body=${encodeURIComponent(
+              `Page: /universities/${university.slug}\nWhat's outdated or incorrect:\n\nSource (if you have one):\n`,
+            )}`}
+            className="underline underline-offset-2 hover:text-ink"
+          >
+            Report an update
+          </a>
+          .
+        </p>
       </ProfileSection>
 
       <Link

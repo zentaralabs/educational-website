@@ -8,16 +8,29 @@ export type PublicBlogPostListRow = {
   published_at: string | null;
 };
 
-export async function listPublishedBlogPosts(): Promise<PublicBlogPostListRow[]> {
+export async function listPublishedBlogPosts(opts: { tag?: string } = {}): Promise<
+  PublicBlogPostListRow[]
+> {
   const supabase = createPublicClient(["blog_posts:list"]);
-  const { data, error } = await supabase
+  let query = supabase
     .from("blog_posts")
     .select("slug, title, excerpt, tags, published_at")
     .eq("status", "published")
     .order("published_at", { ascending: false });
 
+  if (opts.tag) query = query.contains("tags", [opts.tag]);
+
+  const { data, error } = await query;
   if (error) throw error;
   return data ?? [];
+}
+
+/** Distinct tags across all published posts, for the /blog filter UI. */
+export async function listPublishedBlogTags(): Promise<string[]> {
+  const rows = await listPublishedBlogPosts();
+  const tags = new Set<string>();
+  for (const r of rows) for (const t of r.tags ?? []) tags.add(t);
+  return [...tags].sort();
 }
 
 export async function listPublishedBlogPostSlugs(): Promise<string[]> {

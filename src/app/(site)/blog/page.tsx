@@ -1,18 +1,37 @@
 import Link from "next/link";
 import { ArrowUpRightIcon } from "@/components/site/icons";
-import { listPublishedBlogPosts } from "@/lib/queries/public-blog-posts";
+import {
+  listPublishedBlogPosts,
+  listPublishedBlogTags,
+} from "@/lib/queries/public-blog-posts";
 
 export const revalidate = 3600;
 
 export const metadata = {
   title: "Blog",
   description:
-    "Timely posts on deadline changes, policy updates, and application news — the fast-moving counterpart to our evergreen guides.",
+    "Timely posts on deadline changes, policy updates, and application news, the fast-moving counterpart to our evergreen guides.",
   alternates: { canonical: "/blog" },
 };
 
-export default async function BlogIndexPage() {
-  const posts = await listPublishedBlogPosts();
+const TAG_LABELS: Record<string, string> = {
+  "what-we-are-watching": "What we're watching",
+};
+
+function tagLabel(tag: string) {
+  return TAG_LABELS[tag] ?? tag.replace(/-/g, " ");
+}
+
+export default async function BlogIndexPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ tag?: string }>;
+}) {
+  const { tag } = await searchParams;
+  const [posts, tags] = await Promise.all([
+    listPublishedBlogPosts({ tag }),
+    listPublishedBlogTags(),
+  ]);
 
   return (
     <main className="mx-auto w-full max-w-3xl px-6 py-12">
@@ -23,10 +42,47 @@ export default async function BlogIndexPage() {
         Deadline changes, policy updates, and application news, as they happen.
       </p>
 
+      {tags.length > 0 && (
+        <div className="mt-6 flex flex-wrap gap-2">
+          <Link
+            href="/blog"
+            className={`rounded-full border px-3 py-1 font-utility text-xs transition-colors ${
+              !tag
+                ? "border-status-open bg-status-open/10 text-ink"
+                : "border-ink/15 text-slate hover:border-status-open/40"
+            }`}
+          >
+            All
+          </Link>
+          {tags.map((t) => (
+            <Link
+              key={t}
+              href={`/blog?tag=${encodeURIComponent(t)}`}
+              className={`rounded-full border px-3 py-1 font-utility text-xs transition-colors ${
+                tag === t
+                  ? "border-status-open bg-status-open/10 text-ink"
+                  : "border-ink/15 text-slate hover:border-status-open/40"
+              }`}
+            >
+              {tagLabel(t)}
+            </Link>
+          ))}
+        </div>
+      )}
+
+      {tag === "what-we-are-watching" && (
+        <p className="mt-5 rounded-xl border border-status-pending/30 bg-status-pending/5 px-4 py-3 font-body text-sm text-slate">
+          These posts are analysis, not reporting. Each one lays out a change we
+          think is coming, the evidence for it, and how confident we are. Nothing
+          here is confirmed government policy until we say it is and cite the
+          source.
+        </p>
+      )}
+
       {posts.length === 0 ? (
         <div className="mt-8 rounded-2xl border border-dashed border-ink/15 px-6 py-10 text-center">
           <p className="font-body text-base text-slate">
-            No posts published yet — check back soon, or browse the{" "}
+            No posts here yet, browse the{" "}
             <Link href="/guides" className="text-status-open underline underline-offset-2">
               evergreen guides
             </Link>{" "}

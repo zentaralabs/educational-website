@@ -11,9 +11,14 @@ export async function createScholarship(
   supabase: SupabaseClient<Database>,
   input: Pick<Database["public"]["Tables"]["scholarships"]["Insert"], "name" | "scope">,
 ): Promise<string> {
+  const slug = input.name
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
   const { data, error } = await supabase
     .from("scholarships")
-    .insert({ ...input, status: "draft" })
+    .insert({ ...input, slug: slug || null, status: "draft" })
     .select("id")
     .single();
   if (error) throw error;

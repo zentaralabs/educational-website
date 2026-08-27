@@ -1,0 +1,571 @@
+import pg from "pg";
+import fs from "fs";
+
+const env = Object.fromEntries(
+  fs
+    .readFileSync(".env.local", "utf8")
+    .split("\n")
+    .filter((l) => l.includes("="))
+    .map((l) => {
+      const i = l.indexOf("=");
+      return [l.slice(0, i), l.slice(i + 1)];
+    }),
+);
+
+const AUTHOR_ID = "6e1c0e5b-ed26-497c-a09c-e9539c6761e8"; // Roman Lama
+const TODAY = "2026-08-27";
+const HOMEAFFAIRS = "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing";
+const STUDYAUS = "https://www.studyaustralia.gov.au/en/plan-your-move/your-guide-to-visas";
+
+const visas = [
+  {
+    slug: "student-500",
+    code: "500",
+    name: "Student visa",
+    category: "student",
+    stream: null,
+    short_description:
+      "Lets you study full-time in a registered course in Australia, and work up to 48 hours a fortnight while your course is running.",
+    summary:
+      "The subclass 500 is the visa nearly every international student in Australia holds. It covers one enrolment in a CRICOS-registered course, lasts for the length of that course plus a short buffer, and lets you bring family members. You must stay enrolled, keep adequate health cover, and satisfy the Genuine Student requirement.",
+    is_points_tested: false,
+    min_points: null,
+    stay_period: "Up to 5 years, matched to your course length",
+    leads_to_pr: false,
+    pr_pathway:
+      "The student visa itself is temporary and gives no direct PR entitlement. The common route is to finish an eligible qualification, move onto a subclass 485 Temporary Graduate visa, gain skilled work experience, and then apply for a 189, 190, or 491. Studying in a regional area can add points and open regional nomination streams.",
+    base_application_charge:
+      "AUD 2,000, rising to AUD 2,500 on 1 July 2026",
+    processing_time: "Most decisions in 1 to 4 months, varies by country and course",
+    age_limit: "No upper age limit; applicants under 18 need welfare arrangements",
+    english_requirement:
+      "Typically IELTS 5.5 overall (or equivalent) for direct entry, lower with a packaged English course; providers set their own higher bars",
+    work_experience_requirement: null,
+    occupation_list: null,
+    eligibility:
+      "You are likely eligible if you:\n\n- Hold a Confirmation of Enrolment (CoE) in a CRICOS-registered course\n- Meet the Genuine Student requirement, which replaced the Genuine Temporary Entrant test in March 2024\n- Have enough money for tuition, travel, and living costs (the living-cost figure is set by Home Affairs and is reviewed regularly)\n- Hold Overseas Student Health Cover for the full visa period\n- Meet health and character requirements",
+    conditions:
+      "Common student visa conditions:\n\n- **8105** limits work to 48 hours per fortnight while your course is in session. Work is unlimited during scheduled breaks, and postgraduate research students are exempt once their course has started.\n- **8202** requires you to stay enrolled, maintain satisfactory attendance, and make satisfactory academic progress.\n- **8501** requires you to keep health insurance for the whole stay.\n- **8516** requires you to keep meeting the circumstances you were granted the visa under.",
+    content:
+      "## What the subclass 500 covers\n\nOne student visa covers one primary course of study, plus any pre-requisite courses packaged with it. If you change to a course at a lower AQF level than the one you were granted the visa for, you generally need a new visa.\n\n## Working on a student visa\n\nYou can start working once your course begins, not before. The 48-hour fortnightly cap applies while your course is in session. Hours worked in a registered course's mandatory work placement do not count toward the cap.\n\n## Bringing family\n\nYou can include your partner and dependent children. Family members over school age who want to work face the same 48-hour cap, or no cap if you are studying a masters or doctorate.\n\n## How long it lasts\n\nFor courses longer than 10 months finishing in November or December, the visa usually runs to 15 March the next year. Shorter courses get a one to three month buffer after the course end date.\n\n## Common reasons applications fail\n\nThin Genuine Student statements, unexplained gaps in study history, funds that appear only days before applying, and course choices that do not build on previous study are the usual culprits.",
+    source_urls: [
+      `${STUDYAUS}/student-visa-subclass-500`,
+      "https://www.studyaustralia.gov.au/en/plan-your-move/genuine-student-requirement",
+    ],
+  },
+  {
+    slug: "temporary-graduate-485",
+    code: "485",
+    name: "Temporary Graduate visa",
+    category: "graduate",
+    stream: "Post-Higher Education Work and Post-Vocational Education Work",
+    short_description:
+      "Post-study work visa for recent graduates of Australian qualifications. Full work rights, no employer sponsor needed.",
+    summary:
+      "The subclass 485 gives graduates of eligible Australian qualifications a few years of unrestricted work rights so they can build the skilled experience that skilled-migration visas require. It has two streams: Post-Higher Education Work for bachelor degree level and above, and Post-Vocational Education Work for diplomas and trade qualifications.",
+    is_points_tested: false,
+    min_points: null,
+    stay_period:
+      "18 months to 3 years depending on qualification level; longer for some passport holders",
+    leads_to_pr: false,
+    pr_pathway:
+      "The 485 is a bridge, not a destination. Use the time on it to reach one year of skilled employment in your nominated occupation, get a positive skills assessment, and lodge an Expression of Interest for a 189, 190, or 491. Regional study and work while on the 485 can add points.",
+    base_application_charge: "About AUD 2,235 for the primary applicant",
+    processing_time: "Commonly 4 to 12 months",
+    age_limit:
+      "Under 35 at time of application; under 50 for masters by research and PhD graduates, and for Hong Kong and British National (Overseas) passport holders",
+    english_requirement:
+      "Competent English, usually IELTS 6.0 overall with no band below 5.0, or equivalent; some exemptions apply",
+    work_experience_requirement: null,
+    occupation_list:
+      "Post-Higher Education Work stream no longer requires a nominated occupation on a skills list; Post-Vocational Education Work stream does",
+    eligibility:
+      "You are likely eligible if you:\n\n- Held a student visa in the last 6 months\n- Completed a CRICOS-registered qualification that meets the Australian study requirement (at least 2 academic years of study in Australia)\n- Are under the age limit for your stream\n- Have competent English\n- Applied for an Australian Federal Police check and hold health insurance",
+    conditions:
+      "The 485 carries no work-hour limit and no employer restriction. You are expected to keep health cover for the visa period. It cannot usually be applied for onshore more than once for the same stream.",
+    content:
+      "## How long you can stay\n\n- Bachelor degree, including honours: 2 years\n- Masters by coursework: 2 years\n- Masters by research: 3 years\n- Doctoral degree: 3 years\n- Diploma or trade qualification (Post-Vocational stream): 18 months\n\nGraduates who studied and live in designated regional areas have in past years been offered a further one to two year extension. Indian nationals have separate arrangements under a bilateral agreement.\n\n## Why the experience you get here matters\n\nSkilled visa points and skills assessments both reward post-qualification skilled work. A year of relevant full-time work on a 485 is often the difference between an EOI that gets invited and one that does not.\n\n## Recent tightening\n\nThe age limit dropped from 50 to 35 for most applicants, stay periods were trimmed from the temporary pandemic-era extensions, and English requirements rose. Check the current settings before you plan around this visa.",
+    source_urls: [
+      `${STUDYAUS}/temporary-graduate-visa-subclass-485`,
+      `${HOMEAFFAIRS}/temporary-graduate-485`,
+    ],
+  },
+  {
+    slug: "skilled-independent-189",
+    code: "189",
+    name: "Skilled Independent visa",
+    category: "skilled",
+    stream: "Points-tested",
+    short_description:
+      "Permanent residence for skilled workers who are not sponsored by an employer, state, or family member. Invitation only.",
+    summary:
+      "The subclass 189 is the most sought-after skilled visa because it is permanent from day one and ties you to no employer, state, or region. You submit an Expression of Interest through SkillSelect, and the Department invites the highest-ranked candidates in periodic rounds. Since the 2025 to 2026 program year these rounds run roughly quarterly rather than monthly.",
+    is_points_tested: true,
+    min_points: 65,
+    stay_period: "Permanent",
+    leads_to_pr: true,
+    pr_pathway:
+      "The 189 is permanent residence. After meeting residence requirements you can apply for Australian citizenship. There is no provisional stage.",
+    base_application_charge:
+      "From about AUD 4,770 for the primary applicant, indexed each 1 July",
+    processing_time: "Roughly 5 to 12 months after invitation, occupation dependent",
+    age_limit: "Under 45 at the date of invitation",
+    english_requirement:
+      "Competent English (IELTS 6 equivalent) to qualify; Proficient (7) and Superior (8) add points",
+    work_experience_requirement:
+      "None mandatory, but skilled experience is where most points come from",
+    occupation_list: "MLTSSL, being replaced progressively by the Core Skills Occupation List",
+    eligibility:
+      "To be invited you generally need:\n\n- An occupation on the relevant skilled list\n- A positive skills assessment from the assessing authority for that occupation\n- At least 65 points on the points test (the floor to be invited, not a guarantee)\n- Competent English or better\n- To be under 45 when invited\n- Health and character clearance",
+    conditions:
+      "No ongoing visa conditions beyond the standard requirement to be of good character. You are free to live and work anywhere in Australia.",
+    content:
+      "## The points test\n\nPoints come from age, English level, skilled employment inside and outside Australia, qualifications, Australian study, study in a regional area, a Professional Year, credentialled community language, a skilled partner, and state or family sponsorship for the 190 and 491. The pass mark to submit is 65, but in practice recent 189 rounds have invited well above that for most occupations.\n\n## How invitation rounds work\n\nYou lodge an Expression of Interest, it sits in a pool ranked by points then by the date you reached that score, and the Department issues invitations in rounds. Trades occupations have recently been invited near the floor while ICT and accounting have needed 90 or more. See the [invitation rounds history](/visas/invitation-rounds) for the pattern.\n\n## If your score is not competitive\n\nMost people lift their score with more skilled experience, a higher English test result, a partner skills assessment, or by pivoting to the 190 or 491 where state nomination adds 5 or 15 points and cut-offs are usually lower.",
+    source_urls: [
+      `${HOMEAFFAIRS}/skilled-independent-189`,
+      "https://immi.homeaffairs.gov.au/visas/working-in-australia/skillselect/invitation-rounds",
+    ],
+  },
+  {
+    slug: "skilled-nominated-190",
+    code: "190",
+    name: "Skilled Nominated visa",
+    category: "skilled",
+    stream: "Points-tested",
+    short_description:
+      "Permanent residence for skilled workers nominated by an Australian state or territory. Adds 5 points.",
+    summary:
+      "The subclass 190 is permanent residence for skilled workers nominated by a state or territory government. Nomination adds 5 points and, more importantly, gives you access to state-specific occupation lists that are often broader than the national list. In return you commit to living and working in that state, usually for two years.",
+    is_points_tested: true,
+    min_points: 65,
+    stay_period: "Permanent",
+    leads_to_pr: true,
+    pr_pathway:
+      "The 190 is permanent residence. The commitment to your nominating state is a moral and declared one rather than a hard visa condition, but breaking it early can affect future dealings and any family members' applications.",
+    base_application_charge:
+      "From about AUD 4,770 for the primary applicant, plus a separate state nomination fee in some states",
+    processing_time: "Roughly 5 to 12 months after invitation",
+    age_limit: "Under 45 at the date of invitation",
+    english_requirement: "Competent English to qualify; higher levels add points",
+    work_experience_requirement: "Set by each state's nomination criteria",
+    occupation_list: "State and territory lists, drawn from the national skilled lists",
+    eligibility:
+      "On top of the standard skilled requirements (skills assessment, under 45, competent English, 65 points including the nomination), you must meet the current criteria of the state you apply to. These change through the year and often include a minimum period already living in the state, a job offer, or work in a priority sector.",
+    conditions:
+      "No hard residence condition on the visa, but you declare an intention to live in the nominating state and states track outcomes.",
+    content:
+      "## Why the 190 is often easier than the 189\n\nStates set their own lists and thresholds. An occupation that needs 95 points for a 189 invitation might get state nomination at 70 including the 5-point bonus. States also nominate for occupations that are not viable for the 189 at all.\n\n## How state nomination works\n\nYou usually lodge a state-specific Expression of Interest (some states use SkillSelect only, others have their own portal), wait for the state to select you, receive a formal invitation, then have 60 days to apply for the visa. Allocations for the 2025 to 2026 program year total 12,850 places for the 190 nationally.\n\n## The regional alternative\n\nIf you cannot meet any state's 190 criteria, the 491 covers regional areas of the same states with a lower bar and a 15-point bonus, then converts to permanent residence through the 191.",
+    source_urls: [
+      `${HOMEAFFAIRS}/skilled-nominated-190`,
+      "https://www.australianmigrationlawyers.com.au/news-and-updates/skilled-migration-allocations-2025-26",
+    ],
+  },
+  {
+    slug: "skilled-work-regional-491",
+    code: "491",
+    name: "Skilled Work Regional (Provisional) visa",
+    category: "skilled",
+    stream: "State or territory nominated, and family sponsored",
+    short_description:
+      "Five-year provisional visa for skilled workers in regional Australia. Adds 15 points and leads to PR through the 191.",
+    summary:
+      "The subclass 491 is a five-year provisional visa for skilled workers who will live and work in a designated regional area, which is everywhere in Australia except Sydney, Melbourne, and Brisbane. Regional nomination or eligible family sponsorship adds 15 points, the largest single points boost available. After three years of meeting its conditions you move to the permanent 191.",
+    is_points_tested: true,
+    min_points: 65,
+    stay_period: "5 years provisional",
+    leads_to_pr: true,
+    pr_pathway:
+      "Live in a designated regional area and have taxable income at or above a set threshold (currently AUD 53,900) for at least 3 years while on the 491, then apply for the subclass 191 permanent visa. Time on a 494 also counts toward the 191.",
+    base_application_charge: "From about AUD 4,770 for the primary applicant",
+    processing_time: "Roughly 6 to 12 months after invitation",
+    age_limit: "Under 45 at the date of invitation",
+    english_requirement: "Competent English to qualify; higher levels add points",
+    work_experience_requirement: "Set by the nominating state or covered by family sponsorship rules",
+    occupation_list: "Regional occupation lists, broader than the 189 list",
+    eligibility:
+      "You need a positive skills assessment, an occupation on the relevant regional list, 65 points including the 15-point regional bonus, competent English, to be under 45 at invitation, and either:\n\n- Nomination by a state or territory government for one of its regional areas, or\n- Sponsorship by an eligible relative who lives in a designated regional area",
+    conditions:
+      "Condition **8579** requires you to live, work, and study only in a designated regional area. Condition **8578** requires you to tell Home Affairs within 14 days if your address, employer, or other circumstances change. Breaching these can end the visa and block the 191.",
+    content:
+      "## What counts as regional\n\nEverywhere except the Greater Sydney, Greater Melbourne, and Greater Brisbane metropolitan areas. Perth, Adelaide, the Gold Coast, Canberra, Hobart, Darwin, Newcastle, and Wollongong are all regional for this visa.\n\n## The 15 points\n\nRegional nomination or family sponsorship is worth 15 points, compared with 5 for the 190. That often turns an uncompetitive 189 profile into an easy invitation.\n\n## Getting to permanent residence\n\nThe 191 opened in November 2022. You need three years on the 491 with regional residence and three years of income above the threshold, evidenced by ATO notices of assessment. You do not need to still be working in your nominated occupation.\n\n## Family-sponsored stream\n\nIf a parent, sibling, or child who is a settled Australian citizen or permanent resident lives in a regional area, they can sponsor you without any state involvement. Invitation rounds for this stream are small, often a few hundred places.",
+    source_urls: [
+      `${HOMEAFFAIRS}/skilled-work-regional-provisional-491`,
+      "https://immi.homeaffairs.gov.au/visas/working-in-australia/skillselect/invitation-rounds",
+    ],
+  },
+  {
+    slug: "permanent-residence-skilled-regional-191",
+    code: "191",
+    name: "Permanent Residence (Skilled Regional) visa",
+    category: "skilled",
+    stream: null,
+    short_description:
+      "The permanent visa that 491 and 494 holders move to after three years of living and working in regional Australia.",
+    summary:
+      "The subclass 191 is the permanent residence stage for people who spent three years on a 491 or 494 provisional visa in regional Australia. It is not points-tested and not invitation-based. If you held the provisional visa for three years, lived regionally, and had income above the threshold for three years, you qualify.",
+    is_points_tested: false,
+    min_points: null,
+    stay_period: "Permanent",
+    leads_to_pr: true,
+    pr_pathway:
+      "The 191 is the permanent visa. After meeting residence requirements you can apply for citizenship.",
+    base_application_charge: "About AUD 335 for the primary applicant",
+    processing_time: "Commonly 3 to 8 months",
+    age_limit: "No age limit at this stage",
+    english_requirement: "No new English test required at the 191 stage",
+    work_experience_requirement:
+      "No occupation requirement; the test is regional residence plus three years of income above the threshold",
+    occupation_list: null,
+    eligibility:
+      "You are eligible if you:\n\n- Have held a subclass 491 or 494 visa (or a combination) for at least 3 years\n- Complied with the conditions of that visa, meaning you lived, worked, and studied only in designated regional areas\n- Had taxable income at or above the specified threshold for at least 3 income years while holding the provisional visa\n- Meet health and character requirements",
+    conditions:
+      "No ongoing conditions. The 191 is a full permanent visa with the same rights as a 189 or 190.",
+    content:
+      "## The income test\n\nYou must show three ATO notices of assessment with taxable income at or above the threshold, currently AUD 53,900. The three years do not have to be consecutive, but they must fall within the period you held the provisional visa.\n\n## Living regionally\n\nHome Affairs cross-checks addresses, employer records, and Medicare data. Short trips away are fine; relocating to Sydney, Melbourne, or Brisbane while on the 491 is not, and it will surface at the 191 stage.\n\n## Why the 491 to 191 route is worth considering\n\nRegional nomination adds 15 points and regional lists are broader, so applicants who would wait years for a 189 invitation can often get a 491 quickly, then convert to permanent residence with nothing more than evidence of how they lived.",
+    source_urls: [
+      `${HOMEAFFAIRS}/permanent-residence-skilled-regional-191`,
+    ],
+  },
+  {
+    slug: "skills-in-demand-482",
+    code: "482",
+    name: "Skills in Demand visa",
+    category: "employer-sponsored",
+    stream: "Specialist Skills, Core Skills, and Essential Skills",
+    short_description:
+      "Employer-sponsored work visa, up to 4 years, that replaced the Temporary Skill Shortage visa in December 2024.",
+    summary:
+      "The subclass 482 lets an approved Australian business sponsor a skilled worker for up to four years. It replaced the old Temporary Skill Shortage visa in December 2024 and reduced the work-experience requirement from two years to one. Its three streams are split by salary: Specialist Skills for high earners, Core Skills for occupations on the Core Skills Occupation List, and Essential Skills for lower-paid critical roles (not yet open).",
+    is_points_tested: false,
+    min_points: null,
+    stay_period: "Up to 4 years; 5 years for Hong Kong passport holders",
+    leads_to_pr: true,
+    pr_pathway:
+      "After two years working for your sponsor you can generally be nominated for the permanent subclass 186 Employer Nomination Scheme visa through its Temporary Residence Transition stream. Time on the 482 also counts toward the residence requirement for other pathways.",
+    base_application_charge:
+      "About AUD 3,210 for the primary applicant (Core Skills and Specialist Skills streams)",
+    processing_time: "Often 1 to 5 months once the sponsor and nomination are approved",
+    age_limit: "No age limit for the 482 itself; the 186 transition has one",
+    english_requirement:
+      "Generally IELTS 5.0 overall with no band below 5.0 for Core Skills; exemptions for some passport holders and salary levels",
+    work_experience_requirement:
+      "At least 1 year of full-time relevant experience in the last 5 years",
+    occupation_list: "Core Skills Occupation List (CSOL), introduced December 2024",
+    eligibility:
+      "The employer must first become an approved sponsor and lodge a nomination for a genuine position. You then need:\n\n- One year of relevant full-time work experience in the last five years\n- The required English level for your stream\n- A salary at or above the stream threshold and the market rate for the role\n- Registration or licensing if your occupation needs it\n- Health and character clearance",
+    conditions:
+      "Condition **8607** ties you to working only for your sponsor in the nominated occupation, and gives you a set period (currently 180 consecutive days, up to 365 in total) to find a new sponsor if your employment ends. Condition **8501** requires health cover.",
+    content:
+      "## The three streams\n\n- **Specialist Skills**: salary at or above AUD 141,210, most occupations eligible, faster processing, no occupation list check.\n- **Core Skills**: occupation on the Core Skills Occupation List, salary at or above the Core Skills Income Threshold of AUD 76,515.\n- **Essential Skills**: planned for lower-paid but critical roles under sector agreements, not open to applicants yet.\n\n## What changed from the old 457 and TSS\n\nThe experience bar dropped from two years to one. All streams now count toward permanent residence, removing the old Short-Term stream dead end. Sponsored workers get longer to find a new sponsor after a job loss.\n\n## Employer costs\n\nSponsors pay the Skilling Australians Fund levy, which is a per-year charge that scales with business size, on top of nomination and visa fees. This is a cost to the business, not the worker.",
+    source_urls: [
+      "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skills-in-demand-visa-subclass-482",
+    ],
+  },
+  {
+    slug: "employer-nomination-scheme-186",
+    code: "186",
+    name: "Employer Nomination Scheme visa",
+    category: "employer-sponsored",
+    stream: "Temporary Residence Transition and Direct Entry",
+    short_description:
+      "Permanent residence for skilled workers nominated by their Australian employer.",
+    summary:
+      "The subclass 186 is permanent residence sponsored by an employer. Most people reach it through the Temporary Residence Transition stream after two years on a 482 with the same employer. The Direct Entry stream is for people with a strong skills assessment and three years of experience who have not held a sponsored visa, and is much less commonly granted.",
+    is_points_tested: false,
+    min_points: null,
+    stay_period: "Permanent",
+    leads_to_pr: true,
+    pr_pathway: "The 186 is permanent residence and leads to citizenship after the residence requirement is met.",
+    base_application_charge: "About AUD 4,910 for the primary applicant",
+    processing_time:
+      "Temporary Residence Transition often 6 to 12 months; Direct Entry can be longer",
+    age_limit:
+      "Under 45 at application, with exemptions for high earners, academics, medical practitioners, and some long-term 457 and 482 holders",
+    english_requirement: "Competent English (IELTS 6 equivalent), with exemptions",
+    work_experience_requirement:
+      "Temporary Residence Transition: 2 years on a 482 or TSS with the sponsor. Direct Entry: 3 years of relevant experience plus a skills assessment",
+    occupation_list:
+      "Direct Entry uses the Core Skills Occupation List; Temporary Residence Transition does not check a list",
+    eligibility:
+      "For the common Temporary Residence Transition stream you need:\n\n- Two years of full-time work for your nominating employer on a 482, 457, or TSS visa in the last three years\n- The same nominated occupation as your sponsored visa\n- To be under 45 unless an exemption applies\n- Competent English\n- An employer willing to offer a permanent position at market salary",
+    conditions:
+      "As a permanent visa the 186 carries an obligation to make a genuine effort to commence work with the nominating employer, but no long-term condition tying you to that employer.",
+    content:
+      "## Temporary Residence Transition versus Direct Entry\n\nMost 186 grants are Temporary Residence Transition. The employer has already tested the labour market and sponsored you once, so the permanent nomination is more straightforward. Direct Entry has a harder skills assessment and occupation list check, and employers use it mainly for senior hires they cannot get onshore.\n\n## Age exemptions\n\nApplicants earning above the Fair Work high income threshold for three years, certain academics nominated by universities, and medical practitioners in regional areas can be over 45. Some people who held a 457 on 18 April 2017 also keep the old age rules.\n\n## Timing your application\n\nYou can lodge as soon as you hit two years with the sponsor. Employers often start the nomination a few months earlier so the permanent visa is granted close to when the 482 would have needed renewing.",
+    source_urls: [
+      `${HOMEAFFAIRS}/employer-nomination-scheme-186`,
+    ],
+  },
+  {
+    slug: "skilled-employer-sponsored-regional-494",
+    code: "494",
+    name: "Skilled Employer Sponsored Regional (Provisional) visa",
+    category: "employer-sponsored",
+    stream: "Employer Sponsored",
+    short_description:
+      "Five-year provisional visa for skilled workers sponsored by a regional employer. Leads to PR through the 191.",
+    summary:
+      "The subclass 494 is the employer-sponsored counterpart to the 491. A business in a designated regional area sponsors a skilled worker for five years, the worker must live and work in that region, and after three years they can move to the permanent 191. It requires three years of work experience and a positive skills assessment, more than the 482 asks for.",
+    is_points_tested: false,
+    min_points: null,
+    stay_period: "5 years provisional",
+    leads_to_pr: true,
+    pr_pathway:
+      "Hold the 494 for three years, comply with its regional conditions, and meet the income requirement, then apply for the subclass 191 permanent visa. This is the same permanent stage the 491 feeds into.",
+    base_application_charge: "From about AUD 4,770 for the primary applicant",
+    processing_time: "Commonly 6 to 12 months",
+    age_limit: "Under 45 at application, with limited exemptions",
+    english_requirement: "Competent English (IELTS 6 equivalent)",
+    work_experience_requirement: "At least 3 years of relevant full-time experience",
+    occupation_list: "Regional occupation list for the 494",
+    eligibility:
+      "You need an approved regional employer sponsor, a nominated occupation on the 494 regional list, a positive skills assessment, three years of relevant experience, competent English, and to be under 45. A Regional Certifying Body must confirm the position and salary are genuine.",
+    conditions:
+      "Condition **8578** (notify changes within 14 days) and **8579** (live, work, and study only in a designated regional area) apply, the same as the 491. Breaching them jeopardises the 191.",
+    content:
+      "## 494 versus 491\n\nThe 491 needs no employer but does need state or family nomination and a points score. The 494 needs an employer willing to sponsor and certify the role, but no points test and no SkillSelect invitation. People with a solid job offer in a regional town often find the 494 faster.\n\n## 494 versus 482\n\nBoth are employer-sponsored. The 494 is longer (five years versus four), is explicitly a permanent residence pathway through the 191, and is restricted to regional areas. It asks for three years of experience against the 482's one.\n\n## Getting to the 191\n\nThree years of regional residence and three ATO notices of assessment above the income threshold. Time split across a 491 and a 494 can be combined.",
+    source_urls: [
+      `${HOMEAFFAIRS}/skilled-employer-sponsored-regional-494`,
+    ],
+  },
+  {
+    slug: "partner-visa-820-801",
+    code: "820/801",
+    name: "Partner visa (onshore)",
+    category: "family",
+    stream: "Temporary (820) then Permanent (801)",
+    short_description:
+      "For partners of Australian citizens, permanent residents, and eligible New Zealand citizens who are in Australia. Two stages, one application.",
+    summary:
+      "The onshore partner visa is a two-stage visa applied for in one go. The subclass 820 is granted first and lets you stay, work, and study in Australia while the permanent subclass 801 is assessed, usually about two years after lodgement. You must be married to or in a genuine de facto relationship with your Australian partner.",
+    is_points_tested: false,
+    min_points: null,
+    stay_period: "820 is temporary until 801 is decided; 801 is permanent",
+    leads_to_pr: true,
+    pr_pathway:
+      "The 801 is permanent residence. It is normally granted about two years after the application date, sooner for long-term relationships or where there are children.",
+    base_application_charge:
+      "About AUD 9,095 for the combined 820 and 801 application (one fee covers both stages)",
+    processing_time:
+      "820 stage often 12 to 24 months; 801 stage assessed from roughly 2 years after lodgement",
+    age_limit: "Both partners must be at least 18",
+    english_requirement:
+      "No formal English test, though functional English affects a possible second-instalment charge",
+    work_experience_requirement: null,
+    occupation_list: null,
+    eligibility:
+      "You must:\n\n- Be the spouse or de facto partner of an Australian citizen, permanent resident, or eligible New Zealand citizen\n- Be in a genuine and continuing relationship, living together or not apart on a permanent basis\n- For de facto, generally have been together at least 12 months before applying, unless the relationship is registered or there are compelling circumstances\n- Be sponsored by your partner, who must meet sponsorship and character limits (there are caps on how many times and how often a person can sponsor)",
+    conditions:
+      "The 820 has few conditions and full work rights. You must tell Home Affairs if the relationship ends. Family violence provisions allow the permanent visa to still be granted in some cases where the relationship breaks down after lodgement.",
+    content:
+      "## Evidence of the relationship\n\nHome Affairs assesses four areas: financial aspects, the nature of the household, social recognition, and the nature of the commitment. Joint bank accounts, a shared lease, joint bills, travel together, statements from friends and family, and a consistent relationship history all matter.\n\n## The two stages\n\nYou lodge both the 820 and 801 together and pay one fee. The 820 is decided first. About two years after you lodged, Home Affairs asks for updated evidence and decides the 801. If your relationship is long-standing at lodgement, the 801 can be granted at the same time as the 820.\n\n## Onshore versus offshore\n\nIf you are in Australia when you apply, you use the 820 and 801. If you are outside Australia, you use the 309 and 100. The relationship test is the same.",
+    source_urls: [
+      `${HOMEAFFAIRS}/partner-onshore-820-801`,
+    ],
+  },
+  {
+    slug: "partner-visa-309-100",
+    code: "309/100",
+    name: "Partner visa (offshore)",
+    category: "family",
+    stream: "Provisional (309) then Permanent (100)",
+    short_description:
+      "The offshore version of the partner visa, for partners who are outside Australia when they apply.",
+    summary:
+      "The subclass 309 and 100 are the offshore partner visas. You must be outside Australia when the 309 is granted. It works the same way as the onshore 820 and 801: one application, one fee, a provisional visa first, then permanent residence through the 100 about two years after lodgement.",
+    is_points_tested: false,
+    min_points: null,
+    stay_period: "309 is provisional; 100 is permanent",
+    leads_to_pr: true,
+    pr_pathway:
+      "The subclass 100 is permanent residence, generally granted around two years after the application date, earlier for established relationships.",
+    base_application_charge: "About AUD 9,095 for the combined 309 and 100 application",
+    processing_time: "309 stage commonly 12 to 24 months",
+    age_limit: "Both partners must be at least 18",
+    english_requirement: "No formal test; functional English affects a possible second charge",
+    work_experience_requirement: null,
+    occupation_list: null,
+    eligibility:
+      "The same relationship requirements as the onshore partner visa apply: a genuine and continuing married or de facto relationship with an Australian citizen, permanent resident, or eligible New Zealand citizen who sponsors you. The key difference is that you must be outside Australia when the 309 is decided, though you can be granted a visitor visa and travel while you wait.",
+    conditions:
+      "The 309 allows you to enter Australia, work, and study. You must notify Home Affairs of relationship changes and, for the 100, be in or outside Australia as directed.",
+    content:
+      "## Being outside Australia for the grant\n\nYou apply from outside Australia and must be offshore when the 309 is granted. Many applicants travel back and forth on visitor visas during processing. Being onshore on a bridging visa is not compatible with a 309 grant.\n\n## Moving between onshore and offshore\n\nIf your circumstances change and you end up living in Australia during processing, you may need to withdraw and lodge an onshore 820 instead, paying a second fee. Get advice before doing this.\n\n## Timeline\n\nProcessing times for the offshore partner visa have historically run longer than the onshore version, though the gap has narrowed. Plan for one to two years for the provisional stage.",
+    source_urls: [
+      `${HOMEAFFAIRS}/partner-offshore-309-100`,
+    ],
+  },
+  {
+    slug: "visitor-visa-600",
+    code: "600",
+    name: "Visitor visa",
+    category: "visitor",
+    stream: "Tourist, Sponsored Family, Business Visitor, and others",
+    short_description:
+      "Short-term visa for tourism, visiting family, or business meetings. No work allowed.",
+    summary:
+      "The subclass 600 is the main visitor visa for people who are not eligible for an ETA or eVisitor. It is granted for stays of 3, 6, or 12 months, sometimes as a multi-year multiple-entry visa. You cannot work on it, and study is limited to 3 months.",
+    is_points_tested: false,
+    min_points: null,
+    stay_period: "Usually 3, 6, or 12 months per entry",
+    leads_to_pr: false,
+    pr_pathway:
+      "None. The visitor visa is strictly temporary. Many visitor visas carry condition 8503, which blocks applying for most other visas while in Australia.",
+    base_application_charge:
+      "From about AUD 200 for the Tourist stream, higher for other streams",
+    processing_time: "From a few days to several weeks depending on stream and country",
+    age_limit: "None",
+    english_requirement: "None",
+    work_experience_requirement: null,
+    occupation_list: null,
+    eligibility:
+      "You must show that you:\n\n- Genuinely intend to stay temporarily\n- Have enough money for the visit\n- Have an incentive to return home, such as a job, family, or property\n- Meet health and character requirements\n\nThe Sponsored Family stream requires an Australian relative to sponsor you and may require a bond.",
+    conditions:
+      "Condition **8101** prohibits work. Condition **8201** limits study to 3 months. Condition **8503** (no further stay) is often imposed and prevents applying for another visa onshore. Condition **8558** limits you to no more than 12 months in any 18-month period for long-validity visas.",
+    content:
+      "## Which visitor visa applies to you\n\nPassport holders from many countries use the free eVisitor (subclass 651) or the low-cost ETA (subclass 601) instead. The 600 is for everyone else, and for visits that need a longer stay or a specific stream.\n\n## The 8503 condition\n\nIf your visa says 'no further stay', you generally cannot apply for a student, partner, or skilled visa while in Australia. Waivers are granted only for major, unforeseen changes in circumstances.\n\n## Visiting while a partner visa is processed\n\nOffshore partner visa (309) applicants often hold a 600 to spend time in Australia during processing, as long as the 600 does not carry 8503.",
+    source_urls: [
+      `${HOMEAFFAIRS}/visitor-600`,
+    ],
+  },
+];
+
+// --- Invitation rounds (SkillSelect), most recent first. Figures cross-checked
+// against reputable migration-practice sources; official Home Affairs page is
+// the primary reference but blocks automated access. Projected rows flagged.
+const rounds = [
+  {
+    round_date: "2025-11-13",
+    visa_code: "189",
+    stream: "Points-tested",
+    invitations_issued: 10000,
+    min_points: 65,
+    occupation_notes:
+      "Trades from 65; health and education from ~80; engineering ~85; ICT and accounting 90 and above",
+    program_year: "2025-26",
+    notes:
+      "One of the largest 189 rounds of the program year. 189 rounds moved to a roughly quarterly cycle for 2025-26.",
+    is_estimated: false,
+    source_url:
+      "https://www.visaverge.com/news/australia-2025-26-skilled-migration-nov-13-subclass-189-invitation/",
+  },
+  {
+    round_date: "2025-08-21",
+    visa_code: "189",
+    stream: "Points-tested",
+    invitations_issued: 6887,
+    min_points: 65,
+    occupation_notes:
+      "Trades near 65; most professional occupations 75 and above; ICT and accounting ~90",
+    program_year: "2025-26",
+    notes: "First 189 round of the 2025-26 program year.",
+    is_estimated: false,
+    source_url:
+      "https://emigratelawyers.com.au/blog/subclass-189-and-491-invitation-rounds/",
+  },
+  {
+    round_date: "2025-08-21",
+    visa_code: "491",
+    stream: "Family Sponsored",
+    invitations_issued: 150,
+    min_points: 65,
+    occupation_notes: null,
+    program_year: "2025-26",
+    notes: "Family Sponsored 491 stream only. State-nominated 491 places are managed separately by each state through the month.",
+    is_estimated: false,
+    source_url:
+      "https://emigratelawyers.com.au/blog/subclass-189-and-491-invitation-rounds/",
+  },
+  {
+    round_date: "2026-03-01",
+    visa_code: "189",
+    stream: "Points-tested",
+    invitations_issued: 9000,
+    min_points: 70,
+    occupation_notes:
+      "Projection based on the quarterly cadence and 2025-26 allocations. Actual date and cut-offs not announced in advance.",
+    program_year: "2025-26",
+    notes:
+      "Projected round. Home Affairs has signalled a late-February to mid-March 189 round. Treat the score as indicative only.",
+    is_estimated: true,
+    source_url:
+      "https://themigration.com.au/blog/189-visa-invitation-rounds",
+  },
+  {
+    round_date: "2026-05-15",
+    visa_code: "189",
+    stream: "Points-tested",
+    invitations_issued: 7000,
+    min_points: 70,
+    occupation_notes: "Projection only.",
+    program_year: "2025-26",
+    notes:
+      "Projected final 189 round of the program year, expected May or June 2026.",
+    is_estimated: true,
+    source_url:
+      "https://themigration.com.au/blog/189-visa-invitation-rounds",
+  },
+];
+
+const client = new pg.Client({
+  connectionString: env.DATABASE_URL,
+  ssl: { rejectUnauthorized: false },
+});
+
+try {
+  await client.connect();
+
+  const codeToId = {};
+  for (const v of visas) {
+    const cols = Object.keys(v);
+    const vals = cols.map((c) => v[c]);
+    const placeholders = cols.map((_, i) => `$${i + 1}`);
+    const res = await client.query(
+      `insert into visa_subclasses (${cols.join(", ")}, status, author_id, last_verified_at)
+       values (${placeholders.join(", ")}, 'published', $${cols.length + 1}, $${cols.length + 2})
+       on conflict (slug) do update set
+         ${cols.filter((c) => c !== "slug").map((c) => `${c} = excluded.${c}`).join(", ")},
+         status = 'published', last_verified_at = excluded.last_verified_at, updated_at = now()
+       returning id, code`,
+      [...vals, AUTHOR_ID, TODAY],
+    );
+    codeToId[res.rows[0].code] = res.rows[0].id;
+    console.log("visa", res.rows[0].code, res.rows[0].id);
+  }
+
+  // Rounds have no natural unique key and are fully seed-managed for now,
+  // so clear and re-insert to keep this script idempotent.
+  await client.query("delete from invitation_rounds");
+
+  for (const r of rounds) {
+    const subclassId = codeToId[r.visa_code] ?? null;
+    await client.query(
+      `insert into invitation_rounds
+        (round_date, visa_code, visa_subclass_id, stream, invitations_issued, min_points,
+         occupation_notes, program_year, notes, is_estimated, status, last_verified_at, source_url)
+       values ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,'published',$11,$12)`,
+      [
+        r.round_date,
+        r.visa_code,
+        subclassId,
+        r.stream,
+        r.invitations_issued,
+        r.min_points,
+        r.occupation_notes,
+        r.program_year,
+        r.notes,
+        r.is_estimated,
+        TODAY,
+        r.source_url,
+      ],
+    );
+    console.log("round", r.round_date, r.visa_code);
+  }
+
+  console.log("done");
+} catch (e) {
+  console.error("ERR", e.message);
+  process.exit(1);
+} finally {
+  await client.end();
+}

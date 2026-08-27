@@ -235,6 +235,79 @@ export async function listPublishedUniversityOptions(): Promise<PublicUniversity
   );
 }
 
+export type FeaturedUniversity = {
+  slug: string;
+  name: string;
+  city: string | null;
+  tuition_international: number | null;
+  currency: string | null;
+};
+
+/**
+ * A small curated set of well-known universities for the homepage
+ * "explore" strip. Falls back to alphabetical if a curated slug isn't
+ * published yet, so the strip is never empty.
+ */
+export async function listFeaturedUniversities(
+  limit = 6,
+): Promise<FeaturedUniversity[]> {
+  const supabase = createPublicClient(["universities:list"]);
+  const curated = [
+    "university-of-melbourne",
+    "university-of-sydney",
+    "unsw-sydney",
+    "australian-national-university",
+    "monash-university",
+    "university-of-queensland",
+  ];
+  const cols = "slug, name, city, tuition_international, currency";
+
+  const { data, error } = await supabase
+    .from("universities")
+    .select(`${cols}, country:countries!inner(is_launched)`)
+    .eq("status", "published")
+    .eq("country.is_launched", true)
+    .in("slug", curated);
+  if (error) throw error;
+
+  let rows = (data ?? []) as unknown as (FeaturedUniversity & {
+    country: unknown;
+  })[];
+
+  if (rows.length < limit) {
+    const { data: fill, error: fillErr } = await supabase
+      .from("universities")
+      .select(`${cols}, country:countries!inner(is_launched)`)
+      .eq("status", "published")
+      .eq("country.is_launched", true)
+      .order("name")
+      .limit(limit);
+    if (fillErr) throw fillErr;
+    const seen = new Set(rows.map((r) => r.slug));
+    for (const r of (fill ?? []) as unknown as (FeaturedUniversity & {
+      country: unknown;
+    })[]) {
+      if (!seen.has(r.slug)) rows.push(r);
+    }
+  }
+
+  // Preserve curated order, then whatever filled in.
+  rows = rows
+    .sort(
+      (a, b) =>
+        (curated.indexOf(a.slug) + 1 || 99) - (curated.indexOf(b.slug) + 1 || 99),
+    )
+    .slice(0, limit);
+
+  return rows.map(({ slug, name, city, tuition_international, currency }) => ({
+    slug,
+    name,
+    city,
+    tuition_international,
+    currency,
+  }));
+}
+
 export type PublicDeadlineForUniversity = {
   id: string;
   deadline_date: string;
@@ -262,8 +335,53 @@ export async function getPublishedDeadlinesForUniversity(
   return (data ?? []) as unknown as PublicDeadlineForUniversity[];
 }
 
+export type RelatedUniversity = {
+  slug: string;
+  name: string;
+  city: string | null;
+  tuition_international: number | null;
+  currency: string | null;
+};
+
+/**
+ * "You may also be interested in" links for a university profile —
+ * same launched country, closest international tuition, so the suggestions
+ * are genuinely comparable rather than random. Falls back to same-country
+ * alphabetical when tuition isn't set.
+ */
+export async function getRelatedUniversities(
+  currentSlug: string,
+  countryId: number,
+  tuitionInternational: number | null,
+  limit = 4,
+): Promise<RelatedUniversity[]> {
+  const supabase = createPublicClient(["universities:list"]);
+  const { data, error } = await supabase
+    .from("universities")
+    .select("slug, name, city, tuition_international, currency")
+    .eq("status", "published")
+    .eq("country_id", countryId)
+    .neq("slug", currentSlug);
+  if (error) throw error;
+
+  const rows = (data ?? []) as RelatedUniversity[];
+  if (tuitionInternational != null) {
+    rows.sort((a, b) => {
+      const da = a.tuition_international ?? Infinity;
+      const db = b.tuition_international ?? Infinity;
+      return (
+        Math.abs(da - tuitionInternational) - Math.abs(db - tuitionInternational)
+      );
+    });
+  } else {
+    rows.sort((a, b) => a.name.localeCompare(b.name));
+  }
+  return rows.slice(0, limit);
+}
+
 export type PublicScholarshipForUniversity = {
   id: string;
+  slug: string | null;
   name: string;
   scope: string;
   amount: string | null;
@@ -277,7 +395,7 @@ export async function getPublishedScholarshipsForUniversity(
   const { data, error } = await supabase
     .from("scholarship_universities")
     .select(
-      "scholarship:scholarships!inner(id, name, scope, amount, deadline_date, status)",
+      "scholarship:scholarships!inner(id, slug, name, scope, amount, deadline_date, status)",
     )
     .eq("university_id", universityId)
     .eq("scholarship.status", "published");

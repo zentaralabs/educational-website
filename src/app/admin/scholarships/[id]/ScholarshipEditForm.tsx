@@ -49,9 +49,19 @@ export function ScholarshipEditForm({
 }) {
   const router = useRouter();
   const [name, setName] = useState(scholarship.name);
+  const [slug, setSlug] = useState(scholarship.slug ?? "");
   const [scope, setScope] = useState(scholarship.scope);
   const [amount, setAmount] = useState(scholarship.amount ?? "");
+  const [studyLevel, setStudyLevel] = useState(scholarship.study_level ?? "");
+  const [separateApplication, setSeparateApplication] = useState<string>(
+    scholarship.separate_application === true
+      ? "yes"
+      : scholarship.separate_application === false
+        ? "no"
+        : "",
+  );
   const [eligibility, setEligibility] = useState(scholarship.eligibility ?? "");
+  const [description, setDescription] = useState(scholarship.description ?? "");
   const [deadlineDate, setDeadlineDate] = useState(scholarship.deadline_date ?? "");
   const [externalUrl, setExternalUrl] = useState(scholarship.external_url ?? "");
   const [status, setStatus] = useState<ContentStatus>(scholarship.status);
@@ -77,11 +87,23 @@ export function ScholarshipEditForm({
     setMessage(null);
     try {
       const supabase = createClient();
+      if (/—/.test(description + eligibility)) {
+        throw new Error("Remove em dashes before saving (house style).");
+      }
       await updateScholarship(supabase, scholarship.id, {
         name,
+        slug: slug || null,
         scope,
         amount: amount || null,
+        study_level: studyLevel || null,
+        separate_application:
+          separateApplication === "yes"
+            ? true
+            : separateApplication === "no"
+              ? false
+              : null,
         eligibility: eligibility || null,
+        description: description || null,
         deadline_date: deadlineDate || null,
         external_url: externalUrl || null,
         status: targetStatus,
@@ -155,6 +177,12 @@ export function ScholarshipEditForm({
       <div className="grid gap-8 lg:grid-cols-[1fr_280px]">
         <div className="grid max-w-2xl gap-4 sm:grid-cols-2">
           <Field label="Name" value={name} onChange={setName} />
+          <Field
+            label="Slug"
+            value={slug}
+            onChange={setSlug}
+            hint="URL: /scholarships/<slug>"
+          />
 
           <label className="block">
             <span className="mb-1 block font-body text-xs font-semibold tracking-wide text-slate uppercase">
@@ -180,9 +208,40 @@ export function ScholarshipEditForm({
             onChange={setDeadlineDate}
             hint="YYYY-MM-DD, leave blank if not fixed"
           />
+          <Field
+            label="Study level"
+            value={studyLevel}
+            onChange={setStudyLevel}
+            hint="Undergraduate / Postgraduate / Research / Any"
+          />
+          <label className="block">
+            <span className="mb-1 block font-body text-xs font-semibold tracking-wide text-slate uppercase">
+              Separate application
+            </span>
+            <select
+              value={separateApplication}
+              onChange={(e) => setSeparateApplication(e.target.value)}
+              className="w-full rounded-md border border-ink/20 bg-paper px-3 py-1.5 font-body text-sm text-ink"
+            >
+              <option value="">Unknown</option>
+              <option value="yes">Yes, separate application</option>
+              <option value="no">No, automatic on admission</option>
+            </select>
+          </label>
           <div className="sm:col-span-2">
             <Field label="Eligibility" value={eligibility} onChange={setEligibility} />
           </div>
+          <label className="block sm:col-span-2">
+            <span className="mb-1 block font-body text-xs font-semibold tracking-wide text-slate uppercase">
+              Description (markdown)
+            </span>
+            <textarea
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
+              rows={8}
+              className="w-full resize-y rounded-md border border-ink/20 bg-paper px-3 py-2 font-utility text-sm text-ink focus-visible:border-status-open"
+            />
+          </label>
           <Field label="External URL" value={externalUrl} onChange={setExternalUrl} />
         </div>
 

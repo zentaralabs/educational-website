@@ -463,3 +463,136 @@ Scoped deliberately to technical SEO and UI polish only — no new page template
 Verified via `npx tsc --noEmit` (clean) and `npx eslint` on all changed files (clean), plus in-browser checks of `/sitemap.xml`, `/robots.txt`, `/llms.txt`, and rendered `<title>`/canonical/OG tags on the homepage, a university profile, and a program detail page.
 
 **Deliberately not done this pass:** public `/scholarships` pages and country landing pages (`/us` etc.) — flagged to the user as larger scope decisions, not included per their explicit choice to keep this pass to technical SEO + polish only. The admin panel's lack of mobile responsiveness (Section on UI/UX audit) was also left alone as a desktop-only internal tool, not a public-facing concern.
+
+## 16. Visa subclasses + SkillSelect invitation-round tracker (2026-08-27)
+
+Per explicit user direction: build out Australian visa-subclass reference content and a round-by-round SkillSelect invitation tracker as a full feature (schema + public pages + admin), plus more guides/blog and a labelled "rumours" analysis lane. User picked "Full feature" scope and "everything eventually" for subclass coverage. Rationale: the study → 485 graduate visa → 189/190/491 PR funnel is exactly this site's audience, nobody aggregates invitation-round history well in structured form, and it is a strong GEO/SEO play.
+
+### Schema — migration `0019_add_visas.sql` (applied to live DB via `run_migration.mjs` / direct `DATABASE_URL`)
+
+Two tables, mirroring the guides/blog_posts split:
+- **`visa_subclasses`** — evergreen reference, one row per subclass. Fields: `slug`, `code`, `name`, `category` (student | graduate | skilled | employer-sponsored | family | business-investor | visitor | other), `stream`, `short_description`, `summary` (answer-first), `is_points_tested`, `min_points`, `stay_period`, `leads_to_pr`, `pr_pathway`, `base_application_charge`/`processing_time`/`age_limit`/`english_requirement`/`work_experience_requirement`/`occupation_list` (all free text — Home Affairs quotes ranges and the figures index every 1 July), `eligibility`/`conditions`/`content` (markdown), plus the standard `status`/`author_id`/`reviewed_by_id`/`last_verified_at`/`source_urls` trust block.
+- **`invitation_rounds`** — chronological/dated. `round_date`, `visa_code` (free text, not an FK — some rounds report streams not modelled as their own subclass), soft `visa_subclass_id` FK for "rounds for this visa" lookups, `stream`, `invitations_issued`, `min_points`, `occupation_notes`, `program_year`, `notes`, `is_estimated` (projected rounds flagged per Section 13's relaxed-bar convention), plus `status`/`last_verified_at`/`source_url`.
+
+**Not country-gated** (no `country_id`, no `is_launched` join) — this content is Australia-specific by nature and only exists because AU is the launched country. Documented in the migration: revisit with a `country_id` column if a second country ever gets visa content. RLS is the identical shape to guides/blog_posts/programs. `revalidate/route.ts` `ENTITY_TAG_PREFIX` extended with `visa_subclasses → visa` and `invitation_rounds → invitation_round`. Hand-written `types.ts` updated (still no Supabase CLI codegen in this project).
+
+### Public routes (all ISR, `revalidate = 3600`, canonical + OG + BreadcrumbList JSON-LD, FAQPage JSON-LD where the markdown has `## ?`-style headings)
+
+- **`/visas`** — index grouped by category, with a callout linking to the rounds tracker. Nav link added to `SiteHeader` (now 5 items: Deadlines, Guides, Visas, Compare, Blog).
+- **`/visas/[slug]`** — subclass detail: hero + answer-first summary, a key-facts grid, "Who it's for" / "Pathway to PR" / full explainer / "Visa conditions" markdown sections, a "Recent invitation rounds" table for points-tested visas, LastVerified, and a standing "this is general information, not immigration advice" disclaimer.
+- **`/visas/invitation-rounds`** — full round history grouped by program year, projected rows visually flagged, a "note on projected rounds" box linking to the analysis lane.
+- `sitemap.ts` + `llms.txt` updated. Sitemap URL count moved 1,182 → 1,212 (+14 visa routes, +10 guides, +6 blog posts).
+
+### Admin (`/admin/visas`, nav link added)
+
+Full CRUD modelled tightly on the blog editor pattern: a combined list page (subclasses table + rounds table), `NewVisaForm` (slug/code/name/category → draft), a field-complete `VisaEditor` with save-draft/publish and an em-dash guard on the prose fields, and `rounds/new` + `rounds/[id]` (`RoundEditor`). `visas/actions.ts` server actions (`revalidateVisa`, `revalidateInvitationRounds`) bust the ISR tags directly on save, matching the `revalidateUniversity` pattern from Section 14 so edits don't wait on the Supabase webhook.
+
+### Seed data (`scripts/seed_visas.mjs`, idempotent upsert on slug; rounds are delete-and-reinsert)
+
+**12 subclasses published**, the "study-to-PR core" plus employer-sponsored and family: 500, 485, 189, 190, 191, 491, 482, 186, 494, 820/801, 309/100, 600. Content written from subject-matter knowledge cross-checked against web search (studyaustralia.gov.au, Home Affairs where reachable, and reputable migration-practice sources — immi.homeaffairs.gov.au blocks automated fetch, same as the Cloudflare-blocked university domains noted elsewhere). Figures use the relaxed approximate-bar convention: "from about AUD 4,770", "roughly 5 to 12 months", etc., with a note that charges index each 1 July. Zero em-dashes, verified by an in-script `LIKE '%—%'` sweep of all published visa/guide/blog rows.
+
+**5 invitation rounds**: the real 21 Aug 2025 (6,887 × 189, 150 × 491 Family Sponsored) and 13 Nov 2025 (~10,000 × 189) rounds, plus 2 projected 2026 rounds flagged `is_estimated`. The 189 move to a quarterly cadence for 2025-26 is reflected in the copy.
+
+**Known data-quality caveats** (same spirit as Section 13):
+- Invitation-round `invitations_issued` and `min_points` for the Nov 2025 round are cross-checked approximations from migration-practice blogs, not the official Home Affairs SkillSelect page (unreachable). Spot-check against immi.homeaffairs.gov.au/visas/working-in-australia/skillselect/invitation-rounds when a human can load it.
+- Visa fee/processing figures are approximate and were not all individually page-verified against the current Home Affairs fee schedule. `last_verified_at` is set to 2026-08-27 but the sourcing bar is the relaxed one.
+- Only 12 of the full skilled/graduate/employer/family/business/visitor set exist. Remaining common subclasses to add in later passes: 407 (training), 408, 403, 100→ done, 189 NZ stream, 476, 485 Hong Kong, 132/188/888 (business/investor), 143/173/864/884 (parent), 461, 462/417 (working holiday), 200-204 (humanitarian). "Everything eventually" is the stated goal.
+
+### Guides + blog (`scripts/seed_visa_content.mjs`, idempotent upsert on slug)
+
+**10 new guides published** (all `Roman Lama` byline, QA flags true, zero em-dash): study-to-PR pathway, how the points test works, Genuine Student statement how-to, getting a skills assessment, choosing a regional area, OSHC explained, what to do if a student visa is refused, proving funds, CRICOS/AQF explained, working while you study. Guides link to the new `/visas/*` pages. **Word counts run ~210–310**, shorter than the existing 570–650-word batch from the 2026-08-27 guides pass — substantive and non-templated but on the short side for AdSense; expanding them is a reasonable follow-up.
+
+**6 new blog posts published**, dated to when each event actually happened: 189 rounds → quarterly (2025-08-22), Skills in Demand visa replaces TSS (2024-12-09), 485 age limit → 35 (2024-07-01), 2025-26 state nomination allocations (2025-07-15), plus **2 "What we're watching" analysis posts** (2026-02 and 2026-03): next 189 round projection, and points-test-reform pressure. These carry the `what-we-are-watching` tag.
+
+**"Rumours" handled as a labelled analysis lane, not rumour-mongering** (per the user's chosen option): `/blog` now supports `?tag=` filtering (`listPublishedBlogPosts({ tag })` via PostgREST `.contains`), the tag pills render on the index, and selecting "What we're watching" shows a standing disclaimer that these posts are analysis with stated confidence levels and sources, never presented as confirmed policy. The projected invitation rounds link here for their reasoning.
+
+### Verified
+
+`npx tsc --noEmit` clean, `npx eslint` clean on all new/changed files. In-browser: `/visas` index (category grouping, nav link), `/visas/skilled-independent-189` (facts grid, recent-rounds table, disclaimer), `/visas/invitation-rounds` (year grouping, projected flags), `/blog?tag=what-we-are-watching` (filter + disclaimer), a new guide page, `/sitemap.xml` (1,212 URLs, all 14 visa routes present), `/llms.txt`. Console clean, no server errors. ISR tags busted via the revalidate webhook after seeding. Admin pages compiled (redirect to login as expected — not smoke-tested behind auth this session).
+
+**Not done / follow-ups:** remaining visa subclasses (see caveats above); expanding the new guides to ~600 words; smoke-testing the admin editors behind a real login; verifying invitation-round figures against the official Home Affairs page; a possible `/visas/invitation-rounds` points-trend chart.
+
+## 17. Homepage rework + university-profile editorial pass (2026-08-27)
+
+Response to a detailed external product/UX review of the site. Most of the review's structural asks already existed (`/compare` + `/compare/universities`, the `/quiz` "find universities for me" tool, at-a-glance facts, deadline status stamps, LastVerified + sources, bylines, the About page's sourcing/verification/AI framing). The genuine gaps closed this pass:
+
+### Homepage (`src/app/(site)/page.tsx`)
+
+Was a bare centred hero (search box + stats line + "browse by country" + quiz link). Now: a one-line value proposition under the H1, a four-button CTA row (Browse deadlines / Compare universities / Application guides / Visa subclasses), a trust line linking to About, and an "Explore universities" strip of 6 curated well-known universities with city + "intl tuition from" (`listFeaturedUniversities` in `public-universities.ts`, curated-slug list with an alphabetical fallback so it's never empty).
+
+**Dropped the planned "next deadlines" strip**: confirmed against the live DB that all 57 AU deadlines are `is_rolling = true` (one generic rolling entry per university), so an upcoming-deadlines list would have been 5 identical "Rolling / Open" rows. `listUpcomingDeadlines` was written and left in `public-deadlines.ts` (filters `is_rolling = false`, `deadline_date >= today`) for when real fixed-date AU deadline data exists. Real per-intake AU deadline data is a genuine content gap worth a future pass.
+
+### University profile editorial fields — migration `0020_add_university_editorial_fields.sql` (applied to live DB)
+
+Three nullable columns on `universities`: `who_is_it_for` (markdown), `how_to_apply` (markdown; null falls back to a generic AU flow), `living_cost_annual` (numeric AUD; null falls back to a national indicative figure). Added to `types.ts` and the admin `UniversityEditForm` (Narrative tab for the two prose fields, Cost & Aid tab for living cost).
+
+**New public page sections** (`universities/[slug]/page.tsx`), each degrading gracefully when data is absent:
+- **"Who is this university for?"** — renders `who_is_it_for` markdown. Original editorial value, the review's highest-priority ask.
+- **"Tuition & first-year budget"** — a facts box (international tuition, application fee, estimated living cost) plus a computed **estimated first-year budget range**: `tuition + living + app fee + AUD 4,000 setup`, rounded, with a +15% high end. Tuition anchors on the university-level `tuition_international` or, when null, the cheapest published program (same approach as the comparison table's `fillProgramFallbacks`), labelled "(from)" in that case.
+- **"How to apply"** — new `HowToApply` component. Renders a university's own `how_to_apply` markdown when set, otherwise an 8-step generic Australian direct-application flow (course → requirements → documents → apply → fee → outcome → accept + CoE → visa). Surfaces `apply_url` as the CTA and carries a "confirm with the official site" disclaimer.
+- **Rolling-deadline context** — when every deadline is rolling, a prose note explaining what that means and why to apply early, above the deadline list. Section renamed "All deadlines" → "Application deadlines".
+- **"Related"** — `getRelatedUniversities` (same launched country, closest international tuition) gives up to 4 "similar universities"; plus 4 curated always-relevant AU guides. The review's internal-linking ask.
+- **"Report an update"** link in the Sources section — a `mailto:` with the university name pre-filled as the subject and a templated body (page path, "what's wrong", "source"). Section renamed "Sources" → "Sources & verification".
+
+### Content pass — all 56 launched AU universities (`scripts/seed_university_editorial.mjs`)
+
+Per the user's explicit "template + all 56" choice. Every published AU university now has:
+- **`who_is_it_for`**: a genuinely per-university paragraph (~55-90 words), grounded in each school's existing `distinctive_summary` plus its type, tuition, acceptance rate, and city, deliberately varied in structure (not one template with swapped nouns, per Section 5). Names concrete strengths, who the school suits and who it doesn't, and flags regional skilled-migration advantages where they apply (Perth/Adelaide/Hobart/Canberra/regional campuses).
+- **`living_cost_annual`**: a per-city indicative figure (Sydney 33k down to regional 24k), anchored to the Home Affairs financial-capacity figure (~29,710) and adjusted for known inter-city cost differences. Approximate by design, per Section 13's relaxed bar.
+- **`how_to_apply`**: a custom flow for the ~18 schools where the generic one is wrong or incomplete — Melbourne (Melbourne Model), Bond (three trimesters, same domestic/intl fee), NIDA + AIM (audition/portfolio), Southern Cross + Victoria University (block model), Notre Dame (core curriculum + interviews), Greenwich (ELICOS/pathway articulation), and every TAFE (VET application route). The other ~38 use the generic AU flow.
+
+### Verified
+
+`npx tsc --noEmit` and `npx eslint src` both clean. In-browser: homepage (value prop, CTAs, featured strip, trust line), `/universities/bond-university` (custom how-to-apply, A$80-92k budget, rolling-deadline note, related universities), `/universities/university-of-sydney` (generic how-to-apply, A$86-99k budget). DB check: all 56 launched AU universities have `who_is_it_for` + `living_cost_annual`; 0 em-dashes in either new field. Also cleaned the 4 remaining em-dashes in AU `distinctive_summary` values (Melbourne, UQ, NIDA, MIT Melbourne) now that the Overview sits directly above the clean new sections. ISR busted via the revalidate webhook.
+
+### Deferred (with reasons)
+
+- **Public `/scholarships` section** — only 5 published scholarships exist (all Adelaide). A public section now would be exactly the thin content the AdSense goal is trying to avoid. Needs a real scholarship-research pass first: national schemes (Australia Awards, Destination Australia, RTP) plus per-university awards for the 56, same methodology as the programs pass.
+- **"Best for…" collection pages** (affordable / low-fee / Feb intake / generous scholarships / IELTS 6.0) — best built on top of the now-enriched university data and a real scholarships dataset. Next after scholarships.
+- **Country landing pages** (`/australia` etc.) — only one country is launched; revisit at country #2.
+- **Real per-intake AU deadline data** — all current AU deadlines are generic rolling entries.
+- A dedicated `/universities` browse page with facets (tuition band, IELTS, intake, scholarship) — currently browsing goes through `/search`, `/deadlines`, and `/compare/universities`.
+
+## 18. Scholarships section + "best for" decision guides (2026-08-27)
+
+The two items deferred in Section 17. Both now built.
+
+### Scholarships — migration `0021_add_scholarship_public_fields.sql` (applied to live DB)
+
+Four columns on `scholarships`: `slug` (unique, backfilled from name for existing rows, generated on create in `createScholarship`), `description` (markdown body), `study_level` (Undergraduate / Postgraduate / Research / Any, a filter facet), `separate_application` (boolean — the review's explicit "separate application: yes/no" ask; many AU scholarships are automatic on admission). Added to `types.ts` and the admin `ScholarshipEditForm` (with an em-dash guard on the prose fields).
+
+**Public routes:**
+- `/scholarships` — index grouped by scope (national / university-specific), with a study-level filter (`?level=`). Nav link added ("Scholarships" — nav is now 6 items: Deadlines, Guides, Scholarships, Visas, Compare, Blog).
+- `/scholarships/[slug]` — detail: scope + amount hero, a facts grid (study level, "how to get it", deadline, country), eligibility prose, the markdown description, participating-universities chips, an "official scholarship page" CTA, LastVerified, and a "terms change yearly" disclaimer.
+- `public-scholarships.ts` query gates visibility on `country.is_launched` (national rows) the same way guides do. Sitemap + `llms.txt` updated.
+- The university-profile scholarships section now links each award to its `/scholarships/[slug]` page and adds a "see all scholarships" link. `getPublishedScholarshipsForUniversity` returns `slug`.
+
+**Data — `scripts/seed_scholarships.mjs` (idempotent upsert on slug):** 28 published scholarships (was 5, all Adelaide).
+- **3 national/government**: Australia Awards, Destination Australia, Research Training Program (RTP) — researched against DFAT / education.gov.au and reputable sources, 2026 figures where available (RTP stipend ~AUD 37,010).
+- **20 university flagship international scholarships**, one per major AU university (Melbourne, Monash, UNSW, ANU, Sydney, UQ, UWA, UTS, Macquarie, Deakin, Curtin, Griffith, La Trobe, QUT, RMIT, Newcastle, Wollongong, Tasmania, Western Sydney, Bond), each linked via `scholarship_universities`. Cross-checked against each university's official scholarship page plus aggregators; **relaxed approximate-bar convention** (Section 13) — amounts and bands change yearly, every row carries `source_url` + `last_verified_at` and the pages say so prominently.
+- **5 existing Adelaide rows** got `description` / `study_level` / `separate_application` filled in place.
+- 0 em-dashes (in-script `LIKE '%—%'` sweep of all published scholarship rows).
+- The 1 remaining row without a description is the MIT scholarship (US, unlaunched country — correctly hidden from the public section).
+
+### "Best for" decision guides — `/best`
+
+Config-driven, not a DB table: `src/lib/collections.ts` holds 4 collections, each with an editorial intro, a stated methodology, and a `build(universities)` function that filters/sorts/annotates. Data comes from `listCollectionUniversities()` in `public-collections.ts`, which aggregates per launched AU university: cheapest tuition (university-level or min published program), a computed first-year budget, distinct intake months (union of university + program `intake_dates`), and linked automatic scholarships.
+
+The 4 collections, all genuinely data-backed:
+1. **Most affordable universities** — ranked by estimated first-year budget (cheapest tuition + city living cost + setup). Top 15.
+2. **Regional universities for skilled migration** — main campus in a designated regional area, with the 491/points angle. Sydney/Melbourne/Brisbane-only campuses excluded.
+3. **Universities with multiple intakes a year** — three or more distinct intake months across the university and its programs.
+4. **Universities with automatic scholarships** — has a linked published scholarship marked `separate_application = false`.
+
+Each `/best/[slug]` page: intro, a ranked list linking to profiles with a per-university metric + one sentence of reasoning, a "how this list was built" box, and links to the other guides. `ItemList` + `BreadcrumbList` JSON-LD. `/best` index links from the Guides page and `llms.txt`. **An "accepts IELTS 6.0" collection was dropped** — university- and program-level IELTS data is almost entirely null (3 of 1,103 program rows), so it couldn't be built honestly.
+
+### Verified
+
+`npx tsc --noEmit` + `npx eslint src` clean. In-browser: `/scholarships` (scope grouping, level filter, nav link), `/scholarships/research-training-program-rtp-scholarship`, all 4 `/best/*` pages render with real data, `/universities/monash-university` scholarship chips link to detail pages. `/sitemap.xml` moved 1,212 → 1,246 URLs (+28 scholarship details, +/scholarships, +4 /best/[slug], +/best). Console clean, ISR busted via the revalidate webhook.
+
+### Still deferred
+
+- Country landing pages (`/australia`) — one country launched.
+- Real per-intake AU deadline data — all current AU deadlines are generic rolling entries; `listUpcomingDeadlines` in `public-deadlines.ts` is ready for real data.
+- A faceted `/universities` browse page.
+- Smoke-testing all the new admin editors (visas, invitation rounds, scholarship new fields, university editorial fields) behind a real login — they compile and follow existing patterns but weren't exercised through the auth flow this session.

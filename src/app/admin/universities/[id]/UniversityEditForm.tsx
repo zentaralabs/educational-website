@@ -56,8 +56,11 @@ type FormState = {
   currency: string;
   apply_url: string;
   application_fee: string;
+  living_cost_annual: string;
   distinctive_summary: string;
   international_student_notes: string;
+  who_is_it_for: string;
+  how_to_apply: string;
 };
 
 function numToStr(n: number | null | undefined): string {
@@ -101,8 +104,12 @@ function toFormState(u: UniversityDetailRow): FormState {
     currency: u.currency ?? "USD",
     apply_url: u.apply_url ?? "",
     application_fee: u.application_fee !== null ? String(u.application_fee) : "",
+    living_cost_annual:
+      u.living_cost_annual !== null ? String(u.living_cost_annual) : "",
     distinctive_summary: u.distinctive_summary ?? "",
     international_student_notes: u.international_student_notes ?? "",
+    who_is_it_for: u.who_is_it_for ?? "",
+    how_to_apply: u.how_to_apply ?? "",
   };
 }
 
@@ -145,8 +152,13 @@ function toPatch(
     currency: form.currency || "USD",
     apply_url: form.apply_url || null,
     application_fee: form.application_fee ? Number(form.application_fee) : null,
+    living_cost_annual: form.living_cost_annual
+      ? Number(form.living_cost_annual)
+      : null,
     distinctive_summary: form.distinctive_summary || null,
     international_student_notes: form.international_student_notes || null,
+    who_is_it_for: form.who_is_it_for || null,
+    how_to_apply: form.how_to_apply || null,
     status,
     ...(status === "published" ? { last_verified_at: new Date().toISOString().slice(0, 10) } : {}),
   };
@@ -1129,6 +1141,12 @@ export function UniversityEditForm({
             onChange={(v) => set("application_fee", v)}
             hint="Non-refundable, in the currency above — same for every program here"
           />
+          <Field
+            label="Living cost (annual)"
+            value={form.living_cost_annual}
+            onChange={(v) => set("living_cost_annual", v)}
+            hint="Est. single-student annual living cost for this city, AUD. Blank uses the national indicative figure."
+          />
         </div>
       )}
 
@@ -1153,6 +1171,16 @@ export function UniversityEditForm({
             label="International student notes"
             value={form.international_student_notes}
             onChange={(v) => set("international_student_notes", v)}
+          />
+          <TextAreaField
+            label="Who is this university for? (markdown)"
+            value={form.who_is_it_for}
+            onChange={(v) => set("who_is_it_for", v)}
+          />
+          <TextAreaField
+            label="How to apply (markdown — blank uses the generic AU flow)"
+            value={form.how_to_apply}
+            onChange={(v) => set("how_to_apply", v)}
           />
         </div>
       )}

@@ -22,8 +22,24 @@ export default async function GuidesIndexPage() {
       </h1>
       <p className="mt-2 font-body text-base text-slate">
         Personal statements, letters of recommendation, transfers, financial
-        aid, test prep, and more — fact-checked and kept current.
+        aid, test prep, and more, fact-checked and kept current.
       </p>
+
+      <Link
+        href="/best"
+        className="mt-5 flex items-center justify-between gap-3 rounded-2xl border border-status-pending/30 bg-status-pending/5 p-5 transition-all duration-150 hover:-translate-y-0.5 hover:shadow-sm"
+      >
+        <span>
+          <span className="font-display text-base font-semibold text-ink">
+            Decision guides
+          </span>
+          <span className="mt-1 block font-body text-sm text-slate">
+            Shortlists of Australian universities by cost, intakes, regional
+            migration advantages, and scholarships.
+          </span>
+        </span>
+        <ArrowUpRightIcon className="h-4 w-4 flex-shrink-0 text-slate" />
+      </Link>
 
       {guides.length === 0 ? (
         <p className="mt-8 font-body text-base text-slate">No guides published yet.</p>

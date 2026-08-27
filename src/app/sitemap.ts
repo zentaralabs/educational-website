@@ -1,9 +1,12 @@
 import type { MetadataRoute } from "next";
+import { COLLECTIONS } from "@/lib/collections";
 import { SITE_URL } from "@/lib/site-config";
 import { listPublishedBlogPostSlugs } from "@/lib/queries/public-blog-posts";
 import { listPublishedGuideSlugs } from "@/lib/queries/public-guides";
 import { listPublishedProgramsForSitemap } from "@/lib/queries/public-programs";
+import { listPublishedScholarshipSlugs } from "@/lib/queries/public-scholarships";
 import { listPublishedUniversitySlugs } from "@/lib/queries/public-universities";
+import { listPublishedVisaSlugs } from "@/lib/queries/public-visas";
 
 export const revalidate = 3600;
 
@@ -14,6 +17,10 @@ const STATIC_ROUTES: Array<{ path: string; priority: number; changeFrequency: Me
   { path: "/compare", priority: 0.7, changeFrequency: "weekly" },
   { path: "/compare/universities", priority: 0.6, changeFrequency: "weekly" },
   { path: "/blog", priority: 0.7, changeFrequency: "weekly" },
+  { path: "/scholarships", priority: 0.8, changeFrequency: "weekly" },
+  { path: "/best", priority: 0.7, changeFrequency: "weekly" },
+  { path: "/visas", priority: 0.8, changeFrequency: "weekly" },
+  { path: "/visas/invitation-rounds", priority: 0.7, changeFrequency: "weekly" },
   { path: "/quiz", priority: 0.6, changeFrequency: "monthly" },
   { path: "/search", priority: 0.4, changeFrequency: "monthly" },
   { path: "/about", priority: 0.3, changeFrequency: "yearly" },
@@ -24,14 +31,23 @@ const STATIC_ROUTES: Array<{ path: string; priority: number; changeFrequency: Me
 ];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const [universitySlugs, guideSlugs, comparisonSlugs, blogSlugs, programs] =
-    await Promise.all([
-      listPublishedUniversitySlugs(),
-      listPublishedGuideSlugs({ excludeCategory: "comparison" }),
-      listPublishedGuideSlugs({ category: "comparison" }),
-      listPublishedBlogPostSlugs(),
-      listPublishedProgramsForSitemap(),
-    ]);
+  const [
+    universitySlugs,
+    guideSlugs,
+    comparisonSlugs,
+    blogSlugs,
+    visaSlugs,
+    scholarshipSlugs,
+    programs,
+  ] = await Promise.all([
+    listPublishedUniversitySlugs(),
+    listPublishedGuideSlugs({ excludeCategory: "comparison" }),
+    listPublishedGuideSlugs({ category: "comparison" }),
+    listPublishedBlogPostSlugs(),
+    listPublishedVisaSlugs(),
+    listPublishedScholarshipSlugs(),
+    listPublishedProgramsForSitemap(),
+  ]);
 
   const now = new Date();
 
@@ -70,6 +86,27 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.5,
   }));
 
+  const visaEntries: MetadataRoute.Sitemap = visaSlugs.map((slug) => ({
+    url: `${SITE_URL}/visas/${slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+
+  const scholarshipEntries: MetadataRoute.Sitemap = scholarshipSlugs.map((slug) => ({
+    url: `${SITE_URL}/scholarships/${slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.6,
+  }));
+
+  const collectionEntries: MetadataRoute.Sitemap = COLLECTIONS.map((c) => ({
+    url: `${SITE_URL}/best/${c.slug}`,
+    lastModified: now,
+    changeFrequency: "weekly",
+    priority: 0.6,
+  }));
+
   const programEntries: MetadataRoute.Sitemap = programs
     .filter((p) => p.university)
     .map((p) => ({
@@ -85,6 +122,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...guideEntries,
     ...comparisonEntries,
     ...blogEntries,
+    ...visaEntries,
+    ...scholarshipEntries,
+    ...collectionEntries,
     ...programEntries,
   ];
 }

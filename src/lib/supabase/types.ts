@@ -101,6 +101,9 @@ export interface Database {
           student_faculty_ratio: string | null;
           distinctive_summary: string | null;
           international_student_notes: string | null;
+          who_is_it_for: string | null;
+          how_to_apply: string | null;
+          living_cost_annual: number | null;
           status: ContentStatus;
           author_id: string | null;
           reviewed_by_id: string | null;
@@ -151,6 +154,9 @@ export interface Database {
           student_faculty_ratio?: string | null;
           distinctive_summary?: string | null;
           international_student_notes?: string | null;
+          who_is_it_for?: string | null;
+          how_to_apply?: string | null;
+          living_cost_annual?: number | null;
           status?: ContentStatus;
           author_id?: string | null;
           reviewed_by_id?: string | null;
@@ -289,9 +295,13 @@ export interface Database {
         {
           id: string;
           name: string;
+          slug: string | null;
           scope: string;
           amount: string | null;
           eligibility: string | null;
+          description: string | null;
+          study_level: string | null;
+          separate_application: boolean | null;
           deadline_date: string | null;
           country_id: number | null;
           external_url: string | null;
@@ -304,9 +314,13 @@ export interface Database {
         {
           id?: string;
           name: string;
+          slug?: string | null;
           scope: string;
           amount?: string | null;
           eligibility?: string | null;
+          description?: string | null;
+          study_level?: string | null;
+          separate_application?: boolean | null;
           deadline_date?: string | null;
           country_id?: number | null;
           external_url?: string | null;
@@ -391,6 +405,104 @@ export interface Database {
           published_at?: string | null;
           last_verified_at?: string | null;
           source_urls?: string[] | null;
+        }
+      >;
+      visa_subclasses: Table<
+        {
+          id: string;
+          slug: string;
+          code: string;
+          name: string;
+          category: string;
+          stream: string | null;
+          short_description: string | null;
+          summary: string | null;
+          is_points_tested: boolean;
+          min_points: number | null;
+          stay_period: string | null;
+          leads_to_pr: boolean;
+          pr_pathway: string | null;
+          base_application_charge: string | null;
+          processing_time: string | null;
+          age_limit: string | null;
+          english_requirement: string | null;
+          work_experience_requirement: string | null;
+          occupation_list: string | null;
+          eligibility: string | null;
+          conditions: string | null;
+          content: string | null;
+          status: ContentStatus;
+          author_id: string | null;
+          reviewed_by_id: string | null;
+          last_verified_at: string | null;
+          source_urls: string[] | null;
+          created_at: string;
+          updated_at: string;
+        },
+        {
+          id?: string;
+          slug: string;
+          code: string;
+          name: string;
+          category: string;
+          stream?: string | null;
+          short_description?: string | null;
+          summary?: string | null;
+          is_points_tested?: boolean;
+          min_points?: number | null;
+          stay_period?: string | null;
+          leads_to_pr?: boolean;
+          pr_pathway?: string | null;
+          base_application_charge?: string | null;
+          processing_time?: string | null;
+          age_limit?: string | null;
+          english_requirement?: string | null;
+          work_experience_requirement?: string | null;
+          occupation_list?: string | null;
+          eligibility?: string | null;
+          conditions?: string | null;
+          content?: string | null;
+          status?: ContentStatus;
+          author_id?: string | null;
+          reviewed_by_id?: string | null;
+          last_verified_at?: string | null;
+          source_urls?: string[] | null;
+        }
+      >;
+      invitation_rounds: Table<
+        {
+          id: string;
+          round_date: string;
+          visa_code: string;
+          visa_subclass_id: string | null;
+          stream: string | null;
+          invitations_issued: number | null;
+          min_points: number | null;
+          occupation_notes: string | null;
+          program_year: string | null;
+          notes: string | null;
+          is_estimated: boolean;
+          status: ContentStatus;
+          last_verified_at: string | null;
+          source_url: string | null;
+          created_at: string;
+          updated_at: string;
+        },
+        {
+          id?: string;
+          round_date: string;
+          visa_code: string;
+          visa_subclass_id?: string | null;
+          stream?: string | null;
+          invitations_issued?: number | null;
+          min_points?: number | null;
+          occupation_notes?: string | null;
+          program_year?: string | null;
+          notes?: string | null;
+          is_estimated?: boolean;
+          status?: ContentStatus;
+          last_verified_at?: string | null;
+          source_url?: string | null;
         }
       >;
       guide_related_guides: Table<
