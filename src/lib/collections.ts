@@ -1,3 +1,4 @@
+import { GO8_SLUGS, isRegionalCity } from "@/lib/australia";
 import type { CollectionUniversity } from "@/lib/queries/public-collections";
 import { formatCurrency } from "@/lib/format";
 
@@ -23,32 +24,14 @@ export type Collection = {
   build: (universities: CollectionUniversity[]) => CollectionEntry[];
 };
 
-const REGIONAL_RE =
-  /(Perth|Adelaide|Canberra|Hobart|Launceston|Darwin|Gold Coast|Sunshine Coast|Sippy Downs|Newcastle|Wollongong|Ballarat|Armidale|Toowoomba|Lismore|Coffs|Townsville|Cairns|Bathurst|Wagga|Bendigo|Geelong|Cooranbong|regional| WA| SA| TAS| NT| ACT)/i;
-
-function isRegional(city: string | null): boolean {
-  if (!city) return false;
-  if (/Sydney|Melbourne/i.test(city)) return false;
-  if (/^Brisbane,/i.test(city)) return false;
-  return REGIONAL_RE.test(city);
-}
+const isRegional = isRegionalCity;
+const GO8 = GO8_SLUGS;
 
 function budget(u: CollectionUniversity): string {
   return u.firstYearBudget
     ? `${formatCurrency(u.firstYearBudget, "AUD")} first-year budget`
     : "Budget not available";
 }
-
-const GO8 = new Set([
-  "australian-national-university",
-  "university-of-melbourne",
-  "university-of-sydney",
-  "unsw-sydney",
-  "university-of-queensland",
-  "monash-university",
-  "university-of-western-australia",
-  "adelaide-university",
-]);
 
 /** Builds a "cheapest universities in <city>" collection. */
 function cityCollection(opts: {

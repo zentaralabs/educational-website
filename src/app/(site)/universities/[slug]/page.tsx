@@ -10,6 +10,8 @@ import { HowToApply } from "@/components/site/HowToApply";
 import { LastVerified } from "@/components/site/LastVerified";
 import { ProgramsList } from "@/components/site/ProgramsList";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
+import { FaqSection } from "@/components/site/FaqSection";
+import { faqJsonLd, universityFaq } from "@/lib/faq";
 import { SITE_YEAR } from "@/lib/site-config";
 import { deadlineBadgeStatus } from "@/lib/deadline-status";
 import { formatCurrency, formatPercent } from "@/lib/format";
@@ -174,6 +176,31 @@ export default async function UniversityProfilePage({
     { label: university.name },
   ];
 
+  const faqItems =
+    university.country?.code === "AU"
+      ? universityFaq({
+          name: university.name,
+          slug: university.slug,
+          city: university.city,
+          application_fee: university.application_fee,
+          ielts_overall: university.ielts_overall,
+          acceptance_rate: university.acceptance_rate,
+          apply_url: university.apply_url,
+          website_url: university.website_url,
+          intakeTypes: [
+            ...new Set(
+              deadlines
+                .map((d) => d.deadline_type?.name)
+                .filter((n): n is string => Boolean(n)),
+            ),
+          ],
+          budgetLow,
+          budgetHigh,
+          minTuition: anchorTuition,
+          livingCost,
+        })
+      : [];
+
   return (
     <main className="mx-auto w-full max-w-3xl px-6 pt-8 pb-16">
       <script
@@ -184,6 +211,12 @@ export default async function UniversityProfilePage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd(breadcrumbs)) }}
       />
+      {faqItems.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(faqItems)) }}
+        />
+      )}
 
       <Breadcrumbs items={breadcrumbs} />
 
@@ -526,6 +559,13 @@ export default async function UniversityProfilePage({
             })}
           </div>
         </ProfileSection>
+      )}
+
+      {faqItems.length > 0 && (
+        <FaqSection
+          heading={`${university.name}: common questions`}
+          items={faqItems}
+        />
       )}
 
       {(relatedUniversities.length > 0 || university.country?.code === "AU") && (

@@ -5,6 +5,8 @@ import { GuideContent } from "@/components/site/GuideContent";
 import { LastVerified } from "@/components/site/LastVerified";
 import { ArrowUpRightIcon, CheckBadgeIcon } from "@/components/site/icons";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
+import { FaqSection } from "@/components/site/FaqSection";
+import { faqJsonLd, visaFaq } from "@/lib/faq";
 import { SITE_YEAR } from "@/lib/site-config";
 import { extractFaqItems } from "@/lib/extract-faq";
 import { authorInitials } from "@/lib/format";
@@ -72,7 +74,10 @@ export default async function VisaPage({
     ? await listPublishedInvitationRounds({ visaCode: visa.code, limit: 6 })
     : [];
 
-  const faqItems = visa.content ? extractFaqItems(visa.content) : [];
+  const contentFaq = (
+    visa.content ? extractFaqItems(visa.content) : []
+  ).map((f) => ({ q: f.question, a: f.answer }));
+  const faqItems = [...visaFaq(visa), ...contentFaq];
 
   const breadcrumbs = [
     { label: "Home", href: "/" },
@@ -82,15 +87,7 @@ export default async function VisaPage({
 
   const jsonLdBlocks: Record<string, unknown>[] = [breadcrumbJsonLd(breadcrumbs)];
   if (faqItems.length > 0) {
-    jsonLdBlocks.push({
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: faqItems.map((item) => ({
-        "@type": "Question",
-        name: item.question,
-        acceptedAnswer: { "@type": "Answer", text: item.answer },
-      })),
-    });
+    jsonLdBlocks.push(faqJsonLd(faqItems));
   }
 
   return (
@@ -198,6 +195,11 @@ export default async function VisaPage({
           <GuideContent content={visa.conditions} />
         </section>
       )}
+
+      <FaqSection
+        heading={`${visa.name} (subclass ${visa.code}): common questions`}
+        items={faqItems}
+      />
 
       {rounds.length > 0 && (
         <section className="mt-10 border-t border-ink/10 pt-6">

@@ -5,6 +5,8 @@ import { GuideContent } from "@/components/site/GuideContent";
 import { LastVerified } from "@/components/site/LastVerified";
 import { CheckBadgeIcon } from "@/components/site/icons";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
+import { FaqSection } from "@/components/site/FaqSection";
+import { faqJsonLd, scholarshipFaq } from "@/lib/faq";
 import { SITE_YEAR } from "@/lib/site-config";
 import {
   getPublishedScholarship,
@@ -68,6 +70,8 @@ export default async function ScholarshipPage({
     { label: s.name },
   ];
 
+  const faqItems = scholarshipFaq(s);
+
   return (
     <main className="mx-auto w-full max-w-2xl px-6 pt-8 pb-16">
       <script
@@ -76,6 +80,12 @@ export default async function ScholarshipPage({
           __html: JSON.stringify(breadcrumbJsonLd(breadcrumbs)),
         }}
       />
+      {faqItems.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(faqItems)) }}
+        />
+      )}
       <Breadcrumbs items={breadcrumbs} />
 
       <div className="rounded-2xl bg-gradient-to-br from-ink/[0.04] via-ink/[0.02] to-transparent p-6 sm:p-8">
@@ -160,6 +170,8 @@ export default async function ScholarshipPage({
           </ul>
         </section>
       )}
+
+      <FaqSection heading={`${s.name}: common questions`} items={faqItems} />
 
       {s.external_url && (
         <a
