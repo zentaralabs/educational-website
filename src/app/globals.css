@@ -51,14 +51,22 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* Fraunces carries the brand. Push the optical-size and softness axes so
-   display headings read as display type, not just bold body serif. */
+/* Fraunces carries the brand. Let the browser pick the optical size from the
+   rendered font-size (large headings get the true display cut, small card
+   titles stay legible), and keep WONK off so no quirky alternates appear. */
 .font-display {
-  font-variation-settings:
-    "opsz" 120,
-    "SOFT" 40,
-    "WONK" 0;
-  letter-spacing: -0.015em;
+  font-optical-sizing: auto;
+  font-variation-settings: "SOFT" 0, "WONK" 0;
+  letter-spacing: -0.011em;
+}
+
+/* Small display uses (card titles, section headers) want a touch more weight
+   and a normal optical cut so the strokes don't go spindly. */
+h3.font-display,
+.font-display.text-base,
+.font-display.text-lg,
+.font-display.text-xl {
+  letter-spacing: -0.006em;
 }
 
 @media (prefers-reduced-motion: reduce) {

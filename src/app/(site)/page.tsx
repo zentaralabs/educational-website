@@ -44,9 +44,9 @@ export default async function Home() {
           aria-hidden="true"
           className="pointer-events-none absolute inset-x-0 -top-40 h-80 bg-[radial-gradient(60%_100%_at_50%_0%,color-mix(in_srgb,var(--color-status-open)_10%,transparent),transparent)]"
         />
-        <div className="relative mx-auto w-full max-w-3xl px-6 pt-16 pb-10 text-center sm:pt-20">
+        <div className="relative mx-auto w-full max-w-3xl px-6 pt-8 pb-8 text-center sm:pt-12">
           <p
-            className="animate-fade-up mb-5 inline-flex items-center gap-2 rounded-full border border-line bg-mist px-3 py-1 font-utility text-[0.7rem] font-semibold tracking-widest text-status-open uppercase"
+            className="animate-fade-up mb-4 inline-flex items-center gap-2 rounded-full border border-line bg-mist px-3 py-1 font-utility text-[0.7rem] font-semibold tracking-widest text-status-open uppercase"
             style={{ animationDelay: "0ms" }}
           >
             <span className="relative flex h-1.5 w-1.5">
@@ -79,7 +79,7 @@ export default async function Home() {
           </div>
 
           <div
-            className="animate-fade-up mt-7 flex flex-wrap justify-center gap-2.5"
+            className="animate-fade-up mt-6 flex flex-wrap justify-center gap-2.5"
             style={{ animationDelay: "160ms" }}
           >
             {CTAS.map((cta) =>
@@ -130,7 +130,7 @@ export default async function Home() {
         </div>
       </div>
 
-      <div className="mx-auto w-full max-w-3xl px-6 pb-20">
+      <div className="mx-auto w-full max-w-3xl px-6 pb-16">
         {upcoming.length > 0 && (
           <div
             className="animate-fade-up mt-4"
@@ -186,7 +186,7 @@ export default async function Home() {
         )}
 
         {featured.length > 0 && (
-          <section className="scroll-reveal mt-14">
+          <section className="scroll-reveal mt-10">
             <div className="mb-4 flex items-baseline justify-between gap-3">
               <h2 className="font-display text-xl font-semibold text-ink">
                 Explore universities
@@ -228,7 +228,7 @@ export default async function Home() {
           </section>
         )}
 
-        <div className="scroll-reveal mt-14 flex flex-col items-center gap-2 rounded-2xl border border-line bg-mist px-6 py-6 text-center">
+        <div className="scroll-reveal mt-10 flex flex-col items-center gap-2 rounded-2xl border border-line bg-mist px-6 py-6 text-center">
           <p className="font-body text-sm font-medium text-ink">
             Researched from official university sources and regularly verified.
           </p>

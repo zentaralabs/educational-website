@@ -77,7 +77,7 @@ export default async function GuidePage({
   }
 
   return (
-    <main className="mx-auto w-full max-w-2xl px-6 py-12">
+    <main className="mx-auto w-full max-w-2xl px-6 pt-8 pb-16">
       {jsonLdBlocks.map((block, i) => (
         <script
           key={i}

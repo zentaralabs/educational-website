@@ -63,7 +63,7 @@ export default async function ComparisonPage({
   ];
 
   return (
-    <main className="mx-auto w-full max-w-5xl px-6 py-12">
+    <main className="mx-auto w-full max-w-5xl px-6 pt-8 pb-16">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd(breadcrumbs)) }}

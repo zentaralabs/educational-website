@@ -38,7 +38,7 @@ export default async function ScholarshipsIndexPage({
   const scopes = SCHOLARSHIP_SCOPE_ORDER.filter((s) => byScope.has(s));
 
   return (
-    <main className="mx-auto w-full max-w-3xl px-6 py-12">
+    <main className="mx-auto w-full max-w-3xl px-6 pt-8 pb-16">
       <h1 className="font-display text-3xl font-semibold text-ink text-balance">
         Scholarships for studying in Australia
       </h1>

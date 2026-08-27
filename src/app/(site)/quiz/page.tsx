@@ -14,7 +14,7 @@ export default async function QuizPage() {
   const { countries, degreeLevels } = await listQuizOptions();
 
   return (
-    <main className="mx-auto w-full max-w-2xl px-6 py-12">
+    <main className="mx-auto w-full max-w-2xl px-6 pt-8 pb-16">
       <h1 className="font-display text-3xl font-semibold text-ink text-balance">
         Find the right university for me
       </h1>

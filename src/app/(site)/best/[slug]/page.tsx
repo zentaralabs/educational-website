@@ -61,7 +61,7 @@ export default async function CollectionPage({
   };
 
   return (
-    <main className="mx-auto w-full max-w-2xl px-6 py-12">
+    <main className="mx-auto w-full max-w-2xl px-6 pt-8 pb-16">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd(breadcrumbs)) }}

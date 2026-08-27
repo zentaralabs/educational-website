@@ -78,7 +78,7 @@ export default async function DeadlinesPage({
   const breadcrumbs = [{ label: "Home", href: "/" }, { label: "Deadlines" }];
 
   return (
-    <main className="mx-auto w-full max-w-3xl px-6 py-12">
+    <main className="mx-auto w-full max-w-3xl px-6 pt-8 pb-16">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
