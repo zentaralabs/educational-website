@@ -4,7 +4,8 @@ import { searchSite } from "@/lib/queries/public-search";
 
 export const metadata = {
   title: "Search",
-  description: "Search universities, programs, guides, and scholarships.",
+  description:
+    "Search universities, programs, guides, visa subclasses, and scholarships.",
   alternates: { canonical: "/search" },
   robots: { index: false, follow: true },
 };
@@ -17,11 +18,21 @@ export default async function SearchPage({
   const { q = "" } = await searchParams;
   const results = q.trim()
     ? await searchSite(q)
-    : { universities: [], guides: [], programs: [] };
+    : {
+        universities: [],
+        guides: [],
+        programs: [],
+        visas: [],
+        scholarships: [],
+        blogPosts: [],
+      };
   const total =
     results.universities.length +
     results.guides.length +
-    results.programs.length;
+    results.programs.length +
+    results.visas.length +
+    results.scholarships.length +
+    results.blogPosts.length;
 
   return (
     <main className="mx-auto w-full max-w-2xl px-6 pt-8 pb-16">
@@ -101,6 +112,68 @@ export default async function SearchPage({
                   {g.title}
                 </Link>
                 <p className="mt-0.5 text-sm text-slate">{g.category}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {results.visas.length > 0 && (
+        <section className="mt-8">
+          <h2 className="mb-3 font-body text-xs font-semibold tracking-wide text-slate uppercase">
+            Visas
+          </h2>
+          <ul className="flex flex-col gap-3">
+            {results.visas.map((v) => (
+              <li key={v.slug} className="border-b border-ink/10 pb-3">
+                <Link
+                  href={`/visas/${v.slug}`}
+                  className="font-body text-base text-ink hover:underline"
+                >
+                  {v.name}
+                </Link>
+                <p className="mt-0.5 text-sm text-slate">Subclass {v.code}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {results.scholarships.length > 0 && (
+        <section className="mt-8">
+          <h2 className="mb-3 font-body text-xs font-semibold tracking-wide text-slate uppercase">
+            Scholarships
+          </h2>
+          <ul className="flex flex-col gap-3">
+            {results.scholarships.map((s) => (
+              <li key={s.slug} className="border-b border-ink/10 pb-3">
+                <Link
+                  href={`/scholarships/${s.slug}`}
+                  className="font-body text-base text-ink hover:underline"
+                >
+                  {s.name}
+                </Link>
+                <p className="mt-0.5 text-sm text-slate">{s.scope}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {results.blogPosts.length > 0 && (
+        <section className="mt-8">
+          <h2 className="mb-3 font-body text-xs font-semibold tracking-wide text-slate uppercase">
+            Blog
+          </h2>
+          <ul className="flex flex-col gap-3">
+            {results.blogPosts.map((b) => (
+              <li key={b.slug} className="border-b border-ink/10 pb-3">
+                <Link
+                  href={`/blog/${b.slug}`}
+                  className="font-body text-base text-ink hover:underline"
+                >
+                  {b.title}
+                </Link>
               </li>
             ))}
           </ul>

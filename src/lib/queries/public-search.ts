@@ -10,14 +10,23 @@ export type SearchResults = {
     universityName: string;
     subjectName: string | null;
   }[];
+  visas: { slug: string; code: string; name: string }[];
+  scholarships: { slug: string; name: string; scope: string }[];
+  blogPosts: { slug: string; title: string }[];
 };
 
-// Scholarships aren't included — there's no public scholarship detail page
-// to link a result to yet (they're only shown embedded on university
-// profiles). Add them here once that page exists.
+const EMPTY: SearchResults = {
+  universities: [],
+  guides: [],
+  programs: [],
+  visas: [],
+  scholarships: [],
+  blogPosts: [],
+};
+
 export async function searchSite(query: string): Promise<SearchResults> {
   const q = query.trim();
-  if (!q) return { universities: [], guides: [], programs: [] };
+  if (!q) return EMPTY;
 
   const supabase = createPublicClient();
   const like = `%${q}%`;
@@ -54,29 +63,55 @@ export async function searchSite(query: string): Promise<SearchResults> {
     .order("name")
     .limit(20);
 
-  const [universities, guides, programs] = await Promise.all([
-    supabase
-      .from("universities")
-      .select("slug, name, city, country:countries!inner(is_launched)")
-      .eq("status", "published")
-      .eq("country.is_launched", true)
-      .ilike("name", like)
-      .order("name")
-      .limit(20),
-    supabase
-      .from("guides")
-      .select("slug, title, category, country:countries(is_launched)")
-      .eq("status", "published")
-      .neq("category", "comparison")
-      .ilike("title", like)
-      .order("title")
-      .limit(20),
-    programsQuery,
-  ]);
+  const [universities, guides, programs, visas, scholarships, blogPosts] =
+    await Promise.all([
+      supabase
+        .from("universities")
+        .select("slug, name, city, country:countries!inner(is_launched)")
+        .eq("status", "published")
+        .eq("country.is_launched", true)
+        .ilike("name", like)
+        .order("name")
+        .limit(20),
+      supabase
+        .from("guides")
+        .select("slug, title, category, country:countries(is_launched)")
+        .eq("status", "published")
+        .neq("category", "comparison")
+        .ilike("title", like)
+        .order("title")
+        .limit(20),
+      programsQuery,
+      supabase
+        .from("visa_subclasses")
+        .select("slug, code, name")
+        .eq("status", "published")
+        .or(`name.ilike.${like},code.ilike.${like},short_description.ilike.${like}`)
+        .order("code")
+        .limit(10),
+      supabase
+        .from("scholarships")
+        .select("slug, name, scope, country:countries(is_launched)")
+        .eq("status", "published")
+        .not("slug", "is", null)
+        .ilike("name", like)
+        .order("name")
+        .limit(10),
+      supabase
+        .from("blog_posts")
+        .select("slug, title")
+        .eq("status", "published")
+        .ilike("title", like)
+        .order("published_at", { ascending: false })
+        .limit(10),
+    ]);
 
   if (universities.error) throw universities.error;
   if (guides.error) throw guides.error;
   if (programs.error) throw programs.error;
+  if (visas.error) throw visas.error;
+  if (scholarships.error) throw scholarships.error;
+  if (blogPosts.error) throw blogPosts.error;
 
   // The hand-written Database type (src/lib/supabase/types.ts) leaves every
   // table's `Relationships` empty, so supabase-js can't infer embedded-select
@@ -100,6 +135,13 @@ export async function searchSite(query: string): Promise<SearchResults> {
     country: { is_launched: boolean } | null;
   }[];
 
+  const scholarshipRows = (scholarships.data ?? []) as unknown as {
+    slug: string;
+    name: string;
+    scope: string;
+    country: { is_launched: boolean } | null;
+  }[];
+
   return {
     universities: universities.data ?? [],
     guides: guideRows
@@ -112,5 +154,10 @@ export async function searchSite(query: string): Promise<SearchResults> {
       universityName: p.university?.name ?? "",
       subjectName: p.subject?.name ?? null,
     })),
+    visas: (visas.data ?? []) as { slug: string; code: string; name: string }[],
+    scholarships: scholarshipRows
+      .filter((s) => !s.country || s.country.is_launched)
+      .map((s) => ({ slug: s.slug, name: s.name, scope: s.scope })),
+    blogPosts: (blogPosts.data ?? []) as { slug: string; title: string }[],
   };
 }

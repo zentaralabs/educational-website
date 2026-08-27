@@ -92,19 +92,31 @@ export async function listUpcomingDeadlines(limit = 5): Promise<PublicDeadlineRo
 
 export async function listDeadlineFilterOptions() {
   const supabase = createPublicClient(["deadlines:list"]);
-  const [countries, degreeLevels, deadlineTypes] = await Promise.all([
+  const [countries, published] = await Promise.all([
     supabase.from("countries").select("code, name").eq("is_launched", true).order("code"),
-    supabase.from("degree_levels").select("name").order("name"),
-    supabase.from("deadline_types").select("name").order("name"),
+    // Only surface degree levels and intake types that actually have
+    // published, launched-country deadlines — otherwise the dropdowns list
+    // dead options (e.g. US-style "Early Decision") that return nothing.
+    supabase
+      .from("deadlines")
+      .select(
+        "degree_level:degree_levels!inner(name), deadline_type:deadline_types!inner(name), university:universities!inner(country:countries!inner(is_launched))",
+      )
+      .eq("status", "published")
+      .eq("university.country.is_launched", true),
   ]);
 
   if (countries.error) throw countries.error;
-  if (degreeLevels.error) throw degreeLevels.error;
-  if (deadlineTypes.error) throw deadlineTypes.error;
+  if (published.error) throw published.error;
+
+  const rows = (published.data ?? []) as unknown as {
+    degree_level: { name: string } | null;
+    deadline_type: { name: string } | null;
+  }[];
 
   return {
     countries: countries.data ?? [],
-    degreeLevels: (degreeLevels.data ?? []).map((d) => d.name),
-    deadlineTypes: (deadlineTypes.data ?? []).map((d) => d.name),
+    degreeLevels: [...new Set(rows.map((r) => r.degree_level?.name).filter(Boolean))].sort() as string[],
+    deadlineTypes: [...new Set(rows.map((r) => r.deadline_type?.name).filter(Boolean))].sort() as string[],
   };
 }
