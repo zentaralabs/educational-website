@@ -17,6 +17,7 @@ export type CollectionUniversity = {
   intakes: string[];
   /** Slugs of published scholarships linked to this university that need no separate application. */
   automaticScholarships: { slug: string; name: string; amount: string | null }[];
+  acceptanceRate: number | null;
 };
 
 type UniRow = {
@@ -28,6 +29,7 @@ type UniRow = {
   tuition_international: number | null;
   intake_dates: string | null;
   who_is_it_for: string | null;
+  acceptance_rate: number | string | null;
 };
 
 type ProgRow = {
@@ -78,7 +80,7 @@ export async function listCollectionUniversities(): Promise<CollectionUniversity
     supabase
       .from("universities")
       .select(
-        "slug, name, city, institution_type, living_cost_annual, tuition_international, intake_dates, who_is_it_for, country:countries!inner(is_launched)",
+        "slug, name, city, institution_type, living_cost_annual, tuition_international, intake_dates, who_is_it_for, acceptance_rate, country:countries!inner(is_launched)",
       )
       .eq("status", "published")
       .eq("country.is_launched", true),
@@ -162,6 +164,8 @@ export async function listCollectionUniversities(): Promise<CollectionUniversity
         firstYearBudget,
         intakes: MONTHS.filter((m) => intakes.has(m)),
         automaticScholarships: autoSchBySlug.get(u.slug) ?? [],
+        acceptanceRate:
+          u.acceptance_rate == null ? null : Number(u.acceptance_rate),
       };
     })
     .sort((a, b) => a.name.localeCompare(b.name));

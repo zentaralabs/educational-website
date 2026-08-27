@@ -39,6 +39,51 @@ function budget(u: CollectionUniversity): string {
     : "Budget not available";
 }
 
+const GO8 = new Set([
+  "australian-national-university",
+  "university-of-melbourne",
+  "university-of-sydney",
+  "unsw-sydney",
+  "university-of-queensland",
+  "monash-university",
+  "university-of-western-australia",
+  "adelaide-university",
+]);
+
+/** Builds a "cheapest universities in <city>" collection. */
+function cityCollection(opts: {
+  city: string;
+  match: RegExp;
+  slug: string;
+}): Collection {
+  const { city, match, slug } = opts;
+  return {
+    slug,
+    title: `The cheapest universities in ${city} for international students`,
+    shortTitle: `Cheapest in ${city}`,
+    metaDescription: `Universities in ${city} ranked by estimated first-year budget for international students: tuition plus ${city} living costs. Not ranked by prestige.`,
+    intro: [
+      `${city} has universities across the full price range, and where you study inside the city matters less for cost than which institution and course you pick. This list ranks the ${city} universities by estimated first-year budget, cheapest first.`,
+      `The budget figure is the cheapest international tuition on record for each university plus our ${city} living-cost estimate plus a rough setup allowance. Tuition varies a lot by course, so treat the order as a guide and check your specific program.`,
+    ],
+    methodology: `We took every published university with a campus in ${city}, used its lowest international tuition (university-wide or its cheapest program), added the ${city} living-cost estimate and about AUD 4,000 in setup costs, and sorted low to high.`,
+    build: (unis) =>
+      unis
+        .filter((u) => u.city != null && match.test(u.city) && u.firstYearBudget != null)
+        .sort((a, b) => (a.firstYearBudget ?? 0) - (b.firstYearBudget ?? 0))
+        .map((u) => ({
+          slug: u.slug,
+          name: u.name,
+          city: u.city,
+          headline: budget(u),
+          note:
+            u.minTuition != null
+              ? `Tuition from ${formatCurrency(u.minTuition, "AUD")} a year.`
+              : `Among the more affordable options in ${city}.`,
+        })),
+  };
+}
+
 export const COLLECTIONS: Collection[] = [
   {
     slug: "affordable-australian-universities-for-international-students",
@@ -154,6 +199,97 @@ export const COLLECTIONS: Collection[] = [
           };
         }),
   },
+  {
+    slug: "easiest-australian-universities-to-get-into-for-international-students",
+    title: "The most accessible Australian universities for international students",
+    shortTitle: "Higher acceptance rates",
+    metaDescription:
+      "Australian universities with the highest acceptance rates and most open admissions for international students, and what that means for entry requirements.",
+    intro: [
+      "\"Easiest to get into\" is the wrong way to think about it, because a place at any accredited Australian university still needs you to meet real academic and English requirements. But acceptance rates vary widely, and some universities have genuinely more open admissions than the highly selective Group of Eight.",
+      "The most open are the TAFEs and pathway providers, then the regional, newer, and teaching-focused universities. These often accept a broader range of prior qualifications and lower entry averages, and several run their own foundation or diploma pathways for applicants who fall just short.",
+    ],
+    methodology:
+      "We listed published universities with an acceptance rate of 78 percent or higher, sorted highest first. Acceptance rate is an institution-wide figure and does not tell you about a specific competitive course (medicine, law, some design programs stay selective everywhere). Always check the requirements for your course.",
+    build: (unis) =>
+      unis
+        .filter((u) => u.acceptanceRate != null && u.acceptanceRate >= 78)
+        .sort((a, b) => (b.acceptanceRate ?? 0) - (a.acceptanceRate ?? 0))
+        .slice(0, 18)
+        .map((u) => ({
+          slug: u.slug,
+          name: u.name,
+          city: u.city,
+          headline: `${Math.round(u.acceptanceRate!)}% acceptance rate`,
+          note:
+            u.firstYearBudget != null
+              ? `Around ${formatCurrency(u.firstYearBudget, "AUD")} for the first year. Competitive courses still have their own requirements.`
+              : "Broad admissions across most courses; competitive programs are still selective.",
+        })),
+  },
+  {
+    slug: "private-universities-in-australia-for-international-students",
+    title: "Private universities in Australia",
+    shortTitle: "Private universities",
+    metaDescription:
+      "Every private university and private higher-education provider in Australia, what each is known for, and how they differ from the public system for international students.",
+    intro: [
+      "Australia's university system is overwhelmingly public, so private universities and private higher-education providers are a small group with distinct characters. They tend to be smaller, more teaching-focused, and more expensive per year, since they receive no government funding and charge international and domestic students the same fee.",
+      "The trade-off is often smaller classes, a tighter industry focus, more frequent intakes, and in Bond's case a compressed calendar that finishes a bachelor degree in two years. None offer Commonwealth Supported Places, so scholarship support matters more here.",
+    ],
+    methodology:
+      "We listed every published provider marked as a private institution, sorted alphabetically. This includes both full private universities (Bond, Torrens, Notre Dame, Divinity) and private higher-education providers that grant degrees.",
+    build: (unis) =>
+      unis
+        .filter((u) => u.institution_type === "private")
+        .sort((a, b) => a.name.localeCompare(b.name))
+        .map((u) => ({
+          slug: u.slug,
+          name: u.name,
+          city: u.city,
+          headline:
+            u.minTuition != null
+              ? `Tuition from ${formatCurrency(u.minTuition, "AUD")}/yr`
+              : "Private provider",
+          note:
+            u.who_is_it_for?.split(". ").slice(0, 1).join(". ").slice(0, 180) ??
+            "Private provider; domestic and international students pay the same fee.",
+        })),
+  },
+  {
+    slug: "group-of-eight-universities-in-australia",
+    title: "The Group of Eight universities in Australia",
+    shortTitle: "Group of Eight",
+    metaDescription:
+      "The eight research-intensive Group of Eight universities in Australia, what Go8 membership means for international students, and how their costs compare.",
+    intro: [
+      "The Group of Eight is an alliance of Australia's oldest and most research-intensive universities. They dominate the international rankings, run the largest research budgets, and are where most of Australia's professional graduate programs (medicine, law, some engineering) sit.",
+      "For international students the Go8 name carries weight with employers, especially outside Australia. The trade-offs are the highest tuition in the country, the most competitive admissions, and, for several of them, big-city living costs. A Go8 degree is not automatically the right choice if your field is taught just as well elsewhere for less.",
+    ],
+    methodology:
+      "The Group of Eight is a fixed alliance: ANU, Melbourne, Sydney, UNSW, Queensland, Monash, Western Australia, and Adelaide. We show them here with their cheapest tuition on record and first-year budget so you can compare.",
+    build: (unis) =>
+      unis
+        .filter((u) => GO8.has(u.slug))
+        .sort((a, b) => (a.firstYearBudget ?? 0) - (b.firstYearBudget ?? 0))
+        .map((u) => ({
+          slug: u.slug,
+          name: u.name,
+          city: u.city,
+          headline:
+            u.firstYearBudget != null
+              ? budget(u)
+              : u.minTuition != null
+                ? `Tuition from ${formatCurrency(u.minTuition, "AUD")}/yr`
+                : "Group of Eight",
+          note: "Research-intensive, highly ranked, selective admissions, and the highest tuition band in Australia.",
+        })),
+  },
+  cityCollection({ city: "Sydney", match: /sydney|manly/i, slug: "cheapest-universities-in-sydney-for-international-students" }),
+  cityCollection({ city: "Melbourne", match: /melbourne|geelong/i, slug: "cheapest-universities-in-melbourne-for-international-students" }),
+  cityCollection({ city: "Perth", match: /perth|fremantle/i, slug: "cheapest-universities-in-perth-for-international-students" }),
+  cityCollection({ city: "Brisbane", match: /brisbane|gold coast/i, slug: "cheapest-universities-in-brisbane-for-international-students" }),
+  cityCollection({ city: "Adelaide", match: /adelaide/i, slug: "cheapest-universities-in-adelaide-for-international-students" }),
 ];
 
 export function getCollection(slug: string): Collection | undefined {
