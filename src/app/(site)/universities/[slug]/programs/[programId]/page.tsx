@@ -225,10 +225,15 @@ export default async function ProgramDetailPage({
                 <ul className={term.label || term.units ? "mt-2 flex flex-col gap-1.5" : "flex flex-col gap-1.5"}>
                   {term.items.map((item, j) => (
                     <li key={j} className="flex items-center gap-2 font-body text-sm text-ink">
-                      {item.code && (
+                      {item.code ? (
                         <span className="flex-shrink-0 rounded-full bg-ink/[0.05] px-2 py-0.5 font-utility text-[10px] text-slate">
                           {item.code}
                         </span>
+                      ) : (
+                        <span
+                          aria-hidden="true"
+                          className="inline-block h-1 w-1 flex-shrink-0 rounded-full bg-status-open/50"
+                        />
                       )}
                       <span>{item.text}</span>
                       {item.electiveCount && (
