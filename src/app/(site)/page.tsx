@@ -23,9 +23,9 @@ export const metadata = {
 
 const CTAS = [
   { label: "Browse deadlines", href: "/deadlines", primary: true },
+  { label: "Courses by subject", href: "/study" },
   { label: "Compare universities", href: "/compare/universities" },
   { label: "Scholarships", href: "/scholarships" },
-  { label: "Application guides", href: "/guides" },
 ];
 
 export default async function Home() {

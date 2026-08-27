@@ -436,6 +436,14 @@ export default async function UniversityProfilePage({
           {programs.length > 0 && (
             <ProgramsList programs={programs} universitySlug={university.slug} />
           )}
+
+          <p className="mt-4 font-body text-xs text-slate">
+            Comparing options across universities?{" "}
+            <Link href="/study" className="underline underline-offset-2 hover:text-ink">
+              Browse programs by subject
+            </Link>
+            .
+          </p>
         </ProfileSection>
       )}
 

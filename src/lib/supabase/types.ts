@@ -233,8 +233,8 @@ export interface Database {
         }
       >;
       subjects: Table<
-        { id: number; name: string },
-        { id?: number; name: string }
+        { id: number; name: string; slug: string | null },
+        { id?: number; name: string; slug?: string | null }
       >;
       ranking_bodies: Table<
         { id: number; name: string; website_url: string | null },

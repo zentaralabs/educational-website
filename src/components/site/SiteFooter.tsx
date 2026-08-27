@@ -2,7 +2,24 @@ import Link from "next/link";
 import { joinWithAnd } from "@/lib/format";
 import { listPublicCountries } from "@/lib/queries/public-countries";
 
-const LEGAL = [
+const EXPLORE = [
+  { label: "Universities", href: "/compare/universities" },
+  { label: "Application deadlines", href: "/deadlines" },
+  { label: "Courses by subject", href: "/study" },
+  { label: "Scholarships", href: "/scholarships" },
+  { label: "Decision guides", href: "/best" },
+  { label: "Compare universities", href: "/compare" },
+  { label: "Find a university (quiz)", href: "/quiz" },
+];
+
+const LEARN = [
+  { label: "How-to guides", href: "/guides" },
+  { label: "Visa subclasses", href: "/visas" },
+  { label: "SkillSelect invitation rounds", href: "/visas/invitation-rounds" },
+  { label: "Blog", href: "/blog" },
+];
+
+const SITE = [
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
   { label: "Privacy Policy", href: "/privacy" },
@@ -10,34 +27,46 @@ const LEGAL = [
   { label: "Disclaimer", href: "/disclaimer" },
 ];
 
+const linkCls =
+  "font-body text-sm text-slate transition-colors duration-150 hover:text-ink";
+const headingCls =
+  "font-body text-xs font-semibold tracking-widest text-ink uppercase";
+
 export async function SiteFooter() {
   const countries = await listPublicCountries();
 
   return (
-    <footer className="mt-16 border-t border-ink/10 bg-paper">
-      <div className="mx-auto grid max-w-6xl gap-8 px-6 py-10 sm:grid-cols-3">
+    <footer className="mt-16 border-t border-line bg-mist">
+      <div className="mx-auto grid max-w-6xl gap-10 px-6 py-12 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <p className="font-display text-base font-semibold text-ink">
+          <p className="font-display text-lg font-semibold text-ink">
             Where To Apply
           </p>
           <p className="mt-2 max-w-xs font-body text-sm text-slate">
-            Deadlines, requirements, and scholarships for applying to
-            universities in {joinWithAnd(countries.map((c) => c.name))}.
+            Deadlines, entry requirements, tuition, scholarships, and visa
+            pathways for studying at universities in{" "}
+            {joinWithAnd(countries.map((c) => c.name))}.
+          </p>
+          <p className="mt-3 font-body text-sm text-slate">
+            Browse by country:{" "}
+            {countries.map((c, i) => (
+              <span key={c.code}>
+                <Link href={`/deadlines?country=${c.code}`} className="underline underline-offset-2 hover:text-ink">
+                  {c.name}
+                </Link>
+                {i < countries.length - 1 && ", "}
+              </span>
+            ))}
           </p>
         </div>
 
         <div>
-          <p className="font-body text-sm font-semibold tracking-wide text-ink uppercase">
-            Browse by country
-          </p>
+          <p className={headingCls}>Explore</p>
           <ul className="mt-3 flex flex-col gap-2">
-            {countries.map((c) => (
-              <li key={c.code}>
-                <Link
-                  href={`/deadlines?country=${c.code}`}
-                  className="font-body text-sm text-slate transition-colors duration-150 hover:text-ink"
-                >
-                  {c.name}
+            {EXPLORE.map((l) => (
+              <li key={l.href}>
+                <Link href={l.href} className={linkCls}>
+                  {l.label}
                 </Link>
               </li>
             ))}
@@ -45,16 +74,24 @@ export async function SiteFooter() {
         </div>
 
         <div>
-          <p className="font-body text-sm font-semibold tracking-wide text-ink uppercase">
-            Site
-          </p>
+          <p className={headingCls}>Guides & visas</p>
           <ul className="mt-3 flex flex-col gap-2">
-            {LEGAL.map((l) => (
+            {LEARN.map((l) => (
               <li key={l.href}>
-                <Link
-                  href={l.href}
-                  className="font-body text-sm text-slate transition-colors duration-150 hover:text-ink"
-                >
+                <Link href={l.href} className={linkCls}>
+                  {l.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <p className={headingCls}>Site</p>
+          <ul className="mt-3 flex flex-col gap-2">
+            {SITE.map((l) => (
+              <li key={l.href}>
+                <Link href={l.href} className={linkCls}>
                   {l.label}
                 </Link>
               </li>
@@ -63,11 +100,11 @@ export async function SiteFooter() {
         </div>
       </div>
 
-      <div className="border-t border-ink/10 px-6 py-4">
+      <div className="border-t border-line px-6 py-4">
         <p className="mx-auto max-w-6xl font-utility text-xs text-slate">
-          © {new Date().getFullYear()} Where To Apply. Not affiliated with
-          any university. Information is independently researched and
-          verified — see each page&rsquo;s &ldquo;last verified&rdquo; date and sources.
+          © {new Date().getFullYear()} Where To Apply. Not affiliated with any
+          university. Information is independently researched and verified; see
+          each page&rsquo;s &ldquo;last verified&rdquo; date and sources.
         </p>
       </div>
     </footer>

@@ -9,6 +9,7 @@ Where To Apply is an independent, fact-checked reference for prospective univers
 - [Application Deadline Calendar](/deadlines): Filterable, sourced application deadlines by country, degree level, and university.
 - [University Profiles](/search): Deadlines, admissions requirements, tuition, and scholarships for individual universities — one page per university, e.g. /universities/{slug}.
 - [Program Pages](/search): Per-program admission requirements, English test scores, tuition, and curriculum — one page per degree program, e.g. /universities/{slug}/programs/{id}.
+- [Study by Subject](/study): One page per field of study (computer science, nursing, business, engineering, law, and more) with program counts, the cheapest programs, entry requirements, and the skilled-migration angle. One page per subject, e.g. /study/{slug}.
 - [Guides](/guides): How-to guides for personal statements, letters of recommendation, transfers, financial aid, and international applications.
 - [Scholarships](/scholarships): Government, university, and external scholarships for international students in Australia, with value, eligibility, and whether a separate application is needed. One page per scholarship, e.g. /scholarships/{slug}.
 - [Visa Subclasses](/visas): Plain-English breakdowns of Australia's student, graduate, skilled, and employer-sponsored visa subclasses (500, 485, 189, 190, 491, 482, and more), covering eligibility, points, costs, and the pathway to permanent residence. One page per subclass, e.g. /visas/{slug}.

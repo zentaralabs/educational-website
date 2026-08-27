@@ -5,6 +5,7 @@ import { listPublishedBlogPostSlugs } from "@/lib/queries/public-blog-posts";
 import { listPublishedGuideSlugs } from "@/lib/queries/public-guides";
 import { listPublishedProgramsForSitemap } from "@/lib/queries/public-programs";
 import { listPublishedScholarshipSlugs } from "@/lib/queries/public-scholarships";
+import { listPublishedSubjects } from "@/lib/queries/public-subjects";
 import { listPublishedUniversitySlugs } from "@/lib/queries/public-universities";
 import { listPublishedVisaSlugs } from "@/lib/queries/public-visas";
 
@@ -19,6 +20,7 @@ const STATIC_ROUTES: Array<{ path: string; priority: number; changeFrequency: Me
   { path: "/blog", priority: 0.7, changeFrequency: "weekly" },
   { path: "/scholarships", priority: 0.8, changeFrequency: "weekly" },
   { path: "/best", priority: 0.7, changeFrequency: "weekly" },
+  { path: "/study", priority: 0.8, changeFrequency: "weekly" },
   { path: "/visas", priority: 0.8, changeFrequency: "weekly" },
   { path: "/visas/invitation-rounds", priority: 0.7, changeFrequency: "weekly" },
   { path: "/quiz", priority: 0.6, changeFrequency: "monthly" },
@@ -48,6 +50,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     listPublishedScholarshipSlugs(),
     listPublishedProgramsForSitemap(),
   ]);
+
+  const subjects = await listPublishedSubjects();
 
   const now = new Date();
 
@@ -107,6 +111,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }));
 
+  const subjectEntries: MetadataRoute.Sitemap = subjects.map((s) => ({
+    url: `${SITE_URL}/study/${s.slug}`,
+    lastModified: now,
+    changeFrequency: "weekly",
+    priority: 0.7,
+  }));
+
   const programEntries: MetadataRoute.Sitemap = programs
     .filter((p) => p.university)
     .map((p) => ({
@@ -125,6 +136,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...visaEntries,
     ...scholarshipEntries,
     ...collectionEntries,
+    ...subjectEntries,
     ...programEntries,
   ];
 }
