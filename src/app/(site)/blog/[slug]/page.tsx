@@ -42,7 +42,7 @@ export async function generateMetadata({
       publishedTime: post.published_at ?? undefined,
       modifiedTime: post.last_verified_at ?? undefined,
     },
-    twitter: { card: "summary", title, description },
+    twitter: { card: "summary_large_image", title, description },
   };
 }
 
@@ -105,7 +105,7 @@ export default async function BlogPostPage({
             </span>
             <p className="font-body text-sm text-slate">
               By <span className="font-medium text-ink">{post.author.name}</span>
-              {post.author.credentials && ` — ${post.author.credentials}`}
+              {post.author.credentials && `, ${post.author.credentials}`}
               {post.reviewed_by && <>, reviewed by {post.reviewed_by.name}</>}
             </p>
           </div>

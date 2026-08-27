@@ -11,9 +11,8 @@ export default function ContactPage() {
     <LegalPage title="Contact" updated="August 20, 2026">
       <p>
         Spotted an outdated deadline, an incorrect figure, or a broken link?
-        Corrections are the fastest way to help us keep this site accurate —
-        please tell us which page, what&rsquo;s wrong, and a source if you
-        have one.
+        Corrections are the fastest way to help us keep this site accurate.
+        Tell us which page, what&rsquo;s wrong, and a source if you have one.
       </p>
 
       <h2>Email</h2>
@@ -30,7 +29,7 @@ export default function ContactPage() {
 
       <p>
         We can&rsquo;t offer personalized admissions, financial, or legal
-        advice — see our <a href="/disclaimer">disclaimer</a> — but we do
+        advice (see our <a href="/disclaimer">disclaimer</a>), but we do
         read every message.
       </p>
     </LegalPage>

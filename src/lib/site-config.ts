@@ -21,4 +21,4 @@ export const SITE_YEAR = new Date().getFullYear();
 // Launching country-by-country — see PROJECT_STATUS.md's 2026-08-27 note.
 // Update this once a second country goes live (currently Australia only).
 export const SITE_DESCRIPTION =
-  "Application deadlines, admissions requirements, tuition costs, and scholarships for universities in Australia — plus how-to guides for personal statements, visas, and international applications.";
+  "Application deadlines, admissions requirements, tuition costs, and scholarships for universities in Australia. Plus how-to guides for personal statements, visas, and international applications.";

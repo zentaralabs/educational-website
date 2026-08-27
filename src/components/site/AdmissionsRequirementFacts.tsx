@@ -17,12 +17,16 @@ export function AdmissionsRequirementFacts({
   atarRequirement,
   academicRequirement,
   academicRequirementDomestic,
+  ieltsOverall,
+  pteOverall,
 }: {
   requiredTests: string[] | null;
   gpaRequirement: string | null;
   atarRequirement: string | null;
   academicRequirement: string | null;
   academicRequirementDomestic: string | null;
+  ieltsOverall: number | null;
+  pteOverall: number | null;
 }) {
   const { resolved } = useStudentType();
 
@@ -30,6 +34,15 @@ export function AdmissionsRequirementFacts({
     resolved === "domestic"
       ? (academicRequirementDomestic ?? academicRequirement)
       : academicRequirement;
+
+  // Institutional minimum only; specific programs list their own bands in
+  // the program list. Shown for international visitors, same as required tests.
+  const englishMinimum = [
+    ieltsOverall != null ? `IELTS ${ieltsOverall}` : null,
+    pteOverall != null ? `PTE ${pteOverall}` : null,
+  ]
+    .filter(Boolean)
+    .join(" · ");
 
   return (
     <>
@@ -40,6 +53,12 @@ export function AdmissionsRequirementFacts({
       <Fact label="Academic requirement" value={academicRequirementText} />
       {resolved !== "domestic" && (
         <Fact label="Required tests" value={requiredTests?.join(", ")} />
+      )}
+      {resolved !== "domestic" && (
+        <Fact
+          label="English (institutional minimum)"
+          value={englishMinimum || null}
+        />
       )}
     </>
   );

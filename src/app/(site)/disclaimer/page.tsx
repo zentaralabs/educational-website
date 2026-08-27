@@ -3,7 +3,7 @@ import { LegalPage } from "@/components/site/LegalPage";
 export const metadata = {
   title: "Disclaimer",
   description:
-    "Where To Apply provides informational content only — not official admissions, financial, or legal advice.",
+    "Where To Apply provides informational content only, not official admissions, financial, or legal advice.",
   alternates: { canonical: "/disclaimer" },
 };
 
@@ -27,8 +27,8 @@ export default function DisclaimerPage() {
         &ldquo;last verified&rdquo; date and source link on every
         fact-bearing page. Universities change deadlines, tuition, and
         requirements without notice, and errors can occur despite our
-        process. Always confirm time-sensitive details — especially
-        deadlines — directly with the university or application platform
+        process. Always confirm time-sensitive details, especially
+        deadlines, directly with the university or application platform
         before acting on them.
       </p>
 

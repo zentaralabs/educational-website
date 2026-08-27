@@ -16,8 +16,8 @@ export default function TermsPage() {
 
       <h2>Use of content</h2>
       <p>
-        The content on this site — deadline data, university profiles,
-        guides, and comparisons — is provided for personal, non-commercial
+        The content on this site (deadline data, university profiles,
+        guides, and comparisons) is provided for personal, non-commercial
         use in researching university applications. You may link to any
         page on this site. You may not scrape, republish, or redistribute
         our content in bulk, or represent it as your own, without our
@@ -27,7 +27,7 @@ export default function TermsPage() {
       <h2>No professional advice</h2>
       <p>
         Content on this site is informational only and is not official
-        admissions, financial, immigration, or legal advice — see our{" "}
+        admissions, financial, immigration, or legal advice. See our{" "}
         <a href="/disclaimer">disclaimer</a> for details.
       </p>
 

@@ -62,8 +62,13 @@ export async function generateMetadata({
       title,
       description,
       alternates: { canonical: url },
+      // Auto-generated head-to-head from DB stats. Useful for visitors and
+      // internal linking, but templated, so kept out of the index to stay
+      // clear of "scaled content". The hand-written comparison guides below
+      // stay indexed.
+      robots: { index: false, follow: true },
       openGraph: { title, description, url, type: "article" },
-      twitter: { card: "summary", title, description },
+      twitter: { card: "summary_large_image", title, description },
     };
   }
 
@@ -76,7 +81,7 @@ export async function generateMetadata({
     description,
     alternates: { canonical: `/compare/${slug}` },
     openGraph: { title, description, url: `/compare/${slug}`, type: "article" },
-    twitter: { card: "summary", title, description },
+    twitter: { card: "summary_large_image", title, description },
   };
 }
 

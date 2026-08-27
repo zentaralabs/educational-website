@@ -38,7 +38,7 @@ export async function generateMetadata({
     description,
     alternates: { canonical: url },
     openGraph: { title, description, url, type: "article" },
-    twitter: { card: "summary", title, description },
+    twitter: { card: "summary_large_image", title, description },
   };
 }
 
@@ -105,7 +105,7 @@ export default async function GuidePage({
             </span>
             <p className="font-body text-sm text-slate">
               By <span className="font-medium text-ink">{guide.author.name}</span>
-              {guide.author.credentials && ` — ${guide.author.credentials}`}
+              {guide.author.credentials && `, ${guide.author.credentials}`}
               {guide.reviewed_by && <>, reviewed by {guide.reviewed_by.name}</>}
             </p>
           </div>

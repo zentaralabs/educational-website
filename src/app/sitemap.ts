@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { COLLECTIONS } from "@/lib/collections";
+import { SUBJECT_CONTENT } from "@/lib/subjects";
 import { CITY_COSTS } from "@/lib/cities";
-import { COMPARISON_PAIRS, vsSlug } from "@/lib/comparisons";
 import { SITE_URL } from "@/lib/site-config";
 import { listPublishedBlogPostSlugs } from "@/lib/queries/public-blog-posts";
 import { listPublishedGuideSlugs } from "@/lib/queries/public-guides";
@@ -80,10 +80,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }));
 
-  const comparisonEntries: MetadataRoute.Sitemap = [
-    ...comparisonSlugs,
-    ...COMPARISON_PAIRS.map(([a, b]) => vsSlug(a, b)),
-  ].map((slug) => ({
+  // Only the hand-written comparison guides. The auto-generated
+  // /compare/{a}-vs-{b} stat pages are noindex, so they stay out of the sitemap.
+  const comparisonEntries: MetadataRoute.Sitemap = comparisonSlugs.map((slug) => ({
     url: `${SITE_URL}/compare/${slug}`,
     lastModified: now,
     changeFrequency: "monthly",
@@ -125,12 +124,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }));
 
-  const subjectEntries: MetadataRoute.Sitemap = subjects.map((s) => ({
-    url: `${SITE_URL}/study/${s.slug}`,
-    lastModified: now,
-    changeFrequency: "weekly",
-    priority: 0.7,
-  }));
+  // Only subjects with a curated write-up. Templated-fallback subject pages
+  // are noindex, so they stay out of the sitemap.
+  const subjectEntries: MetadataRoute.Sitemap = subjects
+    .filter((s) => SUBJECT_CONTENT[s.slug])
+    .map((s) => ({
+      url: `${SITE_URL}/study/${s.slug}`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.7,
+    }));
 
   const programEntries: MetadataRoute.Sitemap = programs
     .filter((p) => p.university)

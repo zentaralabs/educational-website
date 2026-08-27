@@ -28,6 +28,7 @@ type UniFaqInput = {
   city: string | null;
   application_fee: number | null;
   ielts_overall: number | string | null;
+  pte_overall: number | string | null;
   acceptance_rate: number | string | null;
   apply_url: string | null;
   website_url: string | null;
@@ -54,9 +55,12 @@ export function universityFaq(u: UniFaqInput): FaqItem[] {
 
   if (u.ielts_overall != null) {
     const score = Number(u.ielts_overall);
+    const pte = u.pte_overall != null ? Number(u.pte_overall) : null;
     items.push({
-      q: `What IELTS score do I need to get into ${u.name}?`,
-      a: `The institutional minimum for undergraduate entry at ${u.name} is IELTS ${score} overall. This is a floor, not a guarantee: nursing programs usually need 7.0, teaching 7.5, and medicine, law, and business often 7.0. Postgraduate coursework is typically 6.5. Always check the score for your specific course.`,
+      q: `What English test score do I need to get into ${u.name}?`,
+      a: `The institutional minimum for undergraduate entry at ${u.name} is IELTS ${score} overall${
+        pte != null ? `, or PTE Academic ${pte}` : ""
+      }. This is a floor, not a guarantee: nursing programs usually need IELTS 7.0, teaching 7.5, and medicine, law, and business often 7.0. Postgraduate coursework is typically 6.5. Always check the score for your specific course.`,
     });
   }
 

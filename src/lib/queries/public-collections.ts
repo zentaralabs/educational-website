@@ -20,6 +20,7 @@ export type CollectionUniversity = {
   acceptanceRate: number | null;
   applicationFee: number | null;
   ieltsOverall: number | null;
+  pteOverall: number | null;
 };
 
 type UniRow = {
@@ -34,6 +35,7 @@ type UniRow = {
   acceptance_rate: number | string | null;
   application_fee: number | string | null;
   ielts_overall: number | string | null;
+  pte_overall: number | string | null;
 };
 
 type ProgRow = {
@@ -84,7 +86,7 @@ export async function listCollectionUniversities(): Promise<CollectionUniversity
     supabase
       .from("universities")
       .select(
-        "slug, name, city, institution_type, living_cost_annual, tuition_international, intake_dates, who_is_it_for, acceptance_rate, application_fee, ielts_overall, country:countries!inner(is_launched)",
+        "slug, name, city, institution_type, living_cost_annual, tuition_international, intake_dates, who_is_it_for, acceptance_rate, application_fee, ielts_overall, pte_overall, country:countries!inner(is_launched)",
       )
       .eq("status", "published")
       .eq("country.is_launched", true),
@@ -174,6 +176,8 @@ export async function listCollectionUniversities(): Promise<CollectionUniversity
           u.application_fee == null ? null : Number(u.application_fee),
         ieltsOverall:
           u.ielts_overall == null ? null : Number(u.ielts_overall),
+        pteOverall:
+          u.pte_overall == null ? null : Number(u.pte_overall),
       };
     })
     .sort((a, b) => a.name.localeCompare(b.name));

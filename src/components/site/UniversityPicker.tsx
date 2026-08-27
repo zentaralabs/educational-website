@@ -54,7 +54,7 @@ export function UniversityPicker({
             Build your own comparison
           </h2>
           <p className="mt-0.5 font-body text-sm text-slate">
-            Pick 2–{MAX_SELECTION} universities to compare cost, acceptance rate, and
+            Pick 2 to {MAX_SELECTION} universities to compare cost, acceptance rate, and
             requirements side by side.
           </p>
         </div>

@@ -33,7 +33,7 @@ export function joinWithAnd(items: string[]): string {
   return `${items.slice(0, -1).join(", ")}, and ${items[items.length - 1]}`;
 }
 
-/** Formats an IELTS/PTE band score with per-skill breakdown, e.g. "7 overall — L6 R5.5 W7 S6". */
+/** Formats an IELTS/PTE band score with per-skill breakdown, e.g. "7 overall (L6 R5.5 W7 S6)". */
 export function formatEnglishScore(
   overall: number | null,
   listening: number | null,
@@ -50,5 +50,5 @@ export function formatEnglishScore(
   ]
     .filter(Boolean)
     .join(" ");
-  return `${overall} overall${bands ? ` — ${bands}` : ""}`;
+  return `${overall} overall${bands ? ` (${bands})` : ""}`;
 }

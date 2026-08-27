@@ -62,7 +62,7 @@ export default async function CompareUniversitiesPage({
 
         {slugs.length > 0 && universities.length < 2 && (
           <p className="mt-4 font-body text-sm text-status-closed">
-            Couldn&rsquo;t find enough of those universities to compare — pick again below.
+            Couldn&rsquo;t find enough of those universities to compare. Pick again below.
           </p>
         )}
       </div>

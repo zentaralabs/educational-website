@@ -105,7 +105,7 @@ export function ProgramSidebar({
         </Widget>
         {showingDomestic && tuitionDomesticIsCsp && (
           <p className="px-1 font-body text-xs text-slate">
-            Commonwealth Supported Place rate — limited, not guaranteed; full domestic fee otherwise.
+            Commonwealth Supported Place rate: limited, not guaranteed. Full domestic fee otherwise.
           </p>
         )}
       </div>

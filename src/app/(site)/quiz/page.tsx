@@ -20,7 +20,7 @@ export default async function QuizPage() {
       </h1>
       <p className="mt-2 font-body text-base text-slate">
         Four quick questions, matched against real deadlines, costs, and
-        requirements — not a lead-gen form.
+        requirements. Not a lead-gen form.
       </p>
 
       <QuizForm countries={countries} degreeLevels={degreeLevels} />

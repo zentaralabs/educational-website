@@ -26,7 +26,7 @@ export default function AboutPage() {
         platform, or government source at the time it was verified. We link
         that source and show a &ldquo;last verified&rdquo; date on every
         fact-bearing page. Nothing is generated without a human checking it
-        against the original source first — see our{" "}
+        against the original source first. See our{" "}
         <a href="/disclaimer">disclaimer</a> for what that does and
         doesn&rsquo;t guarantee.
       </p>
@@ -35,7 +35,7 @@ export default function AboutPage() {
       <p>
         Guides and university write-ups are drafted with AI assistance and
         then substantively rewritten and fact-checked by a human editor
-        before publishing — not lightly proofread. Real bylines are on every
+        before publishing, not lightly proofread. Real bylines are on every
         guide and university profile so you know who stands behind it.
       </p>
 
@@ -44,7 +44,7 @@ export default function AboutPage() {
         Where To Apply is supported by display advertising and, in some
         cases, affiliate or referral relationships with scholarship and
         financial-aid providers. Editorial content is not influenced by
-        those relationships — a scholarship or program appearing on this
+        those relationships. A scholarship or program appearing on this
         site is not an endorsement, and inclusion criteria are the same
         whether or not a relationship exists.
       </p>

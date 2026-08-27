@@ -19,14 +19,14 @@ export default function PrivacyPage() {
       <p>
         We don&rsquo;t require an account to browse deadlines, guides,
         university profiles, or scholarships, and we don&rsquo;t collect
-        personal information unless you choose to give it to us — for
-        example, by emailing us a correction or question.
+        personal information unless you choose to give it to us, for
+        example by emailing us a correction or question.
       </p>
 
       <h2>Analytics</h2>
       <p>
         We use Google Analytics (GA4) and Google Search Console to
-        understand aggregate traffic — which pages are visited, roughly
+        understand aggregate traffic: which pages are visited, roughly
         where visitors are located at the country level, and how people
         arrive at the site. This data is used only in aggregate to improve
         content and site structure; we don&rsquo;t attempt to identify
@@ -55,7 +55,7 @@ export default function PrivacyPage() {
       <p>
         Pages on this site link to official university, government, and
         scholarship-provider websites. Once you leave this site, their own
-        privacy policies apply — we have no control over their data
+        privacy policies apply, and we have no control over their data
         practices.
       </p>
 

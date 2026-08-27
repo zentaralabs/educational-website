@@ -67,7 +67,7 @@ export async function generateMetadata({
     description,
     alternates: { canonical: url },
     openGraph: { title, description, url, type: "website" },
-    twitter: { card: "summary", title, description },
+    twitter: { card: "summary_large_image", title, description },
   };
 }
 
@@ -184,6 +184,7 @@ export default async function UniversityProfilePage({
           city: university.city,
           application_fee: university.application_fee,
           ielts_overall: university.ielts_overall,
+          pte_overall: university.pte_overall,
           acceptance_rate: university.acceptance_rate,
           apply_url: university.apply_url,
           website_url: university.website_url,
@@ -319,6 +320,8 @@ export default async function UniversityProfilePage({
               atarRequirement={university.atar_requirement}
               academicRequirement={university.academic_requirement}
               academicRequirementDomestic={university.academic_requirement_domestic}
+              ieltsOverall={university.ielts_overall}
+              pteOverall={university.pte_overall}
             />
             <Fact
               label="Required documents"

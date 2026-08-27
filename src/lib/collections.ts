@@ -43,6 +43,40 @@ const SUBJECT_NAMES: Record<string, string> = {
   engineering: "engineering",
 };
 
+/**
+ * Hand-written opening paragraph for the factory-built subject and city
+ * collections, keyed by collection slug. Prepended to the templated intro so
+ * each page leads with something specific to that subject or city rather than
+ * the same sentence with a noun swapped. Needs a factual review pass on any
+ * edit. House style: no em dashes.
+ */
+const LEAD: Record<string, string> = {
+  "best-australian-universities-for-computer-science":
+    "Computing is one of the more reliable study-to-migration routes in Australia, with software, systems, and cybersecurity roles all on the skilled occupation lists. Reputation in the field clusters at a handful of universities with large research groups and deep industry ties, though a strong specialisation at a mid-ranked university often matters more than the overall name. Fees run from the low AUD 30,000s to the high 40,000s a year.",
+  "best-australian-universities-for-information-technology":
+    "Information technology degrees cover much the same ground as computer science with a more applied, industry-facing slant, and several universities of technology build an assessed placement into the program. The master's usually accepts a bachelor's in any discipline, which makes IT a common conversion path for career changers. Entry sits around a credit average and IELTS 6.5.",
+  "best-australian-universities-for-data-science":
+    "Data science sits between statistics, computing, and a domain subject, so the strongest programs have genuine depth in all three rather than being a rebadged analytics course. Most master's degrees want some quantitative content in your prior study. The field maps onto the skilled occupation lists through computing and statistics roles.",
+  "best-australian-universities-for-business":
+    "No single ranking settles which Australian university is best for business, and accreditation from AACSB, EQUIS, or AMBA is a more useful signal than a league-table position. The gap is wide between an MBA, which usually wants work experience and costs the most, and a general business master's, which often wants neither. This shortlist flags what each school is known for.",
+  "best-australian-universities-for-nursing-and-health-sciences":
+    "Nursing is regulated. The qualification has to be accredited by the Australian Nursing and Midwifery Accreditation Council, and registration requires IELTS 7.0 with nothing below 7.0, so a program's accreditation status matters more than its prestige. Registered nurse is on the skilled occupation lists, which makes nursing one of the clearer routes to permanent residence.",
+  "best-australian-universities-for-engineering":
+    "For engineering, the signal that matters most is Engineers Australia accreditation, which every program here holds and which underpins both registration and the skilled-migration skills assessment. Beyond that, strength is specialised: a university can lead in mining or civil and be ordinary in software. Fees are among the higher ones, commonly in the AUD 40,000s.",
+  "cheapest-universities-in-sydney-for-international-students":
+    "Sydney is the most expensive place to study in Australia, and rent is almost the entire reason. Tuition at a western-Sydney university can be less than half what a Group of Eight charges, so the institution you pick moves your budget far more than the suburb does. Metropolitan Sydney does not count as a regional area for migration points.",
+  "cheapest-universities-in-melbourne-for-international-students":
+    "Melbourne runs a close second to Sydney on cost, with the same pattern: rent is the swing factor and tuition varies widely by university. The city has more universities within commuting distance than anywhere else in the country, which widens the cheaper end of this list. Like Sydney, metropolitan Melbourne is not a regional area for skilled migration.",
+  "cheapest-universities-in-perth-for-international-students":
+    "Perth is one of the more affordable capital cities for students, and unusually it counts as a regional area for skilled migration, so studying here adds points toward the 491 and 190 visas and opens regional nomination pathways. The trade-off is distance from the eastern states. Curtin and UWA anchor the list.",
+  "cheapest-universities-in-brisbane-for-international-students":
+    "Brisbane costs noticeably less than Sydney or Melbourne, mostly on rent, while everyday expenses are similar. Brisbane itself is not classified as regional for migration, though several other Queensland cities are. The list leans toward the technology-focused universities, with UQ at the higher-fee end.",
+  "cheapest-universities-in-adelaide-for-international-students":
+    "Adelaide is among the cheapest capital cities to live in and is a designated regional area for skilled migration, which adds points and widens state-nomination options. The university landscape changed in 2026 when two long-established institutions merged into Adelaide University, so catalogues and fee schedules are still settling. Confirm figures with the university directly.",
+  "cheapest-universities-in-canberra-for-international-students":
+    "Canberra is smaller and quieter than the big east-coast cities, with a tighter but generally cheaper rental market and short commutes. The choice is narrow: ANU, which is highly selective and sits in the top fee band, and the University of Canberra, which is more accessible on both entry and cost. The ACT is not a regional area for migration.",
+};
+
 /** Builds a "best universities for <subject>" collection from the curated
  *  strongAt list in SUBJECT_CONTENT. */
 function subjectBestCollection(subjectSlug: string): Collection {
@@ -56,6 +90,9 @@ function subjectBestCollection(subjectSlug: string): Collection {
     shortTitle: `Best for ${name}`,
     metaDescription: `Australian universities with a recognised strength in ${name}, for international students. Reputation, cost, and the skilled-migration angle.`,
     intro: [
+      ...(LEAD[`best-australian-universities-for-${subjectSlug}`]
+        ? [LEAD[`best-australian-universities-for-${subjectSlug}`]]
+        : []),
       `There is no official ranking of Australian universities by field of study, so "best for ${name}" comes down to research reputation, industry links, and how seriously a university invests in the area.`,
       `This shortlist is the universities with a genuine reputation in ${name}, with a note on what sets each apart. For the full list of every university that teaches it, plus the cheapest programs, see the ${name} subject page.`,
     ],
@@ -92,6 +129,7 @@ function cityCollection(opts: {
     shortTitle: `Cheapest in ${city}`,
     metaDescription: `Universities in ${city} ranked by estimated first-year budget for international students: tuition plus ${city} living costs. Not ranked by prestige.`,
     intro: [
+      ...(LEAD[slug] ? [LEAD[slug]] : []),
       `${city} has universities across the full price range, and where you study inside the city matters less for cost than which institution and course you pick. This list ranks the ${city} universities by estimated first-year budget, cheapest first.`,
       `The budget figure is the cheapest international tuition on record for each university plus our ${city} living-cost estimate plus a rough setup allowance. Tuition varies a lot by course, so treat the order as a guide and check your specific program.`,
     ],
@@ -343,16 +381,16 @@ export const COLLECTIONS: Collection[] = [
   },
   {
     slug: "australian-universities-accepting-ielts-6-0-for-international-students",
-    title: "Australian universities that accept IELTS 6.0",
-    shortTitle: "Accept IELTS 6.0",
+    title: "Australian universities that accept IELTS 6.0 or PTE 50",
+    shortTitle: "Accept IELTS 6.0 / PTE 50",
     metaDescription:
-      "Australian universities with an institutional minimum of IELTS 6.0 for undergraduate entry. Note that specific courses require higher scores.",
+      "Australian universities with an institutional minimum of IELTS 6.0 (or PTE Academic 50) for undergraduate entry. Note that specific courses require higher scores.",
     intro: [
-      "IELTS 6.0 is the most common institutional minimum for undergraduate entry at Australian universities. The Group of Eight and a few others set their floor at 6.5, but most regional, newer, and technology universities accept 6.0 overall for general degrees.",
-      "This is only the institutional minimum. It is the score below which the university will not consider you at all, not a guarantee your course accepts it. Nursing needs 7.0, teaching 7.5, and medicine, law, and business commonly 7.0. Postgraduate coursework usually needs 6.5.",
+      "IELTS 6.0, or PTE Academic 50 under the standard concordance, is the most common institutional minimum for undergraduate entry at Australian universities. The Group of Eight and a few others set their floor at IELTS 6.5 (PTE 58), but most regional, newer, and technology universities accept 6.0 overall for general degrees.",
+      "This is only the institutional minimum. It is the score below which the university will not consider you at all, not a guarantee your course accepts it. Nursing needs IELTS 7.0, teaching 7.5, and medicine, law, and business commonly 7.0. Postgraduate coursework usually needs 6.5. Universities that take IELTS almost always take PTE Academic at the equivalent score.",
     ],
     methodology:
-      "We list universities whose institutional minimum for undergraduate entry is IELTS 6.0 overall. Always check the requirement for your specific course, since many programs sit well above the institutional floor.",
+      "We list universities whose institutional minimum for undergraduate entry is IELTS 6.0 overall, which maps to PTE Academic 50. Always check the requirement for your specific course, since many programs sit well above the institutional floor.",
     build: (unis) =>
       unis
         .filter((u) => u.ieltsOverall != null && u.ieltsOverall <= 6.0)
@@ -361,10 +399,10 @@ export const COLLECTIONS: Collection[] = [
           slug: u.slug,
           name: u.name,
           city: u.city,
-          headline: "IELTS 6.0 minimum",
-          note: `Institutional minimum for undergraduate entry is IELTS 6.0.${
-            u.applicationFee === 0 ? " No application fee." : ""
-          } Specific courses require more.`,
+          headline: u.pteOverall != null ? "IELTS 6.0 / PTE 50 minimum" : "IELTS 6.0 minimum",
+          note: `Institutional minimum for undergraduate entry is IELTS 6.0${
+            u.pteOverall != null ? " (PTE Academic 50)" : ""
+          }.${u.applicationFee === 0 ? " No application fee." : ""} Specific courses require more.`,
         })),
   },
   cityCollection({ city: "Sydney", match: /sydney|manly/i, slug: "cheapest-universities-in-sydney-for-international-students" }),

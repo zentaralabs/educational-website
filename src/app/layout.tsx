@@ -27,7 +27,7 @@ const ibmPlexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME} — University Deadlines, Admissions & Costs`,
+    default: `University Deadlines, Admissions & Costs | ${SITE_NAME}`,
     template: `%s | ${SITE_NAME}`,
   },
   description: SITE_DESCRIPTION,
@@ -40,12 +40,12 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     locale: "en_US",
     url: "/",
-    title: `${SITE_NAME} — University Deadlines, Admissions & Costs`,
+    title: `University Deadlines, Admissions & Costs | ${SITE_NAME}`,
     description: SITE_DESCRIPTION,
   },
   twitter: {
-    card: "summary",
-    title: `${SITE_NAME} — University Deadlines, Admissions & Costs`,
+    card: "summary_large_image",
+    title: `University Deadlines, Admissions & Costs | ${SITE_NAME}`,
     description: SITE_DESCRIPTION,
   },
   robots: {

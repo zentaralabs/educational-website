@@ -46,6 +46,25 @@ type ProgramEditableFields =
   | "pte_speaking"
   | "source_url";
 
+// House style: no em dashes in anything that renders on the public site.
+// `curriculum` is exempt: its " — " is a field delimiter parsed out by
+// parseCurriculumLine(), never shown.
+const NO_EM_DASH_FIELDS = [
+  "name",
+  "description",
+  "admission_requirements",
+  "english_requirements",
+] as const;
+
+function assertNoEmDashes(record: Record<string, unknown>) {
+  for (const field of NO_EM_DASH_FIELDS) {
+    const value = record[field];
+    if (typeof value === "string" && value.includes("—")) {
+      throw new Error(`Remove em dashes from "${field}" before saving (house style).`);
+    }
+  }
+}
+
 export async function createProgram(
   supabase: SupabaseClient<Database>,
   input: Pick<
@@ -53,6 +72,7 @@ export async function createProgram(
     "university_id" | ProgramEditableFields
   >,
 ): Promise<string> {
+  assertNoEmDashes(input);
   const { data, error } = await supabase
     .from("programs")
     .insert({ ...input, status: "draft" })
@@ -67,6 +87,7 @@ export async function updateProgram(
   id: string,
   patch: Pick<Database["public"]["Tables"]["programs"]["Update"], ProgramEditableFields>,
 ) {
+  assertNoEmDashes(patch);
   const { error } = await supabase.from("programs").update(patch).eq("id", id);
   if (error) throw error;
 }

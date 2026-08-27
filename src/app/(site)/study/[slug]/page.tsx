@@ -37,13 +37,17 @@ export async function generateMetadata({
     title,
     description,
     alternates: { canonical: url },
+    // Subjects without curated editorial fall back to templated copy built
+    // from program data. Kept live for visitors and internal links, but
+    // noindex until they get a real write-up.
+    ...(SUBJECT_CONTENT[slug] ? {} : { robots: { index: false, follow: true } }),
     openGraph: { title, description, url, type: "article" },
-    twitter: { card: "summary", title, description },
+    twitter: { card: "summary_large_image", title, description },
   };
 }
 
 const GENERIC_REQUIREMENTS =
-  "Entry to a bachelor degree needs a completed senior secondary qualification (or a recognised foundation year) that meets the university's minimum, plus an English test, usually IELTS 6.0 to 6.5. Entry to a postgraduate coursework degree needs a relevant bachelor degree, often with a credit average, and IELTS 6.5. Registration-based fields (nursing, teaching, psychology, architecture) set higher English bars and additional requirements. Always confirm the exact requirements for the specific program.";
+  "Entry to a bachelor degree needs a completed senior secondary qualification (or a recognised foundation year) that meets the university's minimum, plus an English test, usually IELTS 6.0 to 6.5 (PTE Academic 50 to 58). Entry to a postgraduate coursework degree needs a relevant bachelor degree, often with a credit average, and IELTS 6.5 (PTE 58). Registration-based fields (nursing, teaching, psychology, architecture) set higher English bars and additional requirements. Always confirm the exact requirements for the specific program.";
 
 export default async function SubjectPage({
   params,

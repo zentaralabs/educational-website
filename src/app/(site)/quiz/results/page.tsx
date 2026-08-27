@@ -49,7 +49,7 @@ export default async function QuizResultsPage({
       {matches.length === 0 ? (
         <div className="mt-8 rounded-md border border-ink/15 bg-ink/[0.02] p-6">
           <p className="font-body text-base text-ink">
-            No published universities match those filters yet — try loosening
+            No published universities match those filters yet. Try loosening
             the budget or country.
           </p>
           <Link

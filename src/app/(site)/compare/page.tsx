@@ -9,7 +9,7 @@ export const revalidate = 3600;
 export const metadata = {
   title: "Compare Universities",
   description:
-    "Cross-country and cross-university comparisons — costs, acceptance rates, and requirements side by side.",
+    "Cross-country and cross-university comparisons: costs, acceptance rates, and requirements side by side.",
   alternates: { canonical: "/compare" },
 };
 

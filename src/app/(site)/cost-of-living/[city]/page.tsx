@@ -38,7 +38,7 @@ export async function generateMetadata({
     description,
     alternates: { canonical: `/cost-of-living/${city}` },
     openGraph: { title, description, url: `/cost-of-living/${city}`, type: "article" },
-    twitter: { card: "summary", title, description },
+    twitter: { card: "summary_large_image", title, description },
   };
 }
 

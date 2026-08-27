@@ -170,9 +170,9 @@ export default async function DeadlinesPage({
         {grouped.size === 0 && (
           <div className="rounded-2xl border border-dashed border-ink/15 px-6 py-10 text-center">
             <p className="font-body text-base text-slate">
-              No deadlines match those filters —{" "}
+              No deadlines match those filters.{" "}
               <Link href="/deadlines" className="text-status-open underline underline-offset-2">
-                clear them
+                Clear them
               </Link>{" "}
               to see the full calendar.
             </p>
@@ -200,7 +200,7 @@ export default async function DeadlinesPage({
                   >
                     <span className="text-ink">
                       <span className="font-medium">{d.university?.name}</span>
-                      {" — "}
+                      {" · "}
                       {d.deadline_type?.name}
                       {d.degree_level && ` (${d.degree_level.name})`}
                     </span>

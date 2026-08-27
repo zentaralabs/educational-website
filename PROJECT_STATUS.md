@@ -1,7 +1,7 @@
 # Project Status — University Guidance Platform
 
-Last updated: 2026-08-22
-Status: **Pre-build.** Planning complete for architecture, schema, design direction, and admin scope. No code written yet.
+Last updated: 2026-08-28
+Status: **Built and deploying.** App, admin panel, schema, and Australia dataset are live. Content sprint ongoing. Preparing the Google AdSense application (de-AI content pass, PTE data, thin-content noindex all done; see the plan under `.claude/plans/`).
 
 ---
 
@@ -9,7 +9,7 @@ Status: **Pre-build.** Planning complete for architecture, schema, design direct
 
 A content platform helping students find and apply to universities — deadlines, application requirements, costs, scholarships, and how-to guides. Evergreen niche (application cycles repeat forever, unlike trend-driven content).
 
-**Initial geographic scope:** US, UK, Canada, Australia.
+**Initial geographic scope:** Australia only (live). US, UK, and Canada are planned but not built; the schema and country-launch flag already support adding them.
 
 **Core differentiator:** most competitors are either static directories (no real usefulness) or generic blogs (thin, AI-sounding, easily lost in search). This site is built around:
 - A structured, queryable deadline/fact database (not prose-buried facts) — hard to replicate, genuinely useful

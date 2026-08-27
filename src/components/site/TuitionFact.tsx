@@ -37,7 +37,7 @@ export function TuitionFact({
       <dd className="font-utility text-lg font-medium text-status-open">{formatted}</dd>
       {showingDomestic && domesticIsCsp && (
         <dd className="font-utility text-xs text-slate">
-          Commonwealth Supported Place rate — limited, not guaranteed; full domestic fee otherwise.
+          Commonwealth Supported Place rate: limited, not guaranteed. Full domestic fee otherwise.
         </dd>
       )}
     </div>
