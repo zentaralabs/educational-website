@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { SearchBar } from "@/components/site/SearchBar";
 import { StudentTypeToggle } from "@/components/site/StudentTypeToggle";
+import { deadlineBadgeStatus } from "@/lib/deadline-status";
 import { formatCurrency } from "@/lib/format";
 import { listPublicCountries } from "@/lib/queries/public-countries";
+import { listUpcomingDeadlines } from "@/lib/queries/public-deadlines";
 import { getHomepageStats } from "@/lib/queries/public-stats";
 import { listFeaturedUniversities } from "@/lib/queries/public-universities";
 import { SITE_DESCRIPTION } from "@/lib/site-config";
@@ -26,10 +28,11 @@ const CTAS = [
 ];
 
 export default async function Home() {
-  const [stats, countries, featured] = await Promise.all([
+  const [stats, countries, featured, upcoming] = await Promise.all([
     getHomepageStats(),
     listPublicCountries(),
     listFeaturedUniversities(6),
+    listUpcomingDeadlines(6),
   ]);
 
   return (
@@ -89,6 +92,59 @@ export default async function Home() {
           </Link>
         </p>
       </div>
+
+      {upcoming.length > 0 && (
+        <section
+          className="animate-fade-up mt-12"
+          style={{ animationDelay: "60ms" }}
+        >
+          <div className="mb-3 flex items-baseline justify-between gap-3">
+            <h2 className="font-body text-xs font-semibold tracking-widest text-slate uppercase">
+              Next application dates
+            </h2>
+            <Link
+              href="/deadlines"
+              className="font-body text-sm text-status-open underline underline-offset-2"
+            >
+              Full calendar
+            </Link>
+          </div>
+          <ul className="divide-y divide-ink/10 rounded-xl border border-ink/10 bg-ink/[0.02]">
+            {upcoming.map((d) => (
+              <li key={d.id}>
+                <Link
+                  href={`/universities/${d.university?.slug}`}
+                  className="group flex items-center justify-between gap-4 px-4 py-2.5"
+                >
+                  <span className="min-w-0">
+                    <span className="block truncate font-body text-sm font-medium text-ink group-hover:underline">
+                      {d.university?.name}
+                    </span>
+                    <span className="font-utility text-xs text-slate">
+                      {d.deadline_type?.name}
+                      {d.degree_level && ` · ${d.degree_level.name}`}
+                    </span>
+                  </span>
+                  <span className="flex flex-shrink-0 items-center gap-2 font-utility text-xs text-ink">
+                    <span
+                      className={`inline-block h-1.5 w-1.5 rounded-full ${
+                        deadlineBadgeStatus(d.deadline_date, d.is_rolling) === "open"
+                          ? "bg-status-open"
+                          : "bg-status-pending"
+                      }`}
+                    />
+                    {new Date(d.deadline_date).toLocaleDateString("en-AU", {
+                      day: "numeric",
+                      month: "short",
+                      year: "numeric",
+                    })}
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       {featured.length > 0 && (
         <section

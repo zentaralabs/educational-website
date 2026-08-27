@@ -99,9 +99,19 @@ export default async function DeadlinesPage({
           Application deadline calendar
         </h1>
         <p className="mt-2 font-body text-base text-slate">
-          Filterable by country, degree level, and application type.
+          Recommended international application dates for each intake, filterable
+          by country, degree level, and intake.
         </p>
       </div>
+
+      <p className="mt-4 rounded-xl border border-status-pending/25 bg-status-pending/5 px-4 py-3 font-body text-sm text-slate">
+        Australian universities run fixed intakes (usually Semester 1 in February
+        and Semester 2 in July) rather than one hard cut-off. These are the
+        recommended dates to apply by for international students. Competitive
+        courses close earlier, and many courses accept later applications while
+        places and visa-processing time remain. Always confirm with the
+        university.
+      </p>
 
       <form
         method="GET"

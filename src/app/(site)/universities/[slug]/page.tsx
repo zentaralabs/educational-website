@@ -10,7 +10,7 @@ import { HowToApply } from "@/components/site/HowToApply";
 import { LastVerified } from "@/components/site/LastVerified";
 import { ProgramsList } from "@/components/site/ProgramsList";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
-import { deadlineBadgeStatus, formatDeadlineDate } from "@/lib/deadline-status";
+import { deadlineBadgeStatus } from "@/lib/deadline-status";
 import { formatCurrency, formatPercent } from "@/lib/format";
 import { getPublishedProgramsForUniversity } from "@/lib/queries/public-programs";
 import {
@@ -242,7 +242,10 @@ export default async function UniversityProfilePage({
           fact so it's citable without context. */}
       {nextDeadline && (
         <p className="mt-6 rounded-md border border-ink/15 bg-ink/[0.02] px-4 py-3 font-body text-base text-ink">
-          {university.name}&rsquo;s {nextDeadline.deadline_type?.name ?? "next"} deadline
+          The recommended date to apply to {university.name} for its next intake
+          {nextDeadline.deadline_type?.name
+            ? ` (${nextDeadline.deadline_type.name})`
+            : ""}{" "}
           is{" "}
           <strong className="font-semibold">
             {new Date(nextDeadline.deadline_date).toLocaleDateString("en-US", {
@@ -251,7 +254,7 @@ export default async function UniversityProfilePage({
               year: "numeric",
             })}
           </strong>
-          {nextDeadline.degree_level && ` for ${nextDeadline.degree_level.name}`}.
+          . Competitive courses close earlier.
         </p>
       )}
 
@@ -440,13 +443,21 @@ export default async function UniversityProfilePage({
 
       {deadlines.length > 0 && (
         <ProfileSection title="Application deadlines">
-          {deadlines.every((d) => d.is_rolling) && (
+          {deadlines.every((d) => d.is_rolling) ? (
             <p className="mb-3 font-body text-sm text-slate">
               {university.name} assesses international applications on a rolling
               basis rather than by a single fixed date. Apply as early as you
               can: places in popular courses fill, and you need time afterward
               for the offer, Confirmation of Enrolment, and Student visa before
               your intake starts.
+            </p>
+          ) : (
+            <p className="mb-3 font-body text-sm text-slate">
+              Australian universities run fixed intakes rather than one hard
+              deadline. The dates below are the recommended times to have your
+              international application in for each intake. Competitive courses
+              close earlier, and later applications are often still accepted if
+              places and visa time remain.
             </p>
           )}
           <div className="overflow-hidden rounded-md border border-ink/10 bg-paper">
@@ -455,7 +466,7 @@ export default async function UniversityProfilePage({
               return (
                 <div
                   key={d.id}
-                  className="flex items-center justify-between gap-4 border-l-4 px-4 py-3 text-sm"
+                  className="border-l-4 px-4 py-3 text-sm"
                   style={{
                     borderLeftColor: `var(--color-status-${status})`,
                     borderBottomWidth: i < deadlines.length - 1 ? 1 : 0,
@@ -463,17 +474,28 @@ export default async function UniversityProfilePage({
                       "color-mix(in srgb, var(--color-ink) 10%, transparent)",
                   }}
                 >
-                  <span className="text-ink">
-                    {d.deadline_type?.name}
-                    {d.degree_level && ` — ${d.degree_level.name}`}
-                    {d.application_platform && ` · ${d.application_platform.name}`}
-                  </span>
-                  <div className="flex items-center gap-3">
-                    <span className="font-utility text-xs text-slate">
-                      {formatDeadlineDate(d.deadline_date, d.is_rolling)}
+                  <div className="flex items-center justify-between gap-4">
+                    <span className="text-ink">
+                      {d.deadline_type?.name}
+                      {d.degree_level && ` · ${d.degree_level.name}`}
+                      {d.application_platform && ` · ${d.application_platform.name}`}
                     </span>
-                    <StatusBadge status={status} />
+                    <div className="flex flex-shrink-0 items-center gap-3">
+                      <span className="font-utility text-xs text-slate">
+                        {d.is_rolling
+                          ? "ROLLING"
+                          : new Date(d.deadline_date).toLocaleDateString("en-AU", {
+                              day: "numeric",
+                              month: "short",
+                              year: "numeric",
+                            })}
+                      </span>
+                      <StatusBadge status={status} />
+                    </div>
                   </div>
+                  {d.notes && (
+                    <p className="mt-1.5 font-body text-xs text-slate">{d.notes}</p>
+                  )}
                 </div>
               );
             })}

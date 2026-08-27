@@ -593,6 +593,27 @@ Each `/best/[slug]` page: intro, a ranked list linking to profiles with a per-un
 ### Still deferred
 
 - Country landing pages (`/australia`) — one country launched.
-- Real per-intake AU deadline data — all current AU deadlines are generic rolling entries; `listUpcomingDeadlines` in `public-deadlines.ts` is ready for real data.
 - A faceted `/universities` browse page.
 - Smoke-testing all the new admin editors (visas, invitation rounds, scholarship new fields, university editorial fields) behind a real login — they compile and follow existing patterns but weren't exercised through the auth flow this session.
+
+## 19. Real AU deadline data — fixed the "everything is Rolling" calendar (2026-08-27)
+
+User flagged the deadline calendar: all 55 AU deadlines rendered as an identical "Rolling (Undergraduate)" row per university, which looked broken and hurt the flagship-feature credibility. Root cause: the 57 AU deadline rows were generic placeholders (one per university, `is_rolling = true`, all dated 2026-12-15), and `deadline_types` only held US-style values (Early Decision / Early Action / Regular Decision / Rolling).
+
+**The honest model.** Australian universities do not publish a single hard application deadline for international students. They run fixed intakes (Semester 1 = Feb/Mar start, Semester 2 = Jul start) and publish a *recommended* application date ahead of each, then keep accepting applications while places and visa-processing time remain; competitive courses (medicine, some design/business) close earlier. The new data encodes exactly that, framed as "recommended dates" everywhere it surfaces, never as hard deadlines.
+
+**Data — `scripts/seed_deadlines.mjs` (idempotent: deletes all AU deadlines, re-inserts):**
+- Added 6 `deadline_types`: Semester 1, Semester 2, Trimester 1/2/3, Additional intake.
+- **116 dated rows**, one per (university, intake), derived from each university's actual program `intake_dates`: standard Feb/Jul universities get Semester 1 (30 Nov 2026, for the Feb/Mar 2027 intake) + Semester 2 (31 May 2027). Overrides: Bond → 3 trimester rows (Jan/May/Sep); NIDA → Semester 1 only, earlier (30 Sep, audition-based); Greenwich / Melbourne Institute of Technology / Torrens → their real 3–4 intake patterns. Pure pathway/VET providers tagged `Foundation/Pathway`, everyone else `Undergraduate` (with a note that postgraduate coursework follows the same timeline — so the calendar isn't doubled).
+- Not split by degree level to keep the calendar readable; the note carries the "same for postgrad" fact.
+- `source_url` = each university's `website_url`; dates use the project's relaxed approximate-bar convention (these are sector-standard recommended dates, clearly labelled, not scraped from 56 individual pages).
+- Every row carries a `notes` string spelling out the recommended-date framing and the "competitive courses close earlier / later applications often accepted" caveats.
+
+**Frontend:**
+- `/deadlines`: subtitle reworded, a standing explainer box added about fixed intakes vs. hard cut-offs, `PAGE_SIZE` 10 → 30 (116 rows across ~4 pages, mostly the November and May buckets). The new intake types show in the filter dropdown.
+- University profile: the deadline section shows Semester 1 / Semester 2 rows with the full date and the per-row `notes`; the "every deadline is rolling" note now only shows for genuinely-rolling universities, with a recommended-dates explainer otherwise. The answer-first sentence reworded from "X's deadline is …" to "The recommended date to apply to X … is …".
+- Homepage: re-added the "Next application dates" strip (`listUpcomingDeadlines(6)`) now that there's real dated data — it was removed in Section 17 precisely because the data was all rolling.
+
+**Verified:** `tsc` + `eslint src` clean. `/deadlines` renders a real month-grouped calendar (Sept 2026 → Nov 2026 → May 2027 …), `/universities/university-of-melbourne` shows Semester 1 (30 Nov 2026) + Semester 2 (31 May 2027) with notes, homepage strip populates. 116 deadlines, console clean, ISR busted.
+
+**Still a gap:** these are sector-standard recommended dates, not per-university-page-verified. A future pass could confirm each university's actual published international application dates and any course-specific hard deadlines (medicine via GEMSAT/GAMSAT timelines, etc.).
