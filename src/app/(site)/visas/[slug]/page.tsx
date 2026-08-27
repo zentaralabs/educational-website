@@ -45,7 +45,7 @@ export async function generateMetadata({
 function Fact({ label, value }: { label: string; value: string | null }) {
   if (!value) return null;
   return (
-    <div className="rounded-xl border border-ink/10 bg-ink/[0.02] px-4 py-3">
+    <div className="rounded-xl border border-line bg-mist px-4 py-3">
       <dt className="font-utility text-[0.7rem] font-semibold tracking-widest text-slate uppercase">
         {label}
       </dt>

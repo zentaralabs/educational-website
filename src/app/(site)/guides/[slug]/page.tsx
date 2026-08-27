@@ -131,7 +131,7 @@ export default async function GuidePage({
               <li key={g.slug}>
                 <Link
                   href={`/guides/${g.slug}`}
-                  className="group flex items-center justify-between gap-2 rounded-xl border border-ink/10 bg-ink/[0.02] px-4 py-3 transition-all duration-150 hover:-translate-y-0.5 hover:border-status-open/30 hover:bg-ink/[0.03] hover:shadow-sm"
+                  className="group flex items-center justify-between gap-2 rounded-xl border border-line bg-mist px-4 py-3 transition-all duration-150 hover:-translate-y-0.5 hover:border-status-open/30 hover:shadow-[0_14px_36px_-18px_rgba(22,35,63,0.28)]"
                 >
                   <span className="font-body text-sm font-medium text-ink">{g.title}</span>
                   <ArrowUpRightIcon className="h-3.5 w-3.5 flex-shrink-0 text-slate transition-colors duration-150 group-hover:text-status-open" />
@@ -142,7 +142,7 @@ export default async function GuidePage({
               <li key={u.slug}>
                 <Link
                   href={`/universities/${u.slug}`}
-                  className="group flex items-center justify-between gap-2 rounded-xl border border-ink/10 bg-ink/[0.02] px-4 py-3 transition-all duration-150 hover:-translate-y-0.5 hover:border-status-open/30 hover:bg-ink/[0.03] hover:shadow-sm"
+                  className="group flex items-center justify-between gap-2 rounded-xl border border-line bg-mist px-4 py-3 transition-all duration-150 hover:-translate-y-0.5 hover:border-status-open/30 hover:shadow-[0_14px_36px_-18px_rgba(22,35,63,0.28)]"
                 >
                   <span className="font-body text-sm font-medium text-ink">{u.name}</span>
                   <ArrowUpRightIcon className="h-3.5 w-3.5 flex-shrink-0 text-slate transition-colors duration-150 group-hover:text-status-open" />

@@ -15,7 +15,7 @@ function Widget({
   children: React.ReactNode;
 }) {
   return (
-    <div className="group rounded-xl border border-ink/10 bg-ink/[0.02] p-4 transition-all duration-150 hover:border-status-open/30 hover:bg-ink/[0.03] hover:shadow-sm">
+    <div className="group rounded-xl border border-line bg-mist p-4 transition-all duration-150 hover:border-status-open/30 hover:shadow-[0_14px_36px_-18px_rgba(22,35,63,0.28)]">
       <div className="mb-2 flex items-center gap-2">
         <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-status-open/10 text-status-open">
           {icon}

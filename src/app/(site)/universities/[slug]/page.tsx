@@ -260,7 +260,7 @@ export default async function UniversityProfilePage({
 
       {university.distinctive_summary && (
         <ProfileSection title="Overview">
-          <p className="rounded-xl bg-ink/[0.035] p-5 font-body text-base leading-relaxed text-ink">
+          <p className="rounded-xl border border-line bg-mist p-5 font-body text-base leading-relaxed text-ink">
             {university.distinctive_summary}
           </p>
         </ProfileSection>
@@ -268,7 +268,7 @@ export default async function UniversityProfilePage({
 
       {university.who_is_it_for && (
         <ProfileSection title="Who is this university for?">
-          <div className="rounded-xl bg-ink/[0.035] p-5">
+          <div className="rounded-xl border border-line bg-mist p-5">
             <GuideContent content={university.who_is_it_for} />
           </div>
         </ProfileSection>
@@ -378,7 +378,7 @@ export default async function UniversityProfilePage({
                   {s.slug ? (
                     <Link
                       href={`/scholarships/${s.slug}`}
-                      className="group flex flex-wrap items-center gap-x-3 gap-y-1 rounded-xl border border-ink/10 bg-ink/[0.02] px-4 py-3 transition-all duration-150 hover:-translate-y-0.5 hover:border-status-open/30"
+                      className="group flex flex-wrap items-center gap-x-3 gap-y-1 rounded-xl border border-line bg-mist px-4 py-3 transition-all duration-150 hover:-translate-y-0.5 hover:border-status-open/30"
                     >
                       {inner}
                       <span className="ml-auto font-utility text-xs text-slate group-hover:text-status-open">
@@ -386,7 +386,7 @@ export default async function UniversityProfilePage({
                       </span>
                     </Link>
                   ) : (
-                    <div className="flex flex-wrap items-center gap-x-3 gap-y-1 rounded-xl border border-ink/10 bg-ink/[0.02] px-4 py-3">
+                    <div className="flex flex-wrap items-center gap-x-3 gap-y-1 rounded-xl border border-line bg-mist px-4 py-3">
                       {inner}
                     </div>
                   )}
@@ -427,7 +427,7 @@ export default async function UniversityProfilePage({
 
       {university.international_student_notes && (
         <ProfileSection title="For international students">
-          <p className="rounded-xl bg-ink/[0.035] p-5 font-body text-base leading-relaxed text-ink">
+          <p className="rounded-xl border border-line bg-mist p-5 font-body text-base leading-relaxed text-ink">
             {university.international_student_notes}
           </p>
         </ProfileSection>
@@ -515,7 +515,7 @@ export default async function UniversityProfilePage({
                   <li key={u.slug}>
                     <Link
                       href={`/universities/${u.slug}`}
-                      className="group flex flex-col gap-0.5 rounded-xl border border-ink/10 bg-ink/[0.02] px-4 py-3 transition-all duration-150 hover:-translate-y-0.5 hover:border-status-open/30"
+                      className="group flex flex-col gap-0.5 rounded-xl border border-line bg-mist px-4 py-3 transition-all duration-150 hover:-translate-y-0.5 hover:border-status-open/30"
                     >
                       <span className="font-body text-sm font-medium text-ink group-hover:underline">
                         {u.name}
@@ -541,7 +541,7 @@ export default async function UniversityProfilePage({
                   <li key={g.slug}>
                     <Link
                       href={`/guides/${g.slug}`}
-                      className="block rounded-xl border border-ink/10 bg-ink/[0.02] px-4 py-3 font-body text-sm font-medium text-ink transition-all duration-150 hover:-translate-y-0.5 hover:border-status-open/30 hover:underline"
+                      className="block rounded-xl border border-line bg-mist px-4 py-3 font-body text-sm font-medium text-ink transition-all duration-150 hover:-translate-y-0.5 hover:border-status-open/30 hover:underline"
                     >
                       {g.title}
                     </Link>

@@ -8,6 +8,9 @@ import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site-config";
 const fraunces = Fraunces({
   variable: "--font-display",
   subsets: ["latin"],
+  // opsz drives the display look; SOFT/WONK add the character that keeps
+  // the headings from reading as plain bold body serif.
+  axes: ["SOFT", "WONK", "opsz"],
 });
 
 const publicSans = Public_Sans({

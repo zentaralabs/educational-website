@@ -617,3 +617,17 @@ User flagged the deadline calendar: all 55 AU deadlines rendered as an identical
 **Verified:** `tsc` + `eslint src` clean. `/deadlines` renders a real month-grouped calendar (Sept 2026 → Nov 2026 → May 2027 …), `/universities/university-of-melbourne` shows Semester 1 (30 Nov 2026) + Semester 2 (31 May 2027) with notes, homepage strip populates. 116 deadlines, console clean, ISR busted.
 
 **Still a gap:** these are sector-standard recommended dates, not per-university-page-verified. A future pass could confirm each university's actual published international application dates and any course-specific hard deadlines (medicine via GEMSAT/GAMSAT timelines, etc.).
+
+## 20. Visual design pass — "it looks dead" (2026-08-27)
+
+User feedback: the site felt flat and lifeless (small type, no depth, static). A restrained pass within the existing token system (Section 7), not a redesign.
+
+**Typography.** `layout.tsx` now loads Fraunces with the `SOFT`/`WONK`/`opsz` axes, and `.font-display` in `globals.css` pushes `opsz` to 120 with a touch of `SOFT` and a tighter tracking, so headings read as display type rather than bold body serif. `.prose-guide` bumped to 1.0625rem / 1.75 line-height (the article reading surface). Body line-height raised to 1.6, `text-rendering: optimizeLegibility`.
+
+**Depth / colour.** Two new tokens: `--color-mist` (#f3f5f9, a real recessed surface) and `--color-line` (#e0e5ee, a visible-but-soft hairline) — the old `bg-ink/[0.02]` + `border-ink/10` combo was nearly invisible. `--shadow-card` / `--shadow-card-hover`. `--color-ink` and `--color-slate` darkened very slightly (#16233f / #46587a) for contrast. New `.card` / `.card-hover` utility classes. A `sed` pass swapped `border border-ink/10 bg-ink/[0.02]` → `border border-line bg-mist` and the weak `hover:shadow-sm` → a real soft drop shadow across all `(site)` list pages and shared components (`ProfileSection` FactBox, `ProgramAdmissionsBlock`, `ProgramSidebar`).
+
+**Motion.** `fade-up` curve refined. New `.scroll-reveal` class using `animation-timeline: view()` (scroll-driven, no JS, `@supports`-guarded so unsupported browsers just show the content, and gated behind `prefers-reduced-motion`). Homepage sections use it plus a longer entrance stagger.
+
+**Homepage rebuild.** New `Collapsible` client component (grid-rows animation, chevron, pulse dot) — the "Next application dates" strip is now **collapsed by default, click to expand**, per the user's request, keeping the hero compact. Hero: soft radial accent-tint background, larger H1 (2.5rem → 6xl), pill-style stat eyebrow with the live pulse dot, a filled primary CTA ("Browse deadlines") against outlined secondary CTAs with hover lift, stronger "browse by country" links. Featured-universities strip uses the new `.card`/`.card-hover`.
+
+**Verified:** `tsc` + `eslint src` clean, all key routes 200, Fraunces axes confirmed loading (font module hash changed), collapsible expand/collapse works in-browser, console clean.

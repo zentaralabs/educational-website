@@ -28,7 +28,7 @@ export default function BestIndexPage() {
           <li key={c.slug}>
             <Link
               href={`/best/${c.slug}`}
-              className="group flex flex-col gap-1.5 rounded-2xl border border-ink/10 bg-ink/[0.02] p-5 transition-all duration-150 hover:-translate-y-0.5 hover:border-status-open/30 hover:bg-ink/[0.03] hover:shadow-sm sm:p-6"
+              className="group flex flex-col gap-1.5 rounded-2xl border border-line bg-mist p-5 transition-all duration-150 hover:-translate-y-0.5 hover:border-status-open/30 hover:shadow-[0_14px_36px_-18px_rgba(22,35,63,0.28)] sm:p-6"
             >
               <span className="flex items-start justify-between gap-3">
                 <h2 className="font-display text-lg font-semibold text-ink text-balance group-hover:underline">

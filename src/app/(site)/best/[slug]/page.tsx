@@ -94,7 +94,7 @@ export default async function CollectionPage({
             <li key={e.slug}>
               <Link
                 href={`/universities/${e.slug}`}
-                className="group flex flex-col gap-1 rounded-2xl border border-ink/10 bg-ink/[0.02] p-5 transition-all duration-150 hover:-translate-y-0.5 hover:border-status-open/30 hover:bg-ink/[0.03] hover:shadow-sm"
+                className="group flex flex-col gap-1 rounded-2xl border border-line bg-mist p-5 transition-all duration-150 hover:-translate-y-0.5 hover:border-status-open/30 hover:shadow-[0_14px_36px_-18px_rgba(22,35,63,0.28)]"
               >
                 <span className="flex items-start justify-between gap-3">
                   <span className="font-display text-lg font-semibold text-ink group-hover:underline">
@@ -115,7 +115,7 @@ export default async function CollectionPage({
         </ol>
       )}
 
-      <div className="mt-10 rounded-2xl border border-ink/10 bg-ink/[0.02] p-5">
+      <div className="mt-10 rounded-2xl border border-line bg-mist p-5">
         <h2 className="font-body text-xs font-semibold tracking-widest text-slate uppercase">
           How this list was built
         </h2>
@@ -131,7 +131,7 @@ export default async function CollectionPage({
             <li key={c.slug}>
               <Link
                 href={`/best/${c.slug}`}
-                className="block rounded-xl border border-ink/10 bg-ink/[0.02] px-4 py-3 font-body text-sm font-medium text-ink transition-all duration-150 hover:-translate-y-0.5 hover:border-status-open/30 hover:underline"
+                className="block rounded-xl border border-line bg-mist px-4 py-3 font-body text-sm font-medium text-ink transition-all duration-150 hover:-translate-y-0.5 hover:border-status-open/30 hover:underline"
               >
                 {c.shortTitle}
               </Link>

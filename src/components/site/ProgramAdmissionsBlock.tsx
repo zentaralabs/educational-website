@@ -24,7 +24,7 @@ export function ProgramAdmissionsBlock({
   if (!admissionRequirements && !showEnglishText) return null;
 
   return (
-    <div className="flex gap-3 rounded-xl border-l-4 border-status-open bg-ink/[0.035] p-5">
+    <div className="flex gap-3 rounded-xl border-l-4 border-status-open bg-mist p-5">
       <CheckBadgeIcon className="mt-0.5 h-5 w-5 text-status-open" />
       <div className="flex flex-col gap-2">
         {admissionRequirements && (

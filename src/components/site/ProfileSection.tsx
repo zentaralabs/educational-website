@@ -50,7 +50,7 @@ export function Fact({
  * the Admissions/Cost & Aid/Academics sections. */
 export function FactBox({ children }: { children: React.ReactNode }) {
   return (
-    <dl className="grid grid-cols-2 gap-x-6 gap-y-4 rounded-xl bg-ink/[0.035] p-5 sm:grid-cols-3">
+    <dl className="grid grid-cols-2 gap-x-6 gap-y-4 rounded-xl border border-line bg-mist p-5 sm:grid-cols-3">
       {children}
     </dl>
   );

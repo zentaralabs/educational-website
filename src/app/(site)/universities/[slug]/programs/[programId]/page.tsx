@@ -160,7 +160,7 @@ export default async function ProgramDetailPage({
           />
           About this program
         </h2>
-        <div className="flex flex-col gap-5 rounded-2xl bg-ink/[0.035] p-6 font-body text-lg leading-8 text-ink sm:p-7">
+        <div className="flex flex-col gap-5 rounded-2xl border border-line bg-mist p-6 font-body text-lg leading-8 text-ink sm:p-7">
           {program.description?.split("\n\n").map((paragraph, i) => (
             <p key={i} className={i === 0 ? "text-pretty font-medium" : undefined}>
               {paragraph.split("\n").map((line, j, lines) => (
@@ -207,7 +207,7 @@ export default async function ProgramDetailPage({
             {curriculumTerms.map((term, i) => (
               <div
                 key={i}
-                className="rounded-xl border border-ink/10 bg-ink/[0.02] p-4 transition-all duration-150 hover:-translate-y-0.5 hover:border-status-open/30 hover:bg-ink/[0.03] hover:shadow-sm"
+                className="rounded-xl border border-line bg-mist p-4 transition-all duration-150 hover:-translate-y-0.5 hover:border-status-open/30 hover:shadow-[0_14px_36px_-18px_rgba(22,35,63,0.28)]"
               >
                 {(term.label || term.units) && (
                   <div className="flex items-center justify-between gap-2 border-b border-ink/10 pb-2">
