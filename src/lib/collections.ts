@@ -285,6 +285,59 @@ export const COLLECTIONS: Collection[] = [
           note: "Research-intensive, highly ranked, selective admissions, and the highest tuition band in Australia.",
         })),
   },
+  {
+    slug: "australian-universities-with-no-application-fee",
+    title: "Australian universities with no application fee for international students",
+    shortTitle: "No application fee",
+    metaDescription:
+      "Most Australian universities charge international students nothing to apply. Here is the list of fee-free universities, and the few that do charge.",
+    intro: [
+      "Applying to Australian universities is cheaper than applying in the US or UK, because most of them charge international students no application fee at all when you apply directly or through an authorised agent.",
+      "That means you can put in several applications and compare your offers without spending anything upfront. A small number of universities do charge a direct-application fee, usually AUD 55 to 125, though several waive it for agent-lodged applications.",
+    ],
+    methodology:
+      "We list universities recorded as charging no application fee for international students. The figure reflects the standard direct-application fee; some universities that charge one waive it for applications through an authorised agent, so confirm before you apply. Third-party application platforms may add their own service fee regardless.",
+    build: (unis) =>
+      unis
+        .filter((u) => u.applicationFee === 0)
+        .sort((a, b) => (a.firstYearBudget ?? 9e9) - (b.firstYearBudget ?? 9e9))
+        .map((u) => ({
+          slug: u.slug,
+          name: u.name,
+          city: u.city,
+          headline: "No application fee",
+          note:
+            u.minTuition != null
+              ? `Free to apply. Tuition from ${formatCurrency(u.minTuition, "AUD")} a year.`
+              : "Free to apply directly or through an authorised agent.",
+        })),
+  },
+  {
+    slug: "australian-universities-accepting-ielts-6-0-for-international-students",
+    title: "Australian universities that accept IELTS 6.0",
+    shortTitle: "Accept IELTS 6.0",
+    metaDescription:
+      "Australian universities with an institutional minimum of IELTS 6.0 for undergraduate entry. Note that specific courses require higher scores.",
+    intro: [
+      "IELTS 6.0 is the most common institutional minimum for undergraduate entry at Australian universities. The Group of Eight and a few others set their floor at 6.5, but most regional, newer, and technology universities accept 6.0 overall for general degrees.",
+      "This is only the institutional minimum. It is the score below which the university will not consider you at all, not a guarantee your course accepts it. Nursing needs 7.0, teaching 7.5, and medicine, law, and business commonly 7.0. Postgraduate coursework usually needs 6.5.",
+    ],
+    methodology:
+      "We list universities whose institutional minimum for undergraduate entry is IELTS 6.0 overall. Always check the requirement for your specific course, since many programs sit well above the institutional floor.",
+    build: (unis) =>
+      unis
+        .filter((u) => u.ieltsOverall != null && u.ieltsOverall <= 6.0)
+        .sort((a, b) => (a.firstYearBudget ?? 9e9) - (b.firstYearBudget ?? 9e9))
+        .map((u) => ({
+          slug: u.slug,
+          name: u.name,
+          city: u.city,
+          headline: "IELTS 6.0 minimum",
+          note: `Institutional minimum for undergraduate entry is IELTS 6.0.${
+            u.applicationFee === 0 ? " No application fee." : ""
+          } Specific courses require more.`,
+        })),
+  },
   cityCollection({ city: "Sydney", match: /sydney|manly/i, slug: "cheapest-universities-in-sydney-for-international-students" }),
   cityCollection({ city: "Melbourne", match: /melbourne|geelong/i, slug: "cheapest-universities-in-melbourne-for-international-students" }),
   cityCollection({ city: "Perth", match: /perth|fremantle/i, slug: "cheapest-universities-in-perth-for-international-students" }),
