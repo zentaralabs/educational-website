@@ -15,7 +15,7 @@ export const revalidate = 3600;
 export const metadata = {
   title: {
     absolute:
-      "University Application Deadlines, Admissions & Costs — Where To Apply",
+      "University Application Deadlines, Admissions & Costs | Where To Apply",
   },
   description: SITE_DESCRIPTION,
   alternates: { canonical: "/" },
