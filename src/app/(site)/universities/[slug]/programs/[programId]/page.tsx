@@ -161,16 +161,9 @@ export default async function ProgramDetailPage({
             />
             About this program
           </h2>
-          <div className="flex flex-col gap-5 font-body text-ink">
+          <div className="flex flex-col gap-5 rounded-2xl bg-ink/[0.035] p-6 font-body text-lg leading-8 text-ink sm:p-7">
             {program.description?.split("\n\n").map((paragraph, i) => (
-              <p
-                key={i}
-                className={
-                  i === 0
-                    ? "text-lg leading-8 text-pretty"
-                    : "text-base leading-7 text-ink/85"
-                }
-              >
+              <p key={i} className={i === 0 ? "text-pretty font-medium" : undefined}>
                 {paragraph.split("\n").map((line, j, lines) => (
                   <span key={j}>
                     {line}
