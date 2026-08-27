@@ -24,140 +24,210 @@ const EMPTY: SearchResults = {
   blogPosts: [],
 };
 
+// Filler words that carry no signal in a "what do I want to study" query.
+// Deliberately does NOT strip domain nouns like "computer" or "nursing".
+const STOPWORDS = new Set([
+  "i", "a", "an", "the", "to", "of", "for", "in", "on", "at", "by", "as",
+  "my", "me", "we", "us", "im", "is", "are", "am", "be", "and", "or", "but",
+  "want", "wanna", "wish", "like", "need", "looking", "look", "find", "get",
+  "study", "studying", "studies", "learn", "learning", "pursue", "take",
+  "apply", "applying", "application", "applications", "admission", "admissions",
+  "enrol", "enroll", "join", "start",
+  "how", "what", "where", "when", "which", "who", "do", "does", "can", "should",
+  "would", "about", "into", "with", "from", "that", "this",
+  "university", "universities", "uni", "college", "colleges", "school",
+  "course", "courses", "degree", "degrees", "program", "programme", "programs",
+  "programmes", "major", "majors", "please", "somewhere", "anywhere",
+]);
+
+/** Split a natural-language query into the meaningful search tokens. */
+function tokenize(q: string): string[] {
+  const raw = q
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, " ")
+    .split(/\s+/)
+    .filter(Boolean);
+  const kept = raw.filter(
+    (t) => !STOPWORDS.has(t) && (t.length >= 3 || /^\d+$/.test(t)),
+  );
+  // Fall back to the raw words if stopword removal ate everything.
+  const tokens = kept.length ? kept : raw;
+  return [...new Set(tokens)].slice(0, 6);
+}
+
+/** PostgREST `.or()` string: any column ilike any token. */
+function orIlike(columns: string[], tokens: string[]): string {
+  return tokens
+    .flatMap((t) => columns.map((c) => `${c}.ilike.%${t}%`))
+    .join(",");
+}
+
+/** Score a row by how many distinct tokens appear in its text. */
+function score(text: string, tokens: string[]): number {
+  const lower = text.toLowerCase();
+  return tokens.reduce((n, t) => (lower.includes(t) ? n + 1 : n), 0);
+}
+
 export async function searchSite(query: string): Promise<SearchResults> {
   const q = query.trim();
   if (!q) return EMPTY;
+  const tokens = tokenize(q);
+  if (tokens.length === 0) return EMPTY;
 
   const supabase = createPublicClient();
-  const like = `%${q}%`;
 
-  // Subject search is exact-ish (ilike against the controlled vocabulary),
-  // so a query like "computer science" matches the subjects row directly —
-  // this is what lets programs surface even when the program's own name
-  // is something like "Master of Computer Science" rather than a literal
-  // match on "computer science" alone (which it also would, via the OR below).
+  // Subjects are a controlled vocabulary — match any token so "computer
+  // science degree" still finds the "Computer Science" subject and, through
+  // it, every relevant program.
   const subjectMatches = await supabase
     .from("subjects")
-    .select("id")
-    .ilike("name", like);
-
+    .select("id, name")
+    .or(orIlike(["name"], tokens));
   if (subjectMatches.error) throw subjectMatches.error;
-  const subjectIds = subjectMatches.data?.map((s) => s.id) ?? [];
+  const subjectIds = (subjectMatches.data ?? []).map((s) => s.id);
 
-  // Always filter via a single .or() call (rather than branching between
-  // .or() and .ilike()) so both code paths chain the exact same builder
-  // methods — mixing them here confuses supabase-js's generic inference
-  // and collapses `programs.data`'s element type to `never`.
   const programFilter = subjectIds.length
-    ? `name.ilike.${like},subject_id.in.(${subjectIds.join(",")})`
-    : `name.ilike.${like}`;
-
-  const programsQuery = supabase
-    .from("programs")
-    .select(
-      "id, name, university:universities!inner(slug, name, country:countries!inner(is_launched)), subject:subjects(name)",
-    )
-    .eq("status", "published")
-    .eq("university.country.is_launched", true)
-    .or(programFilter)
-    .order("name")
-    .limit(20);
+    ? `${orIlike(["name"], tokens)},subject_id.in.(${subjectIds.join(",")})`
+    : orIlike(["name"], tokens);
 
   const [universities, guides, programs, visas, scholarships, blogPosts] =
     await Promise.all([
       supabase
         .from("universities")
-        .select("slug, name, city, country:countries!inner(is_launched)")
+        .select("slug, name, city, popular_majors, country:countries!inner(is_launched)")
         .eq("status", "published")
         .eq("country.is_launched", true)
-        .ilike("name", like)
-        .order("name")
-        .limit(20),
+        .or(orIlike(["name", "city"], tokens))
+        .limit(40),
       supabase
         .from("guides")
-        .select("slug, title, category, country:countries(is_launched)")
+        .select("slug, title, category, excerpt, country:countries(is_launched)")
         .eq("status", "published")
         .neq("category", "comparison")
-        .ilike("title", like)
-        .order("title")
-        .limit(20),
-      programsQuery,
+        .or(orIlike(["title", "excerpt"], tokens))
+        .limit(40),
+      supabase
+        .from("programs")
+        .select(
+          "id, name, university:universities!inner(slug, name, country:countries!inner(is_launched)), subject:subjects(name)",
+        )
+        .eq("status", "published")
+        .eq("university.country.is_launched", true)
+        .or(programFilter)
+        .limit(60),
       supabase
         .from("visa_subclasses")
-        .select("slug, code, name")
+        .select("slug, code, name, short_description")
         .eq("status", "published")
-        .or(`name.ilike.${like},code.ilike.${like},short_description.ilike.${like}`)
-        .order("code")
-        .limit(10),
+        .or(orIlike(["name", "code", "short_description", "category"], tokens))
+        .limit(20),
       supabase
         .from("scholarships")
-        .select("slug, name, scope, country:countries(is_launched)")
+        .select("slug, name, scope, description, country:countries(is_launched)")
         .eq("status", "published")
         .not("slug", "is", null)
-        .ilike("name", like)
-        .order("name")
-        .limit(10),
+        .or(orIlike(["name", "description"], tokens))
+        .limit(20),
       supabase
         .from("blog_posts")
-        .select("slug, title")
+        .select("slug, title, excerpt")
         .eq("status", "published")
-        .ilike("title", like)
-        .order("published_at", { ascending: false })
-        .limit(10),
+        .or(orIlike(["title", "excerpt"], tokens))
+        .limit(20),
     ]);
 
-  if (universities.error) throw universities.error;
-  if (guides.error) throw guides.error;
-  if (programs.error) throw programs.error;
-  if (visas.error) throw visas.error;
-  if (scholarships.error) throw scholarships.error;
-  if (blogPosts.error) throw blogPosts.error;
+  for (const r of [universities, guides, programs, visas, scholarships, blogPosts]) {
+    if (r.error) throw r.error;
+  }
 
-  // The hand-written Database type (src/lib/supabase/types.ts) leaves every
-  // table's `Relationships` empty, so supabase-js can't infer embedded-select
-  // shapes like `university:universities(...)` and types `.data` as `never`.
-  // Every other query in this codebase casts through `unknown` for the same
-  // reason (see public-programs.ts, public-universities.ts).
+  const uniRows = (universities.data ?? []) as unknown as {
+    slug: string;
+    name: string;
+    city: string | null;
+    popular_majors: string[] | null;
+  }[];
   const programRows = (programs.data ?? []) as unknown as {
     id: string;
     name: string;
     university: { slug: string; name: string } | null;
     subject: { name: string } | null;
   }[];
-
-  // Guides are only country-scoped when they carry a country_id — global
-  // guides (country: null) are always shown; scoped ones are hidden until
-  // that country launches.
   const guideRows = (guides.data ?? []) as unknown as {
     slug: string;
     title: string;
     category: string;
+    excerpt: string | null;
     country: { is_launched: boolean } | null;
   }[];
-
+  const visaRows = (visas.data ?? []) as unknown as {
+    slug: string;
+    code: string;
+    name: string;
+    short_description: string | null;
+  }[];
   const scholarshipRows = (scholarships.data ?? []) as unknown as {
     slug: string;
     name: string;
     scope: string;
+    description: string | null;
     country: { is_launched: boolean } | null;
   }[];
+  const blogRows = (blogPosts.data ?? []) as unknown as {
+    slug: string;
+    title: string;
+    excerpt: string | null;
+  }[];
+
+  const rank = <T>(rows: T[], text: (r: T) => string, limit: number): T[] => {
+    const scored = rows
+      .map((r) => ({ r, s: score(text(r), tokens) }))
+      .filter((x) => x.s > 0);
+    const maxScore = scored.reduce((m, x) => Math.max(m, x.s), 0);
+    // If some rows match multiple query words, drop the ones that only
+    // clipped a single common word (e.g. "science" alone for a "computer
+    // science" query).
+    const minKeep = maxScore >= 2 ? Math.max(2, maxScore - 1) : 1;
+    return scored
+      .filter((x) => x.s >= minKeep)
+      .sort((a, b) => b.s - a.s)
+      .slice(0, limit)
+      .map((x) => x.r);
+  };
 
   return {
-    universities: universities.data ?? [],
-    guides: guideRows
-      .filter((g) => !g.country || g.country.is_launched)
-      .map((g) => ({ slug: g.slug, title: g.title, category: g.category })),
-    programs: programRows.map((p) => ({
+    universities: rank(
+      uniRows,
+      (u) => `${u.name} ${u.city ?? ""} ${(u.popular_majors ?? []).join(" ")}`,
+      12,
+    ).map((u) => ({ slug: u.slug, name: u.name, city: u.city })),
+    guides: rank(
+      guideRows.filter((g) => !g.country || g.country.is_launched),
+      (g) => `${g.title} ${g.excerpt ?? ""}`,
+      12,
+    ).map((g) => ({ slug: g.slug, title: g.title, category: g.category })),
+    programs: rank(
+      programRows,
+      (p) => `${p.name} ${p.subject?.name ?? ""} ${p.university?.name ?? ""}`,
+      20,
+    ).map((p) => ({
       id: p.id,
       name: p.name,
       universitySlug: p.university?.slug ?? "",
       universityName: p.university?.name ?? "",
       subjectName: p.subject?.name ?? null,
     })),
-    visas: (visas.data ?? []) as { slug: string; code: string; name: string }[],
-    scholarships: scholarshipRows
-      .filter((s) => !s.country || s.country.is_launched)
-      .map((s) => ({ slug: s.slug, name: s.name, scope: s.scope })),
-    blogPosts: (blogPosts.data ?? []) as { slug: string; title: string }[],
+    visas: rank(
+      visaRows,
+      (v) => `${v.name} ${v.code} ${v.short_description ?? ""}`,
+      8,
+    ).map((v) => ({ slug: v.slug, code: v.code, name: v.name })),
+    scholarships: rank(
+      scholarshipRows.filter((s) => !s.country || s.country.is_launched),
+      (s) => `${s.name} ${s.description ?? ""}`,
+      10,
+    ).map((s) => ({ slug: s.slug, name: s.name, scope: s.scope })),
+    blogPosts: rank(blogRows, (b) => `${b.title} ${b.excerpt ?? ""}`, 8).map(
+      (b) => ({ slug: b.slug, title: b.title }),
+    ),
   };
 }
