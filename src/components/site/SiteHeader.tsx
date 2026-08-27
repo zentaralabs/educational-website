@@ -2,15 +2,16 @@ import Link from "next/link";
 
 const NAV = [
   { label: "Deadlines", href: "/deadlines" },
-  { label: "Guides", href: "/guides" },
+  { label: "Courses", href: "/study" },
+  { label: "Best universities", href: "/best" },
   { label: "Scholarships", href: "/scholarships" },
   { label: "Visas", href: "/visas" },
   { label: "Compare", href: "/compare" },
-  { label: "Blog", href: "/blog" },
+  { label: "Guides", href: "/guides" },
 ];
 
 /**
- * Persistent minimal top nav — 4-5 items max, per PROJECT_STATUS.md Section 4.
+ * Persistent top nav — one entry per major content section.
  * Faceted filtering lives on listing pages instead of deep menus here.
  * Domestic/international toggle lives on the homepage under the search box now,
  * not here — see StudentTypeToggle usage in app/page.tsx.

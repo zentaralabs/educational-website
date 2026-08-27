@@ -8,7 +8,7 @@ const EXPLORE = [
   { label: "Courses by subject", href: "/study" },
   { label: "Cost of living", href: "/cost-of-living" },
   { label: "Scholarships", href: "/scholarships" },
-  { label: "Decision guides", href: "/best" },
+  { label: "Best universities (shortlists)", href: "/best" },
   { label: "Compare universities", href: "/compare" },
   { label: "Find a university (quiz)", href: "/quiz" },
 ];
