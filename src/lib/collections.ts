@@ -60,7 +60,7 @@ const LEAD: Record<string, string> = {
   "best-australian-universities-for-business":
     "No single ranking settles which Australian university is best for business, and accreditation from AACSB, EQUIS, or AMBA is a more useful signal than a league-table position. The gap is wide between an MBA, which usually wants work experience and costs the most, and a general business master's, which often wants neither. This shortlist flags what each school is known for.",
   "best-australian-universities-for-nursing-and-health-sciences":
-    "Nursing is regulated. The qualification has to be accredited by the Australian Nursing and Midwifery Accreditation Council, and registration requires IELTS 7.0 with nothing below 7.0, so a program's accreditation status matters more than its prestige. Registered nurse is on the skilled occupation lists, which makes nursing one of the clearer routes to permanent residence.",
+    "Nursing is regulated. The qualification has to be accredited by the Australian Nursing and Midwifery Accreditation Council, and the Nursing and Midwifery Board sets one of the highest English bars of any field for registration, so a program's accreditation status matters more than its prestige. Registered nurse is on the skilled occupation lists, which makes nursing one of the clearer routes to permanent residence.",
   "best-australian-universities-for-engineering":
     "For engineering, the signal that matters most is Engineers Australia accreditation, which every program here holds and which underpins both registration and the skilled-migration skills assessment. Beyond that, strength is specialised: a university can lead in mining or civil and be ordinary in software. Fees are among the higher ones, commonly in the AUD 40,000s.",
   "cheapest-universities-in-sydney-for-international-students":
@@ -68,13 +68,13 @@ const LEAD: Record<string, string> = {
   "cheapest-universities-in-melbourne-for-international-students":
     "Melbourne runs a close second to Sydney on cost, with the same pattern: rent is the swing factor and tuition varies widely by university. The city has more universities within commuting distance than anywhere else in the country, which widens the cheaper end of this list. Like Sydney, metropolitan Melbourne is not a regional area for skilled migration.",
   "cheapest-universities-in-perth-for-international-students":
-    "Perth is one of the more affordable capital cities for students, and unusually it counts as a regional area for skilled migration, so studying here adds points toward the 491 and 190 visas and opens regional nomination pathways. The trade-off is distance from the eastern states. Curtin and UWA anchor the list.",
+    "Perth is one of the more affordable capital cities for students, and unusually it counts as a regional area for skilled migration, so studying here earns the regional study points on the skilled visa points test and opens the 491 and 190 nomination pathways. The trade-off is distance from the eastern states. Curtin and UWA anchor the list.",
   "cheapest-universities-in-brisbane-for-international-students":
     "Brisbane costs noticeably less than Sydney or Melbourne, mostly on rent, while everyday expenses are similar. Brisbane itself is not classified as regional for migration, though several other Queensland cities are. The list leans toward the technology-focused universities, with UQ at the higher-fee end.",
   "cheapest-universities-in-adelaide-for-international-students":
     "Adelaide is among the cheapest capital cities to live in and is a designated regional area for skilled migration, which adds points and widens state-nomination options. The university landscape changed in 2026 when two long-established institutions merged into Adelaide University, so catalogues and fee schedules are still settling. Confirm figures with the university directly.",
   "cheapest-universities-in-canberra-for-international-students":
-    "Canberra is smaller and quieter than the big east-coast cities, with a tighter but generally cheaper rental market and short commutes. The choice is narrow: ANU, which is highly selective and sits in the top fee band, and the University of Canberra, which is more accessible on both entry and cost. The ACT is not a regional area for migration.",
+    "Canberra is smaller and quieter than the big east-coast cities, with a tighter but generally cheaper rental market and short commutes. The choice is narrow: ANU, which is highly selective and sits in the top fee band, and the University of Canberra, which is more accessible on both entry and cost. The whole ACT counts as a regional area for skilled migration, and it runs its own 190 and 491 nomination through the Canberra Matrix.",
 };
 
 /** Builds a "best universities for <subject>" collection from the curated
