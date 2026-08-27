@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Fraunces, Public_Sans, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@/components/site/Analytics";
+import { CookieConsentBanner } from "@/components/site/CookieConsentBanner";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site-config";
 
 const fraunces = Fraunces({
@@ -57,6 +59,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col bg-paper text-ink font-body">
         {children}
+        <CookieConsentBanner />
+        <Analytics />
       </body>
     </html>
   );
