@@ -670,6 +670,8 @@ Per user request ("leave no stone unturned"). What was checked and the result:
 
 **Improvements made during the sweep** (commit "Verification pass…"): site search extended to cover visa subclasses, scholarships, and blog posts (was universities/programs/guides only); `/deadlines` filter dropdowns trimmed to only the degree levels and intake types that have published AU deadlines (the US-style "Early Decision / Regular Decision / Rolling" options were dead weight).
 
+**Search rewrite** (later commit "Make site search understand natural-language queries"): `searchSite` was doing a single `ILIKE '%<whole raw query>%'`, so "i want to study computer science" returned nothing. It now tokenizes the query, drops filler words, matches each token across the relevant columns per content type, ranks by how many query words each row hits, and drops rows that only clipped one common word when stronger matches exist. `public-search.ts`.
+
 **Known, deliberately not fixed:**
 - **25 non-launched-country universities** (CA/NZ/UK/US) have em-dashes in `distinctive_summary` from an earlier pass. These rows are `status = 'published'` but **not publicly served** (gated behind `countries.is_launched`), and each of those countries needs a full content pass before launch anyway. Clean them at country-launch time, not now.
 - The **MIT scholarship** row (`mit-presidential-scholars-program`) has no description and links to the non-launched MIT university. Fully hidden on the public site (excluded from static params and 404s if hit directly). Left as planned-country scaffolding.
