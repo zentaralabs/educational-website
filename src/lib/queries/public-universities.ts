@@ -81,11 +81,73 @@ export type ComparisonUniversityRow = {
   acceptance_rate: number | null;
   tuition_international: number | null;
   tuition_domestic: number | null;
+  /** True when the tuition figure was filled in from the university's
+   * cheapest published program rather than a university-level fact —
+   * university-level tuition is often unset since real figures live on
+   * individual programs (see PROJECT_STATUS.md Section 13). */
+  tuition_international_from_programs?: boolean;
+  tuition_domestic_from_programs?: boolean;
   currency: string;
-  est_cost_of_attendance: number | null;
-  student_faculty_ratio: string | null;
   required_tests: string[] | null;
 };
+
+const COMPARISON_SELECT =
+  "id, slug, name, country:countries(code, name), acceptance_rate, tuition_international, tuition_domestic, currency, required_tests";
+
+/**
+ * Fills null university-level tuition with the cheapest matching figure
+ * across that university's own published programs — university-level
+ * tuition_domestic in particular is unset for every university in the
+ * dataset (it's tracked per-program instead), so without this fallback
+ * the comparison table would show "—" there for 100% of schools.
+ */
+async function fillProgramTuitionFallback(
+  rows: ComparisonUniversityRow[],
+): Promise<ComparisonUniversityRow[]> {
+  const needsFallback = rows.filter(
+    (r) => r.tuition_international === null || r.tuition_domestic === null,
+  );
+  if (needsFallback.length === 0) return rows;
+
+  const supabase = createPublicClient(["programs:list"]);
+  const { data, error } = await supabase
+    .from("programs")
+    .select("university_id, tuition_international, tuition_domestic")
+    .in(
+      "university_id",
+      needsFallback.map((r) => r.id),
+    )
+    .eq("status", "published");
+  if (error) throw error;
+
+  const minByUni = new Map<string, { intl: number | null; dom: number | null }>();
+  for (const p of (data ?? []) as {
+    university_id: string;
+    tuition_international: number | null;
+    tuition_domestic: number | null;
+  }[]) {
+    const cur = minByUni.get(p.university_id) ?? { intl: null, dom: null };
+    if (p.tuition_international != null && (cur.intl === null || p.tuition_international < cur.intl)) {
+      cur.intl = p.tuition_international;
+    }
+    if (p.tuition_domestic != null && (cur.dom === null || p.tuition_domestic < cur.dom)) {
+      cur.dom = p.tuition_domestic;
+    }
+    minByUni.set(p.university_id, cur);
+  }
+
+  return rows.map((r) => {
+    const fallback = minByUni.get(r.id);
+    if (!fallback) return r;
+    return {
+      ...r,
+      tuition_international: r.tuition_international ?? fallback.intl,
+      tuition_domestic: r.tuition_domestic ?? fallback.dom,
+      tuition_international_from_programs: r.tuition_international === null && fallback.intl !== null,
+      tuition_domestic_from_programs: r.tuition_domestic === null && fallback.dom !== null,
+    };
+  });
+}
 
 export async function getUniversitiesForComparison(
   ids: string[],
@@ -94,14 +156,12 @@ export async function getUniversitiesForComparison(
   const supabase = createPublicClient(["universities:list"]);
   const { data, error } = await supabase
     .from("universities")
-    .select(
-      "id, slug, name, country:countries(code, name), acceptance_rate, tuition_international, tuition_domestic, currency, est_cost_of_attendance, student_faculty_ratio, required_tests",
-    )
+    .select(COMPARISON_SELECT)
     .in("id", ids)
     .eq("status", "published");
 
   if (error) throw error;
-  return (data ?? []) as unknown as ComparisonUniversityRow[];
+  return fillProgramTuitionFallback((data ?? []) as unknown as ComparisonUniversityRow[]);
 }
 
 export async function getUniversitiesForComparisonBySlugs(
@@ -111,18 +171,17 @@ export async function getUniversitiesForComparisonBySlugs(
   const supabase = createPublicClient(["universities:list"]);
   const { data, error } = await supabase
     .from("universities")
-    .select(
-      "id, slug, name, country:countries(code, name), acceptance_rate, tuition_international, tuition_domestic, currency, est_cost_of_attendance, student_faculty_ratio, required_tests",
-    )
+    .select(COMPARISON_SELECT)
     .in("slug", slugs)
     .eq("status", "published");
 
   if (error) throw error;
+  const filled = await fillProgramTuitionFallback(
+    (data ?? []) as unknown as ComparisonUniversityRow[],
+  );
   // Preserve the requested order (`in` doesn't guarantee it) so the picker's
   // selection order is reflected in the table's column order.
-  const bySlug = new Map(
-    ((data ?? []) as unknown as ComparisonUniversityRow[]).map((u) => [u.slug, u]),
-  );
+  const bySlug = new Map(filled.map((u) => [u.slug, u]));
   return slugs.map((s) => bySlug.get(s)).filter((u): u is ComparisonUniversityRow => !!u);
 }
 

@@ -2,6 +2,15 @@ import Link from "next/link";
 import { formatCurrency, formatPercent } from "@/lib/format";
 import type { ComparisonUniversityRow } from "@/lib/queries/public-universities";
 
+/** Prefixes "from " when the figure is the cheapest across the university's
+ * programs rather than a single university-wide sticker price, so it isn't
+ * mistaken for one flat number. */
+function tuitionValue(amount: number | null, currency: string, fromPrograms?: boolean) {
+  const formatted = formatCurrency(amount, currency);
+  if (!formatted) return null;
+  return fromPrograms ? `from ${formatted}` : formatted;
+}
+
 const ROWS: {
   label: string;
   value: (u: ComparisonUniversityRow) => string | null;
@@ -10,17 +19,14 @@ const ROWS: {
   { label: "Acceptance rate", value: (u) => formatPercent(u.acceptance_rate) },
   {
     label: "Tuition (international)",
-    value: (u) => formatCurrency(u.tuition_international, u.currency),
+    value: (u) =>
+      tuitionValue(u.tuition_international, u.currency, u.tuition_international_from_programs),
   },
   {
     label: "Tuition (domestic)",
-    value: (u) => formatCurrency(u.tuition_domestic, u.currency),
+    value: (u) =>
+      tuitionValue(u.tuition_domestic, u.currency, u.tuition_domestic_from_programs),
   },
-  {
-    label: "Est. cost of attendance",
-    value: (u) => formatCurrency(u.est_cost_of_attendance, u.currency),
-  },
-  { label: "Student:faculty ratio", value: (u) => u.student_faculty_ratio },
   { label: "Required tests", value: (u) => u.required_tests?.join(", ") ?? null },
 ];
 
