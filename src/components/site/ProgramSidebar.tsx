@@ -96,17 +96,19 @@ export function ProgramSidebar({
     : null;
 
   return (
-    <div className="flex flex-col gap-3">
-      <Widget title="Cost & duration" icon={<CoinIcon className="h-3.5 w-3.5" />}>
-        <Row label="Duration" value={durationYears ? `${durationYears} yr` : null} />
-        <Row label={tuitionLabel} value={formatCurrency(tuitionAmount, currency)} />
-        <Row label="Application fee" value={formatCurrency(applicationFee, currency)} />
-      </Widget>
-      {showingDomestic && tuitionDomesticIsCsp && (
-        <p className="-mt-1.5 px-1 font-body text-xs text-slate">
-          Commonwealth Supported Place rate — limited, not guaranteed; full domestic fee otherwise.
-        </p>
-      )}
+    <div className="grid gap-4 sm:grid-cols-2">
+      <div className="flex flex-col gap-2">
+        <Widget title="Cost & duration" icon={<CoinIcon className="h-3.5 w-3.5" />}>
+          <Row label="Duration" value={durationYears ? `${durationYears} yr` : null} />
+          <Row label={tuitionLabel} value={formatCurrency(tuitionAmount, currency)} />
+          <Row label="Application fee" value={formatCurrency(applicationFee, currency)} />
+        </Widget>
+        {showingDomestic && tuitionDomesticIsCsp && (
+          <p className="px-1 font-body text-xs text-slate">
+            Commonwealth Supported Place rate — limited, not guaranteed; full domestic fee otherwise.
+          </p>
+        )}
+      </div>
       {(ieltsSummary || pteSummary) && (
         <Widget title="English test scores" icon={<GlobeIcon className="h-3.5 w-3.5" />}>
           <Row label="IELTS" value={ieltsSummary} />

@@ -152,46 +152,47 @@ export default async function ProgramDetailPage({
         </div>
       </div>
 
-      <div className="mt-8 grid gap-6 border-t border-ink/10 pt-8 md:grid-cols-[2fr_1fr]">
-        <div>
-          <h2 className="mb-4 flex items-center gap-2 font-display text-xl font-semibold text-ink">
-            <span
-              className="inline-block h-5 w-1 rounded-full"
-              style={{ backgroundColor: "color-mix(in srgb, var(--color-status-open) 60%, transparent)" }}
-            />
-            About this program
-          </h2>
-          <div className="flex flex-col gap-5 rounded-2xl bg-ink/[0.035] p-6 font-body text-lg leading-8 text-ink sm:p-7">
-            {program.description?.split("\n\n").map((paragraph, i) => (
-              <p key={i} className={i === 0 ? "text-pretty font-medium" : undefined}>
-                {paragraph.split("\n").map((line, j, lines) => (
-                  <span key={j}>
-                    {line}
-                    {j < lines.length - 1 && <br />}
-                  </span>
-                ))}
-              </p>
-            ))}
-          </div>
+      <div className="mt-8 border-t border-ink/10 pt-8">
+        <h2 className="mb-4 flex items-center gap-2 font-display text-xl font-semibold text-ink">
+          <span
+            className="inline-block h-5 w-1 rounded-full"
+            style={{ backgroundColor: "color-mix(in srgb, var(--color-status-open) 60%, transparent)" }}
+          />
+          About this program
+        </h2>
+        <div className="flex flex-col gap-5 rounded-2xl bg-ink/[0.035] p-6 font-body text-lg leading-8 text-ink sm:p-7">
+          {program.description?.split("\n\n").map((paragraph, i) => (
+            <p key={i} className={i === 0 ? "text-pretty font-medium" : undefined}>
+              {paragraph.split("\n").map((line, j, lines) => (
+                <span key={j}>
+                  {line}
+                  {j < lines.length - 1 && <br />}
+                </span>
+              ))}
+            </p>
+          ))}
         </div>
-        <ProgramSidebar
-          durationYears={program.duration_years}
-          tuitionDomestic={program.tuition_domestic ?? university.tuition_domestic}
-          tuitionDomesticIsCsp={program.tuition_domestic_is_csp ?? university.tuition_domestic_is_csp}
-          tuitionInternational={program.tuition_international ?? university.tuition_international}
-          applicationFee={university.application_fee}
-          currency={program.currency ?? university.currency}
-          ieltsOverall={program.ielts_overall ?? university.ielts_overall}
-          ieltsListening={program.ielts_listening ?? university.ielts_listening}
-          ieltsReading={program.ielts_reading ?? university.ielts_reading}
-          ieltsWriting={program.ielts_writing ?? university.ielts_writing}
-          ieltsSpeaking={program.ielts_speaking ?? university.ielts_speaking}
-          pteOverall={program.pte_overall ?? university.pte_overall}
-          pteListening={program.pte_listening ?? university.pte_listening}
-          pteReading={program.pte_reading ?? university.pte_reading}
-          pteWriting={program.pte_writing ?? university.pte_writing}
-          pteSpeaking={program.pte_speaking ?? university.pte_speaking}
-        />
+
+        <div className="mt-6">
+          <ProgramSidebar
+            durationYears={program.duration_years}
+            tuitionDomestic={program.tuition_domestic ?? university.tuition_domestic}
+            tuitionDomesticIsCsp={program.tuition_domestic_is_csp ?? university.tuition_domestic_is_csp}
+            tuitionInternational={program.tuition_international ?? university.tuition_international}
+            applicationFee={university.application_fee}
+            currency={program.currency ?? university.currency}
+            ieltsOverall={program.ielts_overall ?? university.ielts_overall}
+            ieltsListening={program.ielts_listening ?? university.ielts_listening}
+            ieltsReading={program.ielts_reading ?? university.ielts_reading}
+            ieltsWriting={program.ielts_writing ?? university.ielts_writing}
+            ieltsSpeaking={program.ielts_speaking ?? university.ielts_speaking}
+            pteOverall={program.pte_overall ?? university.pte_overall}
+            pteListening={program.pte_listening ?? university.pte_listening}
+            pteReading={program.pte_reading ?? university.pte_reading}
+            pteWriting={program.pte_writing ?? university.pte_writing}
+            pteSpeaking={program.pte_speaking ?? university.pte_speaking}
+          />
+        </div>
       </div>
 
       {curriculumTerms && curriculumTerms.length > 0 && (
