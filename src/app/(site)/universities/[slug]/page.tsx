@@ -328,10 +328,8 @@ export default async function UniversityProfilePage({
               }
             />
             <Fact
-              label="Estimated living cost"
-              value={`${formatCurrency(livingCost, "AUD")}/year${
-                university.living_cost_annual == null ? " (national indicative)" : ""
-              }`}
+              label="Living cost estimate"
+              value={`${formatCurrency(livingCost, "AUD")}/year`}
             />
           </FactBox>
 
@@ -354,6 +352,22 @@ export default async function UniversityProfilePage({
               </p>
             </div>
           )}
+
+          <p className="mt-3 font-body text-xs text-slate">
+            The living-cost figure is an estimate for{" "}
+            {university.city?.split(",")[0] ?? "this location"}, anchored to the
+            Australian Government&rsquo;s{" "}
+            <a
+              href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              className="underline underline-offset-2 hover:text-ink"
+            >
+              AUD 29,710 minimum
+            </a>{" "}
+            for a single student visa applicant (2026) and adjusted for the city.
+            Your actual costs depend most on rent and lifestyle.
+          </p>
         </ProfileSection>
       )}
 
@@ -453,11 +467,13 @@ export default async function UniversityProfilePage({
             </p>
           ) : (
             <p className="mb-3 font-body text-sm text-slate">
-              Australian universities run fixed intakes rather than one hard
-              deadline. The dates below are the recommended times to have your
-              international application in for each intake. Competitive courses
-              close earlier, and later applications are often still accepted if
-              places and visa time remain.
+              {university.name} runs fixed intakes rather than one hard deadline.
+              The dates below are the recommended times to have your
+              international application in, about three to four months before
+              each intake. Postgraduate and competitive courses close earlier;
+              later applications are often still accepted while places and visa
+              time remain. Confirm the exact date for your course on the
+              university&rsquo;s site.
             </p>
           )}
           <div className="overflow-hidden rounded-md border border-ink/10 bg-paper">

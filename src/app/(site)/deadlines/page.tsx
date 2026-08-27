@@ -14,7 +14,8 @@ const SELECT_CLASS =
 
 export const metadata = {
   title: "Application Deadline Calendar",
-  description: "Filterable, sourced application deadlines for universities in Australia.",
+  description:
+    "Recommended international application dates for every intake at Australian universities, by degree level. Filterable by country, level, and intake.",
   alternates: { canonical: "/deadlines" },
 };
 
@@ -105,12 +106,13 @@ export default async function DeadlinesPage({
       </div>
 
       <p className="mt-4 rounded-xl border border-status-pending/25 bg-status-pending/5 px-4 py-3 font-body text-sm text-slate">
-        Australian universities run fixed intakes (usually Semester 1 in February
-        and Semester 2 in July) rather than one hard cut-off. These are the
-        recommended dates to apply by for international students. Competitive
-        courses close earlier, and many courses accept later applications while
-        places and visa-processing time remain. Always confirm with the
-        university.
+        Australian universities run fixed intakes (Semester 1 starts in February
+        or March, Semester 2 in July) and, rather than one hard cut-off, publish
+        a recommended time to apply: roughly three to four months before the
+        intake. Postgraduate coursework and competitive courses (medicine, law,
+        portfolio-based programs) close earlier. Later applications are often
+        still accepted while places and visa-processing time remain. Confirm the
+        date for your specific course with the university.
       </p>
 
       <form

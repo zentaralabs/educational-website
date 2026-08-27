@@ -631,3 +631,26 @@ User feedback: the site felt flat and lifeless (small type, no depth, static). A
 **Homepage rebuild.** New `Collapsible` client component (grid-rows animation, chevron, pulse dot) — the "Next application dates" strip is now **collapsed by default, click to expand**, per the user's request, keeping the hero compact. Hero: soft radial accent-tint background, larger H1 (2.5rem → 6xl), pill-style stat eyebrow with the live pulse dot, a filled primary CTA ("Browse deadlines") against outlined secondary CTAs with hover lift, stronger "browse by country" links. Featured-universities strip uses the new `.card`/`.card-hover`.
 
 **Verified:** `tsc` + `eslint src` clean, all key routes 200, Fraunces axes confirmed loading (font module hash changed), collapsible expand/collapse works in-browser, console clean.
+
+## 21. Deadline data: per-level coverage + honest sourcing for costs (2026-08-27)
+
+User caught that the calendar only showed `(Undergraduate)` rows — filtering to Graduate or Foundation/Pathway returned nothing — and asked whether the deadline dates and living-cost figures were real or placeholders.
+
+**Research done** (web search, cited in the scripts):
+- Home Affairs 2026 single-student visa living-cost figure: **AUD 29,710** (official, citable).
+- 2026 international-student living costs run above that in Sydney/Melbourne, below it in Adelaide/Perth/Brisbane/regional (Study Australia, Numbeo, university cost pages).
+- AU universities genuinely do **not** publish one hard international deadline — the sector norm (Study Australia + individual admissions pages) is "apply ~3–4 months before the intake": Semester 1 by Oct–Dec of the prior year, Semester 2 by Mar–Apr. **Postgraduate coursework and professional programs (Melbourne MD/JD, etc.) close earlier than undergraduate.** Monash is explicitly rolling for UG.
+
+**Deadlines — `scripts/seed_deadlines.mjs` rewritten:**
+- Now **per (university × intake × degree level)**, using each university's real published-program levels: 222 rows covering Undergraduate, Graduate, and Foundation/Pathway. The level filter on `/deadlines` now works.
+- Graduate rows are dated **earlier** than undergraduate (Semester 1: 31 Oct vs 30 Nov; Semester 2: 15 Apr vs 30 Apr), matching the researched pattern. Semester 2 pulled forward to April (was May). Bond keeps its three trimesters; NIDA stays audition-early.
+- Per-row `notes` rewritten: explicitly says AU universities don't set one hard deadline, this is the standard "apply by" guidance, postgrad/competitive courses close earlier, later applications often still accepted. Not presented as a scraped per-course fact.
+- `/deadlines` explainer + page metadata + the university-profile deadline note all rewritten to match. `PAGE_SIZE` 30 → 40.
+
+**Living costs — `scripts/update_living_costs.mjs`:**
+- Per-city figures re-derived from the AUD 29,710 government anchor plus researched city ranges (Sydney 34k, Melbourne 32k, Canberra 30k, Brisbane/GC 29k, Perth 28k, Adelaide/Hobart 27k, regional 26k; multi-campus/national providers use 29,710 unchanged).
+- University profile relabelled "Estimated living cost" → **"Living cost estimate"** with a standing footnote: *estimate for {city}, anchored to the Australian Government's AUD 29,710 minimum (linked to the official page) and adjusted for the city; actual costs depend on rent and lifestyle.* No longer implies a per-university verified number.
+
+**Still a real gap:** individual universities' actual published international application dates and any hard course-specific deadlines (medicine intake timelines, portfolio dates) are not verified per-institution — the dates are the researched sector norm with postgrad/undergrad split, clearly labelled as guidance. A per-university verification pass (like the AU fee fact-check in Section 13) remains future work.
+
+**Verified:** `tsc` + `eslint` clean, `/deadlines?degreeLevel=Graduate` returns the Graduate rows (dated Oct 31), `/universities/university-of-melbourne` shows all four intake rows + the relabelled living-cost estimate with its source note, 222 total deadlines, console clean, ISR busted.
