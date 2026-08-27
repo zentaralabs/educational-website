@@ -23,6 +23,7 @@ const STATIC_ROUTES: Array<{ path: string; priority: number; changeFrequency: Me
   { path: "/study", priority: 0.8, changeFrequency: "weekly" },
   { path: "/visas", priority: 0.8, changeFrequency: "weekly" },
   { path: "/visas/invitation-rounds", priority: 0.7, changeFrequency: "weekly" },
+  { path: "/visas/points-calculator", priority: 0.8, changeFrequency: "monthly" },
   { path: "/quiz", priority: 0.6, changeFrequency: "monthly" },
   { path: "/search", priority: 0.4, changeFrequency: "monthly" },
   { path: "/about", priority: 0.3, changeFrequency: "yearly" },

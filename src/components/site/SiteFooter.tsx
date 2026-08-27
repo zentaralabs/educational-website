@@ -15,6 +15,7 @@ const EXPLORE = [
 const LEARN = [
   { label: "How-to guides", href: "/guides" },
   { label: "Visa subclasses", href: "/visas" },
+  { label: "Points calculator (189, 190, 491)", href: "/visas/points-calculator" },
   { label: "SkillSelect invitation rounds", href: "/visas/invitation-rounds" },
   { label: "Blog", href: "/blog" },
 ];

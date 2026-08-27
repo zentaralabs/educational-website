@@ -245,6 +245,16 @@ export default async function VisaPage({
               </tbody>
             </table>
           </div>
+          <p className="mt-3 font-body text-sm text-slate">
+            Not sure where you stand?{" "}
+            <Link
+              href="/visas/points-calculator"
+              className="text-status-open underline underline-offset-2"
+            >
+              Work out your points
+            </Link>{" "}
+            for the {visa.code} and related visas.
+          </p>
         </section>
       )}
 

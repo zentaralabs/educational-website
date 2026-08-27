@@ -33,21 +33,36 @@ export default async function VisasIndexPage() {
         leads to permanent residence. Every figure is dated and sourced.
       </p>
 
-      <Link
-        href="/visas/invitation-rounds"
-        className="mt-6 flex items-center justify-between gap-3 rounded-2xl border border-status-pending/30 bg-status-pending/5 p-5 transition-all duration-150 hover:-translate-y-0.5 hover:shadow-sm"
-      >
-        <span>
-          <span className="font-display text-lg font-semibold text-ink">
-            SkillSelect invitation rounds
+      <div className="mt-6 grid gap-3 sm:grid-cols-2">
+        <Link
+          href="/visas/points-calculator"
+          className="flex items-center justify-between gap-3 rounded-2xl border border-status-open/30 bg-status-open/5 p-5 transition-all duration-150 hover:-translate-y-0.5 hover:shadow-sm"
+        >
+          <span>
+            <span className="font-display text-lg font-semibold text-ink">
+              Points calculator
+            </span>
+            <span className="mt-1 block font-body text-sm text-slate">
+              Add up your score for the 189, 190, and 491 skilled visas.
+            </span>
           </span>
-          <span className="mt-1 block font-body text-sm text-slate">
-            Round-by-round history of invitations issued and points cut-offs for
-            the 189, 190, and 491 visas.
+          <ArrowUpRightIcon className="h-4 w-4 flex-shrink-0 text-slate" />
+        </Link>
+        <Link
+          href="/visas/invitation-rounds"
+          className="flex items-center justify-between gap-3 rounded-2xl border border-status-pending/30 bg-status-pending/5 p-5 transition-all duration-150 hover:-translate-y-0.5 hover:shadow-sm"
+        >
+          <span>
+            <span className="font-display text-lg font-semibold text-ink">
+              Invitation rounds
+            </span>
+            <span className="mt-1 block font-body text-sm text-slate">
+              Round-by-round history of invitations issued and points cut-offs.
+            </span>
           </span>
-        </span>
-        <ArrowUpRightIcon className="h-4 w-4 flex-shrink-0 text-slate" />
-      </Link>
+          <ArrowUpRightIcon className="h-4 w-4 flex-shrink-0 text-slate" />
+        </Link>
+      </div>
 
       {visas.length === 0 ? (
         <p className="mt-8 font-body text-base text-slate">

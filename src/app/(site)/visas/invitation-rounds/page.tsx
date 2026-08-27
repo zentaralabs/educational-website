@@ -56,7 +56,14 @@ export default async function InvitationRoundsPage() {
         SkillSelect candidates to apply for a skilled visa. Since the 2025-26
         program year the subclass 189 rounds run roughly quarterly. This is the
         history: how many invitations went out, and the lowest points score that
-        got one.
+        got one.{" "}
+        <Link
+          href="/visas/points-calculator"
+          className="text-status-open underline underline-offset-2"
+        >
+          Work out your own points first
+        </Link>
+        .
       </p>
 
       {rounds.length === 0 ? (
