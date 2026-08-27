@@ -6,6 +6,7 @@ const EXPLORE = [
   { label: "Universities", href: "/compare/universities" },
   { label: "Application deadlines", href: "/deadlines" },
   { label: "Courses by subject", href: "/study" },
+  { label: "Cost of living", href: "/cost-of-living" },
   { label: "Scholarships", href: "/scholarships" },
   { label: "Decision guides", href: "/best" },
   { label: "Compare universities", href: "/compare" },

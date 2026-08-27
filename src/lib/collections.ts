@@ -372,6 +372,7 @@ export const COLLECTIONS: Collection[] = [
   cityCollection({ city: "Perth", match: /perth|fremantle/i, slug: "cheapest-universities-in-perth-for-international-students" }),
   cityCollection({ city: "Brisbane", match: /brisbane|gold coast/i, slug: "cheapest-universities-in-brisbane-for-international-students" }),
   cityCollection({ city: "Adelaide", match: /adelaide/i, slug: "cheapest-universities-in-adelaide-for-international-students" }),
+  cityCollection({ city: "Canberra", match: /canberra/i, slug: "cheapest-universities-in-canberra-for-international-students" }),
   ...SUBJECT_BEST_PAGES.map(subjectBestCollection),
 ];
 

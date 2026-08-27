@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { COLLECTIONS } from "@/lib/collections";
+import { CITY_COSTS } from "@/lib/cities";
 import { COMPARISON_PAIRS, vsSlug } from "@/lib/comparisons";
 import { SITE_URL } from "@/lib/site-config";
 import { listPublishedBlogPostSlugs } from "@/lib/queries/public-blog-posts";
@@ -22,6 +23,7 @@ const STATIC_ROUTES: Array<{ path: string; priority: number; changeFrequency: Me
   { path: "/scholarships", priority: 0.8, changeFrequency: "weekly" },
   { path: "/best", priority: 0.7, changeFrequency: "weekly" },
   { path: "/study", priority: 0.8, changeFrequency: "weekly" },
+  { path: "/cost-of-living", priority: 0.7, changeFrequency: "monthly" },
   { path: "/visas", priority: 0.8, changeFrequency: "weekly" },
   { path: "/visas/invitation-rounds", priority: 0.7, changeFrequency: "weekly" },
   { path: "/visas/points-calculator", priority: 0.8, changeFrequency: "monthly" },
@@ -116,6 +118,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }));
 
+  const cityEntries: MetadataRoute.Sitemap = CITY_COSTS.map((c) => ({
+    url: `${SITE_URL}/cost-of-living/${c.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.6,
+  }));
+
   const subjectEntries: MetadataRoute.Sitemap = subjects.map((s) => ({
     url: `${SITE_URL}/study/${s.slug}`,
     lastModified: now,
@@ -142,6 +151,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...scholarshipEntries,
     ...collectionEntries,
     ...subjectEntries,
+    ...cityEntries,
     ...programEntries,
   ];
 }

@@ -711,7 +711,11 @@ Descriptions rewritten to be specific and keyword-rich rather than generic.
 
 **Done (commit "SEO #5"):** data-driven FAQ sections (`src/lib/faq.ts` + `FaqSection` component + `FAQPage` JSON-LD) on every university (7 Qs), visa (5-6), and scholarship (2-4) detail page. Built entirely from each page's structured data, so all ~96 pages get accurate, specific "people also ask" content with zero hand-writing. `GO8_SLUGS` + `isRegionalCity` extracted to `src/lib/australia.ts`.
 
-**Still on the SEO list:** best-universities-for-[subject] sections on the `/study` pages; ~20 pre-built university comparison pages; per-city cost-of-living pages. Off-page (the real constraint): directory listings, Reddit/forum answers, pitching the invitation-rounds tracker to migration blogs.
+**Done (commit "SEO: best-for-subject + comparison pages"):** "Universities known for X" + "Most affordable X programs" sections on `/study/{slug}` pages, built from curated `strongAt` lists in `src/lib/subjects.ts` (framed as reputation, not a league table, since the rankings table is empty); ~20 pre-built `{a}-vs-{b}` comparison pages under `/compare/[slug]` (`src/lib/comparisons.ts`, `COMPARISON_PAIRS`), reusing the existing comparison-table + `FaqSection` machinery with a generated intro; `/compare` index gained a "Popular head-to-heads" grid.
+
+**Done (commit "SEO: per-city cost-of-living pages"):** `/cost-of-living` hub + `/cost-of-living/{city}` for Sydney, Melbourne, Brisbane, Perth, Adelaide, Canberra (`src/lib/cities.ts`). Each has a weekly breakdown table (rent shared/studio, food, transport, utilities, phone, OSHC, incidentals), an estimated annual range anchored to the Home Affairs 29,710 figure, the city's universities, a link to the matching `/best/cheapest-universities-in-{city}` collection (a `cityCollection` for Canberra was added so that link resolves), and a `FaqSection` + `FAQPage` schema. Wired into the footer, sitemap, and `llms.txt`. FAQ dollar figures aligned to the computed weekly-breakdown ranges.
+
+**Still on the SEO list:** off-page only (the real constraint) — directory listings, Reddit/forum answers, pitching the invitation-rounds tracker to migration blogs.
 
 
 ### Section 23 follow-up: application-fee + IELTS data
