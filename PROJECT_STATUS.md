@@ -654,3 +654,22 @@ User caught that the calendar only showed `(Undergraduate)` rows — filtering t
 **Still a real gap:** individual universities' actual published international application dates and any hard course-specific deadlines (medicine intake timelines, portfolio dates) are not verified per-institution — the dates are the researched sector norm with postgrad/undergrad split, clearly labelled as guidance. A per-university verification pass (like the AU fee fact-check in Section 13) remains future work.
 
 **Verified:** `tsc` + `eslint` clean, `/deadlines?degreeLevel=Graduate` returns the Graduate rows (dated Oct 31), `/universities/university-of-melbourne` shows all four intake rows + the relabelled living-cost estimate with its source note, 222 total deadlines, console clean, ISR busted.
+
+## 22. Full verification sweep (2026-08-27)
+
+Per user request ("leave no stone unturned"). What was checked and the result:
+
+- **Production build** (`next build`): passes — 158 static pages generated, TypeScript clean, exit 0. (One run failed on a transient Supabase 523 outage mid-prerender; retried clean. Worth knowing: build-time prerendering of detail pages needs Supabase reachable.)
+- **All 44 public routes** return HTTP 200 with no error markers, including every filter permutation (`/deadlines?degreeLevel=…`, `/blog?tag=…`, `/scholarships?level=…`).
+- **404s correct**: unknown slugs 404; `/universities/mit` (non-launched country) 404s as intended.
+- **Sitemap**: 1,246 URLs, all valid — 56 universities + 1,103 programs + 17 guides + 9 blog + 12 visas + 28 scholarships + 4 collections + statics. The hidden MIT scholarship is correctly excluded.
+- **robots.txt / llms.txt**: correct, all new sections listed.
+- **DB integrity for launched (AU) content**: zero em-dashes in published guides / blog / visas / scholarships / university editorial fields / program descriptions / deadline notes; no stuck drafts (the Adelaide bug pattern) in any table; every AU university has deadline rows covering its real degree levels; every university-specific scholarship links to ≥1 published launched university; all slugs unique and well-formed; all in-content `/visas` `/guides` `/universities` `/scholarships` cross-links resolve.
+- **JSON-LD** present on every template (BreadcrumbList everywhere; CollegeOrUniversity, ItemList, BlogPosting where applicable).
+- **Mobile** (375px): homepage and deadlines checked — nav wraps cleanly, no horizontal overflow.
+
+**Improvements made during the sweep** (commit "Verification pass…"): site search extended to cover visa subclasses, scholarships, and blog posts (was universities/programs/guides only); `/deadlines` filter dropdowns trimmed to only the degree levels and intake types that have published AU deadlines (the US-style "Early Decision / Regular Decision / Rolling" options were dead weight).
+
+**Known, deliberately not fixed:**
+- **25 non-launched-country universities** (CA/NZ/UK/US) have em-dashes in `distinctive_summary` from an earlier pass. These rows are `status = 'published'` but **not publicly served** (gated behind `countries.is_launched`), and each of those countries needs a full content pass before launch anyway. Clean them at country-launch time, not now.
+- The **MIT scholarship** row (`mit-presidential-scholars-program`) has no description and links to the non-launched MIT university. Fully hidden on the public site (excluded from static params and 404s if hit directly). Left as planned-country scaffolding.
