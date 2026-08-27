@@ -18,7 +18,7 @@ export default function ContactPage() {
 
       <h2>Email</h2>
       <p>
-        <a href="mailto:hello@wheretoapply.example">hello@wheretoapply.example</a>
+        <a href="mailto:admin@wheretoapply.xyz">admin@wheretoapply.xyz</a>
       </p>
 
       <h2>What to include</h2>

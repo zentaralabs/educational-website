@@ -64,7 +64,7 @@ export default function PrivacyPage() {
         We don&rsquo;t store personal data beyond what&rsquo;s needed to
         respond to a message you send us. To request deletion of any
         personal information you&rsquo;ve shared with us, email{" "}
-        <a href="mailto:hello@wheretoapply.example">hello@wheretoapply.example</a>.
+        <a href="mailto:admin@wheretoapply.xyz">admin@wheretoapply.xyz</a>.
       </p>
 
       <h2>Changes to this policy</h2>

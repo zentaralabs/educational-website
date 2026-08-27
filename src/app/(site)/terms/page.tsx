@@ -56,7 +56,7 @@ export default function TermsPage() {
       <h2>Contact</h2>
       <p>
         Questions about these terms can be sent to{" "}
-        <a href="mailto:hello@wheretoapply.example">hello@wheretoapply.example</a>.
+        <a href="mailto:admin@wheretoapply.xyz">admin@wheretoapply.xyz</a>.
       </p>
     </LegalPage>
   );
