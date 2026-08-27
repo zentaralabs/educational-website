@@ -89,30 +89,47 @@ export type ComparisonUniversityRow = {
   tuition_domestic_from_programs?: boolean;
   currency: string;
   required_tests: string[] | null;
+  required_tests_from_programs?: boolean;
 };
 
 const COMPARISON_SELECT =
   "id, slug, name, country:countries(code, name), acceptance_rate, tuition_international, tuition_domestic, currency, required_tests";
 
+/** Matches standardized test names inside free-text admission/English
+ * requirement strings, e.g. "IELTS 6.5 (no band below 6.0) or equivalent". */
+const TEST_NAME_PATTERN = /\b(IELTS|TOEFL|PTE|Duolingo(?: English Test)?|SAT|ACT)\b/gi;
+
+function extractTestNames(text: string | null | undefined): string[] {
+  if (!text) return [];
+  const matches = text.match(TEST_NAME_PATTERN) ?? [];
+  return matches.map((m) => (m.toUpperCase().startsWith("DUOLINGO") ? "Duolingo" : m.toUpperCase()));
+}
+
 /**
- * Fills null university-level tuition with the cheapest matching figure
- * across that university's own published programs — university-level
- * tuition_domestic in particular is unset for every university in the
- * dataset (it's tracked per-program instead), so without this fallback
- * the comparison table would show "—" there for 100% of schools.
+ * Fills null university-level tuition and required-test facts from the
+ * university's own published programs — university-level tuition_domestic
+ * is unset for every university in the dataset (tracked per-program
+ * instead), and required_tests is hand-filled for only a handful of
+ * universities while most English-test requirements live in each
+ * program's free-text english_requirements field. Without these
+ * fallbacks the comparison table shows "—" for most schools despite the
+ * real data existing one level down.
  */
-async function fillProgramTuitionFallback(
+async function fillProgramFallbacks(
   rows: ComparisonUniversityRow[],
 ): Promise<ComparisonUniversityRow[]> {
   const needsFallback = rows.filter(
-    (r) => r.tuition_international === null || r.tuition_domestic === null,
+    (r) =>
+      r.tuition_international === null ||
+      r.tuition_domestic === null ||
+      !r.required_tests?.length,
   );
   if (needsFallback.length === 0) return rows;
 
   const supabase = createPublicClient(["programs:list"]);
   const { data, error } = await supabase
     .from("programs")
-    .select("university_id, tuition_international, tuition_domestic")
+    .select("university_id, tuition_international, tuition_domestic, ielts_overall, pte_overall, english_requirements")
     .in(
       "university_id",
       needsFallback.map((r) => r.id),
@@ -120,31 +137,43 @@ async function fillProgramTuitionFallback(
     .eq("status", "published");
   if (error) throw error;
 
-  const minByUni = new Map<string, { intl: number | null; dom: number | null }>();
+  const byUni = new Map<
+    string,
+    { intl: number | null; dom: number | null; tests: Set<string> }
+  >();
   for (const p of (data ?? []) as {
     university_id: string;
     tuition_international: number | null;
     tuition_domestic: number | null;
+    ielts_overall: number | null;
+    pte_overall: number | null;
+    english_requirements: string | null;
   }[]) {
-    const cur = minByUni.get(p.university_id) ?? { intl: null, dom: null };
+    const cur = byUni.get(p.university_id) ?? { intl: null, dom: null, tests: new Set<string>() };
     if (p.tuition_international != null && (cur.intl === null || p.tuition_international < cur.intl)) {
       cur.intl = p.tuition_international;
     }
     if (p.tuition_domestic != null && (cur.dom === null || p.tuition_domestic < cur.dom)) {
       cur.dom = p.tuition_domestic;
     }
-    minByUni.set(p.university_id, cur);
+    if (p.ielts_overall != null) cur.tests.add("IELTS");
+    if (p.pte_overall != null) cur.tests.add("PTE");
+    for (const test of extractTestNames(p.english_requirements)) cur.tests.add(test);
+    byUni.set(p.university_id, cur);
   }
 
   return rows.map((r) => {
-    const fallback = minByUni.get(r.id);
+    const fallback = byUni.get(r.id);
     if (!fallback) return r;
+    const fallbackTests = [...fallback.tests];
     return {
       ...r,
       tuition_international: r.tuition_international ?? fallback.intl,
       tuition_domestic: r.tuition_domestic ?? fallback.dom,
       tuition_international_from_programs: r.tuition_international === null && fallback.intl !== null,
       tuition_domestic_from_programs: r.tuition_domestic === null && fallback.dom !== null,
+      required_tests: r.required_tests?.length ? r.required_tests : (fallbackTests.length ? fallbackTests : null),
+      required_tests_from_programs: !r.required_tests?.length && fallbackTests.length > 0,
     };
   });
 }
@@ -161,7 +190,7 @@ export async function getUniversitiesForComparison(
     .eq("status", "published");
 
   if (error) throw error;
-  return fillProgramTuitionFallback((data ?? []) as unknown as ComparisonUniversityRow[]);
+  return fillProgramFallbacks((data ?? []) as unknown as ComparisonUniversityRow[]);
 }
 
 export async function getUniversitiesForComparisonBySlugs(
@@ -176,7 +205,7 @@ export async function getUniversitiesForComparisonBySlugs(
     .eq("status", "published");
 
   if (error) throw error;
-  const filled = await fillProgramTuitionFallback(
+  const filled = await fillProgramFallbacks(
     (data ?? []) as unknown as ComparisonUniversityRow[],
   );
   // Preserve the requested order (`in` doesn't guarantee it) so the picker's

@@ -27,7 +27,14 @@ const ROWS: {
     value: (u) =>
       tuitionValue(u.tuition_domestic, u.currency, u.tuition_domestic_from_programs),
   },
-  { label: "Required tests", value: (u) => u.required_tests?.join(", ") ?? null },
+  {
+    label: "Required tests",
+    value: (u) => {
+      if (!u.required_tests?.length) return null;
+      const joined = u.required_tests.join(", ");
+      return u.required_tests_from_programs ? `typically ${joined}` : joined;
+    },
+  },
 ];
 
 export function ComparisonTable({
