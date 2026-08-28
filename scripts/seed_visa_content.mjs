@@ -14,8 +14,30 @@ const env = Object.fromEntries(
 
 const AUTHOR_ID = "6e1c0e5b-ed26-497c-a09c-e9539c6761e8";
 const TODAY = "2026-08-28";
+const SITE_URL = (env.NEXT_PUBLIC_SITE_URL ?? "https://www.wheretoapply.xyz").replace(/\/$/, "");
+const INDEXNOW_KEY = "b1d94f7a2c8e4056a3f61e0d5c927b8f";
 
 const wc = (s) => s.split(/\s+/).filter(Boolean).length;
+
+// Best-effort IndexNow ping so Bing/Yandex re-crawl new guides and posts
+// fast after a reseed. Mirrors scripts/seed_visas.mjs. Never throws.
+async function pingIndexNow(paths) {
+  try {
+    const res = await fetch("https://api.indexnow.org/indexnow", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        host: new URL(SITE_URL).host,
+        key: INDEXNOW_KEY,
+        keyLocation: `${SITE_URL}/${INDEXNOW_KEY}.txt`,
+        urlList: paths.map((p) => `${SITE_URL}${p}`),
+      }),
+    });
+    console.log("indexnow", res.status);
+  } catch (e) {
+    console.log("indexnow failed (ignored):", e.message);
+  }
+}
 
 // ---------------------------------------------------------------------------
 // Guides (evergreen). country: "AU" scopes to Australia, null is global.
@@ -179,6 +201,20 @@ const posts = [
     ],
   },
   {
+    slug: "skillselect-round-4-june-2026-subclass-189",
+    title: "The 4 June 2026 SkillSelect round: 10,000 invitations for the 189",
+    published_at: "2026-06-04",
+    tags: ["visas", "australia", "skilled-migration"],
+    excerpt:
+      "The third and final subclass 189 round of the 2025-26 program year issued 10,000 invitations on 4 June 2026, holding the quarterly pattern. Trades cleared near 65 points; ICT and accounting still needed the high 90s.",
+    content:
+      "The Department of Home Affairs ran its third [subclass 189](/visas/skilled-independent-189) invitation round of the 2025-26 program year on 4 June 2026, issuing 10,000 invitations. The Family Sponsored [491](/visas/skilled-work-regional-491) stream received none in this round.\n\nThat makes three 189 rounds this year: 6,887 in August, 10,000 in November, and 10,000 now. The roughly quarterly cadence the Department [moved to for 2025-26](/blog/189-invitation-rounds-move-to-quarterly-2025-26) held all the way through.\n\n## The numbers\n\n- **Invitations issued:** 10,000 (subclass 189, points-tested stream)\n- **Family Sponsored 491:** 0\n- **Points floor:** 65, the pool pass mark\n- **Tie-break:** expressions of interest with a date of effect up to around late April 2026 were reached, for the least competitive occupations\n\nAs in every recent round, 65 points was enough only where competition is lightest, mostly trades. Nursing, teaching, and most health occupations were invited from the low 80s. Accounting, ICT, and software roles again needed scores near 95 to 100, because those occupation groups attract far more high-scoring candidates than their annual ceilings allow.\n\n## What it means if you are in the pool\n\nIf your score was above the cut-off for your occupation and you still were not invited, look at your date of effect. A round works down from the highest scores, then within a score invites the earliest date of effect first. A recent date of effect can leave you just behind the line even at a competitive score.\n\nIf your occupation sits in the 95-plus band and your score is in the 70s or 80s, a federal 189 round is unlikely to reach you. [State nomination](/visas/skilled-nominated-190) through the 190 or 491 adds 5 or 15 points and runs off each state's own occupation list, and cut-offs there are usually lower. Lodging a state EOI in parallel costs nothing.\n\n## The next round\n\nThe Department does not announce dates in advance. On the quarterly pattern, the first round of the 2026-27 program year would land around September 2026, after the July allocation reset. Treat any earlier date as a guess until it shows on the official SkillSelect page.\n\nWe log every round, with invitation counts and occupation-level cut-offs, on the [invitation rounds page](/visas/invitation-rounds). Work out where you sit with the [points calculator](/visas/points-calculator).",
+    sources: [
+      "https://visaenvoy.com/latest-subclass-189-and-491-invitation-round-analysis/",
+      "https://immi.homeaffairs.gov.au/visas/working-in-australia/skillselect/invitation-rounds",
+    ],
+  },
+  {
     slug: "skills-in-demand-visa-replaces-tss",
     title: "The Skills in Demand visa has replaced the TSS 482",
     published_at: "2024-12-09",
@@ -320,6 +356,14 @@ try {
   console.log(bad.length === 0 ? "em-dash check: clean" : "EM-DASH FOUND:", bad);
 
   console.log("done");
+
+  await pingIndexNow([
+    "/blog",
+    "/guides",
+    "/sitemap.xml",
+    ...posts.map((p) => `/blog/${p.slug}`),
+    ...guides.map((g) => `/guides/${g.slug}`),
+  ]);
 } catch (e) {
   console.error("ERR", e.message);
   process.exit(1);
