@@ -759,5 +759,32 @@ Instant crawl notification for Bing / Yandex / Seznam / Naver (not Google, not B
 
 - Submit the sitemap in Bing Webmaster Tools + Google Search Console (account task, not code) so IndexNow has a verified site to attach to.
 - 2024-25 only has one round recorded — there may have been a Sept 2024 round (a "7,973" figure appears in some sources but could be a monthly total); left out rather than guess a date.
-- Per-round `/blog` posts as each new round drops (the distribution half of this play).
+- Per-round `/blog` posts as each new round drops (the distribution half of this play). First one done: `skillselect-round-4-june-2026-subclass-189`. `seed_visa_content.mjs` now also fires the IndexNow ping.
 - The `round_date` column is a `date`; dates render correctly on UTC (Vercel) but a day early would need a fixed-offset formatter if that ever matters.
+
+## 25. GEO + thin-guide expansion (2026-08-28)
+
+Follow-on SEO work after the invitation-round build.
+
+### robots.txt + Article schema (commit be8748d)
+
+- `src/app/robots.ts` rewritten to an array of rule groups: the `*` group (unchanged), an explicit AI-crawler allowlist (`GPTBot`, `OAI-SearchBot`, `ChatGPT-User`, `ClaudeBot`, `Claude-SearchBot`, `Claude-User`, `anthropic-ai`, `PerplexityBot`, `Perplexity-User`, `Google-Extended`, `Applebot-Extended`, `CCBot`) with `Allow: /`, and a Google ad-crawler group (`Mediapartners-Google`, `AdsBot-Google`, `AdsBot-Google-Mobile`). The AI group matters because `Google-Extended`/`Applebot-Extended`/`CCBot` govern AI use and are opt-in for many publishers; `AdsBot-Google` ignores `*` and must be named. No `Disallow` added anywhere, so zero AdSense risk.
+- Guide pages (`/guides/[slug]`) now emit `Article` JSON-LD (headline, description, author with credentials, `datePublished` from `created_at`, `dateModified` from `updated_at`) alongside the existing BreadcrumbList/FAQPage. Blog posts already had `BlogPosting`.
+- Deadlines `Dataset` JSON-LD gained `creator` (Organization) + `license` (`/terms`) + `url` + `isAccessibleForFree`, clearing the GSC "missing recommended field" warning (commit ab4f961).
+
+### Thin-guide expansion (commit 7d74b7f)
+
+The 10 visa-batch guides from Section 16 (flagged there as "expand to ~600 words", never done) were sitting at **214-310 words**. Reseeded via `seed_visa_content.mjs` with the `guides` array `content` fields expanded to **527-825 words** each. Every one now has: markdown data tables, at least one worked example with real numbers (points-band math, ACS experience deductions, AUD 29,710 financial-capacity breakdown, AQF-level points, first-year-budget sums), current 2026 figures, and dense internal linking to `/visas/*`, `/visas/points-calculator`, `/visas/invitation-rounds`, `/cost-of-living`, and sibling guides. Verified in-browser (tables render via the guide prose styles, Article JSON-LD present, console clean); reseeded live (em-dash check clean, IndexNow 200).
+
+Word counts land near or above the "fine" 2026-08-26 batch (568-646) and carry more structure. The two highest-value guides (`how-the-australian-points-test-works`, `study-to-permanent-residence-pathway-australia`) are at 822-825. `wc()` counts table-pipe tokens, so pure-prose counts are ~10-15% lower, but information density is high and none read as padded.
+
+### GSC / Bing state (account tasks done this session, via Claude-in-Chrome)
+
+- The `wheretoapply.xyz` GSC property is a **domain property** owned by `romanlama314@gmail.com` (not `lamaroman66@gmail.com`, which only has zentaralabs.com).
+- `/visas/invitation-rounds` and `/deadlines`: both already **indexed** in Google; re-crawl requested for the recent content changes. `/deadlines` shows Datasets + Breadcrumbs structured data as valid.
+- robots.txt: GSC report still shows "No robots.txt file" (new domain property, report lags); Live Test confirms Googlebot fetches `https://www.wheretoapply.xyz/robots.txt` fine ("URL is available to Google"). Crawl queued.
+- Bing: sitemap submitted, Success, 1.3K URLs. IndexNow submissions confirmed landing (URL Submission page shows 3 URLs submitted today, quota 97 left); the dedicated IndexNow tab still shows only the promo splash (new-property lag).
+
+### Still on the SEO list (biggest levers, all off-page)
+
+Backlinks (directory listings, digital PR pitching the calculator + round tracker, HARO), community distribution (Reddit/forums/FB groups), keyword-gap mining once GSC Performance has ~1-2 weeks of data, and the recurring-freshness engine (a post per SkillSelect round / state-nomination event).
