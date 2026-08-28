@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { ArrowUpRightIcon } from "@/components/site/icons";
+import { PostCard } from "@/components/site/PostCard";
 import { GUIDE_CATEGORY_LABELS } from "@/lib/guide-categories";
-import { listPublishedGuides } from "@/lib/queries/public-guides";
+import { listPublishedGuides, type PublicGuideListRow } from "@/lib/queries/public-guides";
 
 export const revalidate = 3600;
 
@@ -12,63 +13,88 @@ export const metadata = {
   alternates: { canonical: "/guides" },
 };
 
+// Display order for the category sections.
+const CATEGORY_ORDER = ["how-to", "country-guide", "test-prep"] as const;
+
+const CATEGORY_BLURB: Record<string, string> = {
+  "how-to": "Step-by-step walkthroughs of the parts of an application you actually write.",
+  "country-guide": "How the system works in Australia: fees, visas, accreditation, and the path to PR.",
+  "test-prep": "Choosing and preparing for the English and admissions tests universities ask for.",
+};
+
 export default async function GuidesIndexPage() {
   const guides = await listPublishedGuides({ excludeCategory: "comparison" });
 
+  const byCategory = new Map<string, PublicGuideListRow[]>();
+  for (const g of guides) {
+    const list = byCategory.get(g.category) ?? [];
+    list.push(g);
+    byCategory.set(g.category, list);
+  }
+  const orderedCategories = [
+    ...CATEGORY_ORDER.filter((c) => byCategory.has(c)),
+    ...[...byCategory.keys()].filter((c) => !CATEGORY_ORDER.includes(c as (typeof CATEGORY_ORDER)[number])),
+  ];
+
   return (
     <main className="mx-auto w-full max-w-3xl px-6 pt-8 pb-16">
-      <h1 className="font-display text-3xl font-semibold text-ink text-balance">
+      <h1 className="font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
         Guides
       </h1>
-      <p className="mt-2 font-body text-base text-slate">
-        Personal statements, letters of recommendation, transfers, financial
-        aid, test prep, and more, fact-checked and kept current.
+      <p className="mt-2 max-w-2xl font-body text-base text-slate">
+        Personal statements, letters of recommendation, transfers, financial aid,
+        test prep, and more. Every guide is fact-checked and dated.
       </p>
 
       <Link
         href="/best"
-        className="mt-5 flex items-center justify-between gap-3 rounded-2xl border border-status-pending/30 bg-status-pending/5 p-5 transition-all duration-150 hover:-translate-y-0.5 hover:shadow-sm"
+        className="mt-6 flex items-center justify-between gap-4 rounded-xl border border-line bg-mist px-5 py-4 transition-colors duration-150 hover:border-status-open/40"
       >
         <span>
-          <span className="font-display text-base font-semibold text-ink">
-            Decision guides
+          <span className="font-body text-sm font-semibold text-ink">
+            Looking for decision guides?
           </span>
-          <span className="mt-1 block font-body text-sm text-slate">
-            Shortlists of Australian universities by cost, intakes, regional
-            migration advantages, and scholarships.
+          <span className="mt-0.5 block font-body text-sm text-slate">
+            Ranked shortlists of Australian universities by cost, intakes, and migration advantages.
           </span>
         </span>
         <ArrowUpRightIcon className="h-4 w-4 flex-shrink-0 text-slate" />
       </Link>
 
       {guides.length === 0 ? (
-        <p className="mt-8 font-body text-base text-slate">No guides published yet.</p>
+        <p className="mt-10 font-body text-base text-slate">No guides published yet.</p>
       ) : (
-        <ul className="mt-8 flex flex-col gap-4">
-          {guides.map((g) => (
-            <li key={g.slug}>
-              <Link
-                href={`/guides/${g.slug}`}
-                className="group flex flex-col gap-1.5 rounded-2xl border border-line bg-mist p-5 transition-all duration-150 hover:-translate-y-0.5 hover:border-status-open/30 hover:shadow-[0_14px_36px_-18px_rgba(22,35,63,0.28)] sm:p-6"
-              >
-                <span className="flex items-center gap-2 font-utility text-xs font-semibold tracking-widest text-status-open uppercase">
-                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-status-open" />
-                  {GUIDE_CATEGORY_LABELS[g.category] ?? g.category}
-                  {g.country && ` · ${g.country.name}`}
-                </span>
-                <span className="flex items-start justify-between gap-3">
-                  <h2 className="font-display text-lg font-semibold text-ink text-balance group-hover:underline">
-                    {g.title}
+        <div className="mt-12 flex flex-col gap-12">
+          {orderedCategories.map((category) => {
+            const items = byCategory.get(category) ?? [];
+            return (
+              <section key={category}>
+                <div className="mb-4 flex items-baseline gap-3 border-b border-line pb-2">
+                  <h2 className="font-display text-xl font-semibold text-ink">
+                    {GUIDE_CATEGORY_LABELS[category] ?? category}
                   </h2>
-                  <ArrowUpRightIcon className="mt-1 h-4 w-4 flex-shrink-0 text-slate transition-colors duration-150 group-hover:text-status-open" />
-                </span>
-                {g.excerpt && (
-                  <p className="font-body text-base text-slate">{g.excerpt}</p>
+                  <span className="font-utility text-xs text-slate">
+                    {items.length} {items.length === 1 ? "guide" : "guides"}
+                  </span>
+                </div>
+                {CATEGORY_BLURB[category] && (
+                  <p className="mb-5 font-body text-sm text-slate">{CATEGORY_BLURB[category]}</p>
                 )}
-              </Link>
-            </li>
-          ))}
-        </ul>
+                <div className="flex flex-col gap-3">
+                  {items.map((g) => (
+                    <PostCard
+                      key={g.slug}
+                      href={`/guides/${g.slug}`}
+                      eyebrow={g.country ? g.country.name : undefined}
+                      title={g.title}
+                      excerpt={g.excerpt}
+                    />
+                  ))}
+                </div>
+              </section>
+            );
+          })}
+        </div>
       )}
     </main>
   );

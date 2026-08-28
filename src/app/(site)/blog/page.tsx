@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRightIcon } from "@/components/site/icons";
+import { PostCard } from "@/components/site/PostCard";
 import {
   listPublishedBlogPosts,
   listPublishedBlogTags,
@@ -22,6 +22,15 @@ function tagLabel(tag: string) {
   return TAG_LABELS[tag] ?? tag.replace(/-/g, " ");
 }
 
+function formatDate(date: string | null) {
+  if (!date) return undefined;
+  return new Date(date).toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
+}
+
 export default async function BlogIndexPage({
   searchParams,
 }: {
@@ -33,12 +42,16 @@ export default async function BlogIndexPage({
     listPublishedBlogTags(),
   ]);
 
+  // Only lead with a featured post on the unfiltered index.
+  const [lead, ...rest] = tag ? [] : posts;
+  const listed = tag ? posts : rest;
+
   return (
     <main className="mx-auto w-full max-w-3xl px-6 pt-8 pb-16">
-      <h1 className="font-display text-3xl font-semibold text-ink text-balance">
+      <h1 className="font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
         Blog
       </h1>
-      <p className="mt-2 font-body text-base text-slate">
+      <p className="mt-2 max-w-2xl font-body text-base text-slate">
         Deadline changes, policy updates, and application news, as they happen.
       </p>
 
@@ -46,7 +59,7 @@ export default async function BlogIndexPage({
         <div className="mt-6 flex flex-wrap gap-2">
           <Link
             href="/blog"
-            className={`rounded-full border px-3 py-1 font-utility text-xs transition-colors ${
+            className={`rounded-full border px-3 py-1 font-utility text-xs transition-colors duration-150 ${
               !tag
                 ? "border-status-open bg-status-open/10 text-ink"
                 : "border-ink/15 text-slate hover:border-status-open/40"
@@ -58,7 +71,7 @@ export default async function BlogIndexPage({
             <Link
               key={t}
               href={`/blog?tag=${encodeURIComponent(t)}`}
-              className={`rounded-full border px-3 py-1 font-utility text-xs transition-colors ${
+              className={`rounded-full border px-3 py-1 font-utility text-xs transition-colors duration-150 ${
                 tag === t
                   ? "border-status-open bg-status-open/10 text-ink"
                   : "border-ink/15 text-slate hover:border-status-open/40"
@@ -80,9 +93,9 @@ export default async function BlogIndexPage({
       )}
 
       {posts.length === 0 ? (
-        <div className="mt-8 rounded-2xl border border-dashed border-ink/15 px-6 py-10 text-center">
+        <div className="mt-10 rounded-2xl border border-dashed border-ink/15 px-6 py-10 text-center">
           <p className="font-body text-base text-slate">
-            No posts here yet, browse the{" "}
+            No posts here yet. Browse the{" "}
             <Link href="/guides" className="text-status-open underline underline-offset-2">
               evergreen guides
             </Link>{" "}
@@ -90,36 +103,28 @@ export default async function BlogIndexPage({
           </p>
         </div>
       ) : (
-        <ul className="mt-8 flex flex-col gap-4">
-          {posts.map((p) => (
-            <li key={p.slug}>
-              <Link
-                href={`/blog/${p.slug}`}
-                className="group flex flex-col gap-1.5 rounded-2xl border border-line bg-mist p-5 transition-all duration-150 hover:-translate-y-0.5 hover:border-status-open/30 hover:shadow-[0_14px_36px_-18px_rgba(22,35,63,0.28)] sm:p-6"
-              >
-                {p.published_at && (
-                  <span className="flex items-center gap-2 font-utility text-xs font-semibold tracking-widest text-status-open uppercase">
-                    <span className="inline-block h-1.5 w-1.5 rounded-full bg-status-open" />
-                    {new Date(p.published_at).toLocaleDateString("en-US", {
-                      month: "long",
-                      day: "numeric",
-                      year: "numeric",
-                    })}
-                  </span>
-                )}
-                <span className="flex items-start justify-between gap-3">
-                  <h2 className="font-display text-lg font-semibold text-ink text-balance group-hover:underline">
-                    {p.title}
-                  </h2>
-                  <ArrowUpRightIcon className="mt-1 h-4 w-4 flex-shrink-0 text-slate transition-colors duration-150 group-hover:text-status-open" />
-                </span>
-                {p.excerpt && (
-                  <p className="font-body text-base text-slate">{p.excerpt}</p>
-                )}
-              </Link>
-            </li>
+        <div className="mt-8 flex flex-col gap-4">
+          {lead && (
+            <PostCard
+              href={`/blog/${lead.slug}`}
+              eyebrow={
+                lead.published_at ? `Latest · ${formatDate(lead.published_at)}` : "Latest"
+              }
+              title={lead.title}
+              excerpt={lead.excerpt}
+              featured
+            />
+          )}
+          {listed.map((p) => (
+            <PostCard
+              key={p.slug}
+              href={`/blog/${p.slug}`}
+              eyebrow={formatDate(p.published_at)}
+              title={p.title}
+              excerpt={p.excerpt}
+            />
           ))}
-        </ul>
+        </div>
       )}
     </main>
   );

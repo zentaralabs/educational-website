@@ -1,15 +1,21 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Breadcrumbs } from "@/components/site/Breadcrumbs";
+import { ArticleMeta } from "@/components/site/ArticleMeta";
+import { ArticleShell } from "@/components/site/ArticleShell";
+import { FaqSection } from "@/components/site/FaqSection";
 import { GuideContent } from "@/components/site/GuideContent";
 import { LastVerified } from "@/components/site/LastVerified";
-import { CheckBadgeIcon } from "@/components/site/icons";
+import { ArrowUpRightIcon, CheckBadgeIcon } from "@/components/site/icons";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
-import { authorInitials } from "@/lib/format";
+import { extractFaqItems } from "@/lib/extract-faq";
+import { faqJsonLd } from "@/lib/faq";
 import {
   getPublishedBlogPost,
+  listPublishedBlogPosts,
   listPublishedBlogPostSlugs,
 } from "@/lib/queries/public-blog-posts";
+import { readingMinutes } from "@/lib/reading";
+import { extractToc } from "@/lib/toc";
 
 export const revalidate = 3600;
 
@@ -55,6 +61,18 @@ export default async function BlogPostPage({
   const post = await getPublishedBlogPost(slug);
   if (!post) notFound();
 
+  const faqItems = extractFaqItems(post.content).map((f) => ({ q: f.question, a: f.answer }));
+  const toc = extractToc(post.content);
+  const more = (await listPublishedBlogPosts())
+    .filter((p) => p.slug !== post.slug)
+    .slice(0, 4);
+
+  const breadcrumbs = [
+    { label: "Home", href: "/" },
+    { label: "Blog", href: "/blog" },
+    { label: post.title },
+  ];
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -63,83 +81,90 @@ export default async function BlogPostPage({
     dateModified: post.last_verified_at ?? undefined,
     author: post.author ? { "@type": "Person", name: post.author.name } : undefined,
   };
-
-  const breadcrumbs = [
-    { label: "Home", href: "/" },
-    { label: "Blog", href: "/blog" },
-    { label: post.title },
-  ];
+  const jsonLdBlocks: Record<string, unknown>[] = [jsonLd, breadcrumbJsonLd(breadcrumbs)];
+  if (faqItems.length > 0) jsonLdBlocks.push(faqJsonLd(faqItems));
 
   return (
-    <main className="mx-auto w-full max-w-2xl px-6 pt-8 pb-16">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd(breadcrumbs)) }}
-      />
+    <>
+      {jsonLdBlocks.map((block, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(block) }}
+        />
+      ))}
 
-      <Breadcrumbs items={breadcrumbs} />
+      <ArticleShell
+        breadcrumbs={breadcrumbs}
+        eyebrow="Blog"
+        title={post.title}
+        meta={
+          <>
+            <ArticleMeta
+              author={post.author}
+              reviewedBy={post.reviewed_by}
+              readingMinutes={readingMinutes(post.content)}
+              date={post.published_at}
+              dateLabel="Published"
+            />
+            {post.tags && post.tags.length > 0 && (
+              <div className="mt-4 flex flex-wrap gap-2">
+                {post.tags.map((t) => (
+                  <Link
+                    key={t}
+                    href={`/blog?tag=${encodeURIComponent(t)}`}
+                    className="rounded-full border border-ink/15 px-2.5 py-0.5 font-utility text-xs text-slate transition-colors duration-150 hover:border-status-open/40 hover:text-ink"
+                  >
+                    {t.replace(/-/g, " ")}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </>
+        }
+        toc={toc}
+        footer={
+          <>
+            <div className="mt-10 flex items-start gap-2 rounded-xl bg-status-open/5 px-4 py-3">
+              <CheckBadgeIcon className="mt-0.5 h-4 w-4 flex-shrink-0 text-status-open" />
+              <LastVerified date={post.last_verified_at} sources={post.source_urls} />
+            </div>
 
-      <div className="rounded-2xl bg-gradient-to-br from-ink/[0.04] via-ink/[0.02] to-transparent p-6 sm:p-8">
-        {post.published_at && (
-          <p className="flex items-center gap-2 font-utility text-xs font-semibold tracking-widest text-status-open uppercase">
-            <span className="inline-block h-1.5 w-1.5 rounded-full bg-status-open" />
-            {new Date(post.published_at).toLocaleDateString("en-US", {
-              month: "long",
-              day: "numeric",
-              year: "numeric",
-            })}
-          </p>
-        )}
-        <h1 className="mt-2 font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
-          {post.title}
-        </h1>
+            {faqItems.length > 0 && (
+              <FaqSection heading="Common questions" items={faqItems} />
+            )}
 
-        {post.author && (
-          <div className="mt-4 flex items-center gap-3">
-            <span className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-ink font-utility text-xs font-semibold text-paper">
-              {authorInitials(post.author.name)}
-            </span>
-            <p className="font-body text-sm text-slate">
-              By <span className="font-medium text-ink">{post.author.name}</span>
-              {post.author.credentials && `, ${post.author.credentials}`}
-              {post.reviewed_by && <>, reviewed by {post.reviewed_by.name}</>}
-            </p>
-          </div>
-        )}
-
-        {post.tags && post.tags.length > 0 && (
-          <div className="mt-4 flex flex-wrap gap-2">
-            {post.tags.map((t) => (
-              <span
-                key={t}
-                className="rounded-full border border-ink/15 bg-paper px-2.5 py-0.5 font-utility text-xs text-slate"
-              >
-                {t}
-              </span>
-            ))}
-          </div>
-        )}
-      </div>
-
-      <div className="mt-8">
-        <GuideContent content={post.content} />
-      </div>
-
-      <div className="mt-10 flex items-center gap-2 rounded-xl bg-status-open/5 px-4 py-3">
-        <CheckBadgeIcon className="h-4 w-4 flex-shrink-0 text-status-open" />
-        <LastVerified date={post.last_verified_at} sources={post.source_urls} />
-      </div>
-
-      <Link
-        href="/blog"
-        className="mt-8 inline-block font-body text-sm text-slate underline underline-offset-2 hover:text-ink"
+            {more.length > 0 && (
+              <div className="mt-12 border-t border-line pt-8">
+                <h2 className="mb-4 font-body text-xs font-semibold tracking-widest text-slate uppercase">
+                  More from the blog
+                </h2>
+                <ul className="grid gap-3 sm:grid-cols-2">
+                  {more.map((p) => (
+                    <li key={p.slug}>
+                      <Link
+                        href={`/blog/${p.slug}`}
+                        className="group flex items-center justify-between gap-2 rounded-xl border border-line bg-paper px-4 py-3 transition-all duration-150 hover:-translate-y-0.5 hover:border-status-open/40 hover:shadow-[0_14px_36px_-18px_rgba(22,35,63,0.28)]"
+                      >
+                        <span className="font-body text-sm font-medium text-ink">{p.title}</span>
+                        <ArrowUpRightIcon className="h-3.5 w-3.5 flex-shrink-0 text-slate transition-colors duration-150 group-hover:text-status-open" />
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  href="/blog"
+                  className="mt-5 inline-block font-body text-sm text-status-open underline underline-offset-2 hover:text-ink"
+                >
+                  All posts
+                </Link>
+              </div>
+            )}
+          </>
+        }
       >
-        ← Back to blog
-      </Link>
-    </main>
+        <GuideContent content={post.content} />
+      </ArticleShell>
+    </>
   );
 }
