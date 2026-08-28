@@ -720,3 +720,44 @@ Descriptions rewritten to be specific and keyword-rich rather than generic.
 
 ### Section 23 follow-up: application-fee + IELTS data
 `scripts/seed_uni_fees_ielts.mjs` populated `application_fee` (47 of 56 charge international students nothing; 9 charge AUD 55-125) and `ielts_overall` (institutional undergraduate minimum: Go8 + Macquarie + Bond + NIDA at 6.5, the other 46 at 6.0). This unblocked two more `/best` collections (`no-application-fee`, `accepting-ielts-6-0`), bringing `/best` to 14, and every university profile now shows a real application fee that also feeds the first-year-budget calc.
+
+## 24. Invitation-round tracker build-out + IndexNow (2026-08-28)
+
+First-traffic play: turn `/visas/invitation-rounds` from a thin 5-row table into the SkillSelect round history nobody else has in structured form, and make new rounds get indexed fast.
+
+### Round history backfilled — `scripts/seed_visas.mjs`
+
+Rounds went from 5 (2 real, incl. a wrong projection) to **16** spanning four program years, most now from primary sources:
+- **2022-23** (3 rounds, backlog-clearing year): 22 Aug 2022 (189: 12,200 / 491 FS: 466), 6 Oct 2022 (11,714 / 818), 8 Dec 2022 (35,000 / 120 — the largest round ever). Source: themigration.com.au aggregation.
+- **2023-24** (2 rounds): 18 Dec 2023 (189: 8,300 / 491 FS: 79), 13 Jun 2024 (189: 5,292, tie-break May 2024, official occupation table 65-105). Source: **Department of Home Affairs' own invitation-rounds page** (captured 10 Jul 2024) + the 2022-23 FOI release — the strongest sourcing in this dataset.
+- **2024-25** (1 round): 7 Nov 2024 (189: 15,000). Source: easymigrate/multiple.
+- **2025-26**: added the real 4 Jun 2026 round (189: 10,000, tie-break ~late Apr 2026), corrected the Nov 2025 491 FS figure to 300 (was a projected 150), kept Aug + Nov 2025.
+- One forward projection kept: ~30 Sep 2026, flagged `is_estimated` (program year 2026-27).
+
+`min_points` is the 65-point pool floor for every row (that is genuinely the answer for the pool); the occupation-by-occupation spread lives in `occupation_notes` where an official table exists. `TODAY` bumped to 2026-08-28. Historical figures still carry the relaxed-bar caveat except the two Home Affairs-sourced years.
+
+### Page rework — `src/app/(site)/visas/invitation-rounds/page.tsx`
+
+- **Latest-round hero**: answer-first box (date, subclass, invitations, points floor, program year, occupation spread) built from the most recent non-estimated round. This is the shareable / snippet unit.
+- **`InvitationVolumeChart`** (`src/components/site/InvitationVolumeChart.tsx`): static SVG bar chart of 189 invitations per round, oldest to newest, no chart library, no client JS. Projected rounds hatched with the `status-pending` colour. The Dec 2022 35k spike vs the 2023-24 trough tells the "cadence keeps changing" story visually.
+- **FAQ section + `FAQPage` JSON-LD** (6 Qs, partly data-driven off the latest round and the min/max volume): cadence, why ICT needs 95+, round sizes, next round, sourcing. Uses the existing `faqJsonLd` / `FaqItem` from `src/lib/faq.ts`.
+- Title/description reworked to front-load "history and points cut-offs". `llms.txt` entry expanded.
+- **Not built**: per-round permalink pages. Deliberately routed through `/blog` posts per round instead (existing pattern + `what-we-are-watching` tag) — per-round pages over 16 rounds would be thin. Revisit if the history gets much deeper.
+
+### IndexNow — `src/lib/indexnow.ts` + `public/b1d94f7a2c8e4056a3f61e0d5c927b8f.txt`
+
+Instant crawl notification for Bing / Yandex / Seznam / Naver (not Google, not Brave — they use the sitemap's `lastmod`). Key is public by design (verified by serving it at `/<key>.txt` from `public/`), so it is a plain constant, not an env secret.
+- `pingIndexNow(paths)` — best-effort, never throws, POSTs to `api.indexnow.org`.
+- Wired into `src/app/api/revalidate/route.ts`: after `revalidateTag`, the affected public URL(s) are submitted (`indexNowPaths()` maps table → path; `invitation_rounds` → `/visas/invitation-rounds`). Response now includes an `indexNow` field.
+- Wired into `seed_visas.mjs`: pings the rounds page + `/visas` + `/sitemap.xml` + every visa slug after a reseed.
+
+### Verified
+
+`tsc --noEmit` + `eslint` clean on all new/changed files. Reseeded the live DB (16 rounds, all `published`; IndexNow returned 202). In-browser at `localhost:3000/visas/invitation-rounds`: hero shows 4 June 2026, chart renders all 10 189-round bars with the 0-35k axis, both JSON-LD blocks parse (BreadcrumbList + FAQPage 6 Q), `/b1d94f7a...txt` serves the key, `/api/revalidate` returns `indexNow.pinged: true`. Console clean.
+
+### Follow-ups
+
+- Submit the sitemap in Bing Webmaster Tools + Google Search Console (account task, not code) so IndexNow has a verified site to attach to.
+- 2024-25 only has one round recorded — there may have been a Sept 2024 round (a "7,973" figure appears in some sources but could be a monthly total); left out rather than guess a date.
+- Per-round `/blog` posts as each new round drops (the distribution half of this play).
+- The `round_date` column is a `date`; dates render correctly on UTC (Vercel) but a day early would need a fixed-offset formatter if that ever matters.

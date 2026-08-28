@@ -13,7 +13,29 @@ const env = Object.fromEntries(
 );
 
 const AUTHOR_ID = "6e1c0e5b-ed26-497c-a09c-e9539c6761e8"; // Roman Lama
-const TODAY = "2026-08-27";
+const TODAY = "2026-08-28";
+const SITE_URL = (env.NEXT_PUBLIC_SITE_URL ?? "https://www.wheretoapply.xyz").replace(/\/$/, "");
+const INDEXNOW_KEY = "b1d94f7a2c8e4056a3f61e0d5c927b8f";
+
+// Best-effort IndexNow ping so Bing/Yandex re-crawl the round tracker fast
+// after a reseed. Never throws.
+async function pingIndexNow(paths) {
+  try {
+    const res = await fetch("https://api.indexnow.org/indexnow", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        host: new URL(SITE_URL).host,
+        key: INDEXNOW_KEY,
+        keyLocation: `${SITE_URL}/${INDEXNOW_KEY}.txt`,
+        urlList: paths.map((p) => `${SITE_URL}${p}`),
+      }),
+    });
+    console.log("indexnow", res.status);
+  } catch (e) {
+    console.log("indexnow failed (ignored):", e.message);
+  }
+}
 const HOMEAFFAIRS = "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing";
 const STUDYAUS = "https://www.studyaustralia.gov.au/en/plan-your-move/your-guide-to-visas";
 
@@ -430,10 +452,33 @@ const visas = [
   },
 ];
 
-// --- Invitation rounds (SkillSelect), most recent first. Figures cross-checked
-// against reputable migration-practice sources; official Home Affairs page is
-// the primary reference but blocks automated access. Projected rows flagged.
+// --- Invitation rounds (SkillSelect), most recent first.
+//
+// 2022-23 and 2023-24 figures are from the Department of Home Affairs'
+// own published invitation-rounds page (captured 10 July 2024) and its
+// 2022-23 FOI release; 2024-25 and 2025-26 figures are cross-checked
+// against reputable migration-practice sources because immi.homeaffairs.gov.au
+// blocks automated fetch. The "min_points" column is the 65-point pool
+// floor for every round to date; occupation_notes carries the real
+// occupation-by-occupation spread where an official table exists.
+// Projected rows are flagged is_estimated.
+const HA_SOURCE =
+  "https://immi.homeaffairs.gov.au/visas/working-in-australia/skillselect/invitation-rounds";
 const rounds = [
+  {
+    round_date: "2026-06-04",
+    visa_code: "189",
+    stream: "Points-tested",
+    invitations_issued: 10000,
+    min_points: 65,
+    occupation_notes:
+      "Tie-break date of effect around late April 2026. Trades invited near 65; most professional occupations 80 and above; ICT and accounting 95 and higher.",
+    program_year: "2025-26",
+    notes:
+      "Third 189 round of the 2025-26 program year, confirming the roughly quarterly cadence (August, November, then June).",
+    is_estimated: false,
+    source_url: "https://visaenvoy.com/latest-subclass-189-and-491-invitation-round-analysis/",
+  },
   {
     round_date: "2025-11-13",
     visa_code: "189",
@@ -448,6 +493,19 @@ const rounds = [
     is_estimated: false,
     source_url:
       "https://www.visaverge.com/news/australia-2025-26-skilled-migration-nov-13-subclass-189-invitation/",
+  },
+  {
+    round_date: "2025-11-13",
+    visa_code: "491",
+    stream: "Family Sponsored",
+    invitations_issued: 300,
+    min_points: 65,
+    occupation_notes: null,
+    program_year: "2025-26",
+    notes:
+      "Family Sponsored 491 stream only, run alongside the November 189 round. State-nominated 491 places are managed separately by each state.",
+    is_estimated: false,
+    source_url: "https://visaenvoy.com/latest-subclass-189-and-491-invitation-round-analysis/",
   },
   {
     round_date: "2025-08-21",
@@ -477,33 +535,141 @@ const rounds = [
       "https://emigratelawyers.com.au/blog/subclass-189-and-491-invitation-rounds/",
   },
   {
-    round_date: "2026-03-01",
+    round_date: "2024-11-07",
     visa_code: "189",
     stream: "Points-tested",
-    invitations_issued: 9000,
-    min_points: 70,
+    invitations_issued: 15000,
+    min_points: 65,
     occupation_notes:
-      "Projection based on the quarterly cadence and 2025-26 allocations. Actual date and cut-offs not announced in advance.",
-    program_year: "2025-26",
-    notes:
-      "Projected round. Home Affairs has signalled a late-February to mid-March 189 round. Treat the score as indicative only.",
-    is_estimated: true,
-    source_url:
-      "https://themigration.com.au/blog/189-visa-invitation-rounds",
+      "Largest single 189 round on record at the time. Trades and several health occupations invited near 65; ICT and accounting still 90 and above.",
+    program_year: "2024-25",
+    notes: "Only 189 round published for the 2024-25 program year before the schedule shifted.",
+    is_estimated: false,
+    source_url: "https://www.easymigrate.com/november-2024-skill-select-round-and-state-nomination-results/",
   },
   {
-    round_date: "2026-05-15",
+    round_date: "2024-06-13",
+    visa_code: "189",
+    stream: "Points-tested",
+    invitations_issued: 5292,
+    min_points: 65,
+    occupation_notes:
+      "Official occupation table: trades from 65; nursing, teaching and most health from 85; civil, electrical and mechanical engineering 90; ICT, accounting, developer/software roles 100; Shipwright 105.",
+    program_year: "2023-24",
+    notes: "Tie-break (date of effect) month of May 2024. Second and final 189 round of the 2023-24 year.",
+    is_estimated: false,
+    source_url: HA_SOURCE,
+  },
+  {
+    round_date: "2023-12-18",
+    visa_code: "189",
+    stream: "Points-tested",
+    invitations_issued: 8300,
+    min_points: 65,
+    occupation_notes: null,
+    program_year: "2023-24",
+    notes: "First 189 round of the 2023-24 year after a long gap since June 2023.",
+    is_estimated: false,
+    source_url: HA_SOURCE,
+  },
+  {
+    round_date: "2023-12-18",
+    visa_code: "491",
+    stream: "Family Sponsored",
+    invitations_issued: 79,
+    min_points: 65,
+    occupation_notes: null,
+    program_year: "2023-24",
+    notes: "Only Family Sponsored 491 round of the 2023-24 year.",
+    is_estimated: false,
+    source_url: HA_SOURCE,
+  },
+  {
+    round_date: "2022-12-08",
+    visa_code: "189",
+    stream: "Points-tested",
+    invitations_issued: 35000,
+    min_points: 65,
+    occupation_notes:
+      "The largest SkillSelect round ever run, part of clearing the backlog against the expanded 2022-23 permanent Migration Program.",
+    program_year: "2022-23",
+    notes: "Around 35,120 invitations across the 189 and 491 programs combined.",
+    is_estimated: false,
+    source_url: "https://themigration.com.au/blog/skillselect-invitation-round",
+  },
+  {
+    round_date: "2022-12-08",
+    visa_code: "491",
+    stream: "Family Sponsored",
+    invitations_issued: 120,
+    min_points: 65,
+    occupation_notes: null,
+    program_year: "2022-23",
+    notes: null,
+    is_estimated: false,
+    source_url: "https://themigration.com.au/blog/skillselect-invitation-round",
+  },
+  {
+    round_date: "2022-10-06",
+    visa_code: "189",
+    stream: "Points-tested",
+    invitations_issued: 11714,
+    min_points: 65,
+    occupation_notes: null,
+    program_year: "2022-23",
+    notes: null,
+    is_estimated: false,
+    source_url: "https://themigration.com.au/blog/skillselect-invitation-round",
+  },
+  {
+    round_date: "2022-10-06",
+    visa_code: "491",
+    stream: "Family Sponsored",
+    invitations_issued: 818,
+    min_points: 65,
+    occupation_notes: null,
+    program_year: "2022-23",
+    notes: null,
+    is_estimated: false,
+    source_url: "https://themigration.com.au/blog/skillselect-invitation-round",
+  },
+  {
+    round_date: "2022-08-22",
+    visa_code: "189",
+    stream: "Points-tested",
+    invitations_issued: 12200,
+    min_points: 65,
+    occupation_notes: null,
+    program_year: "2022-23",
+    notes: "First round of the backlog-clearing 2022-23 program year.",
+    is_estimated: false,
+    source_url: "https://themigration.com.au/blog/skillselect-invitation-round",
+  },
+  {
+    round_date: "2022-08-22",
+    visa_code: "491",
+    stream: "Family Sponsored",
+    invitations_issued: 466,
+    min_points: 65,
+    occupation_notes: null,
+    program_year: "2022-23",
+    notes: null,
+    is_estimated: false,
+    source_url: "https://themigration.com.au/blog/skillselect-invitation-round",
+  },
+  {
+    round_date: "2026-09-30",
     visa_code: "189",
     stream: "Points-tested",
     invitations_issued: 7000,
-    min_points: 70,
-    occupation_notes: "Projection only.",
-    program_year: "2025-26",
+    min_points: 65,
+    occupation_notes:
+      "Projection based on the quarterly cadence and the 2026-27 skilled allocation. Home Affairs does not announce round dates or cut-offs in advance.",
+    program_year: "2026-27",
     notes:
-      "Projected final 189 round of the program year, expected May or June 2026.",
+      "Projected first 189 round of the 2026-27 program year, expected around September 2026. Figures are indicative only.",
     is_estimated: true,
-    source_url:
-      "https://themigration.com.au/blog/189-visa-invitation-rounds",
+    source_url: "https://themigration.com.au/blog/189-visa-invitation-rounds",
   },
 ];
 
@@ -563,6 +729,13 @@ try {
   }
 
   console.log("done");
+
+  await pingIndexNow([
+    "/visas/invitation-rounds",
+    "/visas",
+    "/sitemap.xml",
+    ...visas.map((v) => `/visas/${v.slug}`),
+  ]);
 } catch (e) {
   console.error("ERR", e.message);
   process.exit(1);

@@ -1,5 +1,6 @@
 import { revalidateTag } from "next/cache";
 import { NextRequest, NextResponse } from "next/server";
+import { pingIndexNow } from "@/lib/indexnow";
 
 /**
  * Supabase Database Webhook target — configured to fire on UPDATE to
@@ -22,6 +23,27 @@ const ENTITY_TAG_PREFIX: Record<string, string> = {
   visa_subclasses: "visa",
   invitation_rounds: "invitation_round",
 };
+
+/**
+ * Public URL(s) to submit to IndexNow for a given table change. Detail pages
+ * are `${base}/${slug}`; the invitation-round tracker is a single dated page
+ * with no slug. Returns [] for tables with no public-facing page.
+ */
+function indexNowPaths(table: string, slug: string | undefined): string[] {
+  const detailBase: Record<string, string> = {
+    universities: "/universities",
+    guides: "/guides",
+    scholarships: "/scholarships",
+    blog_posts: "/blog",
+    visa_subclasses: "/visas",
+  };
+  if (table === "invitation_rounds") {
+    return ["/visas/invitation-rounds"];
+  }
+  const base = detailBase[table];
+  if (!base) return [];
+  return slug ? [base, `${base}/${slug}`] : [base];
+}
 
 type SupabaseWebhookPayload = {
   type: "INSERT" | "UPDATE" | "DELETE";
@@ -57,5 +79,11 @@ export async function POST(req: NextRequest) {
 
   for (const tag of tags) revalidateTag(tag, "max");
 
-  return NextResponse.json({ revalidated: true, tags });
+  // Tell IndexNow (Bing/Yandex/etc.) the affected URL changed, so
+  // time-sensitive pages — the SkillSelect invitation-round tracker above
+  // all — get re-crawled in minutes rather than on the next scheduled pass.
+  const paths = indexNowPaths(table, slug);
+  const pinged = paths.length > 0 ? await pingIndexNow(paths) : false;
+
+  return NextResponse.json({ revalidated: true, tags, indexNow: { paths, pinged } });
 }
