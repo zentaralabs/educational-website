@@ -1,10 +1,10 @@
 import Link from "next/link";
-import { ArrowUpRightIcon } from "@/components/site/icons";
+import { BlogCard } from "@/components/site/BlogCard";
 import {
   listPublishedBlogPosts,
   listPublishedBlogTags,
-  type PublicBlogPostListRow,
 } from "@/lib/queries/public-blog-posts";
+import { readingMinutesFromWords } from "@/lib/reading";
 
 export const revalidate = 3600;
 
@@ -23,128 +23,40 @@ function tagLabel(tag: string) {
   return TAG_LABELS[tag] ?? tag.replace(/-/g, " ");
 }
 
-function formatDate(date: string | null) {
-  if (!date) return null;
-  return new Date(date).toLocaleDateString("en-US", {
-    month: "short",
-    day: "numeric",
-    year: "numeric",
-  });
-}
-
-function TagRow({ tags }: { tags: string[] | null }) {
-  if (!tags || tags.length === 0) return null;
-  return (
-    <div className="flex flex-wrap gap-1.5">
-      {tags.map((t, i) => (
-        <span key={t} className="font-utility text-[0.7rem] tracking-wide text-slate uppercase">
-          {t.replace(/-/g, " ")}
-          {i < tags.length - 1 && <span className="ml-1.5 text-ink/20">/</span>}
-        </span>
-      ))}
-    </div>
-  );
-}
-
-function FeaturedPost({ post }: { post: PublicBlogPostListRow }) {
-  return (
-    <article className="border-b border-ink/15 pb-10">
-      <p className="font-utility text-xs font-semibold tracking-widest text-status-open uppercase">
-        Latest post
-      </p>
-      <h2 className="mt-3 font-display text-2xl font-semibold text-ink text-balance sm:text-3xl">
-        <Link href={`/blog/${post.slug}`} className="hover:underline">
-          {post.title}
-        </Link>
-      </h2>
-      <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 font-body text-sm text-slate">
-        {formatDate(post.published_at) && (
-          <time dateTime={post.published_at ?? undefined}>
-            {formatDate(post.published_at)}
-          </time>
-        )}
-        {post.author && (
-          <>
-            <span aria-hidden className="text-ink/25">·</span>
-            <span>{post.author.name}</span>
-          </>
-        )}
-      </div>
-      {post.excerpt && (
-        <p className="mt-4 max-w-2xl font-body text-base leading-relaxed text-slate">
-          {post.excerpt}
-        </p>
-      )}
-      <div className="mt-4 flex items-center gap-4">
-        <Link
-          href={`/blog/${post.slug}`}
-          className="inline-flex items-center gap-1.5 font-body text-sm font-medium text-status-open hover:text-ink"
-        >
-          Read post
-          <ArrowUpRightIcon className="h-3.5 w-3.5" />
-        </Link>
-        <TagRow tags={post.tags} />
-      </div>
-    </article>
-  );
-}
-
-function PostRow({ post }: { post: PublicBlogPostListRow }) {
-  return (
-    <article className="group border-b border-line py-7">
-      <div className="flex flex-wrap items-center gap-x-3 gap-y-1 font-utility text-xs tracking-wide text-slate uppercase">
-        {formatDate(post.published_at) && (
-          <time dateTime={post.published_at ?? undefined}>
-            {formatDate(post.published_at)}
-          </time>
-        )}
-        {post.author && (
-          <>
-            <span aria-hidden className="text-ink/25">·</span>
-            <span className="normal-case">{post.author.name}</span>
-          </>
-        )}
-      </div>
-      <h3 className="mt-2 font-display text-xl font-semibold text-ink text-balance">
-        <Link href={`/blog/${post.slug}`} className="group-hover:underline">
-          {post.title}
-        </Link>
-      </h3>
-      {post.excerpt && (
-        <p className="mt-2 max-w-2xl font-body text-[0.95rem] leading-relaxed text-slate">
-          {post.excerpt}
-        </p>
-      )}
-      <div className="mt-3">
-        <TagRow tags={post.tags} />
-      </div>
-    </article>
-  );
+function buildHref(tag: string | undefined, page: number): string {
+  const params = new URLSearchParams();
+  if (tag) params.set("tag", tag);
+  if (page > 1) params.set("page", String(page));
+  const qs = params.toString();
+  return qs ? `/blog?${qs}` : "/blog";
 }
 
 export default async function BlogIndexPage({
   searchParams,
 }: {
-  searchParams: Promise<{ tag?: string }>;
+  searchParams: Promise<{ tag?: string; page?: string }>;
 }) {
-  const { tag } = await searchParams;
-  const [posts, tags] = await Promise.all([
-    listPublishedBlogPosts({ tag }),
+  const { tag, page: pageParam } = await searchParams;
+  const page = Math.max(1, Number(pageParam) || 1);
+
+  const [{ rows, totalCount, pageSize }, tags] = await Promise.all([
+    listPublishedBlogPosts({ tag, page }),
     listPublishedBlogTags(),
   ]);
+  const totalPages = Math.max(1, Math.ceil(totalCount / pageSize));
 
-  // Feature the newest post only on the unfiltered index.
-  const [lead, ...rest] = tag ? [] : posts;
-  const listed = tag ? posts : rest;
+  // Feature the newest post only on the unfiltered first page.
+  const showFeatured = page === 1 && !tag && rows.length > 0;
+  const featured = showFeatured ? rows[0] : null;
+  const gridPosts = showFeatured ? rows.slice(1) : rows;
 
   return (
-    <main className="mx-auto w-full max-w-3xl px-6 pt-8 pb-16">
+    <main className="mx-auto w-full max-w-4xl px-6 pt-8 pb-16">
       <h1 className="font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
         The blog
       </h1>
       <p className="mt-2 max-w-2xl font-body text-base text-slate">
-        Deadline changes, policy shifts, and application news as they happen, with
-        the sourcing and dates you would expect from the guides.
+        Deadline changes, policy shifts, and application news as they happen.
       </p>
 
       {tags.length > 0 && (
@@ -184,32 +96,85 @@ export default async function BlogIndexPage({
         </p>
       )}
 
-      {posts.length === 0 ? (
+      {rows.length === 0 ? (
         <div className="mt-10 rounded-2xl border border-dashed border-ink/15 px-6 py-10 text-center">
           <p className="font-body text-base text-slate">
-            No posts here yet. Browse the{" "}
-            <Link href="/guides" className="text-status-open underline underline-offset-2">
-              evergreen guides
-            </Link>{" "}
-            in the meantime.
+            {page > 1 ? (
+              <>
+                Nothing on this page.{" "}
+                <Link href={buildHref(tag, page - 1)} className="text-status-open underline underline-offset-2">
+                  Go back
+                </Link>
+                .
+              </>
+            ) : (
+              <>
+                No posts here yet. Browse the{" "}
+                <Link href="/guides" className="text-status-open underline underline-offset-2">
+                  evergreen guides
+                </Link>{" "}
+                in the meantime.
+              </>
+            )}
           </p>
         </div>
       ) : (
-        <div className="mt-10">
-          {lead && <FeaturedPost post={lead} />}
-          {listed.length > 0 && (
-            <div>
-              {lead && (
-                <p className="mt-10 mb-1 font-body text-xs font-semibold tracking-widest text-slate uppercase">
-                  More posts
-                </p>
+        <>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2">
+            {featured && (
+              <BlogCard
+                href={`/blog/${featured.slug}`}
+                title={featured.title}
+                excerpt={featured.excerpt}
+                tags={featured.tags}
+                date={featured.published_at}
+                author={featured.author?.name}
+                readingMinutes={readingMinutesFromWords(featured.word_count)}
+                featured
+              />
+            )}
+            {gridPosts.map((p) => (
+              <BlogCard
+                key={p.slug}
+                href={`/blog/${p.slug}`}
+                title={p.title}
+                excerpt={p.excerpt}
+                tags={p.tags}
+                date={p.published_at}
+                author={p.author?.name}
+                readingMinutes={readingMinutesFromWords(p.word_count)}
+              />
+            ))}
+          </div>
+
+          {totalPages > 1 && (
+            <div className="mt-10 flex items-center justify-between border-t border-line pt-4">
+              {page > 1 ? (
+                <Link
+                  href={buildHref(tag, page - 1)}
+                  className="rounded-md border border-ink/20 px-3 py-1.5 font-body text-sm text-ink transition-colors duration-150 hover:border-status-open"
+                >
+                  Previous
+                </Link>
+              ) : (
+                <span />
               )}
-              {listed.map((p) => (
-                <PostRow key={p.slug} post={p} />
-              ))}
+              <span className="font-utility text-xs text-slate">
+                Page {page} of {totalPages}
+              </span>
+              {page < totalPages ? (
+                <Link
+                  href={buildHref(tag, page + 1)}
+                  className="rounded-md border border-ink/20 px-3 py-1.5 font-body text-sm text-ink transition-colors duration-150 hover:border-status-open"
+                >
+                  Next
+                </Link>
+              ) : (
+                <span />
+              )}
             </div>
           )}
-        </div>
+        </>
       )}
     </main>
   );

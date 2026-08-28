@@ -3,7 +3,7 @@ import { COLLECTIONS } from "@/lib/collections";
 import { SUBJECT_CONTENT } from "@/lib/subjects";
 import { CITY_COSTS } from "@/lib/cities";
 import { SITE_URL } from "@/lib/site-config";
-import { listPublishedBlogPostSlugs } from "@/lib/queries/public-blog-posts";
+import { listAllBlogPostSlugs } from "@/lib/queries/public-blog-posts";
 import { listPublishedGuideSlugs } from "@/lib/queries/public-guides";
 import { listPublishedProgramsForSitemap } from "@/lib/queries/public-programs";
 import { listPublishedScholarshipSlugs } from "@/lib/queries/public-scholarships";
@@ -49,7 +49,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     listPublishedUniversitySlugs(),
     listPublishedGuideSlugs({ excludeCategory: "comparison" }),
     listPublishedGuideSlugs({ category: "comparison" }),
-    listPublishedBlogPostSlugs(),
+    listAllBlogPostSlugs(),
     listPublishedVisaSlugs(),
     listPublishedScholarshipSlugs(),
     listPublishedProgramsForSitemap(),

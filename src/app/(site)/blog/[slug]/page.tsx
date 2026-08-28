@@ -11,16 +11,18 @@ import { extractFaqItems } from "@/lib/extract-faq";
 import { faqJsonLd } from "@/lib/faq";
 import {
   getPublishedBlogPost,
-  listPublishedBlogPosts,
-  listPublishedBlogPostSlugs,
+  listRecentBlogPosts,
+  listRecentBlogPostSlugs,
 } from "@/lib/queries/public-blog-posts";
-import { readingMinutes } from "@/lib/reading";
+import { readingMinutesFromWords } from "@/lib/reading";
 import { extractToc } from "@/lib/toc";
 
 export const revalidate = 3600;
 
+// Prerender the recent posts; older ones render on first request and are
+// then cached (ISR). dynamicParams defaults to true.
 export async function generateStaticParams() {
-  const slugs = await listPublishedBlogPostSlugs();
+  const slugs = await listRecentBlogPostSlugs(60);
   return slugs.map((slug) => ({ slug }));
 }
 
@@ -63,9 +65,7 @@ export default async function BlogPostPage({
 
   const faqItems = extractFaqItems(post.content).map((f) => ({ q: f.question, a: f.answer }));
   const toc = extractToc(post.content);
-  const more = (await listPublishedBlogPosts())
-    .filter((p) => p.slug !== post.slug)
-    .slice(0, 4);
+  const more = await listRecentBlogPosts(4, post.slug);
 
   const breadcrumbs = [
     { label: "Home", href: "/" },
@@ -103,7 +103,7 @@ export default async function BlogPostPage({
             <ArticleMeta
               author={post.author}
               reviewedBy={post.reviewed_by}
-              readingMinutes={readingMinutes(post.content)}
+              readingMinutes={readingMinutesFromWords(post.word_count)}
               date={post.published_at}
               dateLabel="Published"
             />
