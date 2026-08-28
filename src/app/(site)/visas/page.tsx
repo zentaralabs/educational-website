@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowUpRightIcon } from "@/components/site/icons";
+import { VisasBrowser } from "@/components/site/VisasBrowser";
 import { listPublishedVisas } from "@/lib/queries/public-visas";
 import { VISA_CATEGORY_LABELS, VISA_CATEGORY_ORDER } from "@/lib/visa-categories";
 
@@ -15,13 +16,11 @@ export const metadata = {
 export default async function VisasIndexPage() {
   const visas = await listPublishedVisas();
 
-  const byCategory = new Map<string, typeof visas>();
-  for (const v of visas) {
-    const list = byCategory.get(v.category) ?? [];
-    list.push(v);
-    byCategory.set(v.category, list);
-  }
-  const categories = VISA_CATEGORY_ORDER.filter((c) => byCategory.has(c));
+  const presentCategories = new Set(visas.map((v) => v.category));
+  const groups = [
+    ...VISA_CATEGORY_ORDER.filter((c) => presentCategories.has(c)),
+    ...[...presentCategories].filter((c) => !VISA_CATEGORY_ORDER.includes(c)),
+  ].map((key) => ({ key, label: VISA_CATEGORY_LABELS[key] ?? key }));
 
   return (
     <main className="mx-auto w-full max-w-3xl px-6 pt-8 pb-16">
@@ -69,51 +68,7 @@ export default async function VisasIndexPage() {
           No visa subclasses published yet.
         </p>
       ) : (
-        <div className="mt-10 flex flex-col gap-10">
-          {categories.map((category) => (
-            <section key={category}>
-              <h2 className="mb-4 font-body text-xs font-semibold tracking-widest text-slate uppercase">
-                {VISA_CATEGORY_LABELS[category] ?? category}
-              </h2>
-              <ul className="flex flex-col gap-4">
-                {byCategory.get(category)!.map((v) => (
-                  <li key={v.slug}>
-                    <Link
-                      href={`/visas/${v.slug}`}
-                      className="group flex flex-col gap-1.5 rounded-2xl border border-line bg-mist p-5 transition-all duration-150 hover:-translate-y-0.5 hover:border-status-open/30 hover:shadow-[0_14px_36px_-18px_rgba(22,35,63,0.28)] sm:p-6"
-                    >
-                      <span className="flex items-center gap-2 font-utility text-xs font-semibold tracking-widest text-status-open uppercase">
-                        <span className="inline-block h-1.5 w-1.5 rounded-full bg-status-open" />
-                        Subclass {v.code}
-                        {v.stream && ` · ${v.stream}`}
-                      </span>
-                      <span className="flex items-start justify-between gap-3">
-                        <h3 className="font-display text-lg font-semibold text-ink text-balance group-hover:underline">
-                          {v.name}
-                        </h3>
-                        <ArrowUpRightIcon className="mt-1 h-4 w-4 flex-shrink-0 text-slate transition-colors duration-150 group-hover:text-status-open" />
-                      </span>
-                      {v.short_description && (
-                        <p className="font-body text-base text-slate">
-                          {v.short_description}
-                        </p>
-                      )}
-                      <span className="mt-1 flex flex-wrap gap-x-3 gap-y-1 font-utility text-xs text-slate">
-                        {v.stay_period && <span>Stay: {v.stay_period}</span>}
-                        {v.is_points_tested && v.min_points != null && (
-                          <span>Points floor: {v.min_points}</span>
-                        )}
-                        <span>
-                          {v.leads_to_pr ? "Pathway to PR" : "Not a PR visa"}
-                        </span>
-                      </span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </section>
-          ))}
-        </div>
+        <VisasBrowser visas={visas} groups={groups} />
       )}
     </main>
   );
