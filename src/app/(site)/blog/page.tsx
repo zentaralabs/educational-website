@@ -20,7 +20,9 @@ const TAG_LABELS: Record<string, string> = {
 };
 
 function tagLabel(tag: string) {
-  return TAG_LABELS[tag] ?? tag.replace(/-/g, " ");
+  if (TAG_LABELS[tag]) return TAG_LABELS[tag];
+  const words = tag.replace(/-/g, " ");
+  return words.charAt(0).toUpperCase() + words.slice(1);
 }
 
 function buildHref(tag: string | undefined, page: number): string {
@@ -61,27 +63,25 @@ export default async function BlogIndexPage({
 
       {tags.length > 0 && (
         <div className="mt-6 flex flex-wrap gap-2">
-          <Link
-            href="/blog"
-            className={`rounded-full border px-3 py-1 font-utility text-xs transition-colors duration-150 ${
-              !tag
-                ? "border-status-open bg-status-open/10 text-ink"
-                : "border-ink/15 text-slate hover:border-status-open/40"
-            }`}
-          >
-            All posts
-          </Link>
-          {tags.map((t) => (
+          {[
+            { key: "", label: "All posts", href: "/blog", active: !tag },
+            ...tags.map((t) => ({
+              key: t,
+              label: tagLabel(t),
+              href: `/blog?tag=${encodeURIComponent(t)}`,
+              active: tag === t,
+            })),
+          ].map((pill) => (
             <Link
-              key={t}
-              href={`/blog?tag=${encodeURIComponent(t)}`}
-              className={`rounded-full border px-3 py-1 font-utility text-xs transition-colors duration-150 ${
-                tag === t
-                  ? "border-status-open bg-status-open/10 text-ink"
-                  : "border-ink/15 text-slate hover:border-status-open/40"
+              key={pill.key}
+              href={pill.href}
+              className={`rounded-full px-3.5 py-1.5 font-body text-sm transition-colors duration-150 ${
+                pill.active
+                  ? "bg-ink font-medium text-paper"
+                  : "bg-mist text-slate hover:bg-ink/[0.06] hover:text-ink"
               }`}
             >
-              {tagLabel(t)}
+              {pill.label}
             </Link>
           ))}
         </div>
