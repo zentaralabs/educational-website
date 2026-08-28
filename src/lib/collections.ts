@@ -17,6 +17,8 @@ export type Collection = {
   slug: string;
   title: string;
   shortTitle: string;
+  /** Groups the shortlist on the /best index tabs. */
+  category: "cost" | "admissions" | "migration" | "city" | "subject";
   metaDescription: string;
   /** Editorial intro, one or two paragraphs. */
   intro: string[];
@@ -24,6 +26,23 @@ export type Collection = {
   methodology: string;
   build: (universities: CollectionUniversity[]) => CollectionEntry[];
 };
+
+/** Tab labels + order for the /best index. */
+export const BEST_CATEGORY_LABELS: Record<Collection["category"], string> = {
+  cost: "Cost & funding",
+  admissions: "Getting in",
+  migration: "Migration & timing",
+  city: "By city",
+  subject: "By subject",
+};
+
+export const BEST_CATEGORY_ORDER: Collection["category"][] = [
+  "cost",
+  "admissions",
+  "migration",
+  "city",
+  "subject",
+];
 
 const isRegional = isRegionalCity;
 const GO8 = GO8_SLUGS;
@@ -88,6 +107,7 @@ function subjectBestCollection(subjectSlug: string): Collection {
     slug: `best-australian-universities-for-${subjectSlug}`,
     title: `The best Australian universities for ${name}`,
     shortTitle: `Best for ${name}`,
+    category: "subject",
     metaDescription: `Australian universities with a recognised strength in ${name}, for international students. Reputation, cost, and the skilled-migration angle.`,
     intro: [
       ...(LEAD[`best-australian-universities-for-${subjectSlug}`]
@@ -127,6 +147,7 @@ function cityCollection(opts: {
     slug,
     title: `The cheapest universities in ${city} for international students`,
     shortTitle: `Cheapest in ${city}`,
+    category: "city",
     metaDescription: `Universities in ${city} ranked by estimated first-year budget for international students: tuition plus ${city} living costs. Not ranked by prestige.`,
     intro: [
       ...(LEAD[slug] ? [LEAD[slug]] : []),
@@ -156,6 +177,7 @@ export const COLLECTIONS: Collection[] = [
     slug: "affordable-australian-universities-for-international-students",
     title: "The most affordable Australian universities for international students",
     shortTitle: "Most affordable universities",
+    category: "cost",
     metaDescription:
       "Australian universities ranked by estimated first-year budget: cheapest international tuition plus the city's living costs, not by ranking.",
     intro: [
@@ -188,6 +210,7 @@ export const COLLECTIONS: Collection[] = [
     slug: "regional-australian-universities-for-skilled-migration",
     title: "Regional Australian universities and what they mean for skilled migration",
     shortTitle: "Regional universities",
+    category: "migration",
     metaDescription:
       "Australian universities in designated regional areas, where studying earns extra points toward the 491 and 190 skilled visas and living costs are lower.",
     intro: [
@@ -216,6 +239,7 @@ export const COLLECTIONS: Collection[] = [
     slug: "australian-universities-with-multiple-intakes-per-year",
     title: "Australian universities with more than one intake a year",
     shortTitle: "Multiple intakes",
+    category: "migration",
     metaDescription:
       "Most Australian universities start in February and July. These offer three or more intakes a year, useful if you miss a deadline or want to start sooner.",
     intro: [
@@ -243,6 +267,7 @@ export const COLLECTIONS: Collection[] = [
     slug: "australian-universities-with-automatic-scholarships",
     title: "Australian universities that give international scholarships automatically",
     shortTitle: "Automatic scholarships",
+    category: "cost",
     metaDescription:
       "Australian universities where a tuition scholarship is awarded automatically on the merit of your admission application, with no separate form.",
     intro: [
@@ -270,6 +295,7 @@ export const COLLECTIONS: Collection[] = [
     slug: "easiest-australian-universities-to-get-into-for-international-students",
     title: "The most accessible Australian universities for international students",
     shortTitle: "Higher acceptance rates",
+    category: "admissions",
     metaDescription:
       "Australian universities with the highest acceptance rates and most open admissions for international students, and what that means for entry requirements.",
     intro: [
@@ -298,6 +324,7 @@ export const COLLECTIONS: Collection[] = [
     slug: "private-universities-in-australia-for-international-students",
     title: "Private universities in Australia",
     shortTitle: "Private universities",
+    category: "admissions",
     metaDescription:
       "Every private university and private higher-education provider in Australia, what each is known for, and how they differ from the public system for international students.",
     intro: [
@@ -327,6 +354,7 @@ export const COLLECTIONS: Collection[] = [
     slug: "group-of-eight-universities-in-australia",
     title: "The Group of Eight universities in Australia",
     shortTitle: "Group of Eight",
+    category: "admissions",
     metaDescription:
       "The eight research-intensive Group of Eight universities in Australia, what Go8 membership means for international students, and how their costs compare.",
     intro: [
@@ -356,6 +384,7 @@ export const COLLECTIONS: Collection[] = [
     slug: "australian-universities-with-no-application-fee",
     title: "Australian universities with no application fee for international students",
     shortTitle: "No application fee",
+    category: "cost",
     metaDescription:
       "Most Australian universities charge international students nothing to apply. Here is the list of fee-free universities, and the few that do charge.",
     intro: [
@@ -383,6 +412,7 @@ export const COLLECTIONS: Collection[] = [
     slug: "australian-universities-accepting-ielts-6-0-for-international-students",
     title: "Australian universities that accept IELTS 6.0 or PTE 50",
     shortTitle: "Accept IELTS 6.0 / PTE 50",
+    category: "admissions",
     metaDescription:
       "Australian universities with an institutional minimum of IELTS 6.0 (or PTE Academic 50) for undergraduate entry. Note that specific courses require higher scores.",
     intro: [
