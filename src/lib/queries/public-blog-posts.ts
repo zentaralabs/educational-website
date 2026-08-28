@@ -6,6 +6,7 @@ export type PublicBlogPostListRow = {
   excerpt: string | null;
   tags: string[] | null;
   published_at: string | null;
+  author: { name: string } | null;
 };
 
 export async function listPublishedBlogPosts(opts: { tag?: string } = {}): Promise<
@@ -14,7 +15,7 @@ export async function listPublishedBlogPosts(opts: { tag?: string } = {}): Promi
   const supabase = createPublicClient(["blog_posts:list"]);
   let query = supabase
     .from("blog_posts")
-    .select("slug, title, excerpt, tags, published_at")
+    .select("slug, title, excerpt, tags, published_at, author:authors!author_id(name)")
     .eq("status", "published")
     .order("published_at", { ascending: false });
 
@@ -22,7 +23,7 @@ export async function listPublishedBlogPosts(opts: { tag?: string } = {}): Promi
 
   const { data, error } = await query;
   if (error) throw error;
-  return data ?? [];
+  return (data ?? []) as unknown as PublicBlogPostListRow[];
 }
 
 /** Distinct tags across all published posts, for the /blog filter UI. */
