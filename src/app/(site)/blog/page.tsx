@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { BlogCard } from "@/components/site/BlogCard";
+import { RssIcon } from "@/components/site/icons";
 import {
   listPublishedBlogPosts,
   listPublishedBlogTags,
@@ -61,14 +62,15 @@ export default async function BlogIndexPage({
         The blog
       </h1>
       <p className="mt-2 max-w-2xl font-body text-base text-slate">
-        Deadline changes, policy shifts, and application news as they happen.{" "}
-        <a
-          href="/blog/feed.xml"
-          className="whitespace-nowrap text-status-open underline underline-offset-2 hover:text-ink"
-        >
-          RSS feed
-        </a>
+        Deadline changes, policy shifts, and application news as they happen.
       </p>
+      <a
+        href="/blog/feed.xml"
+        className="mt-2 inline-flex items-center gap-1.5 font-body text-sm text-status-open underline underline-offset-2 hover:text-ink"
+      >
+        <RssIcon className="h-3.5 w-3.5" />
+        RSS feed
+      </a>
 
       {tags.length > 0 && (
         <div className="mt-6 flex flex-wrap gap-2">

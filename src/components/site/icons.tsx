@@ -63,3 +63,12 @@ export function ArrowUpRightIcon({ className = "" }: IconProps) {
     </svg>
   );
 }
+
+export function RssIcon({ className = "" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} className={`${base} ${className}`}>
+      <path d="M5 11a9 9 0 0 1 9 9M5 5a15 15 0 0 1 15 15" strokeLinecap="round" />
+      <circle cx="5.5" cy="18.5" r="1.4" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
