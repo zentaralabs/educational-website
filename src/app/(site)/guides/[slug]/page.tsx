@@ -16,6 +16,7 @@ import {
   listPublishedGuideSlugs,
 } from "@/lib/queries/public-guides";
 import { readingMinutes } from "@/lib/reading";
+import { SITE_NAME, SITE_URL } from "@/lib/site-config";
 import { extractToc } from "@/lib/toc";
 
 export const revalidate = 3600;
@@ -68,7 +69,31 @@ export default async function GuidePage({
     { label: guide.title },
   ];
 
-  const jsonLdBlocks: Record<string, unknown>[] = [breadcrumbJsonLd(breadcrumbs)];
+  const guideUrl = `${SITE_URL}/guides/${guide.slug}`;
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: guide.title,
+    description: guide.excerpt ?? undefined,
+    url: guideUrl,
+    mainEntityOfPage: { "@type": "WebPage", "@id": guideUrl },
+    datePublished: guide.created_at ?? undefined,
+    dateModified:
+      guide.updated_at ?? guide.last_verified_at ?? guide.created_at ?? undefined,
+    author: guide.author
+      ? {
+          "@type": "Person",
+          name: guide.author.name,
+          description: guide.author.credentials ?? undefined,
+        }
+      : { "@type": "Organization", name: SITE_NAME },
+    publisher: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
+  };
+
+  const jsonLdBlocks: Record<string, unknown>[] = [
+    articleJsonLd,
+    breadcrumbJsonLd(breadcrumbs),
+  ];
   if (faqItems.length > 0) jsonLdBlocks.push(faqJsonLd(faqItems));
 
   return (
