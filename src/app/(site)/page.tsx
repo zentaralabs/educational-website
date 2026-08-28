@@ -38,7 +38,7 @@ export const metadata = {
 };
 
 const CTAS = [
-  { label: "Browse deadlines", href: "/deadlines", primary: true },
+  { label: "Browse deadlines", href: "/deadlines" },
   { label: "Courses by subject", href: "/study" },
   { label: "Best universities", href: "/best" },
   { label: "Compare universities", href: "/compare/universities" },
@@ -103,25 +103,15 @@ export default async function Home() {
             className="animate-fade-up mt-6 flex flex-wrap justify-center gap-2.5"
             style={{ animationDelay: "160ms" }}
           >
-            {CTAS.map((cta) =>
-              cta.primary ? (
-                <Link
-                  key={cta.href}
-                  href={cta.href}
-                  className="rounded-lg bg-ink px-5 py-2.5 font-body text-sm font-semibold text-paper shadow-[0_8px_24px_-12px_rgba(22,35,63,0.5)] transition-all duration-150 hover:-translate-y-0.5 hover:shadow-[0_12px_28px_-12px_rgba(22,35,63,0.55)]"
-                >
-                  {cta.label}
-                </Link>
-              ) : (
-                <Link
-                  key={cta.href}
-                  href={cta.href}
-                  className="rounded-lg border border-line bg-paper px-5 py-2.5 font-body text-sm font-medium text-ink transition-all duration-150 hover:-translate-y-0.5 hover:border-status-open/40 hover:shadow-[0_8px_24px_-14px_rgba(22,35,63,0.25)]"
-                >
-                  {cta.label}
-                </Link>
-              ),
-            )}
+            {CTAS.map((cta) => (
+              <Link
+                key={cta.href}
+                href={cta.href}
+                className="rounded-lg border border-line bg-paper px-5 py-2.5 font-body text-sm font-medium text-ink transition-all duration-150 hover:-translate-y-0.5 hover:border-status-open/40 hover:shadow-[0_8px_24px_-14px_rgba(22,35,63,0.25)]"
+              >
+                {cta.label}
+              </Link>
+            ))}
           </div>
 
           <p
