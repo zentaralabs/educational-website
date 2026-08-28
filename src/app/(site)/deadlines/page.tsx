@@ -2,6 +2,7 @@ import Link from "next/link";
 import { StatusBadge } from "@/components/StatusBadge";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
+import { SITE_NAME, SITE_URL } from "@/lib/site-config";
 import { deadlineBadgeStatus, formatDeadlineDate } from "@/lib/deadline-status";
 import {
   listDeadlineFilterOptions,
@@ -73,7 +74,15 @@ export default async function DeadlinesPage({
     "@type": "Dataset",
     name: "University application deadlines",
     description: "Aggregated, sourced application deadlines for universities in Australia.",
+    url: `${SITE_URL}/deadlines`,
     variableMeasured: "Application deadline date",
+    isAccessibleForFree: true,
+    creator: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
+    license: `${SITE_URL}/terms`,
   };
 
   const breadcrumbs = [{ label: "Home", href: "/" }, { label: "Deadlines" }];
