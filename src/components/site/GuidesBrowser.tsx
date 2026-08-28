@@ -47,14 +47,14 @@ export function GuidesBrowser({
               role="tab"
               aria-selected={selected}
               onClick={() => setActive(tab.key)}
-              className={`-mb-px flex flex-shrink-0 items-center gap-1.5 border-b-2 py-3 font-body text-sm font-medium whitespace-nowrap transition-colors duration-150 ${
+              className={`-mb-px flex flex-shrink-0 items-center gap-2 border-b-2 py-3.5 font-body text-base font-medium whitespace-nowrap transition-colors duration-150 ${
                 selected
                   ? "border-status-open text-ink"
                   : "border-transparent text-slate hover:border-ink/20 hover:text-ink"
               }`}
             >
               {tab.label}
-              <span className="font-utility text-xs text-slate">{countFor(tab.key)}</span>
+              <span className="font-utility text-sm text-slate">{countFor(tab.key)}</span>
             </button>
           );
         })}
@@ -68,14 +68,12 @@ export function GuidesBrowser({
             if (items.length === 0) return null;
             return (
               <section key={group.key}>
-                {active === "all" && (
-                  <div className="mb-4 flex items-baseline gap-3 border-b border-line pb-2">
-                    <h2 className="font-display text-xl font-semibold text-ink">{group.label}</h2>
-                    <span className="font-utility text-xs text-slate">
-                      {items.length} {items.length === 1 ? "guide" : "guides"}
-                    </span>
-                  </div>
-                )}
+                <div className="mb-4 flex items-baseline gap-3 border-b border-line pb-2">
+                  <h2 className="font-display text-xl font-semibold text-ink">{group.label}</h2>
+                  <span className="font-utility text-xs text-slate">
+                    {items.length} {items.length === 1 ? "guide" : "guides"}
+                  </span>
+                </div>
                 {group.blurb && (
                   <p className="mb-5 font-body text-sm text-slate">{group.blurb}</p>
                 )}
