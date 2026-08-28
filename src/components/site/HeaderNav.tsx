@@ -1,0 +1,160 @@
+"use client";
+
+import Link from "next/link";
+import { useEffect, useId, useRef, useState } from "react";
+
+type NavLink = { label: string; href: string; hint?: string };
+type NavItem = NavLink | { label: string; children: NavLink[] };
+
+const NAV: NavItem[] = [
+  { label: "Deadlines", href: "/deadlines" },
+  {
+    label: "Explore",
+    children: [
+      { label: "Courses", href: "/study", hint: "Browse programs by subject" },
+      { label: "Best universities", href: "/best", hint: "Ranked shortlists by field" },
+      { label: "Compare", href: "/compare", hint: "Universities side by side" },
+      { label: "Cost of living", href: "/cost-of-living", hint: "Monthly budgets by city" },
+    ],
+  },
+  {
+    label: "Funding & visas",
+    children: [
+      { label: "Scholarships", href: "/scholarships", hint: "Funding you can apply for" },
+      { label: "Visas", href: "/visas", hint: "Student, graduate & skilled subclasses" },
+    ],
+  },
+  {
+    label: "Guides",
+    children: [
+      { label: "How-to guides", href: "/guides", hint: "Step-by-step, evergreen" },
+      { label: "Blog", href: "/blog", hint: "Deadline & policy updates" },
+    ],
+  },
+];
+
+const linkClass =
+  "rounded-md px-3 py-1.5 font-body text-sm font-medium whitespace-nowrap text-ink/75 transition-colors duration-150 hover:text-ink sm:text-base";
+
+function isLink(item: NavItem): item is NavLink {
+  return "href" in item;
+}
+
+/**
+ * Top nav. The grouped entries are click-to-open menu buttons, which behave
+ * the same on touch, mouse, and keyboard (the previous hover-only CSS menus
+ * could not be opened by tapping). Closing: outside click, Escape, choosing
+ * an item, or navigating to a new route.
+ */
+export function HeaderNav() {
+  const [openLabel, setOpenLabel] = useState<string | null>(null);
+  const navRef = useRef<HTMLElement>(null);
+  const menuId = useId();
+
+  const close = () => setOpenLabel(null);
+
+  // Close on outside click / Escape.
+  useEffect(() => {
+    if (openLabel === null) return;
+    function onPointerDown(e: PointerEvent) {
+      if (navRef.current && !navRef.current.contains(e.target as Node)) {
+        setOpenLabel(null);
+      }
+    }
+    function onKeyDown(e: KeyboardEvent) {
+      if (e.key === "Escape") setOpenLabel(null);
+    }
+    document.addEventListener("pointerdown", onPointerDown);
+    document.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.removeEventListener("pointerdown", onPointerDown);
+      document.removeEventListener("keydown", onKeyDown);
+    };
+  }, [openLabel]);
+
+  return (
+    <nav
+      ref={navRef}
+      className="flex flex-wrap items-center gap-x-1 gap-y-1"
+    >
+      {NAV.map((item) => {
+        if (isLink(item)) {
+          return (
+            <Link
+              key={item.label}
+              href={item.href}
+              className={linkClass}
+              onClick={close}
+            >
+              {item.label}
+            </Link>
+          );
+        }
+
+        const open = openLabel === item.label;
+        const panelId = `${menuId}-${item.label.replace(/\W+/g, "-")}`;
+
+        return (
+          <div key={item.label} className="relative">
+            <button
+              type="button"
+              aria-haspopup="true"
+              aria-expanded={open}
+              aria-controls={panelId}
+              onClick={() =>
+                setOpenLabel((cur) => (cur === item.label ? null : item.label))
+              }
+              className={`${linkClass} inline-flex items-center gap-1 ${
+                open ? "text-ink" : ""
+              }`}
+            >
+              {item.label}
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 12 12"
+                className={`h-3 w-3 text-ink/40 transition-transform duration-150 ${
+                  open ? "rotate-180" : ""
+                }`}
+              >
+                <path
+                  d="M2.5 4.5 6 8l3.5-3.5"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+
+            <div
+              id={panelId}
+              hidden={!open}
+              className="absolute left-0 top-full z-20 pt-2"
+            >
+              <div className="w-64 rounded-lg border border-ink/10 bg-paper p-1.5 shadow-lg shadow-ink/5">
+                {item.children.map((child) => (
+                  <Link
+                    key={child.href}
+                    href={child.href}
+                    onClick={close}
+                    className="block rounded-md px-3 py-2 transition-colors duration-150 hover:bg-ink/5"
+                  >
+                    <span className="block font-body text-sm font-medium text-ink">
+                      {child.label}
+                    </span>
+                    {child.hint ? (
+                      <span className="mt-0.5 block font-body text-xs text-ink/55">
+                        {child.hint}
+                      </span>
+                    ) : null}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        );
+      })}
+    </nav>
+  );
+}

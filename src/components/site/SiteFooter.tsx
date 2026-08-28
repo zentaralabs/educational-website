@@ -23,6 +23,7 @@ const LEARN = [
 
 const SITE = [
   { label: "About", href: "/about" },
+  { label: "Editorial policy", href: "/editorial-policy" },
   { label: "Contact", href: "/contact" },
   { label: "Privacy Policy", href: "/privacy" },
   { label: "Terms of Service", href: "/terms" },

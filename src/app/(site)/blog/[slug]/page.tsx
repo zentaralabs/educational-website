@@ -15,6 +15,7 @@ import {
   listRecentBlogPostSlugs,
 } from "@/lib/queries/public-blog-posts";
 import { readingMinutesFromWords } from "@/lib/reading";
+import { SITE_NAME, SITE_URL } from "@/lib/site-config";
 import { extractToc } from "@/lib/toc";
 
 export const revalidate = 3600;
@@ -73,13 +74,22 @@ export default async function BlogPostPage({
     { label: post.title },
   ];
 
+  const postUrl = `${SITE_URL}/blog/${post.slug}`;
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.title,
+    description: post.excerpt ?? undefined,
+    url: postUrl,
+    mainEntityOfPage: { "@type": "WebPage", "@id": postUrl },
     datePublished: post.published_at ?? undefined,
-    dateModified: post.last_verified_at ?? undefined,
+    dateModified: post.last_verified_at ?? post.published_at ?? undefined,
     author: post.author ? { "@type": "Person", name: post.author.name } : undefined,
+    publisher: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
   };
   const jsonLdBlocks: Record<string, unknown>[] = [jsonLd, breadcrumbJsonLd(breadcrumbs)];
   if (faqItems.length > 0) jsonLdBlocks.push(faqJsonLd(faqItems));

@@ -28,8 +28,10 @@ const STATIC_ROUTES: Array<{ path: string; priority: number; changeFrequency: Me
   { path: "/visas/invitation-rounds", priority: 0.7, changeFrequency: "weekly" },
   { path: "/visas/points-calculator", priority: 0.8, changeFrequency: "monthly" },
   { path: "/quiz", priority: 0.6, changeFrequency: "monthly" },
-  { path: "/search", priority: 0.4, changeFrequency: "monthly" },
+  // /search is noindex (a query-driven results page with no standalone value),
+  // so it is deliberately kept out of the sitemap.
   { path: "/about", priority: 0.3, changeFrequency: "yearly" },
+  { path: "/editorial-policy", priority: 0.3, changeFrequency: "yearly" },
   { path: "/contact", priority: 0.3, changeFrequency: "yearly" },
   { path: "/privacy", priority: 0.2, changeFrequency: "yearly" },
   { path: "/terms", priority: 0.2, changeFrequency: "yearly" },

@@ -8,7 +8,23 @@ import { listPublicCountries } from "@/lib/queries/public-countries";
 import { listUpcomingDeadlines } from "@/lib/queries/public-deadlines";
 import { getHomepageStats } from "@/lib/queries/public-stats";
 import { listFeaturedUniversities } from "@/lib/queries/public-universities";
-import { SITE_DESCRIPTION } from "@/lib/site-config";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site-config";
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: SITE_NAME,
+  url: SITE_URL,
+  description: SITE_DESCRIPTION,
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: `${SITE_URL}/search?q={search_term_string}`,
+    },
+    "query-input": "required name=search_term_string",
+  },
+};
 
 export const revalidate = 3600;
 
@@ -39,6 +55,10 @@ export default async function Home() {
 
   return (
     <main className="w-full">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+      />
       {/* Hero */}
       <div className="relative overflow-hidden">
         <div

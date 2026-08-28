@@ -12,7 +12,10 @@ export const metadata = {
   title: "Blog",
   description:
     "Timely posts on deadline changes, policy updates, and application news, the fast-moving counterpart to our evergreen guides.",
-  alternates: { canonical: "/blog" },
+  alternates: {
+    canonical: "/blog",
+    types: { "application/rss+xml": "/blog/feed.xml" },
+  },
 };
 
 const TAG_LABELS: Record<string, string> = {
@@ -58,7 +61,13 @@ export default async function BlogIndexPage({
         The blog
       </h1>
       <p className="mt-2 max-w-2xl font-body text-base text-slate">
-        Deadline changes, policy shifts, and application news as they happen.
+        Deadline changes, policy shifts, and application news as they happen.{" "}
+        <a
+          href="/blog/feed.xml"
+          className="whitespace-nowrap text-status-open underline underline-offset-2 hover:text-ink"
+        >
+          RSS feed
+        </a>
       </p>
 
       {tags.length > 0 && (

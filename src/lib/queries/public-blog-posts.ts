@@ -135,6 +135,26 @@ export type PublicBlogPostRow = {
   reviewed_by: { name: string } | null;
 };
 
+export type BlogFeedItem = {
+  slug: string;
+  title: string;
+  excerpt: string | null;
+  published_at: string | null;
+  author: { name: string } | null;
+};
+
+/** Every published post, newest first, for the RSS feed. */
+export async function listBlogPostsForFeed(): Promise<BlogFeedItem[]> {
+  const supabase = createPublicClient(["blog_posts:list"]);
+  const { data, error } = await supabase
+    .from("blog_posts")
+    .select("slug, title, excerpt, published_at, author:authors!author_id(name)")
+    .eq("status", "published")
+    .order("published_at", { ascending: false });
+  if (error) throw error;
+  return (data ?? []) as unknown as BlogFeedItem[];
+}
+
 export async function getPublishedBlogPost(slug: string): Promise<PublicBlogPostRow | null> {
   const supabase = createPublicClient([`blog_post:${slug}`, "blog_posts:list"]);
   const { data, error } = await supabase

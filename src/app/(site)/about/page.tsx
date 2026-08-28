@@ -19,6 +19,17 @@ export default function AboutPage() {
         without hunting through a dozen admissions portals.
       </p>
 
+      <h2>Who runs this site</h2>
+      <p>
+        Where To Apply is written and maintained by Roman Lama, working from
+        Nepal. It is an independent project, not a migration agency or an
+        education agent, and it does not place students or take placement
+        commissions from any university. It began as a way to keep track of the
+        deadline, cost, and requirement details that are scattered across dozens
+        of university and government pages, and it is kept current the same way:
+        by checking each figure against its official source.
+      </p>
+
       <h2>How we fact-check</h2>
       <p>
         Every deadline, tuition figure, and admissions requirement on this
@@ -26,8 +37,9 @@ export default function AboutPage() {
         platform, or government source at the time it was verified. We link
         that source and show a &ldquo;last verified&rdquo; date on every
         fact-bearing page. Nothing is generated without a human checking it
-        against the original source first. See our{" "}
-        <a href="/disclaimer">disclaimer</a> for what that does and
+        against the original source first. Our{" "}
+        <a href="/editorial-policy">editorial policy</a> has the full process;
+        the <a href="/disclaimer">disclaimer</a> covers what that does and
         doesn&rsquo;t guarantee.
       </p>
 
