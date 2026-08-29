@@ -10,6 +10,7 @@ import {
   listPublishedSubjects,
 } from "@/lib/queries/public-subjects";
 import { SUBJECT_CONTENT } from "@/lib/subjects";
+import { SubjectComparisonTable } from "@/components/site/SubjectComparisonTable";
 
 export const revalidate = 3600;
 
@@ -63,8 +64,6 @@ export default async function SubjectPage({
     `Australian universities offer ${subject.programs.length} ${subject.name} programs to international students, taught at ${subject.universities.length} universities across the country.`,
     `Tuition ranges from ${subject.minTuition != null ? formatCurrency(subject.minTuition, "AUD") : "the mid AUD 20,000s"} to ${subject.maxTuition != null ? formatCurrency(subject.maxTuition, "AUD") : "over AUD 45,000"} a year, with the Group of Eight universities at the top of that range and regional and newer universities at the bottom.`,
   ];
-
-  const cheapest = subject.programs.filter((p) => p.tuition != null).slice(0, 15);
 
   const uniName = new Map(subject.universities.map((u) => [u.slug, u.name]));
   const strongAt = (content?.strongAt ?? [])
@@ -183,43 +182,10 @@ export default async function SubjectPage({
         </p>
       )}
 
-      {cheapest.length > 0 && (
-        <section className="mt-10">
-          <h2 className="mb-3 font-display text-xl font-semibold text-ink">
-            Most affordable {subject.name} programs
-          </h2>
-          <div className="overflow-hidden rounded-xl border border-line">
-            {cheapest.map((p, i) => (
-              <Link
-                key={p.id}
-                href={`/universities/${p.universitySlug}/programs/${p.id}`}
-                className="flex items-center justify-between gap-4 px-4 py-3 transition-colors hover:bg-ink/[0.03]"
-                style={{
-                  borderBottomWidth: i < cheapest.length - 1 ? 1 : 0,
-                  borderBottomColor: "var(--color-line)",
-                }}
-              >
-                <span className="min-w-0">
-                  <span className="block truncate font-body text-sm font-medium text-ink">
-                    {p.name}
-                  </span>
-                  <span className="font-utility text-xs text-slate">
-                    {p.universityName}
-                    {p.degreeLevel ? ` · ${p.degreeLevel}` : ""}
-                  </span>
-                </span>
-                <span className="flex-shrink-0 font-utility text-sm font-medium text-status-open">
-                  {formatCurrency(p.tuition, p.currency)}/yr
-                </span>
-              </Link>
-            ))}
-          </div>
-          <p className="mt-2 font-body text-xs text-slate">
-            Tuition is per year for international students, from each program&rsquo;s
-            page. Figures are approximate and change annually.
-          </p>
-        </section>
-      )}
+      <SubjectComparisonTable
+        subjectName={subject.name}
+        programs={subject.programs}
+      />
 
       {strongAt.length > 0 && (
         <section className="mt-10">
@@ -255,24 +221,6 @@ export default async function SubjectPage({
           </ol>
         </section>
       )}
-
-      <section className="mt-10">
-        <h2 className="mb-3 font-display text-xl font-semibold text-ink">
-          All universities offering {subject.name}
-        </h2>
-        <ul className="flex flex-wrap gap-2">
-          {subject.universities.map((u) => (
-            <li key={u.slug}>
-              <Link
-                href={`/universities/${u.slug}`}
-                className="inline-block rounded-full border border-line bg-mist px-3.5 py-1.5 font-body text-sm text-ink transition-colors hover:border-status-open/40 hover:underline"
-              >
-                {u.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </section>
 
       <section className="mt-10">
         <h2 className="mb-3 font-display text-xl font-semibold text-ink">

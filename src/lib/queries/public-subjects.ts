@@ -14,6 +14,7 @@ type ProgRow = {
   tuition_international: number | null;
   currency: string | null;
   duration_years: number | null;
+  ielts_overall: number | null;
   degree_level: { name: string } | null;
   subject: { id: number; slug: string | null; name: string } | null;
   university: {
@@ -21,15 +22,16 @@ type ProgRow = {
     name: string;
     city: string | null;
     status: string;
+    ielts_overall: number | null;
     country: { is_launched: boolean } | null;
   } | null;
 };
 
 const PROG_SELECT =
-  "id, name, tuition_international, currency, duration_years, " +
+  "id, name, tuition_international, currency, duration_years, ielts_overall, " +
   "degree_level:degree_levels(name), " +
   "subject:subjects!inner(id, slug, name), " +
-  "university:universities!inner(slug, name, city, status, country:countries!inner(is_launched))";
+  "university:universities!inner(slug, name, city, status, ielts_overall, country:countries!inner(is_launched))";
 
 /** All subjects that have at least one published program in a launched country. */
 export async function listPublishedSubjects(): Promise<SubjectSummary[]> {
@@ -83,6 +85,9 @@ export type SubjectProgram = {
   durationYears: number | null;
   tuition: number | null;
   currency: string;
+  /** Program's own IELTS overall minimum, falling back to the university's
+   * institutional minimum when the program row doesn't set one. */
+  ielts: number | null;
   universitySlug: string;
   universityName: string;
   universityCity: string | null;
@@ -120,6 +125,7 @@ export async function getSubjectBySlug(slug: string): Promise<SubjectDetail | nu
       durationYears: p.duration_years,
       tuition: p.tuition_international,
       currency: p.currency ?? "AUD",
+      ielts: p.ielts_overall ?? p.university?.ielts_overall ?? null,
       universitySlug: p.university?.slug ?? "",
       universityName: p.university?.name ?? "",
       universityCity: p.university?.city ?? null,
