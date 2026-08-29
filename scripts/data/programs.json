@@ -5148,7 +5148,7 @@
   {
     "university_slug": "bond-university",
     "degree_level": "Undergraduate",
-    "subject_slug": "psychology",
+    "subject_slug": "law",
     "id": "18945755-59e3-4729-92de-3d22afd8cb4a",
     "name": "Bachelor of Criminal Justice and Criminology",
     "status": "published",
@@ -6977,7 +6977,7 @@
   {
     "university_slug": "bond-university",
     "degree_level": "Graduate",
-    "subject_slug": "psychology",
+    "subject_slug": "law",
     "id": "82fc277b-0bed-43c2-81d9-67049188ec22",
     "name": "Graduate Certificate in Criminology",
     "status": "published",
@@ -8062,7 +8062,7 @@
   {
     "university_slug": "bond-university",
     "degree_level": "Graduate",
-    "subject_slug": "political-science-and-international-relations",
+    "subject_slug": "education",
     "id": "37a067a1-5658-440e-bfd7-3f7274f766fd",
     "name": "Master of Arts (TESOL)",
     "status": "published",
@@ -8558,7 +8558,7 @@
   {
     "university_slug": "bond-university",
     "degree_level": "Graduate",
-    "subject_slug": "psychology",
+    "subject_slug": "law",
     "id": "88710623-d508-4c61-b4fa-e3c0dcbe32c0",
     "name": "Master of Criminology",
     "status": "published",
@@ -8589,7 +8589,7 @@
   {
     "university_slug": "bond-university",
     "degree_level": "Graduate",
-    "subject_slug": "psychology",
+    "subject_slug": "law",
     "id": "87a46342-181e-4fa5-8efc-a4021d09574f",
     "name": "Master of Criminology (Professional)",
     "status": "published",
@@ -9084,7 +9084,7 @@
   },
   {
     "university_slug": "bond-university",
-    "degree_level": "PhD",
+    "degree_level": "Graduate",
     "subject_slug": "law",
     "id": "44de4b79-b043-4c84-a3fa-93a9d374bf8c",
     "name": "Master of Laws (by Research)",
@@ -27622,7 +27622,7 @@
   },
   {
     "university_slug": "university-of-canberra",
-    "degree_level": "PhD",
+    "degree_level": "Graduate",
     "subject_slug": "computer-science",
     "id": "01718c1f-cfdd-4afa-b54b-c20913655dad",
     "name": "Master of Information Sciences (Research)",
