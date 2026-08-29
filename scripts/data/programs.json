@@ -198,7 +198,7 @@
     "tuition_domestic_is_csp": true,
     "currency": "AUD",
     "application_url": "https://student-adelaideuni.studylink.com",
-    "description": null,
+    "description": "A three-year degree (144 units) at Adelaide University's city campus. The structure is a common core (ethics, data literacy, First Nations knowledges, responsible AI), a program core (accounting for decision makers, management and leadership, emerging technologies and business analytics, marketing principles), one 48-unit major, a work-integrated learning block, and electives.\n\nStudents choose one major from 13 options, including Digital Business, International Business, Management, Marketing, Project Management, Human Resource Management, Real Estate, Sport Management, Procurement and Supply Chain Management, and Tourism, Events and Hospitality Management. The work-integrated learning courses provide internships, practicums, or industry projects as part of the degree rather than as an add-on.",
     "curriculum": null,
     "admission_requirements": "ATAR 70 (secondary-qualification equivalents apply for international applicants)",
     "english_requirements": "IELTS Overall 6.5, no band below 6.0 (or equivalent PTE/TOEFL)",
@@ -214,7 +214,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-business/"
+    "source_url": "https://www.adelaide.edu.au/study/degrees/bachelor-of-business/"
   },
   {
     "university_slug": "adelaide-university",
@@ -849,7 +849,7 @@
     "tuition_domestic_is_csp": true,
     "currency": "AUD",
     "application_url": "https://student-adelaideuni.studylink.com",
-    "description": null,
+    "description": "A four-year degree (the honours is built in, not a separate year) with a fourth-year thesis run across three courses, where students define a research topic and work with academic staff. First year covers programming, structured data, object-oriented programming, mathematics, and security; later years add theory of computation, operating systems, algorithms, distributed computing, and language models.\n\nStudents take one major from Artificial Intelligence and Machine Learning, Human-Centred Computing, or Programming Languages, and complete 12 to 24 units of work-integrated learning through an intensive computing project or ICT internships. The degree is provisionally accredited at professional level by the Australian Computer Society and recognised internationally through the Seoul Accord. Part-time study is not available to international students.",
     "curriculum": null,
     "admission_requirements": "ATAR 70 (secondary-qualification equivalents apply for international applicants)",
     "english_requirements": "IELTS Overall 6.5, no band below 6.0 (or equivalent PTE/TOEFL)",
@@ -865,7 +865,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-computer-science-honours/"
+    "source_url": "https://www.adelaide.edu.au/study/degrees/bachelor-of-computer-science-honours/"
   },
   {
     "university_slug": "adelaide-university",
@@ -973,7 +973,7 @@
     "tuition_domestic_is_csp": true,
     "currency": "AUD",
     "application_url": "https://student-adelaideuni.studylink.com",
-    "description": null,
+    "description": "A three-year degree (144 units) covering the construction process end to end: low-rise and high-rise construction, structures, construction science and materials, economics and procurement, quantity surveying and cost estimating, contract administration, planning and safety, building codes, building services, and scheduling. Digital construction tools are taught from first year.\n\nWork-integrated learning is one mandatory professional practice course. On accreditation: as of 2026 the Australian Institute of Building Surveyors has accredited years 1 and 2 at Level 2, with year 3 accreditation being pursued, and the page does not list quantity surveying accreditation, so applicants who need a specific professional pathway should confirm the current status with the university.",
     "curriculum": null,
     "admission_requirements": "ATAR 70 (secondary-qualification equivalents apply for international applicants)",
     "english_requirements": "IELTS Overall 6.5, no band below 6.0 (or equivalent PTE/TOEFL)",
@@ -989,7 +989,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-construction-management/"
+    "source_url": "https://www.adelaide.edu.au/study/degrees/bachelor-of-construction-management/"
   },
   {
     "university_slug": "adelaide-university",
@@ -1097,7 +1097,7 @@
     "tuition_domestic_is_csp": true,
     "currency": "AUD",
     "application_url": "https://student-adelaideuni.studylink.com",
-    "description": null,
+    "description": "A four-year degree (132 core units) with honours built in. Core courses cover solid mechanics, dynamics, thermodynamics, fluid mechanics, acoustics and vibrations, control systems, manufacturing processes, and computer-aided design, and year four is a major industry research project.\n\nStudents complete up to 450 hours of supervised industry work experience through professional practice courses and internships of up to 12 weeks. The degree is provisionally accredited at Professional Engineer level by Engineers Australia, which on full accreditation gives Washington Accord international recognition. Entry requires IELTS 6.5 and a Stage 2 mathematical methods prerequisite. Indicative international fee is around A$57,100 per year.",
     "curriculum": null,
     "admission_requirements": "ATAR 80 (secondary-qualification equivalents apply for international applicants)",
     "english_requirements": "IELTS Overall 6.5, no band below 6.0 (or equivalent PTE/TOEFL)",
@@ -1113,7 +1113,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-engineering-mechanical-honours/"
+    "source_url": "https://www.adelaide.edu.au/study/degrees/bachelor-of-engineering-mechanical-honours/"
   },
   {
     "university_slug": "adelaide-university",
@@ -1500,7 +1500,7 @@
     "tuition_domestic_is_csp": true,
     "currency": "AUD",
     "application_url": "https://student-adelaideuni.studylink.com",
-    "description": null,
+    "description": "A three-year degree (February and July intakes) with a 66-unit IT core covering problem solving, programming, structured and unstructured data, IT systems, security, cloud platforms, agile development, and business for IT professionals. The 48-unit software development major adds object-oriented programming, web and mobile development, concurrent and cloud programming, system design, design patterns, and an introduction to DevOps.\n\nWork-integrated learning is 12 to 24 units, taken as an ICT capstone project with a real client or an ICT internship of 6 to 24 units. The degree is provisionally accredited at professional level by the Australian Computer Society and recognised internationally through the Seoul Accord. Indicative international fee is around A$52,500 per year.",
     "curriculum": null,
     "admission_requirements": "ATAR 70 (secondary-qualification equivalents apply for international applicants)",
     "english_requirements": "IELTS Overall 6.5, no band below 6.0 (or equivalent PTE/TOEFL)",
@@ -1516,7 +1516,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-information-technology-software-development/"
+    "source_url": "https://www.adelaide.edu.au/study/degrees/bachelor-of-information-technology-software-development/"
   },
   {
     "university_slug": "adelaide-university",
@@ -1748,7 +1748,7 @@
     "tuition_domestic_is_csp": true,
     "currency": "AUD",
     "application_url": "https://student-adelaideuni.studylink.com",
-    "description": null,
+    "description": "A three-year degree (144 units) with February and July intakes, built from a common core, a science program core, one major or a discipline-course block, a required work-integrated learning component, and electives. The work-integrated learning is mandatory and ranges from research projects to fieldwork to industry placements depending on the major.\n\nThere are more than 30 majors across animal and veterinary sciences, chemistry, molecular and biomedical sciences, earth sciences, physics, ecology and evolution, environmental and plant sciences, and food science. Students can extend to a four-year Bachelor of Science (Honours) for research training, or fast-track into a Master of Research with about one further year.",
     "curriculum": null,
     "admission_requirements": "ATAR 70 (secondary-qualification equivalents apply for international applicants)",
     "english_requirements": "IELTS Overall 6.5, no band below 6.0 (or equivalent PTE/TOEFL)",
@@ -1764,7 +1764,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-science/"
+    "source_url": "https://www.adelaide.edu.au/study/degrees/bachelor-of-science/"
   },
   {
     "university_slug": "adelaide-university",
@@ -1965,7 +1965,7 @@
     "tuition_domestic_is_csp": true,
     "currency": "AUD",
     "application_url": "https://student-adelaideuni.studylink.com",
-    "description": null,
+    "description": "A two-year master's (66 core units) covering AI ethics, privacy and security, programming for AI and ML, statistical foundations, machine learning algorithms, applied AI, advanced topics, deep learning applications, and generative AI, ending in a two-semester industry capstone project. Students also take 18 elective units in areas such as computer vision and multimodal ML, data-driven decision-making, and prediction.\n\nEntry requires a bachelor's degree in computer science, computer systems engineering, or software engineering (or a graduate certificate in computing), a GPA around 4.5 on a 7-point scale, and IELTS 6.5. It is not a conversion degree for people without a computing background. Part-time study is not available to international students.",
     "curriculum": null,
     "admission_requirements": "GPA equivalent to Adelaide University 4.5/7.0; bachelor's degree in a related discipline",
     "english_requirements": "IELTS Overall 6.5, no band below 6.0 (or equivalent PTE/TOEFL)",
@@ -1981,7 +1981,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://adelaide.edu.au/study/degrees/master-of-artificial-intelligence-and-machine-learning/"
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-artificial-intelligence-and-machine-learning/"
   },
   {
     "university_slug": "adelaide-university",
@@ -2058,7 +2058,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": "https://student-adelaideuni.studylink.com",
-    "description": null,
+    "description": "A two-year master's (96 units) with February and July intakes. The core covers accounting concepts, principles of finance, business statistics, economic principles, predictive and visual analytics, chatbots and text analytics, and managing with big data. Discipline courses add analytics fundamentals, customer analytics, and two Business Analytics Projects in the final semester that act as the capstone.\n\nElectives range across financial modelling, blockchain and smart contracts, fintech, people analytics, and advanced marketing analytics. A maths background is recommended but not required; entry is a bachelor's degree with a GPA around 4.5 on a 7-point scale and IELTS 6.5. Indicative international fee is around A$57,100 per year.",
     "curriculum": null,
     "admission_requirements": "GPA equivalent to Adelaide University 4.5/7.0; bachelor's degree in any discipline (cognate discipline preferred)",
     "english_requirements": "IELTS Overall 6.5, no band below 6.0 (or equivalent PTE/TOEFL)",
@@ -2074,7 +2074,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://adelaide.edu.au/study/degrees/master-of-business-analytics/"
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-business-analytics/"
   },
   {
     "university_slug": "adelaide-university",
@@ -2461,7 +2461,7 @@
     "tuition_domestic_is_csp": true,
     "currency": "AUD",
     "application_url": "https://student-adelaideuni.studylink.com",
-    "description": null,
+    "description": "A two-year master's (96 units) that is the accredited professional qualification for people who already hold an engineering bachelor's degree and want the credential recognised for practice. It is offered in discipline streams such as electrical, mechanical, and civil. Core courses cover professional engineering management, discipline-specific technical subjects, engineering data analytics, a design project, and a two-part masters research project, plus about 450 hours of industry placement.\n\nEntry requires a four-year bachelor's or honours degree in a relevant engineering field and IELTS 6.5. Early exit points exist (graduate certificate at six months, graduate diploma at one year). The program holds provisional Engineers Australia accreditation with Washington Accord recognition expected after the first cohort graduates. Some courses run across the city and Mawson Lakes campuses.",
     "curriculum": null,
     "admission_requirements": "GPA equivalent to Adelaide University 4.5/7.0; bachelor's degree in a related discipline",
     "english_requirements": "IELTS Overall 6.5, no band below 6.0 (or equivalent PTE/TOEFL)",
@@ -2477,7 +2477,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://adelaide.edu.au/study/degrees/master-of-professional-engineering-electrical/"
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-professional-engineering-electrical/"
   },
   {
     "university_slug": "adelaide-university",
@@ -2554,7 +2554,7 @@
     "tuition_domestic_is_csp": true,
     "currency": "AUD",
     "application_url": "https://student-adelaideuni.studylink.com",
-    "description": null,
+    "description": "A two-year qualifying master's (96 units) that leads to eligibility for practice as a social worker. It includes up to 1,000 hours of supervised field placement across two practicum courses, typically 3 to 5 days a week including outside teaching weeks, so it is difficult to combine with heavy outside work.\n\nEntry needs a bachelor's degree with at least one year full-time equivalent study in social and behavioural sciences, a GPA around 5.0 on a 7-point scale, and IELTS 7 across all bands. A criminal history check and Working with Children clearance are required within the first six months. One caveat: as of 2026 Adelaide University is working with the Australian Association of Social Workers on reaccreditation of the program for 2027, which applicants should confirm before enrolling.",
     "curriculum": null,
     "admission_requirements": "GPA equivalent to Adelaide University 5.0/7.0; minimum one year full-time study in social/behavioural sciences",
     "english_requirements": "IELTS Overall 7.0, no band below 7.0 (or equivalent PTE/TOEFL), required for health/education placements",
@@ -2570,7 +2570,7 @@
     "pte_speaking": null,
     "intake_dates": "February",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://adelaide.edu.au/study/degrees/master-of-social-work/"
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-social-work/"
   },
   {
     "university_slug": "adelaide-university",
@@ -2585,7 +2585,7 @@
     "tuition_domestic_is_csp": true,
     "currency": "AUD",
     "application_url": "https://student-adelaideuni.studylink.com",
-    "description": null,
+    "description": "A two-year initial teacher education master's (96 units) that leads to eligibility for teacher registration. Adelaide University offers it in primary (Reception to Year 6) and secondary streams. The primary program includes 520 hours of supervised placement (about 60 days) across two professional experience courses.\n\nIt is accredited by the Teachers Registration Board of South Australia; recognition in other states and countries varies. Entry requires a bachelor's degree with a GPA around 5.0 on a 7-point scale, IELTS 7 across all bands, and a Working With Children Check, and students must pass the national LANTITE literacy and numeracy test before their final placement. Primary is taught mainly at the Magill campus, with Mount Gambier and Whyalla options.",
     "curriculum": null,
     "admission_requirements": "GPA equivalent to Adelaide University 5.0/7.0; bachelor's degree in any discipline",
     "english_requirements": "IELTS Overall 7.0, no band below 7.0 (or equivalent PTE/TOEFL), required for health/education placements",
@@ -2601,7 +2601,7 @@
     "pte_speaking": null,
     "intake_dates": "February",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://adelaide.edu.au/study/degrees/master-of-teaching-primary/"
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-teaching-primary/"
   },
   {
     "university_slug": "australian-catholic-university",
