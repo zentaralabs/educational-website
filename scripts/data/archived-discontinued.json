@@ -66,6 +66,12 @@
       "name": "Bachelor of Health Transformation",
       "reason": "Bond course page: Bachelor of Health Transformation suspended from September 2025, no further intakes planned",
       "archived_at": "2026-08-29T13:31:54.940Z"
+    },
+    {
+      "id": "ddaa99cb-f992-4d3f-ae18-225d353190b7",
+      "name": "Bachelor of Science",
+      "reason": "Murdoch handbook B1317: Bachelor of Science discontinued, not accepting commencements from 31/12/2022; current Murdoch science degrees are all named specialisations",
+      "archived_at": "2026-08-29T15:03:44.072Z"
     }
   ]
 }

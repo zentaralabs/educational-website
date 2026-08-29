@@ -16504,7 +16504,7 @@
     "tuition_domestic_is_csp": true,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "A three-year degree in applied social care, developed with industry and community partners for roles across the care and community services sector. Students choose one major from Child and Family Studies, Human Behaviour, International Aid and Development, Sociology, or Foundations of Business Management, and build practical skills through internships and placements with community organisations, government agencies and not-for-profits.\n\nOne thing to be clear on: this is a social care degree, not an accredited social work qualification, so it does not by itself lead to registration as a social worker with the Australian Association of Social Workers. Students who want that should look at an accredited Bachelor of Social Work. Entry is an ATAR of about 70, with Murdoch RISE adjustments and other alternative pathways available. Graduates work as child, family and youth support workers, disability support workers, care coordinators and community services officers. It suits students headed for frontline community and care roles.",
     "curriculum": null,
     "admission_requirements": "ATAR of approximately 60-65 (or equivalent); satisfactory National Police Certificate required prior to placement.",
     "english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
@@ -16520,7 +16520,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://www.murdoch.edu.au/study/courses"
+    "source_url": "https://www.murdoch.edu.au/course/undergraduate/b1424"
   },
   {
     "university_slug": "murdoch-university",
@@ -16535,7 +16535,7 @@
     "tuition_domestic_is_csp": true,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "A three-year, 72 credit point arts degree built around a choice of about 14 majors across the humanities, social sciences and creative disciplines, including English and Creative Writing, History, Philosophy, Politics and International Studies, Asian Studies, Sociology, International Aid and Development, and Theatre and Creative Production. Students can take one or two majors and use Discovery units to reach into other disciplines.\n\nThe degree emphasises critical thinking, research and communication, with practical experience available through internships and community projects. Delivery is flexible, on campus, online or mixed. Entry is an ATAR of about 70 or equivalent, with alternative pathways available. Graduates work as policy and project officers, communications and media advisers, researchers and community development workers across government, international development, media and the not-for-profit sector. It suits students who want a broad, self-directed humanities degree rather than a narrowly vocational one.",
     "curriculum": null,
     "admission_requirements": "ATAR of approximately 60-65 (or equivalent); completion of WACE or equivalent secondary qualification.",
     "english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
@@ -16551,7 +16551,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://www.murdoch.edu.au/study/courses"
+    "source_url": "https://www.murdoch.edu.au/course/undergraduate/b1356"
   },
   {
     "university_slug": "murdoch-university",
@@ -16845,7 +16845,7 @@
     "tuition_domestic_is_csp": true,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "A three-year undergraduate degree in digital and creative production, with a choice of five majors: Games Art and Design, Graphic Design, Photography, Screen Production, and Sound Design. Students work with industry-standard tools across animation, video, design and interactive media, and build a portfolio of projects to show employers as they progress.\n\nThe course was designed with industry input, and students can get real client experience through MESH, Murdoch's on-campus creative consultancy. It can be combined with communication as a double degree. Entry is an ATAR of about 70, with a Media Portfolio Pathway available for applicants who can demonstrate creative potential without the standard results. Graduates work as designers, screen and sound producers, game artists, photographers and content creators across screen, games, advertising and digital media. It suits students who want a studio-based, portfolio-driven creative degree with clear industry connections.",
     "curriculum": null,
     "admission_requirements": "ATAR of approximately 60-65 (or equivalent); a portfolio or folio of creative work may be requested.",
     "english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
@@ -16861,7 +16861,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://www.murdoch.edu.au/study/courses"
+    "source_url": "https://www.murdoch.edu.au/course/undergraduate/b1343"
   },
   {
     "university_slug": "murdoch-university",
@@ -18109,7 +18109,7 @@
     "subject_slug": "biology-and-life-sciences",
     "id": "ddaa99cb-f992-4d3f-ae18-225d353190b7",
     "name": "Bachelor of Science",
-    "status": "published",
+    "status": "archived",
     "duration_years": null,
     "tuition_international": "32000",
     "tuition_domestic": "9700",
