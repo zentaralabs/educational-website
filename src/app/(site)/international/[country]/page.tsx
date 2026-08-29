@@ -50,7 +50,7 @@ export default async function OriginCountryPage({
 
   const breadcrumbs = [
     { label: "Home", href: "/" },
-    { label: "Study from your country", href: "/international" },
+    { label: "By country", href: "/international" },
     { label: c.name },
   ];
 
@@ -98,8 +98,8 @@ export default async function OriginCountryPage({
 
       <ProfileSection title="At a glance">
         <FactBox>
-          <Fact label="First-year budget" value="A$40,000 to A$75,000" />
-          <Fact label="Tuition (per year)" value="A$30,000 to A$50,000" />
+          <Fact label="First-year budget" value="A$40,000 to A$80,000" />
+          <Fact label="Tuition (per year)" value="A$28,000 to A$55,000" />
           <Fact label="Living costs (visa minimum)" value="A$29,710 / 12 months" />
           <Fact label="Student visa (500) fee" value="A$2,500" />
           <Fact label="Work rights" value="48 hrs / fortnight in session" />
@@ -108,9 +108,8 @@ export default async function OriginCountryPage({
         <p className="mt-2 font-body text-xs text-slate">
           Living costs and the visa fee are set by the Australian Government and
           are the same for every nationality. Tuition varies widely by
-          university and course. At recent rates the Australian dollar has
-          traded around 55 to 58 Indian rupees, but the rate moves, so price
-          your specific course.
+          university and course. Price your specific course in your own currency
+          at the current rate, since it moves.
         </p>
       </ProfileSection>
 
@@ -170,13 +169,12 @@ export default async function OriginCountryPage({
             requirement, which replaced the Genuine Temporary Entrant test in
             March 2024, and show genuine access to funds.
           </p>
+          {c.visaNote.map((p) => (
+            <p key={p.slice(0, 24)}>{p}</p>
+          ))}
           <p>
-            The common reasons {c.demonym} applications are refused: money that
-            appears in an account only days before applying, unexplained gaps in
-            study or work, and a course that does not build on what you have
-            already studied. Processing priority is set by government direction
-            and changes periodically; it is based mainly on the education
-            provider, not your nationality. Full detail is on the{" "}
+            Full detail on the visa itself, conditions, and family members is on
+            the{" "}
             <Link
               href="/visas/student-500"
               className="font-medium text-status-open underline underline-offset-2"

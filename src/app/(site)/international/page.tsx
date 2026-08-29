@@ -18,7 +18,7 @@ export default function InternationalHubPage() {
 
   const breadcrumbs = [
     { label: "Home", href: "/" },
-    { label: "Study from your country" },
+    { label: "By country" },
   ];
 
   return (
