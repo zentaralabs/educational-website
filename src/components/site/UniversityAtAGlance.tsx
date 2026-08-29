@@ -23,23 +23,25 @@ export type AtAGlanceProps = {
  * is repeated in more detail lower down the page; this is the at-a-glance
  * layer, per the homepage/university-page review. */
 export function UniversityAtAGlance(p: AtAGlanceProps) {
-  const english = [
-    p.ielts != null && `IELTS ${p.ielts}`,
-    p.pte != null && `PTE ${p.pte}`,
-  ]
-    .filter(Boolean)
-    .join(" · ");
+  // IELTS bands are conventionally written to one decimal (6.0, 6.5); PTE is a
+  // whole number.
+  const ieltsLabel = p.ielts != null ? `IELTS ${p.ielts.toFixed(1)}` : null;
+  const pteLabel = p.pte != null ? `PTE ${p.pte}` : null;
+  const english = [ieltsLabel, pteLabel].filter(Boolean).join(" · ");
 
   const goodFor: string[] = [];
   if (p.isGo8) goodFor.push("Research reputation and global rankings");
   if (p.isRegional)
     goodFor.push("Regional migration points (491 and 190 pathways)");
   if (p.tuition != null && p.tuition < 35_000 && !p.isGo8)
-    goodFor.push("Lower tuition than the Group of Eight");
+    goodFor.push(
+      `Lower tuition, from ${formatCurrency(p.tuition, p.currency)}/yr`,
+    );
   if (p.intakeTypes.length >= 2) goodFor.push("More than one intake a year");
   if (p.applicationFee === 0) goodFor.push("No application fee");
-  if (p.ielts != null && p.ielts <= 6.0)
-    goodFor.push("Entry with IELTS 6.0 at the institutional minimum");
+  if ((p.ielts != null && p.ielts <= 6.0) || (p.pte != null && p.pte <= 50)) {
+    goodFor.push(`Accepts ${[ieltsLabel, pteLabel].filter(Boolean).join(" or ")}`);
+  }
   if (p.selectivity === "Broadly accessible")
     goodFor.push("More open admissions across most courses");
 
@@ -50,8 +52,8 @@ export function UniversityAtAGlance(p: AtAGlanceProps) {
     weakerFor.push("Regional migration points, if you study on the metro campus");
   if (p.intakeTypes.length < 2)
     weakerFor.push("A mid-year start, if only one intake runs");
-  if (p.ielts != null && p.ielts >= 7.0)
-    weakerFor.push("Applicants with an English score below 7.0");
+  if ((p.ielts != null && p.ielts >= 7.0) || (p.pte != null && p.pte >= 65))
+    weakerFor.push("A lower English score (it wants IELTS 7.0 or equivalent)");
 
   return (
     <section className="mt-6">
