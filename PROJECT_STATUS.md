@@ -795,6 +795,29 @@ The `guide_related_guides` join table was empty and the admin picker was never u
 
 The DB join tables are still the override path; the code map is the fallback. If the admin related-picker ever gets used, DB rows show first.
 
+### Manual indexing submissions (2026-08-29)
+
+Done: the **10 expanded guides** were submitted to Google (GSC URL Inspection -> Request Indexing, all 10 -- 4 of them were "unknown to Google" before this) and Bing (URL Submission, batch of 10). The **12 visa pages** were submitted to Bing (URL Submission, batch of 12, 08:45). Bing daily quota is 100; ~22 used today.
+
+**TODO (2026-08-30 or later): Request Indexing for the 12 visa pages in Google Search Console**, one batch. Google's ~10/day Request-Indexing quota was already spent on the guides on 2026-08-29, so this waits a day. URLs:
+```
+https://www.wheretoapply.xyz/visas/student-500
+https://www.wheretoapply.xyz/visas/temporary-graduate-485
+https://www.wheretoapply.xyz/visas/skilled-independent-189
+https://www.wheretoapply.xyz/visas/skilled-nominated-190
+https://www.wheretoapply.xyz/visas/skilled-work-regional-491
+https://www.wheretoapply.xyz/visas/permanent-residence-skilled-regional-191
+https://www.wheretoapply.xyz/visas/skills-in-demand-482
+https://www.wheretoapply.xyz/visas/employer-nomination-scheme-186
+https://www.wheretoapply.xyz/visas/skilled-employer-sponsored-regional-494
+https://www.wheretoapply.xyz/visas/partner-visa-820-801
+https://www.wheretoapply.xyz/visas/partner-visa-309-100
+https://www.wheretoapply.xyz/visas/visitor-visa-600
+```
+GSC property is `sc-domain:wheretoapply.xyz` under `romanlama314@gmail.com` (the `/u/2/` Google account in the local Chrome profile). GSC search box is flaky under automation: click it, wait ~2s for the history dropdown, then type; navigate to a fresh `/inspect` URL between pages.
+
+**Policy for the rest of the site: do NOT manually request-index everything.** Manual Request Indexing / URL Submission is for the ~40-page spine (hubs, money pages, guides, visa pages) and for pages that materially changed. The other ~1,250 URLs (program pages, `/compare/{a}-vs-{b}` stat pages, individual scholarships, university profiles) ride the sitemap -- both engines crawl it on their own schedule, and re-requesting adds nothing. Long-tail indexing speed is a function of domain authority (backlinks, internal links), not submission volume.
+
 ### Still on the SEO list (biggest levers, all off-page)
 
 Backlinks (directory listings, digital PR pitching the calculator + round tracker, HARO), community distribution (Reddit/forums/FB groups), keyword-gap mining once GSC Performance has ~1-2 weeks of data, and the recurring-freshness engine (a post per SkillSelect round / state-nomination event).
