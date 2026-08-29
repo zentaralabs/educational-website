@@ -17521,13 +17521,13 @@
     "id": "e7775588-733a-4e8e-a523-7c8310408324",
     "name": "Bachelor of Laws (LLB) - Graduate Entry",
     "status": "published",
-    "duration_years": null,
+    "duration_years": "3.0",
     "tuition_international": "36500",
     "tuition_domestic": "16500",
     "tuition_domestic_is_csp": true,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "A three-year accelerated LLB for people who already hold a bachelor's degree in any field, giving a full professional law qualification without repeating undergraduate breadth. It is accredited by the Legal Practice Board of Western Australia, so completion satisfies the academic requirement for admission to legal practice in WA (the practical legal training component is completed separately after graduation).\n\nPractical experience is built in through the SCALES community law clinic, where students work with real clients, a mooting program in a purpose-built courtroom, and work-integrated learning placements with firms, government and community legal centres. Recognition of prior learning may give advanced standing. It suits graduates from science, health, criminology, business or arts backgrounds who want to practise law or pair legal skills with their existing field.",
     "curriculum": null,
     "admission_requirements": "ATAR of approximately 80+ (or equivalent); completion of WACE or equivalent secondary qualification.",
     "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
@@ -17543,7 +17543,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://www.murdoch.edu.au/study/courses"
+    "source_url": "https://www.murdoch.edu.au/course/undergraduate/B1340"
   },
   {
     "university_slug": "murdoch-university",
@@ -20094,13 +20094,13 @@
     "id": "971817c0-0749-480b-9dd7-0a54c7351c28",
     "name": "Master of Business Administration (Global)",
     "status": "published",
-    "duration_years": null,
+    "duration_years": "2.0",
     "tuition_international": "34000",
     "tuition_domestic": "29500",
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "A two-year MBA (48 credit points) that, unlike most Australian MBAs, requires no prior work experience, so it is built for early-career graduates and international students as much as for established managers. The core covers management, marketing, accounting, finance, strategy, and professional ethics, and students then choose a focus area such as business finance, people management, sustainability, health management, or international marketing.\n\nA work-integrated learning component places students with local businesses and government departments for a professional placement or applied research project. It runs face-to-face and online with three intakes a year (trimesters). Entry is a bachelor's degree, or a portfolio route with a CV, a GMAT or GRE score, and an 800-word statement. It suits people using the MBA to change career direction or to build a general management base early rather than to convert existing seniority into a formal qualification.",
     "curriculum": null,
     "admission_requirements": "A bachelor degree plus at least 2-3 years of relevant professional work experience (or equivalent).",
     "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
@@ -20116,7 +20116,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://www.murdoch.edu.au/study/courses"
+    "source_url": "https://www.murdoch.edu.au/course/postgraduate/m1279"
   },
   {
     "university_slug": "murdoch-university",
@@ -20218,13 +20218,13 @@
     "id": "f957ff3b-86fa-4a9e-80c3-5212b5226884",
     "name": "Master of Clinical Exercise Physiology",
     "status": "published",
-    "duration_years": null,
+    "duration_years": "1.0",
     "tuition_international": "36000",
     "tuition_domestic": "30000",
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "A one-year master's (three trimesters) that builds on an exercise science background to qualify graduates as clinical exercise physiologists. It covers exercise prescription, clinical assessment and behaviour change for chronic disease management, and includes a year-long industry placement working alongside Accredited Exercise Physiologists and other health professionals.\n\nThe program is accredited by Exercise and Sports Science Australia at exercise physiology level, so graduates are eligible to apply to register with ESSA as an Accredited Exercise Physiologist. Entry requires a weighted average of at least 60 in prior study plus current ESSA Exercise Scientist registration, a recent ESSA-accredited exercise science degree, or completion of a graduate entry assessment. Facilities include physiology laboratories and a performance centre with 3D motion capture. It suits exercise science graduates moving into clinical practice with chronic and complex conditions.",
     "curriculum": null,
     "admission_requirements": "A relevant bachelor degree in exercise/sport science, or equivalent, meeting ESSA accreditation prerequisites.",
     "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
@@ -20240,7 +20240,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://www.murdoch.edu.au/study/courses"
+    "source_url": "https://www.murdoch.edu.au/course/postgraduate/m1325"
   },
   {
     "university_slug": "murdoch-university",
@@ -20311,13 +20311,13 @@
     "id": "588418d2-215a-408f-925c-8bc0989365b8",
     "name": "Master of Counselling",
     "status": "published",
-    "duration_years": null,
+    "duration_years": "2.0",
     "tuition_international": "30000",
     "tuition_domestic": "25500",
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "A two-year master's usually entered after Murdoch's Graduate Diploma in Counselling (a comparable diploma from elsewhere may be accepted), with year one focused on theory and year two on either a research project or further coursework and case studies.\n\nTwo supervised placements are required: an internal one at Murdoch's on-campus Caladenia Clinic and an external one in a community agency, covering assessment and individual and group treatment with diverse clients. The course is accredited by the Psychotherapy and Counselling Federation of Australia and the Australian Counselling Association, and graduates are eligible for provisional PACFA registration and Level 2 ACA membership. Selection includes a personal statement, CV and interview. It is taught face-to-face in Perth and suits people committed to clinical counselling practice in government or non-government mental health settings.",
     "curriculum": null,
     "admission_requirements": "A relevant bachelor degree, or equivalent; some helping-profession experience preferred.",
     "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
@@ -20333,7 +20333,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://www.murdoch.edu.au/study/courses"
+    "source_url": "https://www.murdoch.edu.au/course/postgraduate/m1143"
   },
   {
     "university_slug": "murdoch-university",
@@ -20373,13 +20373,13 @@
     "id": "cd146af3-378a-40e3-848f-f4afc8df98ed",
     "name": "Master of Criminology",
     "status": "published",
-    "duration_years": null,
+    "duration_years": "2.0",
     "tuition_international": "32000",
     "tuition_domestic": "27000",
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "A two-year master's (48 credit points) open to graduates from any discipline, with three majors: Crime Science, Criminal Behaviour, and Legal Studies. The coursework covers criminological theory, criminal behaviour analysis, cybercrime, terrorism investigation, and the criminal law response to emerging offences, with an optional thesis pathway for students heading toward a PhD.\n\nTeaching staff include people with policing and forensic backgrounds, and the degree includes work-integrated learning. Advanced standing is generous: up to 12 credit points for a criminology honours degree or relevant experience, up to 24 for a graduate diploma in criminology. It runs face-to-face and online from the Perth campus with two intakes a year. It suits graduates and working professionals targeting law enforcement, intelligence, corrections, cybersecurity or criminal justice policy.",
     "curriculum": null,
     "admission_requirements": "A relevant bachelor degree, or equivalent.",
     "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
@@ -20395,7 +20395,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://www.murdoch.edu.au/study/courses"
+    "source_url": "https://www.murdoch.edu.au/course/postgraduate/m1314"
   },
   {
     "university_slug": "murdoch-university",
@@ -20559,13 +20559,13 @@
     "id": "41cf8853-c8c5-4430-92f2-ad82987ae764",
     "name": "Master of Environmental Science",
     "status": "published",
-    "duration_years": null,
+    "duration_years": "1.0",
     "tuition_international": "31000",
     "tuition_domestic": "26500",
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "A one-year master's built for people who already hold a graduate certificate or diploma in environmental assessment, management or science, taking that foundation into advanced research methods, 21st-century environmental policy, climate change adaptation for ecosystems and societies, and systems-dynamics modelling.\n\nField learning uses Murdoch's on-campus conservation wetlands and banksia woodland along with national and international field trips, and every student completes a supervised advanced research project with a written report and oral defence. It runs face-to-face or mixed-mode, with some external units still requiring short on-campus attendance. It suits environmental professionals moving into consulting, impact assessment or senior project roles who want a research-capable qualification while continuing to work.",
     "curriculum": null,
     "admission_requirements": "A relevant bachelor degree in science, or equivalent.",
     "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
@@ -20581,7 +20581,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://www.murdoch.edu.au/study/courses"
+    "source_url": "https://www.murdoch.edu.au/course/postgraduate/m1210"
   },
   {
     "university_slug": "murdoch-university",
@@ -20652,13 +20652,13 @@
     "id": "804d52bd-b3b7-4b60-ad58-3974b7475226",
     "name": "Master of Forensic Science",
     "status": "published",
-    "duration_years": null,
+    "duration_years": "1.5",
     "tuition_international": "33000",
     "tuition_domestic": "28000",
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "An 18-month master's (36 credit points) that is unusually hands-on for a forensic science degree. Students work across bloodstain pattern analysis, forensic chemistry and toxicology, fingerprint and impression evidence, forensic anthropology and clandestine grave work, digital forensics, and expert-witness and courtroom skills.\n\nThe practical side is the draw: multiple crime scene simulation rooms on and off campus, and Whitby Falls Farm, where students process a simulated large-scale homicide and a clandestine grave. Guest lecturers come from law enforcement, forensic laboratories and medicine, and students contribute to a Cold Case Review initiative. Entry requires a bachelor's degree in biological or chemical science or a related health field; criminology graduates without science units complete a graduate certificate or diploma first. It suits science graduates moving into forensic analysis, investigation or research roles in policing, national security or pathology.",
     "curriculum": null,
     "admission_requirements": "A relevant bachelor degree in science, or equivalent.",
     "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
@@ -20674,7 +20674,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://www.murdoch.edu.au/study/courses"
+    "source_url": "https://www.murdoch.edu.au/course/postgraduate/m1255"
   },
   {
     "university_slug": "murdoch-university",
@@ -20776,13 +20776,13 @@
     "id": "540cf70d-5332-458a-a7c9-adf8c671c699",
     "name": "Master of Human Resources Management",
     "status": "published",
-    "duration_years": null,
+    "duration_years": "2.0",
     "tuition_international": "30000",
     "tuition_domestic": "25500",
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "A two-year master's (48 credit points) with three trimester intakes a year, covering strategic HR planning and organisational change, talent acquisition and workforce planning, industrial relations and employment law, organisational culture, human capital development, reward strategy, and people analytics and evidence-based decision-making.\n\nMurdoch builds in virtual-reality simulations, with avatars used to practise interviews and conflict resolution, alongside digital HR platforms and real industry projects with guest lecturers from healthcare, IT, aged care, banking and education. The course is professionally accredited. Entry is a bachelor's degree plus about two years of work experience, or a demonstrated equivalent through professional experience subject to approval. It suits career changers moving into HR and practitioners wanting to move from operational to strategic people-management roles.",
     "curriculum": null,
     "admission_requirements": "A relevant bachelor degree, or equivalent; some professional experience preferred.",
     "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
@@ -20798,7 +20798,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://www.murdoch.edu.au/study/courses"
+    "source_url": "https://www.murdoch.edu.au/course/postgraduate/m1213"
   },
   {
     "university_slug": "murdoch-university",
@@ -20962,13 +20962,13 @@
     "id": "9b47dd76-f073-4e77-a160-6990f298c67c",
     "name": "Master of Professional Accounting (Advanced)",
     "status": "published",
-    "duration_years": null,
+    "duration_years": "2.0",
     "tuition_international": "32000",
     "tuition_domestic": "28000",
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "A two-year conversion master's (48 credit points) accredited by both CPA Australia and Chartered Accountants Australia and New Zealand, so graduates meet the academic entry requirement for the CPA Program and the CA ANZ Chartered Accountants Program.\n\nIt is explicitly for people without an accounting background: applicants who already hold an accounting major from an Australian university are not admitted. Students work in project teams with industry partners including government agencies, mining companies, accounting firms and real estate organisations, applying accounting and business finance theory to live problems. It runs face-to-face and online with three trimester intakes a year. It suits graduates from other fields moving into accounting, audit, tax, financial forensics, restructuring or enterprise risk work.",
     "curriculum": null,
     "admission_requirements": "A bachelor degree in any discipline (no prior accounting background required for the standard entry stream).",
     "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
@@ -20984,7 +20984,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://www.murdoch.edu.au/study/courses"
+    "source_url": "https://www.murdoch.edu.au/course/postgraduate/m1274"
   },
   {
     "university_slug": "murdoch-university",
@@ -21055,13 +21055,13 @@
     "id": "158016d8-4835-42e6-b0cb-155e26086fc7",
     "name": "Master of Public Policy",
     "status": "published",
-    "duration_years": null,
+    "duration_years": "2.0",
     "tuition_international": "30000",
     "tuition_domestic": "25500",
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "A two-year master's (48 credit points) covering the foundations of public policy, comparative governance, public sector administration and management, political communication, and public sector corruption and its prevention, with electives in areas such as environmental policy and international development.\n\nStudents complete a research project with a Murdoch industry partner for academic credit, and there is an optional in-country study option in Indonesia through the ACICIS consortium. It is open to graduates of any discipline and runs face-to-face or blended from the Perth campus with two intakes a year. Recognition of prior learning can shorten it. It suits recent graduates and working professionals aiming for roles as policy analysts, ministerial advisers, evaluation officers or policy consultants in government, the not-for-profit sector or consulting.",
     "curriculum": null,
     "admission_requirements": "A relevant bachelor degree, or equivalent.",
     "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
@@ -21077,7 +21077,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://www.murdoch.edu.au/study/courses"
+    "source_url": "https://www.murdoch.edu.au/course/postgraduate/m1394"
   },
   {
     "university_slug": "murdoch-university",
@@ -21117,13 +21117,13 @@
     "id": "ac1dd72e-c45d-4523-87b4-337d870f5cac",
     "name": "Master of Science in Information Technology",
     "status": "published",
-    "duration_years": null,
+    "duration_years": "1.5",
     "tuition_international": "35000",
     "tuition_domestic": "24500",
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "An 18-month master's (36 credit points) with three specialisations: Artificial Intelligence and Data Science, Cyber Security and Networking, and Information Technology Management. The coursework covers IT systems management, data science, networking and network security, decision-making in IT environments, and the legal and ethical side of ICT, with an optional dissertation pathway and a one-year exit point to a graduate diploma.\n\nEntry accepts non-IT graduates: an ACS-accredited IT bachelor's degree, or a bachelor's degree plus an approved AQF Level 8 IT qualification, or an honours degree with five or more years of relevant experience. It runs face-to-face and online. It suits people moving toward senior technical and management roles such as IT manager, CIO or director of technology.",
     "curriculum": null,
     "admission_requirements": "A relevant bachelor degree, or equivalent; no prior IT background required for the standard entry stream.",
     "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
@@ -21139,7 +21139,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://www.murdoch.edu.au/study/courses"
+    "source_url": "https://www.murdoch.edu.au/course/postgraduate/m1294"
   },
   {
     "university_slug": "murdoch-university",
