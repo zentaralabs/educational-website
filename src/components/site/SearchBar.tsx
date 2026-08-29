@@ -51,7 +51,7 @@ export function SearchBar({
           onChange={(e) => setValue(e.target.value)}
           onFocus={() => setFocused(true)}
           onBlur={() => setFocused(false)}
-          aria-label="Search universities and guides"
+          aria-label="Search universities, courses, visas, scholarships and guides"
           className="flex-1 bg-transparent font-body text-lg text-ink outline-hidden!"
         />
       </div>

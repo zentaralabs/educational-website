@@ -188,7 +188,7 @@ export default async function Home() {
 
           <div className="animate-fade-up mt-12" style={{ animationDelay: "160ms" }}>
             <p className="mb-2.5 font-body text-sm text-slate">
-              Already know the university or course? Search for it:
+              Already know the university, course, or visa? Search for it:
             </p>
             <SearchBar className="mt-0" />
             <div className="mt-3 flex justify-center">

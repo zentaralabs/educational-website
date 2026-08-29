@@ -12,7 +12,11 @@ const PHRASES = [
 ];
 
 const TYPE_SPEED_MS = 45;
-const HOLD_MS = 2 * 60 * 1000; // pause on the fully-typed phrase before it vanishes
+// Dwell on each finished phrase, then move on. Short enough that a visitor
+// actually sees the variety (a course, a visa, a scholarship, a
+// university) and understands the search covers all of it, not just
+// universities.
+const HOLD_MS = 2600;
 const VANISH_MS = 450;
 
 /**
