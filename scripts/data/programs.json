@@ -322,7 +322,7 @@
     "tuition_domestic_is_csp": true,
     "currency": "AUD",
     "application_url": "https://student-adelaideuni.studylink.com",
-    "description": null,
+    "description": "The Bachelor of Business with an International Business major, on the standard three-year Bachelor of Business structure (common core, business program core, 48-unit major, work-integrated learning, electives).\n\nThe major's 48 units cover managing across cultures, the international business environment and operations, international human resource management, international business in the Asia-Pacific, internationalisation of small and medium enterprises, and contemporary issues in international business. Professional internships run through the degree, and flexible electives leave room for a semester of international exchange. It suits students aiming at trade, export, global supply chain, or multinational management roles.",
     "curriculum": null,
     "admission_requirements": "ATAR 70 (secondary-qualification equivalents apply for international applicants)",
     "english_requirements": "IELTS Overall 6.5, no band below 6.0 (or equivalent PTE/TOEFL)",
@@ -338,7 +338,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-business-international-business/"
+    "source_url": "https://www.adelaide.edu.au/study/degrees/bachelor-of-business-international-business/"
   },
   {
     "university_slug": "adelaide-university",
@@ -353,7 +353,7 @@
     "tuition_domestic_is_csp": true,
     "currency": "AUD",
     "application_url": "https://student-adelaideuni.studylink.com",
-    "description": null,
+    "description": "The Bachelor of Business with a Management major, sharing the standard three-year Bachelor of Business structure (common core, business program core, 48-unit major, work-integrated learning, electives).\n\nThe Management major covers organisational behaviour, organisational leadership, managing decision making and communication, the international business environment, foundations of project management, applied creativity for business, triple bottom line and innovation, and managing ethics and values. Work-integrated learning is taken as a workplace placement or an alternative such as the eChallenge startup course. It is the general-purpose major for students heading into supervisory and operations roles across industries.",
     "curriculum": null,
     "admission_requirements": "ATAR 70 (secondary-qualification equivalents apply for international applicants)",
     "english_requirements": "IELTS Overall 6.5, no band below 6.0 (or equivalent PTE/TOEFL)",
@@ -369,7 +369,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-business-management/"
+    "source_url": "https://www.adelaide.edu.au/study/degrees/bachelor-of-business-management/"
   },
   {
     "university_slug": "adelaide-university",
@@ -384,7 +384,7 @@
     "tuition_domestic_is_csp": true,
     "currency": "AUD",
     "application_url": "https://student-adelaideuni.studylink.com",
-    "description": null,
+    "description": "This is the Bachelor of Business with a Marketing major. The degree structure is the same across all Bachelor of Business majors: a common core, a business program core (accounting, management, business analytics, marketing principles), a 48-unit major, a work-integrated learning block, and electives, over three years.\n\nThe Marketing major's 48 units cover consumer behaviour, marketing analytics, advertising, market research and customer insights, branding, distribution, marketing planning, and service design. Work-integrated learning is taken as an Integrated Marketing course or an internship. It suits students aiming at brand management, market research, digital marketing, or advertising roles.",
     "curriculum": null,
     "admission_requirements": "ATAR 70 (secondary-qualification equivalents apply for international applicants)",
     "english_requirements": "IELTS Overall 6.5, no band below 6.0 (or equivalent PTE/TOEFL)",
@@ -400,7 +400,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-business-marketing/"
+    "source_url": "https://www.adelaide.edu.au/study/degrees/bachelor-of-business-marketing/"
   },
   {
     "university_slug": "adelaide-university",
@@ -508,7 +508,7 @@
     "tuition_domestic_is_csp": true,
     "currency": "AUD",
     "application_url": "https://student-adelaideuni.studylink.com",
-    "description": null,
+    "description": "The Bachelor of Business with a Project Management major, on the standard three-year Bachelor of Business structure (common core, business program core, 48-unit major, work-integrated learning, electives).\n\nThe major's 48 units cover foundations of project management, scheduling and cost management, project management methodologies, systems thinking, project risk management, infrastructure and sustainability, and a project management research study. Work-integrated learning is a 12-unit Project Management Professional Practice course in third year. The major is accredited by the Project Management Institute's Global Accreditation Center, which is useful for students planning to pursue PMI certification.",
     "curriculum": null,
     "admission_requirements": "ATAR 70 (secondary-qualification equivalents apply for international applicants)",
     "english_requirements": "IELTS Overall 6.5, no band below 6.0 (or equivalent PTE/TOEFL)",
@@ -524,7 +524,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-business-project-management/"
+    "source_url": "https://www.adelaide.edu.au/study/degrees/bachelor-of-business-project-management/"
   },
   {
     "university_slug": "adelaide-university",
