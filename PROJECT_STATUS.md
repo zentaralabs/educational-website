@@ -1022,3 +1022,15 @@ From a "make the homepage say universities + courses + visas, surface visa in se
 - **Not done (deliberate):** the university-logo marquee — no logo assets exist, and a "trusted by" logo wall cuts against the site's prominent "independent, not affiliated" positioning (trademark/endorsement-implication risk). A static names-only "we cover every AU university" block is the safer version if wanted later.
 - **Also parked:** a real as-you-type search dropdown on the homepage box (currently redirects to `/search`). Moderate feature.
 - Verified in dev: homepage renders (mobile + desktop), "485 graduate visa" / "student visa 500" return clean visa-first results; tsc + eslint clean.
+
+### Homepage polish round 2 (2026-08-30, same day)
+
+Follow-on tweaks after review:
+- **Country flags** — `src/lib/flag.ts` (`flagEmoji(iso2)`, regional-indicator pair). `OriginCountry` config gained a `code` field (IN/NP/PK/CN/VN/BD/LK). Flags render on the homepage scope line, the `/international` hub cards, and each `/international/[country]` H1. Degrades to the letter pair on Windows Chrome, acceptable.
+- **Quiz CTA restyled** — "Find my universities" was reading as a label for the search box under it. Now accent-green fill (was navy, which blended with the header + toggle), larger, resting glow shadow, arrow nudges on hover. The redundant full-width quiz card in the "What are you looking for?" grid was **removed** (the hero button is enough); grid back to its 8 task cards.
+- **`SearchBar` "Enter" button** goes accent-green once there's a query (matches the CTA); muted outline when empty.
+- **Search-scope clarity** — homepage intro "Already know the university**, course, or visa**? Search for it:"; `AnimatedPlaceholder` `HOLD_MS` cut from **2 minutes** (!) to 2.6s so the placeholder actually cycles and visitors see the visa/scholarship examples, not just phrase #1; `aria-label` lists the full scope.
+- **Australia focus made unmistakable** — stat pill now leads with `🇦🇺 AUSTRALIA · …`; subhead leads with "Compare **Australian** universities and courses" (was "…for Australia" at the end); the "Or browse by country: Australia" line (implied a picker with one option) is now a scope statement — "🇦🇺 Covering Australia in full. Other study destinations are on the way." — and auto-reverts to browse-links when `listPublicCountries()` returns >1.
+- Commits: `84b08f8` (flags), `760ebff` (CTA), `db7db76` (drop redundant card), `ca1f1c9` (green Enter), `f5c57fe` (search scope), `00c884e` (Australia focus). All pushed + deploying.
+
+**Sitemap:** none of the 2026-08-30 work (curation, comparison tables, homepage polish) adds or removes URLs — the sitemap URL set is unchanged since the ~868-program-URL / 1,145-total version. The GSC + Bing resubmit noted at the top of Section 27 (for that 1,145-URL version, after the threshold-100 push) is **still outstanding on the user** and still worth doing; today's content changes to `/study/*` and `/` just make a resubmit a slightly better nudge for recrawl.
