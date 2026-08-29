@@ -13,6 +13,10 @@ import { listPublishedScholarshipSlugs } from "@/lib/queries/public-scholarships
 import { listPublishedSubjects } from "@/lib/queries/public-subjects";
 import { listPublishedUniversitySlugs } from "@/lib/queries/public-universities";
 import { listPublishedVisaSlugs } from "@/lib/queries/public-visas";
+import {
+  isProgramIndexable,
+  listPublishedProgramsForSitemap,
+} from "@/lib/queries/public-programs";
 
 export const revalidate = 3600;
 
@@ -62,7 +66,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     listPublishedScholarshipSlugs(),
   ]);
 
-  const subjects = await listPublishedSubjects();
+  const [subjects, programRows] = await Promise.all([
+    listPublishedSubjects(),
+    listPublishedProgramsForSitemap(),
+  ]);
 
   const now = new Date();
 
@@ -172,11 +179,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }));
 
-  // Program pages (/universities/{slug}/programs/{id}) are deliberately kept
-  // out of the sitemap and are noindex: today they are a thin data template
-  // over an unverified dataset. They stay live for users and internal links.
-  // When high-demand programs are rebuilt with real sourced content, add
-  // those back here and remove their noindex.
+  // Program pages (/universities/{slug}/programs/{id}): only the ones with
+  // real sourced content of their own are indexed and listed here (see
+  // `isProgramIndexable`). The short templated long-tail cards stay noindex
+  // and out of the sitemap, still live for users and internal links.
+  const programEntries: MetadataRoute.Sitemap = programRows
+    .filter(
+      (p) => p.university?.slug && p.university.status === "published" && isProgramIndexable(p),
+    )
+    .map((p) => ({
+      url: `${SITE_URL}/universities/${p.university!.slug}/programs/${p.id}`,
+      lastModified: p.updated_at ? new Date(p.updated_at) : now,
+      changeFrequency: "monthly" as const,
+      priority: 0.5,
+    }));
 
   return [
     ...staticEntries,
@@ -192,5 +208,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...cityEntries,
     ...originCountryEntries,
     ...stateEntries,
+    ...programEntries,
   ];
 }

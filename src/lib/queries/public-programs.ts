@@ -1,5 +1,26 @@
 import { createPublicClient } from "@/lib/supabase/public";
 
+/**
+ * Whether a program page carries enough of its own content to be worth
+ * indexing (and listing in the sitemap). Program pages are otherwise a thin
+ * data template over an AI-imported dataset, so we only index the ones that
+ * have real sourced prose: either a parsed `curriculum` (the fully-enriched
+ * set) or an "About this program" description of at least 110 words (the
+ * demand-tier degree cards written in the 2026-08 description pass). The
+ * short templated long-tail cards (grad cert/diploma families, one-year
+ * honours years, pathway/enabling) stay noindex and out of the sitemap,
+ * still live for users and internal links, until a later verification wave.
+ * See PROJECT_STATUS.md "Description pass" / "Program pages".
+ */
+export function isProgramIndexable(program: {
+  description?: string | null;
+  curriculum?: string | null;
+}): boolean {
+  if (program.curriculum && program.curriculum.trim()) return true;
+  const words = (program.description ?? "").trim().split(/\s+/).filter(Boolean);
+  return words.length >= 110;
+}
+
 export type PublicProgramRow = {
   id: string;
   name: string;
@@ -103,14 +124,18 @@ export async function getPublishedProgram(
 export type SitemapProgramRow = {
   id: string;
   updated_at: string | null;
+  description: string | null;
+  curriculum: string | null;
   university: { slug: string; status: string } | null;
 };
 
 /**
- * All published programs with their parent university's slug, for the
- * sitemap. Paginated in pages of 1000 — PostgREST's default response cap,
- * already hit once before by this project's own program count (see
- * PROJECT_STATUS.md Section 13's "1,103 total AU program rows" note).
+ * All published programs at launched universities, with the fields needed to
+ * decide indexability (`isProgramIndexable`) and their parent university's
+ * slug, for the sitemap. The caller filters to indexable rows. Paginated in
+ * pages of 1000 — PostgREST's default response cap, already hit once before
+ * by this project's own program count (see PROJECT_STATUS.md Section 13's
+ * "1,103 total AU program rows" note).
  */
 export async function listPublishedProgramsForSitemap(): Promise<SitemapProgramRow[]> {
   const supabase = createPublicClient(["programs:list"]);
@@ -121,7 +146,7 @@ export async function listPublishedProgramsForSitemap(): Promise<SitemapProgramR
     const { data, error } = await supabase
       .from("programs")
       .select(
-        "id, updated_at, university:universities!inner(slug, status, country:countries!inner(is_launched))",
+        "id, updated_at, description, curriculum, university:universities!inner(slug, status, country:countries!inner(is_launched))",
       )
       .eq("status", "published")
       .eq("university.status", "published")

@@ -8,7 +8,7 @@ import { ProgramSidebar } from "@/components/site/ProgramSidebar";
 import { ArrowUpRightIcon, BookIcon, CheckBadgeIcon } from "@/components/site/icons";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import { SITE_YEAR } from "@/lib/site-config";
-import { getPublishedProgram } from "@/lib/queries/public-programs";
+import { getPublishedProgram, isProgramIndexable } from "@/lib/queries/public-programs";
 
 export const revalidate = 3600;
 
@@ -67,12 +67,12 @@ export async function generateMetadata({
     alternates: { canonical: url },
     openGraph: { title, description, url, type: "website" },
     twitter: { card: "summary_large_image", title, description },
-    // Program pages are currently a thin data template (name + a few fields)
-    // and the underlying dataset is unverified (AI-pipeline import, no seed
-    // script). Kept live for users browsing a university's courses and for
-    // internal links, but noindex until the high-demand ones are rebuilt
-    // with real, sourced content. See PROJECT_STATUS "Program pages".
-    robots: { index: false, follow: true },
+    // Index only programs with real sourced content of their own — a parsed
+    // curriculum or an "About this program" description of 110+ words (see
+    // `isProgramIndexable`). The short templated long-tail cards stay
+    // noindex, still live for users and internal links, pending a later
+    // verification wave. See PROJECT_STATUS "Description pass".
+    robots: { index: isProgramIndexable(program), follow: true },
   };
 }
 
