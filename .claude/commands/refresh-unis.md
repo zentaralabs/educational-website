@@ -9,16 +9,17 @@ First read the memory file **`refresh-university-data.md`** — it has the full 
 
 ## Deadlines (always do this part)
 
-`scripts/seed_deadlines.mjs` does a destructive delete + reinsert of all AU deadline rows.
+`scripts/seed_deadlines.mjs` **rewrites the deadline rows for ALL 56 AU universities and colleges every run** (destructive delete + reinsert). So every institution gets refreshed data — the manual verification below is just focused on the rows a human actually needs to re-check, because most non-Go8 notes ("rolling, apply ~3 months ahead") don't change year to year while the firm calendar dates do.
 
-1. Bump `TODAY` and the `INTAKES` anchor dates + `when:` strings to the current admissions cycle.
-2. **Re-verify every `PER_UNI` firm date** against its official page (use the browser tool, most uni sites 403 WebFetch):
+1. Bump `TODAY` and the `INTAKES` anchor dates + `when:` strings to the current admissions cycle. (This alone re-dates all 51 rolling/generic universities.)
+2. **Re-verify every `PER_UNI` firm date** against its official page — these 5 change yearly and a wrong one is a real error (use the browser tool, most uni sites 403 WebFetch):
    - Sydney — https://www.sydney.edu.au/study/applying/application-dates.html
    - ANU — https://study.anu.edu.au/apply/international-applications
    - Melbourne UG — https://study.unimelb.edu.au/how-to-apply/undergraduate-study/international-applications/entry-requirements/important-dates
    - UWA — https://www.uwa.edu.au/study/how-to-apply/international-applicants (click "All other countries" tab; seed uses the earlier of the two country-group dates)
    - UTS — https://www.uts.edu.au/for-students/admissions-entry/application-dates
-3. Spot-check ~5 `ROLLING` universities against `ROLLING_SOURCE[slug]` — confirm the stated lead time in the note still matches.
+   Also confirm UNSW hasn't switched from rolling to published 2027+ dates (https://www.unsw.edu.au/study/how-to-apply/application-deadline-dates).
+3. **Rotating spot-check of the `ROLLING` map** (~27 unis) so all get re-checked across a year: pick a different third each quarter (roughly 9 universities) and confirm the lead-time claim in the `ROLLING[slug]` note still matches `ROLLING_SOURCE[slug]`. If a rolling university has started publishing a fixed calendar date, promote it to `PER_UNI`.
 4. `grep -n "—\|–" scripts/seed_deadlines.mjs` must be empty (em-dash rule).
 5. `node --check scripts/seed_deadlines.mjs` then `node scripts/seed_deadlines.mjs` (expect ~221 rows / 56 universities).
 6. Revalidate prod:
