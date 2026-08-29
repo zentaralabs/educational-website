@@ -785,6 +785,16 @@ Word counts land near or above the "fine" 2026-08-26 batch (568-646) and carry m
 - robots.txt: GSC report still shows "No robots.txt file" (new domain property, report lags); Live Test confirms Googlebot fetches `https://www.wheretoapply.xyz/robots.txt` fine ("URL is available to Google"). Crawl queued.
 - Bing: sitemap submitted, Success, 1.3K URLs. IndexNow submissions confirmed landing (URL Submission page shows 3 URLs submitted today, quota 97 left); the dedicated IndexNow tab still shows only the promo splash (new-property lag).
 
+### Internal-linking pass (commit bda956a)
+
+The `guide_related_guides` join table was empty and the admin picker was never used, so guide pages rendered no "Keep reading" section and visa pages linked to zero guides. Added `src/lib/related-content.ts` (curated `{href,label}` maps for guide, visa, and blog slugs, same config-in-code pattern as `subjects.ts` / `collections.ts`) and a shared `RelatedLinks` component:
+- **Guide pages**: "Keep reading" now always renders, merging any DB related rows with 3-6 curated guide + visa links, capped at 6.
+- **Visa detail pages**: new "Related guides and visas" section.
+- **Blog posts**: new "Related reading" block (guides + visa pages + invitation-round tracker + points calculator, by post slug).
+- **Study subject pages**: related list gained `/visas/student-500` and the points-test guide.
+
+The DB join tables are still the override path; the code map is the fallback. If the admin related-picker ever gets used, DB rows show first.
+
 ### Still on the SEO list (biggest levers, all off-page)
 
 Backlinks (directory listings, digital PR pitching the calculator + round tracker, HARO), community distribution (Reddit/forums/FB groups), keyword-gap mining once GSC Performance has ~1-2 weeks of data, and the recurring-freshness engine (a post per SkillSelect round / state-nomination event).
