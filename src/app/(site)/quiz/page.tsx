@@ -6,12 +6,12 @@ export const revalidate = 3600;
 export const metadata = {
   title: "Which Australian University Is Right for You? (Quiz)",
   description:
-    "Answer a few questions about degree level, budget, and institution type to get matched with real Australian universities that fit.",
+    "Match yourself to real Australian universities by degree level, field of study, budget, IELTS, city, institution type, regional campus, and scholarships.",
   alternates: { canonical: "/quiz" },
 };
 
 export default async function QuizPage() {
-  const { countries, degreeLevels } = await listQuizOptions();
+  const { degreeLevels, subjects, cities } = await listQuizOptions();
 
   return (
     <main className="mx-auto w-full max-w-2xl px-6 pt-8 pb-16">
@@ -19,11 +19,16 @@ export default async function QuizPage() {
         Find the right university for me
       </h1>
       <p className="mt-2 font-body text-base text-slate">
-        Four quick questions, matched against real deadlines, costs, and
-        requirements. Not a lead-gen form.
+        A few quick questions, matched against real deadlines, costs, English
+        requirements, and scholarships. Skip anything that does not matter to
+        you. Not a lead-gen form.
       </p>
 
-      <QuizForm countries={countries} degreeLevels={degreeLevels} />
+      <QuizForm
+        degreeLevels={degreeLevels}
+        subjects={subjects}
+        cities={cities}
+      />
     </main>
   );
 }

@@ -10,6 +10,14 @@ const BUDGET_OPTIONS = [
   { label: "No budget limit", value: "" },
 ];
 
+const IELTS_OPTIONS = [
+  { label: "Not sure yet", value: "" },
+  { label: "5.5", value: "5.5" },
+  { label: "6.0", value: "6.0" },
+  { label: "6.5", value: "6.5" },
+  { label: "7.0+", value: "7.0" },
+];
+
 function OptionGroup({
   label,
   options,
@@ -48,40 +56,40 @@ function OptionGroup({
 }
 
 export function QuizForm({
-  countries,
   degreeLevels,
+  subjects,
+  cities,
 }: {
-  countries: { code: string; name: string }[];
   degreeLevels: string[];
+  subjects: { slug: string; name: string }[];
+  cities: { slug: string; name: string }[];
 }) {
   const router = useRouter();
-  const [country, setCountry] = useState("");
   const [degreeLevel, setDegreeLevel] = useState("");
+  const [subject, setSubject] = useState("");
   const [budget, setBudget] = useState("");
+  const [ielts, setIelts] = useState("");
+  const [city, setCity] = useState("");
   const [institutionType, setInstitutionType] = useState("");
+  const [regional, setRegional] = useState("");
+  const [scholarship, setScholarship] = useState("");
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     const params = new URLSearchParams();
-    if (country) params.set("country", country);
     if (degreeLevel) params.set("degree", degreeLevel);
+    if (subject) params.set("subject", subject);
     if (budget) params.set("budget", budget);
+    if (ielts) params.set("ielts", ielts);
+    if (city) params.set("city", city);
     if (institutionType) params.set("type", institutionType);
+    if (regional) params.set("regional", "1");
+    if (scholarship) params.set("scholarship", "1");
     router.push(`/quiz/results?${params.toString()}`);
   }
 
   return (
     <form onSubmit={handleSubmit} className="mt-8 flex flex-col gap-8">
-      <OptionGroup
-        label="Which country?"
-        value={country}
-        onChange={setCountry}
-        options={[
-          { label: "Any country", value: "" },
-          ...countries.map((c) => ({ label: c.name, value: c.code })),
-        ]}
-      />
-
       <OptionGroup
         label="Degree level"
         value={degreeLevel}
@@ -92,11 +100,46 @@ export function QuizForm({
         ]}
       />
 
+      <div>
+        <p className="mb-2 font-body text-sm font-semibold tracking-wide text-ink uppercase">
+          Field of study
+        </p>
+        <select
+          value={subject}
+          onChange={(e) => setSubject(e.target.value)}
+          className="w-full max-w-sm rounded-md border border-ink/20 bg-paper px-3 py-2 font-body text-sm text-ink focus:border-status-open focus:outline-none"
+        >
+          <option value="">Any field</option>
+          {subjects.map((s) => (
+            <option key={s.slug} value={s.slug}>
+              {s.name}
+            </option>
+          ))}
+        </select>
+      </div>
+
       <OptionGroup
         label="Annual budget (international tuition)"
         value={budget}
         onChange={setBudget}
         options={BUDGET_OPTIONS}
+      />
+
+      <OptionGroup
+        label="Your IELTS (or expected)"
+        value={ielts}
+        onChange={setIelts}
+        options={IELTS_OPTIONS}
+      />
+
+      <OptionGroup
+        label="Preferred city"
+        value={city}
+        onChange={setCity}
+        options={[
+          { label: "Any city", value: "" },
+          ...cities.map((c) => ({ label: c.name, value: c.slug })),
+        ]}
       />
 
       <OptionGroup
@@ -107,6 +150,26 @@ export function QuizForm({
           { label: "No preference", value: "" },
           { label: "Public", value: "public" },
           { label: "Private", value: "private" },
+        ]}
+      />
+
+      <OptionGroup
+        label="Regional campus (extra migration points)"
+        value={regional}
+        onChange={setRegional}
+        options={[
+          { label: "No preference", value: "" },
+          { label: "Prefer a regional campus", value: "1" },
+        ]}
+      />
+
+      <OptionGroup
+        label="Scholarships"
+        value={scholarship}
+        onChange={setScholarship}
+        options={[
+          { label: "Show all", value: "" },
+          { label: "Only with an automatic scholarship", value: "1" },
         ]}
       />
 
