@@ -4352,7 +4352,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": "https://bond.edu.au/program/bachelor-actuarial-science",
-    "description": null,
+    "description": "This is a two-semester honours program (80 credit points), taken after the Bachelor of Actuarial Science, not a standalone degree. Semester one covers Actuarial Control Cycle 1 and the first part of a research thesis; semester two covers Actuarial Control Cycle 2, statistical learning and regression models, and the second part of the thesis, which ends with a research seminar. Thesis topics are drawn from current developments in actuarial practice and financial services.\n\nCompleting it gives all university components of Part II of the Actuaries Institute's Actuary Program. Full Part II accreditation also requires two further subjects delivered online by the Actuaries Institute. Students who want the professional pathway generally take this honours year rather than stopping at the pass degree.",
     "curriculum": null,
     "admission_requirements": "Completion of Australian Year 12 (or equivalent) with strong results in Mathematical Methods/Specialist Mathematics; Bond applies its own admission score rather than a strict ATAR cut-off, and considers alternative pathways (Diploma, Foundation Program).",
     "english_requirements": "IELTS Overall 6.5, with no band below 6.0 (or equivalent).",
@@ -4368,7 +4368,7 @@
     "pte_speaking": null,
     "intake_dates": "January, May, September",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://bond.edu.au/program/bachelor-actuarial-science"
+    "source_url": "https://bond.edu.au/program/bachelor-of-actuarial-science-honours"
   },
   {
     "university_slug": "bond-university",
@@ -4414,7 +4414,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": "https://bond.edu.au/program/bachelor-arts",
-    "description": null,
+    "description": "Bond's Bachelor of Arts is a two-year degree (six semesters) built around majors rather than a fixed curriculum: students take three university core subjects, then either two majors with nine electives or three majors with three electives. More than 20 majors are grouped into communication (journalism, public relations, advertising, social media, corporate storytelling), creative arts (film and television, digital media, media studies), global studies and philosophy (international relations, sustainability, philosophy), and social sciences (psychology, criminology, counselling interventions).\n\nRelevant public relations majors are accredited by the Public Relations Institute of Australia, and teaching is project-based with small classes. Because the structure is modular, students commonly use it to combine two fields that do not usually sit in one degree, or as a faster route into postgraduate study.",
     "curriculum": null,
     "admission_requirements": "Completion of Australian Year 12 (or equivalent); Bond applies its own admission score rather than a standard ATAR cut-off, and offers pathway entry through the Diploma or College Foundation Program.",
     "english_requirements": "IELTS Overall 6.5, with no band below 6.0 (or equivalent).",
@@ -4430,7 +4430,7 @@
     "pte_speaking": null,
     "intake_dates": "January, May, September",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://bond.edu.au/program/bachelor-arts"
+    "source_url": "https://bond.edu.au/program/bachelor-of-arts"
   },
   {
     "university_slug": "bond-university",
@@ -4624,7 +4624,7 @@
     "subject_slug": "data-science",
     "id": "570e4cef-8397-4280-b0f5-939282940989",
     "name": "Bachelor of Business Data Analytics",
-    "status": "published",
+    "status": "archived",
     "duration_years": "2.0",
     "tuition_international": "40900",
     "tuition_domestic": "40900",
@@ -4848,7 +4848,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": "https://bond.edu.au/program/bachelor-of-clinical-exercise-physiology",
-    "description": null,
+    "description": "Bond added this degree to replace its Bachelor of Exercise and Sports Science, which stops taking students from January 2027. It runs over seven semesters (two years and four months) and moves from foundational exercise science into clinical practice, covering anatomy, pathophysiology, exercise prescription, behaviour change, biomechanics, and digital health.\n\nStudents complete at least 500 hours of supervised clinical placement across rehabilitation, sport, private practice, and community health, weighted toward the final year (roughly 70, 70, 180, and 180 hours across semesters three, four, six, and seven). One caveat for prospective students: as of 2026 the program is not yet accredited by Exercise and Sports Science Australia. Bond has applied and expects a decision in late 2026, aiming for provisional accreditation before the first cohort graduates. Accreditation is what allows graduates to register as Accredited Exercise Physiologists, so applicants should confirm its status before enrolling.",
     "curriculum": null,
     "admission_requirements": "Completion of Australian Year 12 (or equivalent) with strong results in science subjects (Chemistry/Biology where relevant); Bond applies its own admission score, and some programs require an interview or additional selection criteria.",
     "english_requirements": "IELTS Overall 6.5, with no band below 6.0 (or equivalent).",
@@ -4879,7 +4879,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": "https://bond.edu.au/program/bachelor-commerce",
-    "description": null,
+    "description": "Bond runs the Bachelor of Commerce over two years (six semesters) on its three-semesters-a-year calendar, so students finish a year sooner than a standard Australian three-year degree. First year is largely fixed: accounting principles, management accounting, principles of economics, fundamentals of finance, and a responsible-organisations subject, alongside one of Bond's cross-disciplinary core subjects. In second year students take one major from Accounting, Actuarial Science, Data Analytics, Economics, or Finance, with room for a second major or a minor.\n\nThe degree is accredited by CPA Australia and Chartered Accountants Australia and New Zealand, and the business school holds AACSB and EQUIS accreditation. Finance students work in the Bond FinTech Hub, which has 40 Bloomberg terminals and offers Bloomberg certification. A supervised business internship is available as an elective, and a semester on exchange can replace electives.",
     "curriculum": null,
     "admission_requirements": "Completion of Australian Year 12 (or equivalent); Bond applies its own admission score rather than a standard ATAR cut-off, and offers pathway entry through the Diploma or College Foundation Program.",
     "english_requirements": "IELTS Overall 6.5, with no band below 6.0 (or equivalent).",
@@ -4895,7 +4895,7 @@
     "pte_speaking": null,
     "intake_dates": "January, May, September",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://bond.edu.au/program/bachelor-commerce"
+    "source_url": "https://bond.edu.au/program/bachelor-of-commerce"
   },
   {
     "university_slug": "bond-university",
@@ -5003,7 +5003,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": "https://bond.edu.au/program/bachelor-communication",
-    "description": null,
+    "description": "This two-year degree (six semesters) is the Bachelor of Communication with a required six-subject marketing major, which is what the \"(Business)\" label marks. First year pairs three marketing subjects with communication foundations (strategic speaking and writing, communication in the workplace, digital media and society) and Bond's core subjects. Second year finishes the marketing major (buyer behaviour, marketing research, promotional design, strategic marketing) and opens up a wide elective block.\n\nOn top of the marketing major, students can add a communication major or minor in advertising, public relations, journalism, film and television, digital media, social media, corporate storytelling, or creative writing. Relevant public relations majors are accredited by the Public Relations Institute of Australia. The degree suits students who want marketing as a career base with communication production skills alongside it.",
     "curriculum": null,
     "admission_requirements": "Completion of Australian Year 12 (or equivalent); Bond applies its own admission score rather than a standard ATAR cut-off, and offers pathway entry through the Diploma or College Foundation Program.",
     "english_requirements": "IELTS Overall 6.5, with no band below 6.0 (or equivalent).",
@@ -5019,7 +5019,7 @@
     "pte_speaking": null,
     "intake_dates": "January, May, September",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://bond.edu.au/program/bachelor-communication"
+    "source_url": "https://bond.edu.au/program/bachelor-of-communication-business"
   },
   {
     "university_slug": "bond-university",
@@ -5158,7 +5158,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": "https://bond.edu.au/program/bachelor-criminal-justice-and-criminology",
-    "description": null,
+    "description": "This two-year degree (24 subjects, six semesters) starts with criminology and legal foundations plus Bond's core subjects, then moves into applied areas: criminal investigation, cybercrime, youth justice, child protection, victimology, and crime prevention. Students choose one of three second-year pathways, adding a psychology specialisation, a law specialisation, or a broader set of electives.\n\nSeveral subjects are taught by former practitioners, including an ex-Detective Inspector and researchers in police legitimacy. Internship placements are available for academic credit, and Bond's Transformer and Beyond Bond programs give students real projects with outside organisations. The degree suits students aiming at policing, corrections, intelligence, policy, or community justice roles, or planning to continue into postgraduate law or psychology.",
     "curriculum": null,
     "admission_requirements": "Completion of Australian Year 12 (or equivalent); Bond applies its own admission score rather than a standard ATAR cut-off, and offers pathway entry through the Diploma or College Foundation Program.",
     "english_requirements": "IELTS Overall 6.5, with no band below 6.0 (or equivalent).",
@@ -5174,7 +5174,7 @@
     "pte_speaking": null,
     "intake_dates": "January, May, September",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://bond.edu.au/program/bachelor-criminal-justice-and-criminology"
+    "source_url": "https://bond.edu.au/program/bachelor-of-criminal-justice-and-criminology"
   },
   {
     "university_slug": "bond-university",
@@ -5189,7 +5189,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": "https://bond.edu.au/program/bachelor-of-data-analytics",
-    "description": null,
+    "description": "This two-year degree (six semesters) is quantitative from the start. First year covers introductory data science, mathematical statistics, quantitative methods, statistical learning, regression, and applied econometrics; second year adds modern machine learning, deep learning with neural networks, and an applied data analytics project. R and Python are taught throughout, in the Bond FinTech Hub and Centre for Data Analytics, and Bloomberg certification is available.\n\nThe capstone is a group project on real data supplied by industry partners in healthcare, insurance, and finance. Students choose one specialisation from options including Quantitative Finance, Health System Analytics, Marketing Analytics, Psychometrics, and Sport Analytics, and can add a four-subject minor, a study tour, or a business internship in place of electives.",
     "curriculum": null,
     "admission_requirements": "Completion of Australian Year 12 (or equivalent); Bond applies its own admission score rather than a standard ATAR cut-off, and offers pathway entry through the Diploma or College Foundation Program.",
     "english_requirements": "IELTS Overall 6.5, with no band below 6.0 (or equivalent).",
@@ -5492,7 +5492,7 @@
     "subject_slug": "nursing-and-health-sciences",
     "id": "5d45e03a-024e-495d-986b-e2489706434a",
     "name": "Bachelor of Exercise and Sports Science",
-    "status": "published",
+    "status": "archived",
     "duration_years": "2.0",
     "tuition_international": "41900",
     "tuition_domestic": "41900",
@@ -5555,13 +5555,13 @@
     "id": "83d8e5be-d43b-48fc-a759-59b6e8689cad",
     "name": "Bachelor of Film and Television",
     "status": "published",
-    "duration_years": "2.0",
+    "duration_years": "3.0",
     "tuition_international": "38900",
     "tuition_domestic": "38900",
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": "https://bond.edu.au/program/bachelor-film-and-television",
-    "description": null,
+    "description": "A three-year degree (24 subjects) with intakes in January, May, and September. First year is a broad introduction to screen production alongside Bond's core subjects; second year is a specialisation chosen from ten tracks, including cinematography, directing (fiction and non-fiction), editing, producing, production design, screenwriting, and screen studies, plus six open electives. Third year builds to Centrescreen, an annual screening where graduating students' films are judged by industry professionals.\n\nEach student writes and directs at least six short productions during the degree. Facilities include more than 40 Mac edit stations running Avid and Adobe, a Pro Tools mixing suite, a three-camera television studio, Sony and Arri cameras, and a professional equipment loan store with 24-hour access. The campus sits near Village Roadshow Studios and hosts a Screen Queensland co-working hub, and staff are working screen professionals.",
     "curriculum": null,
     "admission_requirements": "Completion of Australian Year 12 (or equivalent); Bond applies its own admission score rather than a standard ATAR cut-off, and offers pathway entry through the Diploma or College Foundation Program.",
     "english_requirements": "IELTS Overall 6.5, with no band below 6.0 (or equivalent).",
@@ -5577,7 +5577,7 @@
     "pte_speaking": null,
     "intake_dates": "January, May, September",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://bond.edu.au/program/bachelor-film-and-television"
+    "source_url": "https://bond.edu.au/program/bachelor-of-film-and-television"
   },
   {
     "university_slug": "bond-university",
@@ -5840,7 +5840,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": "https://bond.edu.au/program/bachelor-international-hotel-and-tourism-management",
-    "description": null,
+    "description": "A two-year degree (six semesters) starting each January. First year combines Bond's core subjects with tourism analysis, sustainable tourism, and an Indigenous culture subject; second year covers strategic pricing and revenue management, rooms division management, and human resource management, plus a wide elective block. Teaching is through the Bond Business School, which holds AACSB and EQUIS accreditation.\n\nA supervised industry placement is a required part of the degree through Bond's Beyond Bond program, with internship partners including Marriott, Accor, Hilton, InterContinental, and Wyndham. Students can also take a study tour or a semester on international exchange in their final year. The degree suits students heading into hotel operations, revenue management, events, or destination management.",
     "curriculum": null,
     "admission_requirements": "Completion of Australian Year 12 (or equivalent); Bond applies its own admission score rather than a standard ATAR cut-off, and offers pathway entry through the Diploma or College Foundation Program.",
     "english_requirements": "IELTS Overall 6.5, with no band below 6.0 (or equivalent).",
@@ -5856,7 +5856,7 @@
     "pte_speaking": null,
     "intake_dates": "January, May, September",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://bond.edu.au/program/bachelor-international-hotel-and-tourism-management"
+    "source_url": "https://bond.edu.au/program/bachelor-of-international-hotel-and-tourism-management"
   },
   {
     "university_slug": "bond-university",
@@ -5871,7 +5871,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": "https://bond.edu.au/program/bachelor-international-relations",
-    "description": null,
+    "description": "This two-year International Relations degree (six trimesters, 24 subjects) covers international security, strategic analysis, political economy, global governance, and climate politics, with a second-year major in a chosen specialist area. Bond builds the program around applied work: a dedicated Model United Nations subject feeds into global competitions and the student-run UN association's conferences, simulation exercises run through most subjects, and for-credit internships place students in embassy, government, and NGO settings. Teaching staff include specialists in international security, intelligence, and sports diplomacy.\n\nFirst year combines IR foundations with Bond's core subjects in critical thinking and leadership plus open electives. Graduates typically move into DFAT, defence and intelligence agencies, diplomatic missions, and international NGOs. The compressed schedule also leaves time to add a Law or Business degree, or to progress straight to postgraduate study.",
     "curriculum": null,
     "admission_requirements": "Completion of Australian Year 12 (or equivalent); Bond applies its own admission score rather than a standard ATAR cut-off, and offers pathway entry through the Diploma or College Foundation Program.",
     "english_requirements": "IELTS Overall 6.5, with no band below 6.0 (or equivalent).",
@@ -5887,7 +5887,7 @@
     "pte_speaking": null,
     "intake_dates": "January, May, September",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://bond.edu.au/program/bachelor-international-relations"
+    "source_url": "https://bond.edu.au/program/bachelor-of-international-relations"
   },
   {
     "university_slug": "bond-university",
@@ -5995,7 +5995,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": "https://bond.edu.au/program/bachelor-journalism",
-    "description": null,
+    "description": "Bond's Bachelor of Journalism is a two-year degree (six semesters) that can be extended to a bachelor plus master's in three years. First year teaches newsroom reporting, feature writing, content creation, and digital publishing alongside three of Bond's core subjects; second year adds a major or minor chosen from more than 15 options. Students produce podcasts, video packages, television segments, news and magazine articles, and published websites.\n\nThe faculty runs a dedicated newsroom, a three-camera television studio, audio suites, and more than 40 editing stations. Internships are arranged with organisations including the ABC, Channel 7, Channel 10, and The Guardian, and Bond runs overseas reporting placements in New York, Washington, Beijing, and London. The portfolio students build across the degree is the main thing they take to employers.",
     "curriculum": null,
     "admission_requirements": "Completion of Australian Year 12 (or equivalent); Bond applies its own admission score rather than a standard ATAR cut-off, and offers pathway entry through the Diploma or College Foundation Program.",
     "english_requirements": "IELTS Overall 6.5, with no band below 6.0 (or equivalent).",
@@ -6011,7 +6011,7 @@
     "pte_speaking": null,
     "intake_dates": "January, May, September",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://bond.edu.au/program/bachelor-journalism"
+    "source_url": "https://bond.edu.au/program/bachelor-of-journalism"
   },
   {
     "university_slug": "bond-university",
@@ -6181,7 +6181,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": "https://bond.edu.au/program/bachelor-project-management",
-    "description": null,
+    "description": "A two-year degree (six semesters) that is unusual as an undergraduate offering, since project management is more often studied at postgraduate level. First year builds business fundamentals and the project framework; second year works through scheduling, budgeting, resourcing, scope, quality, procurement, risk, and stakeholder management using case studies, ending with a capstone in project integration management.\n\nThe degree is endorsed by the Australian Institute of Project Management, accredited by the Project Management Institute's Global Accreditation Center, structured around the PMBOK Guide, and also carries Royal Institution of Chartered Surveyors accreditation. Students can join Bond's Transformer program for real cross-disciplinary project work. It is aimed at students who want to enter project or program coordination roles directly rather than moving into them from another field.",
     "curriculum": null,
     "admission_requirements": "Completion of Australian Year 12 (or equivalent); Bond applies its own admission score rather than a standard ATAR cut-off, and offers pathway entry through the Diploma or College Foundation Program.",
     "english_requirements": "IELTS Overall 6.5, with no band below 6.0 (or equivalent).",
@@ -6197,7 +6197,7 @@
     "pte_speaking": null,
     "intake_dates": "January, May, September",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://bond.edu.au/program/bachelor-project-management"
+    "source_url": "https://bond.edu.au/program/bachelor-of-project-management"
   },
   {
     "university_slug": "bond-university",
@@ -6274,7 +6274,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": "https://bond.edu.au/program/bachelor-psychological-science",
-    "description": null,
+    "description": "This is an eight-month honours year (two semesters), not a full degree, taken after a three-year psychology sequence. Semester one covers multivariate research methods, human experimental psychology, and research ethics; semester two covers psychological assessment and professional practice while students complete a supervised research thesis.\n\nIt is accredited by the Australian Psychology Accreditation Council and counts as the fourth year of the six-year pathway to registration as a psychologist, so finishing it makes a graduate eligible to apply for provisional registration with AHPRA and for master's-level clinical programs. Students work from a dedicated fourth-year lab with statistical software and use Bond's cognitive research labs and test library. Entry is competitive and based on grades in the prior psychology major.",
     "curriculum": null,
     "admission_requirements": "Completion of Australian Year 12 (or equivalent); Bond applies its own admission score rather than a standard ATAR cut-off, and offers pathway entry through the Diploma or College Foundation Program.",
     "english_requirements": "IELTS Overall 6.5, with no band below 6.0 (or equivalent).",
@@ -6290,7 +6290,7 @@
     "pte_speaking": null,
     "intake_dates": "January, May, September",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://bond.edu.au/program/bachelor-psychological-science"
+    "source_url": "https://bond.edu.au/program/bachelor-of-psychological-science-honours"
   },
   {
     "university_slug": "bond-university",

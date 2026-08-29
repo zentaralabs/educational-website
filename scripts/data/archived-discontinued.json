@@ -1,0 +1,17 @@
+{
+  "note": "Programs an official university page says are discontinued/suspended/replaced, archived during the description pass. Reverse with: update programs set status='published' where id = '<id>'.",
+  "entries": [
+    {
+      "id": "5d45e03a-024e-495d-986b-e2489706434a",
+      "name": "Bachelor of Exercise and Sports Science",
+      "reason": "Bachelor of Exercise and Sports Science: suspended from January 2027, replaced by Bachelor of Clinical Exercise Physiology",
+      "archived_at": "2026-08-29T11:54:04.669Z"
+    },
+    {
+      "id": "570e4cef-8397-4280-b0f5-939282940989",
+      "name": "Bachelor of Business Data Analytics",
+      "reason": "Bachelor of Business Data Analytics: discontinued January 2025 per Bond course page",
+      "archived_at": "2026-08-29T11:54:04.838Z"
+    }
+  ]
+}
