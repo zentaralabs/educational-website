@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { COLLECTIONS } from "@/lib/collections";
 import { SUBJECT_CONTENT } from "@/lib/subjects";
 import { CITY_COSTS } from "@/lib/cities";
+import { COMPARISON_PAIRS, vsSlug } from "@/lib/comparisons";
 import { SITE_URL } from "@/lib/site-config";
 import { listAllBlogPostSlugs } from "@/lib/queries/public-blog-posts";
 import { listPublishedGuideSlugs } from "@/lib/queries/public-guides";
@@ -96,12 +97,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }));
 
-  // Only the hand-written comparison guides. The auto-generated
-  // /compare/{a}-vs-{b} stat pages are noindex, so they stay out of the sitemap.
-  const comparisonEntries: MetadataRoute.Sitemap = comparisonSlugs.map((slug) => ({
-    url: `${SITE_URL}/compare/${slug}`,
+  // Hand-written comparison guides, plus the curated /compare/{a}-vs-{b}
+  // head-to-heads (data-built but with real decision content, indexed).
+  const comparisonEntries: MetadataRoute.Sitemap = [
+    ...comparisonSlugs.map((slug) => `/compare/${slug}`),
+    ...COMPARISON_PAIRS.map(([a, b]) => `/compare/${vsSlug(a, b)}`),
+  ].map((path) => ({
+    url: `${SITE_URL}${path}`,
     lastModified: now,
-    changeFrequency: "monthly",
+    changeFrequency: "monthly" as const,
     priority: 0.6,
   }));
 

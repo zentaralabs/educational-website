@@ -873,7 +873,9 @@ Ranked opportunities beyond the program-page fix:
 **`/international` access (was footer-only):** now in the homepage "What are you looking for?" grid, the header nav under Explore ("By country"), the footer, every country page cross-links, and every `/universities/[slug]/deadlines` page.
 5. ~~**Cost-of-studying calculator**~~ **DONE 2026-08-29 (Phase 3)** — `/cost-calculator`, `CostCalculator` client component. Inputs: university (prefills tuition) or manual tuition, city (6 + regional, prefills living from `CITY_COSTS`), accommodation type, course length, flying-from region, partner, children. Outputs: first-year total, whole-degree total, year-one breakdown table, monthly/weekly living, and **"what you must show for the student visa"** (A$29,710 + first-year tuition + A$2,000 travel + partner/child amounts). 5-FAQ schema. In sitemap, footer, header nav (Explore), homepage task grid. All figures hedged as estimates.
 
-   Still Phase 3: expand the 4-variable quiz (field of study, city, IELTS, scholarship need, regional preference); Course/Dataset schema + a /methodology page; un-hide + strengthen the 20 `/compare/{a}-vs-{b}` pages.
+6. ~~**Un-hide + strengthen the comparison pages**~~ **DONE 2026-08-29 (Phase 3)** — the 20 `/compare/{a}-vs-{b}` head-to-heads are no longer `noindex`; the page now pulls the full `listCollectionUniversities` record and renders a 9-row side-by-side table (city, Go8, regional, tuition, first-year budget, IELTS, app fee, intakes, selectivity), derived **"Choose {A} if" / "Choose {B} if"** lists, each university's real `who_is_it_for` editorial, and 5 data-driven FAQs (cheaper / harder to get into / better for PR / prestige / apply to both). Expanded `COMPARISON_PAIRS` from 20 to 33. All in the sitemap now. Links to each university's profile + deadline page.
+
+   Still Phase 3: expand the 4-variable quiz (field of study, city, IELTS, scholarship need, regional preference); Course/Dataset schema + a /methodology page.
 
 ### Still on the SEO list (biggest levers, all off-page)
 

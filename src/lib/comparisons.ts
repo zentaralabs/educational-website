@@ -24,6 +24,22 @@ export const COMPARISON_PAIRS: [string, string][] = [
   ["deakin-university", "rmit-university"],
   ["adelaide-university", "university-of-melbourne"],
   ["swinburne-university-of-technology", "rmit-university"],
+  // Second batch (2026-08-29): more Go8 head-to-heads and same-city rivalries
+  // with real search demand.
+  ["university-of-melbourne", "unsw-sydney"],
+  ["australian-national-university", "university-of-sydney"],
+  ["monash-university", "university-of-sydney"],
+  ["australian-national-university", "unsw-sydney"],
+  ["university-of-queensland", "queensland-university-of-technology"],
+  ["rmit-university", "monash-university"],
+  ["university-of-technology-sydney", "university-of-sydney"],
+  ["macquarie-university", "unsw-sydney"],
+  ["adelaide-university", "flinders-university"],
+  ["university-of-newcastle", "university-of-wollongong"],
+  ["griffith-university", "university-of-queensland"],
+  ["deakin-university", "swinburne-university-of-technology"],
+  ["university-of-western-australia", "university-of-melbourne"],
+  ["la-trobe-university", "deakin-university"],
 ];
 
 /** Split a "{a}-vs-{b}" slug. University slugs contain hyphens, so we split

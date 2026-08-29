@@ -23,11 +23,13 @@ export default async function CompareIndexPage() {
   return (
     <main className="mx-auto w-full max-w-3xl px-6 pt-8 pb-16">
       <h1 className="font-display text-3xl font-semibold text-ink text-balance">
-        Compare
+        Compare Australian universities
       </h1>
       <p className="mt-2 font-body text-base text-slate">
-        Cross-country and cross-university comparisons, with real cost and
-        admissions data side by side.
+        Pick any two universities for a side-by-side comparison of tuition,
+        first-year budget, English requirements, intakes, selectivity, and
+        whether the campus counts as regional for migration, plus a plain
+        &ldquo;choose this one if&rdquo; verdict.
       </p>
 
       <div className="mt-8">
