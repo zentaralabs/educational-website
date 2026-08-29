@@ -7824,7 +7824,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": "https://bond.edu.au/program/master-accounting",
-    "description": null,
+    "description": "A 16-month conversion master's (four semesters, 13 subjects) for graduates without an accounting background who want a professional accounting qualification. The sequence runs from accounting principles, economics, and finance through management accounting, financial accounting and company reporting, business law, taxation, auditing, and data analytics for accountants.\n\nIt is accredited by both CPA Australia and Chartered Accountants Australia and New Zealand, so it satisfies the academic requirement for those professional programs. Students with a cognate undergraduate degree can receive up to 40 credit points of advanced standing, shortening the degree. Accredited by AACSB and EQUIS.",
     "curriculum": null,
     "admission_requirements": "A completed bachelor's degree in a related discipline (or equivalent) with a competitive GPA; some programs consider relevant professional experience in place of a directly related degree.",
     "english_requirements": "IELTS Overall 6.5, with no band below 6.0.",
@@ -7840,7 +7840,7 @@
     "pte_speaking": null,
     "intake_dates": "January, May, September",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://bond.edu.au/program/master-accounting"
+    "source_url": "https://bond.edu.au/program/master-of-accounting"
   },
   {
     "university_slug": "bond-university",
@@ -7979,7 +7979,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": "https://bond.edu.au/program/master-architecture",
-    "description": null,
+    "description": "The professional qualification in Bond's architecture pathway, about 16 months (four semesters) of project-based design studios ending in a master's thesis studio. Entry requires a prior degree in design or architecture, usually Bond's Bachelor of Design in Architecture or an equivalent.\n\nThis is the degree that counts for registration: it is accredited by the Architects Accreditation Council of Australia and the Australian Institute of Architects, which is what allows graduates to work toward registration as an architect in Australia and be recognised internationally. Students get an assigned workspace in the Abedian School of Architecture, which is open 24 hours.",
     "curriculum": null,
     "admission_requirements": "A completed bachelor's degree in a related discipline (or equivalent) with a competitive GPA; some programs consider relevant professional experience in place of a directly related degree.",
     "english_requirements": "IELTS Overall 6.5, with no band below 6.0.",
@@ -7995,7 +7995,7 @@
     "pte_speaking": null,
     "intake_dates": "January, May, September",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://bond.edu.au/program/master-architecture"
+    "source_url": "https://bond.edu.au/program/master-of-architecture"
   },
   {
     "university_slug": "bond-university",
@@ -8165,7 +8165,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": "https://bond.edu.au/program/master-business",
-    "description": null,
+    "description": "A 16-month master's (four semesters) aimed at graduates from non-business fields who want to move into management or a business function. Semester one covers accounting, marketing, and finance fundamentals; later semesters broaden into other business areas and a chosen specialisation, finishing with electives.\n\nStudents pick one specialisation from marketing, big data, health management, international business, finance, or tourism management. It differs from Bond's MBA in emphasis: the Master of Business is a conversion and upskilling degree with functional depth in one area, while the MBA is a general-management program built around leadership and strategy. No prior business study is required. Accredited by AACSB and EQUIS.",
     "curriculum": null,
     "admission_requirements": "A completed bachelor's degree in a related discipline (or equivalent) with a competitive GPA; some programs consider relevant professional experience in place of a directly related degree.",
     "english_requirements": "IELTS Overall 6.5, with no band below 6.0.",
@@ -8181,7 +8181,7 @@
     "pte_speaking": null,
     "intake_dates": "January, May, September",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://bond.edu.au/program/master-business"
+    "source_url": "https://bond.edu.au/program/master-of-business"
   },
   {
     "university_slug": "bond-university",
@@ -8258,7 +8258,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": "https://bond.edu.au/program/master-business-administration",
-    "description": null,
+    "description": "Bond's MBA runs about 16 months of coursework (four semesters on the three-semester calendar), with this Professional version adding a supervised professional placement, taking it to roughly 21 months. The first semester is eight intensive core subjects covering leadership, organisational behaviour, decision-making, managerial economics, marketing, accounting, and financial decision-making. Later semesters cover creative thinking, data analytics, and strategic management, ending in a Business Transformation capstone project, followed by electives from the business school.\n\nThe program is built around three themes: innovation, data analytics, and business transformation. It is accredited by AACSB and EQUIS. Holders of CPA Australia, CA ANZ, or IPA membership can receive up to 50 percent credit. Entry requirements, including any work-experience expectation, should be confirmed with Bond directly.",
     "curriculum": null,
     "admission_requirements": "A completed bachelor's degree plus relevant professional work experience (typically 2+ years recommended, though not always mandatory).",
     "english_requirements": "IELTS Overall 6.5, with no band below 6.0.",
@@ -8274,7 +8274,7 @@
     "pte_speaking": null,
     "intake_dates": "January, May, September",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://bond.edu.au/program/master-business-administration"
+    "source_url": "https://bond.edu.au/program/master-of-business-administration"
   },
   {
     "university_slug": "bond-university",
@@ -8382,7 +8382,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": "https://bond.edu.au/program/master-communication",
-    "description": null,
+    "description": "A one-year master's (three semesters) that combines coursework with a required research component. Students choose between a major research project of 20,000 to 25,000 words with eight coursework subjects, or a shorter research paper or professional portfolio with 11 coursework subjects. First semester includes a research methods and data visualisation subject.\n\nResearch and elective focus areas include journalism, advertising, social media, marketing, leadership, and public relations, with students setting their own research topic. The research requirement makes this a stronger fit for students considering a PhD or research-linked career than a purely applied communication master's would be.",
     "curriculum": null,
     "admission_requirements": "A completed bachelor's degree in a related discipline (or equivalent) with a competitive GPA; some programs consider relevant professional experience in place of a directly related degree.",
     "english_requirements": "IELTS Overall 6.5, with no band below 6.0.",
@@ -8398,7 +8398,7 @@
     "pte_speaking": null,
     "intake_dates": "January, May, September",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://bond.edu.au/program/master-communication"
+    "source_url": "https://bond.edu.au/program/master-of-communication"
   },
   {
     "university_slug": "bond-university",
@@ -8568,7 +8568,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": "https://bond.edu.au/program/master-criminology",
-    "description": null,
+    "description": "A one-year master's (three semesters, trimester intakes) covering crime analysis, cybercrime, transnational crime, global justice, and research and data analytics. Students choose between a two-semester major research project, recommended for anyone heading toward a PhD or research role, or a one-semester minor project or portfolio with three general electives.\n\nIt is open to graduates from outside criminology as well as people already working in justice, policing, or policy who want a formal qualification. The choice of research pathway is the main decision an applicant needs to make up front.",
     "curriculum": null,
     "admission_requirements": "A completed bachelor's degree in a related discipline (or equivalent) with a competitive GPA; some programs consider relevant professional experience in place of a directly related degree.",
     "english_requirements": "IELTS Overall 6.5, with no band below 6.0.",
@@ -8584,7 +8584,7 @@
     "pte_speaking": null,
     "intake_dates": "January, May, September",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://bond.edu.au/program/master-criminology"
+    "source_url": "https://bond.edu.au/program/master-of-criminology"
   },
   {
     "university_slug": "bond-university",
@@ -8661,7 +8661,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": "https://bond.edu.au/program/master-of-data-analytics",
-    "description": null,
+    "description": "A 16-month master's (four semesters) of eight core subjects and four electives. The core runs from data science and quantitative methods through statistical learning, regression, applied econometrics, data infrastructure, and advanced machine learning, ending with a deep learning subject and an applied data analytics project in the final semester. Students choose one specialisation from Quantitative Finance, Health System Analytics, Marketing Analytics, Economic Modelling, Psychometrics, Accounting Analytics, or Sport Analytics.\n\nTeaching uses the Bond FinTech Hub and its 40 Bloomberg terminals. This is a heavily quantitative program, so applicants without a maths, statistics, computing, economics, or finance background should check the entry requirements and any bridging expectations with Bond before applying.",
     "curriculum": null,
     "admission_requirements": "A completed bachelor's degree in a related discipline (or equivalent) with a competitive GPA; some programs consider relevant professional experience in place of a directly related degree.",
     "english_requirements": "IELTS Overall 6.5, with no band below 6.0.",
@@ -8816,7 +8816,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": "https://bond.edu.au/program/master-finance",
-    "description": null,
+    "description": "A 16-month master's (four semesters), with this Professional version adding a supervised placement. The core runs through finance and investments, portfolio management, pricing of financial instruments, markets and institutions, and an International Finance capstone, with a large directed-elective component (financial accounting, quantitative methods, entrepreneurial finance, financial applications and analysis).\n\nTeaching uses the Bond FinTech Hub and its Bloomberg terminals, with a Bloomberg certification pathway. Graduates of a cognate undergraduate degree can receive up to 40 credit points of advanced standing. The program leans quantitative; applicants from non-finance backgrounds should check the entry requirements.",
     "curriculum": null,
     "admission_requirements": "A completed bachelor's degree in a related discipline (or equivalent) with a competitive GPA; some programs consider relevant professional experience in place of a directly related degree.",
     "english_requirements": "IELTS Overall 6.5, with no band below 6.0.",
@@ -8832,7 +8832,7 @@
     "pte_speaking": null,
     "intake_dates": "January, May, September",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://bond.edu.au/program/master-finance"
+    "source_url": "https://bond.edu.au/program/master-of-finance"
   },
   {
     "university_slug": "bond-university",
@@ -8878,7 +8878,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": "https://bond.edu.au/program/master-healthcare-innovations",
-    "description": null,
+    "description": "A one-year master's (three semesters) for healthcare professionals moving into leadership, quality, or transformation roles, taught through intensive workshops. It covers four areas: evidence-based practice and research, health systems and policy, leading change and implementation science, and care quality and workforce development. Electives include innovation and entrepreneurship, data and project management, and advanced leadership through the business school.\n\nThe capstone is a portfolio of real workplace projects with measurable results, such as pilot projects and business cases. It is aimed at clinicians, administrators, and health entrepreneurs rather than new graduates, and it also sets up a PhD pathway through its research component.",
     "curriculum": null,
     "admission_requirements": "A completed bachelor's degree in a related health/science discipline with a competitive GPA; interview and/or additional selection criteria apply.",
     "english_requirements": "IELTS Overall 6.5, with no band below 6.0.",
@@ -8894,7 +8894,7 @@
     "pte_speaking": null,
     "intake_dates": "January, May, September",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://bond.edu.au/program/master-healthcare-innovations"
+    "source_url": "https://bond.edu.au/program/master-of-healthcare-innovations"
   },
   {
     "university_slug": "bond-university",
@@ -8964,7 +8964,7 @@
     "subject_slug": "political-science-and-international-relations",
     "id": "b636c8c0-8e45-4cc7-a4bc-53ede95869df",
     "name": "Master of International Relations",
-    "status": "published",
+    "status": "archived",
     "duration_years": "1.0",
     "tuition_international": "37900",
     "tuition_domestic": "37900",
@@ -9064,7 +9064,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": "https://bond.edu.au/program/master-laws",
-    "description": null,
+    "description": "An eight-month coursework LLM (two semesters, 80 credit points) for law graduates only. Students can take electives broadly or concentrate in one of six areas: corporate and commercial law, dispute resolution, international business and finance law, international commercial law and dispute resolution, family dispute resolution, or Canadian law and practice. There is no research thesis in the standard structure; it is a coursework degree.\n\nBond Juris Doctor graduates receive a 40 credit point exemption, halving the program. It suits practising or recently graduated lawyers who want a specialist credential quickly rather than a broad or research-based postgraduate qualification.",
     "curriculum": null,
     "admission_requirements": "A completed bachelor's degree in any discipline (does not need to be in law) with a competitive GPA.",
     "english_requirements": "IELTS Overall 7.0, with no band below 6.5 (or equivalent).",
@@ -9080,7 +9080,7 @@
     "pte_speaking": null,
     "intake_dates": "January, May, September",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://bond.edu.au/program/master-laws"
+    "source_url": "https://bond.edu.au/program/master-of-laws"
   },
   {
     "university_slug": "bond-university",
@@ -9250,7 +9250,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": "https://bond.edu.au/program/master-of-marketing",
-    "description": null,
+    "description": "A four-semester master's that can be accelerated to about 12 months. The core runs through marketing fundamentals, market research, consumer behaviour, integrated marketing communications, marketing analytics, strategic marketing, and digital marketing, with roughly a third of the program open to electives or a Business Data Analytics specialisation.\n\nAssessment is project-based rather than exam-based: students run social media campaigns, market research projects, and full marketing strategies. The Career Development Centre arranges internships. Accredited by AACSB and EQUIS. It suits students moving into marketing from another field as well as those deepening an existing marketing background.",
     "curriculum": null,
     "admission_requirements": "A completed bachelor's degree in a related discipline (or equivalent) with a competitive GPA; some programs consider relevant professional experience in place of a directly related degree.",
     "english_requirements": "IELTS Overall 6.5, with no band below 6.0.",
@@ -9312,7 +9312,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": "https://bond.edu.au/program/master-nutrition-and-dietetic-practice",
-    "description": null,
+    "description": "A two-year degree (six semesters) that qualifies graduates for Dietitians Australia's Accredited Practising Dietitian program, the credential needed to work as a dietitian in Australia. It is placement-heavy: about 44 weeks of immersive experience, made up of four five-week clinical placements, two ten-week research internships, and a two-week international field trip.\n\nYear one covers foundational nutrition, food science, clinical dietetics, public health nutrition, and food service management; year two is mostly placement plus a sports nutrition intensive, research coursework, a leadership subject, and an international nutrition practice intensive. The degree is also accredited in the United States by ACEND, though the US registered dietitian pathway needs extra supervised hours there. Applicants should check the specific prerequisite subjects with Bond.",
     "curriculum": null,
     "admission_requirements": "A completed bachelor's degree in a related health/science discipline with a competitive GPA; interview and/or additional selection criteria apply.",
     "english_requirements": "IELTS Overall 7.0, with no band below 7.0 (registration-board English requirement).",
@@ -9328,7 +9328,7 @@
     "pte_speaking": null,
     "intake_dates": "January, May, September",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://bond.edu.au/program/master-nutrition-and-dietetic-practice"
+    "source_url": "https://bond.edu.au/program/master-of-nutrition-and-dietetic-practice"
   },
   {
     "university_slug": "bond-university",
@@ -9337,13 +9337,13 @@
     "id": "74cb1629-8974-4c24-aa1a-1459624845e4",
     "name": "Master of Occupational Therapy",
     "status": "published",
-    "duration_years": "2.0",
+    "duration_years": "4.0",
     "tuition_international": "46900",
     "tuition_domestic": "46900",
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": "https://bond.edu.au/program/master-occupational-therapy",
-    "description": null,
+    "description": "Bond runs occupational therapy as an extended masters of about four years rather than a short graduate-entry program. It embeds around 1,040 hours of fieldwork, including 24 weeks of Level II supervised practice. Entry is with a bachelor's degree, with common pathways from exercise and sports science, biomedical science, health sciences, or psychological science.\n\nThe qualification is approved by the Occupational Therapy Board of Australia, recognised by the World Federation of Occupational Therapists, and separately accredited in the United States by ACOTE, which widens where graduates can register. Students choose a clinically focused or business-focused research pathway within the degree. Completing it leads to registration as an occupational therapist in Australia.",
     "curriculum": null,
     "admission_requirements": "A completed bachelor's degree in a related health/science discipline with a competitive GPA; interview and/or additional selection criteria apply.",
     "english_requirements": "IELTS Overall 7.0, with no band below 7.0 (registration-board English requirement).",
@@ -9359,7 +9359,7 @@
     "pte_speaking": null,
     "intake_dates": "January, May, September",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://bond.edu.au/program/master-occupational-therapy"
+    "source_url": "https://bond.edu.au/program/master-of-occupational-therapy"
   },
   {
     "university_slug": "bond-university",
@@ -9405,7 +9405,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": "https://bond.edu.au/program/master-professional-psychology",
-    "description": null,
+    "description": "An eight-month program that makes up the fifth year of the six-year psychology training pathway. Entry requires an accredited four-year psychology sequence (bachelor plus honours or a graduate diploma) and provisional registration with AHPRA before starting.\n\nIt includes 300 hours of supervised practice at Bond's on-campus psychology clinic, with mandatory in-person attendance. It is accredited to APAC standards. On its own it does not lead to registration: graduates then complete a further year of approved supervised practice (the 5+1 internship route) to reach the six years required for general registration. Students who want to finish the pathway entirely through university study take the two-year Master of Psychology (Clinical) instead.",
     "curriculum": null,
     "admission_requirements": "A completed bachelor's degree in a related health/science discipline with a competitive GPA; interview and/or additional selection criteria apply.",
     "english_requirements": "IELTS Overall 6.5, with no band below 6.0.",
@@ -9421,7 +9421,7 @@
     "pte_speaking": null,
     "intake_dates": "January, May, September",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://bond.edu.au/program/master-professional-psychology"
+    "source_url": "https://bond.edu.au/program/master-of-professional-psychology"
   },
   {
     "university_slug": "bond-university",
@@ -9560,7 +9560,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": "https://bond.edu.au/program/master-of-psychology-clinical",
-    "description": null,
+    "description": "A two-year degree that covers years five and six of the six-year pathway to registration as a psychologist, with a clinical specialisation. Entry requires an accredited four-year psychology sequence (bachelor plus honours or a graduate diploma) and provisional registration with AHPRA before starting.\n\nPlacements are central: a first internship in Bond's on-campus psychology clinic under staff supervision in year one, then a second internship plus two community externships under external supervision in year two. The program is accredited by the Australian Psychology Accreditation Council. On completion graduates can apply for general registration with AHPRA and for the Australian Psychological Society's clinical college. Entry is competitive and based on prior grades.",
     "curriculum": null,
     "admission_requirements": "A completed bachelor's degree in a related health/science discipline with a competitive GPA; interview and/or additional selection criteria apply.",
     "english_requirements": "IELTS Overall 6.5, with no band below 6.0.",
