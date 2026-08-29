@@ -59,7 +59,7 @@ export function SearchBar({
         type="submit"
         disabled={!value.trim()}
         aria-label="Search"
-        className="hidden shrink-0 rounded border border-slate/40 px-2 py-1 font-utility text-sm text-slate transition-colors duration-150 hover:border-ink hover:text-ink disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:border-slate/40 disabled:hover:text-slate sm:inline-block"
+        className="hidden shrink-0 rounded border border-status-open bg-status-open px-2.5 py-1 font-utility text-sm font-medium text-white transition-colors duration-150 hover:bg-status-open/90 disabled:cursor-not-allowed disabled:border-slate/40 disabled:bg-transparent disabled:font-normal disabled:text-slate/60 disabled:hover:bg-transparent sm:inline-block"
       >
         Enter
       </button>
