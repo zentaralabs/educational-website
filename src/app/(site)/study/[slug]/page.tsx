@@ -284,6 +284,8 @@ export default async function SubjectPage({
           {[
             { href: "/guides/real-cost-of-studying-in-australia", label: "The real cost of studying in Australia" },
             { href: "/guides/study-to-permanent-residence-pathway-australia", label: "The study-to-PR pathway" },
+            { href: "/visas/student-500", label: "Student visa (subclass 500)" },
+            { href: "/guides/how-the-australian-points-test-works", label: "How the skilled points test works" },
             { href: "/scholarships", label: "Scholarships for studying in Australia" },
             { href: "/best/affordable-australian-universities-for-international-students", label: "Most affordable universities" },
           ].map((l) => (

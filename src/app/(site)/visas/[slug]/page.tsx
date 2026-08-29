@@ -6,7 +6,9 @@ import { LastVerified } from "@/components/site/LastVerified";
 import { ArrowUpRightIcon, CheckBadgeIcon } from "@/components/site/icons";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import { FaqSection } from "@/components/site/FaqSection";
+import { RelatedLinks } from "@/components/site/RelatedLinks";
 import { faqJsonLd, visaFaq } from "@/lib/faq";
+import { visaRelated } from "@/lib/related-content";
 import { SITE_YEAR } from "@/lib/site-config";
 import { extractFaqItems } from "@/lib/extract-faq";
 import { authorInitials } from "@/lib/format";
@@ -259,6 +261,12 @@ export default async function VisaPage({
           </p>
         </section>
       )}
+
+      <RelatedLinks
+        className="mt-12 border-t border-ink/10 pt-6"
+        heading="Related guides and visas"
+        items={visaRelated(slug).slice(0, 6)}
+      />
 
       <div className="mt-10 flex items-center gap-2 rounded-xl bg-status-open/5 px-4 py-3">
         <CheckBadgeIcon className="h-4 w-4 flex-shrink-0 text-status-open" />

@@ -1,11 +1,10 @@
-import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { ArticleMeta } from "@/components/site/ArticleMeta";
 import { ArticleShell } from "@/components/site/ArticleShell";
 import { FaqSection } from "@/components/site/FaqSection";
 import { GuideContent } from "@/components/site/GuideContent";
 import { LastVerified } from "@/components/site/LastVerified";
-import { ArrowUpRightIcon, CheckBadgeIcon } from "@/components/site/icons";
+import { CheckBadgeIcon } from "@/components/site/icons";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import { extractFaqItems } from "@/lib/extract-faq";
 import { faqJsonLd } from "@/lib/faq";
@@ -16,6 +15,8 @@ import {
   listPublishedGuideSlugs,
 } from "@/lib/queries/public-guides";
 import { readingMinutes } from "@/lib/reading";
+import { guideRelated } from "@/lib/related-content";
+import { RelatedLinks } from "@/components/site/RelatedLinks";
 import { SITE_NAME, SITE_URL } from "@/lib/site-config";
 import { extractToc } from "@/lib/toc";
 
@@ -136,40 +137,31 @@ export default async function GuidePage({
               <FaqSection heading="Common questions" items={faqItems} />
             )}
 
-            {(related.guides.length > 0 || related.universities.length > 0) && (
-              <div className="mt-12 border-t border-line pt-8">
-                <h2 className="mb-4 font-body text-xs font-semibold tracking-widest text-slate uppercase">
-                  Keep reading
-                </h2>
-                <ul className="grid gap-3 sm:grid-cols-2">
-                  {related.guides.map((g) => (
-                    <RelatedLink key={g.slug} href={`/guides/${g.slug}`} label={g.title} />
-                  ))}
-                  {related.universities.map((u) => (
-                    <RelatedLink key={u.slug} href={`/universities/${u.slug}`} label={u.name} />
-                  ))}
-                </ul>
-              </div>
-            )}
+            <RelatedLinks
+              className="mt-12 border-t border-line pt-8"
+              items={(() => {
+                const dbLinks = [
+                  ...related.guides.map((g) => ({
+                    href: `/guides/${g.slug}`,
+                    label: g.title,
+                  })),
+                  ...related.universities.map((u) => ({
+                    href: `/universities/${u.slug}`,
+                    label: u.name,
+                  })),
+                ];
+                const seen = new Set(dbLinks.map((l) => l.href));
+                const curated = guideRelated(guide.slug).filter(
+                  (l) => !seen.has(l.href),
+                );
+                return [...dbLinks, ...curated].slice(0, 6);
+              })()}
+            />
           </>
         }
       >
         <GuideContent content={guide.content} />
       </ArticleShell>
     </>
-  );
-}
-
-function RelatedLink({ href, label }: { href: string; label: string }) {
-  return (
-    <li>
-      <Link
-        href={href}
-        className="group flex items-center justify-between gap-2 rounded-xl border border-line bg-paper px-4 py-3 transition-all duration-150 hover:-translate-y-0.5 hover:border-status-open/40 hover:shadow-[0_14px_36px_-18px_rgba(22,35,63,0.28)]"
-      >
-        <span className="font-body text-sm font-medium text-ink">{label}</span>
-        <ArrowUpRightIcon className="h-3.5 w-3.5 flex-shrink-0 text-slate transition-colors duration-150 group-hover:text-status-open" />
-      </Link>
-    </li>
   );
 }
