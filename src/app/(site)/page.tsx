@@ -223,20 +223,6 @@ export default async function Home() {
             What are you looking for?
           </h2>
           <ul className="grid gap-3 sm:grid-cols-2">
-            <li className="sm:col-span-2">
-              <Link
-                href="/quiz"
-                className="card card-hover group flex h-full flex-col gap-1 border-status-open/40 bg-status-open/[0.04] p-4"
-              >
-                <span className="font-body text-[0.95rem] font-semibold text-ink group-hover:underline">
-                  Not sure where to start? Take the 2-minute match quiz →
-                </span>
-                <span className="font-utility text-xs text-slate">
-                  8 questions on budget, field, city, English and more, matched
-                  to real universities
-                </span>
-              </Link>
-            </li>
             {TASKS.map((t) => (
               <li key={t.href}>
                 <Link
