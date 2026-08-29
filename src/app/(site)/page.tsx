@@ -75,6 +75,11 @@ const TASKS = [
     href: "/cost-of-living",
     desc: "Monthly student budgets by city",
   },
+  {
+    label: "Applying from your country",
+    href: "/international",
+    desc: "What is different for India, Nepal, China and more",
+  },
 ];
 
 const POPULAR = [

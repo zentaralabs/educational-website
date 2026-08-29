@@ -6,6 +6,7 @@ import { SITE_URL } from "@/lib/site-config";
 import { listAllBlogPostSlugs } from "@/lib/queries/public-blog-posts";
 import { listPublishedGuideSlugs } from "@/lib/queries/public-guides";
 import { AU_STATES } from "@/lib/australia";
+import { DEADLINE_PAGE_INDEXED } from "@/lib/deadline-detail";
 import { ORIGIN_COUNTRY_SLUGS } from "@/lib/origin-countries";
 import { listPublishedScholarshipSlugs } from "@/lib/queries/public-scholarships";
 import { listPublishedSubjects } from "@/lib/queries/public-subjects";
@@ -75,6 +76,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     changeFrequency: "weekly",
     priority: 0.8,
   }));
+
+  // Per-university deadline pages, only for universities with a firm date or
+  // verified rolling guidance (the rest are noindex, see deadline-detail.ts).
+  const universityDeadlineEntries: MetadataRoute.Sitemap = universitySlugs
+    .filter((slug) => DEADLINE_PAGE_INDEXED.has(slug))
+    .map((slug) => ({
+      url: `${SITE_URL}/universities/${slug}/deadlines`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.7,
+    }));
 
   const guideEntries: MetadataRoute.Sitemap = guideSlugs.map((slug) => ({
     url: `${SITE_URL}/guides/${slug}`,
@@ -163,6 +175,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   return [
     ...staticEntries,
     ...universityEntries,
+    ...universityDeadlineEntries,
     ...guideEntries,
     ...comparisonEntries,
     ...blogEntries,

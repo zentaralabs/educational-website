@@ -595,6 +595,12 @@ export default async function UniversityProfilePage({
               );
             })}
           </div>
+          <Link
+            href={`/universities/${university.slug}/deadlines`}
+            className="mt-3 inline-block font-body text-sm font-medium text-status-open underline underline-offset-2"
+          >
+            {university.name} deadlines, in detail →
+          </Link>
         </ProfileSection>
       )}
 

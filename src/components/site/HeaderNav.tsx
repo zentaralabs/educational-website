@@ -16,6 +16,7 @@ const NAV: NavItem[] = [
       { label: "Best universities", href: "/best", hint: "Ranked shortlists by field" },
       { label: "Compare", href: "/compare", hint: "Universities side by side" },
       { label: "Cost of living", href: "/cost-of-living", hint: "Monthly budgets by city" },
+      { label: "By country", href: "/international", hint: "Applying from India, Nepal, China and more" },
     ],
   },
   {
