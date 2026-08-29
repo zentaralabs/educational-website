@@ -5,11 +5,13 @@ import { createPublicClient } from "@/lib/supabase/public";
  * indexing (and listing in the sitemap). Program pages are otherwise a thin
  * data template over an AI-imported dataset, so we only index the ones that
  * have real sourced prose: either a parsed `curriculum` (the fully-enriched
- * set) or an "About this program" description of at least 110 words (the
- * demand-tier degree cards written in the 2026-08 description pass). The
- * short templated long-tail cards (grad cert/diploma families, one-year
- * honours years, pathway/enabling) stay noindex and out of the sitemap,
- * still live for users and internal links, until a later verification wave.
+ * set) or an "About this program" description of at least 100 words. That
+ * covers every real sourced degree card from the 2026-08 description pass
+ * (a check of the 100-109 word band found it is almost all demand-tier
+ * degrees). The genuinely short templated long-tail cards below 100 words
+ * (grad cert/diploma one-liners, short honours years, short pathway cards)
+ * stay noindex and out of the sitemap, still live for users and internal
+ * links, until a later verification wave.
  * See PROJECT_STATUS.md "Description pass" / "Program pages".
  */
 export function isProgramIndexable(program: {
@@ -18,7 +20,7 @@ export function isProgramIndexable(program: {
 }): boolean {
   if (program.curriculum && program.curriculum.trim()) return true;
   const words = (program.description ?? "").trim().split(/\s+/).filter(Boolean);
-  return words.length >= 110;
+  return words.length >= 100;
 }
 
 export type PublicProgramRow = {
