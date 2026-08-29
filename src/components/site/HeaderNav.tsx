@@ -7,6 +7,7 @@ type NavLink = { label: string; href: string; hint?: string };
 type NavItem = NavLink | { label: string; children: NavLink[] };
 
 const NAV: NavItem[] = [
+  { label: "Universities", href: "/universities" },
   { label: "Deadlines", href: "/deadlines" },
   {
     label: "Explore",

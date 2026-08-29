@@ -859,7 +859,7 @@ Next: rebuild the ~100-200 highest-search-demand programs (Master of CS / MBA / 
 
 Ranked opportunities beyond the program-page fix:
 1. **Country-of-origin pages** — "Study in Australia from India / Nepal / Pakistan / China / Vietnam / Bangladesh / Sri Lanka" (~8). Huge volume, exact-audience, and the site has the raw material (visa assessment levels by country, agent-vs-direct rules, local-context cost).
-2. **`/universities` faceted index** — doesn't exist; 56 profiles with no browsable directory. Add filter/combination landing pages (state, city, type, Go8, tuition band, IELTS, intake).
+2. ~~**`/universities` faceted index**~~ **DONE 2026-08-29** — `src/app/(site)/universities/page.tsx` + `UniversityDirectory` client component. Lists all 56, client-side filter (state, public/private, Go8, regional, July intake, IELTS 6.0, tuition band) + sort (name/tuition/IELTS). ItemList JSON-LD, canonical `/universities`, in sitemap, added to header nav + footer + homepage task grid. `statesFromCity()` + `AU_STATES` added to `src/lib/australia.ts`. Filter states are client-only for now (bare `/universities` is the indexable page); could add URL params + `/universities/in/[state]` static pages later.
 3. **Un-hide + strengthen the 20 `/compare/{a}-vs-{b}` pages** — currently noindex; these are the highest-commercial-intent queries in the niche. Beef up with real differentiators, index the high-demand ones, expand to ~40-60 pairs where demand + real difference exist.
 4. **Per-university deadline pages** — "[uni] application deadline 2027" renews yearly; `/deadlines` has no per-uni landing page.
 5. **Cost-of-studying calculator** — link magnet; tuition + living + OSHC + visa + flights. Same for expanding the 4-variable quiz.

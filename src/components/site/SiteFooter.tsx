@@ -3,7 +3,7 @@ import { joinWithAnd } from "@/lib/format";
 import { listPublicCountries } from "@/lib/queries/public-countries";
 
 const EXPLORE = [
-  { label: "Universities", href: "/compare/universities" },
+  { label: "Universities", href: "/universities" },
   { label: "Application deadlines", href: "/deadlines" },
   { label: "Courses by subject", href: "/study" },
   { label: "Cost of living", href: "/cost-of-living" },

@@ -14,6 +14,7 @@ export const revalidate = 3600;
 
 const STATIC_ROUTES: Array<{ path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"] }> = [
   { path: "", priority: 1, changeFrequency: "daily" },
+  { path: "/universities", priority: 0.9, changeFrequency: "weekly" },
   { path: "/deadlines", priority: 0.9, changeFrequency: "daily" },
   { path: "/guides", priority: 0.8, changeFrequency: "weekly" },
   { path: "/compare", priority: 0.7, changeFrequency: "weekly" },

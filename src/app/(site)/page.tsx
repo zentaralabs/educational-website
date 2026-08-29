@@ -39,6 +39,11 @@ export const metadata = {
 
 const TASKS = [
   {
+    label: "Browse all universities",
+    href: "/universities",
+    desc: "Every Australian university, filterable by state, cost and entry",
+  },
+  {
     label: "Check application deadlines",
     href: "/deadlines",
     desc: "Recommended apply-by dates for every intake",

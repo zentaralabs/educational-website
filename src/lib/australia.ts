@@ -25,3 +25,29 @@ export function isRegionalCity(city: string | null): boolean {
   if (/^Brisbane,/i.test(city)) return false;
   return REGIONAL_RE.test(city);
 }
+
+/** The Australian states/territories, in the order used for filters. */
+export const AU_STATES = [
+  { code: "NSW", name: "New South Wales" },
+  { code: "VIC", name: "Victoria" },
+  { code: "QLD", name: "Queensland" },
+  { code: "WA", name: "Western Australia" },
+  { code: "SA", name: "South Australia" },
+  { code: "ACT", name: "Australian Capital Territory" },
+  { code: "TAS", name: "Tasmania" },
+  { code: "NT", name: "Northern Territory" },
+] as const;
+
+/**
+ * Best-effort state code(s) from the free-text `city` field, e.g.
+ * "Melbourne, VIC" -> ["VIC"], "Fremantle, WA / Sydney, NSW" -> ["WA","NSW"],
+ * "Multi-campus (7 campuses, 5 states)" -> [] (treated as national).
+ */
+export function statesFromCity(city: string | null): string[] {
+  if (!city) return [];
+  const codes = new Set<string>();
+  for (const m of city.matchAll(/\b(NSW|VIC|QLD|WA|SA|ACT|TAS|NT)\b/g)) {
+    codes.add(m[1]);
+  }
+  return [...codes];
+}
