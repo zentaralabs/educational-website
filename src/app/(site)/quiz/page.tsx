@@ -4,9 +4,9 @@ import { listQuizOptions } from "@/lib/queries/public-quiz";
 export const revalidate = 3600;
 
 export const metadata = {
-  title: "Find the Right University for Me",
+  title: "Which Australian University Is Right for You? (Quiz)",
   description:
-    "Answer a few questions about country, degree level, budget, and institution type to get matched with real universities.",
+    "Answer a few questions about degree level, budget, and institution type to get matched with real Australian universities that fit.",
   alternates: { canonical: "/quiz" },
 };
 

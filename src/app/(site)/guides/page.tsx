@@ -7,9 +7,9 @@ import { listPublishedGuides } from "@/lib/queries/public-guides";
 export const revalidate = 3600;
 
 export const metadata = {
-  title: "Guides",
+  title: "Application How-to Guides for International Students",
   description:
-    "How-to guides for personal statements, letters of recommendation, transfers, financial aid, and international applications.",
+    "Step-by-step guides for international students applying to Australia: personal statements, letters of recommendation, transfers, financial aid, and how the application system works.",
   alternates: { canonical: "/guides" },
 };
 

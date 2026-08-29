@@ -855,6 +855,12 @@ Done: `generateMetadata` in `src/app/(site)/universities/[slug]/programs/[progra
 
 Next: rebuild the ~100-200 highest-search-demand programs (Master of CS / MBA / Nursing / Data Science at the big universities) with real sourced content — curriculum, entry detail, outcomes, cost math — same verification bar as the rest of the site, then re-add those to the sitemap and drop their noindex.
 
+### Organization schema + title sweep (2026-08-29)
+
+- Site-wide `Organization` JSON-LD added to `src/app/layout.tsx` (`@id` `{SITE_URL}/#organization`, name, url, logo `/icon.svg`, email, founder Roman Lama, foundingDate, knowsAbout). Homepage `WebSite` schema given `@id` + `publisher` ref to the org.
+- Title rewrites (were generic / duplicated): home "Australian University Deadlines, Admissions & Costs"; `/compare` "Compare Australian Universities: Cost, Entry & Deadlines"; `/compare/universities` "Compare Australian Universities Side by Side" (was a dupe of `/compare`); `/deadlines` "Australian University Application Deadlines {SITE_YEAR+1}"; `/guides` "Application How-to Guides for International Students" (was just "Guides"); `/best`, `/quiz`, `/study`, `/visas`, `/scholarships` all made country- and audience-specific.
+- `public/llms.txt` refreshed: points at `/universities` (was `/search`), notes program pages are noindex + indicative, em dashes removed.
+
 ### Bigger SEO roadmap (from the 2026-08-29 strategy pass)
 
 Ranked opportunities beyond the program-page fix:

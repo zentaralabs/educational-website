@@ -2,7 +2,7 @@ import Link from "next/link";
 import { StatusBadge } from "@/components/StatusBadge";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
-import { SITE_NAME, SITE_URL } from "@/lib/site-config";
+import { SITE_NAME, SITE_URL, SITE_YEAR } from "@/lib/site-config";
 import { deadlineBadgeStatus, formatDeadlineDate } from "@/lib/deadline-status";
 import {
   listDeadlineFilterOptions,
@@ -14,9 +14,9 @@ const SELECT_CLASS =
   "rounded-lg border border-ink/15 bg-paper px-3 py-2 font-body text-sm text-ink transition-colors duration-150 hover:border-ink/30 focus-visible:border-status-open focus-visible:outline-none";
 
 export const metadata = {
-  title: "Application Deadline Calendar",
+  title: `Australian University Application Deadlines ${SITE_YEAR + 1}`,
   description:
-    "Recommended international application dates for every intake at Australian universities, by degree level. Filterable by country, level, and intake.",
+    "International application dates for every intake at Australian universities, by degree level: firm closing dates where they exist, recommended apply-by dates where admissions are rolling. Filterable by state, level, and intake.",
   alternates: { canonical: "/deadlines" },
 };
 

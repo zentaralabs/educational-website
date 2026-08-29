@@ -9,9 +9,9 @@ import {
 } from "@/lib/queries/public-universities";
 
 export const metadata = {
-  title: "Compare Universities",
+  title: "Compare Australian Universities Side by Side",
   description:
-    "Compare tuition, admission requirements, deadlines, and selectivity for any two or more universities side by side.",
+    "Pick any two or more Australian universities and compare tuition, admission requirements, deadlines, and selectivity in one table.",
   alternates: { canonical: "/compare/universities" },
 };
 

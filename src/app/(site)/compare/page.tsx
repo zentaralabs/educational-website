@@ -7,9 +7,9 @@ import { listPublishedUniversityOptions } from "@/lib/queries/public-universitie
 export const revalidate = 3600;
 
 export const metadata = {
-  title: "Compare Universities",
+  title: "Compare Australian Universities: Cost, Entry & Deadlines",
   description:
-    "Cross-country and cross-university comparisons: costs, selectivity, and requirements side by side.",
+    "Side-by-side comparisons of Australian universities for international students: tuition, selectivity, entry requirements, and application deadlines.",
   alternates: { canonical: "/compare" },
 };
 

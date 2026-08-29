@@ -13,9 +13,11 @@ import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site-config";
 const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "@id": `${SITE_URL}/#website`,
   name: SITE_NAME,
   url: SITE_URL,
   description: SITE_DESCRIPTION,
+  publisher: { "@id": `${SITE_URL}/#organization` },
   potentialAction: {
     "@type": "SearchAction",
     target: {
@@ -31,7 +33,7 @@ export const revalidate = 3600;
 export const metadata = {
   title: {
     absolute:
-      "University Application Deadlines, Admissions & Costs | Where To Apply",
+      "Australian University Deadlines, Admissions & Costs | Where To Apply",
   },
   description: SITE_DESCRIPTION,
   alternates: { canonical: "/" },

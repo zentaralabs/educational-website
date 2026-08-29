@@ -6,7 +6,7 @@ import { listPublishedSubjects } from "@/lib/queries/public-subjects";
 export const revalidate = 3600;
 
 export const metadata = {
-  title: "Study by subject in Australia",
+  title: "Study in Australia by Subject: Programs, Costs & Entry",
   description:
     "Every field of study at Australian universities for international students: how many programs, how many universities, cheapest tuition, entry requirements, and the pathway to permanent residence.",
   alternates: { canonical: "/study" },

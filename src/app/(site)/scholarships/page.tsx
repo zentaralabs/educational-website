@@ -12,7 +12,7 @@ import {
 export const revalidate = 3600;
 
 export const metadata = {
-  title: "Scholarships for studying in Australia",
+  title: "Scholarships for International Students in Australia",
   description:
     "Government, university, and external scholarships for international students in Australia. What each one is worth, who qualifies, and whether you need a separate application.",
   alternates: { canonical: "/scholarships" },

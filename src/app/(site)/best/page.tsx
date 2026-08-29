@@ -8,7 +8,7 @@ import {
 export const revalidate = 3600;
 
 export const metadata = {
-  title: "Best universities in Australia for international students, by category",
+  title: "Best Universities in Australia for International Students",
   description:
     "Shortlists of Australian universities ranked by first-year cost, number of intakes, regional migration advantages, application fees, and automatic scholarships. Each list shows how it was built.",
   alternates: { canonical: "/best" },

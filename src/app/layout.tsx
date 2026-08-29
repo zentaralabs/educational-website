@@ -5,6 +5,27 @@ import { Analytics } from "@/components/site/Analytics";
 import { CookieConsentBanner } from "@/components/site/CookieConsentBanner";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site-config";
 
+/** Site-wide publisher identity. Given a stable @id so page-level schema
+ * (Article, Dataset, ItemList) can reference it as publisher. */
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": `${SITE_URL}/#organization`,
+  name: SITE_NAME,
+  url: SITE_URL,
+  logo: `${SITE_URL}/icon.svg`,
+  email: "admin@wheretoapply.xyz",
+  description: SITE_DESCRIPTION,
+  founder: { "@type": "Person", name: "Roman Lama" },
+  foundingDate: "2026",
+  knowsAbout: [
+    "University admissions in Australia",
+    "International student tuition and scholarships",
+    "Australian student and skilled migration visas",
+    "University application deadlines",
+  ],
+};
+
 const fraunces = Fraunces({
   variable: "--font-display",
   subsets: ["latin"],
@@ -61,6 +82,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${fraunces.variable} ${publicSans.variable} ${ibmPlexMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-paper text-ink font-body">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
         {children}
         <CookieConsentBanner />
         <Analytics />

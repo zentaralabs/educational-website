@@ -7,7 +7,7 @@ import { VISA_CATEGORY_LABELS, VISA_CATEGORY_ORDER } from "@/lib/visa-categories
 export const revalidate = 3600;
 
 export const metadata = {
-  title: "Australian visa subclasses",
+  title: "Australian Student & Skilled Visa Subclasses Explained",
   description:
     "Plain-English breakdowns of Australia's student, graduate, skilled, and employer-sponsored visa subclasses covering eligibility, points, costs, and the pathway to permanent residence.",
   alternates: { canonical: "/visas" },
