@@ -5,6 +5,7 @@ import { CITY_COSTS } from "@/lib/cities";
 import { SITE_URL } from "@/lib/site-config";
 import { listAllBlogPostSlugs } from "@/lib/queries/public-blog-posts";
 import { listPublishedGuideSlugs } from "@/lib/queries/public-guides";
+import { ORIGIN_COUNTRY_SLUGS } from "@/lib/origin-countries";
 import { listPublishedScholarshipSlugs } from "@/lib/queries/public-scholarships";
 import { listPublishedSubjects } from "@/lib/queries/public-subjects";
 import { listPublishedUniversitySlugs } from "@/lib/queries/public-universities";
@@ -15,6 +16,7 @@ export const revalidate = 3600;
 const STATIC_ROUTES: Array<{ path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"] }> = [
   { path: "", priority: 1, changeFrequency: "daily" },
   { path: "/universities", priority: 0.9, changeFrequency: "weekly" },
+  { path: "/international", priority: 0.7, changeFrequency: "monthly" },
   { path: "/deadlines", priority: 0.9, changeFrequency: "daily" },
   { path: "/guides", priority: 0.8, changeFrequency: "weekly" },
   { path: "/compare", priority: 0.7, changeFrequency: "weekly" },
@@ -135,6 +137,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.7,
     }));
 
+  const originCountryEntries: MetadataRoute.Sitemap = ORIGIN_COUNTRY_SLUGS.map(
+    (slug) => ({
+      url: `${SITE_URL}/international/${slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    }),
+  );
+
   // Program pages (/universities/{slug}/programs/{id}) are deliberately kept
   // out of the sitemap and are noindex: today they are a thin data template
   // over an unverified dataset. They stay live for users and internal links.
@@ -152,5 +163,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...collectionEntries,
     ...subjectEntries,
     ...cityEntries,
+    ...originCountryEntries,
   ];
 }
