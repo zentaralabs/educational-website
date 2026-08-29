@@ -5,6 +5,7 @@ import { CITY_COSTS } from "@/lib/cities";
 import { SITE_URL } from "@/lib/site-config";
 import { listAllBlogPostSlugs } from "@/lib/queries/public-blog-posts";
 import { listPublishedGuideSlugs } from "@/lib/queries/public-guides";
+import { AU_STATES } from "@/lib/australia";
 import { ORIGIN_COUNTRY_SLUGS } from "@/lib/origin-countries";
 import { listPublishedScholarshipSlugs } from "@/lib/queries/public-scholarships";
 import { listPublishedSubjects } from "@/lib/queries/public-subjects";
@@ -146,6 +147,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }),
   );
 
+  const stateEntries: MetadataRoute.Sitemap = AU_STATES.map((s) => ({
+    url: `${SITE_URL}/universities/in/${s.slug}`,
+    lastModified: now,
+    changeFrequency: "weekly" as const,
+    priority: 0.7,
+  }));
+
   // Program pages (/universities/{slug}/programs/{id}) are deliberately kept
   // out of the sitemap and are noindex: today they are a thin data template
   // over an unverified dataset. They stay live for users and internal links.
@@ -164,5 +172,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...subjectEntries,
     ...cityEntries,
     ...originCountryEntries,
+    ...stateEntries,
   ];
 }

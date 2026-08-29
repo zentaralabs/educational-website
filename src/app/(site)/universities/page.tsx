@@ -5,7 +5,7 @@ import {
   type DirectoryUniversity,
 } from "@/components/site/UniversityDirectory";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
-import { GO8_SLUGS, isRegionalCity, statesFromCity } from "@/lib/australia";
+import { AU_STATES, GO8_SLUGS, isRegionalCity, statesFromCity } from "@/lib/australia";
 import { SITE_URL, SITE_YEAR } from "@/lib/site-config";
 import { listCollectionUniversities } from "@/lib/queries/public-collections";
 
@@ -114,6 +114,24 @@ export default async function UniversitiesIndexPage() {
       </div>
 
       <UniversityDirectory universities={universities} />
+
+      <div className="mt-10 border-t border-ink/10 pt-6">
+        <h2 className="mb-3 font-body text-xs font-semibold tracking-wide text-slate uppercase">
+          Browse by state
+        </h2>
+        <ul className="grid gap-2 sm:grid-cols-2">
+          {AU_STATES.map((s) => (
+            <li key={s.slug}>
+              <Link
+                href={`/universities/in/${s.slug}`}
+                className="block rounded-xl border border-line bg-mist px-4 py-3 font-body text-sm font-medium text-ink transition-all duration-150 hover:-translate-y-0.5 hover:border-status-open/30 hover:underline"
+              >
+                Universities in {s.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
 
       <div className="mt-10 border-t border-ink/10 pt-6">
         <h2 className="mb-3 font-body text-xs font-semibold tracking-wide text-slate uppercase">
