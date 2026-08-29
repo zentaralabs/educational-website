@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { ORIGIN_COUNTRIES } from "@/lib/origin-countries";
+import { flagEmoji } from "@/lib/flag";
 
 export const revalidate = 3600;
 
@@ -44,8 +45,13 @@ export default function InternationalHubPage() {
               href={`/international/${c.slug}`}
               className="card card-hover group flex items-center justify-between gap-3 p-5"
             >
-              <span className="font-display text-lg font-semibold text-ink group-hover:underline">
-                Study in Australia from {c.name}
+              <span className="flex items-center gap-2.5 font-display text-lg font-semibold text-ink">
+                <span aria-hidden="true" className="text-xl">
+                  {flagEmoji(c.code)}
+                </span>
+                <span className="group-hover:underline">
+                  Study in Australia from {c.name}
+                </span>
               </span>
               <span className="font-utility text-sm text-status-open">→</span>
             </Link>

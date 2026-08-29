@@ -10,6 +10,8 @@
 
 export type OriginCountry = {
   slug: string;
+  /** ISO 3166-1 alpha-2 code, for the flag emoji. */
+  code: string;
   /** Country name, e.g. "India". */
   name: string;
   /** Adjective for citizens, e.g. "Indian". */
@@ -35,6 +37,7 @@ export type OriginCountry = {
 export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
   india: {
     slug: "india",
+    code: "IN",
     name: "India",
     demonym: "Indian",
     intro: [
@@ -99,6 +102,7 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
 
   nepal: {
     slug: "nepal",
+    code: "NP",
     name: "Nepal",
     demonym: "Nepali",
     intro: [
@@ -159,6 +163,7 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
 
   pakistan: {
     slug: "pakistan",
+    code: "PK",
     name: "Pakistan",
     demonym: "Pakistani",
     intro: [
@@ -219,6 +224,7 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
 
   china: {
     slug: "china",
+    code: "CN",
     name: "China",
     demonym: "Chinese",
     intro: [
@@ -279,6 +285,7 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
 
   vietnam: {
     slug: "vietnam",
+    code: "VN",
     name: "Vietnam",
     demonym: "Vietnamese",
     intro: [
@@ -338,6 +345,7 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
 
   bangladesh: {
     slug: "bangladesh",
+    code: "BD",
     name: "Bangladesh",
     demonym: "Bangladeshi",
     intro: [
@@ -397,6 +405,7 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
 
   "sri-lanka": {
     slug: "sri-lanka",
+    code: "LK",
     name: "Sri Lanka",
     demonym: "Sri Lankan",
     intro: [

@@ -9,6 +9,7 @@ import { listPublicCountries } from "@/lib/queries/public-countries";
 import { listUpcomingDeadlines } from "@/lib/queries/public-deadlines";
 import { getHomepageStats } from "@/lib/queries/public-stats";
 import { listFeaturedUniversities } from "@/lib/queries/public-universities";
+import { flagEmoji } from "@/lib/flag";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site-config";
 
 const websiteJsonLd = {
@@ -201,6 +202,7 @@ export default async function Home() {
                   href={`/deadlines?country=${c.code}`}
                   className="font-medium text-ink underline decoration-status-pending/30 decoration-2 underline-offset-4 transition-colors duration-200 hover:decoration-status-pending"
                 >
+                  <span className="no-underline">{flagEmoji(c.code)}</span>{" "}
                   {c.name}
                 </Link>
                 {i < countries.length - 1 && " · "}

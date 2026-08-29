@@ -7,6 +7,7 @@ import { LastVerified } from "@/components/site/LastVerified";
 import { RelatedLinks } from "@/components/site/RelatedLinks";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import { faqJsonLd } from "@/lib/faq";
+import { flagEmoji } from "@/lib/flag";
 import { SITE_YEAR } from "@/lib/site-config";
 import {
   ORIGIN_COUNTRY_SLUGS,
@@ -85,8 +86,9 @@ export default async function OriginCountryPage({
           <span className="inline-block h-1.5 w-1.5 rounded-full bg-status-open" />
           Study in Australia
         </p>
-        <h1 className="mt-2 font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
-          Study in Australia from {c.name}
+        <h1 className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
+          <span aria-hidden="true">{flagEmoji(c.code)}</span>
+          <span>Study in Australia from {c.name}</span>
         </h1>
       </div>
 
