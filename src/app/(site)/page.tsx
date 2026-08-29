@@ -138,13 +138,13 @@ export default async function Home() {
         />
         <div className="relative mx-auto w-full max-w-3xl px-6 pt-8 pb-8 text-center sm:pt-12">
           <p
-            className="animate-fade-up mb-4 inline-flex items-center gap-2 rounded-full border border-line bg-mist px-3 py-1 font-utility text-[0.7rem] font-semibold tracking-widest text-status-open uppercase"
+            className="animate-fade-up mb-4 inline-flex items-center gap-2 rounded-full border border-line bg-mist px-3.5 py-1 font-utility text-[0.7rem] font-semibold tracking-widest text-status-open uppercase"
             style={{ animationDelay: "0ms" }}
           >
-            <span className="relative flex h-1.5 w-1.5">
-              <span className="animate-pulse-dot absolute inline-flex h-1.5 w-1.5 rounded-full bg-status-open" />
+            <span aria-hidden="true" className="text-sm leading-none">
+              {flagEmoji("AU")}
             </span>
-            {stats.universityCount.toLocaleString()} universities ·{" "}
+            Australia · {stats.universityCount.toLocaleString()} universities ·{" "}
             {(Math.floor(stats.programCount / 100) * 100).toLocaleString()}+ courses ·{" "}
             {stats.deadlineCount.toLocaleString()} deadlines
           </p>
@@ -160,8 +160,8 @@ export default async function Home() {
             className="animate-fade-up mx-auto mt-4 max-w-xl font-body text-base text-slate text-balance sm:text-lg"
             style={{ animationDelay: "80ms" }}
           >
-            Compare universities, courses, application deadlines, tuition,
-            entry requirements, scholarships, and visa pathways for Australia
+            Compare Australian universities and courses: application deadlines,
+            tuition, entry requirements, scholarships, and student visas, all
             in one place.
           </p>
 
@@ -200,19 +200,28 @@ export default async function Home() {
             className="animate-fade-up mt-6 font-body text-sm text-slate"
             style={{ animationDelay: "200ms" }}
           >
-            Or browse by country:{" "}
-            {countries.map((c, i) => (
-              <span key={c.code}>
-                <Link
-                  href={`/deadlines?country=${c.code}`}
-                  className="font-medium text-ink underline decoration-status-pending/30 decoration-2 underline-offset-4 transition-colors duration-200 hover:decoration-status-pending"
-                >
-                  <span className="no-underline">{flagEmoji(c.code)}</span>{" "}
-                  {c.name}
-                </Link>
-                {i < countries.length - 1 && " · "}
-              </span>
-            ))}
+            {countries.length > 1 ? (
+              <>
+                Or browse by country:{" "}
+                {countries.map((c, i) => (
+                  <span key={c.code}>
+                    <Link
+                      href={`/deadlines?country=${c.code}`}
+                      className="font-medium text-ink underline decoration-status-pending/30 decoration-2 underline-offset-4 transition-colors duration-200 hover:decoration-status-pending"
+                    >
+                      <span className="no-underline">{flagEmoji(c.code)}</span>{" "}
+                      {c.name}
+                    </Link>
+                    {i < countries.length - 1 && " · "}
+                  </span>
+                ))}
+              </>
+            ) : (
+              <>
+                {flagEmoji("AU")} Covering Australia in full. Other study
+                destinations are on the way.
+              </>
+            )}
           </p>
         </div>
       </div>
