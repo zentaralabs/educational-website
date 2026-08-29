@@ -3,11 +3,12 @@
 import { useEffect, useState } from "react";
 
 const PHRASES = [
-  "I want to study computer science",
-  "MIT",
-  "Scholarships in Canada",
-  "Stanford University",
-  "MBA programs in the UK",
+  "Master of Data Science",
+  "student visa 500",
+  "University of Melbourne",
+  "485 graduate visa",
+  "scholarships for international students",
+  "nursing degrees in Brisbane",
 ];
 
 const TYPE_SPEED_MS = 45;

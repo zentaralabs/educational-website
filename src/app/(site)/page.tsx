@@ -144,7 +144,8 @@ export default async function Home() {
               <span className="animate-pulse-dot absolute inline-flex h-1.5 w-1.5 rounded-full bg-status-open" />
             </span>
             {stats.universityCount.toLocaleString()} universities ·{" "}
-            {stats.deadlineCount.toLocaleString()} deadlines tracked
+            {(Math.floor(stats.programCount / 100) * 100).toLocaleString()}+ courses ·{" "}
+            {stats.deadlineCount.toLocaleString()} deadlines
           </p>
 
           <h1
@@ -158,8 +159,9 @@ export default async function Home() {
             className="animate-fade-up mx-auto mt-4 max-w-xl font-body text-base text-slate text-balance sm:text-lg"
             style={{ animationDelay: "80ms" }}
           >
-            Compare universities, application deadlines, tuition, entry
-            requirements, and scholarships for Australia in one place.
+            Compare universities, courses, application deadlines, tuition,
+            entry requirements, scholarships, and visa pathways for Australia
+            in one place.
           </p>
 
           <div

@@ -73,6 +73,27 @@ export default async function SearchPage({
         </section>
       )}
 
+      {results.visas.length > 0 && (
+        <section className="mt-8">
+          <h2 className="mb-3 font-body text-xs font-semibold tracking-wide text-slate uppercase">
+            Visas
+          </h2>
+          <ul className="flex flex-col gap-3">
+            {results.visas.map((v) => (
+              <li key={v.slug} className="border-b border-ink/10 pb-3">
+                <Link
+                  href={`/visas/${v.slug}`}
+                  className="font-body text-base text-ink hover:underline"
+                >
+                  {v.name}
+                </Link>
+                <p className="mt-0.5 text-sm text-slate">Subclass {v.code}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
       {results.programs.length > 0 && (
         <section className="mt-8">
           <h2 className="mb-3 font-body text-xs font-semibold tracking-wide text-slate uppercase">
@@ -112,27 +133,6 @@ export default async function SearchPage({
                   {g.title}
                 </Link>
                 <p className="mt-0.5 text-sm text-slate">{g.category}</p>
-              </li>
-            ))}
-          </ul>
-        </section>
-      )}
-
-      {results.visas.length > 0 && (
-        <section className="mt-8">
-          <h2 className="mb-3 font-body text-xs font-semibold tracking-wide text-slate uppercase">
-            Visas
-          </h2>
-          <ul className="flex flex-col gap-3">
-            {results.visas.map((v) => (
-              <li key={v.slug} className="border-b border-ink/10 pb-3">
-                <Link
-                  href={`/visas/${v.slug}`}
-                  className="font-body text-base text-ink hover:underline"
-                >
-                  {v.name}
-                </Link>
-                <p className="mt-0.5 text-sm text-slate">Subclass {v.code}</p>
               </li>
             ))}
           </ul>

@@ -38,6 +38,11 @@ const STOPWORDS = new Set([
   "university", "universities", "uni", "college", "colleges", "school",
   "course", "courses", "degree", "degrees", "program", "programme", "programs",
   "programmes", "major", "majors", "please", "somewhere", "anywhere",
+  // Degree-level words carry no signal on their own and match every
+  // "Graduate Certificate / Graduate Diploma" row, drowning out a specific
+  // hit like "485 graduate visa". "bachelor"/"master" are kept: they do
+  // usefully narrow a program search.
+  "graduate", "postgraduate", "undergraduate",
 ]);
 
 /** Split a natural-language query into the meaningful search tokens. */

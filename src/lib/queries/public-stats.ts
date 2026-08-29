@@ -1,9 +1,13 @@
 import { createPublicClient } from "@/lib/supabase/public";
 
 export async function getHomepageStats() {
-  const supabase = createPublicClient(["universities:list", "deadlines:list"]);
+  const supabase = createPublicClient([
+    "universities:list",
+    "deadlines:list",
+    "programs:list",
+  ]);
 
-  const [universities, deadlines] = await Promise.all([
+  const [universities, deadlines, programs] = await Promise.all([
     supabase
       .from("universities")
       .select("id, country:countries!inner(is_launched)", { count: "exact", head: true })
@@ -17,14 +21,25 @@ export async function getHomepageStats() {
       })
       .eq("status", "published")
       .eq("university.country.is_launched", true),
+    supabase
+      .from("programs")
+      .select(
+        "id, university:universities!inner(status, country:countries!inner(is_launched))",
+        { count: "exact", head: true },
+      )
+      .eq("status", "published")
+      .eq("university.status", "published")
+      .eq("university.country.is_launched", true),
   ]);
 
   if (universities.error) throw universities.error;
   if (deadlines.error) throw deadlines.error;
+  if (programs.error) throw programs.error;
 
   return {
     universityCount: universities.count ?? 0,
     deadlineCount: deadlines.count ?? 0,
+    programCount: programs.count ?? 0,
   };
 }
 
