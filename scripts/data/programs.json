@@ -20038,7 +20038,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "A postgraduate degree in biosecurity, which Murdoch says was the first master's of its kind in Australia. The content was developed with input from Australia, New Zealand, Canada and the United States, so it covers international biosecurity requirements as well as domestic ones, and teaches students to identify, assess and mitigate biosecurity risks and to develop, implement and evaluate biosecurity policy and procedure. Delivery is flexible: full-time or part-time, and designed so students can study from another country while working. Graduates work in technical, research and administrative roles in quarantine and pest and disease management with state agriculture departments, state and federal biosecurity agencies, Plant Health Australia, Animal Health Australia, private industry and international equivalents. It suits people already working in agriculture, environment or border roles who want a formal biosecurity qualification.",
     "curriculum": null,
     "admission_requirements": "A relevant bachelor degree in science/agriculture, or equivalent.",
     "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
@@ -20054,7 +20054,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://www.murdoch.edu.au/study/courses"
+    "source_url": "https://www.murdoch.edu.au/course/postgraduate/m1248"
   },
   {
     "university_slug": "murdoch-university",
@@ -20286,7 +20286,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "A postgraduate degree in community development, covering the ideas and practices used to support community-led change in Australia and internationally. Students work with real, active community projects, ranging from cultural-strength projects in remote areas to urban agriculture, sustainability and grassroots creative arts initiatives. Entry requires a recognised bachelor's degree or higher, or equivalent training and experience, and it does not need to be in a directly related field. Graduates work in community and social services, local government, humanitarian organisations and NGOs, aid work, social and economic planning, sustainable development and Indigenous governance. It suits community-sector practitioners who want to deepen their practice and move into planning, coordination and leadership roles, as well as graduates entering the field.",
     "curriculum": null,
     "admission_requirements": "A relevant bachelor degree, or equivalent; community-sector experience preferred.",
     "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
@@ -20302,7 +20302,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://www.murdoch.edu.au/study/courses"
+    "source_url": "https://www.murdoch.edu.au/course/postgraduate/m1212"
   },
   {
     "university_slug": "murdoch-university",
@@ -20342,13 +20342,13 @@
     "id": "fe61059a-3dfa-4d68-b2b5-dbcd3e9293c4",
     "name": "Master of Creative Arts Therapies",
     "status": "published",
-    "duration_years": null,
+    "duration_years": "2.0",
     "tuition_international": "30000",
     "tuition_domestic": "25500",
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "A two-year, 48 credit point degree in creative arts psychotherapy, which Murdoch says is the only master's in creative arts therapies in Western Australia. The first year is the Graduate Diploma in Creative Arts Therapies, and study is highly experiential, taught in purpose-built creative arts therapies spaces through workshops, supervised clinical practice and clinical supervision. Students learn to critically appraise arts psychotherapy literature and to practise across clinical and non-clinical settings. Entry requires the Murdoch graduate diploma or a comparable program assessed as equivalent, plus a creative practice portfolio and an interview for shortlisted applicants. Graduates can apply for professional membership with the Australian, New Zealand and Asian Creative Arts Therapies Association and for Level 2 membership with the Australian Counselling Association. It suits people committed to practising as creative arts therapists.",
     "curriculum": null,
     "admission_requirements": "A relevant bachelor degree in arts, health, or a related discipline, or equivalent.",
     "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
@@ -20364,7 +20364,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://www.murdoch.edu.au/study/courses"
+    "source_url": "https://www.murdoch.edu.au/course/postgraduate/m1300"
   },
   {
     "university_slug": "murdoch-university",
@@ -20410,7 +20410,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "A postgraduate degree that trains people to create, deliver and manage decarbonisation strategies, built with industry and taught by working decarbonisation professionals. Study covers greenhouse gas measurement and reporting across Scope 1, 2 and 3 emissions, lifecycle assessment, carbon footprinting standards, decarbonisation strategy and economic analysis, the generation and use of carbon offsets, and national and global pathways to net zero by 2050. It sits within Murdoch's long-running energy studies program, which also runs the Master of Renewable and Sustainable Energy, and an Advanced version of the degree is available. Graduates work in carbon and sustainability management, emissions reporting and energy transition roles across business, consulting and government. It suits professionals moving into the fast-growing decarbonisation and climate-strategy field from engineering, science, policy or business.",
     "curriculum": null,
     "admission_requirements": "A relevant bachelor degree in science/engineering/business, or equivalent.",
     "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
@@ -20426,7 +20426,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://www.murdoch.edu.au/study/courses"
+    "source_url": "https://www.murdoch.edu.au/study/courses/study-areas/engineering-and-energy/strategic-decarbonisation-management"
   },
   {
     "university_slug": "murdoch-university",
@@ -20621,13 +20621,13 @@
     "id": "82cee09a-0dd4-4781-a9e9-8eab88c0ff3a",
     "name": "Master of Food Security",
     "status": "published",
-    "duration_years": null,
+    "duration_years": "2.0",
     "tuition_international": "31000",
     "tuition_domestic": "26500",
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "A two-year postgraduate degree, available full-time or part-time, focused on the strategies needed to secure food supply through sustainable agriculture. It draws on Murdoch's strength in agricultural and environmental science to cover production systems, resource constraints, policy and the social and economic dimensions of food security. Entry requires an AQF Level 7 qualification in the plant, food, ecological, environmental or animal sciences, or an equivalent field assessed by the Academic Chair. Fees are charged per unit rather than as a single course fee, so the total depends on the units taken. Graduates work in agricultural development, food policy, research and program roles with government, industry and international organisations. It suits science graduates and practitioners who want to work on food systems and agricultural sustainability.",
     "curriculum": null,
     "admission_requirements": "A relevant bachelor degree, or equivalent.",
     "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
@@ -20643,7 +20643,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://www.murdoch.edu.au/study/courses"
+    "source_url": "https://www.murdoch.edu.au/course/postgraduate/m1311"
   },
   {
     "university_slug": "murdoch-university",
@@ -20689,7 +20689,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "A postgraduate degree for people aiming at leadership in the health sector, covering health policy, leadership, management, economics, law, epidemiology and analytics and how they combine to drive change across the health system. Murdoch describes it as the only course of its kind in Australia. Students choose one of three specialisations: health administration and leadership, evaluation and policy, or health informatics and analytics. The degree is accredited by the Australasian College of Health Service Management, and graduates are eligible for College membership. Teaching connects students with health-sector employers locally, nationally and internationally. Graduates work as health service managers, policy analysts, evaluation leads and health data specialists. It suits clinicians and health professionals moving into administration, policy or analytics roles.",
     "curriculum": null,
     "admission_requirements": "A relevant bachelor degree, or equivalent; healthcare-sector experience preferred.",
     "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
@@ -20705,7 +20705,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://www.murdoch.edu.au/study/courses"
+    "source_url": "https://www.murdoch.edu.au/course/postgraduate/m1267"
   },
   {
     "university_slug": "murdoch-university",
@@ -20720,7 +20720,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "A postgraduate degree that builds leadership and management skills for the health sector, with a strong focus on patient safety, quality and clinical governance alongside financial management, health policy and human factors. Learning is applied: students complete project work that takes something from the course and applies it to a real clinical setting, supported by free skills workshops in writing, statistics, data analysis and research ethics. Students can specialise in Gerontological Healthcare or Contemporary Mental Health, and Murdoch also offers a combined MBA and Master of Health Care Management, the only one of its kind in Western Australia. Entry normally requires a bachelor's degree in a health discipline, with professional experience considered case by case. Graduates move into department, service and facility management roles across hospitals, aged care and community health.",
     "curriculum": null,
     "admission_requirements": "A relevant bachelor degree, or equivalent; healthcare-sector experience preferred.",
     "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
@@ -20736,7 +20736,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://www.murdoch.edu.au/study/courses"
+    "source_url": "https://www.murdoch.edu.au/course/postgraduate/m1217"
   },
   {
     "university_slug": "murdoch-university",
@@ -20745,13 +20745,13 @@
     "id": "f84da9f4-a285-49fd-81a2-439f15eb25bf",
     "name": "Master of High Performance Sport",
     "status": "published",
-    "duration_years": null,
+    "duration_years": "1.0",
     "tuition_international": "32000",
     "tuition_domestic": "27000",
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "A one-year master's for people who want to work in the applied science behind elite sport, combining hands-on testing and training practice with research methods, data analysis and evidence-based decision-making, plus the communication and technology skills that support an athlete's performance and health. Entry requires a recognised bachelor's degree in a cognate area with a GPA of 2.0 or higher, and the program supports the pathway toward Accredited Exercise Scientist accreditation with Exercise and Sports Science Australia. A combined four-year option pairs it with the Bachelor of Sport and Exercise Science. Graduates work with sporting organisations, universities and government institutions in performance support, testing and coaching-adjacent roles. It suits sport and exercise science graduates aiming specifically at high-performance environments.",
     "curriculum": null,
     "admission_requirements": "A relevant bachelor degree in sport/exercise science, or equivalent; coaching or high-performance sport experience preferred.",
     "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
@@ -20767,7 +20767,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://www.murdoch.edu.au/study/courses"
+    "source_url": "https://www.murdoch.edu.au/course/postgraduate/m1400"
   },
   {
     "university_slug": "murdoch-university",
@@ -20813,7 +20813,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "A postgraduate degree in infectious disease surveillance and outbreak control, taught by infectious disease researchers with practical laboratory experience on Murdoch's Perth campus, home to molecular research centres including the Antimicrobial Resistance and Infectious Disease Laboratory and the Institute for Immunology and Infectious Diseases. It is offered in two forms: an Advanced Practice version with a six-month industry project or dissertation, and an Advanced Practice and Innovation version with a longer 12-month industry project or a six-month project plus a six-month dissertation. Entry normally requires a Bachelor of Science in a cognate discipline, or another AQF Level 7 qualification with biological or chemical science units, assessed by the Academic Chair. Graduates work in public health surveillance, outbreak response, diagnostic and research roles. It suits science graduates heading into communicable disease control.",
     "curriculum": null,
     "admission_requirements": "A relevant bachelor degree in health/biomedical science, or equivalent.",
     "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
@@ -20829,7 +20829,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://www.murdoch.edu.au/study/courses"
+    "source_url": "https://www.murdoch.edu.au/course/postgraduate/m1381"
   },
   {
     "university_slug": "murdoch-university",
@@ -20993,13 +20993,13 @@
     "id": "470f8698-f1b1-4cbf-91d7-d9bdfdb68325",
     "name": "Master of Professional Communication",
     "status": "published",
-    "duration_years": null,
+    "duration_years": "1.5",
     "tuition_international": "29000",
     "tuition_domestic": "24500",
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "A postgraduate communication degree aimed at executive, managerial and entrepreneurial roles in communication and media, completable in as little as 1.5 years with credit for relevant prior study or work. Unlike Murdoch's research-weighted Master of Communication, this program is built around applied practice: students work with real clients on real projects through the Work Integrated Learning program, including placements in MESH, Murdoch's on-campus consultancy, and choose from a wide range of online units to shape the degree. Entry is a bachelor's degree in the field, or an unrelated bachelor's plus at least one year of relevant full-time work experience. Graduates work in corporate and marketing communication, public relations, content strategy and media management. It suits people moving up into communication leadership or into the field from an adjacent career.",
     "curriculum": null,
     "admission_requirements": "A relevant bachelor degree, or equivalent.",
     "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
@@ -21015,7 +21015,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://www.murdoch.edu.au/study/courses"
+    "source_url": "https://www.murdoch.edu.au/course/postgraduate/m1419"
   },
   {
     "university_slug": "murdoch-university",
@@ -21154,7 +21154,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "A postgraduate degree in sustainability practice and policy across energy, water, waste, climate change, biodiversity and urban planning. Core study covers urban and regional sustainability, climate change adaptation, and sustainability ethics and education, with a strand on sustainable development in Asia. Students then choose an emphasis through electives: a professional set covering project and risk management, sustainability in business, and leading non-government organisations, or a policy set covering environmental impact assessment, environmental policy and energy policy. Entry is open to graduates from a range of backgrounds. Graduates work as sustainability and environmental officers and advisers in business, government and non-government organisations, and in international development. It suits people who want to lead sustainability programs and need both the technical grounding and the policy and management side.",
     "curriculum": null,
     "admission_requirements": "A relevant bachelor degree, or equivalent.",
     "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
@@ -21170,7 +21170,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://www.murdoch.edu.au/study/courses"
+    "source_url": "https://www.murdoch.edu.au/course/postgraduate/m1214"
   },
   {
     "university_slug": "murdoch-university",
