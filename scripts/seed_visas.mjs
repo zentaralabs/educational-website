@@ -13,6 +13,9 @@ const env = Object.fromEntries(
 );
 
 const AUTHOR_ID = "6e1c0e5b-ed26-497c-a09c-e9539c6761e8"; // Roman Lama
+// Bulk last_verified_at for the visa_subclasses + invitation_rounds rows.
+// Only bump this when the whole set has actually been re-checked against
+// official sources (not for a single-field correction like the 500 fee).
 const TODAY = "2026-08-28";
 const SITE_URL = (env.NEXT_PUBLIC_SITE_URL ?? "https://www.wheretoapply.xyz").replace(/\/$/, "");
 const INDEXNOW_KEY = "b1d94f7a2c8e4056a3f61e0d5c927b8f";
@@ -56,8 +59,7 @@ const visas = [
     leads_to_pr: false,
     pr_pathway:
       "The student visa itself is temporary and gives no direct PR entitlement. The common route is to finish an eligible qualification, move onto a subclass 485 Temporary Graduate visa, gain skilled work experience, and then apply for a 189, 190, or 491. Studying in a regional area can add points and open regional nomination streams.",
-    base_application_charge:
-      "AUD 2,000, rising to AUD 2,500 on 1 July 2026",
+    base_application_charge: "AUD 2,500 (increased from AUD 2,000 on 1 July 2026)",
     processing_time: "Most decisions in 1 to 4 months, varies by country and course",
     age_limit: "No upper age limit; applicants under 18 need welfare arrangements",
     english_requirement:
