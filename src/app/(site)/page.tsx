@@ -166,24 +166,29 @@ export default async function Home() {
           </p>
 
           <div
-            className="animate-fade-up mt-7 flex flex-col items-center gap-2"
+            className="animate-fade-up mt-8 flex flex-col items-center gap-2.5"
             style={{ animationDelay: "120ms" }}
           >
             <Link
               href="/quiz"
-              className="inline-flex items-center gap-2 rounded-full bg-ink px-7 py-3.5 font-body text-base font-semibold text-paper shadow-md shadow-ink/10 transition-all duration-150 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-ink/15"
+              className="group inline-flex items-center gap-2.5 rounded-full bg-status-open px-9 py-4 font-body text-[1.05rem] font-semibold text-white shadow-[0_14px_32px_-10px_color-mix(in_srgb,var(--color-status-open)_65%,transparent)] transition-all duration-150 hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-10px_color-mix(in_srgb,var(--color-status-open)_75%,transparent)]"
             >
               Find my universities
-              <span aria-hidden="true">→</span>
+              <span
+                aria-hidden="true"
+                className="transition-transform duration-150 group-hover:translate-x-0.5"
+              >
+                →
+              </span>
             </Link>
             <span className="font-utility text-xs text-slate">
               8 quick questions · matched to real data · not a lead-gen form
             </span>
           </div>
 
-          <div className="animate-fade-up mt-6" style={{ animationDelay: "160ms" }}>
-            <p className="mb-2 font-utility text-xs tracking-wide text-slate uppercase">
-              Or search by name
+          <div className="animate-fade-up mt-12" style={{ animationDelay: "160ms" }}>
+            <p className="mb-2.5 font-body text-sm text-slate">
+              Already know the university or course? Search for it:
             </p>
             <SearchBar className="mt-0" />
             <div className="mt-3 flex justify-center">
