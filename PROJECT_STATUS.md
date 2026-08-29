@@ -847,6 +847,23 @@ Seed re-run against prod + `deadlines:list` revalidated 2026-08-29. All 56 AU in
 
 **USER MUST RUN `node scripts/seed_deadlines.mjs`** (destructive: deletes + reinserts all AU deadline rows) after fact-checking the PER_UNI dates, then bust ISR (`POST /api/revalidate`).
 
+### Program pages — noindex + out of sitemap (2026-08-29)
+
+The sitemap was 1,289 URLs, ~1,050 of them `/universities/{slug}/programs/{id}` — distributed absurdly (Bond 180, Murdoch 162, Canberra 131, Sydney 9, UWA 8), because the program data came from an uncommitted AI pipeline with no seed script and no verification. Each page is a ~70-word template (name, duration, tuition, IELTS/PTE, one admissions sentence). Classic programmatic-thin-content risk to site-wide quality signals.
+
+Done: `generateMetadata` in `src/app/(site)/universities/[slug]/programs/[programId]/page.tsx` now returns `robots: { index: false, follow: true }`; `src/app/sitemap.ts` no longer emits program URLs (import + fetch removed, `listPublishedProgramsForSitemap` kept for later). **Sitemap: 1,289 -> 186 URLs.** Pages stay live for users and internal links.
+
+Next: rebuild the ~100-200 highest-search-demand programs (Master of CS / MBA / Nursing / Data Science at the big universities) with real sourced content — curriculum, entry detail, outcomes, cost math — same verification bar as the rest of the site, then re-add those to the sitemap and drop their noindex.
+
+### Bigger SEO roadmap (from the 2026-08-29 strategy pass)
+
+Ranked opportunities beyond the program-page fix:
+1. **Country-of-origin pages** — "Study in Australia from India / Nepal / Pakistan / China / Vietnam / Bangladesh / Sri Lanka" (~8). Huge volume, exact-audience, and the site has the raw material (visa assessment levels by country, agent-vs-direct rules, local-context cost).
+2. **`/universities` faceted index** — doesn't exist; 56 profiles with no browsable directory. Add filter/combination landing pages (state, city, type, Go8, tuition band, IELTS, intake).
+3. **Un-hide + strengthen the 20 `/compare/{a}-vs-{b}` pages** — currently noindex; these are the highest-commercial-intent queries in the niche. Beef up with real differentiators, index the high-demand ones, expand to ~40-60 pairs where demand + real difference exist.
+4. **Per-university deadline pages** — "[uni] application deadline 2027" renews yearly; `/deadlines` has no per-uni landing page.
+5. **Cost-of-studying calculator** — link magnet; tuition + living + OSHC + visa + flights. Same for expanding the 4-variable quiz.
+
 ### Still on the SEO list (biggest levers, all off-page)
 
 Backlinks (directory listings, digital PR pitching the calculator + round tracker, HARO), community distribution (Reddit/forums/FB groups), keyword-gap mining once GSC Performance has ~1-2 weeks of data, and the recurring-freshness engine (a post per SkillSelect round / state-nomination event).

@@ -5,7 +5,6 @@ import { CITY_COSTS } from "@/lib/cities";
 import { SITE_URL } from "@/lib/site-config";
 import { listAllBlogPostSlugs } from "@/lib/queries/public-blog-posts";
 import { listPublishedGuideSlugs } from "@/lib/queries/public-guides";
-import { listPublishedProgramsForSitemap } from "@/lib/queries/public-programs";
 import { listPublishedScholarshipSlugs } from "@/lib/queries/public-scholarships";
 import { listPublishedSubjects } from "@/lib/queries/public-subjects";
 import { listPublishedUniversitySlugs } from "@/lib/queries/public-universities";
@@ -46,7 +45,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     blogSlugs,
     visaSlugs,
     scholarshipSlugs,
-    programs,
   ] = await Promise.all([
     listPublishedUniversitySlugs(),
     listPublishedGuideSlugs({ excludeCategory: "comparison" }),
@@ -54,7 +52,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     listAllBlogPostSlugs(),
     listPublishedVisaSlugs(),
     listPublishedScholarshipSlugs(),
-    listPublishedProgramsForSitemap(),
   ]);
 
   const subjects = await listPublishedSubjects();
@@ -137,14 +134,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.7,
     }));
 
-  const programEntries: MetadataRoute.Sitemap = programs
-    .filter((p) => p.university)
-    .map((p) => ({
-      url: `${SITE_URL}/universities/${p.university!.slug}/programs/${p.id}`,
-      lastModified: p.updated_at ? new Date(p.updated_at) : now,
-      changeFrequency: "monthly" as const,
-      priority: 0.5,
-    }));
+  // Program pages (/universities/{slug}/programs/{id}) are deliberately kept
+  // out of the sitemap and are noindex: today they are a thin data template
+  // over an unverified dataset. They stay live for users and internal links.
+  // When high-demand programs are rebuilt with real sourced content, add
+  // those back here and remove their noindex.
 
   return [
     ...staticEntries,
@@ -157,6 +151,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...collectionEntries,
     ...subjectEntries,
     ...cityEntries,
-    ...programEntries,
   ];
 }

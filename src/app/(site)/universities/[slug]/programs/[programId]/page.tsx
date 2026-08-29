@@ -67,6 +67,12 @@ export async function generateMetadata({
     alternates: { canonical: url },
     openGraph: { title, description, url, type: "website" },
     twitter: { card: "summary_large_image", title, description },
+    // Program pages are currently a thin data template (name + a few fields)
+    // and the underlying dataset is unverified (AI-pipeline import, no seed
+    // script). Kept live for users browsing a university's courses and for
+    // internal links, but noindex until the high-demand ones are rebuilt
+    // with real, sourced content. See PROJECT_STATUS "Program pages".
+    robots: { index: false, follow: true },
   };
 }
 
