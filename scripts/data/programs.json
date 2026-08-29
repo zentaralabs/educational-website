@@ -16436,13 +16436,13 @@
     "id": "885350f1-b5fc-4efc-b457-2440a8b699fc",
     "name": "Bachelor of Agricultural Science",
     "status": "published",
-    "duration_years": null,
+    "duration_years": "3.0",
     "tuition_international": "30000",
     "tuition_domestic": "4700",
     "tuition_domestic_is_csp": true,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "A three-year degree with a major in animal health, animal science, or crop and pasture science. Murdoch is the only city-based Australian university with a working farm on campus, so students handle livestock and production systems from first year, alongside field trips, placements and industry projects.\n\nThe Good Universities Guide 2026 ranks Murdoch first in Western Australia for agriculture on teaching quality, skills and student support. Entry is an ATAR of about 70 with alternative pathways available. Graduates work as agronomists, agricultural scientists, farm and livestock managers, animal nutritionists and biosecurity officers, a field where demand for graduates is consistently well above supply.",
     "curriculum": null,
     "admission_requirements": "ATAR of approximately 60-65 (or equivalent); completion of WACE or equivalent secondary qualification.",
     "english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
@@ -16458,7 +16458,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://www.murdoch.edu.au/study/courses"
+    "source_url": "https://www.murdoch.edu.au/course/undergraduate/b1391"
   },
   {
     "university_slug": "murdoch-university",
@@ -16746,13 +16746,13 @@
     "id": "906b05fb-1c1a-4be4-b31b-7d7b10c6d015",
     "name": "Bachelor of Communication",
     "status": "published",
-    "duration_years": null,
+    "duration_years": "3.0",
     "tuition_international": "30000",
     "tuition_domestic": "16500",
     "tuition_domestic_is_csp": true,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "A three-year degree with four majors: communication and media studies, digital communication, journalism and content production, or strategic communication. It is offered on campus and online through Open Universities Australia.\n\nWork-integrated learning comes through collaborative projects with organisations such as Lifeline, RAC Arena and The Salvation Army, and placements at MESH, Murdoch's on-campus creative consultancy, which serves real clients. Students use recording studios, creative labs and broadcast equipment. Entry is an ATAR of about 70 with alternative pathways available. It suits students heading into digital content, media production, journalism or organisational communication across the corporate, non-profit and media sectors.",
     "curriculum": null,
     "admission_requirements": "ATAR of approximately 65-70 (or equivalent); completion of WACE or equivalent secondary qualification.",
     "english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
@@ -16768,7 +16768,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://www.murdoch.edu.au/study/courses"
+    "source_url": "https://www.murdoch.edu.au/course/undergraduate/b1342"
   },
   {
     "university_slug": "murdoch-university",
@@ -17180,13 +17180,13 @@
     "id": "0b4a4e1e-fa4c-42b6-a7db-16e555205794",
     "name": "Bachelor of Engineering Technology",
     "status": "published",
-    "duration_years": null,
+    "duration_years": "3.0",
     "tuition_international": "38000",
     "tuition_domestic": "9700",
     "tuition_domestic_is_csp": true,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "A three-year degree accredited by Engineers Australia at engineering technologist level, with a major in electrical and renewable energy engineering, environmental engineering, or industrial control and automation engineering.\n\nMurdoch runs a real engineering plant on campus, the Bayer pilot plant with its own control room, described as the only facility of its kind in WA, so students train on industrial equipment rather than simulations. Entry is an ATAR of about 70 with VET and mature-age pathways. It suits students who want an applied, hands-on engineering career, and it articulates into the two-year Master of Engineering Practice for those who want to reach professional engineer level.",
     "curriculum": null,
     "admission_requirements": "ATAR of approximately 75-80 (or equivalent); completion of WACE Mathematics Methods and Physics recommended.",
     "english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
@@ -17202,7 +17202,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://www.murdoch.edu.au/study/courses"
+    "source_url": "https://www.murdoch.edu.au/course/undergraduate/b1408"
   },
   {
     "university_slug": "murdoch-university",
@@ -17211,13 +17211,13 @@
     "id": "8b1a6b48-8816-41c6-af1f-0620236a191f",
     "name": "Bachelor of Food Science and Nutrition",
     "status": "published",
-    "duration_years": null,
+    "duration_years": "3.0",
     "tuition_international": "31000",
     "tuition_domestic": "9700",
     "tuition_domestic_is_csp": true,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "A three-year degree covering food composition, processing and preservation alongside human nutrition, including how diet, the gut microbiome and nutrients affect health and disease. Students work in laboratories and food production settings with industry-standard equipment, and use Murdoch's living labs including Whitby Falls Farm.\n\nThere is no single professional accreditation attached to the degree. Entry is an ATAR of about 70 with alternative pathways available. It suits students aiming at food manufacturing, product development, quality assurance, food safety regulation or public health nutrition roles, and it can be paired with a Master of Food Science for a longer research-oriented path.",
     "curriculum": null,
     "admission_requirements": "ATAR of approximately 65-70 (or equivalent); completion of WACE Chemistry recommended.",
     "english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
@@ -17233,7 +17233,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://www.murdoch.edu.au/study/courses"
+    "source_url": "https://www.murdoch.edu.au/course/undergraduate/b1389"
   },
   {
     "university_slug": "murdoch-university",
@@ -17459,13 +17459,13 @@
     "id": "51f74174-9a05-4421-b396-8dc76239c22e",
     "name": "Bachelor of Laboratory Medicine",
     "status": "published",
-    "duration_years": null,
+    "duration_years": "4.0",
     "tuition_international": "33000",
     "tuition_domestic": "9700",
     "tuition_domestic_is_csp": true,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "A four-year degree in diagnostic pathology science, covering biochemistry, haematology, immunology, microbiology, histopathology, diagnostic genomics and transfusion science, with practical laboratory training and placements in diagnostic pathology labs.\n\nIt is professionally accredited by the Australian Institute of Medical and Clinical Scientists, and Murdoch says accredited graduates are preferentially employed by the pathology sector. Study is based in the Murdoch Health and Knowledge Precinct alongside hospitals and research centres. Entry is an ATAR of about 70. It suits students who want a laboratory-based health career diagnosing disease from patient samples, rather than patient-facing clinical work.",
     "curriculum": null,
     "admission_requirements": "ATAR of approximately 75-80 (or equivalent); completion of WACE Chemistry and Human Biology recommended.",
     "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
@@ -17481,7 +17481,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://www.murdoch.edu.au/study/courses"
+    "source_url": "https://www.murdoch.edu.au/course/undergraduate/b1374"
   },
   {
     "university_slug": "murdoch-university",
@@ -20187,13 +20187,13 @@
     "id": "644c9f55-704c-48f4-8e6c-c72607f5dcd8",
     "name": "Master of Clinical Chiropractic",
     "status": "published",
-    "duration_years": null,
+    "duration_years": "2.0",
     "tuition_international": "37000",
     "tuition_domestic": "31000",
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "A two-year graduate-entry master's that, combined with an approved bachelor's degree, completes the qualification needed to practise as a chiropractor. Entry requires a cognate bachelor's degree with a GPA of at least 2.0 and completed tertiary units in human anatomy and human physiology within the last ten years; at Murdoch the usual feeder is the Bachelor of Health Science.\n\nThe program is accredited by the Council on Chiropractic Education Australasia, so graduates are eligible for registration with the Chiropractic Board of Australia and in New Zealand, with pathways to recognition in several other countries. Clinical training runs in Murdoch's teaching clinic. It suits health science graduates committed to a manual, primary-contact allied health career.",
     "curriculum": null,
     "admission_requirements": "Completion of the corresponding Bachelor of Health Science (Chiropractic) or equivalent pre-clinical qualification.",
     "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
@@ -20209,7 +20209,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://www.murdoch.edu.au/study/courses"
+    "source_url": "https://www.murdoch.edu.au/course/postgraduate/m1408"
   },
   {
     "university_slug": "murdoch-university",
@@ -20528,13 +20528,13 @@
     "id": "ae2e07f5-9efd-4e50-bfd6-7a2a8295bfa2",
     "name": "Master of Engineering Practice",
     "status": "published",
-    "duration_years": null,
+    "duration_years": "2.0",
     "tuition_international": "38000",
     "tuition_domestic": "30000",
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "A two-year master's that takes graduates of a three-year engineering technology degree up to professional engineer level, and also accepts holders of a four-year engineering degree wanting to upskill. Three majors hold full Engineers Australia accreditation at professional engineer level and are recognised under the Washington Accord: environmental and sustainable systems, smart and renewable electrical power systems, and intelligent industrial control and autonomous systems.\n\nThe degree builds in more than 300 hours of practical experience through an integrated professional practice unit and a professional portfolio, and offers design or research minors for those heading toward a doctorate. It suits engineering technologists seeking chartered-track recognition and engineers moving into renewable energy, automation or environmental systems work.",
     "curriculum": null,
     "admission_requirements": "A bachelor of engineering technology or equivalent, plus relevant industry experience.",
     "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
@@ -20550,7 +20550,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://www.murdoch.edu.au/study/courses"
+    "source_url": "https://www.murdoch.edu.au/course/postgraduate/m1330"
   },
   {
     "university_slug": "murdoch-university",
@@ -21024,13 +21024,13 @@
     "id": "9676826a-bb86-4bf9-b3a3-381240af8a90",
     "name": "Master of Professional Psychology",
     "status": "published",
-    "duration_years": null,
+    "duration_years": "2.0",
     "tuition_international": "34000",
     "tuition_domestic": "29000",
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "A postgraduate psychology degree that provides the coursework and supervised practice for the fifth year of the psychology training sequence, after an accredited three-year degree and honours. It is accredited by the Australian Psychology Accreditation Council as a packaged Level 2 and 3 program, and it includes two placements in the final stage.\n\nGraduates are then eligible to apply for general registration as a psychologist after one further year of supervised practice, the 5+1 internship pathway. Admission is competitive: an accredited psychology sequence with a distinction average in psychology units is the guideline, plus referee reports, a statement and often an interview. It suits people whose goal is general registration as a psychologist by the most direct route.",
     "curriculum": null,
     "admission_requirements": "An honours degree (or equivalent GPA) in psychology accredited by the Australian Psychology Accreditation Council.",
     "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
@@ -21046,7 +21046,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://www.murdoch.edu.au/study/courses"
+    "source_url": "https://www.murdoch.edu.au/course/postgraduate/m1388"
   },
   {
     "university_slug": "murdoch-university",
@@ -21086,13 +21086,13 @@
     "id": "011b8c1c-5634-447c-947a-d04dd82e3c5c",
     "name": "Master of Renewable and Sustainable Energy",
     "status": "published",
-    "duration_years": null,
+    "duration_years": "2.0",
     "tuition_international": "31000",
     "tuition_domestic": "26500",
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "A two-year master's covering renewable energy systems design, energy efficiency and building energy assessment, micro-grid technology, carbon management, and energy policy in developing economies, ending in a substantial research project.\n\nMurdoch has taught and researched energy since 1975 and describes this as the most comprehensive renewable energy program in Australia, run through the Murdoch University Energy Research and Innovation Group with outdoor solar, wind and hybrid test facilities. Entry is a bachelor's degree or equivalent professional experience, with some units assuming high school physics. It suits graduates moving into power generation, renewable manufacturing, energy consultancy, government policy or international development, and it deliberately spans both the technical and policy sides.",
     "curriculum": null,
     "admission_requirements": "A relevant bachelor degree in science/engineering, or equivalent.",
     "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
@@ -21108,7 +21108,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://www.murdoch.edu.au/study/courses"
+    "source_url": "https://www.murdoch.edu.au/course/postgraduate/m1268"
   },
   {
     "university_slug": "murdoch-university",
