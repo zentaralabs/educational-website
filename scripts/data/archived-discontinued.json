@@ -72,6 +72,18 @@
       "name": "Bachelor of Science",
       "reason": "Murdoch handbook B1317: Bachelor of Science discontinued, not accepting commencements from 31/12/2022; current Murdoch science degrees are all named specialisations",
       "archived_at": "2026-08-29T15:03:44.072Z"
+    },
+    {
+      "id": "a6769a2f-5156-43af-aff6-3dee227f7bea",
+      "name": "Graduate Certificate in Family Dispute Resolution",
+      "reason": "Bond page: Graduate Certificate in Family Dispute Resolution suspended, no intakes from January 2025",
+      "archived_at": "2026-08-29T15:54:56.946Z"
+    },
+    {
+      "id": "f27f42f2-fe69-402e-9652-f59dcadbe203",
+      "name": "Graduate Diploma of Psychological Science",
+      "reason": "Bond page: Graduate Diploma of Psychological Science suspended, no intakes from January 2025",
+      "archived_at": "2026-08-29T15:54:57.122Z"
     }
   ]
 }
