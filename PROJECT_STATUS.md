@@ -964,3 +964,15 @@ A long ChatGPT product teardown was reviewed. It scored the foundation 8/10 (fai
 4. **Minor polish (only if time):** "closing soon" urgency framing + level filters on `/deadlines`; "best for lower tuition / location / scholarships" verdict lines on `/compare/{a}-vs-{b}` head-to-heads (check what's already there first).
 
 **Explicitly NOT now** (ChatGPT pushed these hard; they are wrong for a solo operator pre-AdSense, pre-traffic): user accounts, application tracker, deadline email reminders, a weighted recommendation engine with "% match / Reach-Target-Safe" scores (also a real liability — students act on those numbers), premium tiers, affiliate build-out. Revisit only after AdSense approval + meaningful organic traffic. The correct order is: get approved -> traffic grows with domain age -> then decide whether to build a product layer on an audience that actually exists.
+
+### Priority 1 — per-datapoint verification surfacing (DONE 2026-08-30)
+
+- New `src/components/site/VerifiedInline.tsx` — restrained one-line marker (check icon + "Verified {date}" + source hostname link). Placed directly under the high-consequence fact groups:
+  - **University profile** (`universities/[slug]/page.tsx`): under the Admissions FactBox, the Tuition & first-year-budget FactBox, and the deadline table. Uses `university.last_verified_at` + `pickPrimarySource(source_urls, website_url)`. The deadline marker prefers the most recent per-row `deadlines.last_verified_at` and a deep-linking `deadlines.source_url` (so e.g. Sydney shows "Verified Aug 29" on deadlines vs "Aug 27" page-level).
+  - **Program page** (`programs/[programId]/page.tsx`): under the `ProgramSidebar` (cost/duration + English), using per-row `program.last_verified_at` + `program.source_url`. Replaced the old standalone bottom `LastVerified` block.
+  - **Deadlines detail page** (`universities/[slug]/deadlines/page.tsx`): under the deadline table. Replaced the old bottom `LastVerified`.
+- New `src/lib/sources.ts` — `pickPrimarySource(sources, websiteUrl)`: first deep-linking source, else any, else website.
+- Query change: `getPublishedDeadlinesForUniversity` now also selects `last_verified_at` (added to `PublicDeadlineForUniversity`).
+- New `src/components/site/WhyTrust.tsx` — condensed 4-point E-E-A-T block (official sources / dated & re-checked / independent / named editor + public method) linking to `/methodology`, `/editorial-policy`, `/about`. Rendered on the homepage (replaced the thin one-line "Researched from official sources" box), university profile, program page, and deadlines detail page.
+- The page-level "Sources & verification" block (with author/reviewer bylines + full source list) stays on the university profile — the inline markers are additive, not a replacement.
+- Verified in dev: uni profile, program, deadlines detail all render; per-row verified dates resolve distinctly from page-level; tsc + eslint clean; no console errors.

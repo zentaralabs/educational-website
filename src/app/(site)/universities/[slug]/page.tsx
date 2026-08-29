@@ -10,6 +10,8 @@ import { CheckBadgeIcon } from "@/components/site/icons";
 import { Fact, FactBox, ProfileSection } from "@/components/site/ProfileSection";
 import { HowToApply } from "@/components/site/HowToApply";
 import { LastVerified } from "@/components/site/LastVerified";
+import { VerifiedInline } from "@/components/site/VerifiedInline";
+import { WhyTrust } from "@/components/site/WhyTrust";
 import { ProgramsList } from "@/components/site/ProgramsList";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import { FaqSection } from "@/components/site/FaqSection";
@@ -26,6 +28,7 @@ import {
   getUniversityRedirect,
   listPublishedUniversitySlugs,
 } from "@/lib/queries/public-universities";
+import { pickPrimarySource } from "@/lib/sources";
 
 // Indicative single-student annual living cost in Australia when a
 // city-specific figure isn't set — anchored to the Home Affairs financial
@@ -121,6 +124,25 @@ export default async function UniversityProfilePage({
   const budgetHigh = budgetLow ? Math.round((budgetLow * 1.15) / 1000) * 1000 : null;
 
   const hasCostData = Boolean(anchorTuition || university.application_fee);
+
+  // One source URL to surface inline next to the high-consequence fact
+  // groups (entry requirements, tuition). No per-fact source column exists,
+  // so this is the university's primary fact-check source.
+  const primarySource = pickPrimarySource(
+    university.source_urls,
+    university.website_url,
+  );
+
+  const deadlineSource = pickPrimarySource(
+    deadlines.map((d) => d.source_url).filter((u): u is string => Boolean(u)),
+    primarySource,
+  );
+  const deadlineVerifiedAt =
+    deadlines
+      .map((d) => d.last_verified_at)
+      .filter((d): d is string => Boolean(d))
+      .sort()
+      .at(-1) ?? university.last_verified_at;
 
   const nextDeadline = deadlines.find(
     (d) => !d.is_rolling && deadlineBadgeStatus(d.deadline_date, d.is_rolling) === "upcoming",
@@ -362,6 +384,10 @@ export default async function UniversityProfilePage({
               value={university.degree_levels.map((d) => d.name).join(", ")}
             />
           </FactBox>
+          <VerifiedInline
+            date={university.last_verified_at}
+            source={primarySource}
+          />
           {university.acceptance_rate !== null && (
             <p className="mt-2 font-body text-xs text-slate">
               Australian universities do not publish official acceptance rates.
@@ -403,6 +429,10 @@ export default async function UniversityProfilePage({
               value={`${formatCurrency(livingCost, "AUD")}/year`}
             />
           </FactBox>
+          <VerifiedInline
+            date={university.last_verified_at}
+            source={primarySource}
+          />
 
           {budgetLow && budgetHigh && (
             <div className="mt-4 rounded-xl border border-status-pending/25 bg-status-pending/5 p-5">
@@ -595,6 +625,10 @@ export default async function UniversityProfilePage({
               );
             })}
           </div>
+          <VerifiedInline
+            date={deadlineVerifiedAt}
+            source={deadlineSource}
+          />
           <Link
             href={`/universities/${university.slug}/deadlines`}
             className="mt-3 inline-block font-body text-sm font-medium text-status-open underline underline-offset-2"
@@ -660,6 +694,8 @@ export default async function UniversityProfilePage({
           )}
         </ProfileSection>
       )}
+
+      <WhyTrust className="mt-8" />
 
       <ProfileSection title="Sources & verification">
         <div className="flex items-start gap-2 rounded-xl bg-status-open/5 px-4 py-3">

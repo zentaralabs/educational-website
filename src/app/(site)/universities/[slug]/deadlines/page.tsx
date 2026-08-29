@@ -2,7 +2,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { FaqSection } from "@/components/site/FaqSection";
-import { LastVerified } from "@/components/site/LastVerified";
+import { VerifiedInline } from "@/components/site/VerifiedInline";
+import { WhyTrust } from "@/components/site/WhyTrust";
 import { StatusBadge } from "@/components/StatusBadge";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import { deadlineBadgeStatus } from "@/lib/deadline-status";
@@ -100,6 +101,13 @@ export default async function UniversityDeadlinesPage({
   const source =
     deadlines.find((d) => d.source_url && !/^https?:\/\/[^/]+\/?$/.test(d.source_url))
       ?.source_url ?? university.website_url ?? null;
+
+  const verifiedAt =
+    deadlines
+      .map((d) => d.last_verified_at)
+      .filter((d): d is string => Boolean(d))
+      .sort()
+      .at(-1) ?? university.last_verified_at;
 
   const answer = next
     ? `The recommended date to have your international application in to ${name} for its next intake${
@@ -217,6 +225,8 @@ export default async function UniversityDeadlinesPage({
         })}
       </div>
 
+      <VerifiedInline date={verifiedAt} source={source} />
+
       {guidance.length > 0 && (
         <div className="mt-4 flex flex-col gap-2 rounded-xl border border-line bg-mist p-4">
           <h2 className="font-body text-xs font-semibold tracking-wide text-slate uppercase">
@@ -255,14 +265,7 @@ export default async function UniversityDeadlinesPage({
         items={faq}
       />
 
-      {source && (
-        <div className="mt-10">
-          <LastVerified
-            date={university.last_verified_at}
-            sources={[source]}
-          />
-        </div>
-      )}
+      <WhyTrust className="mt-10" />
 
       <div className="mt-10 border-t border-ink/10 pt-6">
         <h2 className="mb-3 font-body text-xs font-semibold tracking-wide text-slate uppercase">

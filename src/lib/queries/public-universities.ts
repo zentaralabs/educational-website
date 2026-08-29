@@ -314,6 +314,7 @@ export type PublicDeadlineForUniversity = {
   is_rolling: boolean;
   notes: string | null;
   source_url: string | null;
+  last_verified_at: string | null;
   degree_level: { name: string } | null;
   deadline_type: { name: string } | null;
   application_platform: { name: string } | null;
@@ -326,7 +327,7 @@ export async function getPublishedDeadlinesForUniversity(
   const { data, error } = await supabase
     .from("deadlines")
     .select(
-      "id, deadline_date, is_rolling, notes, source_url, degree_level:degree_levels(name), deadline_type:deadline_types(name), application_platform:application_platforms(name)",
+      "id, deadline_date, is_rolling, notes, source_url, last_verified_at, degree_level:degree_levels(name), deadline_type:deadline_types(name), application_platform:application_platforms(name)",
     )
     .eq("university_id", universityId)
     .eq("status", "published")

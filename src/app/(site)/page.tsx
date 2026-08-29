@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Collapsible } from "@/components/site/Collapsible";
 import { SearchBar } from "@/components/site/SearchBar";
 import { StudentTypeToggle } from "@/components/site/StudentTypeToggle";
+import { WhyTrust } from "@/components/site/WhyTrust";
 import { deadlineBadgeStatus } from "@/lib/deadline-status";
 import { formatCurrency } from "@/lib/format";
 import { listPublicCountries } from "@/lib/queries/public-countries";
@@ -334,17 +335,7 @@ export default async function Home() {
           </section>
         )}
 
-        <div className="scroll-reveal mt-10 flex flex-col items-center gap-2 rounded-2xl border border-line bg-mist px-6 py-6 text-center">
-          <p className="font-body text-sm font-medium text-ink">
-            Researched from official university sources and regularly verified.
-          </p>
-          <Link
-            href="/about"
-            className="font-body text-sm text-slate underline underline-offset-2 hover:text-ink"
-          >
-            Independent, not affiliated with any university →
-          </Link>
-        </div>
+        <WhyTrust className="scroll-reveal mt-10" />
       </div>
     </main>
   );

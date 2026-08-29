@@ -2,10 +2,11 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { ProfileSection } from "@/components/site/ProfileSection";
-import { LastVerified } from "@/components/site/LastVerified";
+import { VerifiedInline } from "@/components/site/VerifiedInline";
+import { WhyTrust } from "@/components/site/WhyTrust";
 import { ProgramAdmissionsBlock } from "@/components/site/ProgramAdmissionsBlock";
 import { ProgramSidebar } from "@/components/site/ProgramSidebar";
-import { ArrowUpRightIcon, BookIcon, CheckBadgeIcon } from "@/components/site/icons";
+import { ArrowUpRightIcon, BookIcon } from "@/components/site/icons";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import { SITE_YEAR } from "@/lib/site-config";
 import { getPublishedProgram, isProgramIndexable } from "@/lib/queries/public-programs";
@@ -210,6 +211,10 @@ export default async function ProgramDetailPage({
             pteWriting={pte.pte_writing}
             pteSpeaking={pte.pte_speaking}
           />
+          <VerifiedInline
+            date={program.last_verified_at}
+            source={program.source_url}
+          />
         </div>
       </div>
 
@@ -280,13 +285,7 @@ export default async function ProgramDetailPage({
         </ProfileSection>
       )}
 
-      <div className="mt-8 flex items-center gap-2 rounded-xl bg-status-open/5 px-4 py-3">
-        <CheckBadgeIcon className="h-4 w-4 flex-shrink-0 text-status-open" />
-        <LastVerified
-          date={program.last_verified_at}
-          sources={program.source_url ? [program.source_url] : null}
-        />
-      </div>
+      <WhyTrust className="mt-8" />
 
       <Link
         href={`/universities/${university.slug}`}
