@@ -26,7 +26,8 @@ export default function EditorialPolicyPage() {
         fees page, an application platform, or an Australian Government page such
         as the Department of Home Affairs. The source link and a
         &ldquo;last verified&rdquo; date appear on every page that carries these
-        figures.
+        figures. The <a href="/methodology">methodology page</a> lists the
+        dataset&rsquo;s coverage and the source used for each type of figure.
       </p>
 
       <h2>Why the dates matter</h2>

@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { ArrowUpRightIcon } from "@/components/site/icons";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
-import { SITE_YEAR } from "@/lib/site-config";
+import { SITE_URL, SITE_YEAR } from "@/lib/site-config";
 import { formatCurrency } from "@/lib/format";
 import {
   getSubjectBySlug,
@@ -78,6 +78,33 @@ export default async function SubjectPage({
   ];
 
   const jsonLd: Record<string, unknown>[] = [breadcrumbJsonLd(breadcrumbs)];
+
+  // Course schema: one entry per university that teaches this subject. Only on
+  // curated (indexed) subject pages, so the markup matches a page that is
+  // actually in search.
+  if (content && subject.universities.length > 0) {
+    jsonLd.push({
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      name: `${subject.name} courses at Australian universities`,
+      itemListElement: subject.universities.map((u, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        item: {
+          "@type": "Course",
+          name: `${subject.name} at ${u.name}`,
+          description: `${subject.name} degrees for international students at ${u.name}, Australia.`,
+          url: `${SITE_URL}/universities/${u.slug}`,
+          provider: {
+            "@type": "CollegeOrUniversity",
+            name: u.name,
+            url: `${SITE_URL}/universities/${u.slug}`,
+          },
+        },
+      })),
+    });
+  }
+
   if (content?.faq.length) {
     jsonLd.push({
       "@context": "https://schema.org",

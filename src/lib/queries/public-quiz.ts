@@ -11,6 +11,7 @@ export type QuizFilters = {
   subject?: string; // subjects.slug
   city?: string; // CITY_COSTS.slug
   ielts?: number; // the student's own IELTS band
+  pte?: number; // the student's own PTE Academic score
   scholarship?: boolean; // true = only universities with an automatic scholarship
   regional?: boolean; // true = only regional campuses (migration points)
 };
@@ -128,6 +129,12 @@ export async function getQuizMatches(filters: QuizFilters): Promise<QuizMatch[]>
         filters.ielts !== undefined &&
         u.ieltsOverall !== null &&
         u.ieltsOverall > filters.ielts
+      )
+        return false;
+      if (
+        filters.pte !== undefined &&
+        u.pteOverall !== null &&
+        u.pteOverall > filters.pte
       )
         return false;
       return true;

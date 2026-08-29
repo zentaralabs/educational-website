@@ -37,6 +37,7 @@ const STATIC_ROUTES: Array<{ path: string; priority: number; changeFrequency: Me
   // /search is noindex (a query-driven results page with no standalone value),
   // so it is deliberately kept out of the sitemap.
   { path: "/about", priority: 0.3, changeFrequency: "yearly" },
+  { path: "/methodology", priority: 0.4, changeFrequency: "monthly" },
   { path: "/editorial-policy", priority: 0.3, changeFrequency: "yearly" },
   { path: "/contact", priority: 0.3, changeFrequency: "yearly" },
   { path: "/privacy", priority: 0.2, changeFrequency: "yearly" },

@@ -38,9 +38,10 @@ export default function AboutPage() {
         that source and show a &ldquo;last verified&rdquo; date on every
         fact-bearing page. Nothing is generated without a human checking it
         against the original source first. Our{" "}
-        <a href="/editorial-policy">editorial policy</a> has the full process;
-        the <a href="/disclaimer">disclaimer</a> covers what that does and
-        doesn&rsquo;t guarantee.
+        <a href="/editorial-policy">editorial policy</a> has the full process,
+        the <a href="/methodology">methodology page</a> covers the dataset and
+        its sources, and the <a href="/disclaimer">disclaimer</a> covers what
+        that does and doesn&rsquo;t guarantee.
       </p>
 
       <h2>Narrative content</h2>

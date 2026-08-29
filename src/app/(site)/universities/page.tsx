@@ -5,6 +5,7 @@ import {
   type DirectoryUniversity,
 } from "@/components/site/UniversityDirectory";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
+import { datasetJsonLd } from "@/lib/dataset-jsonld";
 import { AU_STATES, GO8_SLUGS, isRegionalCity, statesFromCity } from "@/lib/australia";
 import { SITE_URL, SITE_YEAR } from "@/lib/site-config";
 import { listCollectionUniversities } from "@/lib/queries/public-collections";
@@ -67,6 +68,30 @@ export default async function UniversitiesIndexPage() {
     })),
   };
 
+  const datasetLd = datasetJsonLd({
+    name: "Australian universities for international students",
+    description:
+      "Filterable dataset of every Australian university and higher-education provider that enrols international students: international tuition, English-test minimums (IELTS and PTE), application fees, intake months, state, and regional-migration status.",
+    url: "/universities",
+    keywords: [
+      "Australian universities",
+      "international students",
+      "tuition fees",
+      "IELTS",
+      "PTE Academic",
+      "regional universities",
+    ],
+    variableMeasured: [
+      "International tuition (annual)",
+      "IELTS overall minimum",
+      "PTE Academic overall minimum",
+      "Application fee",
+      "Intake month",
+      "State or territory",
+      "Regional-migration status",
+    ],
+  });
+
   return (
     <main className="mx-auto w-full max-w-3xl px-6 pt-8 pb-16">
       <script
@@ -76,6 +101,10 @@ export default async function UniversitiesIndexPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(datasetLd) }}
       />
 
       <Breadcrumbs items={breadcrumbs} />

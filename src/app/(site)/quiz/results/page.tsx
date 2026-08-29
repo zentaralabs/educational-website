@@ -17,6 +17,7 @@ type SP = {
   subject?: string;
   budget?: string;
   ielts?: string;
+  pte?: string;
   city?: string;
   type?: string;
   regional?: string;
@@ -31,6 +32,7 @@ export default async function QuizResultsPage({
   const sp = await searchParams;
   const maxBudget = sp.budget ? Number(sp.budget) : undefined;
   const ielts = sp.ielts ? Number(sp.ielts) : undefined;
+  const pte = sp.pte ? Number(sp.pte) : undefined;
 
   const [matches, options] = await Promise.all([
     getQuizMatches({
@@ -38,6 +40,7 @@ export default async function QuizResultsPage({
       subject: sp.subject,
       maxBudget,
       ielts,
+      pte,
       city: sp.city,
       institutionType: sp.type,
       regional: sp.regional === "1",
@@ -56,6 +59,7 @@ export default async function QuizResultsPage({
     subjectName,
     maxBudget && `under ${formatCurrency(maxBudget)} tuition`,
     ielts && `IELTS ${ielts.toFixed(1)}`,
+    pte && `PTE ${pte}`,
     cityName,
     sp.type && `${sp.type} institutions`,
     sp.regional === "1" && "regional campus",

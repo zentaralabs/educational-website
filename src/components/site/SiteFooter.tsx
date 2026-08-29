@@ -25,6 +25,7 @@ const LEARN = [
 
 const SITE = [
   { label: "About", href: "/about" },
+  { label: "Methodology & data sources", href: "/methodology" },
   { label: "Editorial policy", href: "/editorial-policy" },
   { label: "Contact", href: "/contact" },
   { label: "Privacy Policy", href: "/privacy" },

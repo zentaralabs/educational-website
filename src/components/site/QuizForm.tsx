@@ -18,6 +18,14 @@ const IELTS_OPTIONS = [
   { label: "7.0+", value: "7.0" },
 ];
 
+const PTE_OPTIONS = [
+  { label: "Not sure yet", value: "" },
+  { label: "42", value: "42" },
+  { label: "50", value: "50" },
+  { label: "58", value: "58" },
+  { label: "65+", value: "65" },
+];
+
 function OptionGroup({
   label,
   options,
@@ -69,6 +77,7 @@ export function QuizForm({
   const [subject, setSubject] = useState("");
   const [budget, setBudget] = useState("");
   const [ielts, setIelts] = useState("");
+  const [pte, setPte] = useState("");
   const [city, setCity] = useState("");
   const [institutionType, setInstitutionType] = useState("");
   const [regional, setRegional] = useState("");
@@ -81,6 +90,7 @@ export function QuizForm({
     if (subject) params.set("subject", subject);
     if (budget) params.set("budget", budget);
     if (ielts) params.set("ielts", ielts);
+    if (pte) params.set("pte", pte);
     if (city) params.set("city", city);
     if (institutionType) params.set("type", institutionType);
     if (regional) params.set("regional", "1");
@@ -130,6 +140,13 @@ export function QuizForm({
         value={ielts}
         onChange={setIelts}
         options={IELTS_OPTIONS}
+      />
+
+      <OptionGroup
+        label="Or your PTE Academic score"
+        value={pte}
+        onChange={setPte}
+        options={PTE_OPTIONS}
       />
 
       <OptionGroup
