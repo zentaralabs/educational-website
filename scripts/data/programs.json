@@ -16591,13 +16591,13 @@
     "id": "3c7f4eba-1c7c-4634-8ab2-3fad5d16abd4",
     "name": "Bachelor of Biomedical Science",
     "status": "published",
-    "duration_years": null,
+    "duration_years": "3.0",
     "tuition_international": "33000",
     "tuition_domestic": "9700",
     "tuition_domestic_is_csp": true,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "A three-year science degree with six majors: biochemistry and nutrition, biomedicine, clinical laboratory science, genetics and biotechnology, microbiology and immunology, or pharmacology and toxicology, with a double-major option.\n\nStudy is based in the Murdoch Health and Knowledge Precinct, which includes three hospitals and several medical research centres, and students use industry-standard equipment including facilities at the Australian National Phenome Centre. Entry is an ATAR of about 70. The degree leads to work as a biomedical scientist, laboratory technician or research assistant, and is a common preparation for postgraduate medicine, allied health or research via an honours year.",
     "curriculum": null,
     "admission_requirements": "ATAR of approximately 75-80 (or equivalent); completion of WACE Chemistry and Human Biology recommended.",
     "english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
@@ -16613,7 +16613,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://www.murdoch.edu.au/study/courses"
+    "source_url": "https://www.murdoch.edu.au/course/undergraduate/b1419"
   },
   {
     "university_slug": "murdoch-university",
@@ -16901,13 +16901,13 @@
     "id": "d4550aea-e261-4571-840e-afb010ac50b0",
     "name": "Bachelor of Criminology",
     "status": "published",
-    "duration_years": null,
+    "duration_years": "3.0",
     "tuition_international": "29000",
     "tuition_domestic": "16500",
     "tuition_domestic_is_csp": true,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "A three-year degree with three majors: Crime Science, which Murdoch describes as the only program of its kind in Australia, Criminal Behaviour, and Legal Studies. It looks at crime through social, psychological, legal and scientific lenses rather than one discipline.\n\nStudents can contribute to real homicide and missing-persons investigations through the Major Crimes Review initiative, working alongside experienced criminologists. Entry is an ATAR of about 70, with alternative pathways available. Graduates move into work as criminologists, police officers, crime scene officers, probation and parole officers, intelligence analysts and policy roles. It also feeds Murdoch's postgraduate criminology and forensic programs.",
     "curriculum": null,
     "admission_requirements": "ATAR of approximately 65-70 (or equivalent); completion of WACE or equivalent secondary qualification.",
     "english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
@@ -16923,7 +16923,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://www.murdoch.edu.au/study/courses"
+    "source_url": "https://www.murdoch.edu.au/course/undergraduate/b1345"
   },
   {
     "university_slug": "murdoch-university",
@@ -17273,13 +17273,13 @@
     "id": "a134efdf-d520-402d-ab6d-175b0a2b39c6",
     "name": "Bachelor of Forensic Science",
     "status": "published",
-    "duration_years": null,
+    "duration_years": "3.0",
     "tuition_international": "32000",
     "tuition_domestic": "9700",
     "tuition_domestic_is_csp": true,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "A three-year science degree with a major in forensic biology or forensic chemistry and toxicology, and an optional second major in forensic investigation. Students run simulated crime scenes and analyse biological and chemical evidence in the labs of the Murdoch Health and Knowledge Precinct.\n\nThe distinctive element is the Cold Case Review initiative, where students contribute to real unsolved homicide and missing-persons cases under supervision. Entry is an ATAR of about 70. It suits students who want a laboratory and investigation career applying science to the justice system, working toward roles as forensic scientists, toxicologists, crime scene officers or laboratory analysts, with postgraduate study in forensic science or research as a next step.",
     "curriculum": null,
     "admission_requirements": "ATAR of approximately 70-75 (or equivalent); completion of WACE Chemistry recommended.",
     "english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
@@ -17295,7 +17295,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://www.murdoch.edu.au/study/courses"
+    "source_url": "https://www.murdoch.edu.au/course/undergraduate/b1418"
   },
   {
     "university_slug": "murdoch-university",
@@ -17335,13 +17335,13 @@
     "id": "dd38ef5c-c330-444f-a24a-bddadd42ef66",
     "name": "Bachelor of Global Security",
     "status": "published",
-    "duration_years": null,
+    "duration_years": "3.0",
     "tuition_international": "29000",
     "tuition_domestic": "16500",
     "tuition_domestic_is_csp": true,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "A three-year degree focused on terrorism, intelligence, conflict and international affairs, with a choice of major: cyberspace policy and security, environment conflict and security, politics and international studies, or terrorism and counterterrorism studies.\n\nInternships and placements with government agencies and other organisations are built in. Murdoch reports the degree ranks first in Western Australia for full-time employment among humanities and social science graduates. Entry is an ATAR of about 70, with online, on-campus and mixed-mode study available. It suits students aiming at intelligence and security analysis, policy work, defence, law enforcement or roles in international organisations.",
     "curriculum": null,
     "admission_requirements": "ATAR of approximately 65-70 (or equivalent); completion of WACE or equivalent secondary qualification.",
     "english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
@@ -17357,7 +17357,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://www.murdoch.edu.au/study/courses"
+    "source_url": "https://www.murdoch.edu.au/course/undergraduate/b1363"
   },
   {
     "university_slug": "murdoch-university",
@@ -17428,13 +17428,13 @@
     "id": "9605fdfb-ab03-4216-ba43-31e37ab7f514",
     "name": "Bachelor of Information Technology and Business",
     "status": "published",
-    "duration_years": null,
+    "duration_years": "3.0",
     "tuition_international": "32500",
     "tuition_domestic": "16500",
     "tuition_domestic_is_csp": true,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "A three-year degree that deliberately sits between IT and business rather than training programmers. Students learn programming, networking and data management alongside management, communication and entrepreneurship, with the aim of designing and managing technology solutions that serve business goals.\n\nLearning is project-based, with real-world challenges and time in Murdoch's IT Innovation Hub, and industry partners shaped the course. Entry is an ATAR of about 70. It targets roles such as business analyst, IT consultant, systems analyst, project coordinator and digital transformation specialist, and suits students who are more interested in how organisations use technology and make decisions than in software development.",
     "curriculum": null,
     "admission_requirements": "ATAR of approximately 65-70 (or equivalent); completion of WACE or equivalent secondary qualification.",
     "english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
@@ -17450,7 +17450,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://www.murdoch.edu.au/study/courses"
+    "source_url": "https://www.murdoch.edu.au/course/undergraduate/b1375"
   },
   {
     "university_slug": "murdoch-university",
@@ -18203,13 +18203,13 @@
     "id": "15d5f065-0bbd-403b-bdd2-fc8b66f8af55",
     "name": "Bachelor of Sport and Exercise Science",
     "status": "published",
-    "duration_years": null,
+    "duration_years": "3.0",
     "tuition_international": "31000",
     "tuition_domestic": "9700",
     "tuition_domestic_is_csp": true,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "A three-year degree accredited by Exercise and Sports Science Australia at exercise science level, so graduates are eligible to register as an Accredited Exercise Scientist. It covers exercise physiology, biomechanics, sport psychology and motor control, teaching students to assess performance, analyse movement and design exercise programs, with work-based learning across sport, fitness and health settings.\n\nFacilities include a dedicated exercise physiology lab, strength and conditioning and rehabilitation labs, and a performance lab with 3D motion capture and a 50-metre running track. Entry is an ATAR of about 70 with several alternative pathways. It suits students who want an applied sport science career, and it is the standard entry point to Murdoch's Master of Clinical Exercise Physiology for those going on to clinical practice.",
     "curriculum": null,
     "admission_requirements": "ATAR of approximately 65-70 (or equivalent); completion of WACE or equivalent secondary qualification.",
     "english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
@@ -18225,7 +18225,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://www.murdoch.edu.au/study/courses"
+    "source_url": "https://www.murdoch.edu.au/course/undergraduate/b1348"
   },
   {
     "university_slug": "murdoch-university",
@@ -20249,13 +20249,13 @@
     "id": "b0b12e37-5fc8-47ee-afd5-ee570795126c",
     "name": "Master of Communication",
     "status": "published",
-    "duration_years": null,
+    "duration_years": "2.0",
     "tuition_international": "29000",
     "tuition_domestic": "24500",
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "A two-year master's (48 credit points) covering strategic communication and planning, social media and digital strategy, global communication, cultural and media studies, and the ethical side of communication and public relations, with a coursework or research-thesis route and a possible 18-month completion with prior credit.\n\nStudents work with real clients through MESH, an on-campus communication consultancy, and a work-integrated learning placement is part of the program. Entry is a communication or related bachelor's degree, or substantial industry experience (about ten years in media and communication, or five in a management role), which opens it to career changers. It suits people moving toward senior roles in communication, PR, digital strategy or media.",
     "curriculum": null,
     "admission_requirements": "A relevant bachelor degree, or equivalent.",
     "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
@@ -20271,7 +20271,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://www.murdoch.edu.au/study/courses"
+    "source_url": "https://www.murdoch.edu.au/course/postgraduate/m1277"
   },
   {
     "university_slug": "murdoch-university",
@@ -20435,13 +20435,13 @@
     "id": "66b05656-1bf6-4b61-9b8e-bab054bdd0aa",
     "name": "Master of Development Studies",
     "status": "published",
-    "duration_years": null,
+    "duration_years": "2.0",
     "tuition_international": "29000",
     "tuition_domestic": "24500",
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "A two-year master's (48 credit points) covering public policy and international affairs, critical approaches to development, sustainability, state and governance dynamics, food security, gender, health and security studies.\n\nA distinctive option is in-country study in Indonesia through the ACICIS consortium, either a semester or a summer development practicum. Students finish with a capstone that can be a case study project, a supervised internship or a research thesis. It runs full-time, part-time or blended, and is open to graduates of any discipline. It suits people heading into international development work with NGOs, government aid programs, regional organisations or consultancies.",
     "curriculum": null,
     "admission_requirements": "A relevant bachelor degree, or equivalent.",
     "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
@@ -20457,7 +20457,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://www.murdoch.edu.au/study/courses"
+    "source_url": "https://www.murdoch.edu.au/course/postgraduate/m1195"
   },
   {
     "university_slug": "murdoch-university",
@@ -20466,13 +20466,13 @@
     "id": "3509a401-27b9-4001-ac85-edda07abdb23",
     "name": "Master of Education",
     "status": "published",
-    "duration_years": null,
+    "duration_years": "2.0",
     "tuition_international": "28000",
     "tuition_domestic": "24000",
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "A two-year master's (48 credit points) for people already working in education, not a route into teaching. Murdoch states plainly that it is not a teaching qualification and is not accredited by the Teacher Registration Board of WA.\n\nStudents choose one major from inclusive and special needs education, instructional leadership, international education (which can lead toward International Baccalaureate educator certification), sustainable pedagogies, or e-learning, and complete research methods units and a supervised research project. Classes run after work or in intensive blocks during school holidays. Entry is a bachelor's degree in any field. It suits practising teachers, school leaders and education administrators wanting a specialisation or a research pathway toward a PhD.",
     "curriculum": null,
     "admission_requirements": "A relevant bachelor degree, or equivalent; teaching or workplace-training experience preferred.",
     "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
@@ -20488,7 +20488,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://www.murdoch.edu.au/study/courses"
+    "source_url": "https://www.murdoch.edu.au/course/postgraduate/m1367"
   },
   {
     "university_slug": "murdoch-university",
@@ -21179,13 +21179,13 @@
     "id": "1c325a63-a8ee-406c-83c2-c85863413b4a",
     "name": "Master of Teaching (Primary)",
     "status": "published",
-    "duration_years": null,
+    "duration_years": "2.0",
     "tuition_international": "30000",
     "tuition_domestic": "4700",
     "tuition_domestic_is_csp": true,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "A two-year graduate-entry primary teaching degree (with a one-year graduate diploma exit point). Entry requires a bachelor's degree with at least one year of study across primary curriculum areas such as English, mathematics, science, the arts, humanities and social sciences, or health and physical education, plus evidence of consistently solid grades.\n\nSchool placements run throughout the course, and Murdoch was the first Australian university to use SimLab simulated-classroom technology with virtual students for practising classroom management. It is accredited by AITSL in articulation with the Teacher Registration Board of WA, so graduates can apply for registration, and students must pass LANTITE. Commonwealth Prac Payment support is available during placements. It suits graduates and career changers moving into primary teaching.",
     "curriculum": null,
     "admission_requirements": "A relevant bachelor degree; satisfactory National Police Certificate and Working with Children Check required prior to professional placement.",
     "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
@@ -21201,7 +21201,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://www.murdoch.edu.au/study/courses"
+    "source_url": "https://www.murdoch.edu.au/course/postgraduate/m1390"
   },
   {
     "university_slug": "murdoch-university",
@@ -21210,13 +21210,13 @@
     "id": "28fc129b-ee8f-46d7-b75d-287018e7d4e1",
     "name": "Master of Teaching (Secondary)",
     "status": "published",
-    "duration_years": null,
+    "duration_years": "1.8",
     "tuition_international": "30000",
     "tuition_domestic": "4700",
     "tuition_domestic_is_csp": true,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "A 1.75-year graduate-entry teaching degree. Entry requires a bachelor's degree with a main teaching area of at least six units (with depth at third-year level) and a second teaching area of at least four units, in fields aligned to the WA secondary curriculum: English, mathematics, science, humanities and social sciences, or health and physical education, with vocational education and training available as a second area for people with industry experience.\n\nSchool placements run throughout the program, and Murdoch uses SimLab simulated-classroom technology to practise classroom management first. It is accredited by AITSL and the Teacher Registration Board of WA, so graduates can apply for registration. Students must attempt LANTITE in year one and pass it before graduating. It suits graduates with a strong subject background moving into secondary teaching.",
     "curriculum": null,
     "admission_requirements": "A relevant bachelor degree; satisfactory National Police Certificate and Working with Children Check required prior to professional placement.",
     "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
@@ -21232,7 +21232,7 @@
     "pte_speaking": null,
     "intake_dates": "February, July",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://www.murdoch.edu.au/study/courses"
+    "source_url": "https://www.murdoch.edu.au/course/postgraduate/m1391"
   },
   {
     "university_slug": "murdoch-university",
