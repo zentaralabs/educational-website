@@ -1,0 +1,420 @@
+{
+  "archived_at": "2026-08-29T11:41:40.572Z",
+  "note": "Program permutation rows archived by trim_program_permutations.mjs. Reverse: update programs set status='published' where id = any(<ids>).",
+  "programs": [
+    {
+      "id": "1c2bd51f-7100-4a0a-9157-5dbf5328a6f1",
+      "name": "Bachelor of Actuarial Science (3 Year Program)",
+      "university": "Bond University",
+      "reason": "twin"
+    },
+    {
+      "id": "374a9e44-6e12-44fc-bbf1-5f77749e3d0a",
+      "name": "Bachelor of Actuarial Science/Bachelor of Laws",
+      "university": "Bond University",
+      "reason": "combined"
+    },
+    {
+      "id": "8255804a-5d1c-41cf-b9d8-3800387cc058",
+      "name": "Bachelor of Arts/Bachelor of Laws",
+      "university": "Bond University",
+      "reason": "combined"
+    },
+    {
+      "id": "e5f69457-93b9-4ea7-99bc-4b9c9e430800",
+      "name": "Bachelor of Biomedical Science / Master of Nutrition and Dietetic Practice",
+      "university": "Bond University",
+      "reason": "combined"
+    },
+    {
+      "id": "dd170346-a643-4b9a-9a5d-fb936f270599",
+      "name": "Bachelor of Biomedical Science/Bachelor of Laws",
+      "university": "Bond University",
+      "reason": "combined"
+    },
+    {
+      "id": "428aa24c-9085-4e91-88a0-405592277de4",
+      "name": "Bachelor of Business (3 Year Program)",
+      "university": "Bond University",
+      "reason": "twin"
+    },
+    {
+      "id": "006b8f3b-2280-433f-90aa-0e91aea5348d",
+      "name": "Bachelor of Business Data Analytics (3 Year Program)",
+      "university": "Bond University",
+      "reason": "twin"
+    },
+    {
+      "id": "2bf32475-7fc9-4558-926b-36aa680c8142",
+      "name": "Bachelor of Business/Bachelor of Commerce",
+      "university": "Bond University",
+      "reason": "combined"
+    },
+    {
+      "id": "0368c930-e7c6-4d90-a471-3450c5d3e4e4",
+      "name": "Bachelor of Business/Bachelor of Laws",
+      "university": "Bond University",
+      "reason": "combined"
+    },
+    {
+      "id": "048283dc-7ff7-42c8-95a0-5eb7a2475437",
+      "name": "Bachelor of Business/Bachelor of Social Science",
+      "university": "Bond University",
+      "reason": "combined"
+    },
+    {
+      "id": "f8b54f2b-9231-44d7-9202-35d0441b0d99",
+      "name": "Bachelor of Commerce (3 Year Program)",
+      "university": "Bond University",
+      "reason": "twin"
+    },
+    {
+      "id": "de8158b5-57d1-412a-90da-44e9ee872d79",
+      "name": "Bachelor of Commerce/Bachelor of Laws",
+      "university": "Bond University",
+      "reason": "combined"
+    },
+    {
+      "id": "b8c978f4-aec5-4c9b-b57f-3a906888c49d",
+      "name": "Bachelor of Communication (Business)/Bachelor of Laws",
+      "university": "Bond University",
+      "reason": "combined"
+    },
+    {
+      "id": "8640a772-14a0-4dd8-acfa-9cbbe45fd1bd",
+      "name": "Bachelor of Communication / Bachelor of Laws",
+      "university": "Bond University",
+      "reason": "combined"
+    },
+    {
+      "id": "a3daa794-f762-495b-9f6f-59aef88bd0a4",
+      "name": "Bachelor of Data Analytics (3 Year Program)",
+      "university": "Bond University",
+      "reason": "twin"
+    },
+    {
+      "id": "f7e9e0bf-f728-4730-b36c-3af9e5e5eadb",
+      "name": "Bachelor of Digital Transformation/Bachelor of Laws",
+      "university": "Bond University",
+      "reason": "combined"
+    },
+    {
+      "id": "357d01db-80e0-4e6f-b497-2fbbbe0d1b4e",
+      "name": "Bachelor of Entrepreneurial Transformation / Bachelor of Global Studies (Sustainability)",
+      "university": "Bond University",
+      "reason": "combined"
+    },
+    {
+      "id": "375f57d8-e1fc-403f-be91-db094e87275a",
+      "name": "Bachelor of Entrepreneurial Transformation/Bachelor of Laws",
+      "university": "Bond University",
+      "reason": "combined"
+    },
+    {
+      "id": "d527defa-d709-4cce-94c1-b7aa702e1378",
+      "name": "Bachelor of Exercise and Sports Science / Doctor of Physiotherapy",
+      "university": "Bond University",
+      "reason": "combined"
+    },
+    {
+      "id": "3b02edcf-8e91-4a6a-9600-6adc617a3296",
+      "name": "Bachelor of Film and Television (3 Year Program)",
+      "university": "Bond University",
+      "reason": "twin"
+    },
+    {
+      "id": "c1728518-abd1-4ae5-8b6f-0fd454340680",
+      "name": "Bachelor of Health Science and Master of Nutrition and Dietetic Practice",
+      "university": "Bond University",
+      "reason": "combined"
+    },
+    {
+      "id": "f2ee347d-b2ad-4bb2-8e0b-0d4fc2e78663",
+      "name": "Bachelor of Health Sciences / Master of Occupational Therapy",
+      "university": "Bond University",
+      "reason": "combined"
+    },
+    {
+      "id": "6abe1524-98ed-47ab-b9f6-499dae0fbd87",
+      "name": "Bachelor of International Relations (3 Year Program)",
+      "university": "Bond University",
+      "reason": "twin"
+    },
+    {
+      "id": "36842340-2177-45a5-ab7b-0d9664e6dc71",
+      "name": "Bachelor of International Relations/Bachelor of Business",
+      "university": "Bond University",
+      "reason": "combined"
+    },
+    {
+      "id": "f5178c92-2413-4b18-9723-ce10d497dbea",
+      "name": "Bachelor of International Relations/Bachelor of Laws",
+      "university": "Bond University",
+      "reason": "combined"
+    },
+    {
+      "id": "ec52367d-113b-4834-98ba-0c3327f2c897",
+      "name": "Bachelor of Journalism/Bachelor of Laws",
+      "university": "Bond University",
+      "reason": "combined"
+    },
+    {
+      "id": "17181ede-86cb-4a8e-8852-02d103e4821a",
+      "name": "Bachelor of Policy, Philosophy and Economics/Bachelor of Laws",
+      "university": "Bond University",
+      "reason": "combined"
+    },
+    {
+      "id": "d2107b20-b980-4acc-8a24-3180f4faf71d",
+      "name": "Bachelor of Psychological Science/Bachelor of Laws",
+      "university": "Bond University",
+      "reason": "combined"
+    },
+    {
+      "id": "d065fe35-8f41-4929-a213-008264626fb0",
+      "name": "Master of Business Administration/Master of Project Management",
+      "university": "Bond University",
+      "reason": "combined"
+    },
+    {
+      "id": "27791bc2-cc83-4348-a298-a16dab6e042a",
+      "name": "Master of Communication/Master of Project Management",
+      "university": "Bond University",
+      "reason": "combined"
+    },
+    {
+      "id": "edf44a45-58e0-4ead-b53a-3057971e8711",
+      "name": "Master of Construction Practice/Master of Project Management",
+      "university": "Bond University",
+      "reason": "combined"
+    },
+    {
+      "id": "8958b10b-4030-48f7-8200-f0cf9de305ef",
+      "name": "Master of Criminology/Master of Project Management",
+      "university": "Bond University",
+      "reason": "combined"
+    },
+    {
+      "id": "3f78be1f-2f05-46e6-8f96-359c867507b9",
+      "name": "Master of Finance/Master of Business Administration",
+      "university": "Bond University",
+      "reason": "combined"
+    },
+    {
+      "id": "7d566f2d-a1f9-41ba-af96-541159e5277e",
+      "name": "Master of International Relations/Master of Project Management",
+      "university": "Bond University",
+      "reason": "combined"
+    },
+    {
+      "id": "fcbed90e-6ec2-4df7-a7bd-198ab8312d79",
+      "name": "Master of Project Innovation/Master of Project Management",
+      "university": "Bond University",
+      "reason": "combined"
+    },
+    {
+      "id": "172f0e3c-bfe6-4eca-b93a-e8aaf43d99a1",
+      "name": "Master of Sport Management / Master of Project Management",
+      "university": "Bond University",
+      "reason": "combined"
+    },
+    {
+      "id": "2b1733af-30fe-4abf-bfd7-e82bfe60d277",
+      "name": "Master of Valuation and Property Development/Master of Project Management",
+      "university": "Bond University",
+      "reason": "combined"
+    },
+    {
+      "id": "4d017ad7-ea16-4078-ae5e-46e4d83fde08",
+      "name": "Bachelor of Agricultural Science / Bachelor of Business",
+      "university": "Murdoch University",
+      "reason": "combined"
+    },
+    {
+      "id": "6cfeccc2-250a-4167-b083-bd9326ec137c",
+      "name": "Bachelor of Biomedical Science / Master of Infectious Disease Surveillance and Control",
+      "university": "Murdoch University",
+      "reason": "combined"
+    },
+    {
+      "id": "effcb74d-f0a0-4357-ad99-d7b194deccc1",
+      "name": "Bachelor of Business / Bachelor of Entrepreneurship and Innovation",
+      "university": "Murdoch University",
+      "reason": "combined"
+    },
+    {
+      "id": "8d7f2c33-9930-4d4c-9e88-5191f2bf1c6f",
+      "name": "Bachelor of Communication / Bachelor of Creative Media",
+      "university": "Murdoch University",
+      "reason": "combined"
+    },
+    {
+      "id": "4cea1dd5-6e60-4804-bdcd-6fe648a0a18c",
+      "name": "Bachelor of Criminology / Bachelor of Communication",
+      "university": "Murdoch University",
+      "reason": "combined"
+    },
+    {
+      "id": "d8fd4a14-3867-4067-8934-c63cf07c589a",
+      "name": "Bachelor of Criminology / Bachelor of Forensic Science",
+      "university": "Murdoch University",
+      "reason": "combined"
+    },
+    {
+      "id": "6d915f4e-3e75-4039-8a8d-ca21dff07e84",
+      "name": "Bachelor of Criminology / Bachelor of Global Security",
+      "university": "Murdoch University",
+      "reason": "combined"
+    },
+    {
+      "id": "fa3622c9-10d8-46d5-ab54-156aecffedaf",
+      "name": "Bachelor of Criminology / Bachelor of Science",
+      "university": "Murdoch University",
+      "reason": "combined"
+    },
+    {
+      "id": "c4c954af-bb16-4caa-acf0-1c4f52cdbfdd",
+      "name": "Bachelor of Food Science and Nutrition / Master of Food Science",
+      "university": "Murdoch University",
+      "reason": "combined"
+    },
+    {
+      "id": "22fed6e9-9f1b-4370-b765-cceab847cffe",
+      "name": "Bachelor of Forensic Science / Master of Forensic Science",
+      "university": "Murdoch University",
+      "reason": "combined"
+    },
+    {
+      "id": "18299d2d-e181-4154-b412-14d14a3c8e02",
+      "name": "Bachelor of Health Science / Master of Clinical Chiropractic",
+      "university": "Murdoch University",
+      "reason": "combined"
+    },
+    {
+      "id": "5b4d8b33-3b8b-4bb7-b098-fb6cea765808",
+      "name": "Bachelor of Laws / Bachelor of Arts",
+      "university": "Murdoch University",
+      "reason": "combined"
+    },
+    {
+      "id": "35546adf-4f36-4e32-b6a3-446fe0d4ac2b",
+      "name": "Bachelor of Laws / Bachelor of Biomedical Science",
+      "university": "Murdoch University",
+      "reason": "combined"
+    },
+    {
+      "id": "a5078544-09f6-49d9-87fb-f04a2d8c6346",
+      "name": "Bachelor of Laws / Bachelor of Business",
+      "university": "Murdoch University",
+      "reason": "combined"
+    },
+    {
+      "id": "ee895e73-a756-43d2-9ab2-72ea3b1df5e9",
+      "name": "Bachelor of Laws / Bachelor of Communication",
+      "university": "Murdoch University",
+      "reason": "combined"
+    },
+    {
+      "id": "746c9de8-f584-456e-b83a-a468d4105c1c",
+      "name": "Bachelor of Laws / Bachelor of Criminology",
+      "university": "Murdoch University",
+      "reason": "combined"
+    },
+    {
+      "id": "1e3b8938-1092-4510-b979-06210ed3b52b",
+      "name": "Bachelor of Laws / Bachelor of Forensic Science",
+      "university": "Murdoch University",
+      "reason": "combined"
+    },
+    {
+      "id": "91ce7a67-060c-4263-84e3-cd37aa69825d",
+      "name": "Bachelor of Laws / Bachelor of Global Security",
+      "university": "Murdoch University",
+      "reason": "combined"
+    },
+    {
+      "id": "56b6c012-93fd-48b9-b3d5-7791fbffc83c",
+      "name": "Bachelor of Laws / Bachelor of Information Technology",
+      "university": "Murdoch University",
+      "reason": "combined"
+    },
+    {
+      "id": "29b40417-32e9-4c0d-a799-b6b96f19b31f",
+      "name": "Bachelor of Laws / Bachelor of Psychology",
+      "university": "Murdoch University",
+      "reason": "combined"
+    },
+    {
+      "id": "7ee6dfa4-5dba-4c2d-be29-c1807202d7f9",
+      "name": "Bachelor of Laws / Bachelor of Science",
+      "university": "Murdoch University",
+      "reason": "combined"
+    },
+    {
+      "id": "150cc661-5dfd-417a-889f-8a997b726e4e",
+      "name": "Bachelor of Laws Honours / Bachelor of Communication",
+      "university": "Murdoch University",
+      "reason": "combined"
+    },
+    {
+      "id": "a7e4e123-6799-49b0-821d-3e1b4681b81e",
+      "name": "Bachelor of Laws Honours / Bachelor of Criminology",
+      "university": "Murdoch University",
+      "reason": "combined"
+    },
+    {
+      "id": "7881e7aa-af20-422b-85c3-c3a783d00e13",
+      "name": "Bachelor of Laws Honours / Bachelor of Global Security",
+      "university": "Murdoch University",
+      "reason": "combined"
+    },
+    {
+      "id": "056a7c1a-4b4b-4007-b512-576ff9aaa59a",
+      "name": "Bachelor of Laws Honours / Bachelor of Psychology",
+      "university": "Murdoch University",
+      "reason": "combined"
+    },
+    {
+      "id": "e074dcf1-9457-4f1d-af83-f08f01a49067",
+      "name": "Bachelor of Psychology / Bachelor of Criminology",
+      "university": "Murdoch University",
+      "reason": "combined"
+    },
+    {
+      "id": "b1a6914d-832b-418a-b086-96258aa9efec",
+      "name": "Bachelor of Sport and Exercise Science / Bachelor of Business",
+      "university": "Murdoch University",
+      "reason": "combined"
+    },
+    {
+      "id": "d1e0f7af-d985-49cd-9a88-5a10a82d814f",
+      "name": "Bachelor of Sport and Exercise Science / Bachelor of Psychology",
+      "university": "Murdoch University",
+      "reason": "combined"
+    },
+    {
+      "id": "68851b35-5866-4b96-9a8d-89a2e3eb7d67",
+      "name": "Bachelor of Sport and Exercise Science / Master of Clinical Exercise Physiology",
+      "university": "Murdoch University",
+      "reason": "combined"
+    },
+    {
+      "id": "8220c3eb-5f78-45f4-a486-dd9973500bb1",
+      "name": "Bachelor of Sport and Exercise Science / Master of High Performance Sport",
+      "university": "Murdoch University",
+      "reason": "combined"
+    },
+    {
+      "id": "4e37dfbc-7a65-425d-9d30-88621fa0bc3c",
+      "name": "Master of Business Administration / Master of Health Care Management",
+      "university": "Murdoch University",
+      "reason": "combined"
+    },
+    {
+      "id": "18097847-cf6f-4e4c-bf52-ebb8f23e0ffb",
+      "name": "Master of Business Administration / Master of Human Resources Management",
+      "university": "Murdoch University",
+      "reason": "combined"
+    }
+  ]
+}

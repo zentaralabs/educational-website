@@ -97,6 +97,24 @@ export async function updateProgramStatus(
   id: string,
   status: ContentStatus,
 ) {
+  // A published program must have an "About this program" description. The
+  // bulk import left ~500 rows with an empty description published, which
+  // rendered as a blank section and forced a site-wide noindex on all
+  // program pages. Block that class of regression at the write path.
+  if (status === "published") {
+    const { data, error: fetchError } = await supabase
+      .from("programs")
+      .select("description")
+      .eq("id", id)
+      .single();
+    if (fetchError) throw fetchError;
+    if (!data.description || !data.description.trim()) {
+      throw new Error(
+        "Add an About this program description before publishing (empty program pages are noindexed).",
+      );
+    }
+  }
+
   const { error } = await supabase
     .from("programs")
     .update({

@@ -855,6 +855,20 @@ Done: `generateMetadata` in `src/app/(site)/universities/[slug]/programs/[progra
 
 Next: rebuild the ~100-200 highest-search-demand programs (Master of CS / MBA / Nursing / Data Science at the big universities) with real sourced content — curriculum, entry detail, outcomes, cost math — same verification bar as the rest of the site, then re-add those to the sitemap and drop their noindex.
 
+### Program-page cleanup pass — trim + guardrails (2026-08-29)
+
+Audited all 1,103 published programs. Perfectly bimodal: **596 have a real 400+ word description + curriculum + source_url** (a second AI-enrichment pass covered them); **507 were left as bare data stubs** (no description, no curriculum), concentrated in the 4 over-inflated catalogs — Bond 168, Murdoch 150, Canberra 119, Adelaide 70. Every other university's programs are 100% enriched.
+
+**Rendering fix (commit 502e978):** `programs/[programId]/page.tsx` used to render the "About this program" heading + bordered box (and an "Admissions" heading) unconditionally, so the 507 stubs showed an empty box. Both sections are now conditional — stubs read as intentionally minimal.
+
+**Trim (commit this pass):** `scripts/trim_program_permutations.mjs` archived **69 permutation rows** — 62 combined/double degrees ("Bachelor of X / Bachelor of Laws", "Master of Y / Master of Project Management") + 7 "(3 Year Program)" duplicate twins, all Bond/Murdoch, all `status='published'` with empty description. `status -> 'archived'` (soft; ids in `scripts/data/archived-permutations.json`, reverse with `update programs set status='published' where id = any(...)`). Pages now 404; `programs:list` ISR revalidated on prod. Canberra/Adelaide had no permutations. **Remaining empty-published: 438** (Bond 131, Murdoch 118, Canberra 119, Adelaide 70).
+
+**Guardrails (commit this pass):**
+- `updateProgramStatus` in `src/lib/queries/programs.ts` now throws when publishing a program with an empty description (fetches the row first). Blocks the "blank published page" regression at the write path.
+- `scripts/export_programs.mjs` -> `scripts/data/programs.json` (2.3 MB, all 1,103 rows, sorted by uni slug + name for legible diffs) is now the version-controlled source of truth. `scripts/seed_programs.mjs` applies it back (upsert by `id`, em-dash + published-needs-description validation; the 438 backlog is a warning, not fatal). Workflow: edit in admin -> `node scripts/export_programs.mjs` -> commit.
+
+**Still deferred (the actual "rebuild"):** write "About this program" for the 438 remaining stubs — one scripted AI-draft pass from each official course page, staying noindex, then verify + drop noindex in demand-ranked waves. Not started. Lower priority than off-page SEO.
+
 ### Organization schema + title sweep (2026-08-29)
 
 - Site-wide `Organization` JSON-LD added to `src/app/layout.tsx` (`@id` `{SITE_URL}/#organization`, name, url, logo `/icon.svg`, email, founder Roman Lama, foundingDate, knowsAbout). Homepage `WebSite` schema given `@id` + `publisher` ref to the org.
