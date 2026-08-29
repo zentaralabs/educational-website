@@ -92,6 +92,8 @@ export default async function ProgramDetailPage({
     .filter(Boolean)
     .map(parseCurriculumLine);
 
+  const hasDescription = Boolean(program.description?.trim());
+
   const hasStructuredEnglishScore = Boolean(
     (program.ielts_overall ?? university.ielts_overall) ||
       (program.pte_overall ?? university.pte_overall),
@@ -158,27 +160,31 @@ export default async function ProgramDetailPage({
       </div>
 
       <div className="mt-8 border-t border-ink/10 pt-8">
-        <h2 className="mb-4 flex items-center gap-2 font-display text-xl font-semibold text-ink">
-          <span
-            className="inline-block h-5 w-1 rounded-full"
-            style={{ backgroundColor: "color-mix(in srgb, var(--color-status-open) 60%, transparent)" }}
-          />
-          About this program
-        </h2>
-        <div className="flex flex-col gap-5 rounded-2xl border border-line bg-mist p-6 font-body text-lg leading-8 text-ink sm:p-7">
-          {program.description?.split("\n\n").map((paragraph, i) => (
-            <p key={i} className={i === 0 ? "text-pretty font-medium" : undefined}>
-              {paragraph.split("\n").map((line, j, lines) => (
-                <span key={j}>
-                  {line}
-                  {j < lines.length - 1 && <br />}
-                </span>
+        {hasDescription && (
+          <>
+            <h2 className="mb-4 flex items-center gap-2 font-display text-xl font-semibold text-ink">
+              <span
+                className="inline-block h-5 w-1 rounded-full"
+                style={{ backgroundColor: "color-mix(in srgb, var(--color-status-open) 60%, transparent)" }}
+              />
+              About this program
+            </h2>
+            <div className="mb-6 flex flex-col gap-5 rounded-2xl border border-line bg-mist p-6 font-body text-lg leading-8 text-ink sm:p-7">
+              {program.description!.split("\n\n").map((paragraph, i) => (
+                <p key={i} className={i === 0 ? "text-pretty font-medium" : undefined}>
+                  {paragraph.split("\n").map((line, j, lines) => (
+                    <span key={j}>
+                      {line}
+                      {j < lines.length - 1 && <br />}
+                    </span>
+                  ))}
+                </p>
               ))}
-            </p>
-          ))}
-        </div>
+            </div>
+          </>
+        )}
 
-        <div className="mt-6">
+        <div>
           <ProgramSidebar
             durationYears={program.duration_years}
             tuitionDomestic={program.tuition_domestic ?? university.tuition_domestic}
@@ -256,13 +262,16 @@ export default async function ProgramDetailPage({
         </ProfileSection>
       )}
 
-      <ProfileSection title="Admissions">
-        <ProgramAdmissionsBlock
-          admissionRequirements={program.admission_requirements}
-          englishRequirements={program.english_requirements}
-          hasStructuredEnglishScore={hasStructuredEnglishScore}
-        />
-      </ProfileSection>
+      {(program.admission_requirements ||
+        (program.english_requirements && !hasStructuredEnglishScore)) && (
+        <ProfileSection title="Admissions">
+          <ProgramAdmissionsBlock
+            admissionRequirements={program.admission_requirements}
+            englishRequirements={program.english_requirements}
+            hasStructuredEnglishScore={hasStructuredEnglishScore}
+          />
+        </ProfileSection>
+      )}
 
       <div className="mt-8 flex items-center gap-2 rounded-xl bg-status-open/5 px-4 py-3">
         <CheckBadgeIcon className="h-4 w-4 flex-shrink-0 text-status-open" />
