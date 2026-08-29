@@ -24,6 +24,24 @@
       "name": "Master of International Relations",
       "reason": "Master of International Relations: suspended from May 2025, no new intakes per Bond course page",
       "archived_at": "2026-08-29T12:00:29.214Z"
+    },
+    {
+      "id": "f729581f-7d39-4989-9a54-5b49ce2ddc7a",
+      "name": "Master of Business Data Analytics",
+      "reason": "Bond course page: Master of Business Data Analytics discontinued as of January 2025 (replaced by Master of Enterprise Artificial Intelligence)",
+      "archived_at": "2026-08-29T12:12:41.291Z"
+    },
+    {
+      "id": "f414cd5e-905f-46f6-aece-8a527fce883d",
+      "name": "Master of Business Data Analytics (Professional)",
+      "reason": "Bond course page: Master of Business Data Analytics discontinued as of January 2025 (Professional twin of discontinued base program)",
+      "archived_at": "2026-08-29T12:12:41.465Z"
+    },
+    {
+      "id": "0d09a11d-bac8-4be8-91ad-102609424caa",
+      "name": "Master of Project Innovation",
+      "reason": "Bond course page: Master of Project Innovation suspended from September 2024, no new intakes planned",
+      "archived_at": "2026-08-29T12:12:41.639Z"
     }
   ]
 }
