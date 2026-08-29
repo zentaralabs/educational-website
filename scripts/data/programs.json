@@ -4693,7 +4693,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": "https://bond.edu.au/program/bachelor-business-law",
-    "description": null,
+    "description": "This is a two-year degree (six semesters) for students who want a working knowledge of law inside a business career, not a path to practising law. It is not an accredited law degree, so students who want to become a solicitor or barrister need Bond's Bachelor of Laws instead.\n\nThe structure is 10 law elective subjects plus a business component: either eight general business electives or a six-subject business major (entrepreneurship and innovation, international business, management, marketing, marketing communication, or tourism management) with two further electives. First year covers legal foundations and Bond's core subjects. It suits students heading into compliance, contract management, procurement, HR, or founding a company, where legal literacy matters but a practising qualification does not.",
     "curriculum": null,
     "admission_requirements": "Completion of Australian Year 12 (or equivalent); Bond applies its own admission score rather than a standard ATAR cut-off, and offers pathway entry through the Diploma or College Foundation Program.",
     "english_requirements": "IELTS Overall 6.5, with no band below 6.0 (or equivalent).",
@@ -4709,7 +4709,7 @@
     "pte_speaking": null,
     "intake_dates": "January, May, September",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://bond.edu.au/program/bachelor-business-law"
+    "source_url": "https://bond.edu.au/program/bachelor-of-business-law"
   },
   {
     "university_slug": "bond-university",
@@ -4817,7 +4817,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": "https://bond.edu.au/program/bachelor-of-climate-change-and-sustainable-action",
-    "description": null,
+    "description": "This is deliberately not a climate science degree. It is a two-year non-science degree (six semesters, trimester intakes in January, May, and September) that approaches climate and sustainability through communication, media, psychology, health, law, and business. The structure is a core curriculum, a broad interdisciplinary foundation, a student-chosen major, and an electives and capstone block.\n\nThe final semester can be a capstone project or an internship applying the degree to a real sustainability problem, with some fieldwork such as environmental assessments. Graduates move into sustainability management, climate consulting, environmental policy, corporate governance and communications, and infrastructure planning. Students who want the science side (emissions modelling, ecology, engineering) should look at a science or engineering degree instead.",
     "curriculum": null,
     "admission_requirements": "Completion of Australian Year 12 (or equivalent); Bond applies its own admission score rather than a standard ATAR cut-off, and offers pathway entry through the Diploma or College Foundation Program.",
     "english_requirements": "IELTS Overall 6.5, with no band below 6.0 (or equivalent).",
@@ -5096,7 +5096,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": "https://bond.edu.au/program/bachelor-construction-management-and-quantity-surveying",
-    "description": null,
+    "description": "A two-year accelerated degree (six semesters) covering construction technology, site management, contract administration, building measurement, tendering and finance, project delivery systems, and risk management. First year pairs introductory construction subjects with Bond's core subjects; second year works through the professional subjects and ends with an industry-based capstone project.\n\nThe degree carries a strong set of accreditations: the Australian Institute of Quantity Surveyors, the Chartered Institute of Building, and the Royal Institution of Chartered Surveyors, and it meets the education requirement for a Queensland Open Builders Licence. Teaching includes industry guest involvement and practical assessments modelled on workplace tasks, and students work in Bond's 6 Star Green Star Sustainable Development Building. It is a direct route into quantity surveying, contract administration, or site and project management.",
     "curriculum": null,
     "admission_requirements": "Completion of Australian Year 12 (or equivalent); Bond applies its own admission score rather than a standard ATAR cut-off, and offers pathway entry through the Diploma or College Foundation Program.",
     "english_requirements": "IELTS Overall 6.5, with no band below 6.0 (or equivalent).",
@@ -5112,7 +5112,7 @@
     "pte_speaking": null,
     "intake_dates": "January, May, September",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://bond.edu.au/program/bachelor-construction-management-and-quantity-surveying"
+    "source_url": "https://bond.edu.au/program/bachelor-of-construction-management-and-quantity-surveying"
   },
   {
     "university_slug": "bond-university",
@@ -5127,7 +5127,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": "https://bond.edu.au/program/bachelor-creative-arts",
-    "description": null,
+    "description": "A two-year degree (six semesters) that pairs a creative major with a second major in humanities or business. Creative majors include advertising, corporate storytelling, digital media, film and television, journalism, media studies, public relations, and social media, all built on a creative writing foundation in first year alongside Bond's core subjects. Second year adds three open electives and a capstone, which is a sustained individual or small-team creative project made for the student's portfolio.\n\nStudents have access to one of the larger video production facilities in south-east Queensland, with editing stations and audio suites. The degree suits students who want to graduate with a body of produced work across two complementary fields rather than a single disciplinary track.",
     "curriculum": null,
     "admission_requirements": "Completion of Australian Year 12 (or equivalent); Bond applies its own admission score rather than a standard ATAR cut-off, and offers pathway entry through the Diploma or College Foundation Program.",
     "english_requirements": "IELTS Overall 6.5, with no band below 6.0 (or equivalent).",
@@ -5143,7 +5143,7 @@
     "pte_speaking": null,
     "intake_dates": "January, May, September",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://bond.edu.au/program/bachelor-creative-arts"
+    "source_url": "https://bond.edu.au/program/bachelor-of-creative-arts"
   },
   {
     "university_slug": "bond-university",
@@ -5251,7 +5251,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": "https://bond.edu.au/program/bachelor-of-design-architecture",
-    "description": null,
+    "description": "The first stage of Bond's architecture pathway: a two-year studio degree (27 subjects, trimester intakes in January, May, and September) at the Abedian School of Architecture, where each student gets an assigned desk in an open-plan studio. Learning is project-based, with access to computing and fabrication labs, a robotics lab, workshops, 3D printers, large-format laser cutters, CNC routers, and industrial robot arms.\n\nThis degree alone does not make someone an architect. Graduates progress to Bond's Master of Architecture (about one year and four months), which is the accredited qualification for registration in Australia and elsewhere, but entry to the master's is by application and not automatic. The program includes work-integrated learning and twice-yearly student exhibitions that build the portfolio.",
     "curriculum": null,
     "admission_requirements": "Completion of Australian Year 12 (or equivalent); Bond applies its own admission score rather than a standard ATAR cut-off, and offers pathway entry through the Diploma or College Foundation Program.",
     "english_requirements": "IELTS Overall 6.5, with no band below 6.0 (or equivalent).",
@@ -5267,7 +5267,7 @@
     "pte_speaking": null,
     "intake_dates": "January, May, September",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://bond.edu.au/program/bachelor-of-design-architecture"
+    "source_url": "https://bond.edu.au/program/bachelor-of-design-in-architecture"
   },
   {
     "university_slug": "bond-university",
@@ -5282,7 +5282,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": "https://bond.edu.au/program/bachelor-digital-transformation",
-    "description": null,
+    "description": "A two-year degree (six semesters) that sits between business and technology rather than inside either. It is explicitly not an engineering or computer science degree: the focus is leading change and working alongside AI tools, not building them. Subjects span AI and design thinking, law and technology, cyber security, business statistics, digital literacy, and digital advertising.\n\nThe structure is built around applied work: two industry placements with business coaching (\"Immersions\"), and a two-semester major project (\"Global Challenges\") with industry and community mentors. Students can add a minor in advertising, cyber security, digital media, entrepreneurship, global studies, health transformation, or marketing. It suits students aiming at business analyst, transformation, product, or innovation roles.",
     "curriculum": null,
     "admission_requirements": "Completion of Australian Year 12 (or equivalent); Bond applies its own admission score rather than a standard ATAR cut-off, and offers pathway entry through the Diploma or College Foundation Program.",
     "english_requirements": "IELTS Overall 6.5, with no band below 6.0 (or equivalent).",
@@ -5298,7 +5298,7 @@
     "pte_speaking": null,
     "intake_dates": "January, May, September",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://bond.edu.au/program/bachelor-digital-transformation"
+    "source_url": "https://bond.edu.au/program/bachelor-of-digital-transformation"
   },
   {
     "university_slug": "bond-university",
@@ -5344,7 +5344,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": "https://bond.edu.au/program/bachelor-of-enterprise-artificial-intelligence",
-    "description": null,
+    "description": "Bond describes this as a hybrid of a computer science degree and a business degree, weighted toward applying AI inside organisations. First year builds computational thinking, Python programming, algorithms and data structures, data management, cyber security, and business fundamentals; second year covers programming paradigms, software design, infrastructure, AI and machine learning toolkits including agentic AI, and an applied enterprise AI project on a real business problem. Bond's three-semester calendar lets the standard three-year computing structure fit into two years.\n\nThe degree is taught through the business school (AACSB and EQUIS accredited), and a partnership with Automation Anywhere gives a set number of students industry automation and enterprise AI certification. It suits students who want to build and deploy AI systems in a commercial rather than research setting.",
     "curriculum": null,
     "admission_requirements": "Completion of Australian Year 12 (or equivalent); Bond applies its own admission score rather than a standard ATAR cut-off, and offers pathway entry through the Diploma or College Foundation Program.",
     "english_requirements": "IELTS Overall 6.5, with no band below 6.0 (or equivalent).",
@@ -5375,7 +5375,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": "https://bond.edu.au/program/bachelor-entrepreneurial-transformation",
-    "description": null,
+    "description": "A two-year degree (six semesters) organised around building ventures rather than studying business in the abstract. Alongside Bond's core subjects, students take a transdisciplinary foundation (AI, design thinking, law, technology), an entrepreneurship major (innovation, marketing, social media, venture law), and two industry placements with one-on-one business coaching. A two-semester project has students working on complex real-world challenges.\n\nMentors are drawn from national and international organisations and students connect with them from the first semester. Optional minors include cyber security, digital media, global studies, health transformation, and marketing. It suits students who want to start a company or work in innovation and new-venture roles, and who learn better by doing than by lecture.",
     "curriculum": null,
     "admission_requirements": "Completion of Australian Year 12 (or equivalent); Bond applies its own admission score rather than a standard ATAR cut-off, and offers pathway entry through the Diploma or College Foundation Program.",
     "english_requirements": "IELTS Overall 6.5, with no band below 6.0 (or equivalent).",
@@ -5391,7 +5391,7 @@
     "pte_speaking": null,
     "intake_dates": "January, May, September",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://bond.edu.au/program/bachelor-entrepreneurial-transformation"
+    "source_url": "https://bond.edu.au/program/bachelor-of-entrepreneurial-transformation"
   },
   {
     "university_slug": "bond-university",
@@ -5623,7 +5623,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": "https://bond.edu.au/program/bachelor-of-global-studies-sustainability",
-    "description": null,
+    "description": "A two-year degree (six semesters, 24 subjects) that combines international relations and sustainability, covering climate change, sustainable development, global health, diplomacy, globalisation, and transnational business. First year runs sustainability and IR subjects each semester alongside Bond's core subjects; second year goes deeper into diplomacy and globalisation.\n\nStudents take one six-subject major from International Relations, Australian Studies, Digital Media, Global Business, or Languages and Culture (Chinese, French, Japanese, or Spanish), plus a for-credit internship or a group capstone investigation and three open electives. It suits students aiming at roles in environmental policy, international development, NGOs, or sustainability functions inside government and business.",
     "curriculum": null,
     "admission_requirements": "Completion of Australian Year 12 (or equivalent); Bond applies its own admission score rather than a standard ATAR cut-off, and offers pathway entry through the Diploma or College Foundation Program.",
     "english_requirements": "IELTS Overall 6.5, with no band below 6.0 (or equivalent).",
@@ -5685,7 +5685,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": "https://bond.edu.au/program/bachelor-health-sciences",
-    "description": null,
+    "description": "A two-year accelerated degree (six semesters) covering anatomy, physiology, molecular and biomedical science, psychology of health, and laboratory research skills. First year is heavily structured (around 15 compulsory health science subjects plus Bond's core subjects and directed electives); electives let students weight the degree toward sport and exercise science, nutrition, psychology, or biomedical science.\n\nThe one named specialisation is Healthcare Informatics, available as a six-subject major or four-subject minor, covering health data and systems. The degree is mainly used as a feeder into postgraduate practice programs: students can progress directly into the Master of Occupational Therapy or Master of Nutrition and Dietetic Practice, or into research and honours. Transfer into Biomedical Science is possible after the first year with a maths prerequisite.",
     "curriculum": null,
     "admission_requirements": "Completion of Australian Year 12 (or equivalent) with strong results in science subjects (Chemistry/Biology where relevant); Bond applies its own admission score, and some programs require an interview or additional selection criteria.",
     "english_requirements": "IELTS Overall 6.5, with no band below 6.0 (or equivalent).",
@@ -5701,7 +5701,7 @@
     "pte_speaking": null,
     "intake_dates": "January, May, September",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://bond.edu.au/program/bachelor-health-sciences"
+    "source_url": "https://bond.edu.au/program/bachelor-of-health-sciences"
   },
   {
     "university_slug": "bond-university",
@@ -6057,7 +6057,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": "https://bond.edu.au/program/bachelor-jurisprudence",
-    "description": null,
+    "description": "A two-year degree (six semesters) that combines law subjects with a second field in the humanities or social sciences. Like the Bachelor of Business Law, it is for students who want legal knowledge without the professional practice requirements, and it is not the pathway to admission as a lawyer, which is the Bachelor of Laws.\n\nAll students take legal foundations and Bond's four core subjects, then build the rest of the degree from law electives plus subjects in areas such as international relations, criminology, languages, communication, and humanities. The result is a customised law-plus-something degree aimed at careers in policy, journalism, government, advocacy, and business where legal reasoning is useful but a practising certificate is not needed.",
     "curriculum": null,
     "admission_requirements": "Completion of Australian Year 12 (or equivalent) with a strong academic record; Bond applies its own admission score rather than a standard ATAR gate.",
     "english_requirements": "IELTS Overall 7.0, with no band below 6.5 (or equivalent).",
@@ -6073,7 +6073,7 @@
     "pte_speaking": null,
     "intake_dates": "January, May, September",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://bond.edu.au/program/bachelor-jurisprudence"
+    "source_url": "https://bond.edu.au/program/bachelor-of-jurisprudence"
   },
   {
     "university_slug": "bond-university",
@@ -6119,7 +6119,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": "https://bond.edu.au/program/bachelor-policy-philosophy-and-economics",
-    "description": null,
+    "description": "Bond's version of the politics, philosophy and economics degree, built across three faculties (Law, Business, and Society and Design). It runs on three strands: policy and law reform, philosophy and competing worldviews, and the economic analysis of policy, with politics threaded through. First year lays foundations in legal studies, international relations, philosophy, politics, and economics; second year moves into contemporary policy problems, with about five open electives for customisation.\n\nBond's three-semester calendar lets the standard three-year PPE structure be completed faster. The degree is aimed at students heading into the public service, government, policy institutes, think tanks, and not-for-profits, where the ability to reason across law, economics, and ethics matters more than depth in any one.",
     "curriculum": null,
     "admission_requirements": "Completion of Australian Year 12 (or equivalent); Bond applies its own admission score rather than a standard ATAR cut-off, and offers pathway entry through the Diploma or College Foundation Program.",
     "english_requirements": "IELTS Overall 6.5, with no band below 6.0 (or equivalent).",
@@ -6135,7 +6135,7 @@
     "pte_speaking": null,
     "intake_dates": "January, May, September",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://bond.edu.au/program/bachelor-policy-philosophy-and-economics"
+    "source_url": "https://bond.edu.au/program/bachelor-of-policy-philosophy-and-economics"
   },
   {
     "university_slug": "bond-university",
@@ -6212,7 +6212,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": "https://bond.edu.au/program/bachelor-property",
-    "description": null,
+    "description": "A two-year degree (six semesters, 24 subjects) covering the full property cycle: development and feasibility, land economy, valuation, property finance and investment, corporate real estate, urban and sustainable development, property rights and taxation, and spatial information systems. The structure is heavily prescribed, with around 19 compulsory subjects and only two open electives.\n\nThe degree is accredited by the Australian Property Institute and the Royal Institution of Chartered Surveyors, and meets the education requirement of the Valuers Registration Board of Queensland, so it is a direct route to working as a valuer. The final-semester capstone is a group investigation of a real urban development project, and the faculty arranges placements with developers and valuation firms.",
     "curriculum": null,
     "admission_requirements": "Completion of Australian Year 12 (or equivalent); Bond applies its own admission score rather than a standard ATAR cut-off, and offers pathway entry through the Diploma or College Foundation Program.",
     "english_requirements": "IELTS Overall 6.5, with no band below 6.0 (or equivalent).",
@@ -6228,7 +6228,7 @@
     "pte_speaking": null,
     "intake_dates": "January, May, September",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://bond.edu.au/program/bachelor-property"
+    "source_url": "https://bond.edu.au/program/bachelor-of-property"
   },
   {
     "university_slug": "bond-university",
@@ -6329,7 +6329,7 @@
     "subject_slug": "psychology",
     "id": "29d3d62e-7c6a-49df-80ff-a9f333f39e52",
     "name": "Bachelor of Social Science",
-    "status": "published",
+    "status": "archived",
     "duration_years": "2.0",
     "tuition_international": "37900",
     "tuition_domestic": "37900",
@@ -6367,7 +6367,7 @@
     "tuition_domestic_is_csp": false,
     "currency": "AUD",
     "application_url": "https://bond.edu.au/program/bachelor-sport-management",
-    "description": null,
+    "description": "A two-year degree (six semesters) taught through the Bond Business School. First year covers sport governance, sport communication, sport development, and sports law alongside Bond's core subjects; second year adds sport public relations, managing high-performance sport, event management, and general business subjects.\n\nWork-integrated learning runs through the degree: students are expected to take internships and volunteer at events, working with local and national sport organisations, professional teams, and Olympic sports based on the Gold Coast. Subjects are taught by practitioners who consult to professional and Olympic sport. Students also have access to the Centre for Data Analytics for the growing sport analytics side of the industry. The degree suits students aiming at roles in club and league administration, events, sponsorship, or athlete management.",
     "curriculum": null,
     "admission_requirements": "Completion of Australian Year 12 (or equivalent); Bond applies its own admission score rather than a standard ATAR cut-off, and offers pathway entry through the Diploma or College Foundation Program.",
     "english_requirements": "IELTS Overall 6.5, with no band below 6.0 (or equivalent).",
@@ -6383,7 +6383,7 @@
     "pte_speaking": null,
     "intake_dates": "January, May, September",
     "last_verified_at": "2026-08-25T18:15:00.000Z",
-    "source_url": "https://bond.edu.au/program/bachelor-sport-management"
+    "source_url": "https://bond.edu.au/program/bachelor-of-sport-management"
   },
   {
     "university_slug": "bond-university",
