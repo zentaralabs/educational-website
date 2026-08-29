@@ -10,9 +10,17 @@ export function formatCurrency(
   }).format(amount);
 }
 
-export function formatPercent(rate: number | null): string | null {
-  if (rate === null) return null;
-  return `${rate}%`;
+/** Australian universities don't publish official acceptance rates, and the
+ * institution-wide third-party estimates we hold are too noisy to show as a
+ * precise percentage. We map them to a qualitative selectivity band instead,
+ * which is defensible where a bare "70%" is not. */
+export function formatSelectivity(rate: number | null | string): string | null {
+  const n = typeof rate === "string" ? Number(rate) : rate;
+  if (n === null || n === undefined || Number.isNaN(n)) return null;
+  if (n < 40) return "Highly selective";
+  if (n < 65) return "Selective";
+  if (n < 85) return "Competitive";
+  return "Broadly accessible";
 }
 
 /** Initials for a text avatar, e.g. "Roman Lama" → "RL". */

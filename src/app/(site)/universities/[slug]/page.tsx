@@ -2,6 +2,8 @@ import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { StatusBadge } from "@/components/StatusBadge";
 import { AdmissionsRequirementFacts } from "@/components/site/AdmissionsRequirementFacts";
+import { UniversityAtAGlance } from "@/components/site/UniversityAtAGlance";
+import { GO8_SLUGS, isRegionalCity } from "@/lib/australia";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { GuideContent } from "@/components/site/GuideContent";
 import { CheckBadgeIcon } from "@/components/site/icons";
@@ -14,7 +16,7 @@ import { FaqSection } from "@/components/site/FaqSection";
 import { faqJsonLd, universityFaq } from "@/lib/faq";
 import { SITE_YEAR } from "@/lib/site-config";
 import { deadlineBadgeStatus } from "@/lib/deadline-status";
-import { formatCurrency, formatPercent } from "@/lib/format";
+import { formatCurrency, formatSelectivity } from "@/lib/format";
 import { getPublishedProgramsForUniversity } from "@/lib/queries/public-programs";
 import {
   getPublishedDeadlinesForUniversity,
@@ -124,6 +126,19 @@ export default async function UniversityProfilePage({
     (d) => !d.is_rolling && deadlineBadgeStatus(d.deadline_date, d.is_rolling) === "upcoming",
   );
 
+  const intakeTypes = [
+    ...new Set(
+      deadlines
+        .map((d) => d.deadline_type?.name)
+        .filter((n): n is string => Boolean(n)),
+    ),
+  ];
+
+  const isGo8 = GO8_SLUGS.has(university.slug);
+  const isMetro = /Sydney|Melbourne/i.test(university.city ?? "") ||
+    /^Brisbane,/i.test(university.city ?? "");
+  const isRegional = isRegionalCity(university.city);
+
   // Overall admissions status for the header stamp — open beats upcoming
   // beats closed, so a school with any rolling/open path reads as open.
   const statusPriority = ["open", "upcoming", "closed"] as const;
@@ -188,13 +203,7 @@ export default async function UniversityProfilePage({
           acceptance_rate: university.acceptance_rate,
           apply_url: university.apply_url,
           website_url: university.website_url,
-          intakeTypes: [
-            ...new Set(
-              deadlines
-                .map((d) => d.deadline_type?.name)
-                .filter((n): n is string => Boolean(n)),
-            ),
-          ],
+          intakeTypes,
           budgetLow,
           budgetHigh,
           minTuition: anchorTuition,
@@ -293,6 +302,23 @@ export default async function UniversityProfilePage({
         </p>
       )}
 
+      <UniversityAtAGlance
+        tuition={anchorTuition}
+        tuitionIsFrom={tuitionIsFrom}
+        currency={currency}
+        applicationFee={university.application_fee}
+        budgetLow={budgetLow}
+        budgetHigh={budgetHigh}
+        ielts={university.ielts_overall}
+        pte={university.pte_overall}
+        selectivity={formatSelectivity(university.acceptance_rate)}
+        intakeTypes={intakeTypes}
+        degreeLevels={university.degree_levels.map((d) => d.name)}
+        isGo8={isGo8}
+        isRegional={isRegional}
+        isMetro={isMetro}
+      />
+
       {university.distinctive_summary && (
         <ProfileSection title="Overview">
           <p className="rounded-xl border border-line bg-mist p-5 font-body text-base leading-relaxed text-ink">
@@ -312,7 +338,7 @@ export default async function UniversityProfilePage({
       {hasAdmissionsData && (
         <ProfileSection title="Admissions">
           <FactBox>
-            <Fact label="Acceptance rate" value={formatPercent(university.acceptance_rate)} />
+            <Fact label="Selectivity" value={formatSelectivity(university.acceptance_rate)} />
             <Fact label="Test score range" value={university.test_score_range} />
             <AdmissionsRequirementFacts
               requiredTests={university.required_tests}
@@ -336,6 +362,14 @@ export default async function UniversityProfilePage({
               value={university.degree_levels.map((d) => d.name).join(", ")}
             />
           </FactBox>
+          {university.acceptance_rate !== null && (
+            <p className="mt-2 font-body text-xs text-slate">
+              Australian universities do not publish official acceptance rates.
+              Selectivity is our band for the institution-wide admission
+              estimates available, and individual competitive courses stay
+              harder to enter than the band suggests.
+            </p>
+          )}
         </ProfileSection>
       )}
 

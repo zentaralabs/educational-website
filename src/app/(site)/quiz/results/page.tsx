@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { formatCurrency, formatPercent } from "@/lib/format";
+import { formatCurrency, formatSelectivity } from "@/lib/format";
 import { getQuizMatches } from "@/lib/queries/public-quiz";
 
 export const metadata = {
@@ -81,7 +81,7 @@ export default async function QuizResultsPage({
               )}
 
               <div className="mt-3 flex flex-wrap gap-4 font-utility text-xs text-slate">
-                <span>Acceptance rate: {formatPercent(u.acceptance_rate) ?? "—"}</span>
+                <span>Selectivity: {formatSelectivity(u.acceptance_rate) ?? "—"}</span>
                 <span>
                   Tuition (intl.):{" "}
                   {u.tuition_international

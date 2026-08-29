@@ -116,12 +116,13 @@ export default async function DeadlinesPage({
 
       <p className="mt-4 rounded-xl border border-status-pending/25 bg-status-pending/5 px-4 py-3 font-body text-sm text-slate">
         Australian universities run fixed intakes (Semester 1 starts in February
-        or March, Semester 2 in July) and, rather than one hard cut-off, publish
-        a recommended time to apply: roughly three to four months before the
-        intake. Postgraduate coursework and competitive courses (medicine, law,
-        portfolio-based programs) close earlier. Later applications are often
-        still accepted while places and visa-processing time remain. Confirm the
-        date for your specific course with the university.
+        or March, Semester 2 in July; a few use terms or trimesters). Some, such
+        as the University of Sydney and ANU, publish a firm international closing
+        date; others assess applications on a rolling basis and close courses
+        once full, so the date shown is the recommended time to apply, roughly
+        three to four months before the intake. Postgraduate coursework and
+        competitive courses (medicine, law, portfolio-based programs) close
+        earlier. Confirm the date for your specific course with the university.
       </p>
 
       <form

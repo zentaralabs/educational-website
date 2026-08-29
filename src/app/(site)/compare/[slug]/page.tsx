@@ -56,7 +56,7 @@ export async function generateMetadata({
   if (pair) {
     const [a, b] = pair;
     const title = `${a.name} vs ${b.name}: Which to Choose (${SITE_YEAR})`;
-    const description = `${a.name} compared with ${b.name} for international students: tuition, acceptance rate, entry requirements, and how the two differ.`;
+    const description = `${a.name} compared with ${b.name} for international students: tuition, selectivity, entry requirements, and how the two differ.`;
     const url = `/compare/${slug}`;
     return {
       title,
@@ -123,14 +123,10 @@ function pairIntro(a: ComparisonUniversityRow, b: ComparisonUniversityRow): stri
 
   const ar = a.acceptance_rate;
   const br = b.acceptance_rate;
-  if (ar != null && br != null && Math.abs(ar - br) >= 5) {
-    const [open, sel] = ar > br ? [a, b] : [b, a];
+  if (ar != null && br != null && Math.abs(ar - br) >= 15) {
+    const [, sel] = ar > br ? [a, b] : [b, a];
     paras.push(
-      `${sel.name} is the more selective of the two (around ${Math.round(
-        Math.min(ar, br),
-      )}% acceptance against ${Math.round(
-        Math.max(ar, br),
-      )}% at ${open.name}), though acceptance rate is an institution-wide figure and competitive courses stay selective everywhere.`,
+      `On the institution-wide admission estimates available, ${sel.name} is the more selective of the two. Australian universities do not publish official acceptance rates, and competitive courses stay hard to enter at both regardless.`,
     );
   }
 
@@ -263,9 +259,9 @@ export default async function ComparisonPage({
           </div>
 
           <p className="mt-8 font-body text-xs text-slate">
-            Tuition and acceptance figures are approximate and drawn from this
-            site&rsquo;s database. This is general information, not admissions
-            advice.
+            Tuition figures are approximate and drawn from this site&rsquo;s
+            database, and selectivity is a band, not an official rate. This is
+            general information, not admissions advice.
           </p>
         </div>
       </main>

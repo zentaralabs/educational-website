@@ -294,16 +294,16 @@ export const COLLECTIONS: Collection[] = [
   {
     slug: "easiest-australian-universities-to-get-into-for-international-students",
     title: "The most accessible Australian universities for international students",
-    shortTitle: "Higher acceptance rates",
+    shortTitle: "More open admissions",
     category: "admissions",
     metaDescription:
-      "Australian universities with the highest acceptance rates and most open admissions for international students, and what that means for entry requirements.",
+      "Australian universities with the most open admissions for international students, and what that means for entry requirements.",
     intro: [
-      "\"Easiest to get into\" is the wrong way to think about it, because a place at any accredited Australian university still needs you to meet real academic and English requirements. But acceptance rates vary widely, and some universities have genuinely more open admissions than the highly selective Group of Eight.",
+      "\"Easiest to get into\" is the wrong way to think about it, because a place at any accredited Australian university still needs you to meet real academic and English requirements. But selectivity varies widely, and some universities have genuinely more open admissions than the highly selective Group of Eight.",
       "The most open are the TAFEs and pathway providers, then the regional, newer, and teaching-focused universities. These often accept a broader range of prior qualifications and lower entry averages, and several run their own foundation or diploma pathways for applicants who fall just short.",
     ],
     methodology:
-      "We listed published universities with an acceptance rate of 78 percent or higher, sorted highest first. Acceptance rate is an institution-wide figure and does not tell you about a specific competitive course (medicine, law, some design programs stay selective everywhere). Always check the requirements for your course.",
+      "Australian universities do not publish official acceptance rates. We listed published universities that the institution-wide admission estimates available place in our broadly accessible band, most open first. That is an institution-wide read and does not tell you about a specific competitive course (medicine, law, some design programs stay selective everywhere). Always check the requirements for your course.",
     build: (unis) =>
       unis
         .filter((u) => u.acceptanceRate != null && u.acceptanceRate >= 78)
@@ -313,7 +313,7 @@ export const COLLECTIONS: Collection[] = [
           slug: u.slug,
           name: u.name,
           city: u.city,
-          headline: `${Math.round(u.acceptanceRate!)}% acceptance rate`,
+          headline: "Broadly accessible admissions",
           note:
             u.firstYearBudget != null
               ? `Around ${formatCurrency(u.firstYearBudget, "AUD")} for the first year. Competitive courses still have their own requirements.`

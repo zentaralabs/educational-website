@@ -818,6 +818,35 @@ GSC property is `sc-domain:wheretoapply.xyz` under `romanlama314@gmail.com` (the
 
 **Policy for the rest of the site: do NOT manually request-index everything.** Manual Request Indexing / URL Submission is for the ~40-page spine (hubs, money pages, guides, visa pages) and for pages that materially changed. The other ~1,250 URLs (program pages, `/compare/{a}-vs-{b}` stat pages, individual scholarships, university profiles) ride the sitemap -- both engines crawl it on their own schedule, and re-requesting adds nothing. Long-tail indexing speed is a function of domain authority (backlinks, internal links), not submission volume.
 
+### Real per-intake deadlines — Go8 batch (2026-08-29)
+
+`scripts/seed_deadlines.mjs` used to stamp the same 4 generic dates on every non-override university. Added a `PER_UNI` map (fully replaces the generic rows for a slug) with international closing dates verified against each university's own key-dates page. All 7 non-Monash Go8 done:
+- **University of Sydney** — UG S1 1 Dec 2026 / PG S1 18 Dec 2026 / S2 (both) 29 May 2027. Firm. Source: sydney.edu.au/study/applying/application-dates.html
+- **ANU** — UG+PG S1 15 Dec 2026 / S2 15 May 2027 (Crawford School earlier; no late intl applications). Firm. Source: study.anu.edu.au/apply/international-applications
+- **University of Melbourne** — UG S1 30 Nov 2026 / UG S2 31 May 2027 (direct); graduate coursework `is_rolling` (assessed on arrival, closes when full). Sources: study.unimelb.edu.au how-to-apply pages
+- **UNSW** — added "Term 1/2/3" deadline types; rows marked `is_rolling` because UNSW uses 3 terms + grouped offer rounds and 2027 intl dates aren't published until ~late Sep 2026. Source: unsw.edu.au/study/how-to-apply/application-deadline-dates
+- **UWA** — firm, split by country visa-scrutiny group. Higher-scrutiny (India/Nepal/Pakistan/Vietnam/etc): S1 28 Dec 2026 / S2 24 May 2027. All other countries: S1 11 Jan 2027 / S2 7 Jun 2027. Seed uses the earlier date + notes both. Source: uwa.edu.au/study/how-to-apply/international-applicants
+- **UQ** — `is_rolling`; UQ explicitly has no single intl date (varies by program + country visa assessment level; Medicine/Dental via UCAT close earlier). Nominal ~3mo-ahead dates. Source: support.future-students.uq.edu.au a_id/460
+- **Adelaide University** — `is_rolling`; no fixed deadline, "apply ≥6 weeks before intake", some programs close early, newly merged so dates still settling. Source: international.adelaide.edu.au/admissions/apply
+
+`/deadlines` intro copy updated to say some unis publish a firm date and others are rolling.
+
+### Whole-sector deadline pass (2026-08-29, follow-up)
+
+Checked every remaining published AU university/college against its own how-to-apply / key-dates page. **Finding: outside the Go8, only UTS publishes a fixed-calendar international closing date. Every other institution assesses on a rolling basis** (relative rules like "close 10 weeks before start", "apply 12 weeks ahead", per-course/per-country dates, multiple intakes).
+
+Changes to `scripts/seed_deadlines.mjs`:
+- **UTS** added to `PER_UNI` with firm dates (Autumn/Sem 1 30 Nov, Spring/Sem 2 30 Apr, for applicants outside Australia). Source: uts.edu.au/for-students/admissions-entry/application-dates
+- New `ROLLING` map (note) + `ROLLING_SOURCE` map (URL) for ~27 universities with verified per-university guidance baked into the deadline note: Macquarie, Newcastle (12wk), Curtin (10wk/4wk), Wollongong, QUT, RMIT, Deakin, Griffith, Western Sydney (15 Nov/15 May), UTAS (3mo), Flinders (12wk), ACU (12wk), Swinburne, ECU, JCU, CDU, CQU (3mo), Canberra (2mo), Southern Cross (2-3mo), UniSC, UniSQ, UNE, Charles Sturt, Federation, Victoria U, Murdoch, La Trobe. These keep `is_rolling = false` (so the calendar still shows a plan-around date) but the note leads with "assesses on a rolling basis... the date shown is a recommended time to apply".
+- `noteFor()` rewritten so **every** non-Go8 university (incl. the long-tail private colleges / TAFEs not individually researched) leads with the rolling framing instead of implying a hard cut-off.
+- **NIDA** now correctly `is_rolling = false` with a "firm audition cut-off" note (it's the one real single-intake exception).
+
+Seed re-run against prod + `deadlines:list` revalidated 2026-08-29. All 56 AU institutions now have an accurate, honestly-framed deadline note; 8 have verified firm dates (Go8 minus Monash, plus UTS); ~27 have verified per-university rolling guidance; the rest have an accurate generic rolling note.
+
+**Still on the generic note (not individually sourced):** Monash (confirmed no fixed deadline), the private colleges (AIB, AIM, Avondale, Holmes, ICMS, Kaplan, MIT, Torrens, Divinity, William Angliss), Melbourne Polytechnic, TAFE Queensland, and the OVERRIDES pathway/TAFE providers. All genuinely rolling; the generic note is accurate for them.
+
+**USER MUST RUN `node scripts/seed_deadlines.mjs`** (destructive: deletes + reinserts all AU deadline rows) after fact-checking the PER_UNI dates, then bust ISR (`POST /api/revalidate`).
+
 ### Still on the SEO list (biggest levers, all off-page)
 
 Backlinks (directory listings, digital PR pitching the calculator + round tracker, HARO), community distribution (Reddit/forums/FB groups), keyword-gap mining once GSC Performance has ~1-2 weeks of data, and the recurring-freshness engine (a post per SkillSelect round / state-nomination event).

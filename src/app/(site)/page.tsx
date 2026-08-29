@@ -37,12 +37,69 @@ export const metadata = {
   alternates: { canonical: "/" },
 };
 
-const CTAS = [
-  { label: "Browse deadlines", href: "/deadlines" },
-  { label: "Courses by subject", href: "/study" },
-  { label: "Best universities", href: "/best" },
-  { label: "Compare universities", href: "/compare/universities" },
-  { label: "Scholarships", href: "/scholarships" },
+const TASKS = [
+  {
+    label: "Check application deadlines",
+    href: "/deadlines",
+    desc: "Recommended apply-by dates for every intake",
+  },
+  {
+    label: "Compare universities",
+    href: "/compare/universities",
+    desc: "Tuition, selectivity and requirements side by side",
+  },
+  {
+    label: "Browse courses by subject",
+    href: "/study",
+    desc: "Find programs and the universities that run them",
+  },
+  {
+    label: "Find scholarships",
+    href: "/scholarships",
+    desc: "Funding you can actually apply for",
+  },
+  {
+    label: "Understand visa pathways",
+    href: "/visas",
+    desc: "Student, graduate and skilled visa subclasses",
+  },
+  {
+    label: "Compare living costs",
+    href: "/cost-of-living",
+    desc: "Monthly student budgets by city",
+  },
+];
+
+const POPULAR = [
+  { label: "2027 application deadlines", href: "/deadlines" },
+  {
+    label: "Most affordable universities for international students",
+    href: "/best/affordable-australian-universities-for-international-students",
+  },
+  {
+    label: "Universities accepting IELTS 6.0",
+    href: "/best/australian-universities-accepting-ielts-6-0-for-international-students",
+  },
+  {
+    label: "Universities with multiple intakes a year",
+    href: "/best/australian-universities-with-multiple-intakes-per-year",
+  },
+  {
+    label: "Universities with no application fee",
+    href: "/best/australian-universities-with-no-application-fee",
+  },
+  {
+    label: "Universities with automatic scholarships",
+    href: "/best/australian-universities-with-automatic-scholarships",
+  },
+  {
+    label: "Melbourne vs Sydney",
+    href: "/compare/university-of-melbourne-vs-university-of-sydney",
+  },
+  {
+    label: "Monash vs UNSW",
+    href: "/compare/monash-university-vs-unsw-sydney",
+  },
 ];
 
 export default async function Home() {
@@ -99,24 +156,9 @@ export default async function Home() {
             </div>
           </div>
 
-          <div
-            className="animate-fade-up mt-6 flex flex-wrap justify-center gap-2.5"
-            style={{ animationDelay: "160ms" }}
-          >
-            {CTAS.map((cta) => (
-              <Link
-                key={cta.href}
-                href={cta.href}
-                className="rounded-lg border border-line bg-paper px-5 py-2.5 font-body text-sm font-medium text-ink transition-all duration-150 hover:-translate-y-0.5 hover:border-status-open/40 hover:shadow-[0_8px_24px_-14px_rgba(22,35,63,0.25)]"
-              >
-                {cta.label}
-              </Link>
-            ))}
-          </div>
-
           <p
             className="animate-fade-up mt-6 font-body text-sm text-slate"
-            style={{ animationDelay: "200ms" }}
+            style={{ animationDelay: "160ms" }}
           >
             Or browse by country:{" "}
             {countries.map((c, i) => (
@@ -142,6 +184,47 @@ export default async function Home() {
       </div>
 
       <div className="mx-auto w-full max-w-3xl px-6 pb-16">
+        <section className="scroll-reveal mt-2">
+          <h2 className="mb-4 font-display text-xl font-semibold text-ink">
+            What are you looking for?
+          </h2>
+          <ul className="grid gap-3 sm:grid-cols-2">
+            {TASKS.map((t) => (
+              <li key={t.href}>
+                <Link
+                  href={t.href}
+                  className="card card-hover group flex h-full flex-col gap-1 p-4"
+                >
+                  <span className="font-body text-[0.95rem] font-semibold text-ink group-hover:underline">
+                    {t.label}
+                  </span>
+                  <span className="font-utility text-xs text-slate">
+                    {t.desc}
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section className="scroll-reveal mt-10">
+          <h2 className="mb-4 font-display text-xl font-semibold text-ink">
+            Popular right now
+          </h2>
+          <ul className="flex flex-wrap gap-2.5">
+            {POPULAR.map((p) => (
+              <li key={p.href}>
+                <Link
+                  href={p.href}
+                  className="inline-block rounded-lg border border-line bg-paper px-4 py-2 font-body text-sm text-ink transition-colors duration-150 hover:border-status-open/40 hover:text-status-open"
+                >
+                  {p.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+
         {upcoming.length > 0 && (
           <div
             className="animate-fade-up mt-4"

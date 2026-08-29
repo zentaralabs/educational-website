@@ -11,7 +11,7 @@ import {
 export const metadata = {
   title: "Compare Universities",
   description:
-    "Compare tuition, admission requirements, deadlines, and acceptance rates for any two or more universities side by side.",
+    "Compare tuition, admission requirements, deadlines, and selectivity for any two or more universities side by side.",
   alternates: { canonical: "/compare/universities" },
 };
 
@@ -56,7 +56,7 @@ export default async function CompareUniversitiesPage({
             Compare universities
           </h1>
           <p className="mt-2 font-body text-base text-slate">
-            Pick any two or more universities to compare tuition, acceptance rates, and requirements.
+            Pick any two or more universities to compare tuition, selectivity, and requirements.
           </p>
         </div>
 
