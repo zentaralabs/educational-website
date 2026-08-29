@@ -976,3 +976,9 @@ A long ChatGPT product teardown was reviewed. It scored the foundation 8/10 (fai
 - New `src/components/site/WhyTrust.tsx` — condensed 4-point E-E-A-T block (official sources / dated & re-checked / independent / named editor + public method) linking to `/methodology`, `/editorial-policy`, `/about`. Rendered on the homepage (replaced the thin one-line "Researched from official sources" box), university profile, program page, and deadlines detail page.
 - The page-level "Sources & verification" block (with author/reviewer bylines + full source list) stays on the university profile — the inline markers are additive, not a replacement.
 - Verified in dev: uni profile, program, deadlines detail all render; per-row verified dates resolve distinctly from page-level; tsc + eslint clean; no console errors.
+
+### Priority 3 — homepage: /quiz as the unambiguous primary CTA (DONE 2026-08-30)
+
+- Hero: added a filled `bg-ink` pill button **"Find my universities →"** → `/quiz` as the single primary action, with subtext "8 quick questions · matched to real data · not a lead-gen form". The `SearchBar` is now visually subordinate under an "Or search by name" label (new optional `className` prop on `SearchBar`, default unchanged `mt-6`), and the trailing "Find the right university for me" text link was removed (now redundant).
+- "What are you looking for?" grid: prepended a full-width accent-tinted card "Not sure where to start? Take the 2-minute match quiz →" above the task cards. "Browse all universities" et al. remain as secondary options.
+- Verified in dev at mobile + 1280px: hero button prominent, search clearly secondary, quiz card spans both columns; tsc + eslint clean.

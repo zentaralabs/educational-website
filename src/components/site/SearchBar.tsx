@@ -4,7 +4,13 @@ import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { AnimatedPlaceholder } from "./AnimatedPlaceholder";
 
-export function SearchBar({ defaultValue = "" }: { defaultValue?: string }) {
+export function SearchBar({
+  defaultValue = "",
+  className = "mt-6",
+}: {
+  defaultValue?: string;
+  className?: string;
+}) {
   const router = useRouter();
   const [value, setValue] = useState(defaultValue);
   const [focused, setFocused] = useState(false);
@@ -30,7 +36,7 @@ export function SearchBar({ defaultValue = "" }: { defaultValue?: string }) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="mx-auto mt-6 flex w-full items-center gap-3 rounded-lg border-[1.5px] border-ink px-5 py-4 text-left text-slate transition-colors duration-200 focus-within:border-status-open"
+      className={`mx-auto flex w-full items-center gap-3 rounded-lg border-[1.5px] border-ink px-5 py-4 text-left text-slate transition-colors duration-200 focus-within:border-status-open ${className}`}
     >
       <div className="relative flex flex-1 items-center">
         {!value && !focused && (

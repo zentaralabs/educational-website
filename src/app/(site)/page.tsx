@@ -162,8 +162,27 @@ export default async function Home() {
             requirements, and scholarships for Australia in one place.
           </p>
 
-          <div className="animate-fade-up" style={{ animationDelay: "120ms" }}>
-            <SearchBar />
+          <div
+            className="animate-fade-up mt-7 flex flex-col items-center gap-2"
+            style={{ animationDelay: "120ms" }}
+          >
+            <Link
+              href="/quiz"
+              className="inline-flex items-center gap-2 rounded-full bg-ink px-7 py-3.5 font-body text-base font-semibold text-paper shadow-md shadow-ink/10 transition-all duration-150 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-ink/15"
+            >
+              Find my universities
+              <span aria-hidden="true">→</span>
+            </Link>
+            <span className="font-utility text-xs text-slate">
+              8 quick questions · matched to real data · not a lead-gen form
+            </span>
+          </div>
+
+          <div className="animate-fade-up mt-6" style={{ animationDelay: "160ms" }}>
+            <p className="mb-2 font-utility text-xs tracking-wide text-slate uppercase">
+              Or search by name
+            </p>
+            <SearchBar className="mt-0" />
             <div className="mt-3 flex justify-center">
               <StudentTypeToggle />
             </div>
@@ -171,7 +190,7 @@ export default async function Home() {
 
           <p
             className="animate-fade-up mt-6 font-body text-sm text-slate"
-            style={{ animationDelay: "160ms" }}
+            style={{ animationDelay: "200ms" }}
           >
             Or browse by country:{" "}
             {countries.map((c, i) => (
@@ -185,13 +204,6 @@ export default async function Home() {
                 {i < countries.length - 1 && " · "}
               </span>
             ))}
-            {"  ·  "}
-            <Link
-              href="/quiz"
-              className="font-medium text-ink underline decoration-status-pending/30 decoration-2 underline-offset-4 transition-colors duration-200 hover:decoration-status-pending"
-            >
-              Find the right university for me
-            </Link>
           </p>
         </div>
       </div>
@@ -202,6 +214,20 @@ export default async function Home() {
             What are you looking for?
           </h2>
           <ul className="grid gap-3 sm:grid-cols-2">
+            <li className="sm:col-span-2">
+              <Link
+                href="/quiz"
+                className="card card-hover group flex h-full flex-col gap-1 border-status-open/40 bg-status-open/[0.04] p-4"
+              >
+                <span className="font-body text-[0.95rem] font-semibold text-ink group-hover:underline">
+                  Not sure where to start? Take the 2-minute match quiz →
+                </span>
+                <span className="font-utility text-xs text-slate">
+                  8 questions on budget, field, city, English and more, matched
+                  to real universities
+                </span>
+              </Link>
+            </li>
             {TASKS.map((t) => (
               <li key={t.href}>
                 <Link
