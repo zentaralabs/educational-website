@@ -71,9 +71,9 @@ const TASKS = [
     desc: "Student, graduate and skilled visa subclasses",
   },
   {
-    label: "Compare living costs",
-    href: "/cost-of-living",
-    desc: "Monthly student budgets by city",
+    label: "Calculate the total cost",
+    href: "/cost-calculator",
+    desc: "Tuition, rent, visa and flights for your degree",
   },
   {
     label: "Applying from your country",
