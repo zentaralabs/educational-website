@@ -875,8 +875,36 @@ Ranked opportunities beyond the program-page fix:
 
 6. ~~**Un-hide + strengthen the comparison pages**~~ **DONE 2026-08-29 (Phase 3)** — the 20 `/compare/{a}-vs-{b}` head-to-heads are no longer `noindex`; the page now pulls the full `listCollectionUniversities` record and renders a 9-row side-by-side table (city, Go8, regional, tuition, first-year budget, IELTS, app fee, intakes, selectivity), derived **"Choose {A} if" / "Choose {B} if"** lists, each university's real `who_is_it_for` editorial, and 5 data-driven FAQs (cheaper / harder to get into / better for PR / prestige / apply to both). Expanded `COMPARISON_PAIRS` from 20 to 33. All in the sitemap now. Links to each university's profile + deadline page.
 
-   Still Phase 3: expand the 4-variable quiz (field of study, city, IELTS, scholarship need, regional preference); Course/Dataset schema + a /methodology page.
+   ~~Still Phase 3: expand the 4-variable quiz; Course/Dataset schema + a /methodology page.~~ **DONE 2026-08-29** — see Section 26.
 
 ### Still on the SEO list (biggest levers, all off-page)
 
 Backlinks (directory listings, digital PR pitching the calculator + round tracker, HARO), community distribution (Reddit/forums/FB groups), keyword-gap mining once GSC Performance has ~1-2 weeks of data, and the recurring-freshness engine (a post per SkillSelect round / state-nomination event).
+
+## 26. Phase 3 finish — quiz expansion, Course/Dataset schema, /methodology (2026-08-29)
+
+### Quiz: 4 inputs -> 8 (commits fc0f4a9, 160a37c)
+
+`src/lib/queries/public-quiz.ts` rewritten. `country` dropped (only Australia is launched, so it was a one-option question). New `QuizFilters`: `subject`, `city`, `ielts` (the student's own band), `pte` (the student's own PTE Academic score), `scholarship` (bool), `regional` (bool), plus the existing `degreeLevel` / `maxBudget` / `institutionType`.
+- `getQuizMatches` now builds on `listCollectionUniversities()` (so results carry `firstYearBudget`, `intakes`, regional status, and `automaticScholarships`) then applies filters in JS. Two small sub-queries remain: `universitySlugsForSubject` (published programs joined to `subjects.slug`) and `universitySlugsForDegree` (`university_degree_levels` -> ids -> slugs).
+- English filter is "show what my band already clears": exclude a university only when its known `ielts_overall` / `pte_overall` requirement is **above** the student's score; unknown requirement stays in. IELTS and PTE are independent (a student normally gives one).
+- `listQuizOptions` returns `degreeLevels` + `subjects` (from `listPublishedSubjects`, curated >=6-program set) + `cities` (`CITY_COSTS`).
+- `QuizForm.tsx`: button groups for everything except field of study (a `<select>` — 19 options). IELTS group + a separate "Or your PTE Academic score" group (42 / 50 / 58 / 65+, the rough IELTS 5.5/6.0/6.5/7.0 equivalents).
+- `/quiz/results` reads all params, shows the active criteria inline, and (still **`noindex, follow`** — query-param combos don't belong in the index) links out to the matched subject page (`/study/{slug}`) and city page (`/cost-of-living/{slug}`) plus `/universities`, `/cost-calculator`, `/scholarships`.
+
+### Quiz result cards redesigned (commit 0204a8e)
+
+The meta line was `font-utility text-xs` (mono, 12px) with all four facts in one wrapping row — user flagged it as hard to read. Replaced with a proper stats grid: local `Stat` component, `Selectivity / Tuition from / First-year budget / Intakes` as labelled columns (4-up desktop, 2-up mobile), sans-serif 14px, tuition value in accent green. Card uses the shared `.card` surface, `text-xl` name with location floated right, `who_is_it_for` at 15px `text-ink/80`, pill badges bumped to `text-xs`, arrow links at 14px. Results column widened `max-w-2xl` -> `max-w-3xl`. Verified desktop + mobile.
+
+### Course schema on subject pages (commit 160a37c)
+
+`/study/[slug]`, **curated pages only** (gated on `SUBJECT_CONTENT[slug]`, so markup matches the indexed set): a new `ItemList` of `Course` items, one per university teaching the subject, each `{ name: "{Subject} at {Uni}", description, url: /universities/{slug}, provider: CollegeOrUniversity }`. No per-course `price` — the subject `minTuition` is the min across *all* universities, not university-specific, so attaching it to one Course would misstate it.
+
+### Dataset schema + /methodology page (commit 160a37c)
+
+- New `src/lib/dataset-jsonld.ts` — `datasetJsonLd({ name, description, url, keywords?, variableMeasured?, temporalCoverage? })`. Emits `Dataset` with `creator` + `publisher` -> `{SITE_URL}/#organization`, `license` -> `/terms`, `isAccessibleForFree`, `spatialCoverage` Australia.
+- Rendered on **`/universities`** (the faceted index as a queryable dataset) and the new **`/methodology`**.
+- **`/methodology`** (`LegalPage` shell, `revalidate = 3600`): what the dataset covers with **live counts** from `getDatasetStats()` in `public-stats.ts` (universities / deadlines / scholarships published+launched, visa subclasses), rounded down with a `+` so figures never overstate; per-figure-type official sources (university key-dates pages, UAC/SATAC, Home Affairs, DFAT); the quarterly re-verification cadence; known limits (unverified program pages, rolling-assessment caveat, regional heuristic); how to cite. Linked from footer (`SITE` array), `/about`, `/editorial-policy`; added to `sitemap.ts` STATIC_ROUTES (priority 0.4).
+- `getDatasetStats` counts: `universities` (published + `country.is_launched`) ~56, `deadlines` ~221, `scholarships` (published) ~27, `visa_subclasses` (published) 12.
+
+**Phase 3 is now complete.** Remaining site work is off-page SEO (Section 25 tail) plus the deferred program-page rebuild (Section 25, "Program pages" note).
