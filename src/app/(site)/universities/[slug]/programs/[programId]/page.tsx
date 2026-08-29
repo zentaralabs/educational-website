@@ -94,6 +94,13 @@ export default async function ProgramDetailPage({
 
   const hasDescription = Boolean(program.description?.trim());
 
+  // English scores: take IELTS/PTE as a whole set from the program when it
+  // sets its own overall (its per-skill bands may be null, and are then just
+  // omitted), otherwise from the university. Never mix a program's overall
+  // with the university's bands.
+  const ielts = program.ielts_overall != null ? program : university;
+  const pte = program.pte_overall != null ? program : university;
+
   const hasStructuredEnglishScore = Boolean(
     (program.ielts_overall ?? university.ielts_overall) ||
       (program.pte_overall ?? university.pte_overall),
@@ -192,16 +199,16 @@ export default async function ProgramDetailPage({
             tuitionInternational={program.tuition_international ?? university.tuition_international}
             applicationFee={university.application_fee}
             currency={program.currency ?? university.currency}
-            ieltsOverall={program.ielts_overall ?? university.ielts_overall}
-            ieltsListening={program.ielts_listening ?? university.ielts_listening}
-            ieltsReading={program.ielts_reading ?? university.ielts_reading}
-            ieltsWriting={program.ielts_writing ?? university.ielts_writing}
-            ieltsSpeaking={program.ielts_speaking ?? university.ielts_speaking}
-            pteOverall={program.pte_overall ?? university.pte_overall}
-            pteListening={program.pte_listening ?? university.pte_listening}
-            pteReading={program.pte_reading ?? university.pte_reading}
-            pteWriting={program.pte_writing ?? university.pte_writing}
-            pteSpeaking={program.pte_speaking ?? university.pte_speaking}
+            ieltsOverall={ielts.ielts_overall}
+            ieltsListening={ielts.ielts_listening}
+            ieltsReading={ielts.ielts_reading}
+            ieltsWriting={ielts.ielts_writing}
+            ieltsSpeaking={ielts.ielts_speaking}
+            pteOverall={pte.pte_overall}
+            pteListening={pte.pte_listening}
+            pteReading={pte.pte_reading}
+            pteWriting={pte.pte_writing}
+            pteSpeaking={pte.pte_speaking}
           />
         </div>
       </div>
