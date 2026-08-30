@@ -662,6 +662,38 @@ If your personal circumstances are complex (a prior visa refusal, an unusual stu
     ],
   },
   {
+    slug: "australia-student-visa-fee-increase-2026",
+    title:
+      "Australia's Student Visa Fee Jumped 25 Percent on 1 July 2026. Here's What Changed",
+    published_at: "2026-07-02",
+    tags: ["visas", "australia", "fees"],
+    excerpt:
+      "The subclass 500 student visa application charge rose from AUD $2,000 to AUD $2,500, with a separate lower tier for ELICOS and non-award applicants.",
+    content: `From 1 July 2026, the standard Student visa (subclass 500) application charge for the primary applicant rose from AUD $2,000 to AUD $2,500, a 25 percent increase. If you've already looked into applying to an Australian university this year, this is one of the first cost lines you'll hit, well before tuition, and it applies regardless of which university or course you're applying for.
+
+## What actually changed
+
+The increase applies strictly to applications lodged on or after 1 July 2026. If you submitted your visa application before that date, you're assessed under the previous $2,000 fee, even if a decision on your application is still pending. There's no retroactive charge for applications already in the system.
+
+A separate, lower fee tier of AUD $2,050 was introduced specifically for standalone English Language Intensive Courses for Overseas Students (ELICOS) and non-award course applicants, meaning students applying for a pathway English course rather than a full degree program pay a smaller amount than degree-seeking applicants. Concessional rates continue to apply for applicants from Pacific nations and Timor-Leste.
+
+## It's separate from your financial capacity requirement
+
+This fee shouldn't be confused with the financial capacity requirement, the amount you need to demonstrate access to in order to prove you can support yourself while studying, which sits at AUD $29,710 annually as of this update. The visa application charge is a one-time payment made at the point of lodging your application; the financial capacity figure is evidence you provide, not a fee you pay directly to the Department of Home Affairs.
+
+## Why this matters if you're comparing course offers
+
+Application-stage costs like this one rarely show up on a university's own fee comparison pages, since visa charges are a government fee rather than a university one. If you're weighing offers from multiple Australian universities and building out a real total cost of attendance, this is a fixed cost that applies no matter which institution you choose, so it won't change your comparison between schools, but it does change the baseline number every applicant should be budgeting from before tuition is even added.
+
+## What hasn't changed
+
+The National Planning Level, the government's cap on new international student commencements, remains set at 295,000 for 2027, unchanged from the 2026 figure. The government has confirmed that no currently approved education provider will see its own allocation reduced heading into 2027, so most applicants shouldn't expect a meaningfully different admissions experience at the institutional level this cycle, even with the higher visa cost.`,
+    sources: [
+      "https://www.studyaustralia.gov.au/en/tools-and-resources/news/student-visa-application-charge-increase",
+      "https://www.idp.com/australia/study-to-migrate/australian-visa-fee-increases/",
+    ],
+  },
+  {
     slug: "ministerial-direction-119-skilled-visa-priorities",
     title: "Ministerial Direction 119: how skilled visa processing is now ranked",
     published_at: "2026-08-30",
