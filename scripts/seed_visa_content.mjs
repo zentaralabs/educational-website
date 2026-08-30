@@ -253,6 +253,37 @@ Yes, if your case is genuine and well prepared. The tightening is aimed at weak 
     ],
   },
   {
+    slug: "genuine-student-test-explained",
+    title:
+      "What the Genuine Student Test Actually Asks (and How It's Different From the Old GTE Rule)",
+    published_at: "2026-08-15",
+    tags: ["visas", "australia", "applications"],
+    excerpt:
+      "Australia replaced the Genuine Temporary Entrant requirement with a Genuine Student test in 2024. Two years on, plenty of applicants are still confused about what actually changed.",
+    content: `For any application lodged on or after 23 March 2024, Australian student visa applicants are assessed against a Genuine Student (GS) requirement rather than the older Genuine Temporary Entrant (GTE) test it replaced. It's still a common source of confusion for applicants researching visa requirements, since a lot of older guidance and forum advice online still references the GTE rule by name.
+
+## The core shift: intent to study, not intent to leave
+
+The old GTE requirement centered on proving you intended to return to your home country after your studies, which put applicants in the awkward position of having to argue against their own long-term ambitions if they hoped to eventually work or settle in Australia. The GS requirement drops that framing. It asks applicants to demonstrate that their primary purpose for the visa is genuine study, while explicitly acknowledging that a genuine student may reasonably pursue post-study work rights or a migration pathway afterward, as long as study remains the immediate, real goal of the visa.
+
+## What the actual statement looks like
+
+Rather than the single free-text GTE statement, applicants now answer four questions built into the form, each capped at 150 words (a fifth question applies to some applicants who have already held a student visa or are applying onshore from another visa). The four cover your current circumstances and ties to your home country, why you chose this course and this provider and how it fits your goals, how completing the course will benefit you, and any other context you want to add.
+
+The word limit is worth taking seriously. Going over it, or writing vaguely to fill the space, tends to produce weaker responses than a tightly written answer that directly addresses what's being asked. Immigration case officers reviewing large volumes of applications respond better to specific, concrete answers than to broad statements of intent.
+
+## Why this matters even if you think it doesn't apply to you
+
+Some applicants assume the GS requirement is a formality that mainly affects borderline cases. In practice, every subclass 500 applicant is assessed against it, and a weak or generic GS statement can be flagged for further review even when the rest of an application, academic record, financial evidence, English test scores, is strong. Treating the four questions as a genuine writing task rather than a checkbox exercise is worth the extra time it takes.
+
+## A practical note on getting help
+
+If your personal circumstances are complex (a prior visa refusal, an unusual study gap, or a course choice that doesn't obviously build on your previous study history) it's reasonable to get help preparing a GS statement from a registered migration agent rather than relying on generic templates found online, since case officers are specifically trained to notice statements that read as templated rather than personal.`,
+    sources: [
+      "https://www.mondaq.com/australia/general-immigration/1450726/genuine-temporary-entrant-gte-student-visa-requirement-replaced-with-genuine-student-gs",
+    ],
+  },
+  {
     slug: "ministerial-direction-119-skilled-visa-priorities",
     title: "Ministerial Direction 119: how skilled visa processing is now ranked",
     published_at: "2026-08-30",
