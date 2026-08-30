@@ -31,7 +31,17 @@ export function datasetJsonLd(opts: {
     ...(opts.variableMeasured
       ? { variableMeasured: opts.variableMeasured }
       : {}),
-    spatialCoverage: { "@type": "Country", name: "Australia" },
+    spatialCoverage: {
+      "@type": "Place",
+      name: "Australia",
+      geo: {
+        "@type": "GeoShape",
+        // Approximate bounding box of the Australian mainland and Tasmania
+        // (south, west, north, east). Google's Dataset docs recommend a Place
+        // with geo over a bare Country for spatialCoverage.
+        box: "-43.64 113.15 -10.69 153.64",
+      },
+    },
     creativeWorkStatus: "Published",
   };
 }
