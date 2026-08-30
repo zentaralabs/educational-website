@@ -335,6 +335,91 @@ For the [485 graduate visa](/visas/temporary-graduate-485) you must meet the Aus
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189/points-tested",
     ],
   },
+  {
+    slug: "studying-in-australia-without-ielts",
+    title: "Studying in Australia without IELTS: what actually works",
+    category: "country-guide",
+    country: "AU",
+    excerpt:
+      "You cannot skip the English requirement, but IELTS is not the only way to meet it. The routes that work: another approved test, the passport and prior-study exemptions, a university medium of instruction waiver, and packaging an English course.",
+    content: `"Studying in Australia without IELTS" almost never means without any English requirement. It means one of four things: a different test, a visa exemption, a university waiver, or a packaged English course. Which one applies to you depends on your passport, your previous study, and the university you are applying to.
+
+## Two gates, set separately
+
+- **The [student visa (subclass 500)](/visas/student-500)** has its own English requirement in the Migration Regulations. You meet it with an approved test score, a listed exemption, or by packaging an English course with your degree.
+- **Your university** sets its own English entry level on your offer letter. This is where medium of instruction waivers live.
+
+Clearing one gate does not clear the other. You can meet a university's requirement through a waiver and still owe the visa a test result, and the reverse also happens.
+
+## Route 1: take a different test
+
+IELTS is one of several tests the Department of Home Affairs accepts. Following the August 2025 update the list also includes PTE Academic, TOEFL iBT, Cambridge C1 Advanced, OET for health courses, LanguageCert Academic, and others. Most students who say they are avoiding IELTS simply sit [PTE instead](/guides/ielts-vs-pte-for-australian-university-admission), which is computer marked and often faster to book and to get a result.
+
+Two catches. Fully online or at home versions such as IELTS Online, TOEFL iBT Home Edition and OET@Home are not accepted for the visa. And from 21 January 2026, TOEFL iBT candidates must select "Taking TOEFL for Australia" when they register, or the result is not valid for a visa.
+
+## Route 2: the visa exemptions
+
+You do not need to provide any English test score with your student visa application if one of these applies:
+
+- You are a citizen and hold a passport from the UK, USA, Canada, New Zealand, or the Republic of Ireland.
+- You have completed at least five years of study, taught in English, in Australia, the UK, USA, Canada, New Zealand, South Africa, or the Republic of Ireland.
+- In the two years before applying, while you held a student visa, you completed an Australian Senior Secondary Certificate of Education in English, or a substantial part of a course at Certificate IV level or higher.
+- Your principal course is a standalone ELICOS course, a registered school course, a registered postgraduate research course, or a course delivered in a language other than English.
+- You are a Foreign Affairs or Defence sponsored student, or a secondary exchange student.
+
+The full list is in the Migration (English Language Tests and Evidence Exemptions for Subclass 500 (Student) Visas) Instrument 2025.
+
+Note what is not on this list. A bachelor's degree taught in English in India, Nepal, the Philippines, Nigeria, or anywhere outside those seven countries does not, by itself, exempt you at the visa level. That kind of medium of instruction evidence is a university admission tool, not a visa exemption.
+
+## Route 3: the university's medium of instruction waiver
+
+Many Australian universities will waive their own English test requirement if your previous qualification was taught and assessed entirely in English. What they accept varies widely:
+
+- Some accept a degree from any recognised English medium institution.
+- Some only accept it from specified countries, or only if the degree was completed recently, often within two to five years.
+- Some require a formal medium of instruction letter from your previous institution.
+- Some run their own internal English test instead of accepting a waiver.
+
+This waiver removes the university's requirement only. To satisfy the visa you still need a listed exemption or an approved test score. Confirm both with the admissions team before you assume you are clear.
+
+## Route 4: package an English course
+
+If your English is below the direct entry level, you can be admitted with an ELICOS course before your main degree, on a single student visa. This is course packaging. The ELICOS course brings your English up, issues the internal result the university needs, and lowers the test score the visa requires.
+
+As a guide, since the 2024 increase the student visa needs around IELTS 6.0 overall for direct entry, or roughly 5.0 to 5.5 if you package an ELICOS course, with the exact figure depending on the length of the ELICOS course. Check the current figure before you rely on it, because these were raised once already. If you do sit a test, [these universities accept IELTS 6.0 or PTE 50](/best/australian-universities-accepting-ielts-6-0-for-international-students) for general entry. The trade off with an ELICOS course is cost and time: a term of ELICOS is a real expense and adds months before your degree starts.
+
+## The Genuine Student angle
+
+Weak English alongside a demanding degree taught in English is something a case officer notices. If you are getting in on a low score or a borderline waiver, your [Genuine Student answers](/guides/genuine-student-requirement-how-to-write-your-statement) and your course choice need to be strong enough that the application does not look like a stretch. This matters more now that [refusal rates are high](/blog/student-visa-refusal-rate-20-year-high-2026).
+
+## How to work out your route
+
+1. Check the visa exemptions first. If your passport or prior study covers you, you may need no test at all.
+2. If not, choose between an approved test, where PTE is the usual IELTS alternative, and packaging an ELICOS course.
+3. Separately, ask the university whether it grants a medium of instruction waiver and on what terms.
+4. Do not assume that clearing one gate clears the other.
+
+## Can I get an Australian student visa without IELTS?
+
+Yes, but not without meeting the English requirement another way. You can use an approved test such as PTE Academic or TOEFL iBT, qualify for a visa exemption such as a UK, US, Canadian, New Zealand or Irish passport or five years of study in English in one of a short list of countries, or package an ELICOS English course with your degree.
+
+## Does an English-medium bachelor's degree exempt me from the student visa English requirement?
+
+Not on its own, unless the study was done in Australia, the UK, USA, Canada, New Zealand, South Africa, or the Republic of Ireland. A degree taught in English elsewhere can support a university medium of instruction waiver, but the visa has its own separate exemption list.
+
+## Which universities in Australia accept students without IELTS?
+
+Many will waive their own English test for applicants with an English medium qualification, but the terms differ by university and often by your country and how recent the degree is. Check directly with the admissions team, and confirm separately how you will meet the visa requirement.
+
+## Is PTE easier than IELTS for an Australian student visa?
+
+Neither is easier in itself. PTE is computer marked with faster results and no human interviewer, which some people prefer. Home Affairs and the universities accept both. See the [IELTS vs PTE guide](/guides/ielts-vs-pte-for-australian-university-admission).`,
+    sources: [
+      "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
+      "https://www.studyaustralia.gov.au/en/plan-your-move/your-guide-to-visas/student-visa-subclass-500",
+      "https://immi.homeaffairs.gov.au/help-support/meeting-our-requirements/english-language/competent-english",
+    ],
+  },
 ];
 
 // ---------------------------------------------------------------------------
