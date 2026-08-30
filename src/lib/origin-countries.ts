@@ -462,6 +462,127 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     ],
     lastVerified: "2026-08-29",
   },
+
+  indonesia: {
+    slug: "indonesia",
+    code: "ID",
+    name: "Indonesia",
+    demonym: "Indonesian",
+    intro: [
+      "Indonesian students can study at any Australian university, and Indonesia is one of Australia's closest large source countries. A first year costs roughly AUD 40,000 to 75,000 all in, and the visa is the subclass 500. Indonesia moved to student-visa Evidence Level 2 in early 2026 after a spell at Level 1, so financial evidence and an English test result are now expected in most applications.",
+      "Not much is unusual for Indonesian applicants. The main points are how universities treat the SMA certificate and the S1 degree, English evidence, and whether your funding is personal savings or a scholarship such as LPDP.",
+    ],
+    applying: [
+      "Apply through the university's international portal or an authorised agent. Direct application is available at most universities for Indonesian citizens, and agents are widely used for the offer, deposit, and visa steps.",
+      "Have legalised copies of your ijazah and transcript ready, with certified English translations. Universities may ask for verification through the awarding institution.",
+      "Most universities run February and July intakes and assess on a rolling basis. Apply two to three months ahead. Use the universities directory to shortlist and the deadline calendar for the recommended dates.",
+    ],
+    visaNote: [
+      "Indonesia is at student-visa Evidence Level 2, having moved up from Level 1 in early 2026. Be ready to show, upfront, funds for tuition, travel, and 12 months of living costs, a valid English test result, and a Genuine Student statement that case officers will read closely. This is more than Level 1 asked for, but still lighter than for the Evidence Level 3 countries.",
+      "Where Indonesian applications run into trouble it is usually over source of funds, sponsorship letters without matching bank evidence, or a study plan that does not follow from previous study or work. A documented savings history, or a clear scholarship award letter, addresses most of it.",
+    ],
+    credentials: [
+      "For undergraduate entry, universities take the SMA or MA certificate, often with a foundation year or a completed first year of an Indonesian S1 degree for direct entry. The four-year S1 (sarjana) is accepted for direct entry to Australian master's programs.",
+      "Universities publish Indonesia-specific entry tables. Confirm the IPK on the 4-point scale that your course requires.",
+      "English is shown with IELTS, PTE, or TOEFL. Most universities want 6.5 overall for a master's, and the student visa has its own lower floor. Confirm both.",
+    ],
+    popularFields: [
+      "Business, management, and accounting",
+      "Engineering",
+      "Information technology",
+      "Environmental science and sustainability",
+      "Public policy and development",
+    ],
+    faq: [
+      {
+        q: "What is Indonesia's assessment level for the Australian student visa?",
+        a: "Indonesia is at Evidence Level 2, having moved up from Level 1 in early 2026. Financial evidence and an English test result are now expected in most applications, and Genuine Student statements are read closely. Levels are reviewed, so check the current position when you apply.",
+      },
+      {
+        q: "Is an Indonesian S1 degree accepted in Australia?",
+        a: "Yes, a four-year S1 (sarjana) is accepted for direct entry to most Australian master's programs. Universities publish Indonesia-specific entry tables mapping your IPK on the 4-point scale to their requirement. Competitive courses want a higher IPK.",
+      },
+      {
+        q: "How much does it cost to study in Australia from Indonesia?",
+        a: "Budget AUD 40,000 to 75,000 for the first year: roughly AUD 30,000 to 50,000 tuition, about AUD 30,000 living costs, the AUD 2,500 visa, health cover, and flights. Regional universities and smaller cities are cheaper.",
+      },
+      {
+        q: "Can I use an LPDP scholarship to study in Australia?",
+        a: "Yes. LPDP is one of the main funding routes for Indonesian postgraduate students in Australia. You still apply to the university and for the student visa yourself, and the award letter serves as your evidence of funds. Check that your course and university are on the LPDP list.",
+      },
+      {
+        q: "Can I get PR in Australia after studying from Indonesia?",
+        a: "It is a common pathway, not automatic. After graduating, most students move to a Temporary Graduate visa (subclass 485), gain skilled work experience, and then apply for a points-tested visa. Your occupation and points decide the outcome.",
+      },
+    ],
+    sources: [
+      "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
+      "https://immi.homeaffairs.gov.au/news-media/archive/article?itemId=1196",
+      "https://www.studyaustralia.gov.au/",
+    ],
+    lastVerified: "2026-08-30",
+  },
+
+  philippines: {
+    slug: "philippines",
+    code: "PH",
+    name: "Philippines",
+    demonym: "Filipino",
+    intro: [
+      "Filipino students can study at any Australian university, and the Philippines is a fast-growing source of students, especially in nursing and health. A first year costs roughly AUD 40,000 to 75,000 all in, and the visa is the subclass 500. The Philippines is at student-visa Evidence Level 3, the highest tier, so the financial and document checks are thorough.",
+      "The parts specific to the Philippines are the higher visa scrutiny, how universities read a Philippine bachelor's degree now that the country has 12 years of schooling, English evidence, and the separate registration step if you plan to work as a nurse.",
+    ],
+    applying: [
+      "Apply through the university's international portal or an authorised agent. Direct application is available at most universities for Filipino citizens, and agents are widely used for the offer, deposit, and visa steps.",
+      "Have certified true copies of your transcript of records and diploma ready, and expect universities to verify them through the Philippine institution or CHED. Apply three to four months ahead, since Evidence Level 3 processing runs longer.",
+      "Most universities run February and July intakes and assess on a rolling basis. Use the universities directory to shortlist and the deadline calendar for the recommended dates.",
+    ],
+    visaNote: [
+      "The Philippines is at student-visa Evidence Level 3, the highest tier. You need to provide, upfront, several months of genuine bank statements, a documented source of funds, and authenticated academic records, and processing is slower. Be ready to satisfy the Genuine Student requirement with a study plan that fits your background.",
+      "Where Filipino applications run into trouble it is usually over funds that appear shortly before applying, sponsor income that is hard to document, or a course that does not follow on from previous study or work. A genuine savings history that predates your decision to study abroad is the strongest signal.",
+    ],
+    credentials: [
+      "The Philippines now has 12 years of schooling under K-12, so a Philippine Grade 12 result is used for undergraduate entry, often with a foundation year. A four-year Philippine bachelor's degree is generally accepted for direct entry to Australian master's programs; older four-year degrees built on 10 years of schooling can be treated as needing a bridging qualification, so confirm with the university.",
+      "Universities publish Philippines-specific entry tables. Confirm the GPA or weighted average your course requires and how it reads your grading scale.",
+      "Most Philippine degrees are taught in English, and many universities accept that for admission. The student visa has its own English rule, and health courses set a higher bar, so confirm both. IELTS and PTE are the usual tests.",
+    ],
+    popularFields: [
+      "Nursing and health sciences",
+      "Information technology",
+      "Accounting and business",
+      "Engineering",
+      "Education and teaching",
+    ],
+    faq: [
+      {
+        q: "What is the Philippines' assessment level for the Australian student visa?",
+        a: "The Philippines is at Evidence Level 3, the highest tier. You must supply several months of bank statements, a documented source of funds, and authenticated academic records upfront, and processing is slower. Levels are reviewed, so check the current position when you apply.",
+      },
+      {
+        q: "Is a 4-year Philippine bachelor's degree accepted in Australia?",
+        a: "Usually yes, for direct entry to Australian master's programs. Universities publish Philippines-specific entry tables mapping your GPA to their requirement. Older degrees built on 10 years of schooling can need a bridging qualification, so confirm with the university.",
+      },
+      {
+        q: "How much does it cost to study in Australia from the Philippines?",
+        a: "Budget AUD 40,000 to 75,000 for the first year: roughly AUD 30,000 to 50,000 tuition, about AUD 30,000 living costs, the AUD 2,500 visa, health cover, and flights. Regional universities and smaller cities are cheaper.",
+      },
+      {
+        q: "Can I work as a nurse in Australia after studying from the Philippines?",
+        a: "Studying nursing and being registered to practise are two steps. After a recognised Australian nursing qualification you apply to the Nursing and Midwifery Board through AHPRA; Philippine-trained nurses who have not studied in Australia usually go through the Board's outcomes-based assessment instead. Nursing courses also require a higher English score, commonly IELTS 7.0.",
+      },
+      {
+        q: "Can I get PR in Australia after studying from the Philippines?",
+        a: "It is a common pathway, not automatic. After graduating, most students move to a Temporary Graduate visa (subclass 485), gain skilled work experience, and then apply for a points-tested visa. Your occupation and points decide the outcome.",
+      },
+    ],
+    sources: [
+      "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
+      "https://immi.homeaffairs.gov.au/news-media/archive/article?itemId=1196",
+      "https://www.studyaustralia.gov.au/",
+      "https://www.ahpra.gov.au/",
+    ],
+    lastVerified: "2026-08-30",
+  },
 };
 
 export function getOriginCountry(slug: string): OriginCountry | undefined {
