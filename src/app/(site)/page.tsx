@@ -1,12 +1,15 @@
 import Link from "next/link";
 import { Collapsible } from "@/components/site/Collapsible";
+import { PostCard } from "@/components/site/PostCard";
 import { SearchBar } from "@/components/site/SearchBar";
 import { StudentTypeToggle } from "@/components/site/StudentTypeToggle";
 import { WhyTrust } from "@/components/site/WhyTrust";
 import { deadlineBadgeStatus } from "@/lib/deadline-status";
 import { formatCurrency } from "@/lib/format";
+import { listRecentBlogPosts } from "@/lib/queries/public-blog-posts";
 import { listPublicCountries } from "@/lib/queries/public-countries";
 import { listUpcomingDeadlines } from "@/lib/queries/public-deadlines";
+import { listRecentGuides } from "@/lib/queries/public-guides";
 import { getHomepageStats } from "@/lib/queries/public-stats";
 import { listFeaturedUniversities } from "@/lib/queries/public-universities";
 import { flagEmoji } from "@/lib/flag";
@@ -117,12 +120,15 @@ const POPULAR = [
 ];
 
 export default async function Home() {
-  const [stats, countries, featured, upcoming] = await Promise.all([
-    getHomepageStats(),
-    listPublicCountries(),
-    listFeaturedUniversities(6),
-    listUpcomingDeadlines(6),
-  ]);
+  const [stats, countries, featured, upcoming, recentGuides, recentPosts] =
+    await Promise.all([
+      getHomepageStats(),
+      listPublicCountries(),
+      listFeaturedUniversities(6),
+      listUpcomingDeadlines(6),
+      listRecentGuides(4),
+      listRecentBlogPosts(4),
+    ]);
 
   return (
     <main className="w-full">
@@ -362,6 +368,72 @@ export default async function Home() {
                 </li>
               ))}
             </ul>
+          </section>
+        )}
+
+        {(recentGuides.length > 0 || recentPosts.length > 0) && (
+          <section className="scroll-reveal mt-10 grid gap-8 sm:grid-cols-2">
+            {recentGuides.length > 0 && (
+              <div>
+                <div className="mb-4 flex items-baseline justify-between gap-3">
+                  <h2 className="font-display text-xl font-semibold text-ink">
+                    From the guides
+                  </h2>
+                  <Link
+                    href="/guides"
+                    className="font-body text-sm font-medium text-status-open underline underline-offset-2"
+                  >
+                    All guides
+                  </Link>
+                </div>
+                <div className="flex flex-col gap-3">
+                  {recentGuides.map((g) => (
+                    <PostCard
+                      key={g.slug}
+                      href={`/guides/${g.slug}`}
+                      eyebrow={g.country ? g.country.name : undefined}
+                      title={g.title}
+                      excerpt={g.excerpt}
+                    />
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {recentPosts.length > 0 && (
+              <div>
+                <div className="mb-4 flex items-baseline justify-between gap-3">
+                  <h2 className="font-display text-xl font-semibold text-ink">
+                    Latest updates
+                  </h2>
+                  <Link
+                    href="/blog"
+                    className="font-body text-sm font-medium text-status-open underline underline-offset-2"
+                  >
+                    All posts
+                  </Link>
+                </div>
+                <div className="flex flex-col gap-3">
+                  {recentPosts.map((p) => (
+                    <PostCard
+                      key={p.slug}
+                      href={`/blog/${p.slug}`}
+                      eyebrow={
+                        p.published_at
+                          ? new Date(p.published_at).toLocaleDateString("en-AU", {
+                              day: "numeric",
+                              month: "short",
+                              year: "numeric",
+                            })
+                          : undefined
+                      }
+                      title={p.title}
+                      excerpt={p.excerpt}
+                    />
+                  ))}
+                </div>
+              </div>
+            )}
           </section>
         )}
 

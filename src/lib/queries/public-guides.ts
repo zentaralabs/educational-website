@@ -39,6 +39,34 @@ export async function listPublishedGuides(opts: {
     }));
 }
 
+/**
+ * The most recently added guides, newest first — for the "recent guides"
+ * module on the homepage. Same country-launch filtering as
+ * listPublishedGuides; `comparison` guides are excluded (they live under
+ * /best, not /guides).
+ */
+export async function listRecentGuides(limit = 4): Promise<PublicGuideListRow[]> {
+  const supabase = createPublicClient(["guides:list"]);
+  const { data, error } = await supabase
+    .from("guides")
+    .select("slug, title, category, excerpt, country:countries(code, name, is_launched)")
+    .eq("status", "published")
+    .neq("category", "comparison")
+    .order("created_at", { ascending: false })
+    .limit(limit + 4);
+  if (error) throw error;
+  const rows = (data ?? []) as unknown as (PublicGuideListRow & {
+    country: (PublicGuideListRow["country"] & { is_launched: boolean }) | null;
+  })[];
+  return rows
+    .filter((g) => !g.country || g.country.is_launched)
+    .slice(0, limit)
+    .map(({ country, ...g }) => ({
+      ...g,
+      country: country ? { code: country.code, name: country.name } : null,
+    }));
+}
+
 export async function listPublishedGuideSlugs(opts: {
   category?: string;
   excludeCategory?: string;
