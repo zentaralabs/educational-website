@@ -1,4 +1,6 @@
+import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { QuizForm } from "@/components/site/QuizForm";
+import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import { listQuizOptions } from "@/lib/queries/public-quiz";
 
 export const revalidate = 3600;
@@ -13,8 +15,16 @@ export const metadata = {
 export default async function QuizPage() {
   const { degreeLevels, subjects, cities } = await listQuizOptions();
 
+  const breadcrumbs = [{ label: "Home", href: "/" }, { label: "University quiz" }];
+
   return (
     <main className="mx-auto w-full max-w-2xl px-6 pt-8 pb-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd(breadcrumbs)) }}
+      />
+      <Breadcrumbs items={breadcrumbs} />
+
       <h1 className="font-display text-3xl font-semibold text-ink text-balance">
         Find the right university for me
       </h1>

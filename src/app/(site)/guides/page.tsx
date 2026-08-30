@@ -1,7 +1,10 @@
 import Link from "next/link";
+import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { ArrowUpRightIcon } from "@/components/site/icons";
 import { GuidesBrowser } from "@/components/site/GuidesBrowser";
+import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import { GUIDE_CATEGORY_LABELS } from "@/lib/guide-categories";
+import { itemListJsonLd } from "@/lib/itemlist-jsonld";
 import { listPublishedGuides } from "@/lib/queries/public-guides";
 
 export const revalidate = 3600;
@@ -35,10 +38,32 @@ export default async function GuidesIndexPage() {
     blurb: CATEGORY_BLURB[key],
   }));
 
+  const breadcrumbs = [{ label: "Home", href: "/" }, { label: "Guides" }];
+
   return (
     <main className="mx-auto w-full max-w-3xl px-6 pt-8 pb-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd(breadcrumbs)) }}
+      />
+      {guides.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              itemListJsonLd({
+                name: "Application guides for international students applying to Australia",
+                items: guides.map((g) => ({ path: `/guides/${g.slug}`, name: g.title })),
+              }),
+            ),
+          }}
+        />
+      )}
+
+      <Breadcrumbs items={breadcrumbs} />
+
       <h1 className="font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
-        Guides
+        Application guides for studying in Australia
       </h1>
       <p className="mt-2 max-w-2xl font-body text-base text-slate">
         Personal statements, letters of recommendation, transfers, financial aid,

@@ -47,6 +47,30 @@ Redirects · Canonical/sitemap/metadata changes · Testing done.**
 - **Testing:** `tsc --noEmit` clean. In-browser check needs a logged-in admin
   (panel is auth-gated) — pending.
 
+## 2026-08-30 · List/hub pages: titles, H1s, breadcrumbs, ItemList schema
+
+- **Change:** Filled the schema + heading gaps on the six listing/hub pages
+  that previously had only `Organization` schema and (some) generic titles.
+  New `src/lib/itemlist-jsonld.ts` helper.
+
+  | Page | Title | H1 | Schema added |
+  |---|---|---|---|
+  | `/blog` | "Blog" → "Study in Australia Blog: Visa, Fee & Admissions News" | "The blog" → "Study in Australia: news and analysis" | BreadcrumbList + ItemList (page 1, unfiltered only) |
+  | `/guides` | unchanged | "Guides" → "Application guides for studying in Australia" | BreadcrumbList + ItemList |
+  | `/scholarships` | unchanged | unchanged | BreadcrumbList + ItemList (unfiltered only) |
+  | `/visas` | unchanged | "Australian visa subclasses" → "Australian student and skilled visa subclasses" | BreadcrumbList + ItemList of the 12 subclasses |
+  | `/about` | "About" → "About Where To Apply" (absolute, no template) | "About" → "About Where To Apply" | BreadcrumbList |
+  | `/quiz` | unchanged | unchanged | BreadcrumbList |
+
+  All six now also render a visible `<Breadcrumbs>` trail (they had none).
+- **Affected routes:** the six above. No URL, canonical, or sitemap change.
+- **SEO impact:** LOW-risk, upside-only. Titles/H1s are content changes on
+  already-indexed pages (Google re-reads on next crawl); ItemList/Breadcrumb
+  give answer engines a machine-readable index of each hub.
+- **Testing:** `tsc --noEmit` + `next build` clean. Rendered-HTML check
+  confirms new titles/H1s and `BreadcrumbList` + `ItemList(n)` on each
+  (blog 9, guides 17, scholarships 28, visas 12).
+
 ## 2026-08-30 · Program-page quality audit + sitemap query fix
 
 ### Audit findings (no indexation change needed)

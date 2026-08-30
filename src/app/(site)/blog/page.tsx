@@ -1,6 +1,9 @@
 import Link from "next/link";
+import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { BlogCard } from "@/components/site/BlogCard";
 import { RssIcon } from "@/components/site/icons";
+import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
+import { itemListJsonLd } from "@/lib/itemlist-jsonld";
 import {
   listPublishedBlogPosts,
   listPublishedBlogTags,
@@ -10,9 +13,9 @@ import { readingMinutesFromWords } from "@/lib/reading";
 export const revalidate = 3600;
 
 export const metadata = {
-  title: "Blog",
+  title: "Study in Australia Blog: Visa, Fee & Admissions News",
   description:
-    "Timely posts on deadline changes, policy updates, and application news, the fast-moving counterpart to our evergreen guides.",
+    "News and analysis for international students bound for Australia: student visa changes, fee and deadline updates, and policy shifts, with every claim dated and sourced.",
   alternates: {
     canonical: "/blog",
     types: { "application/rss+xml": "/blog/feed.xml" },
@@ -56,10 +59,33 @@ export default async function BlogIndexPage({
   const featured = showFeatured ? rows[0] : null;
   const gridPosts = showFeatured ? rows.slice(1) : rows;
 
+  const breadcrumbs = [{ label: "Home", href: "/" }, { label: "Blog" }];
+  const showListSchema = page === 1 && !tag && rows.length > 0;
+
   return (
     <main className="mx-auto w-full max-w-4xl px-6 pt-8 pb-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd(breadcrumbs)) }}
+      />
+      {showListSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              itemListJsonLd({
+                name: "Study in Australia: news and analysis",
+                items: rows.map((p) => ({ path: `/blog/${p.slug}`, name: p.title })),
+              }),
+            ),
+          }}
+        />
+      )}
+
+      <Breadcrumbs items={breadcrumbs} />
+
       <h1 className="font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
-        The blog
+        Study in Australia: news and analysis
       </h1>
       <p className="mt-2 max-w-2xl font-body text-base text-slate">
         Deadline changes, policy shifts, and application news as they happen.

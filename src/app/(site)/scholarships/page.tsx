@@ -1,5 +1,8 @@
 import Link from "next/link";
+import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { ArrowUpRightIcon } from "@/components/site/icons";
+import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
+import { itemListJsonLd } from "@/lib/itemlist-jsonld";
 import {
   listPublishedScholarships,
   listScholarshipStudyLevels,
@@ -37,8 +40,33 @@ export default async function ScholarshipsIndexPage({
   }
   const scopes = SCHOLARSHIP_SCOPE_ORDER.filter((s) => byScope.has(s));
 
+  const breadcrumbs = [{ label: "Home", href: "/" }, { label: "Scholarships" }];
+
   return (
     <main className="mx-auto w-full max-w-3xl px-6 pt-8 pb-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd(breadcrumbs)) }}
+      />
+      {scholarships.length > 0 && !level && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              itemListJsonLd({
+                name: "Scholarships for international students in Australia",
+                items: scholarships.map((s) => ({
+                  path: `/scholarships/${s.slug}`,
+                  name: s.name,
+                })),
+              }),
+            ),
+          }}
+        />
+      )}
+
+      <Breadcrumbs items={breadcrumbs} />
+
       <h1 className="font-display text-3xl font-semibold text-ink text-balance">
         Scholarships for studying in Australia
       </h1>

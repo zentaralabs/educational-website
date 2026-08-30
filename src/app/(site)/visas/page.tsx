@@ -1,6 +1,9 @@
 import Link from "next/link";
+import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { ArrowUpRightIcon } from "@/components/site/icons";
 import { VisasBrowser } from "@/components/site/VisasBrowser";
+import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
+import { itemListJsonLd } from "@/lib/itemlist-jsonld";
 import { listPublishedVisas } from "@/lib/queries/public-visas";
 import { VISA_CATEGORY_LABELS, VISA_CATEGORY_ORDER } from "@/lib/visa-categories";
 
@@ -22,10 +25,32 @@ export default async function VisasIndexPage() {
     ...[...presentCategories].filter((c) => !VISA_CATEGORY_ORDER.includes(c)),
   ].map((key) => ({ key, label: VISA_CATEGORY_LABELS[key] ?? key }));
 
+  const breadcrumbs = [{ label: "Home", href: "/" }, { label: "Visas" }];
+
   return (
     <main className="mx-auto w-full max-w-3xl px-6 pt-8 pb-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd(breadcrumbs)) }}
+      />
+      {visas.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              itemListJsonLd({
+                name: "Australian student, graduate, and skilled visa subclasses",
+                items: visas.map((v) => ({ path: `/visas/${v.slug}`, name: v.name })),
+              }),
+            ),
+          }}
+        />
+      )}
+
+      <Breadcrumbs items={breadcrumbs} />
+
       <h1 className="font-display text-3xl font-semibold text-ink text-balance">
-        Australian visa subclasses
+        Australian student and skilled visa subclasses
       </h1>
       <p className="mt-2 font-body text-base text-slate">
         What each subclass is for, who qualifies, what it costs, and whether it
