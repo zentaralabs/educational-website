@@ -583,6 +583,606 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     ],
     lastVerified: "2026-08-30",
   },
+
+  thailand: {
+    slug: "thailand",
+    code: "TH",
+    name: "Thailand",
+    demonym: "Thai",
+    intro: [
+      "Thai students can study at any Australian university. A first year costs roughly AUD 40,000 to 75,000 all in, and the visa is the subclass 500. Thailand sits at the lower end of the student-visa evidence scale, so the upfront financial and English documentation is lighter than for the higher-scrutiny markets.",
+      "Not much is unusual for Thai applicants. The main points are how universities read the Mathayom 6 certificate and a Thai bachelor's degree, English evidence, and choosing between applying directly or through an agent.",
+    ],
+    applying: [
+      "Apply through the university's international portal or an authorised agent. Direct application is common for Thai citizens at most universities, and agents are also widely used for the offer, deposit, and visa steps.",
+      "Have certified transcripts and your degree certificate ready, with certified English translations. Some universities want documents verified through the awarding institution or the Ministry of Higher Education.",
+      "Most universities run February and July intakes and assess on a rolling basis. Apply two to three months ahead. Use the universities directory to shortlist and the deadline calendar for the recommended dates.",
+    ],
+    visaNote: [
+      "Thailand is treated as a lower-risk market for the student visa, so the upfront evidence is lighter than for the Evidence Level 3 countries. You should still be ready to show funds for tuition, travel, and 12 months of living costs, and to satisfy the Genuine Student requirement. Check the Document Checklist Tool on the Home Affairs website for your provider, since requirements vary by country and institution.",
+      "Where Thai applications run into trouble it is usually over a thin Genuine Student statement, a course that does not connect to previous study or work, or funds that appear only just before applying. A clear study plan and a documented savings history address most of it.",
+    ],
+    credentials: [
+      "For undergraduate entry, universities take the Mathayom 6 (M6) certificate, often with a foundation year, or accept a completed first year of a Thai bachelor's for direct entry. A four-year Thai bachelor's degree is accepted for direct entry to Australian master's programs.",
+      "Universities publish Thailand-specific entry tables. Confirm the GPA on the 4-point scale that your course requires.",
+      "English is shown with IELTS, PTE, or TOEFL. Most universities want 6.5 overall for a master's, and the student visa has its own lower floor. Confirm both.",
+    ],
+    popularFields: [
+      "Hospitality, tourism, and events",
+      "Business and management",
+      "Engineering",
+      "Information technology",
+      "Design and creative industries",
+    ],
+    faq: [
+      {
+        q: "What is Thailand's assessment level for the Australian student visa?",
+        a: "Thailand is treated as a lower-risk market, so the upfront financial and English documentation is lighter than for the Evidence Level 3 countries. You still need to show funds and meet the Genuine Student requirement. Levels are reviewed and vary by provider, so check the Document Checklist Tool when you apply.",
+      },
+      {
+        q: "Is a Thai bachelor's degree accepted in Australia?",
+        a: "Yes, a four-year Thai bachelor's is accepted for direct entry to most Australian master's programs. Universities publish Thailand-specific entry tables mapping your 4-point GPA to their requirement. Competitive courses want a higher GPA.",
+      },
+      {
+        q: "How much does it cost to study in Australia from Thailand?",
+        a: "Budget AUD 40,000 to 75,000 for the first year: roughly AUD 30,000 to 50,000 tuition, about AUD 30,000 living costs, the AUD 2,500 visa, health cover, and flights. Regional universities and smaller cities are cheaper.",
+      },
+      {
+        q: "Can I get PR in Australia after studying from Thailand?",
+        a: "It is a common pathway, not automatic. After graduating, most students move to a Temporary Graduate visa (subclass 485), gain skilled work experience, and then apply for a points-tested visa. Your occupation and points decide the outcome.",
+      },
+      {
+        q: "Do Thai students need to apply through an agent?",
+        a: "No, most universities accept direct applications from Thai citizens. Agents are common for handling the offer, deposit, and visa lodgement, but not required everywhere. Check the university's how-to-apply page.",
+      },
+    ],
+    sources: [
+      "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
+      "https://immi.homeaffairs.gov.au/news-media/archive/article?itemId=1196",
+      "https://www.studyaustralia.gov.au/",
+    ],
+    lastVerified: "2026-08-30",
+  },
+
+  cambodia: {
+    slug: "cambodia",
+    code: "KH",
+    name: "Cambodia",
+    demonym: "Cambodian",
+    intro: [
+      "Cambodian students can study at any Australian university. A first year costs roughly AUD 40,000 to 75,000 all in, and the visa is the subclass 500. Cambodia is a small source of students in Australia, and scholarships fund a large share of those who go.",
+      "The parts specific to Cambodia are how universities read the Bac II and a Cambodian bachelor's degree, English evidence, and documenting a source of funds that satisfies the Genuine Student requirement.",
+    ],
+    applying: [
+      "Apply through the university's international portal or an authorised agent. Direct application is available at most universities for Cambodian citizens, and agents help with the offer, deposit, and visa steps.",
+      "Have certified copies of your Bac II certificate, transcripts, and degree documents ready, with certified English translations. Universities may want them verified through the awarding institution or the Ministry of Education.",
+      "Most universities run February and July intakes and assess on a rolling basis. Apply two to three months ahead. Use the universities directory and the deadline calendar.",
+    ],
+    visaNote: [
+      "Home Affairs does not publish a public evidence level for Cambodia, so use the Document Checklist Tool for your country and chosen provider to see what is required. Expect to show funds for tuition, travel, and 12 months of living costs, a valid English test result, and a Genuine Student statement.",
+      "Applications most often run into trouble over source of funds, sponsor income that is hard to document, and a study plan that does not follow from previous study or work. If a scholarship is funding you, the award letter is your strongest evidence.",
+    ],
+    credentials: [
+      "For undergraduate entry, universities take the Bac II (Baccalaureate), usually with a foundation year. A four-year Cambodian bachelor's degree is generally accepted for direct entry to Australian master's programs, though some universities assess it case by case.",
+      "Ask each university how it reads your qualification and what GPA or grade average your course requires.",
+      "English is shown with IELTS, PTE, or TOEFL. Most universities want 6.5 overall for a master's, and the student visa has its own lower floor. Confirm both.",
+    ],
+    popularFields: [
+      "Development studies and public policy",
+      "Business and management",
+      "Information technology",
+      "Agriculture and environmental science",
+      "Education",
+    ],
+    faq: [
+      {
+        q: "What is Cambodia's assessment level for the Australian student visa?",
+        a: "Home Affairs does not publish evidence levels by country, and the requirement depends on your chosen provider as well. Use the Document Checklist Tool on the Home Affairs website when you apply. In practice you should be ready to show funds and a strong Genuine Student statement.",
+      },
+      {
+        q: "Is a Cambodian bachelor's degree accepted in Australia?",
+        a: "Usually yes, for master's entry, though some universities assess Cambodian degrees case by case. Ask the admissions team how it reads your qualification and what grade average it needs.",
+      },
+      {
+        q: "How much does it cost to study in Australia from Cambodia?",
+        a: "Budget AUD 40,000 to 75,000 for the first year: roughly AUD 30,000 to 50,000 tuition, about AUD 30,000 living costs, the AUD 2,500 visa, health cover, and flights. Regional universities and smaller cities are cheaper.",
+      },
+      {
+        q: "Can a scholarship fund study in Australia from Cambodia?",
+        a: "Yes, and scholarships fund a large share of Cambodian students in Australia, including the Australia Awards. You still apply to the university and for the student visa yourself, and the award letter serves as your evidence of funds.",
+      },
+      {
+        q: "Can I get PR in Australia after studying from Cambodia?",
+        a: "It is a common pathway, not automatic. After graduating, most students move to a Temporary Graduate visa (subclass 485), gain skilled work experience, and then apply for a points-tested visa. Your occupation and points decide the outcome.",
+      },
+    ],
+    sources: [
+      "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
+      "https://immi.homeaffairs.gov.au/news-media/archive/article?itemId=1196",
+      "https://www.studyaustralia.gov.au/",
+    ],
+    lastVerified: "2026-08-30",
+  },
+
+  malaysia: {
+    slug: "malaysia",
+    code: "MY",
+    name: "Malaysia",
+    demonym: "Malaysian",
+    intro: [
+      "Malaysian students can study at any Australian university, and Malaysia is one of Australia's longest-standing student markets. A first year costs roughly AUD 40,000 to 75,000 all in, and the visa is the subclass 500. Malaysia sits at student-visa Evidence Level 1, the lowest tier, so many applicants are not asked for financial evidence or an English test upfront.",
+      "The parts specific to Malaysia are the twinning and foundation routes that let you start in Malaysia and finish in Australia, how universities read SPM, STPM, and matriculation results, and the fact that Australian campuses in Malaysia offer the same degrees closer to home.",
+    ],
+    applying: [
+      "Apply through the university's international portal or an authorised agent. Direct application is the norm for Malaysian citizens, and English-language documents rarely need translation.",
+      "Several Australian universities run campuses or partner programs in Malaysia, for example Monash, Curtin, and Swinburne, and many local colleges offer 2+1 or 3+0 arrangements. You can also transfer credit from a Malaysian diploma or foundation program.",
+      "Most universities run February and July intakes and assess on a rolling basis. Use the universities directory to shortlist and the deadline calendar for the recommended dates.",
+    ],
+    visaNote: [
+      "Malaysia is at student-visa Evidence Level 1, the lowest tier. Many Malaysian applicants are not required to submit financial evidence or an English test result with the application, though Home Affairs can still ask for them. You must meet the Genuine Student requirement and hold a Confirmation of Enrolment.",
+      "A low evidence level is not a guaranteed grant. Applications still fail on a weak Genuine Student statement or a course that does not fit the applicant's background, so keep the study plan clear.",
+    ],
+    credentials: [
+      "For undergraduate entry, universities take STPM, A-Levels, the Australian Matriculation (AUSMAT), SAM, a recognised foundation program, or a Malaysian diploma with credit. SPM alone is usually not enough for direct degree entry.",
+      "A three-year or four-year Malaysian bachelor's degree is accepted for direct entry to Australian master's programs. Universities publish Malaysia-specific entry tables mapping your CGPA to their requirement.",
+      "Many Malaysian applicants are exempt from an English test based on their prior study in English. Confirm the exemption with the university and check whether the student visa also accepts it.",
+    ],
+    popularFields: [
+      "Business, accounting, and actuarial science",
+      "Engineering",
+      "Information technology and computer science",
+      "Medicine and health sciences",
+      "Law",
+    ],
+    faq: [
+      {
+        q: "What is Malaysia's assessment level for the Australian student visa?",
+        a: "Malaysia is at Evidence Level 1, the lowest. Many applicants are not asked for financial evidence or an English test upfront, though Home Affairs can still request them. You must still meet the Genuine Student requirement. Levels are reviewed, so check when you apply.",
+      },
+      {
+        q: "Can I start a degree in Malaysia and finish in Australia?",
+        a: "Yes. Twinning and 2+1 or 3+0 programs are common, and Monash, Curtin, and Swinburne run campuses in Malaysia offering the same degrees. You can also transfer credit from a Malaysian diploma or foundation program into an Australian bachelor's.",
+      },
+      {
+        q: "Is a Malaysian bachelor's degree accepted in Australia?",
+        a: "Yes, for direct entry to Australian master's programs. Universities publish Malaysia-specific entry tables mapping your CGPA to their requirement. Both three-year and four-year degrees are generally accepted.",
+      },
+      {
+        q: "How much does it cost to study in Australia from Malaysia?",
+        a: "Budget AUD 40,000 to 75,000 for the first year: roughly AUD 30,000 to 50,000 tuition, about AUD 30,000 living costs, the AUD 2,500 visa, health cover, and flights. Regional universities and smaller cities are cheaper.",
+      },
+      {
+        q: "Can I get PR in Australia after studying from Malaysia?",
+        a: "It is a common pathway, not automatic. After graduating, most students move to a Temporary Graduate visa (subclass 485), gain skilled work experience, and then apply for a points-tested visa. Your occupation and points decide the outcome.",
+      },
+    ],
+    sources: [
+      "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
+      "https://immi.homeaffairs.gov.au/news-media/archive/article?itemId=1196",
+      "https://www.studyaustralia.gov.au/",
+    ],
+    lastVerified: "2026-08-30",
+  },
+
+  bhutan: {
+    slug: "bhutan",
+    code: "BT",
+    name: "Bhutan",
+    demonym: "Bhutanese",
+    intro: [
+      "Bhutanese students can study at any Australian university, and Australia has become the leading overseas destination for students from Bhutan. A first year costs roughly AUD 40,000 to 75,000 all in, and the visa is the subclass 500. In January 2026 the Australian Government raised Bhutan to student-visa Evidence Level 3, the highest tier, alongside India, Nepal, and Bangladesh.",
+      "The parts specific to Bhutan are the higher visa scrutiny, the Royal Monetary Authority approval needed to move money out of the country, and how universities read the Bhutan Higher Secondary Education Certificate and a Bhutanese bachelor's degree.",
+    ],
+    applying: [
+      "Apply through the university's international portal or an authorised agent. Direct application is available at most universities for Bhutanese citizens, and agents are widely used for the offer, deposit, and visa steps.",
+      "Have certified copies of your class 12 marksheet and any degree transcripts ready. English is the medium of instruction in Bhutan, so documents are usually already in English.",
+      "Plan the foreign-exchange side early. Moving tuition and living funds out of Bhutan needs Royal Monetary Authority approval, and the paperwork takes time. Apply three to four months ahead, since Evidence Level 3 processing runs longer.",
+    ],
+    visaNote: [
+      "In January 2026 Bhutan moved to student-visa Evidence Level 3, the highest tier. You now need to provide, upfront, several months of genuine bank statements, a documented source of funds, and authenticated academic records, and processing runs longer. Check the current level when you apply.",
+      "Applications commonly fail on funds that appear shortly before applying, a source of funds that is not clearly documented, and a study plan that does not follow on from previous study. A genuine savings history and Royal Monetary Authority paperwork that matches your stated funds are the strongest signals.",
+    ],
+    credentials: [
+      "For undergraduate entry, universities take the Bhutan Higher Secondary Education Certificate (class 12). A three-year or four-year Bhutanese bachelor's degree, often from a Royal University of Bhutan college, is assessed for master's entry, with a four-year degree mapping more cleanly.",
+      "Ask each university how it reads your qualification and what grade average your course requires.",
+      "English is the medium of instruction in Bhutan. Universities may waive an English test on that basis, but the student visa has its own English rule, so confirm both.",
+    ],
+    popularFields: [
+      "Nursing and health sciences",
+      "Information technology",
+      "Engineering",
+      "Business and accounting",
+      "Education",
+    ],
+    faq: [
+      {
+        q: "What is Bhutan's assessment level for the Australian student visa?",
+        a: "As of January 2026 Bhutan is at Evidence Level 3, the highest, alongside India, Nepal, and Bangladesh. You must supply several months of bank statements, a documented source of funds, and authenticated academic records upfront, and processing is slower. Levels are reviewed, so check when you apply.",
+      },
+      {
+        q: "How do I move money from Bhutan to pay for study in Australia?",
+        a: "Transfers out of Bhutan for tuition and living costs need Royal Monetary Authority approval. Start the paperwork early, keep it consistent with the funds you show Home Affairs, and budget several weeks for it.",
+      },
+      {
+        q: "How much does it cost to study in Australia from Bhutan?",
+        a: "Budget AUD 40,000 to 75,000 for the first year: roughly AUD 30,000 to 50,000 tuition, about AUD 30,000 living costs, the AUD 2,500 visa, health cover, and flights. Regional universities and smaller cities are cheaper.",
+      },
+      {
+        q: "Is a Bhutanese bachelor's degree accepted in Australia?",
+        a: "It is assessed for master's entry. A four-year degree maps more cleanly than a three-year one, which some universities treat as needing a bridging qualification. Ask the admissions team how it reads your qualification.",
+      },
+      {
+        q: "Can I get PR in Australia after studying from Bhutan?",
+        a: "It is a common pathway, not automatic. After graduating, most students move to a Temporary Graduate visa (subclass 485), gain skilled work experience, and then apply for a points-tested visa. Your occupation and points decide the outcome.",
+      },
+    ],
+    sources: [
+      "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
+      "https://immi.homeaffairs.gov.au/news-media/archive/article?itemId=1196",
+      "https://www.studyaustralia.gov.au/",
+    ],
+    lastVerified: "2026-08-30",
+  },
+
+  myanmar: {
+    slug: "myanmar",
+    code: "MM",
+    name: "Myanmar",
+    demonym: "Myanmar",
+    intro: [
+      "Students from Myanmar can study at any Australian university. A first year costs roughly AUD 40,000 to 75,000 all in, and the visa is the subclass 500. Since the 2021 military takeover, banking restrictions and document access have made applications from Myanmar harder to put together, and visa scrutiny is high.",
+      "The parts specific to Myanmar are proving a source of funds through a banking system under sanctions and capital controls, getting academic documents certified, and a Genuine Student statement that case officers will read closely.",
+    ],
+    applying: [
+      "Apply through the university's international portal or an authorised agent. Agents are widely used, and many applicants are already outside Myanmar, in Thailand or Singapore, when they apply.",
+      "Have certified copies of your matriculation result and any degree transcripts ready, with certified English translations. Verification through the awarding institution can be slow, so start early.",
+      "Most universities run February and July intakes and assess on a rolling basis. Apply three to four months ahead. Use the universities directory and the deadline calendar.",
+    ],
+    visaNote: [
+      "Home Affairs does not publish an evidence level for Myanmar, and in practice applications face close scrutiny. Use the Document Checklist Tool for your chosen provider. Be ready to show a clearly documented source of funds, a valid English test result, and a detailed Genuine Student statement.",
+      "The hardest part is usually financial evidence. International sanctions and Myanmar's capital controls make ordinary bank transfers difficult, so many applicants rely on funds already held abroad, family overseas, or a scholarship. Whatever the source, it needs a clean paper trail.",
+    ],
+    credentials: [
+      "For undergraduate entry, universities take the Myanmar matriculation examination, usually with a foundation year. A Myanmar bachelor's degree is often three years and may be treated as needing a bridging qualification for direct master's entry; a four-year or honours degree maps more cleanly.",
+      "Ask each university how it reads your qualification and whether it counts your degree as three or four years.",
+      "English is shown with IELTS, PTE, or TOEFL. Most universities want 6.5 overall for a master's, and the student visa has its own lower floor. Confirm both.",
+    ],
+    popularFields: [
+      "Information technology",
+      "Business and management",
+      "Public health",
+      "Engineering",
+      "Development studies",
+    ],
+    faq: [
+      {
+        q: "What is Myanmar's assessment level for the Australian student visa?",
+        a: "Home Affairs does not publish evidence levels by country, and applications from Myanmar face close scrutiny in practice. Use the Document Checklist Tool when you apply, and prepare a clearly documented source of funds and a detailed Genuine Student statement.",
+      },
+      {
+        q: "How do I prove funds from Myanmar?",
+        a: "It is the main hurdle. Sanctions and capital controls make normal transfers hard, so many applicants use funds already held abroad, an overseas family member, or a scholarship. Home Affairs wants a clean, documented trail whichever route you use.",
+      },
+      {
+        q: "How much does it cost to study in Australia from Myanmar?",
+        a: "Budget AUD 40,000 to 75,000 for the first year: roughly AUD 30,000 to 50,000 tuition, about AUD 30,000 living costs, the AUD 2,500 visa, health cover, and flights. Regional universities and smaller cities are cheaper.",
+      },
+      {
+        q: "Is a Myanmar bachelor's degree accepted in Australia?",
+        a: "It depends on length. A three-year degree is often treated as needing a bridging qualification for direct master's entry; a four-year or honours degree maps more cleanly. Ask the admissions team.",
+      },
+      {
+        q: "Can I get PR in Australia after studying from Myanmar?",
+        a: "It is a common pathway, not automatic. After graduating, most students move to a Temporary Graduate visa (subclass 485), gain skilled work experience, and then apply for a points-tested visa. Your occupation and points decide the outcome.",
+      },
+    ],
+    sources: [
+      "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
+      "https://immi.homeaffairs.gov.au/news-media/archive/article?itemId=1196",
+      "https://www.studyaustralia.gov.au/",
+    ],
+    lastVerified: "2026-08-30",
+  },
+
+  mongolia: {
+    slug: "mongolia",
+    code: "MN",
+    name: "Mongolia",
+    demonym: "Mongolian",
+    intro: [
+      "Mongolian students can study at any Australian university. A first year costs roughly AUD 40,000 to 75,000 all in, and the visa is the subclass 500. Mongolia is a small but growing source of students, with a strong link to Australia through the mining and resources sector.",
+      "Not much is unusual for Mongolian applicants. The main points are how universities read the secondary school certificate and a Mongolian bachelor's degree, English evidence, and documenting a source of funds.",
+    ],
+    applying: [
+      "Apply through the university's international portal or an authorised agent. Direct application is available at most universities for Mongolian citizens, and agents help with the offer, deposit, and visa steps.",
+      "Have certified copies of your school leaving certificate and degree transcripts ready, with certified English translations. Universities may want documents verified through the awarding institution.",
+      "Most universities run February and July intakes and assess on a rolling basis. Apply two to three months ahead. Use the universities directory and the deadline calendar.",
+    ],
+    visaNote: [
+      "Home Affairs does not publish a public evidence level for Mongolia, so use the Document Checklist Tool for your country and chosen provider. Expect to show funds for tuition, travel, and 12 months of living costs, a valid English test result, and a Genuine Student statement.",
+      "Applications most often run into trouble over source of funds and a study plan that does not connect to previous study or work. A documented savings history, or a company or government sponsorship letter backed by matching evidence, addresses most of it.",
+    ],
+    credentials: [
+      "For undergraduate entry, universities take the Mongolian Certificate of Complete Secondary Education, usually with a foundation year. A four-year Mongolian bachelor's degree is accepted for direct entry to Australian master's programs.",
+      "Universities assess Mongolian qualifications individually. Confirm the GPA your course requires and how it reads your grading scale.",
+      "English is shown with IELTS, PTE, or TOEFL. Most universities want 6.5 overall for a master's, and the student visa has its own lower floor. Confirm both.",
+    ],
+    popularFields: [
+      "Mining, geology, and resources engineering",
+      "Business and management",
+      "Information technology",
+      "Environmental science",
+      "Public policy",
+    ],
+    faq: [
+      {
+        q: "What is Mongolia's assessment level for the Australian student visa?",
+        a: "Home Affairs does not publish evidence levels by country, and the requirement also depends on your provider. Use the Document Checklist Tool when you apply. Be ready to show funds and a clear Genuine Student statement.",
+      },
+      {
+        q: "Is a Mongolian bachelor's degree accepted in Australia?",
+        a: "Yes, a four-year Mongolian bachelor's is generally accepted for direct entry to Australian master's programs. Universities assess Mongolian qualifications individually, so confirm the GPA your course needs.",
+      },
+      {
+        q: "How much does it cost to study in Australia from Mongolia?",
+        a: "Budget AUD 40,000 to 75,000 for the first year: roughly AUD 30,000 to 50,000 tuition, about AUD 30,000 living costs, the AUD 2,500 visa, health cover, and flights. Regional universities and smaller cities are cheaper.",
+      },
+      {
+        q: "Is there a mining and resources pathway for Mongolian students?",
+        a: "Yes. Australian universities are strong in mining engineering, geology, and resources, and this is a common field for Mongolian students given the sector at home. Some study is company-sponsored.",
+      },
+      {
+        q: "Can I get PR in Australia after studying from Mongolia?",
+        a: "It is a common pathway, not automatic. After graduating, most students move to a Temporary Graduate visa (subclass 485), gain skilled work experience, and then apply for a points-tested visa. Your occupation and points decide the outcome.",
+      },
+    ],
+    sources: [
+      "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
+      "https://immi.homeaffairs.gov.au/news-media/archive/article?itemId=1196",
+      "https://www.studyaustralia.gov.au/",
+    ],
+    lastVerified: "2026-08-30",
+  },
+
+  colombia: {
+    slug: "colombia",
+    code: "CO",
+    name: "Colombia",
+    demonym: "Colombian",
+    intro: [
+      "Colombian students can study at any Australian university, and Colombia is now one of Australia's largest sources of international students. A first year of a bachelor's or master's costs roughly AUD 40,000 to 75,000 all in, and the visa is the subclass 500. Most Colombians, though, come for English-language or vocational courses rather than a degree, and the visa steps differ a little for those.",
+      "The parts specific to Colombia are the strong pull toward English and vocational study combined with part-time work, how universities read the Bachiller and a Colombian professional degree, and a Genuine Student statement that has to explain the study choice convincingly.",
+    ],
+    applying: [
+      "For a university degree, apply through the university's international portal or an authorised agent, with certified Spanish-to-English translations of your Bachiller certificate and any degree documents.",
+      "For English (ELICOS) or vocational (VET) courses, you usually apply through the college or an agent. These sit on the same subclass 500 visa but have lighter English and academic entry requirements.",
+      "Most universities run February and July intakes and assess on a rolling basis. English and vocational colleges have monthly or bi-monthly start dates. Use the universities directory and the deadline calendar for degree study.",
+    ],
+    visaNote: [
+      "Home Affairs does not publish a public evidence level for Colombia. Use the Document Checklist Tool for your chosen provider and course type. You should be ready to show funds for tuition, travel, and 12 months of living costs, an English test result, and a Genuine Student statement.",
+      "Because many Colombian applications are for lower-cost English or vocational courses with work rights, case officers look hard at whether study or work is the real purpose. A study plan that connects the course to your career, and funds that are not solely dependent on working in Australia, are what carry the application.",
+    ],
+    credentials: [
+      "For undergraduate entry, universities take the Bachiller certificate, often with a foundation year, or a completed first year of a Colombian university program for direct entry.",
+      "A Colombian professional degree (titulo profesional), usually four to five years, is accepted for direct entry to Australian master's programs. Universities publish entry tables mapping your average to their requirement.",
+      "English is shown with IELTS, PTE, or TOEFL. Degree courses want around 6.5 overall for a master's; English and vocational courses accept lower. The student visa has its own floor.",
+    ],
+    popularFields: [
+      "English language study (ELICOS)",
+      "Business and management",
+      "Hospitality and tourism",
+      "Information technology",
+      "Engineering",
+    ],
+    faq: [
+      {
+        q: "What is Colombia's assessment level for the Australian student visa?",
+        a: "Home Affairs does not publish evidence levels by country, and the requirement depends on your course and provider. Use the Document Checklist Tool when you apply. Applications for lower-cost English and vocational courses tend to get more scrutiny on whether study is the real purpose.",
+      },
+      {
+        q: "Can I study English or a vocational course in Australia from Colombia?",
+        a: "Yes, both run on the subclass 500 student visa, with lighter entry requirements than a degree and the same work rights. You still need to meet the Genuine Student requirement and show funds.",
+      },
+      {
+        q: "How much does it cost to study in Australia from Colombia?",
+        a: "For a bachelor's or master's, budget AUD 40,000 to 75,000 for the first year: roughly AUD 30,000 to 50,000 tuition, about AUD 30,000 living costs, the AUD 2,500 visa, health cover, and flights. English and vocational courses cost much less, often AUD 15,000 to 25,000 a year in tuition.",
+      },
+      {
+        q: "Is a Colombian professional degree accepted in Australia?",
+        a: "Yes, a four to five year titulo profesional is accepted for direct entry to most Australian master's programs. Universities publish entry tables mapping your average to their requirement.",
+      },
+      {
+        q: "Can I get PR in Australia after studying from Colombia?",
+        a: "It is possible but not automatic, and it is harder from an English or vocational course than from a degree. After graduating, students move to a Temporary Graduate visa (subclass 485) where eligible, gain skilled work experience, and then apply for a points-tested visa. Your occupation and points decide the outcome.",
+      },
+    ],
+    sources: [
+      "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
+      "https://immi.homeaffairs.gov.au/news-media/archive/article?itemId=1196",
+      "https://www.studyaustralia.gov.au/",
+    ],
+    lastVerified: "2026-08-30",
+  },
+
+  brazil: {
+    slug: "brazil",
+    code: "BR",
+    name: "Brazil",
+    demonym: "Brazilian",
+    intro: [
+      "Brazilian students can study at any Australian university, and Brazil is one of Australia's largest sources of international students. A first year of a bachelor's or master's costs roughly AUD 40,000 to 75,000 all in, and the visa is the subclass 500. As with Colombia, most Brazilians come for English-language or vocational courses rather than a degree.",
+      "The parts specific to Brazil are the pull toward English and vocational study with part-time work, how universities read the Ensino Medio certificate and a Brazilian bachelor's degree, and a Genuine Student statement that explains the study choice.",
+    ],
+    applying: [
+      "For a university degree, apply through the university's international portal or an authorised agent, with certified Portuguese-to-English translations of your Ensino Medio certificate and any degree documents. A sworn translation (traducao juramentada) is the norm.",
+      "For English (ELICOS) or vocational (VET) courses, you usually apply through the college or an agent. These run on the same subclass 500 visa with lighter entry requirements.",
+      "Most universities run February and July intakes and assess on a rolling basis. English and vocational colleges start more often. Use the universities directory and the deadline calendar for degree study.",
+    ],
+    visaNote: [
+      "Home Affairs does not publish a public evidence level for Brazil. Use the Document Checklist Tool for your chosen provider and course type. Be ready to show funds for tuition, travel, and 12 months of living costs, an English test result, and a Genuine Student statement.",
+      "Because many Brazilian applications are for English or vocational courses with work rights, case officers look closely at whether study or work is the real aim. A study plan that ties the course to your career, and funds not wholly dependent on working in Australia, carry the application.",
+    ],
+    credentials: [
+      "For undergraduate entry, universities take the Ensino Medio certificate, often with a foundation year, or a completed first year of a Brazilian university course for direct entry. ENEM results may also be considered.",
+      "A Brazilian bacharelado, usually four to five years, is accepted for direct entry to Australian master's programs. Universities publish entry tables mapping your GPA, on a 10-point or 4-point scale, to their requirement.",
+      "English is shown with IELTS, PTE, or TOEFL. Degree courses want around 6.5 overall for a master's; English and vocational courses accept lower. The student visa has its own floor.",
+    ],
+    popularFields: [
+      "English language study (ELICOS)",
+      "Business and management",
+      "Hospitality and tourism",
+      "Engineering",
+      "Information technology",
+    ],
+    faq: [
+      {
+        q: "What is Brazil's assessment level for the Australian student visa?",
+        a: "Home Affairs does not publish evidence levels by country, and the requirement depends on your course and provider. Use the Document Checklist Tool when you apply. English and vocational course applications get more scrutiny on whether study is the real purpose.",
+      },
+      {
+        q: "Can I study English or a vocational course in Australia from Brazil?",
+        a: "Yes, both run on the subclass 500 student visa, with lighter entry requirements than a degree and the same work rights. You still need to meet the Genuine Student requirement and show funds.",
+      },
+      {
+        q: "How much does it cost to study in Australia from Brazil?",
+        a: "For a bachelor's or master's, budget AUD 40,000 to 75,000 for the first year: roughly AUD 30,000 to 50,000 tuition, about AUD 30,000 living costs, the AUD 2,500 visa, health cover, and flights. English and vocational courses cost much less, often AUD 15,000 to 25,000 a year in tuition.",
+      },
+      {
+        q: "Is a Brazilian bacharelado accepted in Australia?",
+        a: "Yes, a four to five year bacharelado is accepted for direct entry to most Australian master's programs. Universities publish entry tables mapping your GPA to their requirement.",
+      },
+      {
+        q: "Can I get PR in Australia after studying from Brazil?",
+        a: "It is possible but not automatic, and it is harder from an English or vocational course than from a degree. After graduating, students move to a Temporary Graduate visa (subclass 485) where eligible, gain skilled work experience, and then apply for a points-tested visa. Your occupation and points decide the outcome.",
+      },
+    ],
+    sources: [
+      "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
+      "https://immi.homeaffairs.gov.au/news-media/archive/article?itemId=1196",
+      "https://www.studyaustralia.gov.au/",
+    ],
+    lastVerified: "2026-08-30",
+  },
+
+  kenya: {
+    slug: "kenya",
+    code: "KE",
+    name: "Kenya",
+    demonym: "Kenyan",
+    intro: [
+      "Kenyan students can study at any Australian university. A first year costs roughly AUD 40,000 to 75,000 all in, and the visa is the subclass 500. Kenya is a growing African source market for Australia, and financial evidence is the part of the application that needs the most work.",
+      "The parts specific to Kenya are the close look at source of funds, how universities read the KCSE and a Kenyan bachelor's degree, and a Genuine Student statement that connects the course to your plans.",
+    ],
+    applying: [
+      "Apply through the university's international portal or an authorised agent. Direct application is available at most universities for Kenyan citizens; agents are used for the offer, deposit, and visa steps.",
+      "Have certified copies of your KCSE certificate and degree transcripts ready. English is the medium of instruction in Kenya, so documents are usually already in English. Universities may want results verified through KNEC or the awarding university.",
+      "Most universities run February and July intakes and assess on a rolling basis. Apply three to four months ahead. Use the universities directory and the deadline calendar.",
+    ],
+    visaNote: [
+      "Home Affairs does not publish an evidence level for Kenya, and in practice applications from sub-Saharan Africa face close financial scrutiny. Use the Document Checklist Tool for your chosen provider. Be ready to show funds for tuition, travel, and 12 months of living costs, and to satisfy the Genuine Student requirement.",
+      "Applications most often fail on funds that appear shortly before applying, a source of funds that is not clearly documented, or a sponsor whose income does not match the amount shown. Three to six months of genuine bank history, and a documented explanation of where the money came from, are what carry the file. An approved education loan can be used as evidence.",
+    ],
+    credentials: [
+      "For undergraduate entry, universities take the KCSE, often with a foundation year, or A-Levels. A four-year Kenyan bachelor's degree is accepted for direct entry to Australian master's programs.",
+      "Universities publish Kenya-specific entry tables. Confirm the class of degree or GPA your course requires.",
+      "English is the medium of instruction in Kenya, and many universities waive an English test on that basis. The student visa has its own English rule, so confirm both.",
+    ],
+    popularFields: [
+      "Public health and health sciences",
+      "Information technology",
+      "Business, accounting, and finance",
+      "Nursing",
+      "Development and environmental studies",
+    ],
+    faq: [
+      {
+        q: "What is Kenya's assessment level for the Australian student visa?",
+        a: "Home Affairs does not publish evidence levels by country. Use the Document Checklist Tool when you apply. In practice, applications from Kenya face close scrutiny of financial evidence, so a genuine, well-documented source of funds matters most.",
+      },
+      {
+        q: "How much bank history do I need for the visa from Kenya?",
+        a: "Aim for three to six months of genuine bank statements showing the funds held over time, plus a clear explanation of where the money came from. A large deposit just before applying is a common reason for refusal. An approved education loan can be submitted instead.",
+      },
+      {
+        q: "How much does it cost to study in Australia from Kenya?",
+        a: "Budget AUD 40,000 to 75,000 for the first year: roughly AUD 30,000 to 50,000 tuition, about AUD 30,000 living costs, the AUD 2,500 visa, health cover, and flights. Regional universities and smaller cities are cheaper.",
+      },
+      {
+        q: "Is a Kenyan bachelor's degree accepted in Australia?",
+        a: "Yes, a four-year Kenyan bachelor's is accepted for direct entry to most Australian master's programs. Universities publish Kenya-specific entry tables mapping your class of degree or GPA to their requirement.",
+      },
+      {
+        q: "Can I get PR in Australia after studying from Kenya?",
+        a: "It is a common goal, not automatic. After graduating, most students move to a Temporary Graduate visa (subclass 485), gain skilled work experience, and then apply for a points-tested visa. Your occupation and points decide the outcome.",
+      },
+    ],
+    sources: [
+      "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
+      "https://immi.homeaffairs.gov.au/news-media/archive/article?itemId=1196",
+      "https://www.studyaustralia.gov.au/",
+    ],
+    lastVerified: "2026-08-30",
+  },
+
+  nigeria: {
+    slug: "nigeria",
+    code: "NG",
+    name: "Nigeria",
+    demonym: "Nigerian",
+    intro: [
+      "Nigerian students can study at any Australian university. A first year costs roughly AUD 40,000 to 75,000 all in, and the visa is the subclass 500. Nigeria is one of Australia's fastest-growing African source markets, and the student visa has a higher refusal rate for Nigerian applicants than the global average, almost always over financial evidence.",
+      "The parts specific to Nigeria are the close look at source of funds and sponsors, how universities read WASSCE and a Nigerian bachelor's degree, and a Genuine Student statement that stands up to scrutiny.",
+    ],
+    applying: [
+      "Apply through the university's international portal or an authorised agent. Direct application is available at most universities for Nigerian citizens; agents are widely used for the offer, deposit, and visa steps.",
+      "Have certified copies of your WASSCE or NECO result and degree transcripts ready. English is the medium of instruction in Nigeria, so documents are usually already in English. Universities often verify WAEC results online and may want your degree verified through the awarding university.",
+      "Most universities run February and July intakes and assess on a rolling basis. Apply three to four months ahead. Use the universities directory and the deadline calendar.",
+    ],
+    visaNote: [
+      "Home Affairs does not publish an evidence level for Nigeria, and in practice applications face close financial scrutiny, with a refusal rate above the global average. Use the Document Checklist Tool for your chosen provider. Be ready to show funds for tuition, travel, and 12 months of living costs, and to meet the Genuine Student requirement.",
+      "Applications most often fail on funds that appear shortly before applying, a sponsor whose income or business cannot be documented, or a study plan that does not fit the applicant's background. Several months of genuine bank history, tax records or audited business accounts for a sponsor, and a clear account of the source of funds are what carry the file.",
+    ],
+    credentials: [
+      "For undergraduate entry, universities take WASSCE or NECO, usually with a foundation year, or A-Levels or a completed first year of a Nigerian degree for direct entry.",
+      "A Nigerian bachelor's degree, usually four to five years, is accepted for direct entry to Australian master's programs. Universities publish Nigeria-specific entry tables mapping your CGPA on the 5-point scale and class of degree to their requirement. The one-year NYSC is not required for admission.",
+      "English is the medium of instruction in Nigeria, and many universities waive an English test on that basis. The student visa has its own English rule, so confirm both.",
+    ],
+    popularFields: [
+      "Information technology and computer science",
+      "Public health",
+      "Business, accounting, and finance",
+      "Engineering",
+      "Nursing and health sciences",
+    ],
+    faq: [
+      {
+        q: "What is Nigeria's assessment level for the Australian student visa?",
+        a: "Home Affairs does not publish evidence levels by country. Use the Document Checklist Tool when you apply. Applications from Nigeria face close scrutiny of financial evidence and a refusal rate above the global average, so a genuine, fully documented source of funds is the priority.",
+      },
+      {
+        q: "Why are Australian student visas from Nigeria refused?",
+        a: "Almost always financial evidence: funds that appear just before applying, a sponsor whose income cannot be documented, or an unclear source of funds. A study plan that does not fit the applicant's background is the other common reason. Several months of genuine bank history and documented sponsor income address most of it.",
+      },
+      {
+        q: "How much does it cost to study in Australia from Nigeria?",
+        a: "Budget AUD 40,000 to 75,000 for the first year: roughly AUD 30,000 to 50,000 tuition, about AUD 30,000 living costs, the AUD 2,500 visa, health cover, and flights. Regional universities and smaller cities are cheaper.",
+      },
+      {
+        q: "Is a Nigerian bachelor's degree accepted in Australia?",
+        a: "Yes, a four or five year Nigerian bachelor's is accepted for direct entry to most Australian master's programs. Universities publish Nigeria-specific entry tables mapping your CGPA on the 5-point scale and class of degree to their requirement. NYSC is not needed for admission.",
+      },
+      {
+        q: "Can I get PR in Australia after studying from Nigeria?",
+        a: "It is a common goal, not automatic. After graduating, most students move to a Temporary Graduate visa (subclass 485), gain skilled work experience, and then apply for a points-tested visa. Your occupation and points decide the outcome.",
+      },
+    ],
+    sources: [
+      "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
+      "https://immi.homeaffairs.gov.au/news-media/archive/article?itemId=1196",
+      "https://www.studyaustralia.gov.au/",
+    ],
+    lastVerified: "2026-08-30",
+  },
 };
 
 export function getOriginCountry(slug: string): OriginCountry | undefined {
