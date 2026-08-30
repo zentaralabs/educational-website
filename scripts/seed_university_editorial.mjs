@@ -40,6 +40,7 @@ const E = {
   "adelaide-university": {
     living: LIVING_COST.adelaide,
     who: "Consider Adelaide University if you want a large, comprehensive institution in a city with noticeably lower living costs than Sydney or Melbourne. Formed in 2026 from the merger of two established universities, it now offers one of the broadest course catalogs in the country across health, engineering, business, and the creative arts. Adelaide also counts as a regional area for skilled migration, so studying here earns extra points toward the 491 and 190 visas.",
+    intl: "Adelaide counts as a regional area for skilled migration, so study here earns 5 points toward the 190 and 491 and opens the 491 occupation lists, and South Australia runs nomination streams that favour local graduates. Adelaide University was formed on 1 January 2026 from the merger of the University of Adelaide and the University of South Australia, so confirm that your offer, your Confirmation of Enrolment, and the CRICOS codes all name the new combined entity.",
   },
   "australian-catholic-university": {
     living: LIVING_COST.national,
@@ -57,6 +58,7 @@ const E = {
   "australian-national-university": {
     living: LIVING_COST.canberra,
     who: "ANU is the strongest choice for research-oriented students, especially in the sciences, economics, politics, and Asia-Pacific studies, where its ties to national institutes give undergraduates early exposure to active research. Canberra is smaller and quieter than Sydney or Melbourne, with lower living costs and an easier rental market. It is highly selective, so it suits students with strong academic records who want a research-heavy rather than vocational degree.",
+    intl: "Canberra counts as a regional area for skilled migration, so studying at ANU earns 5 points toward the 190 and 491 and opens the 491 occupation lists. The ACT also runs its own state nomination stream that favours people who have studied and lived in Canberra. ANU carries a genuine research focus even at undergraduate level, so it fits students aiming at further study or research careers better than those who want a purely vocational degree.",
   },
   "avondale-university": {
     living: LIVING_COST.regional,
@@ -149,6 +151,7 @@ const E = {
   "monash-university": {
     living: LIVING_COST.melbourne,
     who: "Monash is Australia's largest university and a good fit for students who want breadth, research depth, and global mobility. It runs its own campuses in Malaysia and Indonesia, so a Melbourne-based degree can include an overseas semester without a separate exchange application. It is strong across pharmacy, engineering, medicine, and business. It is selective and large, which suits independent students more than those wanting a small-campus feel.",
+    intl: "Monash is in Melbourne, so studying here does not earn the regional migration points that Adelaide, Perth, and Canberra do. It runs full campuses in Malaysia and Indonesia, and some programs let you complete part of the degree offshore within the same university, which can lower the total cost. As the largest university in the country by enrolment, cohorts and class sizes are big, so it rewards students who are comfortable being proactive.",
   },
   "murdoch-university": {
     living: LIVING_COST.perth,
@@ -207,6 +210,7 @@ const E = {
     living: LIVING_COST.melbourne,
     how: "1. Understand the Melbourne Model. Undergraduate study is a broad three-year degree (Arts, Science, Commerce, Biomedicine, Design, or Music), after which you take a professional graduate degree such as the Juris Doctor, Doctor of Medicine, or Master of Engineering.\n2. Choose the undergraduate degree and the majors within it that lead toward your intended graduate program.\n3. Check the entry requirements, including the English score and any prerequisite subjects, for that degree.\n4. Prepare your transcripts, English results, passport, and any required personal statement.\n5. Apply through the University of Melbourne's application portal or an authorised agent.\n6. Accept your offer and pay the deposit to receive a Confirmation of Enrolment.\n7. Apply for your Student visa and Overseas Student Health Cover.\n8. Plan for the graduate degree separately toward the end of your bachelor, including its own entry requirements.",
     who: "Melbourne suits students who value a broad first degree and are comfortable specialising later through a professional graduate qualification. Its Melbourne Model is deliberately different from direct-entry programs elsewhere, so it is a strong fit if you want time to explore before committing, and a weaker one if you want to start a professional degree immediately. It is highly ranked and highly selective.",
+    intl: "Melbourne is a major city, so it does not carry the regional study points or 491 access that Adelaide, Perth, and Canberra do. Because of the Melbourne Model, a professional qualification such as the Juris Doctor or Master of Engineering is a separate graduate application after your bachelor, so plan for two admission cycles rather than one. Entry from a three-year overseas bachelor is accepted for most masters, but competitive programs expect strong marks.",
   },
   "university-of-new-england": {
     living: LIVING_COST.regional,
@@ -224,6 +228,7 @@ const E = {
   "university-of-queensland": {
     living: LIVING_COST.brisbane,
     who: "UQ is a research-intensive Group of Eight university strong in the life sciences, biotechnology, agriculture, and engineering, with undergraduates getting early access to active research labs. Brisbane has lower living costs than Sydney or Melbourne while still being a large city. UQ is selective, so it suits students with strong records who want research depth and a large, well-resourced campus.",
+    intl: "Brisbane is one of the three cities excluded from the definition of regional Australia, so despite lower living costs than Sydney or Melbourne, studying at UQ does not earn the regional study points or 491 access that Adelaide, Perth, and Canberra do. UQ is research-intensive and selective, strongest in the life sciences, biotechnology, and engineering. Entry from a three-year overseas bachelor is accepted for most masters, with competitive programs expecting a credit to distinction average.",
   },
   "university-of-southern-queensland": {
     living: LIVING_COST.regional,
@@ -232,6 +237,7 @@ const E = {
   "university-of-sydney": {
     living: LIVING_COST.sydney,
     who: "Sydney is a comprehensive Group of Eight university with a broad faculty structure that lets first-years explore before locking into a major. It is strong across medicine, law, business, engineering, and the humanities, and its sandstone campus is close to the city centre. It is selective and large, and Sydney living costs are the highest in the country, so it suits students with the academic record and budget to match.",
+    intl: "Sydney is a major city with the highest living costs in the country and no regional migration points. It publishes application closing dates for each intake, so check the date for your specific course and apply well ahead rather than assuming rolling assessment. A one-semester tuition deposit is standard, and a larger one can apply where a higher-risk financial assessment is used for your country.",
   },
   "university-of-tasmania": {
     living: LIVING_COST.hobart,
@@ -248,6 +254,7 @@ const E = {
   "university-of-western-australia": {
     living: LIVING_COST.perth,
     who: "UWA is Western Australia's Group of Eight university, research-intensive with particular strength in marine science, agriculture, mining engineering, and medicine. Its riverside Perth campus is well regarded, Perth counts as regional for skilled migration, and living costs are lower than the eastern capitals. It is selective and traditional in structure, suiting students who want research depth and are comfortable with Perth's distance from the rest of Australia.",
+    intl: "Perth counts as a regional area for skilled migration, so studying at UWA earns 5 points toward the 190 and 491 and opens the 491 occupation lists, while Perth living costs sit below the eastern capitals. UWA is research-intensive and traditional in structure, strongest in marine science, mining and petroleum engineering, agriculture, and medicine. Western Australia is a long flight from the eastern states, which is worth weighing if you expect to travel during your studies.",
   },
   "university-of-wollongong": {
     living: LIVING_COST.wollongong,
@@ -256,6 +263,7 @@ const E = {
   "unsw-sydney": {
     living: LIVING_COST.sydney,
     who: "UNSW leans harder into engineering and the built environment than most of the Group of Eight, with co-op and industry-placement tracks built into several degrees, and it is also strong in business and law. It runs a trimester calendar, so the academic year is structured differently from most universities. It is highly selective and in Sydney, so it suits high-achieving students with the budget for the city.",
+    intl: "UNSW runs a trimester calendar with three main teaching periods a year, roughly February, June, and September, so there are more entry points than the standard February and July but a faster pace once you start. It is in Sydney, so there are no regional migration points and living costs are the highest in the country. Engineering and business are the largest international cohorts.",
   },
   "victoria-university": {
     living: LIVING_COST.melbourne,
@@ -301,15 +309,16 @@ try {
       missing.push(slug);
       continue;
     }
-    if (/—/.test(data.who + (data.how ?? ""))) {
+    if (/—/.test(data.who + (data.how ?? "") + (data.intl ?? ""))) {
       throw new Error(`em dash in content for ${slug}`);
     }
     await client.query(
       `update universities
        set who_is_it_for = $1, how_to_apply = $2, living_cost_annual = $3,
+           international_student_notes = coalesce($5, international_student_notes),
            last_verified_at = current_date, updated_at = now()
        where id = $4`,
-      [data.who, data.how ?? null, data.living, id],
+      [data.who, data.how ?? null, data.living, id, data.intl ?? null],
     );
     updated++;
   }
