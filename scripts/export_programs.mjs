@@ -30,6 +30,7 @@ const env = Object.fromEntries(
 const FIELDS = [
   "id",
   "name",
+  "slug",
   "status",
   "duration_years",
   "tuition_international",

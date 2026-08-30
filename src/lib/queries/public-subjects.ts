@@ -10,6 +10,7 @@ export type SubjectSummary = {
 
 type ProgRow = {
   id: string;
+  slug: string;
   name: string;
   tuition_international: number | null;
   currency: string | null;
@@ -28,7 +29,7 @@ type ProgRow = {
 };
 
 const PROG_SELECT =
-  "id, name, tuition_international, currency, duration_years, ielts_overall, " +
+  "id, slug, name, tuition_international, currency, duration_years, ielts_overall, " +
   "degree_level:degree_levels(name), " +
   "subject:subjects!inner(id, slug, name), " +
   "university:universities!inner(slug, name, city, status, ielts_overall, country:countries!inner(is_launched))";
@@ -80,6 +81,7 @@ export async function listPublishedSubjects(): Promise<SubjectSummary[]> {
 
 export type SubjectProgram = {
   id: string;
+  slug: string;
   name: string;
   degreeLevel: string | null;
   durationYears: number | null;
@@ -120,6 +122,7 @@ export async function getSubjectBySlug(slug: string): Promise<SubjectDetail | nu
   const programs: SubjectProgram[] = rows
     .map((p) => ({
       id: p.id,
+      slug: p.slug,
       name: p.name,
       degreeLevel: p.degree_level?.name ?? null,
       durationYears: p.duration_years,

@@ -47,6 +47,42 @@ Redirects · Canonical/sitemap/metadata changes · Testing done.**
 - **Testing:** `tsc --noEmit` clean. In-browser check needs a logged-in admin
   (panel is auth-gated) — pending.
 
+## 2026-08-30 · Program URLs: UUID → human-readable slug
+
+- **Change:** Program pages moved from
+  `/universities/{uni}/programs/{uuid}` to
+  `/universities/{uni}/programs/{program-slug}`. Migration
+  `0022_add_program_slug.sql` adds `programs.slug` (unique per
+  `university_id`), backfilled from the program name with `-2`/`-3` dedupe.
+  Route dir renamed `[programId]` → `[programSlug]`.
+- **Affected routes:** all ~868 indexed program URLs + ~150 noindexed ones.
+- **SEO impact:** HIGH — this changes indexed URLs.
+  - **Protection:** the `[programSlug]` route detects a UUID param, looks the
+    program up by id, and issues a **308 permanent redirect** to the slug URL.
+    The UUID is the immutable PK, so every old link keeps resolving forever.
+    Verified: legacy UUID → 308 → slug URL; slug URL → 200; bad slug → 404;
+    UUID under the wrong university → 404.
+  - **Canonical:** now the slug URL (self-referential). Verified.
+  - **Sitemap:** now emits slug URLs; `grep` confirms 0 UUID program URLs
+    remain in `sitemap.xml`.
+  - **Internal links:** university profile, `/study/[subject]` table, and the
+    subject comparison table all emit slug URLs. Verified.
+- **Redirects:** UUID→slug handled in-route (no redirect table). Slug can also
+  change if an admin renames a program — the UUID redirect still resolves to
+  the current slug; a previously-indexed *slug* URL would 404, acceptable
+  given these pages are freshly indexed.
+- **Data model:** `programs.json` (version-controlled source of truth)
+  regenerated with `slug`; `seed_programs.mjs` / `export_programs.mjs` updated.
+  `createProgram` auto-generates a unique slug; `updateProgram` keeps it in
+  step with the name.
+- **Testing:** `tsc --noEmit` clean, `next build` compiles. In-browser curl
+  checks above all pass.
+- **Known follow-up (not a regression):** `sitemap.ts`'s program query is
+  >2MB (it pulls `description`/`curriculum` only to compute indexability), so
+  Next's Data Cache skips it. Sitemap still regenerates hourly via route
+  `revalidate`; just re-queries Supabase each time. Optimize by pushing the
+  indexability check into SQL later.
+
 ## 2026-08-30 · Non-AU content moved to `draft` (safety layer)
 
 - **Change:** Ran `scripts/set_unlaunched_countries_draft.mjs --commit`. All

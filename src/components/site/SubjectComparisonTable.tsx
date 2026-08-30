@@ -110,7 +110,7 @@ export function SubjectComparisonTable({
                 </td>
                 <td className="px-3 py-3">
                   <Link
-                    href={`/universities/${p.universitySlug}/programs/${p.id}`}
+                    href={`/universities/${p.universitySlug}/programs/${p.slug}`}
                     className="text-ink hover:text-status-open hover:underline"
                   >
                     {p.name}

@@ -33,6 +33,7 @@ const programs = JSON.parse(fs.readFileSync("scripts/data/programs.json", "utf8"
 const NO_EM_DASH_FIELDS = ["name", "description", "admission_requirements", "english_requirements"];
 const UPSERT_FIELDS = [
   "name",
+  "slug",
   "status",
   "duration_years",
   "tuition_international",
@@ -73,6 +74,7 @@ for (const p of programs) {
   }
   if (p.status === "published" && !p.description?.trim()) emptyPublished += 1;
   if (!p.id || !p.university_slug) errors.push(`${p.name}: missing id or university_slug`);
+  if (!p.slug) errors.push(`${p.name}: missing slug (re-run scripts/export_programs.mjs)`);
 }
 if (errors.length) {
   console.error(`${errors.length} validation error(s):`);

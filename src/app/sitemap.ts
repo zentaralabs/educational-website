@@ -179,7 +179,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }));
 
-  // Program pages (/universities/{slug}/programs/{id}): only the ones with
+  // Program pages (/universities/{slug}/programs/{program-slug}): only the ones with
   // real sourced content of their own are indexed and listed here (see
   // `isProgramIndexable`). The short templated long-tail cards stay noindex
   // and out of the sitemap, still live for users and internal links.
@@ -188,7 +188,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       (p) => p.university?.slug && p.university.status === "published" && isProgramIndexable(p),
     )
     .map((p) => ({
-      url: `${SITE_URL}/universities/${p.university!.slug}/programs/${p.id}`,
+      url: `${SITE_URL}/universities/${p.university!.slug}/programs/${p.slug}`,
       lastModified: p.updated_at ? new Date(p.updated_at) : now,
       changeFrequency: "monthly" as const,
       priority: 0.5,

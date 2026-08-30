@@ -59,7 +59,7 @@ export function ProgramsList({
           {pageItems.map((p) => (
             <Link
               key={p.id}
-              href={`/universities/${universitySlug}/programs/${p.id}`}
+              href={`/universities/${universitySlug}/programs/${p.slug}`}
               className="group flex items-center justify-between gap-4 rounded-md border border-ink/10 bg-paper py-3 pr-3 pl-3 text-sm transition-colors duration-150 hover:border-status-open/60 hover:bg-ink/[0.015]"
               style={{ borderLeftWidth: 3, borderLeftColor: "var(--color-status-open)" }}
             >

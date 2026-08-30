@@ -25,6 +25,7 @@ export function isProgramIndexable(program: {
 
 export type PublicProgramRow = {
   id: string;
+  slug: string;
   name: string;
   duration_years: number | null;
   tuition_international: number | null;
@@ -57,7 +58,7 @@ export async function getPublishedProgramsForUniversity(
   const { data, error } = await supabase
     .from("programs")
     .select(
-      "id, name, duration_years, tuition_international, tuition_domestic, tuition_domestic_is_csp, currency, application_url, admission_requirements, english_requirements, ielts_overall, ielts_listening, ielts_reading, ielts_writing, ielts_speaking, pte_overall, pte_listening, pte_reading, pte_writing, pte_speaking, last_verified_at, source_url, degree_level:degree_levels(name), subject:subjects(name)",
+      "id, slug, name, duration_years, tuition_international, tuition_domestic, tuition_domestic_is_csp, currency, application_url, admission_requirements, english_requirements, ielts_overall, ielts_listening, ielts_reading, ielts_writing, ielts_speaking, pte_overall, pte_listening, pte_reading, pte_writing, pte_speaking, last_verified_at, source_url, degree_level:degree_levels(name), subject:subjects(name)",
     )
     .eq("university_id", universityId)
     .eq("status", "published")
@@ -96,24 +97,26 @@ export type PublicProgramDetail = PublicProgramRow & {
   } | null;
 };
 
+const PROGRAM_DETAIL_SELECT = `id, slug, name, description, curriculum, duration_years, tuition_international, tuition_domestic, tuition_domestic_is_csp, currency, application_url, admission_requirements, english_requirements, ielts_overall, ielts_listening, ielts_reading, ielts_writing, ielts_speaking, pte_overall, pte_listening, pte_reading, pte_writing, pte_speaking, last_verified_at, source_url,
+      degree_level:degree_levels(name), subject:subjects(name),
+      university:universities!inner(id, slug, name, status, city, apply_url, application_fee, tuition_international, tuition_domestic, tuition_domestic_is_csp, currency, ielts_overall, ielts_listening, ielts_reading, ielts_writing, ielts_speaking, pte_overall, pte_listening, pte_reading, pte_writing, pte_speaking, country:countries!inner(code, name, is_launched))`;
+
 /**
- * Fetches a single published program along with the parent university's
- * fallback fields (tuition/English scores) — a program's own value wins
- * when set, and this fills in the university default otherwise, same
- * pattern as ProgramsList's per-program fallback.
+ * Fetches a single published program by its slug + parent university slug,
+ * along with the university's fallback fields (tuition/English scores) — a
+ * program's own value wins when set, the university default fills in
+ * otherwise, same pattern as ProgramsList's per-program fallback.
  */
-export async function getPublishedProgram(
-  programId: string,
+export async function getPublishedProgramBySlug(
+  universitySlug: string,
+  programSlug: string,
 ): Promise<PublicProgramDetail | null> {
-  const supabase = createPublicClient(["programs:list", `program:${programId}`]);
+  const supabase = createPublicClient(["programs:list", `program:${programSlug}`]);
   const { data, error } = await supabase
     .from("programs")
-    .select(
-      `id, name, description, curriculum, duration_years, tuition_international, tuition_domestic, tuition_domestic_is_csp, currency, application_url, admission_requirements, english_requirements, ielts_overall, ielts_listening, ielts_reading, ielts_writing, ielts_speaking, pte_overall, pte_listening, pte_reading, pte_writing, pte_speaking, last_verified_at, source_url,
-      degree_level:degree_levels(name), subject:subjects(name),
-      university:universities!inner(id, slug, name, status, city, apply_url, application_fee, tuition_international, tuition_domestic, tuition_domestic_is_csp, currency, ielts_overall, ielts_listening, ielts_reading, ielts_writing, ielts_speaking, pte_overall, pte_listening, pte_reading, pte_writing, pte_speaking, country:countries!inner(code, name, is_launched))`,
-    )
-    .eq("id", programId)
+    .select(PROGRAM_DETAIL_SELECT)
+    .eq("slug", programSlug)
+    .eq("university.slug", universitySlug)
     .eq("status", "published")
     .eq("university.country.is_launched", true)
     .maybeSingle();
@@ -123,8 +126,33 @@ export async function getPublishedProgram(
   return data as unknown as PublicProgramDetail;
 }
 
+/**
+ * Resolves a legacy `/programs/{uuid}` URL to its current slug URL. The UUID
+ * is the immutable primary key, so this lookup (and the 301 the route issues
+ * from it) is permanent — no redirect table needed.
+ */
+export async function resolveProgramSlugById(
+  programId: string,
+): Promise<{ universitySlug: string; programSlug: string } | null> {
+  const supabase = createPublicClient(["programs:list"]);
+  const { data, error } = await supabase
+    .from("programs")
+    .select("slug, university:universities!inner(slug, status, country:countries!inner(is_launched))")
+    .eq("id", programId)
+    .eq("status", "published")
+    .eq("university.country.is_launched", true)
+    .maybeSingle();
+
+  if (error) throw error;
+  const row = data as unknown as
+    | { slug: string; university: { slug: string; status: string } | null }
+    | null;
+  if (!row || !row.university || row.university.status !== "published") return null;
+  return { universitySlug: row.university.slug, programSlug: row.slug };
+}
+
 export type SitemapProgramRow = {
-  id: string;
+  slug: string;
   updated_at: string | null;
   description: string | null;
   curriculum: string | null;
@@ -148,7 +176,7 @@ export async function listPublishedProgramsForSitemap(): Promise<SitemapProgramR
     const { data, error } = await supabase
       .from("programs")
       .select(
-        "id, updated_at, description, curriculum, university:universities!inner(slug, status, country:countries!inner(is_launched))",
+        "slug, updated_at, description, curriculum, university:universities!inner(slug, status, country:countries!inner(is_launched))",
       )
       .eq("status", "published")
       .eq("university.status", "published")

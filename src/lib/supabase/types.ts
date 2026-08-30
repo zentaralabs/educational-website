@@ -173,6 +173,7 @@ export interface Database {
           id: string;
           university_id: string;
           name: string;
+          slug: string;
           degree_level_id: number;
           subject_id: number | null;
           duration_years: number | null;
@@ -205,6 +206,7 @@ export interface Database {
           id?: string;
           university_id: string;
           name: string;
+          slug?: string;
           degree_level_id: number;
           subject_id?: number | null;
           duration_years?: number | null;

@@ -377,23 +377,25 @@ function ProgramsPanel({
         source_url: sourceUrl || null,
       };
 
-      let id: string;
+      let programSlug: string;
       if (editingId) {
-        id = editingId;
-        await updateProgram(supabase, editingId, fields);
+        const editId = editingId;
+        ({ slug: programSlug } = await updateProgram(supabase, editId, fields));
         setPrograms((prev) =>
           prev.map((p) =>
-            p.id === editingId
-              ? { ...p, ...fields, degree_level, subject, updated_at: new Date().toISOString() }
+            p.id === editId
+              ? { ...p, ...fields, slug: programSlug, degree_level, subject, updated_at: new Date().toISOString() }
               : p,
           ),
         );
       } else {
-        id = await createProgram(supabase, { university_id: universityId, ...fields });
+        const created = await createProgram(supabase, { university_id: universityId, ...fields });
+        programSlug = created.slug;
         setPrograms((prev) => [
           ...prev,
           {
-            id,
+            id: created.id,
+            slug: created.slug,
             university_id: universityId,
             ...fields,
             degree_level,
@@ -409,7 +411,7 @@ function ProgramsPanel({
       setEditingId(null);
       resetForm();
       try {
-        await revalidateProgram(id, universitySlug);
+        await revalidateProgram(programSlug, universitySlug);
       } catch (revalidateErr) {
         console.error("Failed to revalidate public program page:", revalidateErr);
       }
@@ -431,7 +433,8 @@ function ProgramsPanel({
         prev.map((p) => (p.id === programId ? { ...p, status } : p)),
       );
       try {
-        await revalidateProgram(programId, universitySlug);
+        const programSlug = programs.find((p) => p.id === programId)?.slug;
+        if (programSlug) await revalidateProgram(programSlug, universitySlug);
       } catch (revalidateErr) {
         console.error("Failed to revalidate public program page:", revalidateErr);
       }

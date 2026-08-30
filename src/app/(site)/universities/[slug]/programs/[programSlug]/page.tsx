@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { ProfileSection } from "@/components/site/ProfileSection";
 import { VerifiedInline } from "@/components/site/VerifiedInline";
@@ -9,7 +9,29 @@ import { ProgramSidebar } from "@/components/site/ProgramSidebar";
 import { ArrowUpRightIcon, BookIcon } from "@/components/site/icons";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import { SITE_YEAR } from "@/lib/site-config";
-import { getPublishedProgram, isProgramIndexable } from "@/lib/queries/public-programs";
+import {
+  getPublishedProgramBySlug,
+  isProgramIndexable,
+  resolveProgramSlugById,
+} from "@/lib/queries/public-programs";
+
+const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+
+/**
+ * Legacy `/programs/{uuid}` URLs (everything indexed before program slugs
+ * shipped) 301 to the slug URL. The UUID is the immutable primary key, so
+ * this redirect is permanent.
+ */
+async function redirectIfLegacyId(slug: string, programParam: string) {
+  if (!UUID_RE.test(programParam)) return;
+  const resolved = await resolveProgramSlugById(programParam);
+  if (resolved && resolved.universitySlug === slug) {
+    permanentRedirect(
+      `/universities/${resolved.universitySlug}/programs/${resolved.programSlug}`,
+    );
+  }
+  notFound();
+}
 
 export const revalidate = 3600;
 
@@ -40,27 +62,27 @@ function parseCurriculumLine(line: string): CurriculumTerm {
   return { label, units, items };
 }
 
-async function loadProgram(slug: string, programId: string) {
-  const program = await getPublishedProgram(programId);
+async function loadProgram(slug: string, programSlug: string) {
+  const program = await getPublishedProgramBySlug(slug, programSlug);
   if (!program || !program.university || program.university.status !== "published") {
     return null;
   }
-  if (program.university.slug !== slug) return null;
   return program;
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string; programId: string }>;
+  params: Promise<{ slug: string; programSlug: string }>;
 }) {
-  const { slug, programId } = await params;
-  const program = await loadProgram(slug, programId);
+  const { slug, programSlug } = await params;
+  if (UUID_RE.test(programSlug)) return {};
+  const program = await loadProgram(slug, programSlug);
   if (!program) return {};
 
   const title = `${program.name}, ${program.university!.name}: Fees & Entry Requirements ${SITE_YEAR}`;
   const description = `${program.name} at ${program.university!.name} for international students: tuition fees, entry requirements, English test score, duration${program.subject?.name ? `, and how it fits the ${program.subject.name} field` : ""}.`;
-  const url = `/universities/${slug}/programs/${programId}`;
+  const url = `/universities/${slug}/programs/${program.slug}`;
 
   return {
     title,
@@ -80,10 +102,11 @@ export async function generateMetadata({
 export default async function ProgramDetailPage({
   params,
 }: {
-  params: Promise<{ slug: string; programId: string }>;
+  params: Promise<{ slug: string; programSlug: string }>;
 }) {
-  const { slug, programId } = await params;
-  const program = await loadProgram(slug, programId);
+  const { slug, programSlug } = await params;
+  await redirectIfLegacyId(slug, programSlug);
+  const program = await loadProgram(slug, programSlug);
   if (!program) notFound();
 
   const university = program.university!;

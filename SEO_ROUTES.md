@@ -18,7 +18,7 @@ change in `SEO_CHANGELOG.md`.
 | `/universities/[slug]` | Yes | Self | Yes | Critical | ~56 AU unis; non-launched-country slugs 404 |
 | `/universities/in/[state]` | Yes | Self | Yes | High | 8 static state pages; noindex TAS/NT if GSC flags thin |
 | `/universities/[slug]/deadlines` | Partial | Self | Only indexed set | High | Indexed only for slugs in `DEADLINE_PAGE_INDEXED` (~38); rest `noindex` + out of sitemap |
-| `/universities/[slug]/programs/[id]` | Partial | Self | Only `isProgramIndexable` | Medium | Curated programs indexed; templated long-tail cards `noindex`, live for users/links |
+| `/universities/[slug]/programs/[programSlug]` | Partial | Self | Only `isProgramIndexable` | Medium | Slug URLs (was UUID pre-2026-08-30; legacy `/programs/{uuid}` 308s to the slug). Curated programs indexed; templated long-tail `noindex`, live for users/links |
 | `/deadlines` | Yes | Self | Yes | Critical | Filter calendar; Dataset JSON-LD |
 | `/study/[slug]` | Partial | Self | Only `SUBJECT_CONTENT` slugs | High | Curated subject write-ups indexed; templated fallback `noindex` |
 | `/study` | Yes | Self | Yes | High | |

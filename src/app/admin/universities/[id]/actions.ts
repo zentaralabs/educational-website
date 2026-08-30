@@ -21,13 +21,13 @@ export async function revalidateUniversity(slug: string, previousSlug?: string) 
 
 /**
  * Programs are fetched tagged `programs:list` (the university's program
- * list) and `program:${id}` (its own detail page) — bust both directly on
+ * list) and `program:${slug}` (its own detail page) — bust both directly on
  * create/publish/status-change so the program list and its detail page
  * don't wait on the webhook, same reasoning as revalidateUniversity above.
  */
-export async function revalidateProgram(programId: string, universitySlug: string) {
-  revalidateTag(`program:${programId}`, "max");
+export async function revalidateProgram(programSlug: string, universitySlug: string) {
+  revalidateTag(`program:${programSlug}`, "max");
   revalidateTag("programs:list", "max");
   revalidatePath(`/universities/${universitySlug}`);
-  revalidatePath(`/universities/${universitySlug}/programs/${programId}`);
+  revalidatePath(`/universities/${universitySlug}/programs/${programSlug}`);
 }
