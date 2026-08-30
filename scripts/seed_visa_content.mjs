@@ -476,6 +476,88 @@ Neither is easier in itself. PTE is computer marked with faster results and no h
       "https://immi.homeaffairs.gov.au/help-support/meeting-our-requirements/english-language/competent-english",
     ],
   },
+  {
+    slug: "bringing-family-on-an-australian-student-visa",
+    title: "Bringing your partner and children on an Australian student visa",
+    category: "country-guide",
+    country: "AU",
+    excerpt:
+      "A partner and children under 18 can be added to a student visa, but the money you must show goes up, your partner's work rights depend on your course level, and you have to declare family before you lodge even if they stay home.",
+    content: `You can include your partner and dependent children on a [student visa (subclass 500)](/visas/student-500), either in your application or as subsequent entrants later. Three things decide whether it is worth doing: the extra money you must show, your partner's work rights, and school costs for children.
+
+## Who counts as family
+
+- Your partner: a spouse, or a de facto or same-sex partner. A de facto relationship generally has to have existed for at least 12 months before you apply, unless it is registered with an Australian state or territory or there are compelling circumstances.
+- Your, or your partner's, dependent child who is unmarried and under 18 at the time your visa is decided. A child who turns 18 before the decision must apply for their own visa.
+
+Everyone included must meet the health and character requirements, and your partner must also satisfy the case officer that they are a genuine entrant.
+
+## Declare them before you lodge, even if they stay home
+
+This is the trap that cannot be undone. You must list every family member in your student visa application, even the ones who will not travel with you. If you leave a partner or child off the application, they can never get a student visa to join you later. If you are not sure whether your partner will come, declare them anyway.
+
+If someone becomes your family member after you lodge but before the decision, tell Home Affairs straight away. Family members who were declared can later apply on their own as subsequent entrants through ImmiAccount.
+
+## The money goes up
+
+The financial capacity figure you show is per person. On top of the primary applicant's 12-month living cost of around A$29,710, you add:
+
+| Family member | 12-month amount |
+| --- | --- |
+| Partner | A$10,394 |
+| Each dependent child | A$4,449 |
+| School costs, per school-age child | around A$13,502 |
+
+Plus first-year tuition, travel for each person, and a visa application charge for each family member. See [proving your funds](/guides/proving-funds-for-an-australian-student-visa) for how the evidence is assessed. Bringing a partner and one school-age child roughly doubles the living-cost total you have to document.
+
+There is also a second visa application charge for an adult family member who cannot show functional English, unless they provide evidence of it. It is a large fee, so check the current amount before you plan around it.
+
+## Your partner's work rights depend on your course
+
+Your partner works under condition 8104, which is not the same as your own 48-hour rule:
+
+- If you are studying a **bachelor degree, a diploma, or a VET qualification**, your partner is capped at **48 hours per fortnight** while your course is in session, and cannot work at all until your course has started.
+- If you are studying a **masters or a doctorate**, your partner generally has **unrestricted work rights**. The Home Affairs student visa page states this for a masters by research or a doctoral degree, and it is widely applied to coursework masters too. Because it is not spelled out the same way everywhere, check the exact condition on your partner's visa grant letter or in VEVO.
+
+This is the single biggest reason the family maths changes between a bachelor and a masters. A partner on unrestricted work rights can realistically cover a large part of the household's living costs.
+
+## Children and school
+
+Dependent children of school age must be enrolled in school. In most states and territories, international student dependents pay full international school fees, which is why the financial requirement adds a separate school-cost figure. Rules and fee relief vary by state, so check with the education department where you plan to live. Children under five are not required to be in school; childcare and kindergarten are available but not free.
+
+## The Genuine Student angle
+
+Bringing family is normal and thousands of students do it every year, but it does add to what the case officer is weighing. They look at whether your finances genuinely cover everyone, whether the plan is consistent with temporary study, and whether your partner's circumstances make sense. Weak finances stretched across three or four people is a common reason a borderline application tips into a refusal, and [refusal rates are already high](/blog/student-visa-refusal-rate-20-year-high-2026), so the funds evidence for the whole family unit has to be solid. See [what to do if your student visa is refused](/guides/what-to-do-if-your-student-visa-is-refused).
+
+## If permanent residence is the longer plan
+
+A partner in Australia on a dependent visa builds local work experience and, if they hold a suitable qualification, can later be assessed for skilled migration in their own right, or contribute [partner points](/guides/how-the-australian-points-test-works) to your [skilled visa](/guides/study-to-permanent-residence-pathway-australia) if they meet the skill, age and English tests. Only one of you claims the partner points, and you cannot both be primary on the same application, so it is worth working out early which of you has the stronger occupation and profile.
+
+## Can I bring my wife or husband on an Australian student visa?
+
+Yes. A spouse, or a de facto or same-sex partner, can be included as a family member on a subclass 500 student visa, either in your application or later as a subsequent entrant. You must show additional funds of around A$10,394 for a partner and prove the relationship is genuine.
+
+## Can my partner work full time on a student dependent visa?
+
+It depends on your course. If you are studying a bachelor degree or lower, your partner is limited to 48 hours per fortnight. If you are studying a masters or doctorate, your partner generally has unrestricted work rights. Check your partner's visa grant letter for the exact condition.
+
+## What happens if I did not declare my partner on my student visa application?
+
+An undeclared family member cannot be granted a student visa to join you at any later stage. The only way to bring them is a different visa in their own right, if one fits. Always declare family members even if they will not travel with you.
+
+## How much extra money do I need to bring my family on a student visa?
+
+As a guide, around A$10,394 for a partner and A$4,449 for each child in living costs, plus roughly A$13,502 a year per school-age child in school fees, plus travel and a visa charge for each person. This is on top of your own living costs and tuition.
+
+## Does my partner need to sit IELTS for a student dependent visa?
+
+Not to meet an English entry standard the way you do. But an adult family member without functional English must either provide evidence of it or pay a second visa application charge before the visa is granted.`,
+    sources: [
+      "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
+      "https://www.studyaustralia.gov.au/en/plan-your-move/bringing-your-family",
+      "https://www.studyaustralia.gov.au/en/plan-your-move/your-guide-to-visas/student-visa-subclass-500",
+    ],
+  },
 ];
 
 // ---------------------------------------------------------------------------
