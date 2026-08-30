@@ -199,6 +199,9 @@ export interface Database {
           status: ContentStatus;
           last_verified_at: string | null;
           source_url: string | null;
+          /** Generated column (migration 0023): mirrors isProgramIndexable().
+           * Read-only — never written. */
+          content_indexable: boolean;
           created_at: string;
           updated_at: string;
         },

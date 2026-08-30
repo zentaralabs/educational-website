@@ -402,6 +402,11 @@ function ProgramsPanel({
             subject,
             status: "draft",
             last_verified_at: null,
+            // Generated server-side (migration 0023); this optimistic value is
+            // replaced by router.refresh() below.
+            content_indexable:
+              Boolean(fields.curriculum?.trim()) ||
+              (fields.description ?? "").trim().split(/\s+/).filter(Boolean).length >= 100,
             created_at: new Date().toISOString(),
             updated_at: new Date().toISOString(),
           },

@@ -13,10 +13,7 @@ import { listPublishedScholarshipSlugs } from "@/lib/queries/public-scholarships
 import { listPublishedSubjects } from "@/lib/queries/public-subjects";
 import { listPublishedUniversitySlugs } from "@/lib/queries/public-universities";
 import { listPublishedVisaSlugs } from "@/lib/queries/public-visas";
-import {
-  isProgramIndexable,
-  listPublishedProgramsForSitemap,
-} from "@/lib/queries/public-programs";
+import { listPublishedProgramsForSitemap } from "@/lib/queries/public-programs";
 
 export const revalidate = 3600;
 
@@ -179,14 +176,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }));
 
-  // Program pages (/universities/{slug}/programs/{program-slug}): only the ones with
-  // real sourced content of their own are indexed and listed here (see
-  // `isProgramIndexable`). The short templated long-tail cards stay noindex
-  // and out of the sitemap, still live for users and internal links.
+  // Program pages (/universities/{slug}/programs/{program-slug}): the query
+  // already filters to `content_indexable` rows (migration 0023, mirrors
+  // isProgramIndexable). Short templated long-tail cards stay noindex and out
+  // of the sitemap, still live for users and internal links.
   const programEntries: MetadataRoute.Sitemap = programRows
-    .filter(
-      (p) => p.university?.slug && p.university.status === "published" && isProgramIndexable(p),
-    )
+    .filter((p) => p.university?.slug && p.university.status === "published")
     .map((p) => ({
       url: `${SITE_URL}/universities/${p.university!.slug}/programs/${p.slug}`,
       lastModified: p.updated_at ? new Date(p.updated_at) : now,

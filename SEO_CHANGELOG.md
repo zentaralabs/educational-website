@@ -47,6 +47,43 @@ Redirects · Canonical/sitemap/metadata changes · Testing done.**
 - **Testing:** `tsc --noEmit` clean. In-browser check needs a logged-in admin
   (panel is auth-gated) — pending.
 
+## 2026-08-30 · Program-page quality audit + sitemap query fix
+
+### Audit findings (no indexation change needed)
+
+Distribution of 1,020 published AU program pages:
+- **868 indexed** (in sitemap), **152 noindex** — the 152 are all 50–99 word
+  descriptions with no curriculum. Correctly held back.
+- Of the 868 indexed: **596 have a parsed curriculum** (description + course
+  structure + admissions + source), **272 are description-only** (100–159
+  words, no curriculum).
+- **All 868** have a `source_url`, a `last_verified_at`, and (863) admissions
+  text; every page also renders a structured sidebar + FAQ section + `FAQPage`
+  + `EducationalOccupationalProgram` schema + breadcrumb.
+- Spot-checked 6 of the 272 description-only pages: prose is specific and
+  differentiated (unit counts, named accreditation bodies, named campuses and
+  internship partners, ATAR/IELTS, exit points) — not AI boilerplate.
+
+**Verdict:** the `isProgramIndexable` bar (curriculum OR ≥100-word description)
+is working. Keep all 868 indexed. The 272 description-only pages are modest but
+genuinely useful data pages, not doorway/thin content. Revisit only if GSC
+later flags a subset as low-value. The 152 noindexed remain a deferred
+enrichment wave (Bond/Canberra/Murdoch/Adelaide short cards).
+
+### Sitemap query fix
+
+- **Change:** Migration `0023_add_program_content_indexable.sql` adds a stored
+  generated column `programs.content_indexable` mirroring `isProgramIndexable`.
+  `listPublishedProgramsForSitemap` now filters on it in SQL and stops
+  selecting the full `description`/`curriculum` text.
+- **Why:** that query's response was ~2.1MB, over Next's 2MB Data Cache limit,
+  so every sitemap regen re-hit Supabase (`Failed to set Next.js data cache …
+  items over 2MB` on build).
+- **SEO impact:** NONE — identical URL set. Verified: sitemap still lists 868
+  program URLs (all slugs, 0 UUIDs), 1,145 total. Build no longer logs the 2MB
+  warning. Column cross-checked against the JS logic over all 1,020 rows:
+  868 true / 152 false, exact match.
+
 ## 2026-08-30 · Program URLs: UUID → human-readable slug
 
 - **Change:** Program pages moved from

@@ -154,18 +154,16 @@ export async function resolveProgramSlugById(
 export type SitemapProgramRow = {
   slug: string;
   updated_at: string | null;
-  description: string | null;
-  curriculum: string | null;
   university: { slug: string; status: string } | null;
 };
 
 /**
- * All published programs at launched universities, with the fields needed to
- * decide indexability (`isProgramIndexable`) and their parent university's
- * slug, for the sitemap. The caller filters to indexable rows. Paginated in
- * pages of 1000 — PostgREST's default response cap, already hit once before
- * by this project's own program count (see PROJECT_STATUS.md Section 13's
- * "1,103 total AU program rows" note).
+ * Every indexable published program at a launched university, with its
+ * parent university's slug, for the sitemap. Indexability is filtered in SQL
+ * via the `content_indexable` generated column (migration 0023) — pulling
+ * the full `description`/`curriculum` text here to compute it in JS pushed
+ * the response past Next's 2MB Data Cache limit. Paginated in pages of 1000
+ * (PostgREST's default response cap).
  */
 export async function listPublishedProgramsForSitemap(): Promise<SitemapProgramRow[]> {
   const supabase = createPublicClient(["programs:list"]);
@@ -176,9 +174,10 @@ export async function listPublishedProgramsForSitemap(): Promise<SitemapProgramR
     const { data, error } = await supabase
       .from("programs")
       .select(
-        "slug, updated_at, description, curriculum, university:universities!inner(slug, status, country:countries!inner(is_launched))",
+        "slug, updated_at, university:universities!inner(slug, status, country:countries!inner(is_launched))",
       )
       .eq("status", "published")
+      .eq("content_indexable", true)
       .eq("university.status", "published")
       .eq("university.country.is_launched", true)
       .range(from, from + pageSize - 1);
