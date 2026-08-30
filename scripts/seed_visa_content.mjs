@@ -180,6 +180,77 @@ const guides = [
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500/work-conditions-for-student-visa-holders",
     ],
   },
+  {
+    slug: "study-gaps-and-the-australian-student-visa",
+    title: "Study gaps and the Australian student visa",
+    category: "country-guide",
+    country: "AU",
+    excerpt:
+      "There is no maximum study gap for an Australian student visa. What decides the outcome is how well you document the gap and whether the course still makes sense for you. Here is how the Genuine Student assessment treats it.",
+    content: `A lot of advice online quotes firm limits: two years for an undergraduate course, five for a postgraduate one, ten if you have work experience. Those numbers are agent conventions and, in some cases, individual university admission preferences. They are not visa rules. The Department of Home Affairs sets no maximum study gap for the [subclass 500](/visas/student-500), and the Genuine Student criterion it uses to assess applications does not mention one.
+
+What actually happens is that your gap is one of several things a case officer weighs. A well-documented five-year gap is stronger than a vague one-year gap.
+
+## Two separate gates
+
+- **University admission.** Each provider sets its own view. Some want recent study for direct entry, some accept long gaps if you have relevant work, some do not ask at all. This is a question for the admissions team, not immigration.
+- **The visa.** Assessed under the Genuine Student requirement. Here the gap matters only through the questions the officer is already asking: are your circumstances genuine, does the course fit your background, and will it improve your prospects.
+
+## What the officer is looking for
+
+Home Affairs asks applicants to provide evidence of employment or business activities for the 12 months before lodging an application. That is the clearest signal in the policy: the period right before you apply is the one you most need to account for. It also weighs whether the course is consistent with your current level of education and whether it will help your employment prospects back home.
+
+So a gap raises questions in two ways. If you cannot show what you were doing, it looks like the study plan is a cover for something else. If the course does not build on your history, a long gap makes the jump look even less genuine.
+
+## Explanations that work, and the evidence for each
+
+| Reason for the gap | Evidence to attach |
+| --- | --- |
+| Full-time work | Employer letter with role and dates, payslips, tax records, a named contact |
+| Running a business | Business registration, tax filings, bank statements |
+| Family or caring responsibilities | A written explanation plus supporting documents |
+| Health | Medical certificates covering the period |
+| Saving for the course | Bank statements showing the build-up, plus what you were doing to earn |
+| An earlier visa refusal | Address the exact reason on that decision, do not hide it. See [what to do if your student visa is refused](/guides/what-to-do-if-your-student-visa-is-refused) |
+| Military service | Discharge or service documents |
+
+Work experience is the strongest of these, because it doubles as the reason the course makes sense now: you have done the job, and the qualification formalises it.
+
+## What makes a gap riskier
+
+- A long gap plus a course that does not connect to your study or work history
+- Weak ties to your home country, meaning no job to return to, no family, no assets
+- A first application, minimum English, and a high-refusal passport in the same profile. Refusal rates by nationality are covered in [this post](/blog/student-visa-refusal-rate-20-year-high-2026)
+
+Longer gaps do not fail on length. They fail when the documentation is thin or the course choice does not add up.
+
+## How to put it in the Genuine Student answers
+
+The form gives you four capped responses. Use the current circumstances answer to state plainly what you did during the gap, with the employer or activity named. Use the why this course answer to connect that period to the course: what you learned, what you could not progress without the qualification, what role you are aiming for afterward. Specific beats general every time. The [Genuine Student statement guide](/guides/genuine-student-requirement-how-to-write-your-statement) covers the full structure, and [the Genuine Student test explained](/blog/genuine-student-test-explained) covers how the assessment changed in 2024.
+
+## If permanent residence is part of the plan
+
+A gap costs you time you may need later. The [subclass 485 graduate visa](/visas/temporary-graduate-485) has an age-35 cap for most applicants, and the [skilled points test](/guides/how-the-australian-points-test-works) pays the most points between ages 25 and 32. If you are in your early thirties with a gap behind you, map the [study to permanent residence pathway](/guides/study-to-permanent-residence-pathway-australia) before you enrol, because the runway is shorter than it looks.
+
+## Is there a maximum study gap for an Australian student visa?
+
+No. Neither the Migration Regulations nor the Genuine Student policy sets a limit. The figures you see online, such as two years for undergraduate or five for postgraduate study, are guidance from agents and individual universities, not visa rules.
+
+## Will a study gap get my student visa refused?
+
+Not on its own. A gap that is clearly documented, with a course that fits your background and prospects, is routinely approved. A gap becomes a problem when you cannot evidence what you were doing, or the course does not connect to your history.
+
+## How do I explain a study gap in the Genuine Student answers?
+
+Name what you did and attach proof: an employer letter and payslips for work, registration and tax records for a business, medical certificates for health. Then link that period to the course in your why this course answer. Keep each response inside the 150-word limit.
+
+## Does a study gap affect permanent residence later?
+
+Indirectly. The gap itself is not counted against a skilled visa, but it uses up time. The 485 graduate visa is capped at age 35 for most applicants, and age points on the skilled test fall after 32, so a longer gap leaves you less room to reach a competitive score.`,
+    sources: [
+      "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500/genuine-student-requirement",
+    ],
+  },
 ];
 
 // ---------------------------------------------------------------------------
