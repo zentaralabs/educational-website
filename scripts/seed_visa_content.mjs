@@ -251,6 +251,90 @@ Indirectly. The gap itself is not counted against a skilled visa, but it uses up
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500/genuine-student-requirement",
     ],
   },
+  {
+    slug: "which-australian-courses-lead-to-permanent-residence",
+    title: "Which Australian courses actually lead to permanent residence",
+    category: "country-guide",
+    country: "AU",
+    excerpt:
+      "Not every degree creates a migration pathway. What matters is the occupation your course maps to, whether an assessing authority will assess it, and whether it gets invited. Here is the field-by-field picture using the most recent invitation round.",
+    content: `Plenty of people enrol in an Australian course "for PR" without checking whether the course leads anywhere. The [study to permanent residence pathway](/guides/study-to-permanent-residence-pathway-australia) has a fixed shape: finish a qualification, move to a [485 graduate visa](/visas/temporary-graduate-485), get a [skills assessment](/guides/getting-a-skills-assessment-in-australia), build a [points score](/guides/how-the-australian-points-test-works), and get invited to a skilled visa. Your course choice decides whether the last two steps are realistic.
+
+## The test your course has to pass
+
+The [subclass 189](/visas/skilled-independent-189) points-tested stream requires an occupation on a current skilled list, a suitable skills assessment, an invitation, and a passing points score. Three things have to line up:
+
+1. The course maps to an occupation on a current skilled list.
+2. An assessing authority will assess that occupation, sometimes only after a period of post-qualification work.
+3. The occupation actually gets invited at a score you can reach.
+
+Most course choices fail on the third point. An occupation can sit on the list for years and receive no invitations, because far more high-scoring people are in the pool than there are places.
+
+## What the most recent round actually invited
+
+In the 4 June 2026 subclass 189 round, 10,000 invitations went out. The minimum score invited, by occupation group:
+
+| Occupation group | Minimum score invited, 4 June 2026 |
+| --- | --- |
+| Construction trades: carpenter, electrician, plumber, bricklayer, tiler, plasterer, glazier | 65 |
+| Metal and automotive trades: fitter, welder, metal fabricator, automotive electrician, refrigeration mechanic | 80 to 85 |
+| Registered nurses and midwives | 75 to 80 |
+| Secondary and special needs teachers | 75 to 85 |
+| Allied health: physiotherapy, occupational therapy, social work, speech pathology, radiography, medical laboratory science | 75 to 85 |
+| Electronics and telecommunications engineers | 95 |
+| Accountants, auditors, software and ICT roles, civil, mechanical and electrical engineers | Not invited in this round |
+
+That last row is the important one. Accounting, mainstream IT, and the big engineering disciplines received no 189 invitations at all in the June 2026 round. In earlier rounds they were invited, but only in the 90 to 100 range. Either way, a fresh graduate does not reach them through the 189.
+
+A graduate with a [485](/visas/temporary-graduate-485), a year of local work, good English and no partner points usually scores 70 to 85.
+
+## Field by field
+
+**Nursing.** Maps to Registered Nurse. The program must be ANMAC accredited, and registration sets one of the highest English bars of any field, around IELTS 7 or OET B in every component. Invited at 75 to 80, so a normal graduate profile clears it. One of the clearest routes. See [nursing and health universities](/best/best-australian-universities-for-nursing-and-health-sciences).
+
+**Teaching.** Secondary school teachers and special needs teachers were invited at 75, and special education teachers at 85. Programs need AITSL-aligned accreditation and the same high English bar as nursing.
+
+**Trades.** Construction trades clear at 65. The catch is the skills assessment: a Certificate III on its own is not enough. Trades Recognition Australia wants evidence of hands-on experience, usually through an Australian apprenticeship or the Job Ready Program. Plan the work component, not just the enrolment. Metal and automotive trades were invited higher, at 80 to 85, in the June round.
+
+**Engineering.** Civil, mechanical and electrical engineering map to occupations assessed by Engineers Australia, but they received no 189 invitations in June 2026 and needed around 90 in the rounds before that. Electronics and telecommunications engineering were invited, at 95. For most engineering graduates the realistic route is [state nomination](/visas/skilled-nominated-190), a [regional](/visas/skilled-work-regional-491) location, or stacking extra points through regional study, a Professional Year and partner points. See [engineering universities](/best/best-australian-universities-for-engineering) and the [regional universities list](/best/regional-australian-universities-for-skilled-migration).
+
+**IT and computer science.** Maps to software and applications programmers and ICT analysts, assessed by the ACS, which requires relevant work after graduation before it will assess. These are among the most oversubscribed occupations and were not invited in the June 2026 189 round. A graduate's realistic route is [state nomination](/visas/skilled-nominated-190) or [regional](/visas/skilled-work-regional-491). See [computer science](/best/best-australian-universities-for-computer-science) and [information technology](/best/best-australian-universities-for-information-technology) universities.
+
+**Accounting.** A Master of Professional Accounting accredited by CPA Australia, CA ANZ or the IPA makes you eligible for the Accountant assessment. Same problem as IT: heavily oversubscribed, no 189 invitations in June 2026, state nomination is the practical path. A generic Master of Commerce or finance degree does not carry the accreditation and does not map to Accountant.
+
+**Other allied health.** Physiotherapy, occupational therapy, medical laboratory science, medical imaging, and social work are accredited, on the lists, and were invited at 75 to 85. Solid, though usually harder or longer to enter than nursing.
+
+## Courses that do not create a pathway on their own
+
+A general MBA, a Master of Business, Commerce or Management, and most marketing, human resources, project management and international business degrees do not lead to PR by themselves. The occupations they relate to are either off the 189 list, on the short-term list that only feeds the [190 and 491](/visas/skilled-nominated-190), or need years of specific work experience the degree does not provide. They are career investments, not migration pathways, and only form part of a PR plan if you already qualify for an occupation through earlier study or work. The same applies to most arts, humanities and generalist science degrees at bachelor level.
+
+## How to choose
+
+1. Pick the target occupation first. Check it is on a current skilled list and note the assessing authority.
+2. Check recent invitation results for that occupation on the [invitation rounds page](/visas/invitation-rounds), and run your likely profile through the [points calculator](/visas/points-calculator).
+3. If the occupation is oversubscribed, plan around [state nomination or a regional area](/best/regional-australian-universities-for-skilled-migration) from the start.
+4. Only then pick a [CRICOS registered course](/guides/cricos-and-course-accreditation-explained) that satisfies that authority and meets the two year Australian study requirement.
+
+## Does an MBA help with PR in Australia?
+
+Not directly. There is no MBA occupation on the skilled lists, and the management occupations an MBA relates to generally need substantial relevant work experience rather than a qualification alone. An MBA can strengthen a case built on an occupation you already qualify for, but it does not create a pathway from an unrelated background.
+
+## Which course has the best PR chances?
+
+Judged by invitation results, accredited nursing and teaching programs, and construction trades with a genuine work component, are the most reliable, because they are invited close to the 65 point floor or in the mid 70s. Engineering, IT and accounting all lead to PR but need state nomination or a regional strategy for a fresh graduate.
+
+## Is IT still a good PR pathway in Australia?
+
+It is still a pathway, but not through the [189](/visas/skilled-independent-189) for a new graduate. ICT occupations were not invited in the June 2026 189 round and needed scores in the 90s before that. Plan around [state nomination](/visas/skilled-nominated-190) or a [regional](/visas/skilled-work-regional-491) location, both of which run off their own occupation lists with lower effective cut-offs.
+
+## Do I need to study a two year course?
+
+For the [485 graduate visa](/visas/temporary-graduate-485) you must meet the Australian study requirement, which is at least two academic years of study in Australia. A single one year masters does not meet it on its own, though two one year qualifications can combine.`,
+    sources: [
+      "https://immi.homeaffairs.gov.au/visas/working-in-australia/skillselect/invitation-rounds",
+      "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189/points-tested",
+    ],
+  },
 ];
 
 // ---------------------------------------------------------------------------
