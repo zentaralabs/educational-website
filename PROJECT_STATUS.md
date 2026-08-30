@@ -1042,3 +1042,31 @@ Follow-on tweaks after review:
 - Commits: `84b08f8` (flags), `760ebff` (CTA), `db7db76` (drop redundant card), `ca1f1c9` (green Enter), `f5c57fe` (search scope), `00c884e` (Australia focus). All pushed + deploying.
 
 **Sitemap:** none of the 2026-08-30 work (curation, comparison tables, homepage polish) adds or removes URLs — the sitemap URL set is unchanged since the ~868-program-URL / 1,145-total version. The GSC + Bing resubmit noted at the top of Section 27 (for that 1,145-URL version, after the threshold-100 push) is **still outstanding on the user** and still worth doing; today's content changes to `/study/*` and `/` just make a resubmit a slightly better nudge for recrawl.
+
+---
+
+## 28. Search infrastructure state — GSC / Bing / GA4 (2026-08-30, later session, verified via Claude-in-Chrome)
+
+Supersedes the scattered "still on user" notes above. This is the current consolidated state.
+
+### Redirects — DONE (Vercel platform, no code)
+- `http://wheretoapply.xyz` / `https://wheretoapply.xyz` / `http://www.wheretoapply.xyz` all **308** to `https://www.wheretoapply.xyz/` (the canonical host, matches `SITE_URL`). `https://www.wheretoapply.xyz` serves 200. `next.config.ts` has no redirects — Vercel handles it.
+- Minor: the `http://` apex takes 2 hops (http-apex → https-apex → https-www). Harmless, standard Vercel behaviour, not worth fixing.
+
+### Google Search Console
+- Domain property `sc-domain:wheretoapply.xyz` under **`romanlama314@gmail.com`**, already verified (DNS TXT was done in an earlier session).
+- Sitemap `https://www.wheretoapply.xyz/sitemap.xml` submitted + **re-submitted 2026-08-30**. Status still showed **"Couldn't fetch"** (Last read: empty) — assessed as **Google-side processing lag, not a real problem**: the sitemap is valid (200, `application/xml`, 1,145 URLs, in robots.txt), Bing fetched the identical URL successfully the same day, and GSC already shows the site being crawled (23 HTTPS pages known, 11 breadcrumb items + 1 dataset detected). **USER: check GSC → Sitemaps again ~2026-09-01; expect "Success". If still failing after 3 days, escalate.**
+
+### Bing Webmaster Tools — DONE
+- Site `https://wheretoapply.xyz/` added (apex form; Bing follows the 308 to www).
+- Sitemap submitted, **Status: Success, ~1.1K URLs discovered** (2026-08-30). IndexNow key file (`/b1d94f7a…​.txt`) live; revalidate webhook pings it.
+
+### GA4 — DONE (was wrongly flagged as missing)
+- Property `wheretoapply.xyz` — account `406186763`, property `551862168`, web stream `15512588839` (`https://www.wheretoapply.xyz`). **Live and collecting data** (real sessions visible).
+- `NEXT_PUBLIC_GA_MEASUREMENT_ID` **is set** in Vercel Production. The tag is client-side and gated behind cookie-consent acceptance (`src/components/site/Analytics.tsx`), so it never appears in server HTML / `curl` — that is by design, not a misconfiguration. Earlier notes calling GA4 "not configured / inert" are stale.
+- **GA4 ↔ Search Console link created 2026-08-30** (linked by `romanlama314@gmail.com`). The "Search Console" report collection auto-published ("Published to all"). Reports appear under **GA4 → Reports → Search Console → "Queries"** and **"Google organic search traffic"** — no data until GSC data flows (~24–48h after linking).
+
+### What remains (all user, no code)
+- Check the GSC sitemap flips to "Success" (~2 days).
+- Once GSC Performance has ~1–2 weeks of query/impression data, use it to pick which of the 5 intent-cluster content pages to build first (see the SEO roadmap). This is the gate on further content work.
+- Optional: `public/ads.txt` when the AdSense publisher ID is issued (currently 404, only matters at AdSense approval).
