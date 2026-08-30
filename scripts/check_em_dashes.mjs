@@ -27,11 +27,29 @@ const TARGETS = [
   { table: "blog_posts", id: "slug", cols: ["title", "excerpt", "content"] },
   { table: "scholarships", id: "slug", cols: ["name", "description", "eligibility"] },
   {
-    table: "visas",
+    // The table is visa_subclasses, not "visas" (migration 0019). The old
+    // "visas" entry silently matched nothing, so visa prose went unchecked.
+    table: "visa_subclasses",
     id: "slug",
-    cols: ["name", "short_description", "summary", "pr_pathway", "eligibility", "conditions", "content"],
+    cols: [
+      "name",
+      "short_description",
+      "summary",
+      "content",
+      "english_requirement",
+      "work_experience_requirement",
+      "pr_pathway",
+      "eligibility",
+      "conditions",
+    ],
   },
-  { table: "universities", id: "slug", cols: ["who_is_it_for", "how_to_apply"] },
+  { table: "invitation_rounds", id: "round_date", cols: ["notes", "occupation_notes"] },
+  { table: "deadlines", id: "university_id", cols: ["notes"] },
+  {
+    table: "universities",
+    id: "slug",
+    cols: ["who_is_it_for", "how_to_apply", "distinctive_summary", "international_student_notes"],
+  },
   {
     table: "programs",
     id: "name",
