@@ -18,7 +18,10 @@ export const SITE_URL = (
  */
 export const SITE_YEAR = new Date().getFullYear();
 
-// Launching country-by-country — see PROJECT_STATUS.md's 2026-08-27 note.
-// Update this once a second country goes live (currently Australia only).
+// Australia only, and the public URL structure commits to it: routes are flat
+// and un-prefixed (no /australia/ segment). A future second country would get
+// its own path prefix (/uk/...) rather than triggering a site-wide migration.
+// See PROJECT_STATUS.md Section 1 + 4 and SEO_CHANGELOG.md (2026-08-30).
+// Update this string only once a second country actually goes live.
 export const SITE_DESCRIPTION =
   "Application deadlines, admissions requirements, tuition costs, and scholarships for universities in Australia. Plus how-to guides for personal statements, visas, and international applications.";

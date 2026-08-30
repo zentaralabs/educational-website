@@ -9,7 +9,7 @@ Status: **Built and deploying.** App, admin panel, schema, and Australia dataset
 
 A content platform helping students find and apply to universities — deadlines, application requirements, costs, scholarships, and how-to guides. Evergreen niche (application cycles repeat forever, unlike trend-driven content).
 
-**Initial geographic scope:** Australia only (live). US, UK, and Canada are planned but not built; the schema and country-launch flag already support adding them.
+**Geographic scope:** Australia only, and the URL structure now commits to this (decision 2026-08-30, see `SEO_CHANGELOG.md`). Public routes are **flat and un-prefixed** — `/universities/...`, `/visas/...`, `/scholarships/...` — i.e. the whole site *is* the Australia site. The `countries.is_launched` flag and multi-country schema stay in place, but if a second country is ever launched it gets its **own path prefix** (`/uk/universities/...`) and Australia's existing URLs never move. No site-wide `/australia/` migration.
 
 **Core differentiator:** most competitors are either static directories (no real usefulness) or generic blogs (thin, AI-sounding, easily lost in search). This site is built around:
 - A structured, queryable deadline/fact database (not prose-buried facts) — hard to replicate, genuinely useful
@@ -47,18 +47,26 @@ A content platform helping students find and apply to universities — deadlines
 
 ## 4. Site structure (information architecture)
 
-```
-/us/  /uk/  /canada/  /australia/
-  /deadlines/        → filterable calendar view
-  /how-to-apply/
-  /universities/     → profiles
-  /scholarships/
-  /visas-and-costs/
+Flat, un-prefixed (Australia is the whole site — see Section 1 and `SEO_ROUTES.md` for the full route inventory):
 
-/compare/   → cross-country and cross-university comparison content (key differentiator)
-/guides/    → country-agnostic evergreen guides (SOPs, LORs, test prep)
-/blog/      → timely posts (policy/deadline changes), feeds internal linking
 ```
+/universities/          → faceted index + /universities/[slug] profiles
+/universities/in/[state]
+/universities/[slug]/deadlines
+/universities/[slug]/programs/[id]
+/deadlines/             → filterable calendar view
+/study/[subject]        → "study X in Australia" subject pages
+/visas/ /visas/[slug] /visas/points-calculator /visas/invitation-rounds
+/scholarships/ /scholarships/[slug]
+/best/[slug]            → "best for X" decision collections
+/compare/ /compare/[slug] /compare/universities
+/international/[country] → what's different for applicants from India/Nepal/…
+/guides/[slug]          → evergreen how-to (SOPs, LORs, test prep)
+/blog/[slug]            → timely posts (policy/deadline changes)
+/cost-of-living/[city]  /cost-calculator
+```
+
+If a second country ever launches: `/uk/...` prefix for the new country only; nothing above moves.
 
 Navigation: persistent minimal top nav (4–5 items max), faceted filtering on listing pages rather than deep menus, Command-K style site search, breadcrumbs on deep pages.
 

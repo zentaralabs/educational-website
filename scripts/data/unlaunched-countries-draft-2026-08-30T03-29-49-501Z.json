@@ -1,0 +1,1513 @@
+{
+  "stamp": "2026-08-30T03-29-49-501Z",
+  "universities": [
+    {
+      "id": "92490c00-a0fc-42f7-aeb8-fe4b4ca8c45c",
+      "slug": "acadia-university",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "f16f1603-9a2f-469a-a781-7a1f762f0c45",
+      "slug": "algonquin-college",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "79b5819e-6044-4b80-bf7a-e20302f4bcad",
+      "slug": "athabasca-university",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "66977461-2c41-44c9-a595-d8bc75a3c84a",
+      "slug": "bcit",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "8c4bcc44-eb94-4263-a7fc-91f93184cb4c",
+      "slug": "bishops-university",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "4b0521a2-3759-4dd5-bc00-2f9f7902d543",
+      "slug": "brandon-university",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "8b1a8c1f-d2ed-47eb-81c5-6c4ec6f9c13d",
+      "slug": "brock-university",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "bfe90608-92e9-4705-a883-4f3dffae01dc",
+      "slug": "cape-breton-university",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "46d2342f-b82f-4629-9ee4-a062103b5cf0",
+      "slug": "carleton-university",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "d37ca580-b1c8-45ff-bc92-9567beb81439",
+      "slug": "concordia-university",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "1935edb9-8056-4418-8b6c-97ab54ab35db",
+      "slug": "dalhousie-university",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "8c65b6e8-7894-4ca1-bde8-2a9edc7596aa",
+      "slug": "emily-carr-university",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "a569d1d8-68b6-4b5f-952d-2795a3fdf31e",
+      "slug": "george-brown-college",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "168ce9d2-7a62-4821-87cb-f6d59ab12455",
+      "slug": "hec-montreal",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "0c3d5e8b-b3e0-4089-a635-9b13d9c25656",
+      "slug": "humber-college",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "ea14c309-e077-4d78-941e-e114b8b52063",
+      "slug": "kwantlen-polytechnic-university",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "d419b8e6-5ba0-49f1-8737-c97cb6a00952",
+      "slug": "lakehead-university",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "ba73c810-b7bc-4830-be9d-ce1b06018c9b",
+      "slug": "laurentian-university",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "4039836b-f330-4b70-b6f8-6896e4c13730",
+      "slug": "macewan-university",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "5bca2178-47ea-4425-9d1e-0ec33206159a",
+      "slug": "mcgill-university",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "4d86a919-d4f6-4f5c-b32a-d284cb8a8fe0",
+      "slug": "mcmaster-university",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "33408521-a219-4952-a2da-63adba6a9276",
+      "slug": "memorial-university-of-newfoundland",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "e09d10c6-334c-489d-858e-a143ec9f7446",
+      "slug": "mount-allison-university",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "ca739718-60f3-4307-b15d-b35094b6f34f",
+      "slug": "mount-royal-university",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "48883f13-e16e-426f-af36-57dfb9c43d24",
+      "slug": "nait",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "ea113d14-1a9b-419f-b4b6-5f0029ea6401",
+      "slug": "ocad-university",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "5722317e-efa9-4475-8517-ddc8c9df9f70",
+      "slug": "ontario-tech-university",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "7144b1ee-4cb0-43ba-806b-bdd1d0c2b830",
+      "slug": "polytechnique-montreal",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "ba586a99-74fb-4d63-b85d-1d2c06583873",
+      "slug": "queens-university",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "1ea910de-f373-491d-ab56-3e10b540fecb",
+      "slug": "royal-military-college-of-canada",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "d68a6a5f-78d1-4d1d-a67d-e47248700784",
+      "slug": "saint-marys-university",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "52ed1b3b-983d-47e2-92f5-9ef8b4c24b54",
+      "slug": "sait",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "6c9f2184-aef2-4fa1-b9d6-ad37d4d55315",
+      "slug": "seneca-polytechnic",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "be6f090a-b99f-47e0-afd0-74f5ade834b3",
+      "slug": "sheridan-college",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "5173168c-d8b2-434a-98c8-d095155e1097",
+      "slug": "simon-fraser-university",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "ede5b3e4-37ab-452a-8def-bbf8254bd1e1",
+      "slug": "st-francis-xavier-university",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "9c3a87d1-ca24-4425-af5f-cc4957ca5bd7",
+      "slug": "thompson-rivers-university",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "a09dbc04-e2b3-4e4f-b057-c50fcc481502",
+      "slug": "toronto-metropolitan-university",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "4ad2c412-dc6b-4a16-9be9-7a5c591eb20b",
+      "slug": "trent-university",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "102e9f87-36a7-46df-92d3-204e8eee9640",
+      "slug": "universite-de-moncton",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "b17ce395-9d10-4911-b7ea-0a914894c224",
+      "slug": "universite-de-montreal",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "77f62e86-89f1-431f-a4df-e2e04b71025c",
+      "slug": "universite-de-sherbrooke",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "11b7c5b1-fcad-49c1-bb13-2895178bee6e",
+      "slug": "universite-laval",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "bfde2527-3fdf-4f33-aeb0-8a902f41a86a",
+      "slug": "university-of-alberta",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "815000db-fc8c-4b10-a4cb-c48c14901b82",
+      "slug": "university-of-british-columbia",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "5810f302-002d-44c9-8aa8-9d12dea9632a",
+      "slug": "university-of-calgary",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "367d45de-2834-4ffc-a561-9f59785a2d79",
+      "slug": "university-of-guelph",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "a13c96bd-4f52-421f-8908-d2d1b82588ba",
+      "slug": "university-of-lethbridge",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "26e90d5e-2d92-4f4b-9115-f00575e79b9e",
+      "slug": "university-of-manitoba",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "45a2929c-0057-4aba-ae94-1386200328fb",
+      "slug": "university-of-new-brunswick",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "27999c13-50db-4f7b-9606-456a2e635629",
+      "slug": "university-of-northern-british-columbia",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "e152b3d4-2f27-467d-8947-b1cb94f64430",
+      "slug": "university-of-ottawa",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "58190fcd-ee92-4f94-86d6-0ed1bfb12da5",
+      "slug": "university-of-prince-edward-island",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "9c55a5fe-38ca-4df9-82dd-978065600898",
+      "slug": "university-of-regina",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "4d78a1bf-2100-40cb-82d9-6733d488341c",
+      "slug": "university-of-saskatchewan",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "f9c05bcd-2583-4568-a8b2-fe5c6ffebfba",
+      "slug": "university-of-toronto",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "ead73d9f-abcf-4a63-83da-51f06a80cdba",
+      "slug": "university-of-victoria",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "8b0d03f2-b21a-48eb-a472-72f8e8e17c61",
+      "slug": "university-of-waterloo",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "cbc4669b-5422-4c6f-9a36-d4a501737c16",
+      "slug": "university-of-windsor",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "211a78c5-620a-4dad-be67-b2c5283049a1",
+      "slug": "university-of-winnipeg",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "ce3abce5-88e0-4b50-a312-ae9bf5e9cc1f",
+      "slug": "uqam",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "e5a023a2-e061-44c5-9e36-3150f054e2bc",
+      "slug": "western-university",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "345cdf3f-bfa0-41cc-ae51-5cafb6831d64",
+      "slug": "wilfrid-laurier-university",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "8c6197fc-f564-4869-bcfc-bb58694bde31",
+      "slug": "york-university",
+      "status": "published",
+      "country": "CA"
+    },
+    {
+      "id": "14237b64-51cc-4410-b53e-49c34b9540a4",
+      "slug": "ara-institute-of-canterbury",
+      "status": "published",
+      "country": "NZ"
+    },
+    {
+      "id": "f44a69a4-512b-4976-8c96-9c59be65398c",
+      "slug": "auckland-university-of-technology",
+      "status": "published",
+      "country": "NZ"
+    },
+    {
+      "id": "b8e6a31a-440e-45c8-93d0-a4392d20564a",
+      "slug": "eastern-institute-of-technology",
+      "status": "published",
+      "country": "NZ"
+    },
+    {
+      "id": "28c0feb8-a44e-498d-9e00-89ad4ce59646",
+      "slug": "lincoln-university-nz",
+      "status": "published",
+      "country": "NZ"
+    },
+    {
+      "id": "dae7503b-8627-4105-a411-2b4f686bbb39",
+      "slug": "massey-university",
+      "status": "published",
+      "country": "NZ"
+    },
+    {
+      "id": "3904480f-811b-4b5f-ab2d-61041ed7d75d",
+      "slug": "nelson-marlborough-institute-of-technology",
+      "status": "published",
+      "country": "NZ"
+    },
+    {
+      "id": "d859b936-a61a-466b-a67d-f23b1fe7b4fc",
+      "slug": "otago-polytechnic",
+      "status": "published",
+      "country": "NZ"
+    },
+    {
+      "id": "4d973446-a9e3-4ec7-b4d7-25df71d5bfac",
+      "slug": "southern-institute-of-technology",
+      "status": "published",
+      "country": "NZ"
+    },
+    {
+      "id": "00c81250-32a6-49e0-8447-53b95a1af802",
+      "slug": "toi-ohomai-institute-of-technology",
+      "status": "published",
+      "country": "NZ"
+    },
+    {
+      "id": "921395ea-acce-4539-8d53-63afcf3256e1",
+      "slug": "unitec-institute-of-technology",
+      "status": "published",
+      "country": "NZ"
+    },
+    {
+      "id": "59bda578-f100-4502-949c-c29da2e75c88",
+      "slug": "university-of-auckland",
+      "status": "published",
+      "country": "NZ"
+    },
+    {
+      "id": "c98408e4-2ec1-4ffe-a824-881b3924747b",
+      "slug": "university-of-canterbury",
+      "status": "published",
+      "country": "NZ"
+    },
+    {
+      "id": "a7f5a8e8-666f-4b94-83ea-7ceb2a939a5f",
+      "slug": "university-of-otago",
+      "status": "published",
+      "country": "NZ"
+    },
+    {
+      "id": "ebabaa13-39d2-4e0e-a94c-6587441b85f3",
+      "slug": "university-of-waikato",
+      "status": "published",
+      "country": "NZ"
+    },
+    {
+      "id": "7f937df8-8d3d-4c56-beb2-d20bd5c04015",
+      "slug": "victoria-university-of-wellington",
+      "status": "published",
+      "country": "NZ"
+    },
+    {
+      "id": "445c1230-aff1-40d8-a40d-80d0a0a1ca3f",
+      "slug": "weltec",
+      "status": "published",
+      "country": "NZ"
+    },
+    {
+      "id": "6b6afeda-fabd-48be-a9f6-91cd3a145941",
+      "slug": "whitireia-new-zealand",
+      "status": "published",
+      "country": "NZ"
+    },
+    {
+      "id": "08a2e068-da68-4767-8c04-0dd4c26ed6f1",
+      "slug": "wintec",
+      "status": "published",
+      "country": "NZ"
+    },
+    {
+      "id": "9f90e18a-da3e-49bf-9763-bab9cc578c8d",
+      "slug": "aberystwyth-university",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "a6fd61ce-0d3e-466c-85a8-bca532999304",
+      "slug": "bangor-university",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "24998b77-6a3d-4032-aa50-eff7b16e82b4",
+      "slug": "birkbeck-university-of-london",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "2cb6ba89-b580-47a5-bc67-0e1f60e78480",
+      "slug": "bpp-university",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "46c18ade-ce84-4792-a4eb-5ce980ea4334",
+      "slug": "brunel-university-london",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "49f45f45-5dca-4012-a9ce-0e1a9ae5cadb",
+      "slug": "cambridge",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "2d60442d-40b9-439e-897e-4d8f1b7d52a4",
+      "slug": "cardiff-metropolitan-university",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "e15c2ce3-f36e-42c0-aed5-cfb7fe8e89c5",
+      "slug": "cardiff-university",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "07601fcb-5da8-41ba-bebb-6f3430d172f7",
+      "slug": "city-university-of-london",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "7486a26e-2e1f-4fe6-b8fb-b12fab243063",
+      "slug": "courtauld-institute-of-art",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "3a75361a-df16-487a-85b8-174205165104",
+      "slug": "coventry-university",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "c1f796cb-0dd9-4345-af56-712df4790d26",
+      "slug": "durham-university",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "0986ac94-1d3a-4dd8-84cb-37f18c1bed93",
+      "slug": "glasgow-caledonian-university",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "e70c3c66-771a-46fc-a16f-0041dd552045",
+      "slug": "goldsmiths-university-of-london",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "ef660e67-d278-4c11-83da-e97216ee76f8",
+      "slug": "guildhall-school-of-music-and-drama",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "8b2dcb99-0415-450a-b81b-54b3b63b215c",
+      "slug": "heriot-watt-university",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "3ab71831-3dd0-4561-96fa-c5dc61c88eb8",
+      "slug": "imperial-college-london",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "d919be60-094a-481f-afb1-5077e28ac6e3",
+      "slug": "kings-college-london",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "ffaaa944-7584-4a11-998b-e8814acb90a8",
+      "slug": "kingston-university",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "d29ece55-573e-4612-8baa-1c84b6eb5c35",
+      "slug": "lancaster-university",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "0a5f672f-0bbf-4b6e-80a8-5d5e94f51d9d",
+      "slug": "leeds-arts-university",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "5d52a900-cf64-4707-90fb-03173db2d20b",
+      "slug": "liverpool-john-moores-university",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "344835c3-eb74-4563-8658-6377d47f920c",
+      "slug": "london-business-school",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "4d542f38-1f5f-4de6-864d-bd87ed5e9b5f",
+      "slug": "loughborough-university",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "8d2feff1-7b42-4c14-99ca-1449d6c59dc6",
+      "slug": "lse",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "a71e95d1-b8f7-4e36-844e-6301a39ee680",
+      "slug": "manchester-metropolitan-university",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "4d1a9ea9-01b3-40af-bfb6-d59c648a9e66",
+      "slug": "middlesex-university",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "12b9522d-e511-4bb4-8044-f5744010e460",
+      "slug": "newcastle-university",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "81c73e8a-1089-4bd4-85ea-b8d9b495e5e0",
+      "slug": "northumbria-university",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "7074979b-a51e-4ba6-a2e0-0b3c7379c441",
+      "slug": "nottingham-trent-university",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "5467b884-743d-4f59-824a-41ef55f3f2e8",
+      "slug": "oxford",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "83e23ea1-340f-4fff-a7cb-24cb498cd055",
+      "slug": "oxford-brookes-university",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "09713ff7-8f2c-41a0-915c-800482871e17",
+      "slug": "queen-mary-university-of-london",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "00dd692f-4012-4153-bfe2-e4f5d1a92f91",
+      "slug": "queens-university-belfast",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "f575f106-b231-484b-b29b-5040029abd16",
+      "slug": "regents-university-london",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "767d3849-d39c-4e5b-9ade-8f84b1bb6cbd",
+      "slug": "robert-gordon-university",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "e5efb5d7-e1ec-4527-9a67-0c05e1d30e58",
+      "slug": "royal-academy-of-music",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "53bc2a9f-f1a7-4878-9ba8-ceafff6e1f42",
+      "slug": "royal-college-of-art",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "41c7164c-2b1c-49c4-bcc9-def4086121c0",
+      "slug": "royal-conservatoire-of-scotland",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "64bd1533-b6fa-43ea-a21a-5d7c718373b3",
+      "slug": "royal-holloway",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "d144486c-1e3a-4296-9938-79e07d6683d8",
+      "slug": "sheffield-hallam-university",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "418bafac-3a5b-4f29-b80f-285cd3161d31",
+      "slug": "soas-university-of-london",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "8e79a727-b1da-48e2-a114-a0fee75c974b",
+      "slug": "swansea-university",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "8bc6312b-9e4b-47c3-a97c-bf058cea199b",
+      "slug": "trinity-laban",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "cb87d6ca-039c-41aa-b318-c631495016fc",
+      "slug": "ucl",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "45105fbc-10dc-4f6b-8085-c06ef2e755de",
+      "slug": "ulster-university",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "3efeb45e-6f0d-4ede-a288-a10b9c1f46f0",
+      "slug": "university-of-aberdeen",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "cae4fc52-761d-468d-b9af-257ce0ff7d16",
+      "slug": "university-of-bath",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "248fb370-ae43-46dd-8d4b-0a1006745584",
+      "slug": "university-of-birmingham",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "b4949aaf-b8df-4e84-abb9-cd78cd4fbb5e",
+      "slug": "university-of-bristol",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "0aca4332-cefa-4975-a4bc-4c8e5c9ac24f",
+      "slug": "university-of-buckingham",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "43f8ab9e-793c-4611-b231-36eec0dd39a0",
+      "slug": "university-of-central-lancashire",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "f3b52e8e-4918-49c4-9baa-08cbad8c4429",
+      "slug": "university-of-dundee",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "dd7c5d4a-d605-4616-ab8c-9ca7a36596a2",
+      "slug": "university-of-east-anglia",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "7cdb4abe-9efb-4304-a14a-bc8af843514c",
+      "slug": "university-of-edinburgh",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "b6414b13-aa2a-4231-b666-eec3a6ade344",
+      "slug": "university-of-essex",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "d852c08a-d5f1-4404-9085-7025b73a216b",
+      "slug": "university-of-exeter",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "7995a6c7-fa04-4d3d-a652-89261875810e",
+      "slug": "university-of-glasgow",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "176506c9-5ea5-483f-8cee-cff0f56f15d2",
+      "slug": "university-of-greenwich",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "df0ef1d9-19f3-44e0-b68d-e50c047786fa",
+      "slug": "university-of-kent",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "ed8591b1-82a8-42d2-9e87-0fb313cf35b6",
+      "slug": "university-of-leeds",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "94d2d473-2ad4-4e13-95eb-b2c465eef62e",
+      "slug": "university-of-leicester",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "dfc7d2cf-b570-445a-b27c-bf749354779a",
+      "slug": "university-of-liverpool",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "0507828c-5fa1-4816-b9e9-f145d83eb58a",
+      "slug": "university-of-manchester",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "238c7243-3a82-43a9-8260-f0fcdb5c0afd",
+      "slug": "university-of-nottingham",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "750ce15e-153b-4208-9962-0f88cf5d72b9",
+      "slug": "university-of-portsmouth",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "9c4ca5dd-1300-409c-b7ec-7ea5cf7cbe26",
+      "slug": "university-of-reading",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "65ea4a6b-4a65-4391-a3ba-4d4f959411bd",
+      "slug": "university-of-sheffield",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "0cf00144-343f-4ea2-8d0c-868d4a556cd3",
+      "slug": "university-of-south-wales",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "d209cd84-64aa-42a7-976d-e55f227e7df4",
+      "slug": "university-of-southampton",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "9a42588e-d6bd-4fe2-8272-082223561fc5",
+      "slug": "university-of-stirling",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "4ec58c68-ebee-48cd-9456-5b5b7d938c45",
+      "slug": "university-of-strathclyde",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "a9ed8185-eddf-4e43-a6e0-005bed576059",
+      "slug": "university-of-surrey",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "c2eab004-4978-4b62-84cd-7bed077b45ba",
+      "slug": "university-of-sussex",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "35fad546-8e78-4ad1-a091-0828c8232735",
+      "slug": "university-of-the-arts-london",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "be3c0a61-2bfb-405b-9615-45668118b7c6",
+      "slug": "university-of-warwick",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "bab6e06c-482b-4b9a-a6de-f2675a781299",
+      "slug": "university-of-westminster",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "460f3614-23b9-4ace-b1a5-0c2fb96fe29d",
+      "slug": "university-of-york",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "29a8f026-7c57-4a2e-bb45-b0bfd6b79462",
+      "slug": "uwe-bristol",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "f8325cd2-6d7f-4e33-b838-5dac353c757a",
+      "slug": "wrexham-university",
+      "status": "published",
+      "country": "UK"
+    },
+    {
+      "id": "1820bb96-52fc-478f-a558-6e99eef20777",
+      "slug": "amherst-college",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "781950f7-1c62-4137-a4c1-6d6cd712e3e8",
+      "slug": "arizona-state-university",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "774e48ba-7067-4a99-86f7-dee47ae34d20",
+      "slug": "berklee-college-of-music",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "424f2e78-1f9d-4d45-b1ff-b54e5d946789",
+      "slug": "boston-college",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "ef167793-d518-457a-b31c-d1db5e95551e",
+      "slug": "boston-university",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "399eccdd-19ce-45c6-b532-00410f50e892",
+      "slug": "bowdoin-college",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "77e86db9-e37d-4556-9fc5-f3f2378b5014",
+      "slug": "brandeis-university",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "28b7b439-1f0d-46f7-812c-056551aefdb1",
+      "slug": "brown-university",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "e461c9c2-c90a-4514-92a8-fedbaa4f5bce",
+      "slug": "caltech",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "23138961-82e2-4ed4-9458-5187d0dbbd23",
+      "slug": "carleton-college",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "45014f64-0f85-4c42-97e3-88061888bb40",
+      "slug": "carnegie-mellon-university",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "4e4b8e7b-fbed-4d52-ac7f-022a2fec57cb",
+      "slug": "case-western-reserve-university",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "3cf85a99-59b2-4e4b-be95-9b84e7b3f248",
+      "slug": "claremont-mckenna-college",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "0d5bc9d1-a187-4075-ada7-8379203d5e15",
+      "slug": "colgate-university",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "003d75d6-2f41-4da4-91b8-7fbdff2d1ff4",
+      "slug": "columbia-university",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "1b5b6f80-674a-42ca-9205-8c0ead2e6755",
+      "slug": "cornell-university",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "51794342-b739-4c52-8c15-d64ffb71dfcc",
+      "slug": "dartmouth-college",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "ec4ba4c2-21cc-45c0-89e3-a6a66e426cc7",
+      "slug": "davidson-college",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "6bea4403-8fb7-4cdb-87af-c3fa81a6d00a",
+      "slug": "duke-university",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "0d01e075-434d-47b4-9b07-395e520ee190",
+      "slug": "emory-university",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "866ad34c-4e57-40bc-91b1-90473e320432",
+      "slug": "florida-state-university",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "9e29e324-20a7-4192-b628-38f1f196d051",
+      "slug": "georgetown-university",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "61837038-0e6d-4f2a-89a0-13f0a9001ec7",
+      "slug": "georgia-tech",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "298f7efa-2935-4811-96ee-053b0882c585",
+      "slug": "grinnell-college",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "0953ce72-0aa3-4364-934c-e8e530ea83f4",
+      "slug": "hamilton-college",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "f33aaf40-73c2-4ed3-9c4d-7617fc0d3eba",
+      "slug": "harvard",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "9837e995-2837-4603-adea-cef913e0bdb1",
+      "slug": "haverford-college",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "430372c8-341a-4142-a6e6-d7df82a611b6",
+      "slug": "indiana-university-bloomington",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "ee78a6a5-c3cc-4428-8470-6e812ac8c19b",
+      "slug": "johns-hopkins-university",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "79ee6b3e-9681-48f3-9870-a56e60ac9491",
+      "slug": "juilliard-school",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "a75a828e-83a8-473e-b31d-8820246636b3",
+      "slug": "lehigh-university",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "cd9b89e0-d861-4869-9557-b69d83ca502f",
+      "slug": "michigan-state-university",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "9254e211-2f66-4529-836b-66c8ff6d6eeb",
+      "slug": "middlebury-college",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "742f4085-718c-4035-b3b4-646c9043e97f",
+      "slug": "mit",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "1a2a995a-20cc-4b7a-9f6d-efb9018571d1",
+      "slug": "new-york-university",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "e827ee28-eff3-4232-b121-13ca72613f03",
+      "slug": "northeastern-university",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "2b90ee3b-45d7-4a3c-a422-9ffefd615bbd",
+      "slug": "northwestern-university",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "4117e238-fed6-4b23-aa1b-32057436f34f",
+      "slug": "ohio-state-university",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "2b2444e7-97fe-4c5e-baec-30884069dcca",
+      "slug": "penn-state-university",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "0cb7d21c-f172-4658-aa99-5c199b984cb7",
+      "slug": "pomona-college",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "fb520396-d456-4050-b330-ec65cabf2826",
+      "slug": "princeton-university",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "e06e1764-b2c5-44f2-9b44-15fa229254ed",
+      "slug": "purdue-university",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "51800360-994e-45d3-8875-e4adac14479b",
+      "slug": "rensselaer-polytechnic-institute",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "5353c99b-5f66-47b0-b95e-75491adffaab",
+      "slug": "rhode-island-school-of-design",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "ea575340-3d16-48fd-8a9f-ff920fced2f2",
+      "slug": "rice-university",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "dcecdf92-4c89-4c25-b3cd-809ebd0b8957",
+      "slug": "rutgers-university",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "b4b1168f-53b1-4064-9841-5c4e94c7c971",
+      "slug": "stanford",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "858847c5-f981-4475-9946-94d31cf6b55c",
+      "slug": "swarthmore-college",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "28919163-b26c-403a-ba22-2434d85af984",
+      "slug": "texas-am-university",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "989ffb78-312d-4a26-bec8-1edc8f173bee",
+      "slug": "tufts-university",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "605c3c8a-86f8-4f4a-bb66-c8cc17914849",
+      "slug": "uc-berkeley",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "1eb45461-5b5d-4605-9148-a9166664d74a",
+      "slug": "uc-davis",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "003e7477-e441-41f7-b1a1-71603a0fc01d",
+      "slug": "uc-irvine",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "0535a3ce-ad0d-4d10-becf-c8caa7292f5d",
+      "slug": "uc-san-diego",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "36730570-c87e-48a8-8745-422d40b04c56",
+      "slug": "uc-santa-barbara",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "8df4fb8e-85cd-4f2e-9c5e-c85ba75596b6",
+      "slug": "ucla",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "530d6be8-af64-4c3a-9a52-dbf1cb58c031",
+      "slug": "unc-chapel-hill",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "0bb96507-7b3d-415c-b91c-133b0da209f5",
+      "slug": "united-states-military-academy",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "ec3102d5-3e28-4589-8835-021c9eefa102",
+      "slug": "united-states-naval-academy",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "83ec7381-4e76-4c67-8b2f-a172e0ca5d6b",
+      "slug": "university-of-alabama",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "8677484b-34c3-41bd-b1c8-0e3ebd4ff9e7",
+      "slug": "university-of-arizona",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "a63c8588-fbac-46d0-b64c-3f95701df694",
+      "slug": "university-of-chicago",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "e0922d08-27ac-4cb4-8158-75146e191192",
+      "slug": "university-of-colorado-boulder",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "6be6ba70-f2ef-4266-bb62-09da69cd8c75",
+      "slug": "university-of-florida",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "8a992252-918c-4702-94ab-0459194a9f94",
+      "slug": "university-of-georgia",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "28fd91a0-95b5-4987-9747-f2307126cfd1",
+      "slug": "university-of-illinois-urbana-champaign",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "db2c117e-61f8-4c78-8946-14f301c21154",
+      "slug": "university-of-maryland",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "58a96633-6131-4d8e-971c-ffaec06f18e6",
+      "slug": "university-of-miami",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "efa8fb59-31c8-4e88-9c51-6a57d95d3ee2",
+      "slug": "university-of-michigan",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "ea7baa9b-9b8a-4fb3-a18c-5dd6f776fb72",
+      "slug": "university-of-minnesota",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "ed492441-cbb2-4765-857c-853442c5f967",
+      "slug": "university-of-notre-dame",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "e0dbb2be-b48e-4433-8a24-bb92c8a7e15b",
+      "slug": "university-of-pennsylvania",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "13f9cdb1-bd1f-460e-bcfa-513d57794bb8",
+      "slug": "university-of-pittsburgh",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "c61736cd-d527-44f3-8d5b-e0ff73d3c832",
+      "slug": "university-of-southern-california",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "81b071bd-60f8-4bb6-9c55-b9dc9761c853",
+      "slug": "university-of-tennessee",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "811453ce-9eec-4c81-8982-38845c073eea",
+      "slug": "university-of-texas-austin",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "0f94f169-37f5-45cf-bfec-15bb591ad42f",
+      "slug": "university-of-virginia",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "fce3927d-5c87-44f8-98b0-eec23981add0",
+      "slug": "university-of-washington",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "fbe34b64-38ac-4e54-977b-701a5fb483d1",
+      "slug": "university-of-wisconsin-madison",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "aee0a4f6-85ef-407a-91ab-c9792a94989d",
+      "slug": "vanderbilt-university",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "3c75e64e-78d1-45ae-9a0e-095a80e63e33",
+      "slug": "vassar-college",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "5dd21308-a65f-4631-882f-6416b4e7a8d0",
+      "slug": "villanova-university",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "4f5759d5-e9df-4fe9-b9db-21b8d0d36881",
+      "slug": "virginia-tech",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "4fd53601-ca04-41c1-9c7d-42115ba95f34",
+      "slug": "wake-forest-university",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "414528e0-0720-4fcc-8e0b-7cda7c8fa714",
+      "slug": "wesleyan-university",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "df7969eb-2872-4bef-a385-646e9ea44205",
+      "slug": "williams-college",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "873818a9-de4b-4727-951e-b30e9c34965c",
+      "slug": "worcester-polytechnic-institute",
+      "status": "published",
+      "country": "US"
+    },
+    {
+      "id": "f5225940-4717-445c-95bd-0875f788d99c",
+      "slug": "yale-university",
+      "status": "published",
+      "country": "US"
+    }
+  ],
+  "scholarships": [
+    {
+      "id": "bc93684b-bb70-4ef4-b025-88fd32ea31a4",
+      "slug": "mit-presidential-scholars-program",
+      "status": "published",
+      "country": "US"
+    }
+  ]
+}

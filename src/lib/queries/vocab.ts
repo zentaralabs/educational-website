@@ -26,6 +26,29 @@ export async function deleteCountry(supabase: SupabaseClient<Database>, id: numb
   if (error) throw error;
 }
 
+/**
+ * Flip a country's public-launch flag. `is_launched = false` (the default for
+ * every country except Australia) hides all of that country's universities,
+ * programs, deadlines, scholarships and country-scoped guides from the public
+ * site, search, sitemap and stats — it is the master switch for launching a
+ * new country. Content still has to be individually `published`; this only
+ * controls whether published rows for the country are served at all.
+ */
+export async function setCountryLaunched(
+  supabase: SupabaseClient<Database>,
+  id: number,
+  isLaunched: boolean,
+) {
+  const { data, error } = await supabase
+    .from("countries")
+    .update({ is_launched: isLaunched })
+    .eq("id", id)
+    .select("*")
+    .single();
+  if (error) throw error;
+  return data;
+}
+
 export async function listDegreeLevels(supabase: SupabaseClient<Database>) {
   const { data, error } = await supabase.from("degree_levels").select("*").order("name");
   if (error) throw error;

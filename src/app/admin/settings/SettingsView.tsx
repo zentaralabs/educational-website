@@ -14,6 +14,7 @@ import {
   deleteDeadlineType,
   deleteDegreeLevel,
   deleteSubject,
+  setCountryLaunched,
   type ApplicationPlatformRow,
 } from "@/lib/queries/vocab";
 import { createClient } from "@/lib/supabase/client";
@@ -235,22 +236,66 @@ function CountriesPanel({ countries }: { countries: Country[] }) {
     }
   }
 
+  async function handleToggleLaunched(id: number, next: boolean) {
+    if (
+      next &&
+      !window.confirm(
+        "Launch this country on the public site?\n\nEvery published university, program, deadline, scholarship and guide for this country becomes publicly visible and enters the sitemap. Only do this after its content has had a full fact-check pass (see SEO_ROUTES.md).",
+      )
+    ) {
+      return;
+    }
+    setBusyId(id);
+    setError(null);
+    try {
+      const supabase = createClient();
+      const updated = await setCountryLaunched(supabase, id, next);
+      setRows((prev) => prev.map((r) => (r.id === id ? updated : r)));
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Could not update");
+    } finally {
+      setBusyId(null);
+    }
+  }
+
   return (
     <Panel title="Countries">
-      <ul className="mb-3 flex flex-col gap-1.5">
+      <p className="mb-3 font-body text-xs text-slate">
+        <span className="font-semibold text-ink">Launched</span> = served on the
+        public site (universities, search, sitemap, stats). Un-launched countries
+        are fully hidden regardless of individual content status. Launch a country
+        only after its content has been fact-checked.
+      </p>
+      <ul className="mb-3 flex flex-col gap-2">
         {rows.map((r) => (
-          <li key={r.id} className="flex items-center justify-between gap-2 text-sm">
+          <li key={r.id} className="flex items-center justify-between gap-3 text-sm">
             <span className="text-ink">
               {r.code} — {r.name}
             </span>
-            <button
-              type="button"
-              disabled={busyId === r.id}
-              onClick={() => handleDelete(r.id)}
-              className="font-body text-xs text-slate transition-colors duration-150 hover:text-status-closed disabled:opacity-40"
-            >
-              Remove
-            </button>
+            <span className="flex items-center gap-3">
+              <label className="flex cursor-pointer items-center gap-1.5 font-body text-xs text-slate">
+                <input
+                  type="checkbox"
+                  checked={r.is_launched}
+                  disabled={busyId === r.id}
+                  onChange={(e) => handleToggleLaunched(r.id, e.target.checked)}
+                  className="accent-status-open"
+                />
+                {r.is_launched ? (
+                  <span className="text-status-open">Launched</span>
+                ) : (
+                  "Not launched"
+                )}
+              </label>
+              <button
+                type="button"
+                disabled={busyId === r.id}
+                onClick={() => handleDelete(r.id)}
+                className="font-body text-xs text-slate transition-colors duration-150 hover:text-status-closed disabled:opacity-40"
+              >
+                Remove
+              </button>
+            </span>
           </li>
         ))}
       </ul>
