@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { BlogCard } from "@/components/site/BlogCard";
@@ -8,19 +9,34 @@ import {
   listPublishedBlogPosts,
   listPublishedBlogTags,
 } from "@/lib/queries/public-blog-posts";
+import { listPageCanonical } from "@/lib/list-page-metadata";
 import { readingMinutesFromWords } from "@/lib/reading";
 
 export const revalidate = 3600;
 
-export const metadata = {
-  title: "Study in Australia Blog: Visa, Fee & Admissions News",
-  description:
-    "News and analysis for international students bound for Australia: student visa changes, fee and deadline updates, and policy shifts, with every claim dated and sourced.",
-  alternates: {
-    canonical: "/blog",
-    types: { "application/rss+xml": "/blog/feed.xml" },
-  },
-};
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<{ tag?: string; page?: string }>;
+}): Promise<Metadata> {
+  const { tag, page: pageParam } = await searchParams;
+  const canonical = listPageCanonical({
+    base: "/blog",
+    isFiltered: Boolean(tag),
+    page: Math.max(1, Number(pageParam) || 1),
+  });
+
+  return {
+    title: "Study in Australia Blog: Visa, Fee & Admissions News",
+    description:
+      "News and analysis for international students bound for Australia: student visa changes, fee and deadline updates, and policy shifts, with every claim dated and sourced.",
+    ...canonical,
+    alternates: {
+      ...canonical.alternates,
+      types: { "application/rss+xml": "/blog/feed.xml" },
+    },
+  };
+}
 
 const TAG_LABELS: Record<string, string> = {
   "what-we-are-watching": "What we're watching",

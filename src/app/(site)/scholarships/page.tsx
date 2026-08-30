@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { ArrowUpRightIcon } from "@/components/site/icons";
@@ -7,6 +8,7 @@ import {
   listPublishedScholarships,
   listScholarshipStudyLevels,
 } from "@/lib/queries/public-scholarships";
+import { listPageCanonical } from "@/lib/list-page-metadata";
 import {
   SCHOLARSHIP_SCOPE_LABELS,
   SCHOLARSHIP_SCOPE_ORDER,
@@ -14,12 +16,20 @@ import {
 
 export const revalidate = 3600;
 
-export const metadata = {
-  title: "Scholarships for International Students in Australia",
-  description:
-    "Government, university, and external scholarships for international students in Australia. What each one is worth, who qualifies, and whether you need a separate application.",
-  alternates: { canonical: "/scholarships" },
-};
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<{ level?: string }>;
+}): Promise<Metadata> {
+  const { level } = await searchParams;
+
+  return {
+    title: "Scholarships for International Students in Australia",
+    description:
+      "Government, university, and external scholarships for international students in Australia. What each one is worth, who qualifies, and whether you need a separate application.",
+    ...listPageCanonical({ base: "/scholarships", isFiltered: Boolean(level) }),
+  };
+}
 
 export default async function ScholarshipsIndexPage({
   searchParams,

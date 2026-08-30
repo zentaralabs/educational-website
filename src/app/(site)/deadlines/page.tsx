@@ -1,7 +1,9 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { StatusBadge } from "@/components/StatusBadge";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
+import { listPageCanonical } from "@/lib/list-page-metadata";
 import { SITE_NAME, SITE_URL, SITE_YEAR } from "@/lib/site-config";
 import { deadlineBadgeStatus, formatDeadlineDate } from "@/lib/deadline-status";
 import {
@@ -13,12 +15,29 @@ import {
 const SELECT_CLASS =
   "rounded-lg border border-ink/15 bg-paper px-3 py-2 font-body text-sm text-ink transition-colors duration-150 hover:border-ink/30 focus-visible:border-status-open focus-visible:outline-none";
 
-export const metadata = {
-  title: `Australian University Application Deadlines ${SITE_YEAR + 1}`,
-  description:
-    "International application dates for every intake at Australian universities, by degree level: firm closing dates where they exist, recommended apply-by dates where admissions are rolling. Filterable by state, level, and intake.",
-  alternates: { canonical: "/deadlines" },
-};
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<{
+    country?: string;
+    degreeLevel?: string;
+    type?: string;
+    page?: string;
+  }>;
+}): Promise<Metadata> {
+  const { country, degreeLevel, type, page: pageParam } = await searchParams;
+
+  return {
+    title: `Australian University Application Deadlines ${SITE_YEAR + 1}`,
+    description:
+      "International application dates for every intake at Australian universities, by degree level: firm closing dates where they exist, recommended apply-by dates where admissions are rolling. Filterable by state, level, and intake.",
+    ...listPageCanonical({
+      base: "/deadlines",
+      isFiltered: Boolean(country || degreeLevel || type),
+      page: Math.max(1, Number(pageParam) || 1),
+    }),
+  };
+}
 
 function groupByMonth(deadlines: PublicDeadlineRow[]) {
   const groups = new Map<string, PublicDeadlineRow[]>();

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { ComparisonTable } from "@/components/site/ComparisonTable";
@@ -7,13 +8,25 @@ import {
   getUniversitiesForComparisonBySlugs,
   listPublishedUniversityOptions,
 } from "@/lib/queries/public-universities";
+import { listPageCanonical } from "@/lib/list-page-metadata";
 
-export const metadata = {
-  title: "Compare Australian Universities Side by Side",
-  description:
-    "Pick any two or more Australian universities and compare tuition, admission requirements, deadlines, and selectivity in one table.",
-  alternates: { canonical: "/compare/universities" },
-};
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<{ u?: string }>;
+}): Promise<Metadata> {
+  const { u } = await searchParams;
+
+  return {
+    title: "Compare Australian Universities Side by Side",
+    description:
+      "Pick any two or more Australian universities and compare tuition, admission requirements, deadlines, and selectivity in one table.",
+    ...listPageCanonical({
+      base: "/compare/universities",
+      isFiltered: Boolean(u?.trim()),
+    }),
+  };
+}
 
 export default async function CompareUniversitiesPage({
   searchParams,
