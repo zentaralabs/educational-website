@@ -73,6 +73,9 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  verification: {
+    yandex: "454dbe084fa754b9",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
