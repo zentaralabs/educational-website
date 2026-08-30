@@ -38,13 +38,14 @@ export async function generateMetadata({
   const title = guide.title;
   const description = guide.excerpt ?? guide.content.slice(0, 155);
   const url = `/guides/${slug}`;
+  const ogImage = `${url}/og`;
 
   return {
     title,
     description,
     alternates: { canonical: url },
-    openGraph: { title, description, url, type: "article" },
-    twitter: { card: "summary_large_image", title, description },
+    openGraph: { title, description, url, type: "article", images: [ogImage] },
+    twitter: { card: "summary_large_image", title, description, images: [ogImage] },
   };
 }
 
@@ -78,9 +79,12 @@ export default async function GuidePage({
     description: guide.excerpt ?? undefined,
     url: guideUrl,
     mainEntityOfPage: { "@type": "WebPage", "@id": guideUrl },
+    image: `${guideUrl}/og`,
     datePublished: guide.created_at ?? undefined,
+    // last_verified_at is the real content-freshness signal; updated_at can
+    // move on incidental row writes, so it's only a fallback.
     dateModified:
-      guide.updated_at ?? guide.last_verified_at ?? guide.created_at ?? undefined,
+      guide.last_verified_at ?? guide.updated_at ?? guide.created_at ?? undefined,
     author: guide.author
       ? {
           "@type": "Person",

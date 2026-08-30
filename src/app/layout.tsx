@@ -3,7 +3,7 @@ import { Fraunces, Public_Sans, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@/components/site/Analytics";
 import { CookieConsentBanner } from "@/components/site/CookieConsentBanner";
-import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site-config";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_SAME_AS, SITE_URL } from "@/lib/site-config";
 
 /** Site-wide publisher identity. Given a stable @id so page-level schema
  * (Article, Dataset, ItemList) can reference it as publisher. */
@@ -13,9 +13,10 @@ const organizationJsonLd = {
   "@id": `${SITE_URL}/#organization`,
   name: SITE_NAME,
   url: SITE_URL,
-  logo: `${SITE_URL}/icon.svg`,
+  logo: `${SITE_URL}/logo.png`,
   email: "admin@wheretoapply.xyz",
   description: SITE_DESCRIPTION,
+  sameAs: SITE_SAME_AS,
   founder: { "@type": "Person", name: "Roman Lama" },
   foundingDate: "2026",
   knowsAbout: [

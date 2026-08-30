@@ -16,7 +16,7 @@ import { ProgramsList } from "@/components/site/ProgramsList";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import { FaqSection } from "@/components/site/FaqSection";
 import { faqJsonLd, universityFaq } from "@/lib/faq";
-import { SITE_YEAR } from "@/lib/site-config";
+import { SITE_URL, SITE_YEAR } from "@/lib/site-config";
 import { deadlineBadgeStatus } from "@/lib/deadline-status";
 import { formatCurrency, formatSelectivity } from "@/lib/format";
 import { getPublishedProgramsForUniversity } from "@/lib/queries/public-programs";
@@ -66,13 +66,14 @@ export async function generateMetadata({
     `${university.name} for international students${university.city ? ` in ${university.city.split(",")[0]}` : ""}: tuition fees, entry requirements, application deadlines, and scholarships. ` +
     (university.distinctive_summary?.slice(0, 90) ?? "Independently researched and dated.");
   const url = `/universities/${slug}`;
+  const ogImage = `${url}/og`;
 
   return {
     title,
     description,
     alternates: { canonical: url },
-    openGraph: { title, description, url, type: "website" },
-    twitter: { card: "summary_large_image", title, description },
+    openGraph: { title, description, url, type: "website", images: [ogImage] },
+    twitter: { card: "summary_large_image", title, description, images: [ogImage] },
   };
 }
 
@@ -196,6 +197,7 @@ export default async function UniversityProfilePage({
     "@type": "CollegeOrUniversity",
     name: university.name,
     url: university.website_url ?? undefined,
+    image: `${SITE_URL}/universities/${university.slug}/og`,
     address: {
       "@type": "PostalAddress",
       addressLocality: university.city ?? undefined,

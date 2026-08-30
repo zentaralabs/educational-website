@@ -6,6 +6,17 @@
  */
 export const SITE_NAME = "Where To Apply";
 
+/**
+ * Official profiles for the site's brand entity. Emitted as `sameAs` on the
+ * Organization schema so search and answer engines can tie the site to a
+ * known entity. Add new ones only once the profile is actually live.
+ */
+export const SITE_SAME_AS = [
+  "https://www.linkedin.com/company/wheretoapply",
+  "https://www.f6s.com/where-to-apply",
+  "https://www.indiehackers.com/product/where-to-apply",
+];
+
 export const SITE_URL = (
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.wheretoapply.xyz"
 ).replace(/\/$/, "");

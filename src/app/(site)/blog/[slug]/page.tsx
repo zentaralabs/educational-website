@@ -40,6 +40,7 @@ export async function generateMetadata({
   const title = post.title;
   const description = post.excerpt ?? post.content.slice(0, 155);
   const url = `/blog/${slug}`;
+  const ogImage = `${url}/og`;
 
   return {
     title,
@@ -52,8 +53,9 @@ export async function generateMetadata({
       type: "article",
       publishedTime: post.published_at ?? undefined,
       modifiedTime: post.last_verified_at ?? undefined,
+      images: [ogImage],
     },
-    twitter: { card: "summary_large_image", title, description },
+    twitter: { card: "summary_large_image", title, description, images: [ogImage] },
   };
 }
 
@@ -84,6 +86,7 @@ export default async function BlogPostPage({
     description: post.excerpt ?? undefined,
     url: postUrl,
     mainEntityOfPage: { "@type": "WebPage", "@id": postUrl },
+    image: `${postUrl}/og`,
     datePublished: post.published_at ?? undefined,
     dateModified: post.last_verified_at ?? post.published_at ?? undefined,
     author: post.author ? { "@type": "Person", name: post.author.name } : undefined,
