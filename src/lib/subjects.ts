@@ -369,4 +369,32 @@ export const SUBJECT_CONTENT: Record<string, SubjectContent> = {
       },
     ],
   },
+  "political-science-and-international-relations": {
+    intro: [
+      "Political science and international relations are taught across about 11 Australian universities, with roughly 34 programs for international students. The common postgraduate qualifications are the Master of International Relations, the Master of Public Policy, and coursework masters in political science, diplomacy, or national security, most of which accept a bachelor degree in any field. Bachelor degrees in politics and international relations are widely available too.",
+      "Fees run from the high AUD 20,000s at Edith Cowan and the University of the Sunshine Coast to around AUD 50,000 at the research-intensive universities, with most programs between AUD 30,000 and AUD 46,000 a year. Standard entry is a bachelor with a credit average and IELTS 6.5. Canberra is the natural base for the field, with the federal public service, the diplomatic corps, and the national security agencies all in the city.",
+    ],
+    careers: "Political science and international relations do not map neatly onto the skilled occupation lists, and many Australian public-sector and policy roles require citizenship. Graduates more often use the degree for work with international organisations, NGOs, research, and journalism, for further study, or paired with a field that does have a migration pathway.",
+    strongAt: [
+      { slug: "australian-national-university", why: "The strongest school in the country for the field, with the Coral Bell School of Asia Pacific Affairs, the Crawford School of Public Policy, and the National Security College, all in Canberra." },
+      { slug: "unsw-sydney", why: "Well regarded for politics and international relations, with strength in human rights, security, and Australian foreign policy." },
+      { slug: "macquarie-university", why: "Long-established politics and international relations department with a broad coursework offering in Sydney." },
+      { slug: "griffith-university", why: "The Griffith Asia Institute anchors strong work on the Indo-Pacific, regional security, and development." },
+      { slug: "deakin-university", why: "The Alfred Deakin Institute for Citizenship and Globalisation gives its international relations programs a research base." },
+    ],
+    faq: [
+      {
+        q: "Which Australian university is best for international relations?",
+        a: "There is no official field-level ranking, but the Australian National University has the clearest reputation for political science, international relations, and public policy, helped by its location in Canberra and its dedicated schools for Asia-Pacific affairs, public policy, and national security. UNSW, Macquarie, Griffith, and Deakin also have recognised strengths.",
+      },
+      {
+        q: "Does a political science degree help with skilled migration to Australia?",
+        a: "Not directly. Policy, intelligence, and most government analyst roles in Australia require citizenship, and the field does not sit cleanly on the skilled occupation lists the way computing, engineering, nursing, and accounting do. If permanent residence is the goal, treat this degree as something to combine with a profession that has a clearer pathway, or plan around roles with international organisations and NGOs.",
+      },
+      {
+        q: "Can I study international relations in Australia without a related bachelor?",
+        a: "Usually yes. Most Master of International Relations and Master of Public Policy programs are generalist and accept a bachelor degree in any discipline with a credit average. A few research-focused or specialist masters expect some background in politics, economics, or a related social science.",
+      },
+    ],
+  },
 };
