@@ -173,11 +173,67 @@ const guides = [
     category: "country-guide",
     country: "AU",
     excerpt:
-      "Student visa work rights, the fortnightly cap, tax file numbers, and what counts against the limit.",
-    content:
-      "[Student visa](/visas/student-500) holders can work, within a cap. The current limit is 48 hours per fortnight while your course is running, set after the pandemic-era removal of the cap ended and a slightly higher permanent figure came in from 1 July 2023.\n\n## The 48-hour fortnight rule\n\nCondition 8105 limits you to 48 hours of work in any fortnight while your course is in session. Two details trip people up:\n\n- A **fortnight** is a fixed, rolling 14-day period that the department defines, starting on a Monday. It is not \"any 14 consecutive days you choose\", and it is not a calendar month averaged out. You cannot work 20 hours one fortnight and 76 the next.\n- During **scheduled course breaks** (semester holidays, the summer break) there is no limit at all. You can work full time.\n\n## What counts and what does not\n\n| Counts toward the 48 hours | Does not count |\n| --- | --- |\n| Paid employment, casual or ongoing | Course breaks (unlimited) |\n| Paid internships and paid placements | Unpaid work that is a formal part of your course |\n| Work in a family business, if paid | Genuine volunteer work for a non-profit, unpaid |\n| Online or remote work for any employer | Masters by research and PhD students, once the course has started |\n\n## Getting set up to work\n\n1. **Tax File Number (TFN).** Apply free through the ATO website once you arrive, using your passport and visa. Without a TFN your employer must withhold tax at the top rate.\n2. **Minimum wage.** The national minimum is around AUD 25 an hour before tax as of 2025 to 2026, and it rises every 1 July. Many awards pay more, and casuals get a loading of around 25 percent on top.\n3. **Superannuation.** Your employer pays super on top of your wage (currently 12 percent). You can claim most of it back as a Departing Australia Superannuation Payment when you leave the country permanently.\n4. **The tax-free threshold.** As a resident for tax purposes you pay no income tax on the first AUD 18,200 you earn in a year. Most students working part time within the cap fall near or below this and get much of their withheld tax back at tax time.\n\n## Why the cap is enforced, and what a breach costs\n\nExceeding 48 hours a fortnight is a breach of a visa condition. It can lead to visa cancellation, and even if it does not, it will surface when you apply for a [485](/visas/temporary-graduate-485) or a skilled visa, because your tax and superannuation records show exactly how many hours you worked and when. A history of over-cap work is a genuine risk to the graduate visa that the whole [study-to-PR pathway](/guides/study-to-permanent-residence-pathway-australia) depends on.\n\nEmployers who roster international students over the limit are also breaking the law, but in practice the visa consequence lands on the student, not the business. If an employer pressures you to work more, that is a reason to find a different job, not to breach the condition.\n\n## After you graduate\n\nOnce you move to a [485 Temporary Graduate visa](/visas/temporary-graduate-485) the cap is gone entirely. You have full work rights for the two to three years of that visa, which is the point of it: it is the window to build the skilled experience your points score and [skills assessment](/guides/getting-a-skills-assessment-in-australia) both need.",
+      "Student visa work rights, the fortnightly cap (not the old 20 hours a week), tax file numbers, and what counts against the limit.",
+    content: `[Student visa](/visas/student-500) holders can work, within a cap. The current limit is 48 hours per fortnight while your course is running.
+
+If you have read that the limit is 20 hours a week, that figure is out of date. The old rule was 40 hours per fortnight, usually described as "20 hours a week". It was suspended during the pandemic, then reinstated at a higher permanent level of 48 hours per fortnight from 1 July 2023. Advice and forum posts still quoting 20 or 40 hours are describing the pre-2023 rule.
+
+## The 48-hour fortnight rule
+
+Condition 8105 limits you to 48 hours of work in any fortnight while your course is in session. Three details trip people up:
+
+- A **fortnight** is a fixed, rolling 14-day period that the department defines, starting on a Monday. It is not "any 14 consecutive days you choose", and it is not a monthly figure averaged out. You cannot work 20 hours one fortnight and 76 the next.
+- **Before your course starts** you have no work rights on a student visa. Your work rights begin when the course does.
+- During **scheduled course breaks**, such as semester holidays and the summer break, there is no limit at all. You can work full time.
+
+## What counts and what does not
+
+| Counts toward the 48 hours | Does not count |
+| --- | --- |
+| Paid employment, casual or ongoing | Scheduled course breaks (unlimited) |
+| Paid internships and paid placements | Unpaid work that is a formal, assessed part of your course |
+| Paid work in a family business | Genuine unpaid volunteer work for a non-profit |
+| Online or remote work for any employer, in Australia or overseas | Work by masters by research and PhD students, once the course has started |
+
+## Getting set up to work
+
+1. **Tax File Number (TFN).** Apply free through the ATO website once you arrive, using your passport and visa. Without a TFN your employer must withhold tax at the top rate.
+2. **Minimum wage.** The national minimum is AUD 26.44 an hour before tax from 1 July 2026, and it rises every 1 July. Many awards pay more, and casual employees get a loading of around 25 percent on top.
+3. **Superannuation.** Your employer pays super on top of your wage, currently 12 percent. You can claim most of it back as a Departing Australia Superannuation Payment when you leave the country permanently.
+4. **The tax-free threshold.** As a resident for tax purposes you pay no income tax on the first AUD 18,200 you earn in a year. Most students working part time within the cap fall near or below this and get much of their withheld tax back at tax time.
+
+## Why the cap is enforced, and what a breach costs
+
+Exceeding 48 hours a fortnight breaches condition 8105. The department can cancel a student visa for a condition breach, and a cancellation can carry an exclusion period of up to three years on further temporary visas. Even where the visa is not cancelled, the breach surfaces later: when you apply for a [485 graduate visa](/visas/temporary-graduate-485) or a skilled visa, your tax and superannuation records show exactly how many hours you worked and when. A history of over-cap work is a real risk to the graduate visa that the whole [study-to-permanent-residence pathway](/guides/study-to-permanent-residence-pathway-australia) runs through.
+
+Employers who roster international students over the limit are also breaking the law, but in practice the visa consequence lands on the student, not the business. If an employer pressures you to work more, that is a reason to change jobs, not to breach the condition.
+
+## After you graduate
+
+Once you move to a [485 Temporary Graduate visa](/visas/temporary-graduate-485) the cap is gone. You have full work rights for the two to three years of that visa, which is the point of it: the window to build the skilled experience your [points score](/guides/how-the-australian-points-test-works) and [skills assessment](/guides/getting-a-skills-assessment-in-australia) both need.
+
+## Is the student visa work limit 20 hours or 48 hours?
+
+It is 48 hours per fortnight while your course is in session, and unlimited during scheduled course breaks. The "20 hours a week" figure people still quote was the old 40-hour-per-fortnight rule, replaced on 1 July 2023.
+
+## What happens if I work more than 48 hours in a fortnight?
+
+You breach condition 8105. The department can cancel your student visa, and a cancellation can trigger an exclusion period of up to three years from further temporary visas. Extra hours also appear in your tax and super records, so they can be raised against a later graduate or skilled visa application even if your student visa was never cancelled.
+
+## Can I work full time during semester breaks?
+
+Yes. During scheduled course breaks there is no hour limit. The 48-hour cap only applies while your course is in session, including during exam periods.
+
+## Does volunteer work or an unpaid internship count toward the 48 hours?
+
+Genuine unpaid volunteer work for a non-profit does not count. Neither does unpaid work that is a formal, assessed requirement of your course. Paid internships and paid placements do count.
+
+## Does remote work for an overseas employer count?
+
+Yes. Any paid work counts toward the 48 hours, regardless of where the employer is based or whether the work is done online.`,
     sources: [
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500/work-conditions-for-student-visa-holders",
+      "https://www.studyaustralia.gov.au/en/plan-your-move/your-guide-to-visas/student-visa-subclass-500",
     ],
   },
   {
