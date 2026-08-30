@@ -49,6 +49,10 @@ export default async function OriginCountryPage({
   const c = getOriginCountry(country);
   if (!c) notFound();
 
+  const otherCountries = ORIGIN_COUNTRY_SLUGS.filter((s) => s !== country)
+    .map((s) => getOriginCountry(s)!)
+    .sort((a, b) => a.name.localeCompare(b.name));
+
   const breadcrumbs = [
     { label: "Home", href: "/" },
     { label: "By country", href: "/international" },
@@ -245,6 +249,27 @@ export default async function OriginCountryPage({
       </ProfileSection>
 
       <FaqSection heading={`Studying in Australia from ${c.name}: common questions`} items={c.faq} />
+
+      <ProfileSection title="Applying from another country">
+        <p className="mb-3 font-body text-sm text-slate">
+          The generic steps are the same everywhere. What changes by country is
+          agent-versus-direct application, how your qualifications convert, and
+          how closely the student visa evidence is checked.
+        </p>
+        <ul className="flex flex-wrap gap-2">
+          {otherCountries.map((o) => (
+            <li key={o.slug}>
+              <Link
+                href={`/international/${o.slug}`}
+                className="inline-flex items-center gap-1.5 rounded-full border border-ink/15 bg-mist px-3 py-1 font-body text-sm text-ink transition-colors duration-150 hover:border-status-open/40 hover:text-status-open"
+              >
+                <span aria-hidden="true">{flagEmoji(o.code)}</span>
+                {o.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </ProfileSection>
 
       <div className="mt-10">
         <LastVerified date={c.lastVerified} sources={c.sources} />

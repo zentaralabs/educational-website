@@ -45,6 +45,19 @@ const AU_RELATED_GUIDES = [
   { slug: "ielts-vs-pte-for-australian-university-admission", title: "IELTS vs PTE for Australian admission" },
 ];
 
+// Largest degree-seeking source countries. Every AU profile links these so a
+// reader lands on what is different for their nationality (agent rules,
+// credential recognition, student-visa evidence level). Full set at
+// /international.
+const AU_TOP_ORIGIN_COUNTRIES = [
+  { slug: "india", name: "India" },
+  { slug: "nepal", name: "Nepal" },
+  { slug: "china", name: "China" },
+  { slug: "vietnam", name: "Vietnam" },
+  { slug: "philippines", name: "the Philippines" },
+  { slug: "pakistan", name: "Pakistan" },
+];
+
 export const revalidate = 3600;
 
 export async function generateStaticParams() {
@@ -691,6 +704,34 @@ export default async function UniversityProfilePage({
                     </Link>
                   </li>
                 ))}
+              </ul>
+
+              <h3 className="mt-5 mb-2 font-body text-xs font-semibold tracking-wide text-slate uppercase">
+                Applying from your country
+              </h3>
+              <p className="mb-2 font-body text-sm text-slate">
+                What changes by nationality: agent rules, how your degree
+                converts, and how closely the student visa is checked.
+              </p>
+              <ul className="flex flex-wrap gap-2">
+                {AU_TOP_ORIGIN_COUNTRIES.map((o) => (
+                  <li key={o.slug}>
+                    <Link
+                      href={`/international/${o.slug}`}
+                      className="inline-flex rounded-full border border-ink/15 bg-mist px-3 py-1 font-body text-sm text-ink transition-colors duration-150 hover:border-status-open/40 hover:text-status-open"
+                    >
+                      From {o.name}
+                    </Link>
+                  </li>
+                ))}
+                <li>
+                  <Link
+                    href="/international"
+                    className="inline-flex rounded-full border border-ink/15 bg-mist px-3 py-1 font-body text-sm text-ink transition-colors duration-150 hover:border-status-open/40 hover:text-status-open"
+                  >
+                    All countries →
+                  </Link>
+                </li>
               </ul>
             </>
           )}

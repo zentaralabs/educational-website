@@ -72,6 +72,10 @@ const COST_OF_LIVING: RelatedLink = {
   href: "/cost-of-living",
   label: "Cost of living by city",
 };
+const COUNTRY_HUB: RelatedLink = {
+  href: "/international",
+  label: "Applying from your country",
+};
 
 // ---------------------------------------------------------------------------
 // Guides
@@ -99,6 +103,7 @@ const GUIDE_RELATED: Record<string, RelatedLink[]> = {
     g("what-to-do-if-your-student-visa-is-refused"),
     g("cricos-and-course-accreditation-explained"),
     v("student-500"),
+    COUNTRY_HUB,
   ],
   "getting-a-skills-assessment-in-australia": [
     g("how-the-australian-points-test-works"),
@@ -124,7 +129,7 @@ const GUIDE_RELATED: Record<string, RelatedLink[]> = {
     g("genuine-student-requirement-how-to-write-your-statement"),
     g("oshc-health-cover-for-international-students"),
     v("student-500"),
-    COST_OF_LIVING,
+    COUNTRY_HUB,
   ],
   "cricos-and-course-accreditation-explained": [
     g("study-to-permanent-residence-pathway-australia"),
@@ -142,6 +147,7 @@ const GUIDE_RELATED: Record<string, RelatedLink[]> = {
     g("genuine-student-requirement-how-to-write-your-statement"),
     g("proving-funds-for-an-australian-student-visa"),
     v("student-500"),
+    COUNTRY_HUB,
   ],
   "commonwealth-supported-places-explained": [
     g("real-cost-of-studying-in-australia"),
@@ -190,8 +196,8 @@ const VISA_RELATED: Record<string, RelatedLink[]> = {
     g("genuine-student-requirement-how-to-write-your-statement"),
     g("proving-funds-for-an-australian-student-visa"),
     g("working-while-you-study-in-australia"),
-    g("cricos-and-course-accreditation-explained"),
     g("oshc-health-cover-for-international-students"),
+    COUNTRY_HUB,
     v("temporary-graduate-485"),
   ],
   "temporary-graduate-485": [
