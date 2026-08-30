@@ -1066,7 +1066,15 @@ Supersedes the scattered "still on user" notes above. This is the current consol
 - `NEXT_PUBLIC_GA_MEASUREMENT_ID` **is set** in Vercel Production. The tag is client-side and gated behind cookie-consent acceptance (`src/components/site/Analytics.tsx`), so it never appears in server HTML / `curl` — that is by design, not a misconfiguration. Earlier notes calling GA4 "not configured / inert" are stale.
 - **GA4 ↔ Search Console link created 2026-08-30** (linked by `romanlama314@gmail.com`). The "Search Console" report collection auto-published ("Published to all"). Reports appear under **GA4 → Reports → Search Console → "Queries"** and **"Google organic search traffic"** — no data until GSC data flows (~24–48h after linking).
 
+### Distribution channels — Yandex + GSC visa-batch (2026-08-30, later session, via Claude-in-Chrome)
+Scope this session: Google + AI-search discovery only (social deferred per user).
+- **Yandex Webmaster** — site `https://www.wheretoapply.xyz` added, ownership **verified** (meta-tag method; token `454dbe084fa754b9` in `src/app/layout.tsx` `metadata.verification.yandex`, commit `67483c2`). Sitemap `https://www.wheretoapply.xyz/sitemap.xml` submitted, in processing queue. Notification email confirmed correct. Related memory: [[yandex-webmaster]].
+- **Baidu / Naver** — Baidu skipped (source-country strategy, Section 29). Naver blocked: `searchadvisor.naver.com` refused by the browser-automation safety filter, and Naver account signup was not sending the verification code. Naver on hold — needs the user to complete signup + verification manually; `metadata.verification.other` is the code hook when they have a token.
+- **GSC sitemap** — re-submitted again 2026-08-30 (3rd time). Still "Couldn't fetch" / 0 discovered; sitemap is valid (200, application/xml, 1,154 `<url>`), Bing fetched it fine. Assessed as Google-side lag; Page-indexing report still says "Processing data, check again in a day".
+- **GSC Request-Indexing — the 12 visa pages (the pending TODO from Section 25) is now DONE.** Findings: **6 already indexed** (temporary-graduate-485, skilled-nominated-190, skilled-work-regional-491, skills-in-demand-482, employer-nomination-scheme-186, partner-visa-820-801). **6 requested this session** (student-500, skilled-independent-189, permanent-residence-skilled-regional-191, skilled-employer-sponsored-regional-494, partner-visa-309-100, visitor-visa-600) — all "URL is unknown to Google" before. Batch complete, no visa pages left.
+
 ### What remains (all user, no code)
+- Naver: finish account signup, then send me the verification token.
 - Check the GSC sitemap flips to "Success" (~2 days).
 - Once GSC Performance has ~1–2 weeks of query/impression data, use it to pick which of the 5 intent-cluster content pages to build first (see the SEO roadmap). This is the gate on further content work.
 - Optional: `public/ads.txt` when the AdSense publisher ID is issued (currently 404, only matters at AdSense approval).
