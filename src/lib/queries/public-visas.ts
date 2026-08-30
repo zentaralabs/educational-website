@@ -12,10 +12,13 @@ export type PublicVisaListRow = {
   min_points: number | null;
   stay_period: string | null;
   leads_to_pr: boolean;
+  base_application_charge: string | null;
+  processing_time: string | null;
+  last_verified_at: string | null;
 };
 
 const LIST_COLUMNS =
-  "slug, code, name, category, stream, short_description, is_points_tested, min_points, stay_period, leads_to_pr";
+  "slug, code, name, category, stream, short_description, is_points_tested, min_points, stay_period, leads_to_pr, base_application_charge, processing_time, last_verified_at";
 
 export async function listPublishedVisas(): Promise<PublicVisaListRow[]> {
   const supabase = createPublicClient(["visa_subclasses:list"]);

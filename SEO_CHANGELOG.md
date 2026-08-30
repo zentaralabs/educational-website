@@ -47,6 +47,39 @@ Redirects · Canonical/sitemap/metadata changes · Testing done.**
 - **Testing:** `tsc --noEmit` clean. In-browser check needs a logged-in admin
   (panel is auth-gated) — pending.
 
+## 2026-08-30 · /visas hub buildout
+
+- **Change:** `/visas` was a thin index (H1 + 2 cards + a client-side browser,
+  ~few hundred words). Rebuilt as a proper hub:
+  - Answer-first intro + a freshness line (max `last_verified_at` across the
+    12 subclasses, shown as a date).
+  - **"The study-to-PR pathway"** — an ordered, linked 500 → 485 → 189
+    sequence built from the live dataset (`short_description` per step), with a
+    link to the full walkthrough guide.
+  - **"The core visas at a glance"** — a comparison table of 500/485/189/190/491
+    (stay, points-tested, base charge, leads-to-PR), all values straight from
+    DB fields, wrapped in `overflow-x-auto`.
+  - Kept the points-calculator + invitation-rounds cards and the grouped
+    `VisasBrowser`.
+  - **FAQ section + `FAQPage` schema** — 6 hub-level questions (what visa to
+    study / student visa cost, pulled verbatim from subclass 500's
+    `base_application_charge` / staying after graduation / PR routes /
+    points-test / invitation rounds). Orientation-level answers; specifics
+    defer to each subclass page.
+  - `RelatedLinks` to 6 visa/finance guides + `/international`, plus `WhyTrust`
+    and `LastVerified`.
+  - `listPublishedVisas` extended to also select `base_application_charge`,
+    `processing_time`, `last_verified_at`.
+- **Affected routes:** `/visas` only. No URL/canonical/sitemap change.
+- **SEO impact:** LOW-risk, upside. Same URL, much deeper content (89KB →
+  153KB HTML), targeting "australian visa types / student visa australia /
+  study to PR" clusters. No fabricated figures — every number traces to a DB
+  field that already carries a source on its subclass page.
+- **Testing:** `tsc` + `next build` clean. Rendered HTML: title/H1 correct,
+  schema `[Organization, BreadcrumbList, ItemList(12), FAQPage(6)]`, comparison
+  table populated with real dated figures, 15 internal `/visas/` links + 5
+  `/guides/` links.
+
 ## 2026-08-30 · List/hub pages: titles, H1s, breadcrumbs, ItemList schema
 
 - **Change:** Filled the schema + heading gaps on the six listing/hub pages
