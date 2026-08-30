@@ -29,13 +29,18 @@ build brand presence in the places people check when they Google "wheretoapply".
 
 One-time. Do Tier 1 properly; blast Tier 2 in a single sitting.
 
+> **Free-only, pre-revenue reality check (2026-08-30):** No paid listings. BetaList
+> went paid — skipped. Crunchbase is free but blocks automated browsers (do it by
+> hand). That leaves Crunchbase (manual), F6S, Indie Hackers, LinkedIn (done), and
+> whichever Tier 2 sites are still genuinely free.
+
 ### Tier 1 — worth doing well
 
 | Site | URL | What to do | Link | Notes |
 |---|---|---|---|---|
 | **Product Hunt** | producthunt.com | Submit as a product. Needs: logo, tagline, description, 3–5 screenshots, a "first comment" from Roman, 2–3 topics (Education, EdTech). Post 12:01 AM Pacific on a Tue/Wed/Thu. | dofollow | Highest ceiling. A decent launch → traffic spike + other sites pick it up. A quiet launch does no harm. Don't rush it — prep the assets first. |
 | **Crunchbase** | crunchbase.com/register | Add a company. Name, description, website, founded date, location, category (Education), founder = Roman Lama, logo. | nofollow | High-authority; shows up in brand searches. Legitimacy signal more than a "link". |
-| **BetaList** | betalist.com/submit | Submit startup: name, tagline, description, URL, logo, founder handle. Use the free queue (takes a few weeks). | dofollow | Good fit for an early-stage product. |
+| ~~**BetaList**~~ | betalist.com/submit | SKIP. As of 2026 the free queue is gone — paid only, $39+. Revisit only if we ever have budget. | dofollow | — |
 | **Indie Hackers** | indiehackers.com | Create account → add your product. Optionally post the building story in the community (genuine, not promo). | contextual | Product page links out; the story post is a bonus if it's real. |
 | **F6S** | f6s.com | Create a startup profile. | nofollow, high authority | Quick, credible founder/company profile. |
 
@@ -102,13 +107,13 @@ options:
 
 | Task | Status | Date | Link earned |
 |---|---|---|---|
-| Product Hunt launch | ☐ not started | | |
+| Product Hunt launch | ⏳ prepping — copy + gallery assets ready | | |
 | Crunchbase | ☐ | | |
 | BetaList | ☐ | | |
 | Indie Hackers product | ☐ | | |
 | F6S | ☐ | | |
 | Tier 2 batch (7 sites) | ☐ | | |
-| LinkedIn Company Page | ☐ | | |
+| LinkedIn Company Page | ✅ 2026-08-30 | 2026-08-30 | linkedin.com/company/wheretoapply |
 | SOS signup | ☐ | | |
 | Featured signup + profile | ☐ | | |
 | Qwoted signup | ☐ | | |
@@ -198,6 +203,13 @@ Keep them clean — real screenshots, light theme, no heavy mockup frames. A sho
 screen-recording (homepage → filter unis → open a profile → points calculator)
 as the first gallery item performs even better than a static hero if you can make one.
 
+**Reproducible capture:** `node scripts/capture_ph_screenshots.mjs` writes all six
+frames (2540×760, retina 2×) to `scripts/ph-screenshots/`. Run it against a
+`next build && next start` server or the live site
+(`BASE_URL=https://www.wheretoapply.xyz node scripts/capture_ph_screenshots.mjs`) —
+`next dev` leaves its dev-mode badge in the corner. Re-run after data updates so
+the gallery never drifts from the live numbers.
+
 ## Launch-day logistics
 
 - **Day:** Tuesday, Wednesday, or Thursday. Avoid Monday (crowded) and Fri–Sun (low traffic).
@@ -213,9 +225,240 @@ as the first gallery item performs even better than a static hero if you can mak
 |---|---|
 | Roman's PH account created, profile filled (photo, bio, links) | ☐ |
 | Warm up the account — genuinely upvote/comment on ~5 products over the prior week (PH discounts brand-new accounts) | ☐ |
-| Thumbnail + 6 gallery images exported | ☐ |
+| 6 gallery images captured (`scripts/capture_ph_screenshots.mjs` vs prod URL) | ✅ 2026-08-30 — `scripts/ph-screenshots/`, 2540×1520 = exact 2× of PH's 1270×760 |
+| Thumbnail (240×240) exported from `icon.svg` | ☐ |
+| (optional) downscale the 6 frames 50% if PH rejects the 2× size | ☐ |
 | (optional) 20–40s screen recording | ☐ |
 | First comment saved in the submission draft | ☐ |
 | Launch date + time chosen, post scheduled | ☐ |
 | 5–10 people told the date | ☐ |
-| Nothing broken on the site (quick pass on the pages in the screenshots) | ☐ |
+| Nothing broken on the site (quick pass on the pages in the screenshots) | ✅ 2026-08-30 — all 6 pages render clean, no console errors, filters + calculator work |
+
+---
+
+# Appendix B — Directory submission copy
+
+Ready to paste. Founded date is set to **August 2026** (first deploy + real
+domain went live 20–27 Aug 2026). One placeholder remains:
+`‹HANDLE›` = your username on that specific site.
+
+Logo assets are generated: `scripts/brand-assets/logo-512.png` (Crunchbase /
+F6S / BetaList / IH), `logo-400.png`, `logo-1024.png`, and
+`ph-thumbnail-240.png`. Re-run `node scripts/export_brand_assets.mjs` if the
+mark changes. Try uploading `src/app/icon.svg` directly first where SVG is
+accepted.
+
+## Length variants (mix and match into any site's fields)
+
+**One-liner (58 chars):**
+> Research Australian universities, courses, fees and visas
+
+**Tagline alt (49 chars):**
+> Studying in Australia, researched and sourced
+
+**Short (148 chars):**
+> A free, independent research platform for international students planning to study in Australia: universities, courses, fees, deadlines and visas.
+
+**Medium (296 chars):**
+> Where To Apply brings every Australian university's tuition, entry requirements, application deadlines and scholarships into one filterable database, alongside plain-English guides to the student visa (subclass 500), post-study work and skilled migration. Every figure is sourced and dated.
+
+**Long (2 paragraphs):**
+> Where To Apply is a free research platform for international students planning to study in Australia. It pulls every Australian university's international tuition, entry requirements, English scores, intakes, application deadlines and scholarships into one structured, filterable database you can actually compare, instead of the same details scattered across hundreds of inconsistent university pages.
+>
+> On top of the data sit plain-English guides to the parts people get stuck on: the subclass 500 student visa, the 485 post-study work visa, and the skilled-migration points test, with a working PR points calculator and a round-by-round SkillSelect invitation tracker. Every fact carries a "last verified" date and a link to its official source. It's independent: no university pays for inclusion, and it's not an education agent, so there are no placement commissions.
+
+## Per-site fields
+
+### Crunchbase — crunchbase.com (add a company/organization)
+
+| Field | Value |
+|---|---|
+| Organization name | Where To Apply |
+| Website | https://www.wheretoapply.xyz |
+| Short description (≤120 chars) | *use the One-liner* |
+| Full description | *use the Long copy* |
+| Founded date | August 2026 |
+| Operating status | Active |
+| Company type | For Profit |
+| Number of employees | 1–10 |
+| Industries | Education, EdTech, Information Services, Consumer Web |
+| Headquarters location | Nepal |
+| Founders | Roman Lama (add as a Person, role: Founder) |
+| Social | LinkedIn Company Page once it exists; leave others blank |
+
+Note: Crunchbase links are `nofollow`. The value is the profile ranking for
+brand searches, not SEO juice.
+
+### F6S — f6s.com (create a company profile)
+
+| Field | Value |
+|---|---|
+| Company name | Where To Apply |
+| Tagline / one-liner | *use the One-liner* |
+| What you do (short pitch) | *use the Medium copy* |
+| Full description | *use the Long copy* |
+| Website | https://www.wheretoapply.xyz |
+| Founded | August 2026 |
+| Location | Nepal (remote) |
+| Team size | 1 |
+| Markets / tags | Education, EdTech, Study Abroad, Immigration, Consumer Internet, Search |
+| Customer type | B2C |
+| Founder | Roman Lama, role: Founder. Bio: *see Founder bio below* |
+
+### BetaList — betalist.com/submit (NO free queue any more — paid only: $39 Lite / $99 / $299)
+
+Draft saved 2026-08-30 as submission 185314 with all the fields below already filled
+(logo, tagline, description, topics = Education/Colleges/All Students, maker @romanlama).
+The wizard auto-drafts from the site, then dead-ends at a paywall. Cheapest is $39
+"Lite" (featured on a random day within ~2 weeks, includes a DR 76 do-follow backlink).
+Decide if that's worth $39; if yes, Roman checks out. If not, the draft just sits.
+
+| Field | Value |
+|---|---|
+| Startup name | Where To Apply |
+| URL | https://www.wheretoapply.xyz |
+| Tagline (short, shows on the card) | Research Australian universities, courses, fees and visas |
+| Pitch / description | International students researching study in Australia have to pull tuition, entry requirements, deadlines and student-visa rules from hundreds of scattered, inconsistently formatted pages. Where To Apply puts every Australian university into one filterable database and adds sourced, dated guides to the subclass 500 student visa, post-study work and the skilled-migration points test, with a PR points calculator and a live SkillSelect invitation tracker. Independent: no paid placements, not an agent. |
+| Topics / categories | Education, EdTech, Travel |
+| Twitter/X handle | ‹HANDLE› (or leave blank) |
+| Maker | Roman Lama |
+
+BetaList likes pre-launch / early products and a founder who replies to comments.
+Links from BetaList are `dofollow`.
+
+### Indie Hackers — indiehackers.com (add a product)
+
+| Field | Value |
+|---|---|
+| Product name | Where To Apply |
+| Tagline | Studying in Australia, researched and sourced |
+| URL | https://www.wheretoapply.xyz |
+| Description | A free, independent research platform for international students planning to study in Australia. Every Australian university's fees, entry requirements, deadlines and scholarships in one filterable database, plus plain-English guides to the student visa, post-study work and skilled migration, with a PR points calculator and a live invitation-round tracker. Every figure is sourced and dated. |
+| Revenue | $0 (or actual) |
+| Started | August 2026 |
+| Building solo? | Yes |
+
+Optional and only if genuine: a short "building" post in the IH community about
+why you built it (solo, from Nepal, the scattered-data problem). Not promo, a
+real story. Skip it if it would feel forced.
+
+## Founder bio (reuse anywhere a bio is asked)
+
+**Short (1 line):**
+> Roman Lama, founder of Where To Apply, building independent study-in-Australia research from Nepal.
+
+**Medium:**
+> Roman Lama is the founder of Where To Apply, a research platform for international students planning to study in Australia. He built it solo from Nepal after seeing how much of the real detail (this year's tuition, the actual deadline, what the student visa costs) is scattered, out of date, or filtered through agents with an incentive. The site's focus is sourced, dated, independent data.
+
+### LinkedIn Company Page — linkedin.com/company/setup/new/
+
+Not a backlink (LinkedIn `nofollow`s the website link), but the Page ranks for
+"Where To Apply" and is what partners/journalists check. ~10 min.
+
+| Field | Value |
+|---|---|
+| Name | Where To Apply |
+| Public URL | linkedin.com/company/**wheretoapply** (claim this slug) |
+| Website | https://www.wheretoapply.xyz |
+| Industry | E-Learning Providers *(fallback: Technology, Information and Internet)* |
+| Company size | 0-1 employees |
+| Company type | Self-employed *(or Privately Held)* |
+| Logo | `scripts/brand-assets/logo-512.png` (LinkedIn needs ≥300×300) |
+| Cover image | 1128×191. Skip for now, or run the cover generator (see below) |
+| Tagline (≤120 chars) | Independent research for international students planning to study in Australia: universities, courses, fees and visas. |
+| Location | Nepal |
+
+**About / Overview (≤2,000 chars):**
+> Where To Apply is a free, independent research platform for international students planning to study in Australia.
+>
+> Every Australian university's international tuition, entry requirements, English scores, intakes, application deadlines and scholarships live in one structured, filterable database you can actually compare, instead of the same details buried across hundreds of inconsistent university pages.
+>
+> On top of the data sit plain-English guides to the parts people get stuck on: the subclass 500 student visa, the subclass 485 post-study work visa, and the skilled-migration points test, with a working PR points calculator and a round-by-round SkillSelect invitation tracker.
+>
+> Two principles:
+> • Every figure is sourced and dated. There's a "last verified" date and a link to the official university or government page behind every number, because fee and immigration detail goes stale fast.
+> • It's independent. No university pays for inclusion or a better write-up. Where To Apply is not an education agent and takes no placement commissions.
+>
+> Australia is covered in full today. The data model supports more study destinations as each gets the same fact-checking pass.
+>
+> Built by Roman Lama.
+
+**First post (pin it), optional:**
+> Where To Apply is live. It's a free, independent database of every Australian university's fees, entry requirements, deadlines and scholarships, plus sourced guides to the student and skilled-migration visas and a working PR points calculator. Built solo from Nepal, because the real numbers international students need are scattered and go out of date fast. Feedback welcome, especially if you spot a figure that looks wrong. https://www.wheretoapply.xyz
+
+**Hashtags (pick 3):** #StudyInAustralia #InternationalStudents #StudentVisa
+
+## Tier 2 batch (same copy, minimal fields)
+
+For SaaSHub, Uneed, Fazier, Peerlist, Startup Stash, Tiny Launch / MicroLaunch:
+
+- **Name:** Where To Apply
+- **URL:** https://www.wheretoapply.xyz
+- **Tagline:** Research Australian universities, courses, fees and visas
+- **Description:** *use the Short or Medium copy*
+- **Category:** Education / EdTech
+- **Screenshots:** reuse `scripts/ph-screenshots/1`, `2`, `4`
+
+Do these in one sitting. Don't agonise over fields; the copy above covers all of them.
+
+## Resume here next session
+
+Done so far: **LinkedIn Company Page** (fully set up — page, About, logo, cover,
+featured first post, link in first comment), **PH launch kit** (copy + 6 gallery
+screenshots in `scripts/ph-screenshots/`, generated by
+`scripts/capture_ph_screenshots.mjs`), **brand assets** (`scripts/brand-assets/`,
+generated by `scripts/export_brand_assets.mjs`), **all directory + LinkedIn copy**
+(Appendix B).
+
+Remaining, free-only, co-drive style (Roman logs in, Claude fills the form):
+1. **F6S** — f6s.com, free company profile. Log in first.
+2. **Indie Hackers** — indiehackers.com/products/new, free. Log in first.
+3. **Crunchbase** — MANUAL only (blocks automation). Roman does it in normal Chrome
+   with the Appendix B "Crunchbase" table.
+4. **Tier 2** — check each for a paywall first; skip any that went paid.
+5. **Track 2 (journalist sources)** — SOS / Featured / Qwoted signups, then weekly query triage.
+
+## Tracking
+
+| Site | Status | Date | Link |
+|---|---|---|---|
+| Crunchbase | ⚠️ blocked — CB returns 503 to automated browsers; do it manually in normal Chrome | | |
+| F6S | ☐ | | |
+| BetaList | ❌ SKIP — free queue gone, paid only ($39+). Not doing paid while pre-revenue. Draft 185314 abandoned. | 2026-08-30 | — |
+| Indie Hackers | ☐ | | |
+| Tier 2 batch | ☐ | | |
+| LinkedIn Company Page | ✅ 2026-08-30 — page + About + logo + first post live | | linkedin.com/company/wheretoapply |
+
+LinkedIn Page follow-ups:
+- ✅ Year founded (2026) + 5 Specialties (studying in Australia / student visas /
+  international education / Australian universities / skilled migration) — saved 2026-08-30.
+- Community/associated hashtags: LinkedIn has REMOVED this feature for Pages — no
+  longer in the admin UI. Put #StudyInAustralia #InternationalStudents #StudentVisa
+  in the text of individual posts instead.
+- ✅ First post featured (LinkedIn's "pin" = the Featured section on the Home tab) — 2026-08-30.
+- ✅ Cover image: `scripts/brand-assets/linkedin-cover-1128x191.png` (generated by
+  `export_brand_assets.mjs`), uploaded 2026-08-30.
+- Optional remaining: add Nepal as a location.
+
+## Sign-up / submit links
+
+Track 1:
+- Crunchbase — https://www.crunchbase.com/register  → then https://www.crunchbase.com/add-new
+- F6S — https://www.f6s.com/signup  → then "Add company" from your dashboard
+- BetaList — https://betalist.com/submit
+- Indie Hackers — https://www.indiehackers.com  (sign up, top right) → https://www.indiehackers.com/products/new
+- LinkedIn Company Page — https://www.linkedin.com/company/setup/new/
+
+Tier 2 (do in one sitting):
+- SaaSHub — https://www.saashub.com/submit
+- Uneed — https://www.uneed.best/submit-a-tool
+- Fazier — https://fazier.com  (Submit, from the header)
+- Peerlist — https://peerlist.io/signup  → https://peerlist.io/launchpad
+- Startup Stash — https://startupstash.com/add-startup/
+- Tiny Launch — https://www.tinylaunch.com   ·   MicroLaunch — https://microlaunch.net
+
+Track 2 (journalist sources):
+- Source of Sources — https://sourceofsources.com
+- Featured — https://featured.com  (sign up as an Expert)
+- Qwoted — https://www.qwoted.com/signup  (sign up as a Source)
+- #journorequest — https://twitter.com/search?q=%23journorequest&f=live
