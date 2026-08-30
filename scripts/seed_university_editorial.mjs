@@ -89,10 +89,12 @@ const E = {
   "curtin-university": {
     living: LIVING_COST.perth,
     who: "Curtin is the pick in Western Australia for applied engineering, mining, geology, and resources-sector careers, reflecting the state's economy. Perth has lower living costs than the eastern capitals and, crucially, counts as regional for skilled migration, so a Curtin degree earns extra visa points. It suits students aiming at industry roles rather than pure research, and those who do not mind Perth's distance from the rest of the country.",
+    intl: "Curtin's main campus is in Perth, which counts as a regional area for skilled migration, so studying here earns 5 points toward the 190 and 491 and opens the 491 occupation lists, with living costs below the eastern capitals. Curtin also runs campuses in Malaysia, Singapore, and Dubai, so confirm your offer is for the Perth campus if the migration points matter to you. It is applied and industry-focused, strongest in engineering, mining, and the resources sector.",
   },
   "deakin-university": {
     living: LIVING_COST.melbourne,
     who: "Deakin suits students who value flexibility. It was an early mover into large-scale online delivery and still runs one of the country's biggest cloud campuses alongside physical sites in Melbourne and Geelong. It is strong in nursing, health, and business. If you want the option to mix on-campus and online study, or to start online and transition, Deakin is built for that. Geelong also offers lower living costs than central Melbourne.",
+    intl: "Where you study at Deakin changes your migration position. Its Geelong campuses count as a regional area for skilled migration, worth 5 points toward the 190 and 491, while the Melbourne campus at Burwood does not. Deakin runs additional teaching periods beyond the standard February and July, so check the dates for your course. It is strong in nursing, education, sport science, and business.",
   },
   "edith-cowan-university": {
     living: LIVING_COST.perth,
@@ -114,6 +116,7 @@ const E = {
   "griffith-university": {
     living: LIVING_COST.goldcoast,
     who: "Griffith spans Brisbane and the Gold Coast and is strong in health, environmental science, criminology, and the creative arts, including a well-regarded film school and conservatorium. The Gold Coast campus offers a beach-city lifestyle with lower living costs than Sydney or Melbourne. It suits students who want a mid-sized comprehensive university with good industry links and a choice of campus settings.",
+    intl: "Griffith's campus choice affects skilled migration. Its Gold Coast campus counts as a regional area, worth 5 points toward the 190 and 491 and access to the 491 occupation lists, while the Brisbane campuses at Nathan, Mount Gravatt, and South Bank do not, because Brisbane is excluded from the definition of regional Australia. Griffith is strong in health, environmental science, criminology, and Asia-Pacific studies. Confirm which campus your course is based at before you accept.",
   },
   "holmes-institute": {
     living: LIVING_COST.national,
@@ -134,10 +137,12 @@ const E = {
   "la-trobe-university": {
     living: LIVING_COST.melbourne,
     who: "La Trobe suits students in the life sciences, ecology, health, and the humanities who want a large Melbourne university with a green, self-contained main campus. Its Bundoora site sits next to a wildlife reserve used directly in teaching. It is less selective than the Group of Eight, which makes it accessible, and it has regional campuses in Bendigo and Albury-Wodonga that carry migration advantages.",
+    intl: "La Trobe's main Bundoora campus is in Melbourne and does not carry regional migration points, but its Bendigo and Albury-Wodonga campuses are in regional areas worth 5 points toward the 190 and 491, with much lower living costs. If the regional benefit matters to you, look at those campuses and confirm your course runs there in full rather than partly in Melbourne. La Trobe is strong in health sciences, agriculture, and the humanities, and is more accessible on entry than the Group of Eight.",
   },
   "macquarie-university": {
     living: LIVING_COST.sydney,
     who: "Macquarie is a strong fit for students in actuarial studies, finance, linguistics, cognitive science, and health, and its campus has its own metro station and a university-run hospital used in teaching. It sits in Sydney's north, near a major corporate and tech precinct, which helps with internships and graduate roles. Living costs are Sydney-level, so budget accordingly.",
+    intl: "Macquarie is in northern Sydney, so there are no regional migration points and Sydney living costs are the highest in the country. Its campus has its own metro station and a university-run teaching hospital, MQ Health, which supports its medicine and allied health programs, and it is well regarded for actuarial studies, finance, and politics and international relations. Entry from a three-year overseas bachelor is accepted for most masters, with a credit average the common bar.",
   },
   "melbourne-institute-of-technology": {
     living: LIVING_COST.melbourne,
@@ -165,10 +170,12 @@ const E = {
   "queensland-university-of-technology": {
     living: LIVING_COST.brisbane,
     who: "QUT builds mandatory industry placements into most undergraduate degrees, closer to a co-op model than a traditional university, so it suits students who want work experience embedded in their study. It is strong in creative industries, urban planning, engineering, and health. Its campuses are in central Brisbane, which has lower living costs than Sydney or Melbourne while still being a state capital.",
+    intl: "QUT is in central Brisbane, which is excluded from the definition of regional Australia, so it does not earn the regional study points that Gold Coast, Adelaide, Perth, and Canberra do, though Brisbane living costs sit below Sydney and Melbourne. QUT builds mandatory industry placements into most undergraduate degrees, closer to a co-op model, and is strongest in IT, engineering, health, and creative industries.",
   },
   "rmit-university": {
     living: LIVING_COST.melbourne,
     who: "RMIT is the pick for design, architecture, media, and applied technology, with a distinctly practical, studio-based culture and a central Melbourne campus in the heart of the city. It suits students who want industry connection and a creative or technical focus rather than a traditional liberal-arts degree. Being in the CBD means higher living costs but excellent transport and part-time work options.",
+    intl: "RMIT is in central Melbourne, which does not carry regional migration points, and CBD living costs are high. It leans hard into design, applied technology, and industry-linked degrees, with several IT and engineering programs including a built-in professional placement. RMIT also runs campuses in Vietnam, so confirm your offer is for a Melbourne campus. Standard entry is a bachelor with a credit average and IELTS 6.5.",
   },
   "south-metropolitan-tafe": {
     living: LIVING_COST.perth,
@@ -219,6 +226,7 @@ const E = {
   "university-of-newcastle": {
     living: LIVING_COST.newcastle,
     who: "Newcastle is strong in medicine, engineering, and the health sciences, and it pioneered problem-based learning in its medical program. Newcastle is a coastal city two hours north of Sydney with markedly lower living costs and a relaxed lifestyle. It suits students who want a research-active university without Sydney prices, and its campus carries some regional advantages for migration.",
+    intl: "The University of Newcastle's main Callaghan campus is in Newcastle, which counts as a regional area for skilled migration, so study here earns 5 points toward the 190 and 491 and opens the 491 occupation lists, with living costs well below Sydney's, two hours south. It also runs a Sydney campus, which does not carry the regional benefit, so check which campus your course is delivered at. Newcastle is strong in medicine, engineering, and the health sciences.",
   },
   "university-of-notre-dame-australia": {
     living: LIVING_COST.perth,
@@ -246,6 +254,7 @@ const E = {
   "university-of-technology-sydney": {
     living: LIVING_COST.sydney,
     who: "UTS is a technology-focused university built around practice-based learning studios and strong industry connections, in central Sydney next to the tech and startup precinct. It is strong in engineering, IT, design, and business analytics. It suits students who want an applied, industry-linked degree in the heart of Sydney and who can manage the city's living costs.",
+    intl: "UTS is in central Sydney, so there are no regional migration points and living costs are the highest in the country. Its model is built around practice-based studios and industry placement rather than traditional lectures, and it is strongest in engineering, IT, design, and business analytics. Entry from a three-year overseas bachelor is accepted for most masters, with a credit average the common bar.",
   },
   "university-of-the-sunshine-coast": {
     living: LIVING_COST.sunshinecoast,
@@ -259,6 +268,7 @@ const E = {
   "university-of-wollongong": {
     living: LIVING_COST.wollongong,
     who: "UOW is strong in engineering, computing, and materials science, with close co-op ties to local industry, and its campus sits between an escarpment and the coast an hour south of Sydney. Wollongong has much lower living costs than Sydney and some regional migration benefits. It suits students who want a research-active university with strong industry placement links and a smaller-city lifestyle.",
+    intl: "UOW's main campus is in Wollongong, which counts as a regional area for skilled migration, so studying here earns 5 points toward the 190 and 491 and opens the 491 occupation lists, an hour south of Sydney with much lower living costs. UOW also runs a Sydney CBD campus and several smaller regional campuses, so confirm which one your course is delivered at. It is strongest in engineering, computing, and materials science, with strong local industry placement links.",
   },
   "unsw-sydney": {
     living: LIVING_COST.sydney,
