@@ -1070,3 +1070,27 @@ Supersedes the scattered "still on user" notes above. This is the current consol
 - Check the GSC sitemap flips to "Success" (~2 days).
 - Once GSC Performance has ~1–2 weeks of query/impression data, use it to pick which of the 5 intent-cluster content pages to build first (see the SEO roadmap). This is the gate on further content work.
 - Optional: `public/ads.txt` when the AdSense publisher ID is issued (currently 404, only matters at AdSense approval).
+
+## 29. Product direction — the source-country wedge (2026-08-30, strategy pass)
+
+Decided this session. The project's realistic path to an audience is **not** competing for "study in Australia" head terms (owned by IDP / Leverage Edu / Yocket / gov, unbeatable for a solo new-domain site in a YMYL topic). It is to be the **honest, sourced resource for prospective students from a specific source country**, aimed at the cohort that (a) researches in English, (b) is motivated by study → work → PR, and (c) does not trust their local agent/consultancy.
+
+**Winnable set (invest deep, in order):** Nepal (first — Roman's first-hand knowledge), India (biggest of the group), then Pakistan / Sri Lanka / Bangladesh, then Philippines, then Vietnam.
+
+**Deliberately deprioritised:** China. #1 by volume but not capturable — Chinese students research in Chinese on Baidu / Xiaohongshu / Zhihu, the agent ecosystem is entrenched, and the jobs/PR angle is weaker for that cohort. An English China page gets a sliver of China demand. Keep the page thin; do not invest. Vietnam / Indonesia are milder versions of the same.
+
+**Rule: 2–3 deep country hubs beat a dozen thin ones.** Thin country pages are exactly what the content farms already have. Add/deepen a country only when the page is clearly better than what's already ranking.
+
+**What makes a country hub not-thin** (the substance — layer onto the existing `/international/[country]` pages, config `src/lib/origin-countries.ts`):
+- Real first-year cost stated in local currency, and the bank-balance / loan / sponsor level the visa actually expects from that nationality
+- **Visa grant vs refusal rates and the common refusal reasons for that country** — DHA publishes country-level data; almost nobody surfaces it; highest-stakes thing an applicant wants. (India already has Evidence Level 3 detail — extend this pattern.)
+- Credential mapping: does a 3-year bachelor / gaokao / national school exam get you in
+- Genuine Student (ex-GTE) scrutiny level for that nationality
+- The local agent/consultancy landscape and the specific scams
+- Scholarships open to that nationality
+
+**The differentiator the study-abroad farms structurally skip — own the whole arc:** what happens *after* graduation for someone from that country. 485 post-study work visa, the honest job market for their field + nationality, realistic PR points math, state nomination, regional pathways. Agents stop at enrolment because that's where the commission ends; Roman has no such constraint.
+
+**Headwind to be honest about:** Australia tightened hard through 2024–26 — Genuine Student test, higher financial thresholds, A$2,000+ (site currently says A$2,500) visa fee, enrolment caps, some unis pausing specific regions. The overall market is contracting. That churn is *also* the underdocumented, high-stakes info the site can own — but the tools (points calculator, invitation-round tracker) and the sourced honesty have to carry it.
+
+**Status:** existing `/international/[country]` hub has 7 pages (India/Nepal/Pakistan/China/Vietnam/Bangladesh/Sri Lanka). India + Nepal are the most developed. No code written this session — direction only. Next content work here is gated on the same GSC-data wait as the rest of the SEO roadmap. Related memory: [[source-country-wedge]].
