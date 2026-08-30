@@ -8,10 +8,11 @@ type NavItem = NavLink | { label: string; children: NavLink[] };
 
 const NAV: NavItem[] = [
   { label: "Universities", href: "/universities" },
-  { label: "Deadlines", href: "/deadlines" },
+  { label: "Scholarships", href: "/scholarships" },
   {
     label: "Explore",
     children: [
+      { label: "Deadlines", href: "/deadlines", hint: "Application closing dates by intake" },
       { label: "Courses", href: "/study", hint: "Browse programs by subject" },
       { label: "Best universities", href: "/best", hint: "Ranked shortlists by field" },
       { label: "Compare", href: "/compare", hint: "Universities side by side" },
@@ -20,13 +21,7 @@ const NAV: NavItem[] = [
       { label: "By country", href: "/international", hint: "Applying from India, Nepal, China and more" },
     ],
   },
-  {
-    label: "Funding & visas",
-    children: [
-      { label: "Scholarships", href: "/scholarships", hint: "Funding you can apply for" },
-      { label: "Visas", href: "/visas", hint: "Student, graduate & skilled subclasses" },
-    ],
-  },
+  { label: "Visas", href: "/visas" },
   {
     label: "Guides",
     children: [
