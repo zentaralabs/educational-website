@@ -94,7 +94,8 @@ const visas = [
     leads_to_pr: false,
     pr_pathway:
       "The 485 is a bridge, not a destination. Use the time on it to reach one year of skilled employment in your nominated occupation, get a positive skills assessment, and lodge an Expression of Interest for a 189, 190, or 491. Regional study and work while on the 485 can add points.",
-    base_application_charge: "About AUD 2,235 for the primary applicant",
+    base_application_charge:
+      "From AUD 5,750 for the primary applicant. The second regional Post-Higher Education Work stream visa is cheaper. A lower charge applies to eligible Pacific Island and Timor-Leste citizens.",
     processing_time: "Commonly 4 to 12 months",
     age_limit:
       "Under 35 at time of application; under 50 for masters by research and PhD graduates, and for Hong Kong and British National (Overseas) passport holders",
@@ -131,7 +132,7 @@ const visas = [
     pr_pathway:
       "The 189 is permanent residence. After meeting residence requirements you can apply for Australian citizenship. There is no provisional stage.",
     base_application_charge:
-      "From about AUD 4,770 for the primary applicant, indexed each 1 July",
+      "From AUD 6,135 for the primary applicant, indexed each 1 July. A lower charge applies to eligible Pacific Island and Timor-Leste citizens from 1 July 2026.",
     processing_time: "Roughly 5 to 12 months after invitation, occupation dependent",
     age_limit: "Under 45 at the date of invitation",
     english_requirement:
@@ -167,7 +168,7 @@ const visas = [
     pr_pathway:
       "The 190 is permanent residence. The commitment to your nominating state is a moral and declared one rather than a hard visa condition, but breaking it early can affect future dealings and any family members' applications.",
     base_application_charge:
-      "From about AUD 4,770 for the primary applicant, plus a separate state nomination fee in some states",
+      "From AUD 6,140 for the primary applicant, plus a separate state or territory nomination fee in some jurisdictions. A lower charge applies to eligible Pacific Island and Timor-Leste citizens from 1 July 2026.",
     processing_time: "Roughly 5 to 12 months after invitation",
     age_limit: "Under 45 at the date of invitation",
     english_requirement: "Competent English to qualify; higher levels add points",
@@ -200,7 +201,8 @@ const visas = [
     leads_to_pr: true,
     pr_pathway:
       "Live in a designated regional area and have taxable income at or above a set threshold (currently AUD 53,900) for at least 3 years while on the 491, then apply for the subclass 191 permanent visa. Time on a 494 also counts toward the 191.",
-    base_application_charge: "From about AUD 4,770 for the primary applicant",
+    base_application_charge:
+      "From AUD 6,140 for the primary applicant. A lower charge applies to eligible Pacific Island and Timor-Leste citizens from 1 July 2026.",
     processing_time: "Roughly 6 to 12 months after invitation",
     age_limit: "Under 45 at the date of invitation",
     english_requirement: "Competent English to qualify; higher levels add points",
@@ -233,7 +235,8 @@ const visas = [
     leads_to_pr: true,
     pr_pathway:
       "The 191 is the permanent visa. After meeting residence requirements you can apply for citizenship.",
-    base_application_charge: "About AUD 335 for the primary applicant",
+    base_application_charge:
+      "From AUD 630 for the primary applicant. A lower charge applies to eligible Pacific Island and Timor-Leste citizens from 1 July 2026.",
     processing_time: "Commonly 3 to 8 months",
     age_limit: "No age limit at this stage",
     english_requirement: "No new English test required at the 191 stage",
@@ -267,7 +270,7 @@ const visas = [
     pr_pathway:
       "After two years working for your sponsor you can generally be nominated for the permanent subclass 186 Employer Nomination Scheme visa through its Temporary Residence Transition stream. Time on the 482 also counts toward the residence requirement for other pathways.",
     base_application_charge:
-      "About AUD 3,210 for the primary applicant (Core Skills and Specialist Skills streams)",
+      "From AUD 4,015 for the primary applicant in the Core Skills and Specialist Skills streams. A separate second instalment applies for an adult family member without functional English. A lower charge applies to eligible Pacific Island and Timor-Leste citizens from 1 July 2026.",
     processing_time: "Often 1 to 5 months once the sponsor and nomination are approved",
     age_limit: "No age limit for the 482 itself; the 186 transition has one",
     english_requirement:
@@ -300,7 +303,8 @@ const visas = [
     stay_period: "Permanent",
     leads_to_pr: true,
     pr_pathway: "The 186 is permanent residence and leads to citizenship after the residence requirement is met.",
-    base_application_charge: "About AUD 4,910 for the primary applicant",
+    base_application_charge:
+      "From AUD 6,140 for the primary applicant. A lower charge applies to eligible Pacific Island and Timor-Leste citizens from 1 July 2026.",
     processing_time:
       "Temporary Residence Transition often 6 to 12 months; Direct Entry can be longer",
     age_limit:
@@ -336,7 +340,8 @@ const visas = [
     leads_to_pr: true,
     pr_pathway:
       "Hold the 494 for three years, comply with its regional conditions, and meet the income requirement, then apply for the subclass 191 permanent visa. This is the same permanent stage the 491 feeds into.",
-    base_application_charge: "From about AUD 4,770 for the primary applicant",
+    base_application_charge:
+      "From AUD 6,140 for the primary applicant. A lower charge applies to eligible Pacific Island and Timor-Leste citizens from 1 July 2026.",
     processing_time: "Commonly 6 to 12 months",
     age_limit: "Under 45 at application, with limited exemptions",
     english_requirement: "Competent English (IELTS 6 equivalent)",
@@ -437,7 +442,7 @@ const visas = [
     pr_pathway:
       "None. The visitor visa is strictly temporary. Many visitor visas carry condition 8503, which blocks applying for most other visas while in Australia.",
     base_application_charge:
-      "From about AUD 200 for the Tourist stream, higher for other streams",
+      "From AUD 250 for the Tourist stream applied for outside Australia, or AUD 630 applied for inside Australia. Other streams cost more. A lower charge applies to eligible Pacific Island and Timor-Leste citizens from 1 July 2026.",
     processing_time: "From a few days to several weeks depending on stream and country",
     age_limit: "None",
     english_requirement: "None",
@@ -448,7 +453,7 @@ const visas = [
     conditions:
       "Condition **8101** prohibits work. Condition **8201** limits study to 3 months. Condition **8503** (no further stay) is often imposed and prevents applying for another visa onshore. Condition **8558** limits you to no more than 12 months in any 18-month period for long-validity visas.",
     content:
-      "## Which visitor visa applies to you\n\nPassport holders from many countries use the free eVisitor (subclass 651) or the low-cost ETA (subclass 601) instead. The 600 is for everyone else, and for visits that need a longer stay or a specific stream.\n\n## Visitor visa versus student visa\n\nPeople often ask whether they can study on a visitor visa, or start on a 600 and switch to a student visa later. A visitor visa allows only short, casual study, and switching onshore is frequently blocked.\n\n| Question | Visitor visa (600) | [Student visa (500)](/visas/student-500) |\n| --- | --- | --- |\n| Main purpose | Tourism, visiting family, business meetings | Full-time enrolment in a CRICOS-registered course |\n| Study allowed | Up to 3 months, under condition 8201 | Unlimited, that is the purpose of the visa |\n| Work allowed | None, under condition 8101 | Up to 48 hours a fortnight while the course is in session |\n| Typical length | 3, 6, or 12 months per entry | Length of the course plus a short buffer |\n| Health cover | Not required, but strongly advised | OSHC mandatory for the whole visa |\n| Cost | From about AUD 200 | From AUD 2,500, see the [cost breakdown](/guides/australia-student-visa-cost) |\n| Leads anywhere | No | Can lead to a [485 graduate visa](/visas/temporary-graduate-485) and, in some fields, permanent residence |\n\nA visitor visa is enough for a language course or a single subject of under three months. For anything longer you need a student visa, and you generally cannot move from a 600 to a 500 without leaving Australia, especially if your visitor visa carries condition 8503 (no further stay). Applying for the right visa from the start avoids a wasted trip.\n\n## The 8503 condition\n\nIf your visa says 'no further stay', you generally cannot apply for a student, partner, or skilled visa while in Australia. Waivers are granted only for major, unforeseen changes in circumstances.\n\n## Visiting while a partner visa is processed\n\nOffshore partner visa (309) applicants often hold a 600 to spend time in Australia during processing, as long as the 600 does not carry 8503.",
+      "## Which visitor visa applies to you\n\nPassport holders from many countries use the free eVisitor (subclass 651) or the low-cost ETA (subclass 601) instead. The 600 is for everyone else, and for visits that need a longer stay or a specific stream.\n\n## Visitor visa versus student visa\n\nPeople often ask whether they can study on a visitor visa, or start on a 600 and switch to a student visa later. A visitor visa allows only short, casual study, and switching onshore is frequently blocked.\n\n| Question | Visitor visa (600) | [Student visa (500)](/visas/student-500) |\n| --- | --- | --- |\n| Main purpose | Tourism, visiting family, business meetings | Full-time enrolment in a CRICOS-registered course |\n| Study allowed | Up to 3 months, under condition 8201 | Unlimited, that is the purpose of the visa |\n| Work allowed | None, under condition 8101 | Up to 48 hours a fortnight while the course is in session |\n| Typical length | 3, 6, or 12 months per entry | Length of the course plus a short buffer |\n| Health cover | Not required, but strongly advised | OSHC mandatory for the whole visa |\n| Cost | From AUD 250 | From AUD 2,500, see the [cost breakdown](/guides/australia-student-visa-cost) |\n| Leads anywhere | No | Can lead to a [485 graduate visa](/visas/temporary-graduate-485) and, in some fields, permanent residence |\n\nA visitor visa is enough for a language course or a single subject of under three months. For anything longer you need a student visa, and you generally cannot move from a 600 to a 500 without leaving Australia, especially if your visitor visa carries condition 8503 (no further stay). Applying for the right visa from the start avoids a wasted trip.\n\n## The 8503 condition\n\nIf your visa says 'no further stay', you generally cannot apply for a student, partner, or skilled visa while in Australia. Waivers are granted only for major, unforeseen changes in circumstances.\n\n## Visiting while a partner visa is processed\n\nOffshore partner visa (309) applicants often hold a 600 to spend time in Australia during processing, as long as the 600 does not carry 8503.",
     source_urls: [
       `${HOMEAFFAIRS}/visitor-600`,
     ],
