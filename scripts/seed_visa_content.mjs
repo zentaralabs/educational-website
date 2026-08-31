@@ -648,6 +648,64 @@ Not to meet an English entry standard the way you do. But an adult family member
       "https://www.studyaustralia.gov.au/en/plan-your-move/your-guide-to-visas/student-visa-subclass-500",
     ],
   },
+  {
+    slug: "why-study-in-australia",
+    title: "Why study in Australia? The case, and the caveats",
+    category: "country-guide",
+    country: "AU",
+    excerpt:
+      "The reasons Australia genuinely competes with the UK, Canada, and the US for international students, and the trade-offs no brochure lists: cost, distance, and a points system that decides who gets to stay.",
+    content: `Australia sits alongside the United States, the United Kingdom, and Canada as one of the destinations most international students shortlist. The reasons people actually choose it are not always the ones marketing pages lead with. Here is what holds up, and what to weigh against it.
+
+## The case for Australia
+
+**Work rights during and after study are generous.** On a [subclass 500 student visa](/visas/student-500) you can work up to 48 hours per fortnight while your course is in session, with no limit during scheduled course breaks. The detail is in [working while you study](/guides/working-while-you-study-in-australia). After you finish, the [Temporary Graduate visa (subclass 485)](/guides/temporary-graduate-visa-485-guide) gives you two to three years of open work rights with no employer sponsor, and graduates who studied and lived in a [regional area](/best/regional-australian-universities-for-skilled-migration) can get an extra one to two years on top of that.
+
+**There is a documented route from study to permanent residence.** It is neither automatic nor fast, but it is well mapped: student visa, then the 485, then a skilled visa such as the [189](/visas/skilled-independent-189), [190](/visas/skilled-nominated-190), or [491](/visas/skilled-work-regional-491), chosen through a [points test](/guides/how-the-australian-points-test-works) and [invitation rounds](/visas/invitation-rounds). The full sequence is in the [study to permanent residence guide](/guides/study-to-permanent-residence-pathway-australia). Whether it works depends heavily on your field, so check [which courses lead to permanent residence](/guides/which-australian-courses-lead-to-permanent-residence) before you enrol.
+
+**The system is compact and consistent.** Every provider that can teach international students is on the CRICOS register, degrees are regulated by one national agency, and pathway and credit-transfer arrangements between institutions are common. The [Group of Eight](/best/group-of-eight-universities-in-australia) research universities all sit in the upper tier of global rankings, and there is real teaching depth in [nursing and health](/study/nursing-and-health-sciences), [engineering](/study/engineering), [IT](/study/information-technology) and [data science](/study/data-science), [environmental science](/study/environmental-science), and [law](/study/law).
+
+**Two intakes a year.** Most courses start in [February and July](/guides/february-vs-july-intake-in-australia), so a missed deadline usually costs months, not a year.
+
+**English test flexibility.** [IELTS and PTE](/guides/ielts-vs-pte-for-australian-university-admission) are both widely accepted, and a number of universities will admit you [without a standardised English test](/guides/studying-in-australia-without-ielts) on the strength of prior study in English.
+
+## The caveats
+
+**It is expensive, and the visa itself now costs money.** International tuition commonly runs AUD 30,000 to 50,000 a year, Sydney and Melbourne living costs are high, and from 1 July 2026 the student visa application charge is AUD 2,500, among the highest of any study destination. Lower charges apply to some Pacific, Timor-Leste, and ASEAN nationals and to English-language and non-award applicants. Work through the [real cost of studying in Australia](/guides/real-cost-of-studying-in-australia) before you commit.
+
+**You have to prove serious money up front.** The visa requires evidence of AUD 29,710 for 12 months of living costs, plus your first year of tuition, plus travel, and the funds have to look genuine. See [proving you can afford it](/guides/proving-funds-for-an-australian-student-visa).
+
+**Distance is real.** Flights home are long and expensive, time zones make family calls awkward, and you are far from most other countries you might want to visit.
+
+**The PR pathway is competitive and keeps changing.** Points thresholds for the [189](/visas/skilled-independent-189) have been high in recent rounds, occupation lists get revised, and living-cost and visa-fee figures rise most years. Treat any permanent residence plan as conditional and check the [invitation rounds](/visas/invitation-rounds) and [points calculator](/visas/points-calculator) for where things actually stand.
+
+**Processing is not guaranteed or quick.** Student visa grants from outside Australia are ordered under a Ministerial Direction that favours certain providers and course levels, and refusal rates have risen. A weak [Genuine Student statement](/guides/genuine-student-requirement-how-to-write-your-statement) is a common reason for refusal.
+
+## Weighing it up
+
+If your field maps to an occupation Australia needs, and you can fund the first year without relying on work, the mix of long post-study work rights and a documented PR route is hard to beat. If you are borderline on funds, or your field has no clear skilled-migration path, the cost and distance are harder to justify against closer or cheaper options.
+
+## Where to start
+
+Shortlist courses that are CRICOS registered and lead to an occupation you could be assessed in. Compare institutions on the [universities directory](/universities) and [side by side](/compare/universities), check [entry deadlines](/deadlines), look for [scholarships](/scholarships) you are eligible for, and read the notes for [your home country](/international) if one is published. You can [apply directly, without an agent](/guides/applying-to-australian-universities-without-an-agent).
+
+## Can I move to Australia permanently after studying?
+
+Many people do, but no visa converts a degree into permanent residence on its own. You complete at least two academic years of eligible study, move onto a Temporary Graduate visa, get a skills assessment for your occupation, build a competitive points score, and are then invited to apply for a skilled visa. Fields with a clear skilled-migration pathway make this realistic. Fields without one make it much harder.
+
+## Is Australia or Canada better for international students?
+
+Both offer post-study work visas and skilled-migration routes. Australia's post-study work rights run longer for some qualifications and its term-time work cap is higher, while Canada has historically had lower tuition and visa fees. Canada tightened study permit numbers and post-graduation work eligibility through 2024 and 2025, and Australia raised visa fees and financial requirements over the same period, so compare the current rules for your specific course and nationality rather than relying on older comparisons.
+
+## How long does it take to get permanent residence after studying?
+
+Plan for four to seven years from arrival: about two years of study, then one to three years on a Temporary Graduate visa building skilled experience and your points score, then anywhere from a few months to a couple of years waiting for an invitation, depending on your occupation. The regional 491 route adds three more years of regional residence but is often quicker to be invited for.`,
+    sources: [
+      "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
+      "https://www.studyaustralia.gov.au/en/plan-your-move/your-guide-to-visas",
+      "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-graduate-485",
+    ],
+  },
 ];
 
 // ---------------------------------------------------------------------------
