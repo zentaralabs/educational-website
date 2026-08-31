@@ -11,15 +11,21 @@ export const VISA_CATEGORY_LABELS: Record<string, string> = {
   other: "Other",
 };
 
-/** Display order for the /visas index. */
+/**
+ * Display order for the /visas index category tabs. Student and
+ * graduate come last here on purpose: the page already foregrounds
+ * them in the study-to-PR pathway steps and the "core visas" table,
+ * so the tab bar leads with the categories a reader would otherwise
+ * have to scroll to find.
+ */
 export const VISA_CATEGORY_ORDER: string[] = [
-  "student",
-  "graduate",
-  "skilled",
-  "employer-sponsored",
-  "family",
-  "business-investor",
   "working-holiday",
+  "family",
+  "employer-sponsored",
+  "skilled",
   "visitor",
+  "graduate",
+  "student",
+  "business-investor",
   "other",
 ];
