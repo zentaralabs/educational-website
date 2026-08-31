@@ -19,10 +19,10 @@ export const VISA_CATEGORY_LABELS: Record<string, string> = {
  * have to scroll to find.
  */
 export const VISA_CATEGORY_ORDER: string[] = [
-  "working-holiday",
-  "family",
-  "employer-sponsored",
   "skilled",
+  "employer-sponsored",
+  "family",
+  "working-holiday",
   "visitor",
   "graduate",
   "student",
