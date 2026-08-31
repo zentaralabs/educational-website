@@ -59,7 +59,8 @@ const visas = [
     leads_to_pr: false,
     pr_pathway:
       "The student visa itself is temporary and gives no direct PR entitlement. The common route is to finish an eligible qualification, move onto a subclass 485 Temporary Graduate visa, gain skilled work experience, and then apply for a 189, 190, or 491. Studying in a regional area can add points and open regional nomination streams.",
-    base_application_charge: "AUD 2,500 (increased from AUD 2,000 on 1 July 2026)",
+    base_application_charge:
+      "From AUD 2,500 for the main applicant (up from AUD 2,000 on 1 July 2026), plus a charge for each family member. A lower charge applies to eligible Pacific Island, Timor-Leste, and ASEAN citizens, and to Independent ELICOS and non-award applications; the Visa Pricing Estimator shows the exact concession amount.",
     processing_time: "Most decisions in 1 to 4 months, varies by country and course",
     age_limit: "No upper age limit; applicants under 18 need welfare arrangements",
     english_requirement:
