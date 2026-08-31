@@ -476,7 +476,7 @@ const visas = [
     pr_pathway:
       "None directly. The 462 is temporary. Some holders later move onto an employer-sponsored or skilled visa, but that is a fresh application on its own merits, not a transition built into the 462.",
     base_application_charge:
-      "AUD 840 for a first visa, AUD 1,000 for a second or third (from 1 July 2026). China, India, and Vietnam applicants also pay a AUD 25 ballot registration fee.",
+      "AUD 840 for a first visa and AUD 1,000 for a second or third, as set from 1 July 2026. China, India, and Vietnam applicants also pay a AUD 25 ballot registration fee. A lower charge applies to eligible Papua New Guinea passport holders.",
     processing_time:
       "Highly variable and currently extended due to demand. Do not book travel until the department tells you in writing that the visa is granted.",
     age_limit: "18 to 30 inclusive when you apply, or when you register for the ballot.",
