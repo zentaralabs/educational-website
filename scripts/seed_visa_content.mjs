@@ -706,6 +706,88 @@ Plan for four to seven years from arrival: about two years of study, then one to
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-graduate-485",
     ],
   },
+  {
+    slug: "australia-student-visa-cost",
+    title: "How much does an Australian student visa cost?",
+    category: "country-guide",
+    country: "AU",
+    excerpt:
+      "The subclass 500 application charge is AUD 2,500 from July 2026, but that is one line in the bill. Here is the full cost of getting the visa: health cover, medicals, police checks, and the money you have to show.",
+    content: `The student visa itself is only one line in the bill. This is what a [subclass 500](/visas/student-500) actually costs to get, from the application charge to the health cover, medicals, and police checks you cannot skip.
+
+## The visa application charge
+
+From 1 July 2026 the subclass 500 application charge is **AUD 2,500** for the main applicant. It rose 25 percent that day, from AUD 2,000. You pay it in full when you lodge, and it is not refunded if the visa is refused.
+
+A lower charge applies if you are an eligible citizen of a Pacific Island country, Timor-Leste, or an ASEAN member country, or if you apply in the ELICOS (English language) or non-award sector. The Department of Home Affairs Visa Pricing Estimator gives the exact figure for your situation.
+
+Things that add to the charge:
+
+- **Each family member** you include costs an extra application charge, with a higher amount for an adult than for a child. See [bringing family on a student visa](/guides/bringing-family-on-an-australian-student-visa).
+- An adult family member who **cannot show functional English** is billed a second, large instalment before the visa is granted, unless they provide evidence of English.
+- Paying by **card** adds a surcharge, usually around one to two percent depending on the card type.
+
+## What that is in your own currency
+
+The charge is set in Australian dollars, so your local cost depends on the exchange rate on the day you pay. As a rough guide only, AUD 2,500 has recently been in the region of 135,000 to 145,000 Indian rupees, or 210,000 to 225,000 Nepali rupees. Check a live rate before you budget, and see [moving money to Australia](/guides/moving-money-to-australia-for-the-student-visa) for how to pay from India or Nepal.
+
+## The costs around the visa
+
+None of these go to the university. They are the price of getting the visa approved. All figures are typical ranges, not fixed fees.
+
+| Item | Typical cost | Notes |
+| --- | --- | --- |
+| Overseas Student Health Cover (OSHC) | AUD 500 to 700 a year, single cover | Mandatory for the full length of the visa. Family cover costs more. See [OSHC](/guides/oshc-health-cover-for-international-students) |
+| Health examination (medical and chest x-ray) | AUD 300 to 500 | Done at a panel clinic in your country, which sets its own price |
+| Police certificate | AUD 30 to 60 per country | One for each country you lived in for 12 months or more over the last 10 years |
+| Visa application centre service fee | Small or none | Varies by country; covers biometrics collection |
+| English test, if you need one | AUD 350 to 430 | [IELTS or PTE](/guides/ielts-vs-pte-for-australian-university-admission). Not needed if your offer waives it |
+| Certified copies and translations | AUD 20 to 100 | Depends how many documents need translating |
+
+## The money you must show, but do not hand over
+
+Separately from any fee, the visa requires evidence that you can cover **12 months of living costs, currently AUD 29,710 for a single applicant**, plus your **first year of tuition** and **travel**. This is not a payment. It is a balance you have to demonstrate access to. The method is in [proving you can afford it](/guides/proving-funds-for-an-australian-student-visa).
+
+## A worked total: single applicant, first application from overseas
+
+| Item | Amount |
+| --- | --- |
+| Visa application charge | AUD 2,500 |
+| Card surcharge, about 1 percent | AUD 25 |
+| OSHC, two years single cover | AUD 1,300 |
+| Health examination | AUD 400 |
+| Police certificate | AUD 50 |
+| English test | AUD 400 |
+| **Cash you actually spend to get the visa** | **about AUD 4,700** |
+
+That is before tuition, before flights, and before the AUD 29,710 you have to show. Health cover is the largest recurring piece and scales with how long your course runs.
+
+## Where the cost goes up
+
+- **A longer course** means more years of OSHC bought upfront.
+- **Bringing a partner or children** adds an application charge each, more health cover, and possibly the second English instalment.
+- **A refusal** means the AUD 2,500 is gone and a fresh application restarts the charges. A weak [Genuine Student statement](/guides/genuine-student-requirement-how-to-write-your-statement) is the most common reason for refusal.
+- **Applying inside Australia** to switch from another visa to a 500 can attract a subsequent temporary application charge on top.
+
+For the full picture with tuition and city living costs, see [the real cost of studying in Australia](/guides/real-cost-of-studying-in-australia).
+
+## Do I get the visa fee back if my application is refused?
+
+No. The application charge is not refunded if your visa is refused, or if you withdraw after lodging. If you apply again, you pay it again in full. This is why the financial evidence and the Genuine Student answers are worth getting right the first time.
+
+## Can I pay the student visa charge in instalments?
+
+Not the main charge. It is paid in full at lodgement. The only split payment in the system is the second instalment for an adult family member without functional English, and that is billed to you later rather than chosen.
+
+## Is the AUD 29,710 a fee I pay the government?
+
+No. It is the amount you must show you have access to for living costs, on top of tuition and travel. You keep it and spend it on rent and living expenses after you arrive. Nobody collects it or freezes it, and Australia has no blocked account.`,
+    sources: [
+      "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
+      "https://immi.homeaffairs.gov.au/visas/getting-a-visa/fees-and-charges/current-visa-pricing",
+      "https://www.studyaustralia.gov.au/en/plan-your-move/your-guide-to-visas/student-visa-subclass-500",
+    ],
+  },
 ];
 
 // ---------------------------------------------------------------------------

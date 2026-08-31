@@ -452,6 +452,44 @@ const visas = [
       `${HOMEAFFAIRS}/visitor-600`,
     ],
   },
+  {
+    slug: "work-holiday-462",
+    code: "462",
+    name: "Work and Holiday visa",
+    category: "working-holiday",
+    stream: "First, Second, and Third Work and Holiday",
+    short_description:
+      "Lets people aged 18 to 30 from an eligible partner country work and travel in Australia for up to a year. China, India, and Vietnam passport holders must first be selected in a ballot.",
+    summary:
+      "The subclass 462 is a 12-month work and travel visa for young adults from partner countries who have functional English and some tertiary study. It is separate from the subclass 417 Working Holiday visa, which covers a different country list. Since program year 2024 to 2025, first-time applicants from China, India, and Vietnam must register for a random ballot and be selected before they can lodge an application.",
+    is_points_tested: false,
+    min_points: null,
+    stay_period:
+      "12 months per visa. A second and third visa are possible after completing specified regional work.",
+    leads_to_pr: false,
+    pr_pathway:
+      "None directly. The 462 is temporary. Some holders later move onto an employer-sponsored or skilled visa, but that is a fresh application on its own merits, not a transition built into the 462.",
+    base_application_charge:
+      "AUD 840 for a first visa, AUD 1,000 for a second or third (from 1 July 2026). China, India, and Vietnam applicants also pay a AUD 25 ballot registration fee.",
+    processing_time:
+      "Highly variable and currently extended due to demand. Do not book travel until the department tells you in writing that the visa is granted.",
+    age_limit: "18 to 30 inclusive when you apply, or when you register for the ballot.",
+    english_requirement:
+      "Functional English, with evidence such as IELTS, PTE, or an accepted alternative.",
+    work_experience_requirement: null,
+    occupation_list: null,
+    eligibility:
+      "For a first Work and Holiday visa you generally must:\n\n- Be 18 to 30 years old (inclusive)\n- Hold a passport from an eligible partner country\n- Not be accompanied by dependent children\n- Have functional English\n- Have completed at least two years of undergraduate university study, or hold a higher qualification\n- Show evidence of funds, generally at least AUD 5,000, plus enough for a departing flight\n- Provide a letter of government support if your country's arrangement requires one\n\nChina, India, and Vietnam passport holders must first register for the ballot and be randomly selected before they can apply. Selection in the ballot is only permission to lodge. You still have to meet every requirement above.",
+    conditions:
+      "Condition **8547** limits you to no more than 6 months of work with any one employer without permission. Condition **8201** limits study to 4 months. You can enter and leave Australia as often as you like within the visa period. A second visa requires 3 months, and a third visa requires 6 months, of specified work in agriculture, tourism, hospitality, or other eligible sectors in northern or regional Australia.",
+    content:
+      "## The ballot for China, India, and Vietnam\n\nFirst-time applicants who hold a passport from **China, India, or Vietnam** cannot apply for the 462 directly. They must register for a pre-application ballot in ImmiAccount, pay a **AUD 25 registration fee**, and be randomly selected. The department runs selections through the program year until registrations expire on 30 April.\n\n- You register with your passport and a national identity card. Indian applicants need a **PAN card**, not an Aadhaar card. Vietnamese applicants need a 12-digit national ID.\n- You must be **18 to 30** when you register.\n- Being selected only lets you lodge an application. You still pay the AUD 840 visa charge and have to meet every eligibility requirement.\n- If you are selected, you can only apply from **outside Australia**.\n- The ballot does not change the annual grant cap for your country. It replaces a first-come application race with a random draw.\n\n## The 462 is not the 417\n\nThe subclass 462 Work and Holiday visa and the subclass 417 Working Holiday visa do the same thing, a year of work and travel for people aged 18 to 30, but they cover different countries and have slightly different rules. The 417 covers mostly European countries plus a few others and has no education or ballot requirement. The 462 covers countries including India, China, Vietnam, Indonesia, Thailand, Malaysia, and the United States, and adds the English, education, and government-support conditions. You cannot choose between them; it depends on your passport.\n\n## What you can do on it\n\n- Work for any employer, in most industries, for up to **6 months** with any one employer.\n- Study for up to **4 months**.\n- Leave and re-enter Australia freely within the 12 months.\n\nIt is not a study visa and it is not a skilled visa, and it does not lead to permanent residence on its own.\n\n## Second and third visas\n\nYou can apply for a second 462 after **3 months of specified work**, and a third after a further **6 months**. Specified work covers agriculture, tourism, hospitality, and similar sectors in northern or regional Australia, as defined by the department. A second or third visa costs AUD 1,000.\n\n## If you were weighing up study instead\n\nA Work and Holiday year and a course of study are very different tracks. A 462 is cheaper up front, has no tuition, and lets you work full time, but it ends after a year with no qualification and no direct migration pathway. A [student visa](/visas/student-500) costs far more and caps work at 48 hours a fortnight, but an eligible qualification can lead to a [Temporary Graduate visa](/visas/temporary-graduate-485) and, in some fields, permanent residence. See [why study in Australia](/guides/why-study-in-australia) for that side of the decision.",
+    source_urls: [
+      `${HOMEAFFAIRS}/work-holiday-462`,
+      "https://immi.homeaffairs.gov.au/what-we-do/whm-program/latest-news/new-work-and-holiday-subclass-462-visa-pre-application-process",
+      "https://immi.homeaffairs.gov.au/what-we-do/whm-program/status-of-country-caps",
+    ],
+  },
 ];
 
 // --- Invitation rounds (SkillSelect), most recent first.
