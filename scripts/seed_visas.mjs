@@ -369,7 +369,7 @@ const visas = [
     pr_pathway:
       "The 801 is permanent residence. It is normally granted about two years after the application date, sooner for long-term relationships or where there are children.",
     base_application_charge:
-      "About AUD 9,095 for the combined 820 and 801 application (one fee covers both stages)",
+      "From AUD 11,710 for most applicants, covering both the 820 and 801 stages in one payment. From AUD 1,955 for Prospective Marriage (subclass 300) visa holders. A lower charge applies to eligible Pacific Island and Timor-Leste citizens from 1 July 2026.",
     processing_time:
       "820 stage often 12 to 24 months; 801 stage assessed from roughly 2 years after lodgement",
     age_limit: "Both partners must be at least 18",
@@ -403,7 +403,8 @@ const visas = [
     leads_to_pr: true,
     pr_pathway:
       "The subclass 100 is permanent residence, generally granted around two years after the application date, earlier for established relationships.",
-    base_application_charge: "About AUD 9,095 for the combined 309 and 100 application",
+    base_application_charge:
+      "From AUD 11,710, covering both the 309 and 100 stages in one payment. A lower charge applies to eligible Pacific Island and Timor-Leste citizens from 1 July 2026.",
     processing_time: "309 stage commonly 12 to 24 months",
     age_limit: "Both partners must be at least 18",
     english_requirement: "No formal test; functional English affects a possible second charge",
