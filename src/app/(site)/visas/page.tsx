@@ -199,7 +199,7 @@ export default async function VisasIndexPage() {
             href="/guides/study-to-permanent-residence-pathway-australia"
             className="mt-3 inline-flex items-center gap-1.5 font-body text-sm text-status-open underline underline-offset-2 hover:text-ink"
           >
-            Full step-by-step walkthrough
+            Read the full pathway guide, with timelines and a worked points example
             <ArrowUpRightIcon className="h-3.5 w-3.5" />
           </Link>
         </section>

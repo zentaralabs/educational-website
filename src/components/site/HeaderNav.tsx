@@ -135,7 +135,7 @@ export function HeaderNav() {
             <div
               id={panelId}
               hidden={!open}
-              className="absolute left-0 top-full z-20 pt-2"
+              className="absolute right-0 top-full z-20 pt-2"
             >
               <div className="w-64 rounded-lg border border-ink/10 bg-paper p-1.5 shadow-lg shadow-ink/5">
                 {item.children.map((child) => (
