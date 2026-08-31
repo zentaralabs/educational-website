@@ -21,7 +21,14 @@ const NAV: NavItem[] = [
       { label: "By country", href: "/international", hint: "Applying from India, Nepal, China and more" },
     ],
   },
-  { label: "Visas", href: "/visas" },
+  {
+    label: "Visas",
+    children: [
+      { label: "All visa subclasses", href: "/visas", hint: "Student, graduate, skilled, family, working holiday" },
+      { label: "Points calculator", href: "/visas/points-calculator", hint: "Estimate your skilled migration score" },
+      { label: "Invitation rounds", href: "/visas/invitation-rounds", hint: "SkillSelect cut-offs, round by round" },
+    ],
+  },
   {
     label: "Guides",
     children: [

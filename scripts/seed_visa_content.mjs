@@ -788,6 +788,159 @@ No. It is the amount you must show you have access to for living costs, on top o
       "https://www.studyaustralia.gov.au/en/plan-your-move/your-guide-to-visas/student-visa-subclass-500",
     ],
   },
+  {
+    slug: "work-and-holiday-visa-462-ballot",
+    title: "The Work and Holiday visa (462) ballot, explained",
+    category: "country-guide",
+    country: "AU",
+    excerpt:
+      "Chinese, Indian, and Vietnamese passport holders cannot apply for a first Work and Holiday visa directly. They must enter a random ballot first. Here is the AUD 25 registration, the timeline, and the 28-day window if you are selected.",
+    content: `If you hold a **Chinese, Indian, or Vietnamese** passport and want a first Work and Holiday visa (subclass 462), you cannot just apply. You must first enter a ballot, be randomly selected, and then apply within a short window. This is the process step by step. For the visa itself, see the [subclass 462 page](/visas/work-holiday-462).
+
+## Who has to use the ballot
+
+Only first-time 462 applicants from **China, India, and Vietnam**. Everyone else from an eligible partner country applies directly. Second and third 462 visas are never balloted. The ballot exists because demand from these three countries is far higher than the annual places, so a random draw replaces a first-come rush. It does not change the number of visas granted to each country.
+
+## What it costs
+
+**AUD 25** to register. It is not refunded if you are not selected, if you withdraw, or if you withdraw by mistake. Being selected does not refund or reduce the AUD 840 visa charge you pay later.
+
+## Registering
+
+You register in **ImmiAccount**, once per program year:
+
+1. Create an ImmiAccount and set up multi-factor authentication.
+2. Select **New application**, then the **Visa pre-application registration** dropdown, then **Registration - Work and Holiday Visa (462)**.
+3. Choose your passport country, complete the form, and pay the AUD 25.
+
+You need a valid passport and a valid **national identity card**:
+
+- **Indian passport holders** must use a **PAN card**, not an Aadhaar card.
+- **Vietnamese passport holders** must use a **12-digit** national ID, not an old 9-digit card.
+
+You must be **18 to 30 inclusive** on the day you register. Once you submit, you cannot change your passport country, date of birth, or national ID, and you cannot register a second time in the same ballot.
+
+## The timeline
+
+For program year 2026 to 2027 the dates were:
+
+| Stage | Dates |
+| --- | --- |
+| Registration open | 4 June 2026 |
+| Registration closed | 25 June 2026 |
+| Selection period | 2 July 2026 to 30 April 2027 |
+| First random selection | China and India 10 August 2026, Vietnam 26 August 2026 |
+| Further selections | Published on the department's website after each draw |
+
+Registrations that are not selected stay in the pool for later draws in the same year, then expire on **30 April 2027**. Each new program year has a fresh registration period and you must register again.
+
+## If you are selected
+
+You get a **Notification of selection** email. From the date of that email you have **28 calendar days** to lodge the visa application in ImmiAccount, with the cut-off at midnight Australian Eastern Standard Time on day 28. Because of time zones, day 28 in your country may end earlier, so do not leave it to the last day.
+
+Selection is only permission to apply. You still have to:
+
+- Pay the AUD 840 visa charge
+- Meet every 462 requirement: functional English, two years of undergraduate study or higher, evidence of funds, and a government support letter if your country requires one
+- Apply from **outside Australia**
+
+The department will not grant the visa just because you were selected.
+
+## If you are not selected
+
+You are not eligible for a first 462 for that program year. You will not be notified, there is no waiting list, and the department will not respond to requests to be selected. Your options are to register again in the next program year, or to look at another visa such as the [student visa](/visas/student-500) if study is realistic for you.
+
+## Common mistakes
+
+- Registering with an Aadhaar card instead of a PAN card, or an old 9-digit Vietnamese ID.
+- Letting the 28-day application window lapse, or reading it against local time instead of AEST.
+- Assuming selection means the visa is granted, and not preparing the funds, English, and education evidence in advance.
+- Turning 31 before you apply. Your registration expires the day you turn 31.
+
+## Does the AUD 25 ballot fee count towards the visa charge?
+
+No. The AUD 25 registration fee and the AUD 840 first Work and Holiday visa charge are separate. You pay the AUD 25 to enter the ballot, and if selected the AUD 840 when you lodge the visa application. Neither is refundable once paid.
+
+## Can I improve my chances in the 462 ballot?
+
+No. Selection is fully random and automated, with no criteria and no weighting for age, funds, or when you registered. Registering early does not help, as long as you register before the period closes. Submitting one valid registration is all you can do.
+
+## What happens to my ballot registration if I turn 31?
+
+It expires. You must be 18 to 30 inclusive when you register, and if you turn 31 while waiting in the pool your registration is removed and cannot be selected. Plan to enter in a program year where you will still be 30 or under when you would lodge the visa.`,
+    sources: [
+      "https://immi.homeaffairs.gov.au/what-we-do/whm-program/latest-news/new-work-and-holiday-subclass-462-visa-pre-application-process",
+      "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-462",
+      "https://immi.homeaffairs.gov.au/what-we-do/whm-program/status-of-country-caps",
+    ],
+  },
+  {
+    slug: "permanent-residence-to-australian-citizenship",
+    title: "From permanent residence to Australian citizenship",
+    category: "country-guide",
+    country: "AU",
+    excerpt:
+      "Permanent residence is not the final step. The four-year residence rule, the citizenship test, the ceremony, and the dual-citizenship question that matters most for Indian and Nepali applicants.",
+    content: `Permanent residence is not the last step. Most permanent residents become Australian citizens a few years later, which brings a passport, the vote, and a status that no visa can be cancelled out from under. This is what the citizenship stage involves and how long it takes.
+
+## The residence requirement
+
+To apply for citizenship by conferral you must meet the general residence requirement on the day you apply:
+
+- You have been **lawfully present in Australia for the four years** immediately before applying.
+- You have held a **permanent visa for at least the last 12 months** of that period. Time earlier in the four years can be on a temporary visa, such as a student visa or a [485 graduate visa](/guides/temporary-graduate-visa-485-guide).
+- You were **not an unlawful non-citizen** at any point in the four years.
+- Your total absences from Australia are **no more than 12 months** across the four years, and **no more than 90 days** in the final 12 months before applying.
+
+Use the department's Residence Calculator to check your exact dates. New Zealand citizens on a Special Category (subclass 444) visa count as permanent residents for this purpose.
+
+## Where citizenship sits in the path
+
+For someone who arrived as a student, the sequence usually runs:
+
+| Stage | Typical time |
+| --- | --- |
+| [Student visa](/visas/student-500) and study | 2 to 4 years |
+| [485 graduate visa](/guides/temporary-graduate-visa-485-guide) and skilled work | 2 to 3 years |
+| Skilled visa such as the [189](/visas/skilled-independent-189), [190](/visas/skilled-nominated-190), or [491](/visas/skilled-work-regional-491) | grant to permanent residence |
+| Permanent resident, building to the 4-year and 12-month marks | often 1 to 3 more years |
+| Citizenship application, test, and ceremony | several months to over a year |
+
+Because the [491](/visas/skilled-work-regional-491) is provisional, its holders become permanent residents through the [191](/visas/permanent-residence-skilled-regional-191) first, then start the 12-month permanent-resident clock. The full skilled path is in the [study to permanent residence guide](/guides/study-to-permanent-residence-pathway-australia).
+
+## The citizenship test
+
+If you are **18 to 59**, you sit the citizenship test after you apply. It is 20 multiple-choice questions in 45 minutes, drawn from the booklet Australian Citizenship: Our Common Bond. To pass you need **15 out of 20 overall and all 5 of the Australian values questions correct**. A free official practice test is available. Applicants 60 and over, and those 16 and under, do not sit it.
+
+## The ceremony and the pledge
+
+If your application is approved, the final step is a citizenship ceremony, usually run by your local council. You make the Australian citizenship pledge of commitment, and you are a citizen from that moment. Attend within the period stated in your approval letter, generally within 12 months, or the approval can be cancelled.
+
+## Dual citizenship: check your home country
+
+Australia allows dual citizenship. Your country of origin may not. **India and Nepal do not permit dual citizenship**, so becoming Australian generally means losing or renouncing your original citizenship. India offers an Overseas Citizen of India (OCI) card as a partial substitute, which is a long-term entry and residence right, not citizenship. Confirm your home country's rule before you apply, because this decision is hard to undo.
+
+## What it costs
+
+The citizenship application fee is set out in the department's Form 1298i and rises each 1 July. It is in the several-hundred-dollar range, well below what the visa stages cost. A permanent-resident child aged 15 or younger included on a parent's application pays nothing. A child aged 16 or 17 must apply on their own and pay the fee.
+
+## How long after getting permanent residence can I apply for citizenship?
+
+You can apply once you meet the general residence requirement: four years of lawful residence in Australia immediately before applying, with at least the final 12 months held as a permanent resident. If you already spent two or three years in Australia on a student or graduate visa before getting permanent residence, you may only need to wait about a year as a permanent resident. If permanent residence was your first time living in Australia, expect closer to four years.
+
+## Do I have to give up my original citizenship to become Australian?
+
+Australia does not require it, but some countries do. India and Nepal, among others, do not allow their citizens to hold another citizenship, so acquiring Australian citizenship generally ends the original one. Check the law of your country of citizenship before you apply.
+
+## Does time on a student or graduate visa count towards citizenship?
+
+Yes, for the four-year lawful residence part. Any period you were lawfully in Australia in the four years before you apply counts, including student and 485 graduate visa time. Only the final 12 months must be spent as a permanent resident.`,
+    sources: [
+      "https://immi.homeaffairs.gov.au/citizenship/become-a-citizen/permanent-resident",
+      "https://immi.homeaffairs.gov.au/citizenship/test-and-interview/learn-about-citizenship-interview-and-test/learn-about-citizenship-test",
+      "https://immi.homeaffairs.gov.au/help-support/tools/residence-calculator",
+    ],
+  },
 ];
 
 // ---------------------------------------------------------------------------
