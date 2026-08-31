@@ -84,6 +84,26 @@ export async function listPublishedScholarshipSlugs(): Promise<string[]> {
   return rows.map((r) => r.slug);
 }
 
+/** slug + updated_at for the sitemap's per-page `lastmod`. */
+export async function listPublishedScholarshipSlugsForSitemap(): Promise<
+  { slug: string; updatedAt: string | null }[]
+> {
+  const supabase = createPublicClient(["scholarships:list"]);
+  const { data, error } = await supabase
+    .from("scholarships")
+    .select("slug, updated_at, country:countries(is_launched)")
+    .eq("status", "published");
+  if (error) throw error;
+  const rows = (data ?? []) as unknown as {
+    slug: string;
+    updated_at: string | null;
+    country: { is_launched: boolean } | null;
+  }[];
+  return rows
+    .filter((r) => !r.country || r.country.is_launched)
+    .map((r) => ({ slug: r.slug, updatedAt: r.updated_at }));
+}
+
 export type PublicScholarshipDetail = PublicScholarshipListRow & {
   eligibility: string | null;
   description: string | null;

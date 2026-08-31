@@ -121,6 +121,21 @@ export async function listAllBlogPostSlugs(): Promise<string[]> {
   return ((data ?? []) as { slug: string }[]).map((r) => r.slug);
 }
 
+/** slug + updated_at for the sitemap's per-page `lastmod`. */
+export async function listAllBlogPostSlugsForSitemap(): Promise<
+  { slug: string; updatedAt: string | null }[]
+> {
+  const supabase = createPublicClient(["blog_posts:list"]);
+  const { data, error } = await supabase
+    .from("blog_posts")
+    .select("slug, updated_at")
+    .eq("status", "published");
+  if (error) throw error;
+  return ((data ?? []) as { slug: string; updated_at: string | null }[]).map(
+    (r) => ({ slug: r.slug, updatedAt: r.updated_at }),
+  );
+}
+
 export type PublicBlogPostRow = {
   slug: string;
   title: string;

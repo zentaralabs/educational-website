@@ -39,6 +39,22 @@ export async function listPublishedUniversitySlugs(): Promise<string[]> {
   return ((data ?? []) as unknown as { slug: string }[]).map((r) => r.slug);
 }
 
+/** slug + updated_at for the sitemap's per-page `lastmod`. */
+export async function listPublishedUniversitySlugsForSitemap(): Promise<
+  { slug: string; updatedAt: string | null }[]
+> {
+  const supabase = createPublicClient(["universities:list"]);
+  const { data, error } = await supabase
+    .from("universities")
+    .select("slug, updated_at, country:countries!inner(is_launched)")
+    .eq("status", "published")
+    .eq("country.is_launched", true);
+  if (error) throw error;
+  return (
+    (data ?? []) as unknown as { slug: string; updated_at: string | null }[]
+  ).map((r) => ({ slug: r.slug, updatedAt: r.updated_at }));
+}
+
 export async function getPublishedUniversity(
   slug: string,
 ): Promise<PublicUniversityRow | null> {

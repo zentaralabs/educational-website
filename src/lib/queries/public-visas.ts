@@ -36,6 +36,21 @@ export async function listPublishedVisaSlugs(): Promise<string[]> {
   return rows.map((r) => r.slug);
 }
 
+/** slug + updated_at for the sitemap's per-page `lastmod`. */
+export async function listPublishedVisaSlugsForSitemap(): Promise<
+  { slug: string; updatedAt: string | null }[]
+> {
+  const supabase = createPublicClient(["visa_subclasses:list"]);
+  const { data, error } = await supabase
+    .from("visa_subclasses")
+    .select("slug, updated_at")
+    .eq("status", "published");
+  if (error) throw error;
+  return ((data ?? []) as { slug: string; updated_at: string | null }[]).map(
+    (r) => ({ slug: r.slug, updatedAt: r.updated_at }),
+  );
+}
+
 export type PublicVisaRow = Database["public"]["Tables"]["visa_subclasses"]["Row"] & {
   author: { name: string; bio: string | null; credentials: string | null } | null;
   reviewed_by: { name: string } | null;

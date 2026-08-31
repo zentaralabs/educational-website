@@ -75,6 +75,30 @@ export async function listPublishedGuideSlugs(opts: {
   return rows.map((r) => r.slug);
 }
 
+/** slug + updated_at for the sitemap's per-page `lastmod`. */
+export async function listPublishedGuideSlugsForSitemap(opts: {
+  category?: string;
+  excludeCategory?: string;
+} = {}): Promise<{ slug: string; updatedAt: string | null }[]> {
+  const supabase = createPublicClient(["guides:list"]);
+  let query = supabase
+    .from("guides")
+    .select("slug, updated_at, country:countries(is_launched)")
+    .eq("status", "published");
+  if (opts.category) query = query.eq("category", opts.category);
+  if (opts.excludeCategory) query = query.neq("category", opts.excludeCategory);
+  const { data, error } = await query;
+  if (error) throw error;
+  const rows = (data ?? []) as unknown as {
+    slug: string;
+    updated_at: string | null;
+    country: { is_launched: boolean } | null;
+  }[];
+  return rows
+    .filter((g) => !g.country || g.country.is_launched)
+    .map((g) => ({ slug: g.slug, updatedAt: g.updated_at }));
+}
+
 export type PublicGuideRow = Database["public"]["Tables"]["guides"]["Row"] & {
   country: { code: string; name: string } | null;
   author: { name: string; bio: string | null; credentials: string | null } | null;

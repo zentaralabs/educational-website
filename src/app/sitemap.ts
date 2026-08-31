@@ -4,16 +4,25 @@ import { SUBJECT_CONTENT } from "@/lib/subjects";
 import { CITY_COSTS } from "@/lib/cities";
 import { COMPARISON_PAIRS, vsSlug } from "@/lib/comparisons";
 import { SITE_URL } from "@/lib/site-config";
-import { listAllBlogPostSlugs } from "@/lib/queries/public-blog-posts";
-import { listPublishedGuideSlugs } from "@/lib/queries/public-guides";
+import { listAllBlogPostSlugsForSitemap } from "@/lib/queries/public-blog-posts";
+import { listPublishedGuideSlugsForSitemap } from "@/lib/queries/public-guides";
 import { AU_STATES } from "@/lib/australia";
 import { DEADLINE_PAGE_INDEXED } from "@/lib/deadline-detail";
 import { ORIGIN_COUNTRY_SLUGS } from "@/lib/origin-countries";
-import { listPublishedScholarshipSlugs } from "@/lib/queries/public-scholarships";
+import { listPublishedScholarshipSlugsForSitemap } from "@/lib/queries/public-scholarships";
 import { listPublishedSubjects } from "@/lib/queries/public-subjects";
-import { listPublishedUniversitySlugs } from "@/lib/queries/public-universities";
-import { listPublishedVisaSlugs } from "@/lib/queries/public-visas";
+import { listPublishedUniversitySlugsForSitemap } from "@/lib/queries/public-universities";
+import { listPublishedVisaSlugsForSitemap } from "@/lib/queries/public-visas";
 import { listPublishedProgramsForSitemap } from "@/lib/queries/public-programs";
+
+/**
+ * `lastModified` for config-driven routes (static pages, /best collections,
+ * city and country pages, subject pages, auto comparison pairs). These change
+ * only on deploy, so bump this when their source files (collections.ts,
+ * cities.ts, subjects.ts, origin-countries.ts, comparisons.ts, this file)
+ * meaningfully change. DB-backed routes use their row's real updated_at.
+ */
+const CONFIG_LAST_MODIFIED = new Date("2026-08-31T00:00:00Z");
 
 export const revalidate = 3600;
 
@@ -48,114 +57,125 @@ const STATIC_ROUTES: Array<{ path: string; priority: number; changeFrequency: Me
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const [
-    universitySlugs,
-    guideSlugs,
-    comparisonSlugs,
-    blogSlugs,
-    visaSlugs,
-    scholarshipSlugs,
+    universities,
+    guides,
+    comparisonGuides,
+    blogPosts,
+    visas,
+    scholarships,
   ] = await Promise.all([
-    listPublishedUniversitySlugs(),
-    listPublishedGuideSlugs({ excludeCategory: "comparison" }),
-    listPublishedGuideSlugs({ category: "comparison" }),
-    listAllBlogPostSlugs(),
-    listPublishedVisaSlugs(),
-    listPublishedScholarshipSlugs(),
+    listPublishedUniversitySlugsForSitemap(),
+    listPublishedGuideSlugsForSitemap({ excludeCategory: "comparison" }),
+    listPublishedGuideSlugsForSitemap({ category: "comparison" }),
+    listAllBlogPostSlugsForSitemap(),
+    listPublishedVisaSlugsForSitemap(),
+    listPublishedScholarshipSlugsForSitemap(),
   ]);
+
+  const modOr = (updatedAt: string | null) =>
+    updatedAt ? new Date(updatedAt) : CONFIG_LAST_MODIFIED;
 
   const [subjects, programRows] = await Promise.all([
     listPublishedSubjects(),
     listPublishedProgramsForSitemap(),
   ]);
 
-  const now = new Date();
+  const universityDate = new Map(
+    universities.map((u) => [u.slug, modOr(u.updatedAt)]),
+  );
 
   const staticEntries: MetadataRoute.Sitemap = STATIC_ROUTES.map((route) => ({
     url: `${SITE_URL}${route.path}`,
-    lastModified: now,
+    lastModified: CONFIG_LAST_MODIFIED,
     changeFrequency: route.changeFrequency,
     priority: route.priority,
   }));
 
-  const universityEntries: MetadataRoute.Sitemap = universitySlugs.map((slug) => ({
-    url: `${SITE_URL}/universities/${slug}`,
-    lastModified: now,
+  const universityEntries: MetadataRoute.Sitemap = universities.map((u) => ({
+    url: `${SITE_URL}/universities/${u.slug}`,
+    lastModified: modOr(u.updatedAt),
     changeFrequency: "weekly",
     priority: 0.8,
   }));
 
   // Per-university deadline pages, only for universities with a firm date or
   // verified rolling guidance (the rest are noindex, see deadline-detail.ts).
-  const universityDeadlineEntries: MetadataRoute.Sitemap = universitySlugs
-    .filter((slug) => DEADLINE_PAGE_INDEXED.has(slug))
-    .map((slug) => ({
-      url: `${SITE_URL}/universities/${slug}/deadlines`,
-      lastModified: now,
+  const universityDeadlineEntries: MetadataRoute.Sitemap = universities
+    .filter((u) => DEADLINE_PAGE_INDEXED.has(u.slug))
+    .map((u) => ({
+      url: `${SITE_URL}/universities/${u.slug}/deadlines`,
+      lastModified: universityDate.get(u.slug) ?? CONFIG_LAST_MODIFIED,
       changeFrequency: "weekly" as const,
       priority: 0.7,
     }));
 
-  const guideEntries: MetadataRoute.Sitemap = guideSlugs.map((slug) => ({
-    url: `${SITE_URL}/guides/${slug}`,
-    lastModified: now,
+  const guideEntries: MetadataRoute.Sitemap = guides.map((g) => ({
+    url: `${SITE_URL}/guides/${g.slug}`,
+    lastModified: modOr(g.updatedAt),
     changeFrequency: "monthly",
     priority: 0.6,
   }));
 
-  // Hand-written comparison guides, plus the curated /compare/{a}-vs-{b}
-  // head-to-heads (data-built but with real decision content, indexed).
+  // Hand-written comparison guides (real updated_at), plus the curated
+  // /compare/{a}-vs-{b} head-to-heads (config-built, indexed).
   const comparisonEntries: MetadataRoute.Sitemap = [
-    ...comparisonSlugs.map((slug) => `/compare/${slug}`),
-    ...COMPARISON_PAIRS.map(([a, b]) => `/compare/${vsSlug(a, b)}`),
-  ].map((path) => ({
-    url: `${SITE_URL}${path}`,
-    lastModified: now,
+    ...comparisonGuides.map((g) => ({
+      url: `${SITE_URL}/compare/${g.slug}`,
+      lastModified: modOr(g.updatedAt),
+    })),
+    ...COMPARISON_PAIRS.map(([a, b]) => ({
+      url: `${SITE_URL}/compare/${vsSlug(a, b)}`,
+      lastModified: CONFIG_LAST_MODIFIED,
+    })),
+  ].map((e) => ({
+    ...e,
     changeFrequency: "monthly" as const,
     priority: 0.6,
   }));
 
-  const blogEntries: MetadataRoute.Sitemap = blogSlugs.map((slug) => ({
-    url: `${SITE_URL}/blog/${slug}`,
-    lastModified: now,
+  const blogEntries: MetadataRoute.Sitemap = blogPosts.map((p) => ({
+    url: `${SITE_URL}/blog/${p.slug}`,
+    lastModified: modOr(p.updatedAt),
     changeFrequency: "monthly",
     priority: 0.5,
   }));
 
-  const visaEntries: MetadataRoute.Sitemap = visaSlugs.map((slug) => ({
-    url: `${SITE_URL}/visas/${slug}`,
-    lastModified: now,
+  const visaEntries: MetadataRoute.Sitemap = visas.map((v) => ({
+    url: `${SITE_URL}/visas/${v.slug}`,
+    lastModified: modOr(v.updatedAt),
     changeFrequency: "monthly",
     priority: 0.7,
   }));
 
-  const scholarshipEntries: MetadataRoute.Sitemap = scholarshipSlugs.map((slug) => ({
-    url: `${SITE_URL}/scholarships/${slug}`,
-    lastModified: now,
+  const scholarshipEntries: MetadataRoute.Sitemap = scholarships.map((s) => ({
+    url: `${SITE_URL}/scholarships/${s.slug}`,
+    lastModified: modOr(s.updatedAt),
     changeFrequency: "monthly",
     priority: 0.6,
   }));
 
   const collectionEntries: MetadataRoute.Sitemap = COLLECTIONS.map((c) => ({
     url: `${SITE_URL}/best/${c.slug}`,
-    lastModified: now,
+    lastModified: CONFIG_LAST_MODIFIED,
     changeFrequency: "weekly",
     priority: 0.6,
   }));
 
   const cityEntries: MetadataRoute.Sitemap = CITY_COSTS.map((c) => ({
     url: `${SITE_URL}/cost-of-living/${c.slug}`,
-    lastModified: now,
+    lastModified: CONFIG_LAST_MODIFIED,
     changeFrequency: "monthly",
     priority: 0.6,
   }));
 
   // Only subjects with a curated write-up. Templated-fallback subject pages
-  // are noindex, so they stay out of the sitemap.
+  // are noindex, so they stay out of the sitemap. Subject copy lives in
+  // subjects.ts (config), so these use CONFIG_LAST_MODIFIED.
   const subjectEntries: MetadataRoute.Sitemap = subjects
     .filter((s) => SUBJECT_CONTENT[s.slug])
     .map((s) => ({
       url: `${SITE_URL}/study/${s.slug}`,
-      lastModified: now,
+      lastModified: CONFIG_LAST_MODIFIED,
       changeFrequency: "weekly",
       priority: 0.7,
     }));
@@ -163,7 +183,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const originCountryEntries: MetadataRoute.Sitemap = ORIGIN_COUNTRY_SLUGS.map(
     (slug) => ({
       url: `${SITE_URL}/international/${slug}`,
-      lastModified: now,
+      lastModified: CONFIG_LAST_MODIFIED,
       changeFrequency: "monthly" as const,
       priority: 0.7,
     }),
@@ -171,7 +191,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const stateEntries: MetadataRoute.Sitemap = AU_STATES.map((s) => ({
     url: `${SITE_URL}/universities/in/${s.slug}`,
-    lastModified: now,
+    lastModified: CONFIG_LAST_MODIFIED,
     changeFrequency: "weekly" as const,
     priority: 0.7,
   }));
@@ -184,7 +204,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     .filter((p) => p.university?.slug && p.university.status === "published")
     .map((p) => ({
       url: `${SITE_URL}/universities/${p.university!.slug}/programs/${p.slug}`,
-      lastModified: p.updated_at ? new Date(p.updated_at) : now,
+      lastModified: p.updated_at ? new Date(p.updated_at) : CONFIG_LAST_MODIFIED,
       changeFrequency: "monthly" as const,
       priority: 0.5,
     }));
