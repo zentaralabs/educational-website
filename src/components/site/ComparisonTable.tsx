@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { formatCurrency, formatSelectivity } from "@/lib/format";
+import { formatCurrency, selectivityLabel } from "@/lib/format";
 import type { ComparisonUniversityRow } from "@/lib/queries/public-universities";
 
 /** Prefixes "from " when the figure is the cheapest across the university's
@@ -16,7 +16,7 @@ const ROWS: {
   value: (u: ComparisonUniversityRow) => string | null;
 }[] = [
   { label: "Country", value: (u) => u.country?.name ?? null },
-  { label: "Selectivity", value: (u) => formatSelectivity(u.acceptance_rate) },
+  { label: "Selectivity", value: (u) => selectivityLabel(u.selectivity_band) },
   {
     label: "Tuition (international)",
     value: (u) =>

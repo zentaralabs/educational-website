@@ -10,7 +10,12 @@ import { GO8_SLUGS, isRegionalCity } from "@/lib/australia";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import { COMPARISON_PAIRS, parseVsSlug, vsSlug } from "@/lib/comparisons";
 import { faqJsonLd, type FaqItem } from "@/lib/faq";
-import { authorInitials, formatCurrency, formatSelectivity } from "@/lib/format";
+import {
+  authorInitials,
+  formatCurrency,
+  selectivityLabel,
+  selectivityRank,
+} from "@/lib/format";
 import {
   listCollectionUniversities,
   type CollectionUniversity,
@@ -164,8 +169,8 @@ function chooseIf(a: Uni, b: Uni): { name: string; reasons: string[] }[] {
     )
       out.push(`A lower English bar helps (IELTS ${x.ieltsOverall.toFixed(1)})`);
     if (
-      formatSelectivity(x.acceptanceRate) === "Broadly accessible" &&
-      formatSelectivity(y.acceptanceRate) !== "Broadly accessible"
+      x.selectivityBand === "broadly-accessible" &&
+      y.selectivityBand !== "broadly-accessible"
     )
       out.push("You want more open admissions");
     if (x.intakes.includes("July") && !y.intakes.includes("July"))
@@ -201,12 +206,11 @@ function pairFaq(a: Uni, b: Uni): FaqItem[] {
   items.push({
     q: `Which is harder to get into, ${a.name} or ${b.name}?`,
     a: (() => {
-      const sa = formatSelectivity(a.acceptanceRate);
-      const sb = formatSelectivity(b.acceptanceRate);
+      const sa = selectivityLabel(a.selectivityBand);
+      const sb = selectivityLabel(b.selectivityBand);
       if (sa && sb && sa !== sb) {
         const harder =
-          ["Highly selective", "Selective", "Competitive", "Broadly accessible"].indexOf(sa) <
-          ["Highly selective", "Selective", "Competitive", "Broadly accessible"].indexOf(sb)
+          selectivityRank(a.selectivityBand) < selectivityRank(b.selectivityBand)
             ? a
             : b;
         return `On the institution-wide picture, ${harder.name} is the more selective. Australian universities do not publish official acceptance rates, and specific competitive courses (medicine, law, some design) are hard to enter at both regardless.`;
@@ -316,8 +320,8 @@ export default async function ComparisonPage({
       },
       {
         label: "Selectivity",
-        a: formatSelectivity(ca.acceptanceRate),
-        b: formatSelectivity(cb.acceptanceRate),
+        a: selectivityLabel(ca.selectivityBand),
+        b: selectivityLabel(cb.selectivityBand),
       },
     ];
 

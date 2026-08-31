@@ -96,7 +96,7 @@ export type ComparisonUniversityRow = {
   slug: string;
   name: string;
   country: { code: string; name: string } | null;
-  acceptance_rate: number | null;
+  selectivity_band: string | null;
   tuition_international: number | null;
   tuition_domestic: number | null;
   /** True when the tuition figure was filled in from the university's
@@ -111,7 +111,7 @@ export type ComparisonUniversityRow = {
 };
 
 const COMPARISON_SELECT =
-  "id, slug, name, country:countries!inner(code, name, is_launched), acceptance_rate, tuition_international, tuition_domestic, currency, required_tests";
+  "id, slug, name, country:countries!inner(code, name, is_launched), selectivity_band, tuition_international, tuition_domestic, currency, required_tests";
 
 /** Matches standardized test names inside free-text admission/English
  * requirement strings, e.g. "IELTS 6.5 (no band below 6.0) or equivalent". */

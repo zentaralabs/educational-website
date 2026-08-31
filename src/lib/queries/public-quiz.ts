@@ -2,6 +2,7 @@ import { createPublicClient } from "@/lib/supabase/public";
 import { listCollectionUniversities } from "@/lib/queries/public-collections";
 import { listPublishedSubjects } from "@/lib/queries/public-subjects";
 import { isRegionalCity } from "@/lib/australia";
+import { selectivityRank } from "@/lib/format";
 import { CITY_COSTS, getCity } from "@/lib/cities";
 
 export type QuizFilters = {
@@ -21,7 +22,7 @@ export type QuizMatch = {
   name: string;
   city: string | null;
   institutionType: string | null;
-  acceptanceRate: number | null;
+  selectivityBand: string | null;
   minTuition: number | null;
   firstYearBudget: number | null;
   whoIsItFor: string | null;
@@ -144,7 +145,7 @@ export async function getQuizMatches(filters: QuizFilters): Promise<QuizMatch[]>
       name: u.name,
       city: u.city,
       institutionType: u.institution_type,
-      acceptanceRate: u.acceptanceRate,
+      selectivityBand: u.selectivityBand,
       minTuition: u.minTuition,
       firstYearBudget: u.firstYearBudget,
       whoIsItFor: u.who_is_it_for,
@@ -152,12 +153,10 @@ export async function getQuizMatches(filters: QuizFilters): Promise<QuizMatch[]>
       isRegional: isRegionalCity(u.city),
       automaticScholarships: u.automaticScholarships,
     }))
-    .sort((a, b) => {
-      // More realistic acceptance odds first; unknown rate sorts as very open.
-      const aRate = a.acceptanceRate ?? 100;
-      const bRate = b.acceptanceRate ?? 100;
-      return bRate - aRate;
-    });
+    .sort(
+      // More open admissions first; unknown band sorts as most open.
+      (a, b) => selectivityRank(b.selectivityBand) - selectivityRank(a.selectivityBand),
+    );
 
   return matches;
 }

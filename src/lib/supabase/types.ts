@@ -70,6 +70,8 @@ export interface Database {
           founded_year: number | null;
           website_url: string | null;
           acceptance_rate: number | null;
+          selectivity_band: string | null;
+          selectivity_note: string | null;
           required_tests: string[] | null;
           test_score_range: string | null;
           gpa_requirement: string | null;
@@ -123,6 +125,8 @@ export interface Database {
           founded_year?: number | null;
           website_url?: string | null;
           acceptance_rate?: number | null;
+          selectivity_band?: string | null;
+          selectivity_note?: string | null;
           required_tests?: string[] | null;
           test_score_range?: string | null;
           gpa_requirement?: string | null;

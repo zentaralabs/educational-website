@@ -33,6 +33,8 @@ type FormState = {
   institution_type: string;
   website_url: string;
   acceptance_rate: string;
+  selectivity_band: string;
+  selectivity_note: string;
   gpa_requirement: string;
   atar_requirement: string;
   academic_requirement: string;
@@ -80,6 +82,8 @@ function toFormState(u: UniversityDetailRow): FormState {
     institution_type: u.institution_type ?? "",
     website_url: u.website_url ?? "",
     acceptance_rate: u.acceptance_rate !== null ? String(u.acceptance_rate) : "",
+    selectivity_band: u.selectivity_band ?? "",
+    selectivity_note: u.selectivity_note ?? "",
     gpa_requirement: u.gpa_requirement ?? "",
     atar_requirement: u.atar_requirement ?? "",
     academic_requirement: u.academic_requirement ?? "",
@@ -125,6 +129,8 @@ function toPatch(
     institution_type: form.institution_type || null,
     website_url: form.website_url || null,
     acceptance_rate: form.acceptance_rate ? Number(form.acceptance_rate) : null,
+    selectivity_band: form.selectivity_band || null,
+    selectivity_note: form.selectivity_note || null,
     gpa_requirement: form.gpa_requirement || null,
     atar_requirement: form.atar_requirement || null,
     academic_requirement: form.academic_requirement || null,
@@ -971,13 +977,42 @@ export function UniversityEditForm({
 
       {tab === "Admissions" && (
         <div className="max-w-2xl">
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div className="mb-4 grid gap-4 sm:grid-cols-2">
+            <label className="block">
+              <span className="mb-1 block font-body text-xs font-semibold tracking-wide text-slate uppercase">
+                Selectivity band
+              </span>
+              <select
+                value={form.selectivity_band}
+                onChange={(e) => set("selectivity_band", e.target.value)}
+                className="w-full rounded-md border border-ink/20 bg-paper px-3 py-1.5 font-body text-sm text-ink focus-visible:border-status-open"
+              >
+                <option value="">Not set</option>
+                <option value="highly-selective">Highly selective</option>
+                <option value="selective">Selective</option>
+                <option value="competitive">Competitive</option>
+                <option value="broadly-accessible">Broadly accessible</option>
+              </select>
+              <span className="mt-1 block text-xs text-slate">
+                Shown on the public profile. Editorial judgement, not derived
+                from a rate.
+              </span>
+            </label>
             <Field
-              label="Acceptance rate"
+              label="Acceptance rate (internal only)"
               value={form.acceptance_rate}
               onChange={(v) => set("acceptance_rate", v)}
-              hint="Percent, e.g. 8.6"
+              hint="Research note. Not shown on the site."
             />
+          </div>
+          <div className="mb-4">
+            <TextAreaField
+              label="Selectivity note (one line, shown on profile)"
+              value={form.selectivity_note}
+              onChange={(v) => set("selectivity_note", v)}
+            />
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2">
             <Field
               label="GPA requirement (international)"
               value={form.gpa_requirement}

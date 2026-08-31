@@ -9,6 +9,7 @@ import {
   type UniversityListRow,
 } from "@/lib/queries/universities";
 import { createClient } from "@/lib/supabase/client";
+import { selectivityLabel } from "@/lib/format";
 import type { ContentStatus } from "@/lib/supabase/types";
 
 const STATUS_OPTIONS: ContentStatus[] = [
@@ -174,7 +175,7 @@ export function UniversitiesTable({
                 Status
               </th>
               <th className="px-3 py-2 font-body text-xs font-semibold tracking-wide text-slate uppercase">
-                Acceptance rate
+                Selectivity
               </th>
               <th className="px-3 py-2 font-body text-xs font-semibold tracking-wide text-slate uppercase">
                 Last verified
@@ -216,7 +217,7 @@ export function UniversitiesTable({
                   <ContentStatusBadge status={u.status} />
                 </td>
                 <td className="px-3 py-2.5 font-utility text-ink">
-                  {u.acceptance_rate !== null ? `${u.acceptance_rate}%` : "—"}
+                  {selectivityLabel(u.selectivity_band) ?? "—"}
                 </td>
                 <td className="px-3 py-2.5 font-utility text-slate">
                   {u.last_verified_at ?? "never"}

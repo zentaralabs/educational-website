@@ -10,17 +10,36 @@ export function formatCurrency(
   }).format(amount);
 }
 
-/** Australian universities don't publish official acceptance rates, and the
- * institution-wide third-party estimates we hold are too noisy to show as a
- * precise percentage. We map them to a qualitative selectivity band instead,
- * which is defensible where a bare "70%" is not. */
-export function formatSelectivity(rate: number | null | string): string | null {
-  const n = typeof rate === "string" ? Number(rate) : rate;
-  if (n === null || n === undefined || Number.isNaN(n)) return null;
-  if (n < 40) return "Highly selective";
-  if (n < 65) return "Selective";
-  if (n < 85) return "Competitive";
-  return "Broadly accessible";
+/** Selectivity is a hand-assigned editorial band (see /methodology and
+ * scripts/seed_university_selectivity.mjs), not a value derived from an
+ * acceptance rate. Australian universities do not publish US-style admission
+ * rates, so a percentage there would be false precision. */
+export const SELECTIVITY_BANDS = [
+  "highly-selective",
+  "selective",
+  "competitive",
+  "broadly-accessible",
+] as const;
+export type SelectivityBand = (typeof SELECTIVITY_BANDS)[number];
+
+const SELECTIVITY_LABELS: Record<SelectivityBand, string> = {
+  "highly-selective": "Highly selective",
+  selective: "Selective",
+  competitive: "Competitive",
+  "broadly-accessible": "Broadly accessible",
+};
+
+/** Display label for a stored selectivity band, or null if unset/unknown. */
+export function selectivityLabel(band: string | null | undefined): string | null {
+  if (!band) return null;
+  return SELECTIVITY_LABELS[band as SelectivityBand] ?? null;
+}
+
+/** Sort key for a band: 0 = hardest to enter, 3 = most open. Unknown sorts
+ * last (treated as most open), matching the old numeric behaviour. */
+export function selectivityRank(band: string | null | undefined): number {
+  const i = SELECTIVITY_BANDS.indexOf(band as SelectivityBand);
+  return i === -1 ? SELECTIVITY_BANDS.length : i;
 }
 
 /** Initials for a text avatar, e.g. "Roman Lama" → "RL". */

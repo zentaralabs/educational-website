@@ -299,15 +299,15 @@ export const COLLECTIONS: Collection[] = [
     metaDescription:
       "Australian universities with the most open admissions for international students, and what that means for entry requirements.",
     intro: [
-      "\"Easiest to get into\" is the wrong way to think about it, because a place at any accredited Australian university still needs you to meet real academic and English requirements. But selectivity varies widely, and some universities have genuinely more open admissions than the highly selective Group of Eight.",
+      "\"Easiest to get into\" is the wrong way to think about it, because a place at any accredited Australian university still needs you to meet real academic and English requirements. But selectivity varies widely, and some universities have genuinely more open admissions than the more selective Group of Eight.",
       "The most open are the TAFEs and pathway providers, then the regional, newer, and teaching-focused universities. These often accept a broader range of prior qualifications and lower entry averages, and several run their own foundation or diploma pathways for applicants who fall just short.",
     ],
     methodology:
-      "Australian universities do not publish official acceptance rates. We listed published universities that the institution-wide admission estimates available place in our broadly accessible band, most open first. That is an institution-wide read and does not tell you about a specific competitive course (medicine, law, some design programs stay selective everywhere). Always check the requirements for your course.",
+      "Australian universities do not publish official acceptance rates, so we assign each institution a selectivity band by editorial judgement (see the methodology page). This list is the published universities we place in the broadly accessible band, sorted alphabetically. That is an institution-wide read and does not tell you about a specific competitive course, since medicine, law and some design programs stay selective everywhere. Always check the requirements for your course.",
     build: (unis) =>
       unis
-        .filter((u) => u.acceptanceRate != null && u.acceptanceRate >= 78)
-        .sort((a, b) => (b.acceptanceRate ?? 0) - (a.acceptanceRate ?? 0))
+        .filter((u) => u.selectivityBand === "broadly-accessible")
+        .sort((a, b) => a.name.localeCompare(b.name))
         .slice(0, 18)
         .map((u) => ({
           slug: u.slug,

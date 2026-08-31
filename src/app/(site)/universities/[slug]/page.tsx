@@ -18,7 +18,7 @@ import { FaqSection } from "@/components/site/FaqSection";
 import { faqJsonLd, universityFaq } from "@/lib/faq";
 import { SITE_URL, SITE_YEAR } from "@/lib/site-config";
 import { deadlineBadgeStatus } from "@/lib/deadline-status";
-import { formatCurrency, formatSelectivity } from "@/lib/format";
+import { formatCurrency, selectivityLabel } from "@/lib/format";
 import { getPublishedProgramsForUniversity } from "@/lib/queries/public-programs";
 import {
   getPublishedDeadlinesForUniversity,
@@ -187,7 +187,7 @@ export default async function UniversityProfilePage({
   // most AU universities in this dataset only have program-level facts, not
   // these university-level ones, so this is the common case, not an edge case.
   const hasAdmissionsData = [
-    university.acceptance_rate,
+    university.selectivity_band,
     university.gpa_requirement,
     university.atar_requirement,
     university.academic_requirement,
@@ -237,7 +237,6 @@ export default async function UniversityProfilePage({
           application_fee: university.application_fee,
           ielts_overall: university.ielts_overall,
           pte_overall: university.pte_overall,
-          acceptance_rate: university.acceptance_rate,
           apply_url: university.apply_url,
           website_url: university.website_url,
           intakeTypes,
@@ -348,7 +347,7 @@ export default async function UniversityProfilePage({
         budgetHigh={budgetHigh}
         ielts={university.ielts_overall}
         pte={university.pte_overall}
-        selectivity={formatSelectivity(university.acceptance_rate)}
+        selectivity={selectivityLabel(university.selectivity_band)}
         intakeTypes={intakeTypes}
         degreeLevels={university.degree_levels.map((d) => d.name)}
         isGo8={isGo8}
@@ -375,7 +374,7 @@ export default async function UniversityProfilePage({
       {hasAdmissionsData && (
         <ProfileSection title="Admissions">
           <FactBox>
-            <Fact label="Selectivity" value={formatSelectivity(university.acceptance_rate)} />
+            <Fact label="Selectivity" value={selectivityLabel(university.selectivity_band)} />
             <Fact label="Test score range" value={university.test_score_range} />
             <AdmissionsRequirementFacts
               requiredTests={university.required_tests}
@@ -403,12 +402,17 @@ export default async function UniversityProfilePage({
             date={university.last_verified_at}
             source={primarySource}
           />
-          {university.acceptance_rate !== null && (
+          {university.selectivity_band && (
             <p className="mt-2 font-body text-xs text-slate">
               Australian universities do not publish official acceptance rates.
-              Selectivity is our band for the institution-wide admission
-              estimates available, and individual competitive courses stay
-              harder to enter than the band suggests.
+              Selectivity here is our editorial band, not a percentage.
+              {university.selectivity_note ? ` ${university.selectivity_note}` : ""}{" "}
+              Individual competitive courses stay harder to enter than the
+              institution-wide band suggests.{" "}
+              <Link href="/methodology" className="underline">
+                How we assign it
+              </Link>
+              .
             </p>
           )}
         </ProfileSection>

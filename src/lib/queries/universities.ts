@@ -8,6 +8,7 @@ export type UniversityListRow = {
   city: string | null;
   institution_type: string | null;
   acceptance_rate: number | null;
+  selectivity_band: string | null;
   status: ContentStatus;
   last_verified_at: string | null;
   country: { code: string; name: string } | null;
@@ -20,7 +21,7 @@ export async function listUniversities(
   const { data, error } = await supabase
     .from("universities")
     .select(
-      "id, slug, name, city, institution_type, acceptance_rate, status, last_verified_at, country:countries(code, name), author:authors!author_id(name)",
+      "id, slug, name, city, institution_type, acceptance_rate, selectivity_band, status, last_verified_at, country:countries(code, name), author:authors!author_id(name)",
     )
     .order("name");
 

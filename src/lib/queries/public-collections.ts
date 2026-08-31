@@ -17,7 +17,7 @@ export type CollectionUniversity = {
   intakes: string[];
   /** Slugs of published scholarships linked to this university that need no separate application. */
   automaticScholarships: { slug: string; name: string; amount: string | null }[];
-  acceptanceRate: number | null;
+  selectivityBand: string | null;
   applicationFee: number | null;
   ieltsOverall: number | null;
   pteOverall: number | null;
@@ -32,7 +32,7 @@ type UniRow = {
   tuition_international: number | null;
   intake_dates: string | null;
   who_is_it_for: string | null;
-  acceptance_rate: number | string | null;
+  selectivity_band: string | null;
   application_fee: number | string | null;
   ielts_overall: number | string | null;
   pte_overall: number | string | null;
@@ -86,7 +86,7 @@ export async function listCollectionUniversities(): Promise<CollectionUniversity
     supabase
       .from("universities")
       .select(
-        "slug, name, city, institution_type, living_cost_annual, tuition_international, intake_dates, who_is_it_for, acceptance_rate, application_fee, ielts_overall, pte_overall, country:countries!inner(is_launched)",
+        "slug, name, city, institution_type, living_cost_annual, tuition_international, intake_dates, who_is_it_for, selectivity_band, application_fee, ielts_overall, pte_overall, country:countries!inner(is_launched)",
       )
       .eq("status", "published")
       .eq("country.is_launched", true),
@@ -170,8 +170,7 @@ export async function listCollectionUniversities(): Promise<CollectionUniversity
         firstYearBudget,
         intakes: MONTHS.filter((m) => intakes.has(m)),
         automaticScholarships: autoSchBySlug.get(u.slug) ?? [],
-        acceptanceRate:
-          u.acceptance_rate == null ? null : Number(u.acceptance_rate),
+        selectivityBand: u.selectivity_band ?? null,
         applicationFee:
           u.application_fee == null ? null : Number(u.application_fee),
         ieltsOverall:

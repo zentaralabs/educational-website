@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { formatCurrency, formatSelectivity } from "@/lib/format";
+import { formatCurrency, selectivityLabel } from "@/lib/format";
 import { getQuizMatches, listQuizOptions } from "@/lib/queries/public-quiz";
 import { getCity } from "@/lib/cities";
 
@@ -96,8 +96,8 @@ export default async function QuizResultsPage({
       </h1>
       <p className="mt-2 font-body text-base text-slate">
         {matches.length} universit{matches.length === 1 ? "y" : "ies"} match
-        {criteria.length > 0 && <> your picks ({criteria.join(" · ")})</>}, most
-        realistic acceptance odds first.
+        {criteria.length > 0 && <> your picks ({criteria.join(" · ")})</>}, more
+        open admissions first.
       </p>
 
       {matches.length === 0 ? (
@@ -139,7 +139,7 @@ export default async function QuizResultsPage({
               <dl className="mt-4 grid grid-cols-2 gap-x-6 gap-y-3 border-t border-line pt-4 sm:grid-cols-4">
                 <Stat
                   label="Selectivity"
-                  value={formatSelectivity(u.acceptanceRate) ?? "Not listed"}
+                  value={selectivityLabel(u.selectivityBand) ?? "Not listed"}
                 />
                 <Stat
                   label="Tuition from"

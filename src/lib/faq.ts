@@ -29,7 +29,6 @@ type UniFaqInput = {
   application_fee: number | null;
   ielts_overall: number | string | null;
   pte_overall: number | string | null;
-  acceptance_rate: number | string | null;
   apply_url: string | null;
   website_url: string | null;
   intakeTypes: string[]; // deadline_type names present, e.g. ["Semester 1", "Semester 2"]

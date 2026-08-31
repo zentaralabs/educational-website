@@ -147,9 +147,15 @@ export default async function MethodologyPage() {
       <h2>Selectivity, not acceptance rates</h2>
       <p>
         Australian universities do not publish admission rates the way US
-        universities do. Where a figure exists, it is shown as a qualitative
-        band (highly selective, selective, competitive, broadly accessible)
-        rather than a false-precision percentage.
+        universities do, so any percentage would be an estimate dressed up as a
+        fact. Instead we assign each institution one of four selectivity bands
+        (highly selective, selective, competitive, broadly accessible) as an
+        editorial judgement, based on the Group of Eight status, the breadth of
+        entry pathways, whether entry is by audition or portfolio, and how far
+        the competitive courses sit above the general bar. Each profile shows a
+        one-line rationale for the band it carries. The band is an
+        institution-wide read: individual courses such as medicine, law, and
+        some design programs stay harder to enter than the band suggests.
       </p>
 
       <h2>Update cadence</h2>
