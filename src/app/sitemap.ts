@@ -24,7 +24,36 @@ import { listPublishedProgramsForSitemap } from "@/lib/queries/public-programs";
  */
 const CONFIG_LAST_MODIFIED = new Date("2026-08-31T00:00:00Z");
 
-export const revalidate = 3600;
+// 6 hours. Longer than a page's 1h so cold regenerations (the only time a
+// slow or failing origin can reach a crawler) are rarer; short enough that
+// row-level updated_at values in the sitemap stay honest.
+export const revalidate = 21600;
+
+// A cold regeneration runs ~8 list queries plus a paginated 850+ row program
+// query. Warm hits are edge-cached and instant, but the first hit after a
+// deploy (or after a quiet period) pays the full cost against a possibly
+// cold database. Raise the function ceiling well past that so a slow origin
+// can never turn into the 504 that Search Console reports as "Couldn't fetch".
+export const maxDuration = 60;
+
+/**
+ * Runs one sitemap data source, returning [] if it throws.
+ *
+ * Every entry here is optional: the sitemap route must never 500. Google
+ * records a failed fetch as "Couldn't fetch" and then retries only slowly
+ * (days, for a new domain), so one transient database blip during a cold
+ * regeneration can keep the whole sitemap out of Search Console for a week.
+ * A sitemap that is briefly missing a section self-heals on the next
+ * revalidation; a sitemap that errors does not.
+ */
+async function safe<T>(label: string, fn: () => Promise<T[]>): Promise<T[]> {
+  try {
+    return await fn();
+  } catch (err) {
+    console.error(`[sitemap] "${label}" failed, continuing without it:`, err);
+    return [];
+  }
+}
 
 const STATIC_ROUTES: Array<{ path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"] }> = [
   { path: "", priority: 1, changeFrequency: "daily" },
@@ -55,7 +84,14 @@ const STATIC_ROUTES: Array<{ path: string; priority: number; changeFrequency: Me
   { path: "/disclaimer", priority: 0.2, changeFrequency: "yearly" },
 ];
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+const staticEntries: MetadataRoute.Sitemap = STATIC_ROUTES.map((route) => ({
+  url: `${SITE_URL}${route.path}`,
+  lastModified: CONFIG_LAST_MODIFIED,
+  changeFrequency: route.changeFrequency,
+  priority: route.priority,
+}));
+
+async function buildDynamicEntries(): Promise<MetadataRoute.Sitemap> {
   const [
     universities,
     guides,
@@ -63,33 +99,29 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     blogPosts,
     visas,
     scholarships,
+    subjects,
+    programRows,
   ] = await Promise.all([
-    listPublishedUniversitySlugsForSitemap(),
-    listPublishedGuideSlugsForSitemap({ excludeCategory: "comparison" }),
-    listPublishedGuideSlugsForSitemap({ category: "comparison" }),
-    listAllBlogPostSlugsForSitemap(),
-    listPublishedVisaSlugsForSitemap(),
-    listPublishedScholarshipSlugsForSitemap(),
+    safe("universities", listPublishedUniversitySlugsForSitemap),
+    safe("guides", () =>
+      listPublishedGuideSlugsForSitemap({ excludeCategory: "comparison" }),
+    ),
+    safe("comparison guides", () =>
+      listPublishedGuideSlugsForSitemap({ category: "comparison" }),
+    ),
+    safe("blog posts", listAllBlogPostSlugsForSitemap),
+    safe("visas", listPublishedVisaSlugsForSitemap),
+    safe("scholarships", listPublishedScholarshipSlugsForSitemap),
+    safe("subjects", listPublishedSubjects),
+    safe("programs", listPublishedProgramsForSitemap),
   ]);
 
   const modOr = (updatedAt: string | null) =>
     updatedAt ? new Date(updatedAt) : CONFIG_LAST_MODIFIED;
 
-  const [subjects, programRows] = await Promise.all([
-    listPublishedSubjects(),
-    listPublishedProgramsForSitemap(),
-  ]);
-
   const universityDate = new Map(
     universities.map((u) => [u.slug, modOr(u.updatedAt)]),
   );
-
-  const staticEntries: MetadataRoute.Sitemap = STATIC_ROUTES.map((route) => ({
-    url: `${SITE_URL}${route.path}`,
-    lastModified: CONFIG_LAST_MODIFIED,
-    changeFrequency: route.changeFrequency,
-    priority: route.priority,
-  }));
 
   const universityEntries: MetadataRoute.Sitemap = universities.map((u) => ({
     url: `${SITE_URL}/universities/${u.slug}`,
@@ -210,7 +242,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }));
 
   return [
-    ...staticEntries,
     ...universityEntries,
     ...universityDeadlineEntries,
     ...guideEntries,
@@ -225,4 +256,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...stateEntries,
     ...programEntries,
   ];
+}
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  // Last-resort guard: if the dynamic build throws for any reason, still
+  // serve a valid sitemap of the core config-driven routes rather than a
+  // 500. `buildDynamicEntries` already degrades each section on its own, so
+  // this should never trigger, but the sitemap is too load-bearing to leave
+  // a single unhandled path.
+  try {
+    return [...staticEntries, ...(await buildDynamicEntries())];
+  } catch (err) {
+    console.error("[sitemap] dynamic build failed entirely, serving static routes only:", err);
+    return staticEntries;
+  }
 }

@@ -182,7 +182,14 @@ export async function listPublishedProgramsForSitemap(): Promise<SitemapProgramR
       .eq("university.country.is_launched", true)
       .range(from, from + pageSize - 1);
 
-    if (error) throw error;
+    // A transient error mid-pagination returns the rows gathered so far rather
+    // than throwing: the sitemap route must never 500 (Google reports that as
+    // "couldn't fetch" and is slow to retry). A briefly short sitemap recovers
+    // on the next revalidation.
+    if (error) {
+      console.error("[sitemap] program page fetch failed at offset", from, error);
+      break;
+    }
     rows.push(...((data ?? []) as unknown as SitemapProgramRow[]));
     if (!data || data.length < pageSize) break;
   }
