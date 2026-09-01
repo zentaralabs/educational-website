@@ -442,10 +442,10 @@ real Chrome once he's logged in there — that worked for both F6S and IH.
 - 2026-09-01 — Facebook: launch/intro post (the FB Page's first post).
 - 2026-09-01 — Facebook: blog post "65 points gets you into the pool, not a skilled visa" (/blog/why-65-points-wont-get-you-a-skilled-visa-2026).
 - QUEUED for LinkedIn, hold until ~2026-09-08 (LinkedIn already posted 09-01): the "65 points" blog post. Draft is in the 2026-09-01 session.
-- Instagram: @where_to_apply created by Roman 2026-09-01. Profile setup + the "65 points" post still to do — the IG web tab went unresponsive during the session, do it from the IG app (image = a points-calculator screenshot, caption + "link in bio").
+- 2026-09-01 — Instagram: @where_to_apply set up (logo pic + bio) and first post published — the "65 points" content with a points-calculator screenshot as the image. STILL TO DO from the IG app: add the bio link URL (https://www.wheretoapply.xyz) — Instagram web won't let you edit the link, it's mobile-only.
 
 | Facebook Page | ✅ 2026-09-01 — created + first post live. Page id 61594062508044. Roman's personal FB is admin (he also manages The Unpopular Opinion / Yeti Traders / Zentara Labs / Attend Xpress). Logo profile pic, bio, category "Education website", website + email set. No cover photo yet (linkedin-cover is the wrong ratio for FB — needs an 820×312). | 2026-09-01 | facebook.com/profile.php?id=61594062508044 |
-| Instagram | ⚠️ 2026-09-01 — account **@where_to_apply** created by Roman. Profile (bio / link / pic) NOT set up and no post yet: the IG web tab went unresponsive mid-session (IG throttles automation). Finish from the IG app: set bio + link + logo pic from Appendix C, then post the "65 points" image. | | instagram.com/where_to_apply |
+| Instagram | ✅ 2026-09-01 — account **@where_to_apply** (created by Roman). Logo profile pic + bio set. First post live: "65 points" content, points-calculator screenshot as the image (from `scripts/ph-screenshots/4`). ONE thing left, IG-app-only: add the bio link `https://www.wheretoapply.xyz` (Instagram web blocks link editing). | 2026-09-01 | instagram.com/where_to_apply |
 
 LinkedIn Page follow-ups:
 - ✅ Year founded (2026) + 5 Specialties (studying in Australia / student visas /
