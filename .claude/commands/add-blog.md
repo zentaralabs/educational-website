@@ -23,3 +23,12 @@ Read the memory file **`add-content-prompt.md`** and follow it. Also read `site-
 
 ## Then
 Show me the rendered post text for a fact-check pass, list anything hedged, then commit + push any code changes to `main` (DB writes aren't in the diff).
+
+## LinkedIn
+Draft a short post for the Where To Apply company page (`linkedin.com/company/wheretoapply`) and hand it to me to publish manually (LinkedIn `nofollow`s the link, so this is a credibility signal for journalists who vet the page, not SEO):
+- First two lines are a specific, non-obvious fact from the post. Never "check out our new post" or "excited to share".
+- One link to the new `/blog/<slug>` page. One line noting figures are sourced and dated.
+- 2–3 hashtags from: `#StudyInAustralia` `#InternationalStudents` `#StudentVisa` `#SkilledMigration`.
+- Zero em dashes. ~120–180 words. Plain, independent voice — no brochure language.
+- Cadence (see `BACKLINKS.md`): only real events warrant a post, roughly one per 1–2 weeks. If the page has already posted in the last several days, say so and hold this draft.
+- Analysis posts (`what-we-are-watching`): the LinkedIn post must also say up front that it's an estimate, not reporting.
