@@ -81,10 +81,11 @@ options:
    direct HARO replacement. Enter email → confirm → you get a digest 3×/weekday
    with journalist queries. **Primary.** Choose the "Lifestyle" / "General" and
    "Education" categories if it asks.
-2. **Featured** — https://featured.com — sign up as an Expert. Free tier: browse
-   open questions, submit written answers; if chosen you're published in the
-   article with a byline + link. Fill your expert profile (Roman Lama, founder of
-   Where To Apply, focus: studying in Australia / student visas).
+2. **Featured** — https://featured.com — ✅ signed up 2026-09-01 (see Tracking).
+   As of 2026 Featured has pivoted to an AI PR-research chat tool: no expert
+   profile any more. Free tier aggregates live journalist requests from Qwoted +
+   Connectively via the "Find Journalist Requests" prompt. Use it for discovery;
+   respond by clicking through to Qwoted/Connectively.
 3. **Qwoted** — https://qwoted.com — sign up as a Source, free tier. Journalist
    requests matched to your topics.
 4. **X / Bluesky** — follow and search **#journorequest** and **#PRrequest**.
@@ -114,9 +115,10 @@ options:
 | F6S | ✅ 2026-08-30 | 2026-08-30 | f6s.com/where-to-apply |
 | Tier 2 batch (7 sites) | ⚠️ SaaSHub ✅ (no login needed); rest need Roman account creation — see Appendix B tracking | 2026-08-30 | saashub.com/where-to-apply |
 | LinkedIn Company Page | ✅ 2026-08-30 | 2026-08-30 | linkedin.com/company/wheretoapply |
-| SOS signup | ☐ | | |
-| Featured signup + profile | ☐ | | |
-| Qwoted signup | ☐ | | |
+| SOS signup | ✅ 2026-09-01 — subscribed + double opt-in confirmed, email admin@wheretoapply.xyz (Roman Lama). Digests 3×/weekday. | 2026-09-01 | n/a (not a link; query feed) |
+| Featured signup + profile | ✅ 2026-09-01 — account created, FREE tier. Featured has pivoted to an AI PR-research chat tool; there is NO expert profile to fill any more. Free tier DOES surface live journalist requests (aggregates Qwoted + Connectively) via the "Find Journalist Requests" prompt — returned 4 real study/education queries on the first search. To actually respond you click through to Qwoted/Connectively (need those accounts). NOTE: two accounts exist — one via Google (romanlama314@gmail.com), one via magic link (admin@wheretoapply.xyz, currently logged in). Keep admin@, ignore/delete the Google one. | 2026-09-01 | n/a (discovery tool) |
+| Qwoted signup | ⏳ 2026-09-01 — account created ("I'm Looking to Earn Media" → "pitch myself"), email admin@wheretoapply.xyz. Awaiting email confirmation, then profile/topics setup. | 2026-09-01 | pending |
+| Connectively signup | ⏳ 2026-09-01 — form filled (Roman Lama, admin@wheretoapply.xyz); Roman sets password + submits. Connectively is NOT dead (plan said Dec 2024 shutdown — it's live). Featured surfaces its requests. | 2026-09-01 | pending |
 | #journorequest follow | ☐ | | |
 
 Check earned links later in **GSC → Links → External links**, and referral
