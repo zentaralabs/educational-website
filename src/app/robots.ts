@@ -1,8 +1,18 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/site-config";
 
-// Paths that never belong in any index (auth + admin).
-const DISALLOW = ["/admin", "/admin/", "/login", "/forgot-password", "/reset-password"];
+// Paths that never belong in any index (auth + admin, and the first-party
+// GA4 proxy paths from next.config.ts — no content, no reason to spend
+// crawl budget on them).
+const DISALLOW = [
+  "/admin",
+  "/admin/",
+  "/login",
+  "/forgot-password",
+  "/reset-password",
+  "/js/site.js",
+  "/api/hit",
+];
 
 // AI answer engines, assistants, and dataset crawlers. Named explicitly and
 // allowed on purpose: Google-Extended, Applebot-Extended and CCBot govern
