@@ -1176,6 +1176,65 @@ The National Planning Level, the government's cap on new international student c
       "https://immi.homeaffairs.gov.au/programs-subsite/migration-strategy/Documents/migration-strategy.pdf",
     ],
   },
+  {
+    slug: "why-65-points-wont-get-you-a-skilled-visa-2026",
+    title: "65 points gets you into the pool, not a skilled visa",
+    published_at: "2026-09-01",
+    tags: ["visas", "australia", "skilled-migration"],
+    excerpt:
+      "The 65-point pass mark lets you submit an Expression of Interest. It is not the score that gets invited. In the most recent round the minimum invited score ran from 65 for many trades to 100 for the most competitive occupations.",
+    content: `Sixty-five points is the pass mark to submit an Expression of Interest for a skilled visa. A lot of people read that as the score they need. It is not. It is the score that puts your Expression of Interest in the SkillSelect pool, where it waits behind everyone with a higher score in your occupation.
+
+In the most recent round, on 4 June 2026, the Department of Home Affairs invited 10,000 people for the [subclass 189](/visas/skilled-independent-189). The minimum invited score was not 65 for most of them.
+
+## The June 2026 round, by occupation
+
+| Occupation group | Minimum score invited |
+| --- | --- |
+| Many trades: carpenter, electrician, plumber, bricklayer, tiler | 65 |
+| Gasfitter | 70 |
+| Registered nurses, physiotherapists, social workers, secondary teachers | 75 |
+| Architects, engineering managers, economists, most professional roles | 80 to 85 |
+| Actuary, statistician | 90 |
+| Several engineering specialisations, life sciences, multimedia | 95 |
+| Urologist | 100 |
+
+Software and ICT occupations were not invited at all in that round. Neither was accounting.
+
+## Why the gap exists
+
+Each occupation group has an annual ceiling on invitations. A round works down from the highest score in that group until the ceiling is reached, so the cut-off is whatever score clears the queue. Trades attract fewer high-scoring candidates than their ceilings allow, so 65 is often enough. Accounting and ICT attract far more, so the cut-off floats up into the 90s, and in a small round those groups can be skipped entirely.
+
+The [points calculator](/visas/points-calculator) shows your own number. The [invitation rounds page](/visas/invitation-rounds) shows where every occupation actually landed, round by round.
+
+## What to do if your occupation sits high
+
+If your occupation needs a score in the 90s and yours is in the 70s or 80s, a federal 189 round is unlikely to reach you. Two things help:
+
+- **State nomination.** The [190](/visas/skilled-nominated-190) adds 5 points, the regional [491](/visas/skilled-work-regional-491) adds 15, and both run off each state's own occupation list with cut-offs that are usually lower than the 189. Lodging a state Expression of Interest in parallel costs nothing.
+- **More points at the source.** A higher English band, another year of skilled work, a skilled partner, or a Professional Year each move you up the queue. Waiting for the cut-off to fall does not, especially now that rounds are roughly quarterly.
+
+The full sequence from a student visa to permanent residence, with a worked points example, is in the [study-to-PR guide](/guides/study-to-permanent-residence-pathway-australia). How each point is earned is in the [points test guide](/guides/how-the-australian-points-test-works).
+
+## When is the next round?
+
+The Department expects the first subclass 189 round of the 2026-27 program year by 30 September 2026. It does not publish dates in advance, so treat any earlier date you see as a guess.
+
+## Is 65 points enough for an Australian skilled visa?
+
+It is enough to submit an Expression of Interest and sit in the SkillSelect pool. Whether it is enough to be invited depends entirely on your occupation. In the June 2026 round, 65 was the minimum invited score for many trades, while professional occupations needed 75 to 100.
+
+## What score do I actually need for the subclass 189?
+
+There is no single number. Each occupation has its own cut-off in each round, set by working down from the highest scores until that occupation's places are filled. Recent rounds have invited most professional occupations between 80 and 95, with some engineering and science specialisations at 95 or above.
+
+## Should I wait for the cut-off to drop or raise my score?
+
+Raise your score where you can. Rounds are roughly quarterly, so waiting for a lower cut-off can cost months with no guarantee it moves. Extra points from English, work experience, a skilled partner, or state nomination are more reliable than hoping the queue thins.`,
+    sources: [
+      "https://immi.homeaffairs.gov.au/visas/working-in-australia/skillselect/invitation-rounds",
+    ],
+  },
 ];
 
 // ---------------------------------------------------------------------------
