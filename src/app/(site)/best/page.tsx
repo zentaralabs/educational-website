@@ -33,13 +33,29 @@ export default function BestIndexPage() {
       <h1 className="font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
         Best universities in Australia, by category
       </h1>
-      <p className="mt-2 max-w-2xl font-body text-base text-slate">
-        There is no single &ldquo;best&rdquo; university, so this is a set of
-        shortlists built from the data on this site: cheapest first year, most
-        intakes per year, regional migration advantages, no application fee,
-        automatic scholarships, and more. Each list shows how it was put
-        together, not just the result.
-      </p>
+      <div className="mt-2 flex max-w-2xl flex-col gap-3 font-body text-base leading-relaxed text-slate">
+        <p>
+          There is no single &ldquo;best&rdquo; university, so this is a set of
+          shortlists built from the data on this site: cheapest first year, most
+          intakes per year, regional campuses that earn migration points, no
+          application fee, automatic scholarships, and more.
+        </p>
+        <p>
+          Each list ranks on one measurable thing and shows its working, so you
+          can see why a university placed where it did and decide whether that
+          factor matters to you. They are a starting point, not a league table.
+          They do not score teaching quality, research reputation, or graduate
+          outcomes, and a university can top one list while sitting near the
+          bottom of another.
+        </p>
+        <p>
+          The lists are most useful in combination. Decide which two or three
+          factors actually drive your choice, commonly cost, intake timing, and
+          whether the campus counts as regional for migration, then open each
+          university for its full profile: deadlines, first-year budget, entry
+          requirements, and scholarships.
+        </p>
+      </div>
 
       <BestBrowser collections={collections} groups={groups} />
     </main>

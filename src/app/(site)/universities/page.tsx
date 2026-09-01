@@ -140,6 +140,15 @@ export default async function UniversitiesIndexPage() {
           </Link>
           .
         </p>
+        <p>
+          Two things the list leaves out on purpose. The tuition figure is the
+          lowest course on record at each institution, usually a low-cost arts or
+          IT program rather than the one you want, so read it as a floor and
+          check your actual course. And there are no world rankings here: they
+          shift a few places a year, say little about life as an international
+          student, and the things that do affect you, cost, location, intake
+          timing, and regional status, are all in the filters below.
+        </p>
       </div>
 
       <UniversityDirectory universities={universities} />

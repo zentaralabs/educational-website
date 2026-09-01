@@ -80,11 +80,31 @@ export default async function ScholarshipsIndexPage({
       <h1 className="font-display text-3xl font-semibold text-ink text-balance">
         Scholarships for studying in Australia
       </h1>
-      <p className="mt-2 font-body text-base text-slate">
-        Government schemes, university awards, and external funding for
-        international students. Each entry says what it is worth, who it is for,
-        and whether it needs a separate application or is automatic on admission.
-      </p>
+      <div className="mt-2 flex flex-col gap-3 font-body text-base leading-relaxed text-slate">
+        <p>
+          Government schemes, university awards, and external funding for
+          international students, grouped by who runs them. Each entry says what
+          it is worth, who it is for, and whether it needs a separate application
+          or is applied automatically when you are admitted.
+        </p>
+        <p>
+          Set your expectations before you start. Most awards labelled
+          &ldquo;scholarship&rdquo; for international students are partial tuition
+          reductions, often 10 to 50 percent off the course fee, decided on your
+          academic record at the offer stage. The awards that also cover living
+          costs, mainly Australia Awards, the Research Training Program for
+          research degrees, and the regional Destination Australia scheme, are
+          far fewer, far more competitive, and run on their own timelines rather
+          than through your admission application.
+        </p>
+        <p>
+          Use the &ldquo;separate application&rdquo; and &ldquo;automatic on
+          admission&rdquo; labels to plan your effort. Automatic awards need
+          nothing more than a strong application by the normal deadline. The rest
+          have their own forms, essays, and cut-off dates, sometimes six to
+          twelve months before your intake, so check those first.
+        </p>
+      </div>
 
       {levels.length > 0 && (
         <div className="mt-6 flex flex-wrap gap-2">

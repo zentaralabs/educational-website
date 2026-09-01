@@ -20,11 +20,40 @@ export default async function StudyIndexPage() {
       <h1 className="font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
         Study by subject in Australia
       </h1>
-      <p className="mt-3 font-body text-base text-slate">
-        Pick a field to see how many programs Australian universities offer,
-        which universities teach it, the cheapest tuition on record, the typical
-        entry requirements, and whether it leads to skilled migration.
-      </p>
+      <div className="mt-3 flex flex-col gap-3 font-body text-base leading-relaxed text-slate">
+        <p>
+          Pick a field to see how many programs Australian universities offer,
+          which universities teach it, the cheapest tuition on record, the
+          typical entry requirements, and whether it leads to skilled migration.
+        </p>
+        <p>
+          For international students the subject often matters more than the
+          university. It sets the tuition band, the English and academic entry
+          bar, how long the degree runs, and, if you plan to stay after
+          graduating, whether the qualification maps to an occupation on a
+          skilled list. A well-ranked university cannot rescue a field that leads
+          nowhere for migration, and a modest university in the right field can.
+        </p>
+        <p>
+          Each subject page pulls the numbers together so you can compare fields
+          before you compare institutions, then links the guides that go deeper:
+          how the{" "}
+          <Link
+            href="/guides/how-the-australian-points-test-works"
+            className="font-medium text-status-open underline underline-offset-2"
+          >
+            points test
+          </Link>{" "}
+          works, and how to get a{" "}
+          <Link
+            href="/guides/getting-a-skills-assessment-in-australia"
+            className="font-medium text-status-open underline underline-offset-2"
+          >
+            skills assessment
+          </Link>
+          .
+        </p>
+      </div>
 
       <ul className="mt-8 grid gap-3 sm:grid-cols-2">
         {subjects.map((s) => (
