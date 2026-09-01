@@ -437,9 +437,13 @@ real Chrome once he's logged in there — that worked for both F6S and IH.
 | LinkedIn Company Page | ✅ 2026-08-30 — page + About + logo + first post live. Page id 143591071. Roman's account is admin. | | linkedin.com/company/wheretoapply |
 
 **Post log** (for the "posted in the last few days?" cadence check in add-guide/add-blog):
-- 2026-08-30 — launch post (pinned/Featured).
-- 2026-09-01 — "From permanent residence to Australian citizenship" guide. Link: /guides/permanent-residence-to-australian-citizenship. Hook = the India/Nepal dual-citizenship trap. Hashtags #StudyInAustralia #InternationalStudents #SkilledMigration.
-- NEXT (queued, hold until ~2026-09-08+): "The study-to-PR pathway" guide (/guides/study-to-permanent-residence-pathway-australia) — draft in the session that posted the citizenship one.
+- 2026-08-30 — LinkedIn: launch post (pinned/Featured).
+- 2026-09-01 — LinkedIn: "From permanent residence to Australian citizenship" guide. Hook = India/Nepal dual-citizenship trap.
+- 2026-09-01 — Facebook: launch/intro post (the new FB Page's first post).
+- NEXT (queued, hold until ~2026-09-08+): "The study-to-PR pathway" guide (/guides/study-to-permanent-residence-pathway-australia). Post to BOTH LinkedIn and Facebook. Draft is in the 2026-09-01 session.
+
+| Facebook Page | ✅ 2026-09-01 — created + first post live. Page id 61594062508044. Roman's personal FB is admin (he also manages The Unpopular Opinion / Yeti Traders / Zentara Labs / Attend Xpress). Logo profile pic, bio, category "Education website", website + email set. No cover photo yet (linkedin-cover is the wrong ratio for FB — needs an 820×312). | 2026-09-01 | facebook.com/profile.php?id=61594062508044 |
+| Instagram | ⚠️ 2026-09-01 — NOT done. Only Roman's personal @lamaroman66 is logged in; no wheretoapply IG account exists and Claude can't create one or log into another. Roman must create @wheretoapply himself (Appendix C copy), then Claude can set up the profile. Low priority — leave it if he doesn't care. | | |
 
 LinkedIn Page follow-ups:
 - ✅ Year founded (2026) + 5 Specialties (studying in Australia / student visas /
