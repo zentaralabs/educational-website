@@ -1,7 +1,8 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import Link from "next/link";
+import { trackEvent } from "@/lib/analytics";
 import { CITY_COSTS } from "@/lib/cities";
 import { formatCurrency } from "@/lib/format";
 
@@ -92,6 +93,15 @@ export function CostCalculator({
 
   const city = CITIES.find((c) => c.slug === citySlug) ?? CITIES[0];
 
+  // Report the first field change only, so the event counts real engagement
+  // rather than every keystroke.
+  const usedRef = useRef(false);
+  const markUsed = () => {
+    if (usedRef.current) return;
+    usedRef.current = true;
+    trackEvent("calculator_used", { calculator: "cost" });
+  };
+
   function onUniChange(slug: string) {
     setUniSlug(slug);
     const u = withTuition.find((x) => x.slug === slug);
@@ -157,7 +167,10 @@ export function CostCalculator({
 
   return (
     <div className="flex flex-col gap-8">
-      <div className="grid gap-4 rounded-2xl border border-line bg-mist p-5 sm:grid-cols-2">
+      <div
+        className="grid gap-4 rounded-2xl border border-line bg-mist p-5 sm:grid-cols-2"
+        onChangeCapture={markUsed}
+      >
         <label className="flex flex-col gap-1">
           <span className={labelCls}>University (optional)</span>
           <select

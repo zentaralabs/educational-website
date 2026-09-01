@@ -9,6 +9,7 @@ import { GuideContent } from "@/components/site/GuideContent";
 import { CheckBadgeIcon } from "@/components/site/icons";
 import { Fact, FactBox, ProfileSection } from "@/components/site/ProfileSection";
 import { HowToApply } from "@/components/site/HowToApply";
+import { OutboundLink } from "@/components/site/OutboundLink";
 import { LastVerified } from "@/components/site/LastVerified";
 import { VerifiedInline } from "@/components/site/VerifiedInline";
 import { WhyTrust } from "@/components/site/WhyTrust";
@@ -296,24 +297,28 @@ export default async function UniversityProfilePage({
 
         <div className="mt-4 flex flex-wrap items-center gap-4">
           {university.website_url && (
-            <a
+            <OutboundLink
+              event="university_site_click"
+              eventParams={{ university: university.name, location: "profile_header" }}
               href={university.website_url}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block font-body text-base text-status-open underline underline-offset-2"
             >
               Official website ↗
-            </a>
+            </OutboundLink>
           )}
           {university.apply_url && (
-            <a
+            <OutboundLink
+              event="apply_click"
+              eventParams={{ university: university.name, location: "profile_header" }}
               href={university.apply_url}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 rounded-full bg-ink px-5 py-2.5 font-body text-sm font-medium text-paper shadow-md shadow-ink/10 transition-all duration-150 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-ink/15"
             >
               Apply ↗
-            </a>
+            </OutboundLink>
           )}
         </div>
       </div>

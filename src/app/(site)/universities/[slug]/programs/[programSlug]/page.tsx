@@ -6,6 +6,7 @@ import { VerifiedInline } from "@/components/site/VerifiedInline";
 import { WhyTrust } from "@/components/site/WhyTrust";
 import { ProgramAdmissionsBlock } from "@/components/site/ProgramAdmissionsBlock";
 import { ProgramSidebar } from "@/components/site/ProgramSidebar";
+import { OutboundLink } from "@/components/site/OutboundLink";
 import { ArrowUpRightIcon, BookIcon } from "@/components/site/icons";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import { SITE_YEAR } from "@/lib/site-config";
@@ -177,7 +178,13 @@ export default async function ProgramDetailPage({
             </p>
           </div>
           {(program.application_url ?? university.apply_url) && (
-            <a
+            <OutboundLink
+              event="apply_click"
+              eventParams={{
+                university: university.name,
+                program: program.name,
+                location: "program_page",
+              }}
               href={program.application_url ?? university.apply_url!}
               target="_blank"
               rel="noopener noreferrer"
@@ -185,7 +192,7 @@ export default async function ProgramDetailPage({
             >
               Apply
               <ArrowUpRightIcon className="h-3.5 w-3.5" />
-            </a>
+            </OutboundLink>
           )}
         </div>
       </div>

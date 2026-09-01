@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
+import { trackEvent } from "@/lib/analytics";
 
 type Opt = { label: string; points: number };
 
@@ -175,6 +176,15 @@ export function PointsCalculator() {
     ),
   );
 
+  // Report the first interaction only, so the event counts users who actually
+  // engaged with the tool rather than every dropdown change.
+  const usedRef = useRef(false);
+  const markUsed = () => {
+    if (usedRef.current) return;
+    usedRef.current = true;
+    trackEvent("calculator_used", { calculator: "points" });
+  };
+
   const pts = (key: string) => {
     const field = FIELDS.find((f) => f.key === key);
     return field?.options[idx[key] ?? 0]?.points ?? 0;
@@ -203,9 +213,10 @@ export function PointsCalculator() {
             </span>
             <select
               value={idx[f.key] ?? 0}
-              onChange={(e) =>
-                setIdx((v) => ({ ...v, [f.key]: Number(e.target.value) }))
-              }
+              onChange={(e) => {
+                markUsed();
+                setIdx((v) => ({ ...v, [f.key]: Number(e.target.value) }));
+              }}
               className="w-full rounded-lg border border-line bg-paper px-3 py-2 font-body text-sm text-ink focus-visible:border-status-open focus-visible:outline-none"
             >
               {f.options.map((o, i) => (

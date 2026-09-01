@@ -2,6 +2,7 @@ import Link from "next/link";
 import { formatCurrency, selectivityLabel } from "@/lib/format";
 import { getQuizMatches, listQuizOptions } from "@/lib/queries/public-quiz";
 import { getCity } from "@/lib/cities";
+import { TrackEvent } from "@/components/site/TrackEvent";
 
 export const revalidate = 3600;
 
@@ -91,6 +92,10 @@ export default async function QuizResultsPage({
 
   return (
     <main className="mx-auto w-full max-w-3xl px-6 pt-8 pb-16">
+      <TrackEvent
+        event="quiz_completed"
+        eventParams={{ matches: matches.length, filters: criteria.length }}
+      />
       <h1 className="font-display text-3xl font-semibold text-ink text-balance">
         Your matches
       </h1>

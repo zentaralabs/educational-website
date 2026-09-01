@@ -1,4 +1,5 @@
 import { GuideContent } from "@/components/site/GuideContent";
+import { OutboundLink } from "@/components/site/OutboundLink";
 
 const GENERIC_STEPS = [
   "Pick your course and check it is open to international students for your intended intake.",
@@ -40,14 +41,16 @@ export function HowToApply({
       )}
 
       {applyUrl && (
-        <a
+        <OutboundLink
+          event="apply_click"
+          eventParams={{ university: universityName, location: "how_to_apply" }}
           href={applyUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="mt-5 inline-flex items-center gap-1.5 rounded-full bg-ink px-5 py-2.5 font-body text-sm font-medium text-paper shadow-md shadow-ink/10 transition-all duration-150 hover:-translate-y-0.5 hover:shadow-lg"
         >
           Start your application at {universityName} ↗
-        </a>
+        </OutboundLink>
       )}
 
       <p className="mt-4 font-body text-xs text-slate">
