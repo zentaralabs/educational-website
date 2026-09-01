@@ -434,7 +434,12 @@ real Chrome once he's logged in there — that worked for both F6S and IH.
 | BetaList | ❌ SKIP — free queue gone, paid only ($39+). Not doing paid while pre-revenue. Draft 185314 abandoned. | 2026-08-30 | — |
 | Indie Hackers | ✅ 2026-08-30 — product page + logo + tagline + website link + metadata (solo/bootstrapped/free/side-project, Aug 2026, tags: Education/Jobs & Hiring/Travel) | 2026-08-30 | indiehackers.com/product/where-to-apply |
 | Tier 2 batch | ⚠️ partial 2026-08-30 — **SaaSHub ✅ submitted** (pending approval, saashub.com/where-to-apply; competitors ScholarshipOwl + Abroadvice, cats Online Learning/Courses/Ed&Ref/Online Ed; email romanlama314@). Rest all need Roman to create an account: Uneed (scrape done, dead-ends at signup), Fazier, Peerlist (+weak fit — dev community), TinyLaunch, MicroLaunch. Startup Stash also rejects gmail (needs a @wheretoapply.xyz email). | 2026-08-30 | saashub.com/where-to-apply |
-| LinkedIn Company Page | ✅ 2026-08-30 — page + About + logo + first post live | | linkedin.com/company/wheretoapply |
+| LinkedIn Company Page | ✅ 2026-08-30 — page + About + logo + first post live. Page id 143591071. Roman's account is admin. | | linkedin.com/company/wheretoapply |
+
+**Post log** (for the "posted in the last few days?" cadence check in add-guide/add-blog):
+- 2026-08-30 — launch post (pinned/Featured).
+- 2026-09-01 — "From permanent residence to Australian citizenship" guide. Link: /guides/permanent-residence-to-australian-citizenship. Hook = the India/Nepal dual-citizenship trap. Hashtags #StudyInAustralia #InternationalStudents #SkilledMigration.
+- NEXT (queued, hold until ~2026-09-08+): "The study-to-PR pathway" guide (/guides/study-to-permanent-residence-pathway-australia) — draft in the session that posted the citizenship one.
 
 LinkedIn Page follow-ups:
 - ✅ Year founded (2026) + 5 Specialties (studying in Australia / student visas /
