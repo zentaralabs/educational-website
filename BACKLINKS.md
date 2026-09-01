@@ -442,7 +442,25 @@ real Chrome once he's logged in there — that worked for both F6S and IH.
 - 2026-09-01 — Facebook: launch/intro post (the FB Page's first post).
 - 2026-09-01 — Facebook: blog post "65 points gets you into the pool, not a skilled visa" (/blog/why-65-points-wont-get-you-a-skilled-visa-2026).
 - QUEUED for LinkedIn, hold until ~2026-09-08 (LinkedIn already posted 09-01): the "65 points" blog post. Draft is in the 2026-09-01 session.
-- 2026-09-01 — Instagram: @where_to_apply set up (logo pic + bio) and first post published — the "65 points" content with a points-calculator screenshot as the image. STILL TO DO from the IG app: add the bio link URL (https://www.wheretoapply.xyz) — Instagram web won't let you edit the link, it's mobile-only.
+- 2026-09-01 — Instagram: @where_to_apply set up (logo pic + bio). 3 posts published: "65 points" (points-calc screenshot), study-to-PR guide (visas-hub screenshot), real cost of studying (universities-directory screenshot). Each caption names the site + gives wheretoapply.xyz/guides + "link in bio". STOPPED at 3 to avoid new-account spam flags. STILL TO DO from the IG app: add the bio link URL (https://www.wheretoapply.xyz — web is mobile-only for this); post the remaining 5 guide drafts (below) spaced out.
+
+## 2026-09-01 Facebook scheduled queue (7 evergreen guides, one every 2 days, 10:00 AM Nepal time)
+- Sep 3: /guides/study-to-permanent-residence-pathway-australia
+- Sep 5: /guides/real-cost-of-studying-in-australia
+- Sep 7: /guides/how-the-australian-points-test-works
+- Sep 9: /guides/february-vs-july-intake-in-australia
+- Sep 11: /guides/applying-to-australian-universities-without-an-agent
+- Sep 13: /guides/studying-in-australia-without-ielts
+- Sep 15: /blog/student-visa-refusal-rate-20-year-high-2026
+Scheduled via FB Page Planner. Captions: hook-first, full https URL for the preview card, 7 hashtags each.
+
+## 2026-09-01 Instagram drafts still to post (from the app, ~1 every 2-3 days), image = a screenshot from scripts/ph-screenshots/
+Each caption should end with: "wheretoapply.xyz/guides (link in bio). Where To Apply is free, independent, and not an agent. Follow @where_to_apply." + 8-10 hashtags.
+- Points test — img: 4-points-calculator (already used twice, or 6-visas-hub). Hook: "You need 65 points to lodge an EOI. 65 rarely gets invited."
+- Feb vs July intake — img: 5-deadlines. Hook: "February is the bigger intake: widest course choice, most scholarship rounds."
+- Apply without an agent — img: 2-universities-filtered. Hook: "An agent is paid a commission by the university, not by you."
+- Studying without IELTS — img: 3-university-profile. Hook: "Most of what's written about studying in Australia without IELTS is wrong. You can't skip English, but IELTS isn't the only route."
+- Student visa refusal rate — img: 6-visas-hub or 1-homepage-hero. Hook: "Feb 2026 refusal rate hit 32.5%. Nepal 65%, India 40%, China 3%."
 
 | Facebook Page | ✅ 2026-09-01 — created + first post live. Page id 61594062508044. Roman's personal FB is admin (he also manages The Unpopular Opinion / Yeti Traders / Zentara Labs / Attend Xpress). Logo profile pic, bio, category "Education website", website + email set. No cover photo yet (linkedin-cover is the wrong ratio for FB — needs an 820×312). | 2026-09-01 | facebook.com/profile.php?id=61594062508044 |
 | Instagram | ✅ 2026-09-01 — account **@where_to_apply** (created by Roman). Logo pic + bio set. First post live: "65 points" content, points-calculator screenshot (`scripts/ph-screenshots/4`). Caption names the site + gives the URL; two own-account comments carry the full blog link, the points-calculator link and the homepage link. IG-APP-ONLY leftovers (web blocks all three): (1) add the bio website link `https://www.wheretoapply.xyz`, (2) pin the "Full article" comment, (3) optionally set profile Name to "Where To Apply" (shows as "Wheretoapply.xyz"). NOTE: links are never clickable in IG captions OR comments — they're copy-paste only; the bio link is the only tappable one, hence (1) matters most. | 2026-09-01 | instagram.com/where_to_apply |
