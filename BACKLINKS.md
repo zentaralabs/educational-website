@@ -439,11 +439,13 @@ real Chrome once he's logged in there — that worked for both F6S and IH.
 **Post log** (for the "posted in the last few days?" cadence check in add-guide/add-blog):
 - 2026-08-30 — LinkedIn: launch post (pinned/Featured).
 - 2026-09-01 — LinkedIn: "From permanent residence to Australian citizenship" guide. Hook = India/Nepal dual-citizenship trap.
-- 2026-09-01 — Facebook: launch/intro post (the new FB Page's first post).
-- NEXT (queued, hold until ~2026-09-08+): "The study-to-PR pathway" guide (/guides/study-to-permanent-residence-pathway-australia). Post to BOTH LinkedIn and Facebook. Draft is in the 2026-09-01 session.
+- 2026-09-01 — Facebook: launch/intro post (the FB Page's first post).
+- 2026-09-01 — Facebook: blog post "65 points gets you into the pool, not a skilled visa" (/blog/why-65-points-wont-get-you-a-skilled-visa-2026).
+- QUEUED for LinkedIn, hold until ~2026-09-08 (LinkedIn already posted 09-01): the "65 points" blog post. Draft is in the 2026-09-01 session.
+- Instagram: @where_to_apply created by Roman 2026-09-01. Profile setup + the "65 points" post still to do — the IG web tab went unresponsive during the session, do it from the IG app (image = a points-calculator screenshot, caption + "link in bio").
 
 | Facebook Page | ✅ 2026-09-01 — created + first post live. Page id 61594062508044. Roman's personal FB is admin (he also manages The Unpopular Opinion / Yeti Traders / Zentara Labs / Attend Xpress). Logo profile pic, bio, category "Education website", website + email set. No cover photo yet (linkedin-cover is the wrong ratio for FB — needs an 820×312). | 2026-09-01 | facebook.com/profile.php?id=61594062508044 |
-| Instagram | ⚠️ 2026-09-01 — NOT done. Only Roman's personal @lamaroman66 is logged in; no wheretoapply IG account exists and Claude can't create one or log into another. Roman must create @wheretoapply himself (Appendix C copy), then Claude can set up the profile. Low priority — leave it if he doesn't care. | | |
+| Instagram | ⚠️ 2026-09-01 — account **@where_to_apply** created by Roman. Profile (bio / link / pic) NOT set up and no post yet: the IG web tab went unresponsive mid-session (IG throttles automation). Finish from the IG app: set bio + link + logo pic from Appendix C, then post the "65 points" image. | | instagram.com/where_to_apply |
 
 LinkedIn Page follow-ups:
 - ✅ Year founded (2026) + 5 Specialties (studying in Australia / student visas /
