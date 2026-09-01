@@ -474,3 +474,52 @@ Track 2 (journalist sources):
 - Featured — https://featured.com  (sign up as an Expert)
 - Qwoted — https://www.qwoted.com/signup  (sign up as a Source)
 - #journorequest — https://twitter.com/search?q=%23journorequest&f=live
+
+---
+
+# Appendix C — Facebook & Instagram setup kit
+
+**Priority: low.** Both links are `nofollow`. Facebook Pages rank weakly for the
+brand name and this one will mostly sit idle. Instagram is a poor fit for a
+research/data tool (no natural visual content). Recommendation: do the **Facebook
+Page** if anything, and grab the **Instagram handle** as a placeholder so nobody
+else takes it — do not try to keep IG active.
+
+Claude cannot create these (account-creation rule — same as the directory signups).
+Roman creates them; ~10 min each with the copy below. Reuse
+`scripts/brand-assets/logo-512.png` for both profile pictures.
+
+## Facebook Page — facebook.com/pages/create
+
+| Field | Value |
+|---|---|
+| Page name | Where To Apply |
+| Username | `wheretoapply` → facebook.com/wheretoapply (claim it in Page settings after creating) |
+| Category | Education Website *(fallback: Educational Research Center)* |
+| Bio (≤255 chars) | Independent research for international students planning to study in Australia: universities, courses, fees, deadlines, and the student and skilled-migration visas. Every figure sourced and dated. |
+| Website | https://www.wheretoapply.xyz |
+| Profile picture | `scripts/brand-assets/logo-512.png` |
+| Cover photo | `scripts/brand-assets/linkedin-cover-1128x191.png`, cropped to 820×312 (or re-run `export_brand_assets.mjs` if a FB-sized cover gets added) |
+
+**About / description (longer, for the About tab):** use the LinkedIn "About / Overview"
+copy from Appendix B (the `linkedin.com/company/wheretoapply` section).
+
+**First post:** reuse the LinkedIn launch post text (the "Maker's first comment"
+in the PH Appendix, or the LinkedIn "First post (pin it)" in Appendix B). After
+that, mirror whatever gets posted to LinkedIn (see the Post log under Tracking),
+same real-events-only cadence. No separate FB content stream.
+
+## Instagram — handle grab only
+
+| Field | Value |
+|---|---|
+| Username | `wheretoapply` |
+| Name | Where To Apply |
+| Bio (≤150 chars) | Studying in Australia, researched and sourced. Universities, fees, deadlines, student & PR visas. Independent, not an agent. |
+| Link in bio | https://www.wheretoapply.xyz |
+| Category (professional account) | Education |
+| Profile picture | `scripts/brand-assets/logo-512.png` |
+
+One profile-grid post is enough (the logo card or a screenshot of `/universities`).
+Do not commit to posting. If IG ever gets real effort it should be short
+screen-recordings of the filters/points-calculator, not static graphics.
