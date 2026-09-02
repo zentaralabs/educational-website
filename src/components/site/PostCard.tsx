@@ -12,12 +12,14 @@ export function PostCard({
   title,
   excerpt,
   featured = false,
+  isNew = false,
 }: {
   href: string;
   eyebrow?: string;
   title: string;
   excerpt?: string | null;
   featured?: boolean;
+  isNew?: boolean;
 }) {
   return (
     <Link
@@ -28,9 +30,14 @@ export function PostCard({
           : "border-line bg-paper p-5 sm:p-6"
       }`}
     >
-      {eyebrow && (
-        <span className="font-utility text-xs font-semibold tracking-widest text-status-open uppercase">
-          {eyebrow}
+      {(eyebrow || isNew) && (
+        <span className="flex items-center gap-2 font-utility text-xs font-semibold tracking-widest uppercase">
+          {isNew && (
+            <span className="rounded-full bg-status-open/10 px-2 py-0.5 text-status-open">
+              New
+            </span>
+          )}
+          {eyebrow && <span className="text-status-open">{eyebrow}</span>}
         </span>
       )}
       <span className="flex items-start justify-between gap-3">

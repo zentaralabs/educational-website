@@ -19,6 +19,14 @@ export const metadata = {
 // Tab order for the category browser.
 const CATEGORY_ORDER = ["how-to", "country-guide", "test-prep"];
 
+function shortDate(iso: string): string {
+  return new Date(iso).toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  });
+}
+
 const CATEGORY_BLURB: Record<string, string> = {
   "how-to": "Step-by-step walkthroughs of the parts of an application you actually write.",
   "country-guide": "How the system works in Australia: fees, visas, accreditation, and the path to PR.",
@@ -88,7 +96,33 @@ export default async function GuidesIndexPage() {
       {guides.length === 0 ? (
         <p className="mt-10 font-body text-base text-slate">No guides published yet.</p>
       ) : (
-        <GuidesBrowser guides={guides} groups={groups} />
+        <>
+          <section className="mt-10">
+            <h2 className="font-display text-lg font-semibold text-ink">Recently added</h2>
+            <ul className="mt-3 divide-y divide-line overflow-hidden rounded-xl border border-line">
+              {guides.slice(0, 4).map((g) => (
+                <li key={g.slug}>
+                  <Link
+                    href={`/guides/${g.slug}`}
+                    className="flex items-baseline justify-between gap-4 px-4 py-3 transition-colors duration-150 hover:bg-mist"
+                  >
+                    <span className="font-body text-sm font-medium text-ink">
+                      {g.title}
+                    </span>
+                    <time
+                      dateTime={g.created_at}
+                      className="flex-shrink-0 font-utility text-xs text-slate"
+                    >
+                      {shortDate(g.created_at)}
+                    </time>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <GuidesBrowser guides={guides} groups={groups} />
+        </>
       )}
     </main>
   );

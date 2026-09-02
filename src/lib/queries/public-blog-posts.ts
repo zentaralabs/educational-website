@@ -78,6 +78,27 @@ export async function listRecentBlogPosts(
 }
 
 /**
+ * Every published post, newest first, as a lightweight list for the
+ * client-side search on /blog. The blog stays small enough that fetching
+ * the whole set is cheap; revisit if it grows past a few hundred.
+ */
+export async function listAllPublishedBlogPostsForSearch(): Promise<
+  Pick<PublicBlogPostListRow, "slug" | "title" | "excerpt" | "tags" | "published_at">[]
+> {
+  const supabase = createPublicClient(["blog_posts:list"]);
+  const { data, error } = await supabase
+    .from("blog_posts")
+    .select("slug, title, excerpt, tags, published_at")
+    .eq("status", "published")
+    .order("published_at", { ascending: false });
+  if (error) throw error;
+  return (data ?? []) as unknown as Pick<
+    PublicBlogPostListRow,
+    "slug" | "title" | "excerpt" | "tags" | "published_at"
+  >[];
+}
+
+/**
  * Distinct tags across all published posts, for the /blog filter pills.
  * Reads only the `tags` column. If this ever gets heavy, replace with a
  * `select distinct unnest(tags)` Postgres function.

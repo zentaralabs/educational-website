@@ -2,10 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { BlogCard } from "@/components/site/BlogCard";
+import { BlogIndexSearch } from "@/components/site/BlogIndexSearch";
 import { RssIcon } from "@/components/site/icons";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import { itemListJsonLd } from "@/lib/itemlist-jsonld";
 import {
+  listAllPublishedBlogPostsForSearch,
   listPublishedBlogPosts,
   listPublishedBlogTags,
 } from "@/lib/queries/public-blog-posts";
@@ -64,9 +66,10 @@ export default async function BlogIndexPage({
   const { tag, page: pageParam } = await searchParams;
   const page = Math.max(1, Number(pageParam) || 1);
 
-  const [{ rows, totalCount, pageSize }, tags] = await Promise.all([
+  const [{ rows, totalCount, pageSize }, tags, allPosts] = await Promise.all([
     listPublishedBlogPosts({ tag, page }),
     listPublishedBlogTags(),
+    listAllPublishedBlogPostsForSearch(),
   ]);
   const totalPages = Math.max(1, Math.ceil(totalCount / pageSize));
 
@@ -114,6 +117,7 @@ export default async function BlogIndexPage({
         RSS feed
       </a>
 
+      <BlogIndexSearch posts={allPosts}>
       {tags.length > 0 && (
         <div className="mt-6 flex flex-wrap gap-2">
           {[
@@ -229,6 +233,7 @@ export default async function BlogIndexPage({
           )}
         </>
       )}
+      </BlogIndexSearch>
     </main>
   );
 }

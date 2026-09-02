@@ -6,6 +6,8 @@ export type PublicGuideListRow = {
   title: string;
   category: string;
   excerpt: string | null;
+  created_at: string;
+  last_verified_at: string | null;
   country: { code: string; name: string } | null;
 };
 
@@ -16,9 +18,14 @@ export async function listPublishedGuides(opts: {
   const supabase = createPublicClient(["guides:list"]);
   let query = supabase
     .from("guides")
-    .select("slug, title, category, excerpt, country:countries(code, name, is_launched)")
+    .select(
+      "slug, title, category, excerpt, created_at, last_verified_at, country:countries(code, name, is_launched)",
+    )
     .eq("status", "published")
-    .order("title");
+    // Newest first, so freshly published guides surface at the top of every
+    // category. The /guides page also lifts the newest few into a
+    // "Recently added" strip.
+    .order("created_at", { ascending: false });
 
   if (opts.category) query = query.eq("category", opts.category);
   if (opts.excludeCategory) query = query.neq("category", opts.excludeCategory);
