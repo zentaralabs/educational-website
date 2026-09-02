@@ -442,7 +442,10 @@ real Chrome once he's logged in there — that worked for both F6S and IH.
 - 2026-09-01 — Facebook: launch/intro post (the FB Page's first post).
 - 2026-09-01 — Facebook: blog post "65 points gets you into the pool, not a skilled visa" (/blog/why-65-points-wont-get-you-a-skilled-visa-2026).
 - QUEUED for LinkedIn, hold until ~2026-09-08 (LinkedIn already posted 09-01): the "65 points" blog post. Draft is in the 2026-09-01 session.
-- 2026-09-01 — Instagram: @where_to_apply set up (logo pic + bio). 3 posts published: "65 points" (points-calc screenshot), study-to-PR guide (visas-hub screenshot), real cost of studying (universities-directory screenshot). Each caption names the site + gives wheretoapply.xyz/guides + "link in bio". STOPPED at 3 to avoid new-account spam flags. STILL TO DO from the IG app: add the bio link URL (https://www.wheretoapply.xyz — web is mobile-only for this); post the remaining 5 guide drafts (below) spaced out.
+- 2026-09-01 — Instagram: @where_to_apply set up (logo pic + bio). 3 screenshot posts were published then, BUT as of 2026-09-02 the profile shows they are GONE (deleted or reverted) — see the state note below.
+- 2026-09-02 — Instagram: posted the "The Agent Doesn't Work For You" 9-frame carousel (was built 09-01, never posted). Then posted a NEW 9-frame carousel **"February or July intake: how to choose"** (scratchpad/intake-carousel.html + scratchpad/intake-images/, fact-checked vs /guides/february-vs-july-intake-in-australia). Post: instagram.com/p/Dcxk-_OEVSh/. Caption + first comment both posted. Bio link already set. Pinning the first comment is still app-only.
+  - **IG profile state 2026-09-02:** 2 posts (agent carousel + intake carousel), 0 followers, 0 following. The 09-01 screenshot posts are not there.
+  - **Posting via IG web works** (claude-in-chrome): Create > Post, then the hidden `input[type=file][multiple]` needs `file_upload` with a ref — surface it first via JS (`i.style.display='block';i.style.opacity=1` + set an aria-label), then `find` it. Crop screen: set aspect to 4:5. Caption field is contenteditable, `\n` works for paragraph breaks. First comment: keep it ONE line (Enter submits the comment).
 
 ## 2026-09-01 Facebook scheduled queue (7 evergreen guides, one every 2 days, 10:00 AM Nepal time)
 - Sep 3: /guides/study-to-permanent-residence-pathway-australia
