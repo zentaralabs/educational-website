@@ -497,6 +497,45 @@ const visas = [
       "https://immi.homeaffairs.gov.au/what-we-do/whm-program/status-of-country-caps",
     ],
   },
+  {
+    slug: "training-visa-407",
+    code: "407",
+    name: "Training visa",
+    category: "employer-sponsored",
+    stream: "Occupational training",
+    short_description:
+      "An approved sponsor brings you to Australia for up to 2 years of workplace-based training. It is training, not a job, and has no path to permanent residence.",
+    summary:
+      "The subclass 407 covers workplace-based occupational training in one of three forms: training you need for occupational registration or licensing, structured training to improve your skills in a listed occupation, or capacity-building training for people sent by an overseas employer or government. It always needs an approved temporary activities sponsor and an approved nomination. It is temporary, cannot be extended, and has no permanent residence pathway.",
+    is_points_tested: false,
+    min_points: null,
+    stay_period: "Up to 2 years",
+    leads_to_pr: false,
+    pr_pathway:
+      "None. The 407 is training, not a migration pathway. Some holders later move onto an employer-sponsored or skilled visa, but that is a separate application on its own merits. Time spent on a 407 does not count toward the two years with a sponsor that the subclass 186 Temporary Residence Transition stream needs.",
+    base_application_charge:
+      "From AUD 535 for the primary applicant. A lower charge applies to eligible Pacific Island and Timor-Leste citizens.",
+    processing_time:
+      "Variable. The sponsorship and nomination have to be approved before the visa is lodged, which adds time on top of the visa processing itself.",
+    age_limit: "Usually 18 or older when the visa is decided",
+    english_requirement:
+      "Functional English. Not required if you hold a valid passport from the United Kingdom, Canada, New Zealand, the United States, or the Republic of Ireland.",
+    work_experience_requirement:
+      "Only for the improve-skills stream: the equivalent of at least 12 months of full-time experience in the nominated occupation, gained in the 24 months before the nomination is lodged.",
+    occupation_list:
+      "The improve-skills stream requires an occupation on the list of eligible skilled occupations. The registration and capacity-building streams do not use an occupation list.",
+    eligibility:
+      "You are likely eligible if you:\n\n- Have an approved temporary activities sponsor and an approved nomination (Australian Commonwealth Government agencies invite rather than nominate)\n- Are being nominated for one of the three types of occupational training\n- Are usually 18 or older\n- Have functional English, or a passport that exempts you\n- Meet the health, character, and health-insurance requirements and are a genuine temporary entrant",
+    conditions:
+      "The primary visa holder can only take part in the approved training activities and cannot do other paid work. Family members included in the application can work up to 40 hours a fortnight. The visa cannot be extended: to stay longer you must apply for a new visa.",
+    content:
+      "## The three types of training\n\nYour sponsor nominates you for one of these, and the requirements differ by type.\n\n| Type | What it covers |\n| --- | --- |\n| Registration or licensing | Workplace training you need to get occupational registration, membership, or licensing that is mandatory to work in that occupation, in Australia or your home country |\n| Improve skills in an eligible occupation | A structured program tailored to you, for an occupation on the eligible skilled occupations list, where you already have the equivalent of 12 months full-time experience in that occupation from the last 24 months |\n| Capacity building overseas | An overseas-qualification placement of up to 6 months, government-supported training, or a professional development program run for staff sent by an overseas employer |\n\n## What it is not\n\nThe 407 is not a work visa. You cannot use it to hold an ordinary job, and Home Affairs states plainly that it is not for ongoing work in Australia. If you want to work for an Australian employer, the visa you want is the [Skills in Demand visa (subclass 482)](/visas/skills-in-demand-482). See [407 vs 482](/guides/training-visa-407-vs-skills-in-demand-visa-482) for the full comparison.\n\n## No pathway to staying\n\nThe 407 has no permanent residence stream and cannot be extended. When the training ends you leave, unless you separately qualify for another visa. Time on a 407 does not count toward the [subclass 186](/visas/employer-nomination-scheme-186) Temporary Residence Transition requirement, which is two years with a sponsor on a 482.\n\n## The sponsor and nomination come first\n\nYou cannot lodge a 407 on your own. An organisation must first be approved as a temporary activities sponsor and have a nomination approved for your specific training program. Only then can you apply for the visa. Family members can be included and, if they did not apply with you, can be added later as subsequent entrants.",
+    source_urls: [
+      `${HOMEAFFAIRS}/training-407`,
+      `${HOMEAFFAIRS}/training-407/occupational-training-types`,
+      "https://immi.homeaffairs.gov.au/visas/already-have-a-visa/check-visa-details-and-conditions/conditions-list",
+    ],
+  },
 ];
 
 // --- Invitation rounds (SkillSelect), most recent first.
