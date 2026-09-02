@@ -1102,3 +1102,14 @@ Decided this session. The project's realistic path to an audience is **not** com
 **Headwind to be honest about:** Australia tightened hard through 2024–26 — Genuine Student test, higher financial thresholds, A$2,000+ (site currently says A$2,500) visa fee, enrolment caps, some unis pausing specific regions. The overall market is contracting. That churn is *also* the underdocumented, high-stakes info the site can own — but the tools (points calculator, invitation-round tracker) and the sourced honesty have to carry it.
 
 **Status:** existing `/international/[country]` hub has 7 pages (India/Nepal/Pakistan/China/Vietnam/Bangladesh/Sri Lanka). India + Nepal are the most developed. No code written this session — direction only. Next content work here is gated on the same GSC-data wait as the rest of the SEO roadmap. Related memory: [[source-country-wedge]].
+
+## 30. Guides/blog list UX + parked "Recently updated" (2026-09-02)
+
+**Shipped (commit 7f7eeb2):**
+- `/guides` now orders newest-first (`created_at DESC`, was alphabetical), with a "Recently added" strip (4 newest + dates) above the category browser and a capped "New" badge (21-day window + top-3 only, so it stays meaningful once the library matures).
+- Inline search box on `/guides` (collapses the category tabs, flat newest-first match list) and `/blog` (`BlogIndexSearch` client wrapper — progressive enhancement, all SEO server-rendering untouched).
+
+**Parked for the next refresh pass — "Recently updated" surface on `/guides`:**
+Deliberately not built now. Reasons: (1) every guide is <2 weeks old so it would duplicate "Recently added"; (2) `last_verified_at` and `updated_at` both get bumped by routine re-verification and by bulk `seed_visa_content.mjs` re-seeds, so a quarterly refresh would light it up with ~25 guides at once — the same noise problem the "New" badge was capped to avoid. Do it during/after the first real re-verification pass on older content, and only with a dedicated `content_updated_at` column that moves on **material** edits only (not verifies, not seeds). Lighter interim option if wanted sooner: show the per-guide "Updated [date]" on the listing cards, but only after a one-time cleanup of `last_verified_at` values (some are currently earlier than `created_at`).
+
+**Also noted this session — `/visas/training-visa-407` page gap:** the new `training-visa-407-vs-skills-in-demand-visa-482` guide can link to `/visas/skills-in-demand-482` but there is no subclass reference page for the 407. Adding one via `scripts/seed_visas.mjs` would capture the "407 training visa" head term and give the comparison guide a second internal link target.
