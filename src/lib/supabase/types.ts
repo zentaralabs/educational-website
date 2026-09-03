@@ -5,6 +5,16 @@
 /** deadlines.date_kind — see supabase/migrations/0026_add_deadline_date_kind.sql. */
 export type DeadlineDateKind = "closing_date" | "recommended";
 
+/** policy_updates.category — see supabase/migrations/0027_add_policy_updates.sql. */
+export type PolicyUpdateCategory =
+  | "student-visa"
+  | "post-study-work"
+  | "fees-and-charges"
+  | "english-language"
+  | "pr-pathway"
+  | "university-sector"
+  | "other";
+
 export type ContentStatus =
   | "draft"
   | "needs_review"
@@ -523,6 +533,42 @@ export interface Database {
           status?: ContentStatus;
           last_verified_at?: string | null;
           source_url?: string | null;
+        }
+      >;
+      policy_updates: Table<
+        {
+          id: string;
+          slug: string;
+          title: string;
+          category: PolicyUpdateCategory;
+          announced_date: string;
+          effective_date: string | null;
+          summary: string;
+          impact: string | null;
+          affects: string[] | null;
+          detail_url: string | null;
+          source_urls: string[];
+          is_estimated: boolean;
+          status: ContentStatus;
+          last_verified_at: string | null;
+          created_at: string;
+          updated_at: string;
+        },
+        {
+          id?: string;
+          slug: string;
+          title: string;
+          category: PolicyUpdateCategory;
+          announced_date: string;
+          effective_date?: string | null;
+          summary: string;
+          impact?: string | null;
+          affects?: string[] | null;
+          detail_url?: string | null;
+          source_urls: string[];
+          is_estimated?: boolean;
+          status?: ContentStatus;
+          last_verified_at?: string | null;
         }
       >;
       guide_related_guides: Table<

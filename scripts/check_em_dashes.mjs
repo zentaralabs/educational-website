@@ -44,6 +44,7 @@ const TARGETS = [
     ],
   },
   { table: "invitation_rounds", id: "round_date", cols: ["notes", "occupation_notes"] },
+  { table: "policy_updates", id: "slug", cols: ["title", "summary", "impact"] },
   { table: "deadlines", id: "university_id", cols: ["notes"] },
   {
     table: "universities",

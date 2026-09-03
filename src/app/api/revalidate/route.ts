@@ -23,6 +23,7 @@ const ENTITY_TAG_PREFIX: Record<string, string> = {
   blog_posts: "blog_post",
   visa_subclasses: "visa",
   invitation_rounds: "invitation_round",
+  policy_updates: "policy_update",
 };
 
 /**
@@ -40,6 +41,9 @@ function indexNowPaths(table: string, slug: string | undefined): string[] {
   };
   if (table === "invitation_rounds") {
     return ["/visas/invitation-rounds"];
+  }
+  if (table === "policy_updates") {
+    return ["/updates"];
   }
   const base = detailBase[table];
   if (!base) return [];
