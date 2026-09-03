@@ -22,7 +22,7 @@ import { listPublishedProgramsForSitemap } from "@/lib/queries/public-programs";
  * cities.ts, subjects.ts, origin-countries.ts, comparisons.ts, this file)
  * meaningfully change. DB-backed routes use their row's real updated_at.
  */
-const CONFIG_LAST_MODIFIED = new Date("2026-08-31T00:00:00Z");
+const CONFIG_LAST_MODIFIED = new Date("2026-09-03T00:00:00Z");
 
 // 6 hours. Longer than a page's 1h so cold regenerations (the only time a
 // slow or failing origin can reach a crawler) are rarer; short enough that

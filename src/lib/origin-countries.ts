@@ -1183,6 +1183,246 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     ],
     lastVerified: "2026-08-30",
   },
+
+  "south-korea": {
+    slug: "south-korea",
+    code: "KR",
+    name: "South Korea",
+    demonym: "South Korean",
+    intro: [
+      "South Korean students can study at any Australian university. A first year costs roughly AUD 40,000 to 80,000 all in, and the visa is the subclass 500. South Korea has long sent students to Australia, split between English-language and vocational courses and full degrees, and it is treated as a lower-risk country for the student visa.",
+      "Not much is unusual for South Korean applicants. The main points are how universities read a Korean high school diploma and a Korean bachelor's degree, English evidence, and the choice between applying directly or through an agent.",
+    ],
+    applying: [
+      "Apply through the university's international portal or an authorised agent. Direct application is available at most universities for South Korean citizens. Study-abroad agencies are widely used and manage the offer, deposit, and visa steps, though they are not required.",
+      "For undergraduate entry, a Korean high school diploma on its own usually routes through a foundation year, while a strong College Scholastic Ability Test result or a completed first year of a Korean university can give direct entry. Have certified copies of your records with certified English translations, and expect some universities to want them verified through the awarding institution or by apostille.",
+      "Most universities run February and July intakes and assess on a rolling basis. Apply two to three months ahead. Use the universities directory to shortlist and the deadline calendar for the recommended dates.",
+    ],
+    visaNote: [
+      "South Korea is generally treated as a lower-risk country, so the upfront financial and English evidence is among the lighter requirements, particularly at a Group of Eight university. The exact requirement is set by a provider-and-country matrix that is reviewed periodically, so confirm the current position with the Document Checklist Tool when you apply.",
+      "You still need to meet the Genuine Student requirement and show genuine access to funds for tuition, travel, and 12 months of living costs. Where Korean applications run into trouble it is usually a study plan that does not connect to previous study or work, or a course that reads as a route to staying rather than to a qualification. A clear, specific study plan addresses most of it.",
+    ],
+    credentials: [
+      "For undergraduate entry, most universities take a Korean high school diploma with a foundation year, or a high College Scholastic Ability Test score, or one completed year of a Korean bachelor's degree for direct entry.",
+      "A four-year Korean bachelor's degree maps directly to Australian master's entry. Universities publish Korea-specific entry tables keyed to your GPA on the 4.5 or 4.3 scale, so the average you need can differ by institution and course.",
+      "English is shown with IELTS, PTE, or TOEFL. Medium-of-instruction letters are rarely accepted from Korean institutions, so plan to sit a test. The university sets its own score and the student visa has its own lower rule. Confirm both.",
+    ],
+    popularFields: [
+      "Business, management, and marketing",
+      "Information technology",
+      "Hospitality and tourism",
+      "Design and media",
+      "Nursing and health",
+    ],
+    faq: [
+      {
+        q: "What is South Korea's assessment level for the Australian student visa?",
+        a: "Home Affairs does not publish evidence levels by country, and the requirement also depends on your provider. In practice South Korea is treated as lower risk, which means lighter upfront documentation. Use the Document Checklist Tool when you apply.",
+      },
+      {
+        q: "Is a Korean bachelor's degree accepted in Australia?",
+        a: "Yes, a four-year Korean bachelor's is accepted for direct entry to most Australian master's programs. Universities publish Korea-specific entry tables mapping your GPA on the 4.5 or 4.3 scale to their requirement. Competitive courses want a higher GPA.",
+      },
+      {
+        q: "How much does it cost to study in Australia from South Korea?",
+        a: "Budget AUD 40,000 to 80,000 for the first year: roughly AUD 30,000 to 55,000 tuition, about AUD 30,000 living costs, the AUD 2,500 visa, health cover, and flights. Sydney, Melbourne, and the Group of Eight sit at the top of the range.",
+      },
+      {
+        q: "Do South Korean students need to apply through an agent?",
+        a: "No. Most universities accept direct applications from Korean citizens. Study-abroad agencies are common because they handle the offer, deposit, and visa lodgement, but they are not required. Check the university's how-to-apply page.",
+      },
+      {
+        q: "Can I get PR in Australia after studying from South Korea?",
+        a: "It is possible, not automatic. After graduating, most students move to a Temporary Graduate visa (subclass 485), gain skilled work experience, and then apply for a points-tested visa. Your occupation and points decide the outcome.",
+      },
+    ],
+    sources: [
+      "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
+      "https://immi.homeaffairs.gov.au/news-media/archive/article?itemId=1196",
+      "https://www.studyaustralia.gov.au/",
+    ],
+    lastVerified: "2026-09-03",
+  },
+
+  japan: {
+    slug: "japan",
+    code: "JP",
+    name: "Japan",
+    demonym: "Japanese",
+    intro: [
+      "Japanese students can study at any Australian university. A first year of a degree costs roughly AUD 40,000 to 80,000 all in, and the visa is the subclass 500. Most Japanese students in Australia are on English-language courses or one or two semester exchanges rather than full degrees, and Japan is treated as a low-risk country for the student visa, so the evidence requirements are among the lightest.",
+      "Not much is unusual for Japanese applicants. The main points are how universities read a Japanese high school diploma and a Japanese bachelor's degree, English evidence, and, for shorter stays, whether a study visa or a working holiday visa fits better.",
+    ],
+    applying: [
+      "Apply through the university's international portal or an authorised agent. Direct application is available at most universities for Japanese citizens. Study-abroad agencies are widely used in Japan and handle the offer, deposit, and visa steps, though they are not required.",
+      "For undergraduate entry, a Japanese Upper Secondary School Certificate of Graduation with strong grades is accepted directly for some courses, while others want a foundation year or one completed year of a Japanese university. Have certified copies of your records with certified English translations.",
+      "Most universities run February and July intakes and assess on a rolling basis. Apply two to three months ahead. If you are going for a semester or a year, ask your home university about an exchange agreement first, as that route is cheaper. Use the universities directory and the deadline calendar.",
+    ],
+    visaNote: [
+      "Japan is treated as a low-risk country, so the upfront financial and English evidence is among the lightest, particularly at a Group of Eight university. The requirement is set by a provider-and-country matrix that is reviewed periodically, so confirm the current position with the Document Checklist Tool when you apply.",
+      "You still need to meet the Genuine Student requirement and show genuine access to funds for tuition, travel, and 12 months of living costs. For a stay of under a year for an English course, many young Japanese use the Australia-Japan working holiday visa instead, which allows study of up to about four months and full work rights.",
+    ],
+    credentials: [
+      "For undergraduate entry, universities take the Japanese Upper Secondary School Certificate of Graduation, with strong grades accepted directly for some courses and a foundation year for others. One completed year of a Japanese bachelor's degree is a direct-entry route.",
+      "A four-year Japanese bachelor's degree maps directly to Australian master's entry. Universities assess your GPA on the awarding institution's scale; a B average is a common minimum, higher for competitive courses.",
+      "English is shown with IELTS, PTE, or TOEFL. Medium-of-instruction letters are rarely accepted from Japanese institutions, so plan to sit a test. The university sets its own score and the student visa has its own lower rule. Confirm both.",
+    ],
+    popularFields: [
+      "English language and TESOL",
+      "Business and management",
+      "Hospitality and tourism",
+      "Design and media",
+      "Environmental science",
+    ],
+    faq: [
+      {
+        q: "Do Japanese students need a lot of financial evidence for the Australian student visa?",
+        a: "Usually not. Japan is treated as a low-risk country, so upfront financial documentation is among the lightest, especially at a Group of Eight university. You still need to show genuine access to funds and meet the Genuine Student requirement. Use the Document Checklist Tool when you apply.",
+      },
+      {
+        q: "Is a Japanese bachelor's degree accepted in Australia?",
+        a: "Yes, a four-year Japanese bachelor's is accepted for direct entry to most Australian master's programs. Universities assess your GPA on your institution's scale, with a B average a common minimum and more for competitive courses.",
+      },
+      {
+        q: "How much does it cost to study in Australia from Japan?",
+        a: "Budget AUD 40,000 to 80,000 for the first year of a degree: roughly AUD 30,000 to 55,000 tuition, about AUD 30,000 living costs, the AUD 2,500 visa, health cover, and flights. An English-language course is charged by the week and works out much lower for a short stay.",
+      },
+      {
+        q: "Should I use a student visa or a working holiday visa for Australia?",
+        a: "For a full degree or a course longer than about four months, you need the subclass 500 student visa. For a shorter English course combined with travel and work, the Australia-Japan working holiday visa is usually the better fit, since it allows limited study and full work rights.",
+      },
+      {
+        q: "Can I get PR in Australia after studying from Japan?",
+        a: "It is possible, not automatic, and fewer Japanese graduates pursue it than students from some other countries. After graduating, you can move to a Temporary Graduate visa (subclass 485), gain skilled work experience, and then apply for a points-tested visa. Your occupation and points decide the outcome.",
+      },
+    ],
+    sources: [
+      "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
+      "https://immi.homeaffairs.gov.au/news-media/archive/article?itemId=1196",
+      "https://www.studyaustralia.gov.au/",
+    ],
+    lastVerified: "2026-09-03",
+  },
+
+  taiwan: {
+    slug: "taiwan",
+    code: "TW",
+    name: "Taiwan",
+    demonym: "Taiwanese",
+    intro: [
+      "Taiwanese students can study at any Australian university. A first year of a degree costs roughly AUD 40,000 to 80,000 all in, and the visa is the subclass 500. Taiwan is a steady, mid-sized source of students, split between full degrees, English-language courses, and working holidays, and it is treated as a low-risk country for the student visa.",
+      "Not much is unusual for Taiwanese applicants. The main points are how universities read a Taiwanese senior high school diploma and a Taiwanese bachelor's degree, English evidence, and, for shorter stays, whether a study visa or a working holiday visa fits better.",
+    ],
+    applying: [
+      "Apply through the university's international portal or an authorised agent. Direct application is available at most universities for Taiwanese citizens. Agencies are common and handle the offer, deposit, and visa steps, though they are not required.",
+      "For undergraduate entry, a Taiwanese senior high school diploma usually routes through a foundation year, while strong results, sometimes with the General Scholastic Ability Test, or a completed first year of a Taiwanese university, can give direct entry. Have certified copies of your records with certified English translations.",
+      "Most universities run February and July intakes and assess on a rolling basis. Apply two to three months ahead. Use the universities directory and the deadline calendar.",
+    ],
+    visaNote: [
+      "Taiwan is treated as a low-risk country, so the upfront financial and English evidence is among the lighter requirements. The requirement is set by a provider-and-country matrix that is reviewed periodically, so confirm the current position with the Document Checklist Tool when you apply.",
+      "You still need to meet the Genuine Student requirement and show genuine access to funds for tuition, travel, and 12 months of living costs. For a short English course, many young Taiwanese use the Australia-Taiwan working holiday visa instead, which allows limited study and full work rights.",
+    ],
+    credentials: [
+      "For undergraduate entry, universities take the Taiwanese Senior High School Diploma, usually with a foundation year, or strong results plus the General Scholastic Ability Test, or one completed year of a Taiwanese bachelor's degree, for direct entry.",
+      "A four-year Taiwanese bachelor's degree maps directly to Australian master's entry. Universities assess your GPA on the awarding institution's scale, with a common minimum around 70 to 75 percent, higher for competitive courses.",
+      "English is shown with IELTS, PTE, or TOEFL. Medium-of-instruction letters are rarely accepted from Taiwanese institutions, so plan to sit a test. The university sets its own score and the student visa has its own lower rule. Confirm both.",
+    ],
+    popularFields: [
+      "Business, accounting, and finance",
+      "Information technology",
+      "Design and media",
+      "Hospitality and tourism",
+      "TESOL and education",
+    ],
+    faq: [
+      {
+        q: "What is Taiwan's assessment level for the Australian student visa?",
+        a: "Home Affairs does not publish evidence levels by country, and the requirement also depends on your provider. In practice Taiwan is treated as lower risk, which means lighter upfront documentation. Use the Document Checklist Tool when you apply.",
+      },
+      {
+        q: "Is a Taiwanese bachelor's degree accepted in Australia?",
+        a: "Yes, a four-year Taiwanese bachelor's is accepted for direct entry to most Australian master's programs. Universities assess your GPA on your institution's scale, with around 70 to 75 percent a common minimum and more for competitive courses.",
+      },
+      {
+        q: "How much does it cost to study in Australia from Taiwan?",
+        a: "Budget AUD 40,000 to 80,000 for the first year of a degree: roughly AUD 30,000 to 55,000 tuition, about AUD 30,000 living costs, the AUD 2,500 visa, health cover, and flights. An English-language course is charged by the week and is lower for a short stay.",
+      },
+      {
+        q: "Should I use a student visa or a working holiday visa for Australia?",
+        a: "For a full degree or a course longer than about four months, you need the subclass 500 student visa. For a shorter English course combined with travel and work, the Australia-Taiwan working holiday visa is usually the better fit, since it allows limited study and full work rights.",
+      },
+      {
+        q: "Can I get PR in Australia after studying from Taiwan?",
+        a: "It is possible, not automatic. After graduating, most students move to a Temporary Graduate visa (subclass 485), gain skilled work experience, and then apply for a points-tested visa. Your occupation and points decide the outcome.",
+      },
+    ],
+    sources: [
+      "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
+      "https://immi.homeaffairs.gov.au/news-media/archive/article?itemId=1196",
+      "https://www.studyaustralia.gov.au/",
+    ],
+    lastVerified: "2026-09-03",
+  },
+
+  "hong-kong": {
+    slug: "hong-kong",
+    code: "HK",
+    name: "Hong Kong",
+    demonym: "Hong Kong",
+    intro: [
+      "Students from Hong Kong can study at any Australian university, and Hong Kong is a long-standing, sizeable source of students, most of them in full bachelor's and master's degrees. A first year costs roughly AUD 40,000 to 80,000 all in, and the visa is the subclass 500. Hong Kong is treated as a low-risk country for the student visa.",
+      "Not much is unusual for applicants from Hong Kong. The main points are how universities read the Hong Kong Diploma of Secondary Education, which most take directly, and a Hong Kong bachelor's degree, plus English evidence.",
+    ],
+    applying: [
+      "Apply through the university's international portal, through a school counsellor, or through an agent. Direct application is common for students from Hong Kong, and many apply to several countries at once. Agents are available but less relied on than in some markets.",
+      "The Hong Kong Diploma of Secondary Education is accepted for direct entry to an Australian bachelor's degree by every university, each with its own subject and score requirements, so school leavers do not need a foundation year. Have certified copies of your Diploma results and, for postgraduate study, your degree transcript ready.",
+      "Most universities run February and July intakes and assess on a rolling basis. Apply two to three months ahead, or earlier if you are also waiting on Diploma results. Use the universities directory and the deadline calendar.",
+    ],
+    visaNote: [
+      "Hong Kong is treated as a low-risk country, so the upfront financial and English evidence is among the lightest. The requirement is set by a provider-and-country matrix that is reviewed periodically, so confirm the current position with the Document Checklist Tool when you apply.",
+      "You still need to meet the Genuine Student requirement and show genuine access to funds for tuition, travel, and 12 months of living costs. Hong Kong applications are rarely refused, and where they are it is usually a study plan that does not connect to previous study.",
+    ],
+    credentials: [
+      "For undergraduate entry, the Hong Kong Diploma of Secondary Education is accepted directly by all Australian universities, each publishing the scores it wants, sometimes with subject prerequisites. GCE A-Levels and the International Baccalaureate are also accepted directly.",
+      "A Hong Kong bachelor's degree, now usually four years, maps directly to Australian master's entry. Universities publish Hong Kong-specific entry tables keyed to your classification or GPA, so the mark you need can differ by institution and course.",
+      "English is shown with the Hong Kong Diploma English paper, which many universities accept at Level 4 or above in place of a test, or with IELTS, PTE, or TOEFL. A medium-of-instruction letter is often accepted for degrees taught in English. The student visa has its own English rule, so confirm both.",
+    ],
+    popularFields: [
+      "Business, accounting, and finance",
+      "Law",
+      "Health and biomedical science",
+      "Architecture and built environment",
+      "Media, design, and communications",
+    ],
+    faq: [
+      {
+        q: "Is the HKDSE accepted for direct entry to Australian universities?",
+        a: "Yes. Every Australian university accepts the Hong Kong Diploma of Secondary Education for direct entry to a bachelor's degree, each with its own score requirement and sometimes subject prerequisites. There is no need for a foundation year.",
+      },
+      {
+        q: "Does a Hong Kong Diploma English result replace IELTS?",
+        a: "Often, for university admission. Many Australian universities accept the Diploma English paper at Level 4 or above in place of IELTS or PTE. The student visa has its own English requirement, so check whether your result also meets that or whether you need a separate test.",
+      },
+      {
+        q: "How much does it cost to study in Australia from Hong Kong?",
+        a: "Budget AUD 40,000 to 80,000 for the first year: roughly AUD 30,000 to 55,000 tuition, about AUD 30,000 living costs, the AUD 2,500 visa, health cover, and flights. Sydney, Melbourne, and the Group of Eight sit at the top of the range.",
+      },
+      {
+        q: "Is a Hong Kong bachelor's degree accepted for a master's in Australia?",
+        a: "Yes, directly. A Hong Kong bachelor's degree, now usually four years, is accepted for entry to Australian master's programs. Universities publish Hong Kong-specific tables mapping your classification or GPA to their requirement.",
+      },
+      {
+        q: "Can I get PR in Australia after studying from Hong Kong?",
+        a: "It is possible, not automatic. After graduating, you can move to a Temporary Graduate visa (subclass 485), gain skilled work experience, and then apply for a points-tested visa. Australia has also offered Hong Kong passport holders extended post-study and residence arrangements since 2020, and the detail has changed over time, so check the current settings with Home Affairs.",
+      },
+    ],
+    sources: [
+      "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
+      "https://immi.homeaffairs.gov.au/news-media/archive/article?itemId=1196",
+      "https://www.studyaustralia.gov.au/",
+    ],
+    lastVerified: "2026-09-03",
+  },
 };
 
 export function getOriginCountry(slug: string): OriginCountry | undefined {
