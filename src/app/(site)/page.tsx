@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Collapsible } from "@/components/site/Collapsible";
 import { PostCard } from "@/components/site/PostCard";
+import { ScrollCue } from "@/components/site/ScrollCue";
 import { SearchBar } from "@/components/site/SearchBar";
 import { StudentTypeToggle } from "@/components/site/StudentTypeToggle";
 import { WhyTrust } from "@/components/site/WhyTrust";
@@ -269,32 +270,12 @@ export default async function Home() {
               </>
             )}
           </p>
-
-          <a
-            href="#explore"
-            aria-label="Scroll down to explore"
-            className="animate-fade-up mt-8 inline-flex text-slate transition-colors duration-150 hover:text-ink"
-            style={{ animationDelay: "280ms" }}
-          >
-            <svg
-              width="26"
-              height="26"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
-              className="animate-scroll-hint"
-            >
-              <path d="M12 5v14M6 13l6 6 6-6" />
-            </svg>
-          </a>
         </div>
       </div>
 
-      <div id="explore" className="mx-auto w-full max-w-3xl scroll-mt-6 px-6 pb-16">
+      <ScrollCue />
+
+      <div className="mx-auto w-full max-w-3xl px-6 pb-16">
         <section className="scroll-reveal mt-2">
           <h2 className="mb-4 font-display text-xl font-semibold text-ink">
             What are you looking for?
