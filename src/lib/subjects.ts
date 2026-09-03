@@ -1,3 +1,5 @@
+import type { RelatedLink } from "@/lib/related-content";
+
 export type SubjectContent = {
   /** 1-2 paragraphs on studying this field in Australia as an international student. */
   intro: string[];
@@ -10,6 +12,26 @@ export type SubjectContent = {
    * data). Order is deliberate, strongest first.
    */
   strongAt?: { slug: string; why: string }[];
+  /**
+   * Field-specific entry requirements. Replaces the generic requirements
+   * paragraph on the /study/[slug] page when present. Use for fields where
+   * the bar differs materially (law and nursing English, registration-based
+   * fields, portfolio requirements).
+   */
+  requirements?: string[];
+  /** One line on what the fee range means for this field, shown under the stat grid. */
+  costNote?: string;
+  /**
+   * One line on the source-country angle (which nationalities pick this field
+   * and why), shown after the intro. Links the subject page to the
+   * /international/{country} pages for the "study X in australia from Y" query.
+   */
+  fromCountry?: string;
+  /**
+   * Subject-aware "Related" links. Replaces the static fallback list on the
+   * /study/[slug] page when present.
+   */
+  related?: RelatedLink[];
 };
 
 /** Subjects that get a dedicated /best/best-australian-universities-for-X page. */
@@ -56,19 +78,37 @@ export const SUBJECT_CONTENT: Record<string, SubjectContent> = {
         a: "They overlap heavily and cost about the same at most universities. IT programs are slightly more applied; computer science is more theoretical. Check the specific program's fee rather than assuming one field is cheaper.",
       },
     ],
+    related: [
+      { href: "/guides/how-the-australian-points-test-works", label: "How the skilled points test works" },
+      { href: "/guides/study-to-permanent-residence-pathway-australia", label: "The study-to-PR pathway" },
+      { href: "/guides/getting-a-skills-assessment-in-australia", label: "Getting a skills assessment" },
+      { href: "/visas/temporary-graduate-485", label: "Temporary Graduate visa (485)" },
+      { href: "/international/india", label: "Study in Australia from India" },
+      { href: "/best/regional-australian-universities-for-skilled-migration", label: "Regional universities for skilled migration" },
+    ],
   },
   "information-technology": {
     intro: [
-      "Information technology degrees in Australia are practical and broad, covering software development, networking, cybersecurity, data, and IT project management. The Master of Information Technology is the flagship postgraduate qualification and is open to graduates of any discipline at most universities.",
-      "Fees sit a little below straight computer science at many universities, and several universities of technology (UTS, RMIT, QUT, Curtin, Swinburne) build a mandatory industry placement into the degree. Standard entry is a bachelor's in any field with a credit average and IELTS 6.5.",
+      "Information technology degrees in Australia are practical and broad, covering software development, networking, cybersecurity, data, and IT project management. The Master of Information Technology is the flagship postgraduate qualification, usually 1.5 to 2 years, and is open to graduates of any discipline at most universities. The first block brings non-IT graduates up to a common baseline in programming, systems, and data before they pick a specialisation.",
+      "Fees sit a little below straight computer science at many universities, from the low AUD 30,000s at regional and newer universities to the high AUD 40,000s at the Group of Eight. Several universities of technology (UTS, RMIT, QUT, Curtin, Swinburne) build a mandatory industry placement into the degree, which matters for both employability and later migration points.",
     ],
-    careers: "ICT business analyst, systems analyst, and software roles are skilled occupations. IT graduates often add a Professional Year in IT for extra migration points.",
+    fromCountry:
+      "IT is the single most chosen field for Indian and Nepali students in Australia, largely because it maps so cleanly onto the skilled occupation lists. If you are applying from South Asia, check the /international pages for what is different on evidence level, agent rules, and deadlines.",
+    costNote:
+      "Regional and newer universities sit well below the Group of Eight for the same Master of Information Technology, and studying in a regional-classified city (Adelaide, Perth, Canberra) also adds 5 points on the skilled points test later.",
+    requirements: [
+      "Entry to a Master of IT is a completed bachelor's in any field, usually with a credit average of around 65 percent, and IELTS 6.5 overall (PTE Academic 58). Conversion programs for non-IT graduates have the gentler academic bar.",
+      "No Australian university requires the GRE or GMAT for an IT or computer science master's.",
+      "Bachelor of IT entry is a completed senior secondary qualification meeting the university's minimum, plus IELTS 6.0 to 6.5.",
+    ],
+    careers: "ICT business analyst, systems analyst, software engineer, developer programmer, and ICT security specialist are all skilled occupations. The Australian Computer Society is the assessing authority, and it generally wants the degree plus one to two years of relevant work, or the degree plus a Professional Year in IT in place of some of that experience. A year of work on a 485 graduate visa is the usual way to build it.",
     strongAt: [
       { slug: "university-of-technology-sydney", why: "Practice-based studios and one of the strongest industry-placement models for IT in the country." },
       { slug: "rmit-university", why: "Applied, industry-linked IT with a central Melbourne campus and strong employer connections." },
       { slug: "queensland-university-of-technology", why: "Mandatory industry placements built into most IT degrees, closer to a co-op model." },
       { slug: "swinburne-university-of-technology", why: "Professional placement years and a genuine focus on work-integrated learning." },
       { slug: "curtin-university", why: "Applied IT reflecting WA's resources and services economy, in a regional-classified city." },
+      { slug: "monash-university", why: "Large Faculty of IT with cybersecurity, AI, and data science specialisations and an industry-studio capstone." },
     ],
     faq: [
       {
@@ -77,8 +117,24 @@ export const SUBJECT_CONTENT: Record<string, SubjectContent> = {
       },
       {
         q: "Is a Professional Year worth it after an IT degree?",
-        a: "It adds 5 points to the skilled points test and includes a work placement, which helps with your first Australian job. It costs roughly AUD 10,000 to 12,000 and takes about a year.",
+        a: "It adds 5 points to the skilled points test and includes a 12-week work placement, which helps with your first Australian job. It costs roughly AUD 10,000 to 12,000 and takes about a year. It also counts in place of some of the work experience the Australian Computer Society wants for a skills assessment.",
       },
+      {
+        q: "Can I study a Master of IT in Australia without a computing background?",
+        a: "Yes. Most universities design the Master of Information Technology as an open-door degree for graduates of any field, with the first block covering programming, systems, and data fundamentals before specialisation. About half of a typical intake enters without an IT background.",
+      },
+      {
+        q: "Which Australian city is best for studying IT for migration?",
+        a: "Adelaide, Perth, Canberra, and the smaller cities are classified regional for skilled migration, so studying IT there earns 5 extra points on the points test and opens the Skilled Work Regional (491) visa. Sydney and Melbourne have the largest job markets but no regional points.",
+      },
+    ],
+    related: [
+      { href: "/guides/how-the-australian-points-test-works", label: "How the skilled points test works" },
+      { href: "/guides/study-to-permanent-residence-pathway-australia", label: "The study-to-PR pathway" },
+      { href: "/guides/getting-a-skills-assessment-in-australia", label: "Getting a skills assessment" },
+      { href: "/international/india", label: "Study in Australia from India" },
+      { href: "/international/nepal", label: "Study in Australia from Nepal" },
+      { href: "/best/regional-australian-universities-for-skilled-migration", label: "Regional universities for skilled migration" },
     ],
   },
   "data-science": {
@@ -99,6 +155,14 @@ export const SUBJECT_CONTENT: Record<string, SubjectContent> = {
         q: "Do I need to know programming before a data science master's in Australia?",
         a: "For the one-year versions, yes, usually Python or R plus basic statistics. Two-year versions include a foundational semester and accept applicants from broader backgrounds.",
       },
+    ],
+    related: [
+      { href: "/guides/how-the-australian-points-test-works", label: "How the skilled points test works" },
+      { href: "/guides/getting-a-skills-assessment-in-australia", label: "Getting a skills assessment" },
+      { href: "/visas/temporary-graduate-485", label: "Temporary Graduate visa (485)" },
+      { href: "/international/india", label: "Study in Australia from India" },
+      { href: "/best/regional-australian-universities-for-skilled-migration", label: "Regional universities for skilled migration" },
+      { href: "/guides/real-cost-of-studying-in-australia", label: "The real cost of studying in Australia" },
     ],
   },
   business: {
@@ -129,6 +193,14 @@ export const SUBJECT_CONTENT: Record<string, SubjectContent> = {
         a: "Most do not. A few competitive MBA programs ask for it or a GMAT waiver based on work experience. Standard business master's admit on your bachelor's record and an English test.",
       },
     ],
+    related: [
+      { href: "/guides/which-australian-courses-lead-to-permanent-residence", label: "Courses that lead to PR" },
+      { href: "/guides/getting-a-skills-assessment-in-australia", label: "Getting a skills assessment" },
+      { href: "/guides/commonwealth-supported-places-explained", label: "Commonwealth Supported Places (CSP)" },
+      { href: "/visas/student-500", label: "Student visa (subclass 500)" },
+      { href: "/international/india", label: "Study in Australia from India" },
+      { href: "/guides/real-cost-of-studying-in-australia", label: "The real cost of studying in Australia" },
+    ],
   },
   "nursing-and-health-sciences": {
     intro: [
@@ -158,6 +230,14 @@ export const SUBJECT_CONTENT: Record<string, SubjectContent> = {
         a: "Yes, it is one of the more dependable routes. Registered nurse is nominated by essentially every state and territory, and the 485 graduate visa gives time to register and build experience.",
       },
     ],
+    related: [
+      { href: "/guides/studying-in-australia-without-ielts", label: "Studying without IELTS" },
+      { href: "/guides/ielts-vs-pte-for-australian-university-admission", label: "IELTS vs PTE" },
+      { href: "/guides/study-to-permanent-residence-pathway-australia", label: "The study-to-PR pathway" },
+      { href: "/guides/getting-a-skills-assessment-in-australia", label: "Getting a skills assessment" },
+      { href: "/international/nepal", label: "Study in Australia from Nepal" },
+      { href: "/best/regional-australian-universities-for-skilled-migration", label: "Regional universities for skilled migration" },
+    ],
   },
   engineering: {
     intro: [
@@ -183,28 +263,63 @@ export const SUBJECT_CONTENT: Record<string, SubjectContent> = {
         a: "Usually no. Master of Engineering programs need a related bachelor's. A small number of universities offer a longer conversion master's for science or maths graduates.",
       },
     ],
+    related: [
+      { href: "/guides/getting-a-skills-assessment-in-australia", label: "Getting a skills assessment" },
+      { href: "/guides/how-the-australian-points-test-works", label: "How the skilled points test works" },
+      { href: "/guides/study-to-permanent-residence-pathway-australia", label: "The study-to-PR pathway" },
+      { href: "/visas/temporary-graduate-485", label: "Temporary Graduate visa (485)" },
+      { href: "/international/india", label: "Study in Australia from India" },
+      { href: "/best/regional-australian-universities-for-skilled-migration", label: "Regional universities for skilled migration" },
+    ],
   },
   law: {
     intro: [
-      "Law in Australia is offered as an undergraduate LLB (often as a double degree) and as the graduate-entry Juris Doctor for people who already hold a bachelor's in another field. There is also the Master of Laws (LLM) for qualified lawyers who want to specialise.",
-      "The JD is a three-year professional degree and one of the more expensive options, commonly over AUD 45,000 a year at the Group of Eight. Practising as a lawyer in Australia requires admission to a state legal profession, which involves practical legal training beyond the degree.",
+      "A law degree in Australia comes in three forms. The undergraduate Bachelor of Laws (LLB) runs three to four years on its own or five as a double degree, and is the route for school leavers. The graduate-entry Juris Doctor (JD) is a three-year professional degree for people who already hold a bachelor's in another field, and is the most common choice for international students who did their first degree at home. The Master of Laws (LLM) is a one-year specialisation for people who are already qualified lawyers.",
+      "The JD is one of the more expensive coursework degrees, commonly AUD 45,000 to 55,000 a year at the Group of Eight, less at newer and regional law schools. All three degrees teach Australian law, so an LLM does not on its own let an overseas-qualified lawyer practise here.",
     ],
-    careers: "Legal roles are difficult to nominate for skilled migration unless you requalify and gain local experience. Many international law graduates use the degree for policy, compliance, or corporate roles rather than practice.",
+    fromCountry:
+      "Law attracts a smaller and more specific group of international students than business or IT, often people aiming at corporate, policy, or academic work rather than courtroom practice. If you are weighing it up, check what is different for applicants from your country on the /international pages.",
+    costNote:
+      "The spread is wide. A JD at a sandstone law school can cost more than double an LLB at a newer university, and the degree name matters less than the school's admission recognition and its clinical and internship offerings.",
+    requirements: [
+      "JD entry needs a completed bachelor's in any field, usually with a credit to distinction average. A few schools consider the LSAT but none require it. LLB entry needs a strong senior secondary result or a completed year of tertiary study.",
+      "English is set higher than the general postgraduate bar: most law schools want IELTS Academic 7.0 overall with no band below 6.5, or the PTE equivalent.",
+      "There is no separate portfolio or interview for most JD programs. Double-degree LLB places can be more competitive because they draw on both faculties' entry cut-offs.",
+    ],
+    careers: "Legal practice is hard to use for skilled migration. Solicitor and barrister sit on the occupation lists, but you must first be admitted to an Australian state legal profession, which for an overseas or JD graduate means passing the assessed academic subjects, completing Practical Legal Training, and being admitted by the state Supreme Court. Many international law graduates instead use the degree for policy, compliance, legal-adjacent corporate, or further academic work, where it is not a nominated occupation.",
     strongAt: [
       { slug: "university-of-melbourne", why: "Melbourne Law School and the graduate-entry Juris Doctor, consistently the top-ranked law school in the country." },
       { slug: "university-of-sydney", why: "Long-established law school with strong international and commercial law programs." },
       { slug: "unsw-sydney", why: "Known for social justice, human rights, and clinical legal education." },
       { slug: "australian-national-university", why: "Strong in public law, international law, and legal theory, in the national capital." },
+      { slug: "monash-university", why: "Large law faculty with a well-regarded JD and extensive clinical and internship placements." },
+      { slug: "university-of-queensland", why: "Broad law school with strong commercial and international law offerings in Brisbane." },
     ],
     faq: [
       {
         q: "Can I practise law in Australia with an overseas law degree?",
-        a: "Not directly. You apply to a state Legal Practitioners Admissions Board, which assesses your qualifications and usually requires you to complete specific subjects and practical legal training before admission.",
+        a: "Not directly. You apply to the state admitting authority, which assesses your qualifications against the required academic areas known as the Priestley 11. It usually requires you to complete several bridging subjects and then Practical Legal Training before you can be admitted. A local JD covers the academic areas in full.",
       },
       {
         q: "What is the difference between an LLB and a JD in Australia?",
-        a: "An LLB is an undergraduate law degree, often taken as a double degree over five years. A JD is a graduate-entry law degree of about three years for people who already hold a bachelor's. Both qualify you to seek admission to practice.",
+        a: "An LLB is an undergraduate law degree, often taken as a double degree over four to five years. A JD is a graduate-entry law degree of about three years for people who already hold a bachelor's in another field. Both are professional qualifications that let you seek admission to practise, and both cost about the same per year.",
       },
+      {
+        q: "Do Australian law schools require the LSAT?",
+        a: "No. No Australian law school requires the LSAT for JD admission. A small number will consider a strong LSAT score as supporting evidence, but admission is based on your prior academic record.",
+      },
+      {
+        q: "Is a law degree from Australia good for permanent residence?",
+        a: "It is one of the weaker fields for skilled migration. To claim solicitor or barrister as your occupation you must first be admitted to practise in an Australian state, which takes further study and supervised work. If permanent residence is your main goal, accounting, IT, engineering, nursing, and teaching have clearer pathways.",
+      },
+    ],
+    related: [
+      { href: "/guides/getting-your-qualifications-recognised-in-australia", label: "Getting your qualifications recognised" },
+      { href: "/guides/which-australian-courses-lead-to-permanent-residence", label: "Courses that lead to PR" },
+      { href: "/visas/student-500", label: "Student visa (subclass 500)" },
+      { href: "/guides/real-cost-of-studying-in-australia", label: "The real cost of studying in Australia" },
+      { href: "/deadlines/february-2027-intake", label: "February 2027 intake deadlines" },
+      { href: "/scholarships", label: "Scholarships for studying in Australia" },
     ],
   },
   psychology: {

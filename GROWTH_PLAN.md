@@ -139,10 +139,13 @@ specific Nepal/India → Australia → work/PR query. Depth over breadth.
       guide + country deep pages). Homepage `POPULAR` row re-pointed at the
       intake hubs + regional collection + Nepal/India pages (dropped 2
       noindexed `/compare` links).
-- [ ] **B: strengthen the pages GSC shows getting impressions** —
-      `/study/law` ("law degree australia", 10 impr), `/study/information-technology`
-      ("study information technology in australia", 5), consolidate the
-      regional-study cluster. Gradual.
+- [x] **B: strengthen the pages GSC shows getting impressions — 2026-09-03.**
+      `SubjectContent` gained `requirements` / `costNote` / `fromCountry` /
+      `related`. Law + IT rewritten deeper (subject-specific entry bar, cost
+      note, source-country line, +2 FAQ each, subject-aware related). 5 more
+      curated subjects got subject-aware related lists. `/best/regional-...`
+      and `/best/affordable-...` now link their explainer guide (regional +
+      cost cannibalisation loops closed). SEO_CHANGELOG 2026-09-03.
 - [ ] **C: fill the one remaining non-overlapping guide gap** — "documents
       checklist for the student visa". Gradual.
 - [ ] Keep Track A news cadence: invitation rounds (`add-round` skill), MD
