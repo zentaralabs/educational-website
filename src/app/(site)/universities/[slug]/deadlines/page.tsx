@@ -6,7 +6,7 @@ import { FaqSection } from "@/components/site/FaqSection";
 import { VerifiedInline } from "@/components/site/VerifiedInline";
 import { WhyTrust } from "@/components/site/WhyTrust";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
-import { deadlineBadgeStatus } from "@/lib/deadline-status";
+import { formatDeadlineDateLong } from "@/lib/deadline-status";
 import { DEADLINE_PAGE_INDEXED } from "@/lib/deadline-detail";
 import { faqJsonLd } from "@/lib/faq";
 import { SITE_YEAR } from "@/lib/site-config";
@@ -71,13 +71,19 @@ export default async function UniversityDeadlinesPage({
   const { university, deadlines } = data;
   const name = university.name;
 
-  const firmUpcoming = deadlines
-    .filter(
-      (d) => !d.is_rolling && deadlineBadgeStatus(d.deadline_date, d.is_rolling) === "upcoming",
-    )
+  // Lead with a published closing date where one exists, and otherwise with
+  // our own recommendation. A university without a firm date used to fall
+  // through to "Rolling admissions", which answered "when should I apply?"
+  // with nothing at all.
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const upcoming = deadlines
+    .filter((d) => new Date(d.deadline_date) >= today)
     .sort((a, b) => a.deadline_date.localeCompare(b.deadline_date));
+  const next =
+    upcoming.find((d) => d.date_kind === "closing_date") ?? upcoming[0];
+  const nextIsPublished = next?.date_kind === "closing_date";
   const allRolling = deadlines.every((d) => d.is_rolling);
-  const next = firmUpcoming[0];
 
   const intakeTypes = [
     ...new Set(deadlines.map((d) => d.deadline_type?.name).filter(Boolean)),
@@ -112,17 +118,17 @@ export default async function UniversityDeadlinesPage({
       .sort()
       .at(-1) ?? university.last_verified_at;
 
-  const answer = next
-    ? `The recommended date to have your international application in to ${name} for its next intake${
-        next.deadline_type?.name ? ` (${next.deadline_type.name})` : ""
-      } is ${new Date(next.deadline_date).toLocaleDateString("en-US", {
-        month: "long",
-        day: "numeric",
-        year: "numeric",
-      })}. Competitive courses close earlier.`
-    : allRolling
-      ? `${name} assesses international applications on a rolling basis rather than to a single fixed date. For a ${INTAKE_YEAR} start, apply as early as you can, and no later than about three months before your intake, to leave time for the offer, Confirmation of Enrolment, and student visa.`
-      : `${name} runs fixed intakes rather than one hard deadline. Apply about three to four months before your intended intake; later applications are often still accepted while places and visa-processing time remain.`;
+  const nextIntake = next?.deadline_type?.name
+    ? ` (${next.deadline_type.name})`
+    : "";
+
+  const answer = !next
+    ? `${name} runs fixed intakes rather than one hard deadline. Apply about three to four months before your intended intake; later applications are often still accepted while places and visa-processing time remain.`
+    : nextIsPublished
+      ? `The closing date for international applications to ${name} for its next intake${nextIntake} is ${formatDeadlineDateLong(next.deadline_date, next.date_kind)}. Individual courses can close earlier.`
+      : allRolling
+        ? `${name} assesses international applications on a rolling basis rather than to a single published closing date. For a ${INTAKE_YEAR} start, aim to apply ${formatDeadlineDateLong(next.deadline_date, next.date_kind)}, and no later than about three months before your intake, to leave time for the offer, Confirmation of Enrolment, and student visa.`
+        : `${name} does not publish a single closing date for international applications. For its next intake${nextIntake} we recommend applying ${formatDeadlineDateLong(next.deadline_date, next.date_kind)}, roughly three to four months ahead; later applications are often still accepted while places and visa-processing time remain.`;
 
   const breadcrumbs = [
     { label: "Home", href: "/" },
@@ -190,27 +196,28 @@ export default async function UniversityDeadlinesPage({
           university has no firm date we say so here instead of inventing one. */}
       <div className="mt-6 rounded-xl border border-line bg-mist px-5 py-4">
         <p className="font-body text-xs font-semibold tracking-wide text-slate uppercase">
-          {next ? "Next deadline" : "How applications close"}
+          {!next
+            ? "How applications close"
+            : nextIsPublished
+              ? "Next deadline"
+              : "Recommended"}
         </p>
         <p className="mt-1 font-display text-2xl font-semibold text-ink sm:text-3xl">
-          {next ? (
-            <time dateTime={next.deadline_date}>
-              {new Date(next.deadline_date).toLocaleDateString("en-AU", {
-                day: "numeric",
-                month: "long",
-                year: "numeric",
-              })}
-            </time>
-          ) : allRolling ? (
-            "Rolling admissions"
-          ) : (
+          {!next ? (
             "Fixed intakes, no single deadline"
+          ) : nextIsPublished ? (
+            <time dateTime={next.deadline_date}>
+              {formatDeadlineDateLong(next.deadline_date, next.date_kind)}
+            </time>
+          ) : (
+            `Apply by ${formatDeadlineDateLong(next.deadline_date, next.date_kind)}`
           )}
         </p>
         {next?.deadline_type?.name && (
           <p className="mt-1 font-body text-sm text-slate">
             {next.deadline_type.name}
             {next.degree_level && ` · ${next.degree_level.name}`}
+            {!nextIsPublished && " · our guidance, not a published date"}
           </p>
         )}
       </div>
@@ -228,6 +235,7 @@ export default async function UniversityDeadlinesPage({
               .join(" · "),
             deadlineDate: d.deadline_date,
             isRolling: d.is_rolling,
+            dateKind: d.date_kind,
           }))}
         />
       </div>

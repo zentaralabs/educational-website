@@ -44,15 +44,17 @@ export async function generateMetadata({
   };
 }
 
+// Every row now shows a month, including the rolling ones (whose date is our
+// recommended apply-by), so they all group by that month. A separate
+// "Rolling" bucket would put a heading saying one thing over rows saying
+// another.
 function groupByMonth(deadlines: PublicDeadlineRow[]) {
   const groups = new Map<string, PublicDeadlineRow[]>();
   for (const d of deadlines) {
-    const key = d.is_rolling
-      ? "Rolling"
-      : new Date(d.deadline_date).toLocaleDateString("en-US", {
-          month: "long",
-          year: "numeric",
-        });
+    const key = new Date(d.deadline_date).toLocaleDateString("en-US", {
+      month: "long",
+      year: "numeric",
+    });
     if (!groups.has(key)) groups.set(key, []);
     groups.get(key)!.push(d);
   }
@@ -249,6 +251,7 @@ export default async function DeadlinesPage({
                 ),
                 deadlineDate: d.deadline_date,
                 isRolling: d.is_rolling,
+                dateKind: d.date_kind,
                 ...(d.university
                   ? { href: `/universities/${d.university.slug}` }
                   : {}),

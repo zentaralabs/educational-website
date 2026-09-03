@@ -9,7 +9,7 @@ import { RelatedLinks } from "@/components/site/RelatedLinks";
 import { StatusBadge } from "@/components/StatusBadge";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import { faqJsonLd } from "@/lib/faq";
-import { deadlineBadgeStatus } from "@/lib/deadline-status";
+import { deadlineBadgeStatus, formatDeadlineDate } from "@/lib/deadline-status";
 import { getIntakeHub, INTAKE_HUB_SLUGS } from "@/lib/intakes";
 import { SITE_NAME, SITE_URL } from "@/lib/site-config";
 import {
@@ -282,12 +282,25 @@ export default async function IntakeDeadlinePage({
                       </td>
                       <td className="px-3 py-2.5">
                         <span className="flex flex-wrap items-center gap-2">
-                          <span className="font-utility text-ink">
-                            {row.is_rolling
-                              ? "Rolling"
-                              : shortDate(row.deadline_date)}
+                          <span
+                            className={
+                              row.date_kind === "closing_date"
+                                ? "font-utility text-ink"
+                                : "font-utility text-slate"
+                            }
+                          >
+                            {formatDeadlineDate(
+                              row.deadline_date,
+                              row.date_kind,
+                            )}
                           </span>
-                          <StatusBadge status={status} />
+                          {row.date_kind === "closing_date" ? (
+                            <StatusBadge status={status} />
+                          ) : (
+                            <span className="font-body text-xs text-slate">
+                              Recommended
+                            </span>
+                          )}
                         </span>
                         {row.notes ? (
                           <span className="mt-1 block font-body text-xs leading-snug text-slate">

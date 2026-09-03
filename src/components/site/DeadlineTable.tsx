@@ -1,6 +1,10 @@
 import Link from "next/link";
 import { StatusBadge } from "@/components/StatusBadge";
-import { deadlineBadgeStatus, formatDeadlineDate } from "@/lib/deadline-status";
+import {
+  deadlineBadgeStatus,
+  formatDeadlineDate,
+  type DeadlineDateKind,
+} from "@/lib/deadline-status";
 
 export type DeadlineRowItem = {
   id: string;
@@ -9,6 +13,7 @@ export type DeadlineRowItem = {
   label: React.ReactNode;
   deadlineDate: string;
   isRolling: boolean;
+  dateKind: DeadlineDateKind;
   notes?: string | null;
   /** When set the whole row becomes a link (the calendar page). */
   href?: string;
@@ -17,11 +22,16 @@ export type DeadlineRowItem = {
 /**
  * The shared deadline row used by the calendar, the university profile, and
  * the per-university deadlines page. The date is the element a visitor came
- * for, so it is the loudest thing in the row: the intake label is the muted
- * one, and the passport-stamp StatusBadge (Section 7) stays as it is but is
- * out-weighted rather than redesigned. An "Apply by" header gives the column
- * a name, which is what makes a "Rolling" row read as an answer instead of a
- * missing value.
+ * for, so it is the loudest thing in the row and the intake label is the
+ * muted one.
+ *
+ * A row shows which of two things its date is. A `closing_date` is published
+ * by the university, so it gets the full treatment: the day, in ink, under
+ * the passport-stamp StatusBadge (Section 7), where OPEN/UPCOMING/CLOSED is
+ * a true statement. A `recommended` date is our own apply-by guidance, so it
+ * drops to the month, sits in slate, and carries a quiet "Recommended" marker
+ * instead of a stamp — the stamp now means something precisely because it
+ * does not appear on every row.
  */
 export function DeadlineTable({
   items,
@@ -45,27 +55,52 @@ export function DeadlineTable({
 
       {items.map((item) => {
         const status = deadlineBadgeStatus(item.deadlineDate, item.isRolling);
+        const verified = item.dateKind === "closing_date";
         const body = (
           <>
             <div className="flex flex-col gap-1.5 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
               <span className="font-body text-sm text-slate">{item.label}</span>
               <span className="flex flex-shrink-0 items-center gap-3">
-                <span className="flex items-center gap-1.5 font-utility text-base font-semibold text-ink tabular-nums">
-                  {pulseOnOpen && status === "open" && (
+                <span
+                  className={`flex items-center gap-1.5 font-utility text-base font-semibold tabular-nums ${
+                    verified ? "text-ink" : "text-slate"
+                  }`}
+                >
+                  {pulseOnOpen && verified && status === "open" && (
                     <span
                       aria-hidden="true"
                       className="animate-pulse-dot h-1.5 w-1.5 rounded-full bg-status-open"
                     />
                   )}
-                  {item.isRolling ? (
-                    formatDeadlineDate(item.deadlineDate, true)
-                  ) : (
+                  {verified ? (
                     <time dateTime={item.deadlineDate}>
-                      {formatDeadlineDate(item.deadlineDate, false)}
+                      {formatDeadlineDate(item.deadlineDate, item.dateKind)}
                     </time>
+                  ) : (
+                    // The leading "~" is decoration a screen reader would read
+                    // as a stray character, so the honest wording is spoken
+                    // instead of spelled.
+                    <>
+                      <span aria-hidden="true">
+                        {formatDeadlineDate(item.deadlineDate, item.dateKind)}
+                      </span>
+                      <span className="sr-only">
+                        around{" "}
+                        {new Date(item.deadlineDate).toLocaleDateString("en-AU", {
+                          month: "long",
+                          year: "numeric",
+                        })}
+                      </span>
+                    </>
                   )}
                 </span>
-                <StatusBadge status={status} />
+                {verified ? (
+                  <StatusBadge status={status} />
+                ) : (
+                  <span className="font-body text-xs text-slate">
+                    Recommended
+                  </span>
+                )}
               </span>
             </div>
             {item.notes && (
