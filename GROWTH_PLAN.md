@@ -130,10 +130,39 @@ specific Nepal/India → Australia → work/PR query. Depth over breadth.
       `/deadlines/july-2027-intake`, cloned from the February `intakes.ts`
       entry (Semester 2, ~105 rows). The two hubs cross-link in the decision
       section; `/deadlines` links both.
+- [x] **Internal-linking + cannibalisation pass — 2026-09-03.** Rewrote
+      `related-content.ts`: was 17/34 guides with no "Keep reading" block
+      (dead ends), now all 34 guides + all visas + all blog posts have a
+      3-6 link related block. Canonical page fixed per query cluster (intake
+      timing → the two `/deadlines/*-intake` hubs; regional → the regional
+      guide + `/best/regional-...` collection; how-to-apply → the without-agent
+      guide + country deep pages). Homepage `POPULAR` row re-pointed at the
+      intake hubs + regional collection + Nepal/India pages (dropped 2
+      noindexed `/compare` links).
+- [ ] **B: strengthen the pages GSC shows getting impressions** —
+      `/study/law` ("law degree australia", 10 impr), `/study/information-technology`
+      ("study information technology in australia", 5), consolidate the
+      regional-study cluster. Gradual.
+- [ ] **C: fill the one remaining non-overlapping guide gap** — "documents
+      checklist for the student visa". Gradual.
 - [ ] Keep Track A news cadence: invitation rounds (`add-round` skill), MD
       changes, fee changes — publish within 24–48h.
-- [ ] Watch the known gotchas: zero em dashes before publishing; no markdown
-      links inside question-headed FAQ sections (they render as raw text).
+
+### GSC snapshot 2026-09-03 (why the pivot)
+
+28-day: 1.52K impressions (accelerating), 9 clicks, avg position **38.2**,
+~350 pages drawing impressions. Top impressions are university-profile pages
+on navigational queries the site can never win (Sydney 103 impr / 0 clicks,
+Monash 54/0, RMIT 39/0). Winnable queries currently at 0 clicks on page 3-4:
+"law degree australia", "study in regional australia", "study information
+technology in australia", "study in australia from pakistan / malaysian
+students", "top private colleges in australia". Site appears in AI Overviews
+for 31 pages (deadline pages, cheapest-uni collections). Conclusion: position
+is 90% a domain-authority problem (backlinks), and the 1,000+ URLs are not a
+lever — clicks come from ~20-30 pages ranking for specific decision/wedge
+queries. Guide surface is saturated (34 guides, remaining topics overlap
+existing ones). Shift effort to backlinks + strengthening the ~15 pages that
+already show impressions + interlinking, away from new guides.
 
 ## Phase 2 — authority  ·  weeks 4–16, parallel
 

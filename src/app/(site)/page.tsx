@@ -88,18 +88,15 @@ const TASKS = [
 ];
 
 const POPULAR = [
-  { label: "2027 application deadlines", href: "/deadlines" },
+  { label: "February 2027 intake deadlines", href: "/deadlines/february-2027-intake" },
+  { label: "July 2027 intake deadlines", href: "/deadlines/july-2027-intake" },
   {
     label: "Most affordable universities for international students",
     href: "/best/affordable-australian-universities-for-international-students",
   },
   {
-    label: "Universities accepting IELTS 6.0",
-    href: "/best/australian-universities-accepting-ielts-6-0-for-international-students",
-  },
-  {
-    label: "Universities with multiple intakes a year",
-    href: "/best/australian-universities-with-multiple-intakes-per-year",
+    label: "Regional universities for skilled migration",
+    href: "/best/regional-australian-universities-for-skilled-migration",
   },
   {
     label: "Universities with no application fee",
@@ -109,14 +106,8 @@ const POPULAR = [
     label: "Universities with automatic scholarships",
     href: "/best/australian-universities-with-automatic-scholarships",
   },
-  {
-    label: "Melbourne vs Sydney",
-    href: "/compare/university-of-melbourne-vs-university-of-sydney",
-  },
-  {
-    label: "Monash vs UNSW",
-    href: "/compare/monash-university-vs-unsw-sydney",
-  },
+  { label: "Study in Australia from Nepal", href: "/international/nepal" },
+  { label: "Study in Australia from India", href: "/international/india" },
 ];
 
 export default async function Home() {
