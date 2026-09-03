@@ -13,6 +13,7 @@ import {
   ORIGIN_COUNTRY_SLUGS,
   getOriginCountry,
 } from "@/lib/origin-countries";
+import { getApplyGuide } from "@/lib/apply-guides";
 
 export const revalidate = 3600;
 
@@ -48,6 +49,8 @@ export default async function OriginCountryPage({
   const { country } = await params;
   const c = getOriginCountry(country);
   if (!c) notFound();
+
+  const hasApplyGuide = Boolean(getApplyGuide(country));
 
   const otherCountries = ORIGIN_COUNTRY_SLUGS.filter((s) => s !== country)
     .map((s) => getOriginCountry(s)!)
@@ -125,6 +128,22 @@ export default async function OriginCountryPage({
             <p key={p.slice(0, 24)}>{p}</p>
           ))}
         </div>
+        {hasApplyGuide && (
+          <Link
+            href={`/international/${country}/how-to-apply`}
+            className="mt-4 flex items-center justify-between gap-3 rounded-xl border border-status-open/30 bg-status-open/[0.04] px-4 py-3 font-body text-sm transition-colors duration-150 hover:border-status-open/50"
+          >
+            <span className="text-ink">
+              <span className="font-semibold">
+                How to apply from {c.name}, step by step:
+              </span>{" "}
+              the full process, a documents checklist, and a working timeline
+            </span>
+            <span aria-hidden="true" className="text-status-open">
+              &rarr;
+            </span>
+          </Link>
+        )}
       </ProfileSection>
 
       <ProfileSection title="What it costs">

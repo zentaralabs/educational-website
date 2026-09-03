@@ -92,7 +92,17 @@ IndexNow, apex→www (verify on host), contact email fixed.
 Goal: ~15–20 pages that are unambiguously the best page on the internet for a
 specific Nepal/India → Australia → work/PR query. Depth over breadth.
 
-- [ ] Pick the ~20 target queries. Seed from GSC top-impression queries
+- [x] **Source-country "how to apply" deep pages — BUILT 2026-09-03.**
+      `/international/{country}/how-to-apply` for Nepal, India, Pakistan
+      (`src/lib/apply-guides.ts` config + `[country]/how-to-apply/page.tsx`
+      route). Each: 8-9 ordered steps, a grouped documents checklist, a
+      working-back-from-February timeline, country-specific refusal pitfalls,
+      5-item FAQ. Country-specific detail (NOC, LRS/TCS, HEC/IBCC attestation,
+      agent rules, Evidence Level 3). Schema: Article + BreadcrumbList +
+      FAQPage. Country overview pages conditionally link in; added to sitemap.
+      Cost-from-{country} deep pages (item 7 below) deferred: the overview
+      pages already carry a cost section and `/cost-calculator` exists.
+- [ ] Pick the remaining ~13 target queries. Seed from GSC top-impression queries
       ("study in australia from pakistan", "study in regional australia",
       "study information technology in australia") + the source-country wedge
       (`PROJECT_STATUS.md` §29). Candidates: GTE / Genuine Student statement,
