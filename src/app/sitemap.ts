@@ -85,6 +85,7 @@ const STATIC_ROUTES: Array<{ path: string; priority: number; changeFrequency: Me
   { path: "/visas", priority: 0.8, changeFrequency: "weekly" },
   { path: "/visas/invitation-rounds", priority: 0.7, changeFrequency: "weekly" },
   { path: "/visas/points-calculator", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/updates", priority: 0.7, changeFrequency: "weekly" },
   { path: "/quiz", priority: 0.6, changeFrequency: "monthly" },
   // /search is noindex (a query-driven results page with no standalone value),
   // so it is deliberately kept out of the sitemap.

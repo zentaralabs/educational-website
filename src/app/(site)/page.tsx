@@ -10,6 +10,10 @@ import { listRecentBlogPosts } from "@/lib/queries/public-blog-posts";
 import { listPublicCountries } from "@/lib/queries/public-countries";
 import { listUpcomingDeadlines } from "@/lib/queries/public-deadlines";
 import { listRecentGuides } from "@/lib/queries/public-guides";
+import {
+  isFreshForHomepage,
+  listLatestPolicyUpdate,
+} from "@/lib/queries/public-policy-updates";
 import { getHomepageStats } from "@/lib/queries/public-stats";
 import { listFeaturedUniversities } from "@/lib/queries/public-universities";
 import { flagEmoji } from "@/lib/flag";
@@ -111,15 +115,29 @@ const POPULAR = [
 ];
 
 export default async function Home() {
-  const [stats, countries, featured, upcoming, recentGuides, recentPosts] =
-    await Promise.all([
-      getHomepageStats(),
-      listPublicCountries(),
-      listFeaturedUniversities(6),
-      listUpcomingDeadlines(6),
-      listRecentGuides(4),
-      listRecentBlogPosts(4),
-    ]);
+  const [
+    stats,
+    countries,
+    featured,
+    upcoming,
+    recentGuides,
+    recentPosts,
+    latestUpdate,
+  ] = await Promise.all([
+    getHomepageStats(),
+    listPublicCountries(),
+    listFeaturedUniversities(6),
+    listUpcomingDeadlines(6),
+    listRecentGuides(4),
+    listRecentBlogPosts(4),
+    listLatestPolicyUpdate(),
+  ]);
+
+  // Only surface a recent change under the search box. Past ~8 weeks the
+  // /updates page still lists it, but a stale "latest update" in the hero
+  // undercuts the point of the feature.
+  const heroUpdate =
+    latestUpdate && isFreshForHomepage(latestUpdate) ? latestUpdate : null;
 
   return (
     <main className="w-full">
@@ -196,6 +214,33 @@ export default async function Home() {
               <StudentTypeToggle />
             </div>
           </div>
+
+          {heroUpdate && (
+            <Link
+              href="/updates"
+              className="animate-fade-up mt-4 mx-auto flex max-w-xl items-center gap-2.5 rounded-full border border-line bg-mist px-4 py-2 text-left transition-colors duration-150 hover:border-status-pending/40"
+              style={{ animationDelay: "180ms" }}
+            >
+              <span
+                aria-hidden="true"
+                className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-status-pending"
+              />
+              <span className="min-w-0 flex-1 truncate font-body text-sm text-ink">
+                <span className="text-slate">Latest update: </span>
+                {heroUpdate.title}
+              </span>
+              <span
+                aria-hidden="true"
+                className="flex-shrink-0 font-utility text-xs text-slate"
+              >
+                {new Date(heroUpdate.announced_date).toLocaleDateString("en-AU", {
+                  day: "numeric",
+                  month: "short",
+                })}{" "}
+                &rarr;
+              </span>
+            </Link>
+          )}
 
           <p
             className="animate-fade-up mt-6 font-body text-sm text-slate"
