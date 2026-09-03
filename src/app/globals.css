@@ -122,6 +122,25 @@ h3.font-display,
   animation: pulse-dot 2s ease-in-out infinite;
 }
 
+/* Scroll affordance under the hero — a gentle bob, not a hard bounce, to sit
+   with the "deliberate, not scattered" motion principle. It lives in the hero
+   flow (not fixed), so it scrolls away on its own once the reader moves. */
+@keyframes scroll-hint {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.55;
+  }
+  50% {
+    transform: translateY(5px);
+    opacity: 1;
+  }
+}
+
+.animate-scroll-hint {
+  animation: scroll-hint 2s ease-in-out infinite;
+}
+
 /*
  * Scroll-triggered reveal for below-the-fold sections (Section 7 motion
  * principles). Uses scroll-driven animations where supported; everywhere
