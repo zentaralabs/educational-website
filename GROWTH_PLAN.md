@@ -102,7 +102,14 @@ specific Nepal/India → Australia → work/PR query. Depth over breadth.
       FAQPage. Country overview pages conditionally link in; added to sitemap.
       Cost-from-{country} deep pages (item 7 below) deferred: the overview
       pages already carry a cost section and `/cost-calculator` exists.
-- [ ] Pick the remaining ~13 target queries. Seed from GSC top-impression queries
+- [x] **Genuine Student statement examples guide — BUILT + DEPLOYED 2026-09-03.**
+      `/guides/genuine-student-statement-examples` (DB row + seed backup in
+      `seed_visa_content.mjs`, PR #6). Four illustrative worked GS responses
+      (career changer / nursing progression / study gap / step-down move) with
+      annotations + plain-text FAQ. Facts verified vs the Home Affairs GS page.
+      NOTE: the existing `genuine-student-requirement...` guide has a factual
+      error (says 150 words is a minimum; it's a maximum) — flagged, not fixed.
+- [ ] Pick the remaining ~12 target queries. Seed from GSC top-impression queries
       ("study in australia from pakistan", "study in regional australia",
       "study information technology in australia") + the source-country wedge
       (`PROJECT_STATUS.md` §29). Candidates: GTE / Genuine Student statement,
