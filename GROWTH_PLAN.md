@@ -117,9 +117,12 @@ specific Nepal/India → Australia → work/PR query. Depth over breadth.
       decision, dated "what changed" log, 7-question FAQ. Schema: Article +
       Dataset + BreadcrumbList + FAQPage. Internal links in from `/deadlines`,
       `/visas/student-500`, the GTE guide, the Adelaide-merger blog post, and
-      all 23 `/international/{country}` pages. Added to sitemap. Skeleton
-      clones for July / future intakes (copy the `intakes.ts` entry).
-      Not yet reseeded/revalidated live — deploy + IndexNow ping still needed.
+      all 23 `/international/{country}` pages. Added to sitemap. DEPLOYED
+      (PR #3), submitted to GSC + Bing.
+- [x] **July intake deadline hub — BUILT + DEPLOYED 2026-09-03.**
+      `/deadlines/july-2027-intake`, cloned from the February `intakes.ts`
+      entry (Semester 2, ~105 rows). The two hubs cross-link in the decision
+      section; `/deadlines` links both.
 - [ ] Keep Track A news cadence: invitation rounds (`add-round` skill), MD
       changes, fee changes — publish within 24–48h.
 - [ ] Watch the known gotchas: zero em dashes before publishing; no markdown

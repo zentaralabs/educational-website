@@ -53,7 +53,7 @@ const FEBRUARY_2027: IntakeHub = {
   intakeName: "February 2027",
   deadlineTypes: ["Semester 1"],
   startWindow: "late February or early March 2027",
-  altIntake: { slug: null, name: "July 2027" },
+  altIntake: { slug: "july-2027-intake", name: "July 2027" },
   metaTitle: "February 2027 Intake Deadlines for Australian Universities",
   metaDescription:
     "Application dates for every Australian university's February 2027 intake, undergraduate and postgraduate, with the date each figure was last checked against the university's own admissions page.",
@@ -159,7 +159,110 @@ const FEBRUARY_2027: IntakeHub = {
   lastVerified: "2026-09-03",
 };
 
-export const INTAKE_HUBS: IntakeHub[] = [FEBRUARY_2027];
+const JULY_2027: IntakeHub = {
+  slug: "july-2027-intake",
+  intakeName: "July 2027",
+  deadlineTypes: ["Semester 2"],
+  startWindow: "July 2027",
+  altIntake: { slug: "february-2027-intake", name: "February 2027" },
+  metaTitle: "July 2027 Intake Deadlines for Australian Universities",
+  metaDescription:
+    "Application dates for every Australian university's July 2027 (Semester 2) intake, undergraduate and postgraduate, with the date each figure was last checked against the university's own admissions page.",
+  intro: [
+    "July is the smaller of the two Australian intakes. Semester 2 courses start in July 2027, and not every course takes a mid-year entry, so the first thing to confirm is that your course actually runs in Semester 2. A few universities, including the University of Sydney and the Australian National University, publish a firm international closing date in May 2027. Most others assess applications as they arrive and close a course once it is full.",
+    "The table below is built from our deadline dataset and shows, per university and study level, either the firm date or the recommended apply-by date, with the day each row was last checked against the university's own key-dates page. For a July start, aim to have applications in by around March 2027, and earlier for postgraduate coursework and competitive courses.",
+  ],
+  decision: [
+    "July (Semester 2) suits you if a February start would mean a rushed application or thin financial evidence, if you are finishing a qualification in late 2026 or early 2027, or if you missed the Semester 1 cut-off. The extra months are often the difference between a weak application and a strong one.",
+    "The trade-offs: fewer courses take a mid-year intake, some structured programs (parts of medicine, some engineering and education degrees) only start in February, scholarship rounds can be smaller, and you may join a course slightly out of the standard unit sequence. Check that your specific course and any scholarship you want are open for Semester 2 before you commit to the timeline.",
+  ],
+  timeline: [
+    {
+      when: "By January 2027",
+      step: "Shortlist courses and sit your English test",
+      detail:
+        "Confirm each course runs in Semester 2 2027, is open to international students, and is CRICOS registered. Book IELTS or PTE early.",
+    },
+    {
+      when: "January to March 2027",
+      step: "Submit applications",
+      detail:
+        "Apply before any firm closing date, and as early as you can where admission is rolling. Postgraduate coursework and competitive courses close first.",
+    },
+    {
+      when: "February to May 2027",
+      step: "Compare offers, accept, pay the deposit",
+      detail:
+        "Offers arrive on a rolling basis. Accepting and paying the tuition deposit triggers your Confirmation of Enrolment.",
+    },
+    {
+      when: "March to May 2027",
+      step: "Lodge your student visa (subclass 500)",
+      detail:
+        "Lodge as soon as you hold the Confirmation of Enrolment. Which university you apply to sets how fast processing starts, and offshore refusal rates are elevated, so lodge early with complete evidence.",
+    },
+    {
+      when: "May to July 2027",
+      step: "Arrange OSHC, money, flights and housing",
+      detail:
+        "Buy Overseas Student Health Cover for the full visa period, plan the transfer of funds, and book temporary accommodation for your first week or two.",
+    },
+    {
+      when: "July 2027",
+      step: "Semester 2 starts",
+      detail:
+        "Attend orientation, complete enrolment, and give your university a residential address within seven days of arriving, which is a student visa condition.",
+    },
+  ],
+  whatChanged: [
+    {
+      date: "3 September 2026",
+      note: "Page published. Deadline rows in the table below carry their own last-checked date; this log tracks changes to the guidance around them.",
+    },
+    {
+      date: "February 2026",
+      note: "The offshore refusal rate for higher education student visa applications reached about 32.5 percent, the highest monthly level in roughly two decades. Build in more time and a stronger evidence file for a July 2027 lodgement.",
+    },
+    {
+      date: "January 2026",
+      note: "India, Nepal, Bangladesh, and Bhutan were moved to student-visa Evidence Level 3, the highest tier, meaning more documentation upfront and generally slower processing.",
+    },
+    {
+      date: "14 November 2025",
+      note: "Ministerial Direction 115 replaced MD 111 and added a third processing tier for offshore student visas. The university you apply to now decides whether processing starts in weeks or months.",
+    },
+  ],
+  faq: [
+    {
+      q: "Can I still apply for the July 2027 intake?",
+      a: "Usually yes, if you are reading this before around March 2027. Universities that assess applications on a rolling basis keep taking them until a course fills. What you cannot recover is time: a July start needs the offer, the deposit, the Confirmation of Enrolment, and the student visa all done by around May or June 2027.",
+    },
+    {
+      q: "Do all Australian courses have a July intake?",
+      a: "No. Semester 2 is the smaller intake and not every course takes mid-year entry. Some structured programs, including parts of medicine and some engineering and education degrees, only start in February. Check that your specific course runs in Semester 2 before you plan around a July start.",
+    },
+    {
+      q: "Is July or February a better intake for international students?",
+      a: "February is the main intake, with the widest choice of courses and fuller scholarship rounds. July is smaller but gives you more time to prepare a strong application and student visa. If a February start would force a rushed Genuine Student statement or thin financial evidence, July is the better choice.",
+    },
+    {
+      q: "When should I lodge my student visa for a July 2027 start?",
+      a: "As soon as you hold the Confirmation of Enrolment, which usually means March to May 2027. Processing times vary with your country's evidence level and the university's processing tier under Ministerial Direction 115, so lodging early with complete evidence gives you the best chance of a decision before the semester starts.",
+    },
+    {
+      q: "Do Australian universities publish a firm July deadline?",
+      a: "A minority do. The University of Sydney and ANU, for example, publish a firm Semester 2 international closing date in May 2027. Most universities assess applications as they arrive and close individual courses once full, so the date shown for them is a recommended apply-by point.",
+    },
+  ],
+  sources: [
+    "https://www.studyaustralia.gov.au/en/plan-your-studies/how-to-apply-to-study-in-australia",
+    "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
+    "https://immi.homeaffairs.gov.au/what-we-do/migration-program-planning-levels/student-visa-processing",
+  ],
+  lastVerified: "2026-09-03",
+};
+
+export const INTAKE_HUBS: IntakeHub[] = [FEBRUARY_2027, JULY_2027];
 
 export const INTAKE_HUB_SLUGS = INTAKE_HUBS.map((h) => h.slug);
 
