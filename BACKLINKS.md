@@ -104,6 +104,218 @@ options:
 
 ---
 
+## Track 3 — topical outreach (added 2026-09-03)
+
+The reason this track exists: Tracks 1 and 2 are generic. A launch board or a
+startup directory link comes from a page about software, pointing at a site
+about Nepali students going to Australia. Google reads topical distance, and
+so do humans. One link from a page that is genuinely about studying abroad is
+worth more than the whole Tier 2 list.
+
+### The angle that makes this work
+
+**Roman is the only independent voice on this beat.** Every page currently
+ranking for the Nepal / Australia student-visa story belongs to an education
+consultancy: aeccglobal, Westford, Megha, UniCoachify, EducationTree,
+Landmark, AusStudies. All of them earn commission on placements. A journalist
+writing about Nepali students being squeezed by Australian visa policy cannot
+neutrally quote any of them, and knows it.
+
+**And there is a live, uncovered story.** On 9 January 2026 Australia moved
+Nepal (with India, Bangladesh and Bhutan) back to student-visa **Evidence
+Level 3**, the highest scrutiny tier. A search of the coverage on 2026-09-03
+found it reported almost exclusively by consultancy blogs. Nepali mainstream
+media has largely not covered a policy change that reshapes the finances of
+tens of thousands of Nepali families. That is an open door, and Where To Apply
+has the sourced data and the independence to walk through it.
+
+Lead with the story, not the site. The link follows a quote; it does not
+precede one.
+
+### Tier A — Nepali newsrooms  ·  highest value, editorial dofollow links
+
+| Target | Route | Angle |
+|---|---|---|
+| **Nepali Times** | `editors@nepalitimes.com` · Editor **Sonia Awale**, Publisher Kunda Dixit · Patan Dhoka, Lalitpur | English-language, does serious policy journalism, exactly the outlet for "what Evidence Level 3 actually costs a Nepali family". Best single target. |
+| **The Kathmandu Post** | Addresses are listed on [kathmandupost.com/pages/submit-stories](https://kathmandupost.com/pages/submit-stories) — separate ones for enterprise pitches, opinion, and letters. Opinion pieces want a high-res headshot and "Opinions" in the subject. Pays Rs 500–5,000. | Two shots: pitch it as reporting to the news desk, or write it yourself as an opinion piece. Note their rule: do not pitch the same idea elsewhere at the same time. |
+| **Online Khabar (English)** | `news@onlinekhabar.com` · +977-1-4790176 | Highest reach in Nepal. Shorter, newsier framing than Nepali Times. |
+| **TechLekh** | `contact@techlekh.com` · "Submit Stories" link on site · Sukedhara, Kathmandu · replies in 24–48h | Founder story, not policy: solo Nepali developer builds a free public dataset. TechLekh covers exactly this. |
+| **ICT Frame** | [ictframe.com/submit-your-tech-news](https://ictframe.com/submit-your-tech-news/) · New Baneshwor-10 · emails on their contact page | Same founder angle. Lower bar than the newspapers, still a real editorial link. |
+| **Business 360 Nepal** (b360nepal.com) | Contact via site | They run founder interviews — they profiled Edusanjal's Bidur Acharya. A Nepali founder building for the outbound-student market fits their format. |
+
+### Tier B — Nepali education portals
+
+| Target | Route | Angle |
+|---|---|---|
+| **Edusanjal** (edusanjal.com) | Founder **Bidur Acharya**, team of ~25, strongest education SEO presence in Nepal | Partly a competitor, so do not pitch a listing. Pitch **data**: offer the per-university Australian deadline table and the SkillSelect round tracker as a citable source they can link rather than re-key. Costs us nothing and they get accuracy. |
+| **Nepali +2 college and university career offices** | Direct, in person or email | Roman is in Kathmandu. A counsellor who links the deadline hub from their study-abroad page is a topically perfect link and a five-minute ask. **Roman knows these better than any list I can build — this is the one row to fill in yourself.** |
+
+### Tier C — data citation  ·  slowest, most durable
+
+The `/visas/invitation-rounds` tracker and the `/deadlines/*-intake` tables are
+the only things on the site nobody else has. Migration forums, agent blogs and
+occasionally journalists reproduce SkillSelect round figures. Every time one
+does without a source, that is a link waiting to be asked for.
+
+Set a Google Alert for `"invitation round" 189 points cut-off` and for
+`"February 2027 intake" deadline Australia`, then use the citation email below.
+Low volume, but these links come from pages about the exact topic.
+
+### Tier D — resource pages  ·  check fit before sending
+
+US university "Study Abroad" LibGuides came up in the research and are **a poor
+fit**: they serve US students going out, not international students coming in.
+Do not mass-mail them; a librarian will spot the mismatch immediately.
+
+Worth checking case by case: guides and resource pages aimed at *inbound*
+international students, run by Australian institutions, and study-abroad
+advising offices in Nepal and India. Only pitch where the page already links to
+free third-party planning tools.
+
+---
+
+## Drafted emails
+
+Send from `admin@wheretoapply.xyz`. Change nothing except where marked. Short
+on purpose: a long pitch reads as marketing.
+
+### D1 — Nepali newsroom, the policy story  *(Nepali Times, Kathmandu Post, Online Khabar)*
+
+> **Subject:** Nepal is back on Australia's highest student-visa scrutiny tier and nobody has covered it
+>
+> Hi [name],
+>
+> On 9 January Australia moved Nepal back to Evidence Level 3 for student
+> visas, its highest scrutiny tier, alongside India, Bangladesh and Bhutan. In
+> practice it means months of bank statements instead of a balance, a
+> documented source of funds, and authenticated transcripts, all upfront.
+>
+> I have been looking for Nepali coverage of it and found almost none. What
+> comes up instead is a dozen education consultancies explaining it on their
+> own blogs, which is a problem, because every one of them earns commission
+> when a student places.
+>
+> I run wheretoapply.xyz, a free reference site for students applying to
+> Australian universities. I take no commission and I am not an agent. I hold
+> the application deadlines for all 56 Australian universities, current
+> tuition, the visa costs, and a round-by-round record of the skilled
+> migration invitation rounds, each figure sourced to an official page and
+> dated.
+>
+> Happy to be a source on the record, or just to hand you the numbers and stay
+> out of the piece. Either is useful to me.
+>
+> Roman Lama
+> Kathmandu
+> https://www.wheretoapply.xyz
+
+*Follow-up after 7 days, once, then stop:*
+
+> Hi [name], following up once on the note below in case it is useful. If it
+> is not for you, no reply needed, and I will not chase it again.
+
+### D2 — Nepali tech media, founder story  *(TechLekh, ICT Frame, Business 360)*
+
+> **Subject:** Solo Nepali developer, free database of every Australian university, for Nepali students
+>
+> Hi [name],
+>
+> I am a developer in Kathmandu and I built wheretoapply.xyz on my own.
+>
+> The reason: Nepal sends a huge number of students to Australia relative to
+> its population, and the information they decide on is scattered across
+> hundreds of university pages, or filtered through agents who are paid on
+> placement. So I built the version I wanted: every Australian university's
+> tuition, entry requirements, deadlines and scholarships in one filterable
+> database, plus a skilled-migration points calculator and a live tracker of
+> the invitation rounds. Every figure carries a source link and the date it
+> was last checked. It is free, there are no ads, and I take no commission
+> from anyone.
+>
+> In January Australia raised Nepal to its highest student-visa scrutiny
+> level, so the cost of getting this wrong went up for Nepali families.
+>
+> If it fits TechLekh, I am happy to answer anything about how it is built or
+> where the data comes from.
+>
+> Roman Lama
+> https://www.wheretoapply.xyz
+
+### D3 — Edusanjal, data offer  *(not a listing request)*
+
+> **Subject:** Australian university deadline data you are welcome to cite
+>
+> Hi Bidur,
+>
+> I run wheretoapply.xyz. We overlap, so to be upfront: I am not asking for a
+> listing.
+>
+> I maintain the application deadlines for all 56 Australian universities for
+> the February and July intakes, checked against each university's own page,
+> with the date of every check shown. I also keep a round-by-round record of
+> the Australian skilled-migration invitation rounds since 2022.
+>
+> If Edusanjal covers Australian intakes, you are welcome to cite either
+> rather than re-keying the numbers, and I will keep them current. A link back
+> is the only thing I would ask, and only if it is useful to your readers.
+>
+> Roman Lama
+> https://www.wheretoapply.xyz/deadlines/february-2027-intake
+
+### D4 — citation request, for an uncredited use of our data
+
+> **Subject:** The invitation-round figures in your [month] post
+>
+> Hi [name],
+>
+> Your post on [topic] uses the subclass 189 invitation-round numbers. I keep
+> that record, round by round since 2022, sourced to the Department of Home
+> Affairs and updated within a day or two of each round:
+> https://www.wheretoapply.xyz/visas/invitation-rounds
+>
+> If it is the source, a credit would be appreciated. If it is not, the page
+> is there anyway and it will stay current, so you have somewhere to check
+> against next round.
+>
+> Roman Lama
+
+### D5 — resource page, only where the page already links free tools
+
+> **Subject:** Free Australian university deadline and cost data for your resources page
+>
+> Hi [name],
+>
+> Your [page name] page lists tools for students planning to study abroad. Two
+> free ones you may not have:
+>
+> - Application deadlines for all 56 Australian universities, February and
+>   July intakes, with the date each was last checked:
+>   https://www.wheretoapply.xyz/deadlines/february-2027-intake
+> - A full first-year cost calculator, tuition through visa and flights:
+>   https://www.wheretoapply.xyz/cost-calculator
+>
+> No ads, no signup, no commission. I am not an agent.
+>
+> If they are useful to your students, a link would help. If not, no problem.
+>
+> Roman Lama
+> https://www.wheretoapply.xyz
+
+---
+
+## Rules for this track
+
+- **One pitch per outlet.** One follow-up after a week, then stop. Chasing
+  burns the outlet permanently.
+- **Never send the same email to two outlets on the same day.** The Kathmandu
+  Post explicitly asks that an idea not be pitched elsewhere simultaneously.
+- **Lead with the story.** Every draft above puts the policy or the build
+  first and the link last, because that is the order a journalist reads in.
+- **Say you are independent, every time.** It is the entire reason to quote
+  Roman over a consultancy. It is also true, which is why it works.
+- Target: **5 sends, 1 reply, 1 link.** If Tier A lands even one, it outweighs
+  every directory in Track 1.
+
 ## Tracking
 
 | Task | Status | Date | Link earned |
@@ -120,6 +332,9 @@ options:
 | Qwoted signup | ✅ 2026-09-01 — account + Source profile COMPLETE. Brand-logo avatar (scripts/brand-assets/logo-512.png), bio (founder bio), website link https://www.wheretoapply.xyz (the backlink), location Kathmandu/Nepal, employment "Where To Apply", 10 relevant expertise hashtags (#StudyAbroad #InternationalStudents #StudentVisa #StudyInAustralia #SkilledMigration #Universityadmissions #Immigration #TuitionFees #HigherEducation #PublicPolicy — auto-assigned legal/clinical/interior-design junk tags removed). Onboarding topics: Government & Politics, Education & Career, Design/Culture/Lifestyle. Free tier = 7 pitch credits. Profile public/indexable. | 2026-09-01 | app.qwoted.com/sources/roman-lama |
 | Connectively signup | ✅ 2026-09-01 — expert profile COMPLETE. Headshot photo (Roman's, /Users/romanlama/Desktop/headshot.jpg), name/title (Founder), company (Where To Apply), website https://www.wheretoapply.xyz (the backlink), LinkedIn https://www.linkedin.com/in/roman-lama-699938398/, verify email admin@, verify link /about. Free tier = 3 answers/month. Answer form now shows "attributed to: Roman Lama, Founder, Where To Apply". Note: Connectively flags AI-likely answers to journalists — drafts must read as genuinely human. | 2026-09-01 | connectively.us expert profile |
 | #journorequest follow | ☐ | | |
+| Qwoted — first inventory sweep | ⚠️ 2026-09-03: searched the live board. **No fit worth a credit.** Every visa request is US H-1B / J-1, UK settled status, or visa-on-arrival; the single "study abroad" request (Credible) is about US student loans. Pitching an Australia-inbound expert into those wastes credits and gets rejected. 7 credits still unspent — correct outcome. Re-check weekly; the board turns over fast. | 2026-09-03 | none |
+| Tier 2 re-check | ⚠️ 2026-09-03: **MicroLaunch now paid** (redirects to /premium), **Startup Stash submit page 404s**, **Peerlist 403s bots**. Uneed and Fazier are live but need an account to finish. Also a fit problem: these are SaaS/tool launch boards and this is an education reference site, so relevant traffic is ~zero. Deprioritised below Track 3. | 2026-09-03 | none |
+| Track 3 — topical outreach | 🆕 2026-09-03: built. 8 vetted targets across Nepali newsrooms, tech media and education portals, plus 5 drafted emails. **Roman to send.** Start with Nepali Times (`editors@nepalitimes.com`, Editor Sonia Awale) using draft D1. | 2026-09-03 | pending |
 
 Check earned links later in **GSC → Links → External links**, and referral
 traffic in **GA4 → Reports → Acquisition → Traffic acquisition**.
