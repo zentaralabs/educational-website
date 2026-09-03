@@ -15,7 +15,18 @@ import { listPublishedScholarshipSlugsForSitemap } from "@/lib/queries/public-sc
 import { listPublishedSubjects } from "@/lib/queries/public-subjects";
 import { listPublishedUniversitySlugsForSitemap } from "@/lib/queries/public-universities";
 import { listPublishedVisaSlugsForSitemap } from "@/lib/queries/public-visas";
-import { listPublishedProgramsForSitemap } from "@/lib/queries/public-programs";
+
+/**
+ * The site's primary sitemap: everything a search engine should spend its
+ * crawl budget on first.
+ *
+ * Program pages deliberately live in their own file (`/sitemap-programs.xml`)
+ * rather than here. They were 868 of 1,209 URLs — 72% of the sitemap — for a
+ * templated one-degree-per-page data layer, on a domain where Google had
+ * discovered about 61 URLs in total. Both files are advertised in robots.txt
+ * and can be submitted to Search Console independently, which also makes
+ * per-section index coverage readable for the first time.
+ */
 
 /**
  * `lastModified` for config-driven routes (static pages, /best collections,
@@ -31,8 +42,8 @@ const CONFIG_LAST_MODIFIED = new Date("2026-09-03T00:00:00Z");
 // row-level updated_at values in the sitemap stay honest.
 export const revalidate = 21600;
 
-// A cold regeneration runs ~8 list queries plus a paginated 850+ row program
-// query. Warm hits are edge-cached and instant, but the first hit after a
+// A cold regeneration runs ~8 list queries. Warm hits are edge-cached and
+// instant, but the first hit after a
 // deploy (or after a quiet period) pays the full cost against a possibly
 // cold database. Raise the function ceiling well past that so a slow origin
 // can never turn into the 504 that Search Console reports as "Couldn't fetch".
@@ -102,7 +113,6 @@ async function buildDynamicEntries(): Promise<MetadataRoute.Sitemap> {
     visas,
     scholarships,
     subjects,
-    programRows,
   ] = await Promise.all([
     safe("universities", listPublishedUniversitySlugsForSitemap),
     safe("guides", () =>
@@ -115,7 +125,6 @@ async function buildDynamicEntries(): Promise<MetadataRoute.Sitemap> {
     safe("visas", listPublishedVisaSlugsForSitemap),
     safe("scholarships", listPublishedScholarshipSlugsForSitemap),
     safe("subjects", listPublishedSubjects),
-    safe("programs", listPublishedProgramsForSitemap),
   ]);
 
   const modOr = (updatedAt: string | null) =>
@@ -250,19 +259,6 @@ async function buildDynamicEntries(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }));
 
-  // Program pages (/universities/{slug}/programs/{program-slug}): the query
-  // already filters to `content_indexable` rows (migration 0023, mirrors
-  // isProgramIndexable). Short templated long-tail cards stay noindex and out
-  // of the sitemap, still live for users and internal links.
-  const programEntries: MetadataRoute.Sitemap = programRows
-    .filter((p) => p.university?.slug && p.university.status === "published")
-    .map((p) => ({
-      url: `${SITE_URL}/universities/${p.university!.slug}/programs/${p.slug}`,
-      lastModified: p.updated_at ? new Date(p.updated_at) : CONFIG_LAST_MODIFIED,
-      changeFrequency: "monthly" as const,
-      priority: 0.5,
-    }));
-
   return [
     ...universityEntries,
     ...universityDeadlineEntries,
@@ -278,7 +274,6 @@ async function buildDynamicEntries(): Promise<MetadataRoute.Sitemap> {
     ...originCountryEntries,
     ...applyGuideEntries,
     ...stateEntries,
-    ...programEntries,
   ];
 }
 

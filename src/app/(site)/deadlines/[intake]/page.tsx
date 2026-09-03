@@ -16,6 +16,8 @@ import {
   listIntakeDeadlines,
   type IntakeDeadlineRow,
 } from "@/lib/queries/public-deadlines";
+import { JsonLd } from "@/lib/json-ld";
+import { composeTitle, pageMetadata } from "@/lib/page-metadata";
 
 export const revalidate = 3600;
 
@@ -31,23 +33,12 @@ export async function generateMetadata({
   const { intake } = await params;
   const hub = getIntakeHub(intake);
   if (!hub) return {};
-  const url = `/deadlines/${hub.slug}`;
-  return {
-    title: hub.metaTitle,
+  return pageMetadata({
+    title: composeTitle(hub.metaTitle),
     description: hub.metaDescription,
-    alternates: { canonical: url },
-    openGraph: {
-      title: hub.metaTitle,
-      description: hub.metaDescription,
-      url,
-      type: "article",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: hub.metaTitle,
-      description: hub.metaDescription,
-    },
-  };
+    path: `/deadlines/${hub.slug}`,
+    type: "article",
+  });
 }
 
 function shortDate(iso: string) {
@@ -149,11 +140,7 @@ export default async function IntakeDeadlinePage({
   return (
     <main className="mx-auto w-full max-w-3xl px-6 pt-8 pb-16">
       {jsonLd.map((block, i) => (
-        <script
-          key={i}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(block) }}
-        />
+        <JsonLd key={i} data={block} />
       ))}
 
       <Breadcrumbs items={breadcrumbs} />

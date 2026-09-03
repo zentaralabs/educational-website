@@ -13,6 +13,8 @@ import {
   SCHOLARSHIP_SCOPE_LABELS,
   SCHOLARSHIP_SCOPE_ORDER,
 } from "@/lib/scholarship-scopes";
+import { JsonLd } from "@/lib/json-ld";
+import { pageMetadata } from "@/lib/page-metadata";
 
 export const revalidate = 3600;
 
@@ -24,9 +26,13 @@ export async function generateMetadata({
   const { level } = await searchParams;
 
   return {
-    title: "Scholarships for International Students in Australia",
-    description:
-      "Government, university, and external scholarships for international students in Australia. What each one is worth, who qualifies, and whether you need a separate application.",
+    ...pageMetadata({
+      title: "Scholarships in Australia for International Students",
+      description:
+        "Government, university, and external scholarships for international students in Australia. What each one is worth, who qualifies, and whether you need a separate application.",
+      path: "/scholarships",
+      type: "website",
+    }),
     ...listPageCanonical({ base: "/scholarships", isFiltered: Boolean(level) }),
   };
 }
@@ -54,25 +60,15 @@ export default async function ScholarshipsIndexPage({
 
   return (
     <main className="mx-auto w-full max-w-3xl px-6 pt-8 pb-16">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd(breadcrumbs)) }}
-      />
+      <JsonLd data={breadcrumbJsonLd(breadcrumbs)} />
       {scholarships.length > 0 && !level && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(
-              itemListJsonLd({
+        <JsonLd data={itemListJsonLd({
                 name: "Scholarships for international students in Australia",
                 items: scholarships.map((s) => ({
                   path: `/scholarships/${s.slug}`,
                   name: s.name,
                 })),
-              }),
-            ),
-          }}
-        />
+              })} />
       )}
 
       <Breadcrumbs items={breadcrumbs} />

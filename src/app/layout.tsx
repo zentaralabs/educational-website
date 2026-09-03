@@ -4,6 +4,7 @@ import "./globals.css";
 import { Analytics } from "@/components/site/Analytics";
 import { CookieConsentBanner } from "@/components/site/CookieConsentBanner";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_SAME_AS, SITE_URL } from "@/lib/site-config";
+import { JsonLd } from "@/lib/json-ld";
 
 /** Site-wide publisher identity. Given a stable @id so page-level schema
  * (Article, Dataset, ItemList) can reference it as publisher. */
@@ -86,10 +87,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${fraunces.variable} ${publicSans.variable} ${ibmPlexMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-paper text-ink font-body">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
-        />
+        <JsonLd data={organizationJsonLd} />
         {children}
         <CookieConsentBanner />
         <Analytics />

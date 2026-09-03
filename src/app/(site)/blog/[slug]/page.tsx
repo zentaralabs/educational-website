@@ -19,6 +19,8 @@ import {
 import { readingMinutesFromWords } from "@/lib/reading";
 import { SITE_NAME, SITE_URL } from "@/lib/site-config";
 import { extractToc } from "@/lib/toc";
+import { JsonLd } from "@/lib/json-ld";
+import { pageMetadata } from "@/lib/page-metadata";
 
 export const revalidate = 3600;
 
@@ -37,26 +39,19 @@ export async function generateMetadata({
   const { slug } = await params;
   const post = await getPublishedBlogPost(slug);
   if (!post) return {};
-  const title = post.title;
-  const description = post.excerpt ?? post.content.slice(0, 155);
   const url = `/blog/${slug}`;
-  const ogImage = `${url}/og`;
-
-  return {
-    title,
-    description,
-    alternates: { canonical: url },
-    openGraph: {
-      title,
-      description,
-      url,
-      type: "article",
-      publishedTime: post.published_at ?? undefined,
-      modifiedTime: post.last_verified_at ?? undefined,
-      images: [ogImage],
-    },
-    twitter: { card: "summary_large_image", title, description, images: [ogImage] },
-  };
+  return pageMetadata({
+    // Headlines stay as long as the editor wrote them on the page itself;
+    // `meta_title` is the short version written for the search snippet, set
+    // only on the posts whose headline overruns it (migration 0025).
+    title: post.meta_title ?? post.title,
+    description: post.excerpt ?? post.content,
+    path: url,
+    type: "article",
+    image: `${url}/og`,
+    publishedTime: post.published_at ?? undefined,
+    modifiedTime: post.last_verified_at ?? undefined,
+  });
 }
 
 export default async function BlogPostPage({
@@ -102,11 +97,7 @@ export default async function BlogPostPage({
   return (
     <>
       {jsonLdBlocks.map((block, i) => (
-        <script
-          key={i}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(block) }}
-        />
+        <JsonLd key={i} data={block} />
       ))}
 
       <ArticleShell

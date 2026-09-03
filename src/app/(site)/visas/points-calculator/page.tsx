@@ -3,22 +3,18 @@ import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { PointsCalculator } from "@/components/site/PointsCalculator";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import { SITE_YEAR } from "@/lib/site-config";
+import { JsonLd } from "@/lib/json-ld";
+import { pageMetadata } from "@/lib/page-metadata";
 
 export const revalidate = 3600;
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: `Australia PR Points Calculator ${SITE_YEAR} (189, 190, 491)`,
   description:
     "Free calculator for the Australian skilled migration points test. Add up your points for the subclass 189, 190, and 491 visas from age, English, work experience, qualifications, study, partner, and nomination.",
-  alternates: { canonical: "/visas/points-calculator" },
-  openGraph: {
-    title: `Australia PR Points Calculator ${SITE_YEAR} (189, 190, 491)`,
-    description:
-      "Add up your points for the Australian skilled migration points test in a few clicks.",
-    url: "/visas/points-calculator",
-    type: "website",
-  },
-};
+  path: "/visas/points-calculator",
+  type: "website",
+});
 
 const FAQ = [
   {
@@ -66,11 +62,7 @@ export default function PointsCalculatorPage() {
   return (
     <main className="mx-auto w-full max-w-2xl px-6 pt-8 pb-16">
       {jsonLd.map((block, i) => (
-        <script
-          key={i}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(block) }}
-        />
+        <JsonLd key={i} data={block} />
       ))}
 
       <Breadcrumbs items={breadcrumbs} />

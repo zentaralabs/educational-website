@@ -15,7 +15,15 @@ export type CollectionEntry = {
 
 export type Collection = {
   slug: string;
+  /** On-page H1. Free to be long and explanatory. */
   title: string;
+  /**
+   * SERP title, when the H1 is longer than the ~60 characters Google renders.
+   * Keyword-first: "Cheapest Universities in Sydney" beats "The cheapest
+   * universities in Sydney for international students", which gets cut at
+   * "...for internation". Falls back to `title` when unset.
+   */
+  metaTitle?: string;
   shortTitle: string;
   /** Groups the shortlist on the /best index tabs. */
   category: "cost" | "admissions" | "migration" | "city" | "subject";
@@ -113,6 +121,7 @@ function subjectBestCollection(subjectSlug: string): Collection {
   return {
     slug: `best-australian-universities-for-${subjectSlug}`,
     title: `The best Australian universities for ${name}`,
+    metaTitle: `Best Australian Universities for ${name}`,
     shortTitle: `Best for ${name}`,
     category: "subject",
     metaDescription: `Australian universities with a recognised strength in ${name}, for international students. Reputation, cost, and the skilled-migration angle.`,
@@ -153,6 +162,7 @@ function cityCollection(opts: {
   return {
     slug,
     title: `The cheapest universities in ${city} for international students`,
+    metaTitle: `Cheapest Universities in ${city}`,
     shortTitle: `Cheapest in ${city}`,
     category: "city",
     metaDescription: `Universities in ${city} ranked by estimated first-year budget for international students: tuition plus ${city} living costs. Not ranked by prestige.`,
@@ -183,6 +193,7 @@ export const COLLECTIONS: Collection[] = [
   {
     slug: "affordable-australian-universities-for-international-students",
     title: "The most affordable Australian universities for international students",
+    metaTitle: "Cheapest Universities in Australia for Intl Students",
     shortTitle: "Most affordable universities",
     category: "cost",
     metaDescription:
@@ -220,6 +231,7 @@ export const COLLECTIONS: Collection[] = [
   {
     slug: "regional-australian-universities-for-skilled-migration",
     title: "Regional Australian universities and what they mean for skilled migration",
+    metaTitle: "Regional Universities in Australia for Migration Points",
     shortTitle: "Regional universities",
     category: "migration",
     metaDescription:
@@ -253,6 +265,7 @@ export const COLLECTIONS: Collection[] = [
   {
     slug: "australian-universities-with-multiple-intakes-per-year",
     title: "Australian universities with more than one intake a year",
+    metaTitle: "Australian Universities with Multiple Intakes a Year",
     shortTitle: "Multiple intakes",
     category: "migration",
     metaDescription:
@@ -281,6 +294,7 @@ export const COLLECTIONS: Collection[] = [
   {
     slug: "australian-universities-with-automatic-scholarships",
     title: "Australian universities that give international scholarships automatically",
+    metaTitle: "Australian Universities with Automatic Scholarships",
     shortTitle: "Automatic scholarships",
     category: "cost",
     metaDescription:
@@ -309,6 +323,7 @@ export const COLLECTIONS: Collection[] = [
   {
     slug: "easiest-australian-universities-to-get-into-for-international-students",
     title: "The most accessible Australian universities for international students",
+    metaTitle: "Easiest Australian Universities to Get Into",
     shortTitle: "More open admissions",
     category: "admissions",
     metaDescription:
@@ -338,6 +353,7 @@ export const COLLECTIONS: Collection[] = [
   {
     slug: "private-universities-in-australia-for-international-students",
     title: "Private universities in Australia",
+    metaTitle: "Private Universities in Australia for Intl Students",
     shortTitle: "Private universities",
     category: "admissions",
     metaDescription:
@@ -398,6 +414,7 @@ export const COLLECTIONS: Collection[] = [
   {
     slug: "australian-universities-with-no-application-fee",
     title: "Australian universities with no application fee for international students",
+    metaTitle: "Australian Universities with No Application Fee",
     shortTitle: "No application fee",
     category: "cost",
     metaDescription:

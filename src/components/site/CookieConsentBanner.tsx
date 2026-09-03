@@ -9,6 +9,16 @@ import { cookieConsentStore, setStoredConsent } from "@/lib/cookie-consent";
  * made on /privacy ("shown on your first visit... before any non-essential
  * cookie is set"). Accept/decline are equal-weight buttons, no dark
  * pattern — declining is exactly as easy as accepting.
+ *
+ * BEFORE TURNING ADS ON: this banner is sufficient for analytics, but it is
+ * not a Google-certified Consent Management Platform. Google requires ads
+ * served to visitors in the EEA and UK to be gated by a certified CMP
+ * integrated with the IAB Transparency & Consent Framework; this hand-rolled
+ * banner is not one, and shipping AdSense behind it would put EEA/UK ad
+ * serving out of policy. The site's traffic is overwhelmingly South Asian, so
+ * the practical options at monetisation time are (a) adopt a certified CMP
+ * such as Google's own Privacy & Messaging consent module, or (b) restrict ad
+ * serving to non-EEA/UK traffic. See GROWTH_PLAN Phase 3.
  */
 export function CookieConsentBanner() {
   const consent = useSyncExternalStore(

@@ -13,6 +13,8 @@ import {
   listPublishedScholarshipSlugs,
 } from "@/lib/queries/public-scholarships";
 import { SCHOLARSHIP_SCOPE_LABELS } from "@/lib/scholarship-scopes";
+import { JsonLd } from "@/lib/json-ld";
+import { composeTitle, pageMetadata } from "@/lib/page-metadata";
 
 export const revalidate = 3600;
 
@@ -29,18 +31,22 @@ export async function generateMetadata({
   const { slug } = await params;
   const s = await getPublishedScholarship(slug);
   if (!s) return {};
-  const title = `${s.name} ${SITE_YEAR}: Value, Eligibility & How to Apply`;
+  // The scholarship's own name is the query, so it is the part that must
+  // survive; the qualifier is appended only when there is room for it.
+  const title = composeTitle(`${s.name} ${SITE_YEAR}`, [
+    "Value, Eligibility & How to Apply",
+    "Value & Eligibility",
+    "Eligibility",
+  ]);
   const description =
     `${s.name}${s.amount ? ` (${s.amount})` : ""} for international students in Australia: who is eligible, what it covers, whether you need a separate application, and how to apply. ` +
-    (s.description?.slice(0, 60) ?? "");
-  const url = `/scholarships/${slug}`;
-  return {
+    (s.description ?? "");
+  return pageMetadata({
     title,
     description,
-    alternates: { canonical: url },
-    openGraph: { title, description, url, type: "article" },
-    twitter: { card: "summary_large_image", title, description },
-  };
+    path: `/scholarships/${slug}`,
+    type: "article",
+  });
 }
 
 function Fact({ label, value }: { label: string; value: string | null }) {
@@ -74,17 +80,9 @@ export default async function ScholarshipPage({
 
   return (
     <main className="mx-auto w-full max-w-2xl px-6 pt-8 pb-16">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbJsonLd(breadcrumbs)),
-        }}
-      />
+      <JsonLd data={breadcrumbJsonLd(breadcrumbs)} />
       {faqItems.length > 0 && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(faqItems)) }}
-        />
+        <JsonLd data={faqJsonLd(faqItems)} />
       )}
       <Breadcrumbs items={breadcrumbs} />
 

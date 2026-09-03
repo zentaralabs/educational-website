@@ -10,6 +10,129 @@ Redirects · Canonical/sitemap/metadata changes · Testing done.**
 
 ---
 
+## 2026-09-03 · Site-wide audit: title/description budget, sitemap split, OG cards, security headers
+
+Full source-level + live-crawl audit of the deployed site (341 indexable URLs
+fetched and parsed). Five real problems found, all fixed in this change.
+
+### 1. Title truncation, site-wide (the big one)
+
+- **Problem:** 324 of 341 indexable pages had a `<title>` over 65 characters;
+  301 were over 70; the longest was 134. Google renders roughly 60. The visa
+  pages were the worst case: `Skilled Employer Sponsored Regional
+  (Provisional) visa (Subclass 494): Eligibility, Requirements & Cost 2026 |
+  Where To Apply` pushed "Subclass 494" — the phrase people actually search —
+  past character 55, so it never appeared in the snippet. Descriptions were
+  the same story: 251 of 341 over 160 characters.
+- **Fix:** new `src/lib/page-metadata.ts`. `composeTitle(core, ...fragments)`
+  keeps the query-carrying part and appends qualifiers only while they fit,
+  accepting arrays of alternatives so one template serves both "Wollongong"
+  and "Queensland University of Technology". `titleField` drops the 17-char
+  ` | Where To Apply` suffix once the page's own title fills the budget.
+  `clampDescription` trims to 155 on a sentence or word boundary.
+  `pageMetadata()` is now the single builder every route returns.
+- **Retargeted title templates:** visas lead with `Subclass NNN Visa`;
+  scholarships lead with the scholarship name; `/best` collections gained an
+  optional `metaTitle` so the H1 can stay long; per-university deadline pages
+  dropped "Application ... (International Students)" to fit the name.
+- **Editorial headlines:** migration `0025_add_meta_title.sql` adds a nullable
+  `meta_title` to `guides` and `blog_posts` (falls back to `title`), populated
+  for the 20 published rows whose headline overran, via
+  `scripts/seed_meta_titles.mjs`. On-page H1s are unchanged.
+- **Result:** 0 of 341 pages over 60 characters (max exactly 60); 0 over 160
+  on description (max 155); 0 duplicate titles.
+
+### 2. Every page that set `openGraph` lost its social card
+
+- **Problem:** 216 of 341 live pages served **no `og:image` at all**. A route
+  that declares its own `openGraph` object replaces the one inherited from the
+  root layout, and with it the root `opengraph-image.tsx` — so every page that
+  set `openGraph: { title, description, url, type }` without an `images` key
+  silently shipped no card. Affected `/universities`, both calculators, both
+  intake hubs, all 23 country pages, all city pages, all 38 per-university
+  deadline pages.
+- **Fix:** `pageMetadata()` always sets `images`, defaulting to the site card;
+  routes with their own `/og` route pass it explicitly. Now 0 missing.
+
+### 3. Sitemap crawl-budget dilution
+
+- **Problem:** 868 of 1,209 sitemap URLs (72%) were templated program cards,
+  on a domain where Google had discovered about 61 URLs in total. The ~30 pages
+  that can actually rank were competing for discovery against seven times their
+  number in long-tail cards.
+- **Fix:** programs moved to their own `/sitemap-programs.xml` route handler.
+  `/sitemap.xml` is now 341 URLs; both are declared in `robots.txt`. Also gives
+  per-section index coverage in Search Console, which is what answers the open
+  GROWTH_PLAN question about the program-page indexability floor.
+- **Action required:** submit `sitemap-programs.xml` in GSC + Bing.
+
+### 4. Missing schema on the hub pages
+
+- `/study`, `/best`, `/compare`, `/cost-of-living` and `/international` emitted
+  no BreadcrumbList and no ItemList. All five now emit both, and the four
+  without a visible breadcrumb trail gained one.
+
+### 5. Homepage H1 carried no entity
+
+- `<h1>Where should you apply?</h1>` was the strongest on-page signal and
+  matched no query. Now `Study in Australia` with the original line as a second
+  line inside the same H1. Homepage title retargeted to
+  `Study in Australia 2026: Deadlines, Costs & Universities`.
+
+### Also in this change
+
+- **Local-currency figures on the source-country pages** (`src/lib/fx.ts`):
+  every competitor ranking for "cost to study in Australia from Nepal" leads
+  with the number in NPR lakh, because that is how the question is asked. The
+  23 country pages now show the first-year band in the reader's own currency
+  and counting unit (lakh/crore where that is the local convention), always
+  with the rate and the date it was taken, and always labelled indicative.
+- **Orphan fixed:** `/blog/485-graduate-visa-age-limit-drops-to-35` had zero
+  inbound internal links (link-graph crawl of all 341 URLs; max click depth 3,
+  one orphan). Now linked from the 485 visa page and the 485 guide.
+- **Privacy policy** rewritten for the Google AdSense advertising disclosures
+  (third-party vendor cookies, Ads Settings + aboutads.info opt-out links,
+  Google partner-sites link) and to describe the consent mechanism accurately.
+
+### Security (see the security section of this change)
+
+- **CSP, HSTS+subdomains, X-Content-Type-Options, X-Frame-Options,
+  Referrer-Policy, Permissions-Policy, COOP** added in `next.config.ts`; there
+  were no security headers at all before. `poweredByHeader: false`.
+  `/admin`, `/login`, `/forgot-password`, `/reset-password` additionally get
+  `no-store`, `X-Robots-Tag: noindex`, `Cross-Origin-Resource-Policy` and an
+  explicit `Access-Control-Allow-Origin` override (the platform default was
+  `*` on HTML responses).
+- **Stored-XSS vector closed:** ~50 JSON-LD blocks were `JSON.stringify`-ed
+  straight into `dangerouslySetInnerHTML`, which escapes neither `<` nor `&`,
+  so a database string containing a closing script tag could break out. All
+  now go through `src/lib/json-ld.tsx`.
+- **Open redirect closed:** `/login?next=` was passed unvalidated to
+  `router.push`, so `?next=https://evil.example` redirected off-site straight
+  after a password entry. Now same-origin paths only.
+- **Timing-safe** comparison on the `/api/revalidate` shared secret.
+- `public/.well-known/security.txt` added.
+
+- **Affected routes:** every route (headers, metadata), `/sitemap.xml`
+  (1,209 -> 341 URLs), new `/sitemap-programs.xml`, new
+  `/.well-known/security.txt`.
+- **SEO impact:** HIGH. No URL changes, no redirects, no canonical changes —
+  every canonical is byte-identical. Titles, descriptions, OG images, the
+  sitemap split and the hub schema all change.
+- **Testing:** `tsc` and `eslint` clean (3 pre-existing warnings in `scripts/`).
+  Production build, then all 341 sitemap URLs crawled off the local production
+  server: 0 non-200, 0 missing/duplicate titles, 0 titles over 60, 0
+  descriptions over 160, 0 missing canonical, 0 missing `og:image`, 0 noindex
+  pages in the sitemap, 0 pages without exactly one `<h1>`, 0 pages with fewer
+  than 2 JSON-LD blocks. Headers verified on the running server; homepage,
+  points calculator, cost calculator and login loaded in a browser with zero
+  console errors, so nothing in the CSP breaks the app.
+- **Post-deploy:** submit `/sitemap-programs.xml` to GSC + Bing; re-submit
+  `/sitemap.xml`; spot-check a visa and a scholarship page in the URL
+  Inspection tool for the new title.
+
+---
+
 ## 2026-09-03 · "Documents checklist for an Australian student visa" guide (GROWTH_PLAN "C")
 
 - **Change:** New guide `documents-checklist-for-an-australian-student-visa`

@@ -11,6 +11,8 @@ import {
   listPublishedDeadlines,
   type PublicDeadlineRow,
 } from "@/lib/queries/public-deadlines";
+import { JsonLd } from "@/lib/json-ld";
+import { pageMetadata } from "@/lib/page-metadata";
 
 const SELECT_CLASS =
   "rounded-lg border border-ink/15 bg-paper px-3 py-2 font-body text-sm text-ink transition-colors duration-150 hover:border-ink/30 focus-visible:border-status-open focus-visible:outline-none";
@@ -28,9 +30,13 @@ export async function generateMetadata({
   const { country, degreeLevel, type, page: pageParam } = await searchParams;
 
   return {
-    title: `Australian University Application Deadlines ${SITE_YEAR + 1}`,
-    description:
-      "International application dates for every intake at Australian universities, by degree level: firm closing dates where they exist, recommended apply-by dates where admissions are rolling. Filterable by state, level, and intake.",
+    ...pageMetadata({
+      title: `Australian University Application Deadlines ${SITE_YEAR + 1}`,
+      description:
+        "International application dates for every intake at Australian universities, by degree level: firm closing dates where they exist, recommended apply-by dates where admissions are rolling.",
+      path: "/deadlines",
+      type: "website",
+    }),
     ...listPageCanonical({
       base: "/deadlines",
       isFiltered: Boolean(country || degreeLevel || type),
@@ -108,14 +114,8 @@ export default async function DeadlinesPage({
 
   return (
     <main className="mx-auto w-full max-w-3xl px-6 pt-8 pb-16">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd(breadcrumbs)) }}
-      />
+      <JsonLd data={jsonLd} />
+      <JsonLd data={breadcrumbJsonLd(breadcrumbs)} />
 
       <Breadcrumbs items={breadcrumbs} />
 

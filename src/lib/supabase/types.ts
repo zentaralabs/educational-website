@@ -347,6 +347,8 @@ export interface Database {
           id: string;
           slug: string;
           title: string;
+          /** Short <title> for search results; falls back to `title`. */
+          meta_title: string | null;
           category: string;
           country_id: number | null;
           content: string;
@@ -367,6 +369,7 @@ export interface Database {
           id?: string;
           slug: string;
           title: string;
+          meta_title?: string | null;
           category: string;
           country_id?: number | null;
           content: string;
@@ -387,6 +390,8 @@ export interface Database {
           id: string;
           slug: string;
           title: string;
+          /** Short <title> for search results; falls back to `title`. */
+          meta_title: string | null;
           content: string;
           excerpt: string | null;
           tags: string[] | null;
@@ -404,6 +409,7 @@ export interface Database {
           id?: string;
           slug: string;
           title: string;
+          meta_title?: string | null;
           content: string;
           excerpt?: string | null;
           tags?: string[] | null;

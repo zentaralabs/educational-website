@@ -85,6 +85,13 @@ const v = (slug: string): RelatedLink => ({
   href: `/visas/${slug}`,
   label: VISA_LABEL[slug] ?? slug,
 });
+/** Links a dated news post from an evergreen page. Blog posts otherwise only
+ *  earn inbound links from the paginated /blog index, which leaves the older
+ *  ones effectively orphaned once they fall off page one. */
+const b = (slug: string, label: string): RelatedLink => ({
+  href: `/blog/${slug}`,
+  label,
+});
 
 const ROUNDS: RelatedLink = {
   href: "/visas/invitation-rounds",
@@ -317,7 +324,7 @@ const GUIDE_RELATED: Record<string, RelatedLink[]> = {
   "temporary-graduate-visa-485-guide": [
     g("study-to-permanent-residence-pathway-australia"),
     g("getting-a-skills-assessment-in-australia"),
-    g("how-the-australian-points-test-works"),
+    b("485-graduate-visa-age-limit-drops-to-35", "The 485 age limit dropped to 35"),
     v("temporary-graduate-485"),
     v("skilled-independent-189"),
     ROUNDS,
@@ -398,7 +405,7 @@ const VISA_RELATED: Record<string, RelatedLink[]> = {
   "temporary-graduate-485": [
     g("temporary-graduate-visa-485-guide"),
     g("study-to-permanent-residence-pathway-australia"),
-    g("getting-a-skills-assessment-in-australia"),
+    b("485-graduate-visa-age-limit-drops-to-35", "The 485 age limit dropped to 35"),
     v("student-500"),
     v("skilled-independent-189"),
     v("skills-in-demand-482"),

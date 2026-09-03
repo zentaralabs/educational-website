@@ -6,15 +6,18 @@ import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import { GUIDE_CATEGORY_LABELS } from "@/lib/guide-categories";
 import { itemListJsonLd } from "@/lib/itemlist-jsonld";
 import { listPublishedGuides } from "@/lib/queries/public-guides";
+import { JsonLd } from "@/lib/json-ld";
+import { pageMetadata } from "@/lib/page-metadata";
 
 export const revalidate = 3600;
 
-export const metadata = {
-  title: "Application How-to Guides for International Students",
+export const metadata = pageMetadata({
+  title: "Study in Australia Guides for International Students",
   description:
     "Step-by-step guides for international students applying to Australia: personal statements, letters of recommendation, transfers, financial aid, and how the application system works.",
-  alternates: { canonical: "/guides" },
-};
+  path: "/guides",
+  type: "website",
+});
 
 // Tab order for the category browser.
 const CATEGORY_ORDER = ["how-to", "country-guide", "test-prep"];
@@ -50,22 +53,12 @@ export default async function GuidesIndexPage() {
 
   return (
     <main className="mx-auto w-full max-w-3xl px-6 pt-8 pb-16">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd(breadcrumbs)) }}
-      />
+      <JsonLd data={breadcrumbJsonLd(breadcrumbs)} />
       {guides.length > 0 && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(
-              itemListJsonLd({
+        <JsonLd data={itemListJsonLd({
                 name: "Application guides for international students applying to Australia",
                 items: guides.map((g) => ({ path: `/guides/${g.slug}`, name: g.title })),
-              }),
-            ),
-          }}
-        />
+              })} />
       )}
 
       <Breadcrumbs items={breadcrumbs} />

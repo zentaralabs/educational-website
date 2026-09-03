@@ -6,6 +6,8 @@ import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import { SITE_YEAR } from "@/lib/site-config";
 import { COLLECTIONS, getCollection } from "@/lib/collections";
 import { listCollectionUniversities } from "@/lib/queries/public-collections";
+import { JsonLd } from "@/lib/json-ld";
+import { composeTitle, pageMetadata } from "@/lib/page-metadata";
 
 export const revalidate = 3600;
 
@@ -21,15 +23,15 @@ export async function generateMetadata({
   const { slug } = await params;
   const c = getCollection(slug);
   if (!c) return {};
-  const url = `/best/${slug}`;
-  const title = `${c.title} (${SITE_YEAR})`;
-  return {
+  // `metaTitle` exists for the shortlists whose on-page H1 is longer than a
+  // SERP title can carry; the rest reuse the H1.
+  const title = composeTitle(c.metaTitle ?? c.title, [`(${SITE_YEAR})`, `${SITE_YEAR}`]);
+  return pageMetadata({
     title,
     description: c.metaDescription,
-    alternates: { canonical: url },
-    openGraph: { title, description: c.metaDescription, url, type: "article" },
-    twitter: { card: "summary_large_image", title, description: c.metaDescription },
-  };
+    path: `/best/${slug}`,
+    type: "article",
+  });
 }
 
 export default async function CollectionPage({
@@ -64,14 +66,8 @@ export default async function CollectionPage({
 
   return (
     <main className="mx-auto w-full max-w-2xl px-6 pt-8 pb-16">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd(breadcrumbs)) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
-      />
+      <JsonLd data={breadcrumbJsonLd(breadcrumbs)} />
+      <JsonLd data={itemListJsonLd} />
       <Breadcrumbs items={breadcrumbs} />
 
       <h1 className="font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">

@@ -11,15 +11,18 @@ import { faqJsonLd, type FaqItem } from "@/lib/faq";
 import { itemListJsonLd } from "@/lib/itemlist-jsonld";
 import { listPublishedVisas, type PublicVisaListRow } from "@/lib/queries/public-visas";
 import { VISA_CATEGORY_LABELS, VISA_CATEGORY_ORDER } from "@/lib/visa-categories";
+import { JsonLd } from "@/lib/json-ld";
+import { pageMetadata } from "@/lib/page-metadata";
 
 export const revalidate = 3600;
 
-export const metadata = {
-  title: "Australian Student & Skilled Visa Subclasses Explained",
+export const metadata = pageMetadata({
+  title: "Australia Visa Subclasses for Students Explained",
   description:
-    "Every Australian visa subclass an international student meets, from the student visa (subclass 500) to the graduate and skilled visas that follow. Plain-English breakdowns of eligibility, points, cost, and the pathway to permanent residence, each figure dated and sourced.",
-  alternates: { canonical: "/visas" },
-};
+    "Every Australian visa subclass an international student meets, from the student visa (subclass 500) to the graduate and skilled visas that follow. Plain-English breakdowns of eligibility, points, cost, and the pathway to permanent residence.",
+  path: "/visas",
+  type: "website",
+});
 
 // The visas that make up the standard study-to-stay sequence, in order. Codes
 // are resolved against the live dataset so a card only renders if that
@@ -96,27 +99,14 @@ export default async function VisasIndexPage() {
 
   return (
     <main className="mx-auto w-full max-w-3xl px-6 pt-8 pb-16">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd(breadcrumbs)) }}
-      />
+      <JsonLd data={breadcrumbJsonLd(breadcrumbs)} />
       {visas.length > 0 && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(
-              itemListJsonLd({
+        <JsonLd data={itemListJsonLd({
                 name: "Australian student, graduate, and skilled visa subclasses",
                 items: visas.map((v) => ({ path: `/visas/${v.slug}`, name: v.name })),
-              }),
-            ),
-          }}
-        />
+              })} />
       )}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(faqItems)) }}
-      />
+      <JsonLd data={faqJsonLd(faqItems)} />
 
       <Breadcrumbs items={breadcrumbs} />
 

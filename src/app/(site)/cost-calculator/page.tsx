@@ -6,6 +6,8 @@ import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import { faqJsonLd } from "@/lib/faq";
 import { SITE_YEAR } from "@/lib/site-config";
 import { listCollectionUniversities } from "@/lib/queries/public-collections";
+import { JsonLd } from "@/lib/json-ld";
+import { pageMetadata } from "@/lib/page-metadata";
 
 export const revalidate = 3600;
 
@@ -13,13 +15,12 @@ const title = `Cost of Studying in Australia Calculator (${SITE_YEAR})`;
 const description =
   "Work out the full cost of studying in Australia as an international student: tuition, rent, food, transport, health cover, the student visa, and flights, for one year and the whole degree. Includes what you need to show for the visa.";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title,
   description,
-  alternates: { canonical: "/cost-calculator" },
-  openGraph: { title, description, url: "/cost-calculator", type: "website" },
-  twitter: { card: "summary_large_image", title, description },
-};
+  path: "/cost-calculator",
+  type: "website",
+});
 
 const FAQ = [
   {
@@ -60,11 +61,7 @@ export default async function CostCalculatorPage() {
   return (
     <main className="mx-auto w-full max-w-2xl px-6 pt-8 pb-16">
       {jsonLd.map((block, i) => (
-        <script
-          key={i}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(block) }}
-        />
+        <JsonLd key={i} data={block} />
       ))}
 
       <Breadcrumbs items={breadcrumbs} />

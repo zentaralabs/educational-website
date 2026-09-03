@@ -19,6 +19,8 @@ import { guideRelated } from "@/lib/related-content";
 import { RelatedLinks } from "@/components/site/RelatedLinks";
 import { SITE_NAME, SITE_URL } from "@/lib/site-config";
 import { extractToc } from "@/lib/toc";
+import { JsonLd } from "@/lib/json-ld";
+import { pageMetadata } from "@/lib/page-metadata";
 
 export const revalidate = 3600;
 
@@ -35,18 +37,16 @@ export async function generateMetadata({
   const { slug } = await params;
   const guide = await getPublishedGuide(slug);
   if (!guide) return {};
-  const title = guide.title;
-  const description = guide.excerpt ?? guide.content.slice(0, 155);
   const url = `/guides/${slug}`;
-  const ogImage = `${url}/og`;
-
-  return {
-    title,
-    description,
-    alternates: { canonical: url },
-    openGraph: { title, description, url, type: "article", images: [ogImage] },
-    twitter: { card: "summary_large_image", title, description, images: [ogImage] },
-  };
+  return pageMetadata({
+    // See the blog route: `meta_title` is the short search-snippet version of
+    // a long editorial headline, and falls back to the headline itself.
+    title: guide.meta_title ?? guide.title,
+    description: guide.excerpt ?? guide.content,
+    path: url,
+    type: "article",
+    image: `${url}/og`,
+  });
 }
 
 export default async function GuidePage({
@@ -104,11 +104,7 @@ export default async function GuidePage({
   return (
     <>
       {jsonLdBlocks.map((block, i) => (
-        <script
-          key={i}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(block) }}
-        />
+        <JsonLd key={i} data={block} />
       ))}
 
       <ArticleShell

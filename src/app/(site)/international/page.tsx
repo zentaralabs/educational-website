@@ -2,15 +2,20 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { ORIGIN_COUNTRIES } from "@/lib/origin-countries";
 import { flagEmoji } from "@/lib/flag";
+import { pageMetadata } from "@/lib/page-metadata";
+import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
+import { itemListJsonLd } from "@/lib/itemlist-jsonld";
+import { JsonLd } from "@/lib/json-ld";
 
 export const revalidate = 3600;
 
-export const metadata = {
-  title: "Study in Australia from Your Country",
+export const metadata = pageMetadata({
+  title: "Study in Australia by Country: Nepal, India & More",
   description:
     "Country-by-country guides to applying to Australian universities: what a year costs, how the application and student visa work, and what is different for applicants from each country.",
-  alternates: { canonical: "/international" },
-};
+  path: "/international",
+  type: "website",
+});
 
 export default function InternationalHubPage() {
   const countries = Object.values(ORIGIN_COUNTRIES).sort((a, b) =>
@@ -24,6 +29,17 @@ export default function InternationalHubPage() {
 
   return (
     <main className="mx-auto w-full max-w-2xl px-6 pt-8 pb-16">
+      <JsonLd data={breadcrumbJsonLd(breadcrumbs)} />
+      <JsonLd
+        data={itemListJsonLd({
+          name: "Applying to Australian universities, by country of origin",
+          items: countries.map((c) => ({
+            path: `/international/${c.slug}`,
+            name: `Study in Australia from ${c.name}`,
+          })),
+        })}
+      />
+
       <Breadcrumbs items={breadcrumbs} />
 
       <h1 className="mt-2 font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">

@@ -1,24 +1,20 @@
 import { LegalPage } from "@/components/site/LegalPage";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
+import { JsonLd } from "@/lib/json-ld";
+import { pageMetadata } from "@/lib/page-metadata";
 
-export const metadata = {
-  title: { absolute: "About Where To Apply" },
+export const metadata = pageMetadata({
+  title: "About Where To Apply",
   description:
     "Why Where To Apply exists, how content is fact-checked, and who writes it.",
-  alternates: { canonical: "/about" },
-};
+  path: "/about",
+  type: "website",
+});
 
 export default function AboutPage() {
   return (
     <LegalPage title="About Where To Apply" updated="August 20, 2026">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
-            breadcrumbJsonLd([{ label: "Home", href: "/" }, { label: "About" }]),
-          ),
-        }}
-      />
+      <JsonLd data={breadcrumbJsonLd([{ label: "Home", href: "/" }, { label: "About" }])} />
       <p>
         Where To Apply exists because application deadlines, requirements,
         and costs for studying abroad are scattered across hundreds of

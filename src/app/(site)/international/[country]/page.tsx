@@ -14,6 +14,9 @@ import {
   getOriginCountry,
 } from "@/lib/origin-countries";
 import { getApplyGuide } from "@/lib/apply-guides";
+import { JsonLd } from "@/lib/json-ld";
+import { composeTitle, pageMetadata } from "@/lib/page-metadata";
+import { AUD_RATES, RATES_AS_OF, formatLocalRange } from "@/lib/fx";
 
 export const revalidate = 3600;
 
@@ -29,16 +32,19 @@ export async function generateMetadata({
   const { country } = await params;
   const c = getOriginCountry(country);
   if (!c) return {};
-  const title = `Study in Australia from ${c.name} (${SITE_YEAR}): Costs, Visa & How to Apply`;
+  const title = composeTitle(`Study in Australia from ${c.name}`, [
+    `Cost, Visa & How to Apply ${SITE_YEAR}`,
+    `Cost, Visa & Requirements ${SITE_YEAR}`,
+    `Cost & Visa ${SITE_YEAR}`,
+    `${SITE_YEAR} Guide`,
+  ]);
   const description = `A practical guide for ${c.demonym} students applying to Australian universities: what a year costs, how the application and student visa work, credential and English requirements, and the pathway after graduation.`;
-  const url = `/international/${country}`;
-  return {
+  return pageMetadata({
     title,
     description,
-    alternates: { canonical: url },
-    openGraph: { title, description, url, type: "article" },
-    twitter: { card: "summary_large_image", title, description },
-  };
+    path: `/international/${country}`,
+    type: "article",
+  });
 }
 
 export default async function OriginCountryPage({
@@ -51,6 +57,13 @@ export default async function OriginCountryPage({
   if (!c) notFound();
 
   const hasApplyGuide = Boolean(getApplyGuide(country));
+
+  // The same A$40,000 to A$80,000 first-year band shown in the fact box, in
+  // the reader's own currency and counting unit. Null for a country with no
+  // rate on file, in which case the block simply does not render.
+  const localBudget = c.currency
+    ? formatLocalRange(40_000, 80_000, c.currency)
+    : null;
 
   const otherCountries = ORIGIN_COUNTRY_SLUGS.filter((s) => s !== country)
     .map((s) => getOriginCountry(s)!)
@@ -79,11 +92,7 @@ export default async function OriginCountryPage({
   return (
     <main className="mx-auto w-full max-w-2xl px-6 pt-8 pb-16">
       {jsonLd.map((block, i) => (
-        <script
-          key={i}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(block) }}
-        />
+        <JsonLd key={i} data={block} />
       ))}
 
       <Breadcrumbs items={breadcrumbs} />
@@ -114,11 +123,24 @@ export default async function OriginCountryPage({
           <Fact label="Work rights" value="48 hrs / fortnight in session" />
           <Fact label="Health cover (OSHC)" value="Required, full visa period" />
         </FactBox>
+        {localBudget && (
+          <p className="mt-3 font-body text-sm text-ink">
+            <span className="font-semibold">In {c.currency}:</span> a first year
+            of roughly {localBudget}, at A$1 = {c.currency}{" "}
+            {AUD_RATES[c.currency!]!.toLocaleString("en-US")} on{" "}
+            {new Date(RATES_AS_OF).toLocaleDateString("en-AU", {
+              day: "numeric",
+              month: "long",
+              year: "numeric",
+            })}
+            . Indicative only: the rate moves, so price your own course at the
+            rate on the day you transfer.
+          </p>
+        )}
         <p className="mt-2 font-body text-xs text-slate">
           Living costs and the visa fee are set by the Australian Government and
           are the same for every nationality. Tuition varies widely by
-          university and course. Price your specific course in your own currency
-          at the current rate, since it moves.
+          university and course.
         </p>
       </ProfileSection>
 
@@ -148,6 +170,15 @@ export default async function OriginCountryPage({
 
       <ProfileSection title="What it costs">
         <div className="flex flex-col gap-3 font-body text-base leading-relaxed text-ink">
+          {localBudget && (
+            <p>
+              A first year in Australia costs roughly {localBudget} for a
+              student from {c.name}, converted from A$40,000 to A$80,000 at the
+              rate above. Tuition is the part that moves: the rest (living
+              costs, the visa, health cover) is fixed by the Australian
+              Government and identical for every nationality.
+            </p>
+          )}
           <p>
             Tuition runs from the low A$30,000s at regional and newer
             universities to the high A$40,000s and beyond at the Group of Eight.

@@ -1,3 +1,4 @@
+import { timingSafeEqual } from "node:crypto";
 import { revalidateTag } from "next/cache";
 import { NextRequest, NextResponse } from "next/server";
 import { pingIndexNow } from "@/lib/indexnow";
@@ -53,9 +54,28 @@ type SupabaseWebhookPayload = {
   schema: string;
 };
 
+/**
+ * Constant-time secret comparison. `!==` on strings short-circuits at the
+ * first differing byte, which leaks the shared secret one character at a
+ * time to anyone willing to measure response latency across enough requests
+ * — this endpoint is public, unauthenticated apart from the secret, and can
+ * be hit as often as an attacker likes.
+ */
+function secretMatches(provided: string | null, expected: string | undefined): boolean {
+  if (!provided || !expected) return false;
+  const a = Buffer.from(provided);
+  const b = Buffer.from(expected);
+  // timingSafeEqual throws on a length mismatch, so fold the length check into
+  // the comparison against a same-length buffer instead of returning early.
+  if (a.length !== b.length) {
+    timingSafeEqual(b, b);
+    return false;
+  }
+  return timingSafeEqual(a, b);
+}
+
 export async function POST(req: NextRequest) {
-  const secret = req.headers.get("x-revalidate-secret");
-  if (!secret || secret !== process.env.REVALIDATE_WEBHOOK_SECRET) {
+  if (!secretMatches(req.headers.get("x-revalidate-secret"), process.env.REVALIDATE_WEBHOOK_SECRET)) {
     return NextResponse.json({ error: "unauthorized" }, { status: 401 });
   }
 

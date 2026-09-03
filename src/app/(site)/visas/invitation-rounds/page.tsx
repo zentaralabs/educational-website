@@ -5,15 +5,18 @@ import { InvitationVolumeChart } from "@/components/site/InvitationVolumeChart";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import { faqJsonLd, type FaqItem } from "@/lib/faq";
 import { listPublishedInvitationRounds } from "@/lib/queries/public-visas";
+import { JsonLd } from "@/lib/json-ld";
+import { pageMetadata } from "@/lib/page-metadata";
 
 export const revalidate = 3600;
 
-export const metadata = {
-  title: "SkillSelect invitation rounds: history and points cut-offs",
+export const metadata = pageMetadata({
+  title: "SkillSelect Invitation Rounds: Dates & Points Cut-Offs",
   description:
     "Every Australian SkillSelect invitation round since 2022: dates, invitations issued, and the minimum points cut-off for the subclass 189 and 491 skilled visas, with the latest round highlighted.",
-  alternates: { canonical: "/visas/invitation-rounds" },
-};
+  path: "/visas/invitation-rounds",
+  type: "website",
+});
 
 const breadcrumbs = [
   { label: "Home", href: "/" },
@@ -110,16 +113,8 @@ export default async function InvitationRoundsPage() {
 
   return (
     <main className="mx-auto w-full max-w-3xl px-6 pt-8 pb-16">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbJsonLd(breadcrumbs)),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(faq)) }}
-      />
+      <JsonLd data={breadcrumbJsonLd(breadcrumbs)} />
+      <JsonLd data={faqJsonLd(faq)} />
       <Breadcrumbs items={breadcrumbs} />
 
       <h1 className="font-display text-3xl font-semibold text-ink text-balance">

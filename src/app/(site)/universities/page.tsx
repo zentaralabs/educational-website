@@ -9,6 +9,8 @@ import { datasetJsonLd } from "@/lib/dataset-jsonld";
 import { AU_STATES, GO8_SLUGS, isRegionalCity, statesFromCity } from "@/lib/australia";
 import { SITE_URL, SITE_YEAR } from "@/lib/site-config";
 import { listCollectionUniversities } from "@/lib/queries/public-collections";
+import { JsonLd } from "@/lib/json-ld";
+import { pageMetadata } from "@/lib/page-metadata";
 
 export const revalidate = 3600;
 
@@ -16,13 +18,12 @@ const title = `Australian Universities for International Students (${SITE_YEAR})
 const description =
   "Every university and college in Australia that takes international students, in one filterable list: tuition, English requirements, intakes, state, and whether it counts as regional for migration points.";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title,
   description,
-  alternates: { canonical: "/universities" },
-  openGraph: { title, description, url: "/universities", type: "website" },
-  twitter: { card: "summary_large_image", title, description },
-};
+  path: "/universities",
+  type: "website",
+});
 
 const RELATED = [
   { label: "Group of Eight universities", href: "/best/group-of-eight-universities-in-australia" },
@@ -94,18 +95,9 @@ export default async function UniversitiesIndexPage() {
 
   return (
     <main className="mx-auto w-full max-w-3xl px-6 pt-8 pb-16">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd(breadcrumbs)) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(datasetLd) }}
-      />
+      <JsonLd data={breadcrumbJsonLd(breadcrumbs)} />
+      <JsonLd data={itemListJsonLd} />
+      <JsonLd data={datasetLd} />
 
       <Breadcrumbs items={breadcrumbs} />
 

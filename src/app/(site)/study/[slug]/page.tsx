@@ -11,6 +11,8 @@ import {
 } from "@/lib/queries/public-subjects";
 import { SUBJECT_CONTENT } from "@/lib/subjects";
 import { SubjectComparisonTable } from "@/components/site/SubjectComparisonTable";
+import { JsonLd } from "@/lib/json-ld";
+import { composeTitle, pageMetadata } from "@/lib/page-metadata";
 
 export const revalidate = 3600;
 
@@ -27,24 +29,27 @@ export async function generateMetadata({
   const { slug } = await params;
   const subject = await getSubjectBySlug(slug);
   if (!subject) return {};
-  const title = `Study ${subject.name} in Australia ${SITE_YEAR}: Costs, Universities & Requirements`;
+  const title = composeTitle(`Study ${subject.name} in Australia`, [
+    `Costs, Universities & Requirements ${SITE_YEAR}`,
+    `Cost & Entry Requirements ${SITE_YEAR}`,
+    `Cost & Entry ${SITE_YEAR}`,
+    `${SITE_YEAR}`,
+  ]);
   const feeBit =
     subject.minTuition != null
       ? ` Tuition from ${formatCurrency(subject.minTuition, "AUD")}/year across ${subject.universities.length} universities.`
       : "";
   const description = `${subject.programs.length} ${subject.name} programs for international students at Australian universities.${feeBit} Entry requirements, costs, and the pathway to permanent residence.`;
-  const url = `/study/${slug}`;
-  return {
+  return pageMetadata({
     title,
     description,
-    alternates: { canonical: url },
+    path: `/study/${slug}`,
+    type: "article",
     // Subjects without curated editorial fall back to templated copy built
     // from program data. Kept live for visitors and internal links, but
     // noindex until they get a real write-up.
     ...(SUBJECT_CONTENT[slug] ? {} : { robots: { index: false, follow: true } }),
-    openGraph: { title, description, url, type: "article" },
-    twitter: { card: "summary_large_image", title, description },
-  };
+  });
 }
 
 const GENERIC_REQUIREMENTS =
@@ -119,11 +124,7 @@ export default async function SubjectPage({
   return (
     <main className="mx-auto w-full max-w-2xl px-6 pt-8 pb-16">
       {jsonLd.map((block, i) => (
-        <script
-          key={i}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(block) }}
-        />
+        <JsonLd key={i} data={block} />
       ))}
 
       <Breadcrumbs items={breadcrumbs} />
