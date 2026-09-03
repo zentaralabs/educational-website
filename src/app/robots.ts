@@ -46,11 +46,14 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    // Two sitemaps on purpose. `/sitemap.xml` is the ~340 URLs worth crawl
-    // budget; `/sitemap-programs.xml` is the ~870 templated program cards,
-    // split out so they neither dilute the main file's discovery signal nor
-    // hide which section is actually getting indexed in Search Console.
+    // Index first, then both children explicitly. `/sitemap.xml` is the ~340
+    // URLs worth crawl budget; `/sitemap-programs.xml` is the ~870 templated
+    // program cards, split out so they neither dilute the main file's
+    // discovery signal nor hide which section is actually getting indexed.
+    // Listing all three is redundant but harmless, and means a crawler that
+    // ignores index files still finds both.
     sitemap: [
+      `${SITE_URL}/sitemap-index.xml`,
       `${SITE_URL}/sitemap.xml`,
       `${SITE_URL}/sitemap-programs.xml`,
     ],
