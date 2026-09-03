@@ -124,6 +124,21 @@ export default async function CollectionPage({
         <p className="mt-2 font-body text-sm text-slate">{collection.methodology}</p>
       </div>
 
+      {collection.relatedGuide && (
+        <Link
+          href={collection.relatedGuide.href}
+          className="mt-6 flex items-center justify-between gap-3 rounded-xl border border-status-open/30 bg-status-open/[0.04] px-4 py-3 font-body text-sm transition-colors duration-150 hover:border-status-open/50"
+        >
+          <span className="text-ink">
+            <span className="font-semibold">The full explanation:</span>{" "}
+            {collection.relatedGuide.label}
+          </span>
+          <span aria-hidden="true" className="text-status-open">
+            &rarr;
+          </span>
+        </Link>
+      )}
+
       <div className="mt-10 border-t border-ink/10 pt-6">
         <h2 className="mb-3 font-body text-xs font-semibold tracking-wide text-slate uppercase">
           Other decision guides

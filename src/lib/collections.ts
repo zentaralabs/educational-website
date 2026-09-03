@@ -24,6 +24,13 @@ export type Collection = {
   intro: string[];
   /** How the list was built. */
   methodology: string;
+  /**
+   * The guide (or other non-list page) that explains the concept behind this
+   * shortlist. Rendered as a callout on the collection page so the "understand
+   * it" and "see the universities" pages point at each other rather than
+   * competing for the same query.
+   */
+  relatedGuide?: { href: string; label: string };
   build: (universities: CollectionUniversity[]) => CollectionEntry[];
 };
 
@@ -186,6 +193,10 @@ export const COLLECTIONS: Collection[] = [
     ],
     methodology:
       "We took each university's lowest published international tuition (university-wide or its cheapest individual program), added our city-specific living-cost estimate and about AUD 4,000 in setup costs, then sorted low to high. Specialist and pathway-only providers are included where they grant degrees. Always confirm the fee for your specific course.",
+    relatedGuide: {
+      href: "/guides/real-cost-of-studying-in-australia",
+      label: "The real cost of studying in Australia as an international student",
+    },
     build: (unis) =>
       unis
         .filter((u) => u.firstYearBudget != null)
@@ -219,6 +230,10 @@ export const COLLECTIONS: Collection[] = [
     ],
     methodology:
       "We flagged universities whose main campus city sits in a designated regional area. Multi-campus universities that also operate in Sydney or Melbourne are excluded here even if they have regional campuses, since your points depend on where you actually study. Check the current designated postcode list before relying on this.",
+    relatedGuide: {
+      href: "/guides/choosing-a-regional-area-to-study-in-australia",
+      label: "Studying in regional Australia: what counts and what you gain",
+    },
     build: (unis) =>
       unis
         .filter((u) => isRegional(u.city))

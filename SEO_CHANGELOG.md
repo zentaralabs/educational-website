@@ -10,6 +10,49 @@ Redirects · Canonical/sitemap/metadata changes · Testing done.**
 
 ---
 
+## 2026-09-03 · Strengthen subject pages + subject-aware internal links (GROWTH_PLAN "B")
+
+- **Why:** GSC shows `/study/law` drawing impressions for "law degree australia"
+  (10/28d) and `/study/information-technology` for "study information technology
+  in australia" (5/28d), both at ~position 30 with 0 clicks. The pages were
+  curated but shallow, and every `/study/[slug]` page rendered the *same*
+  6-link "Related" list and the *same* generic entry-requirements paragraph.
+- **Change:**
+  - `SubjectContent` (`src/lib/subjects.ts`) gained `requirements?: string[]`,
+    `costNote?: string`, `fromCountry?: string`, `related?: RelatedLink[]`.
+  - **Law** and **information-technology**: rewrote/expanded the intro, added a
+    subject-specific entry-requirements block (law English bar 7.0, no LSAT;
+    IT credit average + no GRE/GMAT), a cost note, a source-country line
+    (linking `/international/*`), 2 more FAQ items each, one more `strongAt`
+    university each, and a subject-aware `related` list.
+  - Added subject-aware `related` lists to computer-science, data-science,
+    business, nursing, engineering (route to points test / skills assessment /
+    485 / the India or Nepal page / the regional collection).
+  - `/study/[slug]` page: renders `requirements` (else the generic paragraph),
+    `costNote`, `fromCountry`, and `related` (else the old static fallback).
+  - **Cannibalisation, regional + cost clusters:** `Collection` gained
+    `relatedGuide?`. `/best/regional-...` now shows a callout to
+    `/guides/choosing-a-regional-area-to-study-in-australia`, and
+    `/best/affordable-...` to `/guides/real-cost-of-studying-in-australia`, so
+    the "see the universities" and "understand it" pages point at each other.
+- **Affected routes:** no URLs change. `/study/law`,
+  `/study/information-technology`, and 5 other curated subject pages render
+  more content + different internal links. `/best/regional-...` and
+  `/best/affordable-...` gain one internal link each.
+- **SEO impact:** MED (deeper content matching intent on the two subject
+  pages GSC already ranks; subject-aware internal links; closes the regional
+  and cost cannibalisation loops).
+- **Files:** `src/lib/subjects.ts`, `src/lib/collections.ts`,
+  `src/app/(site)/study/[slug]/page.tsx`, `src/app/(site)/best/[slug]/page.tsx`.
+- **Testing:** `next build` passes (377 static pages); `tsc` + `eslint` clean;
+  zero em dashes; verified `/study/law` + `/study/information-technology` render
+  the new sections + subject-aware related, `/study/psychology` still falls
+  back correctly, both `/best` callouts resolve; console clean.
+- **Post-deploy:** POST `/api/revalidate` (guides tag is unaffected; subject
+  and collection copy is config-in-repo so a redeploy is enough).
+
+---
+
 ## 2026-09-03 · Internal-linking pass + cannibalisation routing
 
 - **Change:** Rewrote `src/lib/related-content.ts`. Before: 17 of 34 published

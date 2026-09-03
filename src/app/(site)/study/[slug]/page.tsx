@@ -167,12 +167,21 @@ export default async function SubjectPage({
         </div>
       </dl>
 
+      {content?.costNote && (
+        <p className="mt-3 font-body text-xs text-slate">{content.costNote}</p>
+      )}
+
       <div className="mt-8 flex flex-col gap-3">
         {intro.map((p) => (
           <p key={p.slice(0, 24)} className="font-body text-base leading-relaxed text-ink">
             {p}
           </p>
         ))}
+        {content?.fromCountry && (
+          <p className="font-body text-base leading-relaxed text-ink">
+            {content.fromCountry}
+          </p>
+        )}
       </div>
 
       {content?.careers && (
@@ -224,11 +233,21 @@ export default async function SubjectPage({
 
       <section className="mt-10">
         <h2 className="mb-3 font-display text-xl font-semibold text-ink">
-          Typical entry requirements
+          {content?.requirements ? `Entry requirements for ${subject.name}` : "Typical entry requirements"}
         </h2>
-        <p className="font-body text-base leading-relaxed text-ink">
-          {GENERIC_REQUIREMENTS}
-        </p>
+        {content?.requirements ? (
+          <div className="flex flex-col gap-3">
+            {content.requirements.map((p) => (
+              <p key={p.slice(0, 24)} className="font-body text-base leading-relaxed text-ink">
+                {p}
+              </p>
+            ))}
+          </div>
+        ) : (
+          <p className="font-body text-base leading-relaxed text-ink">
+            {GENERIC_REQUIREMENTS}
+          </p>
+        )}
       </section>
 
       {content?.faq && content.faq.length > 0 && (
@@ -256,14 +275,14 @@ export default async function SubjectPage({
           Related
         </h2>
         <ul className="grid gap-2 sm:grid-cols-2">
-          {[
+          {(content?.related ?? [
             { href: "/guides/real-cost-of-studying-in-australia", label: "The real cost of studying in Australia" },
             { href: "/guides/study-to-permanent-residence-pathway-australia", label: "The study-to-PR pathway" },
             { href: "/visas/student-500", label: "Student visa (subclass 500)" },
             { href: "/guides/how-the-australian-points-test-works", label: "How the skilled points test works" },
             { href: "/scholarships", label: "Scholarships for studying in Australia" },
             { href: "/best/affordable-australian-universities-for-international-students", label: "Most affordable universities" },
-          ].map((l) => (
+          ]).map((l) => (
             <li key={l.href}>
               <Link
                 href={l.href}
