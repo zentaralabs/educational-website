@@ -15,6 +15,8 @@ import {
   getPublishedUniversity,
   listPublishedUniversitySlugs,
 } from "@/lib/queries/public-universities";
+import { JsonLd } from "@/lib/json-ld";
+import { composeTitle, pageMetadata } from "@/lib/page-metadata";
 
 export const revalidate = 3600;
 
@@ -42,19 +44,20 @@ export async function generateMetadata({
   const data = await load(slug);
   if (!data) return {};
   const { university } = data;
-  const title = `${university.name} Application Deadlines ${INTAKE_YEAR} (International Students)`;
+  const title = composeTitle(`${university.name} Deadlines ${INTAKE_YEAR}`, [
+    "International Students",
+    "International",
+  ]);
   const description = `When to apply to ${university.name} as an international student for the ${INTAKE_YEAR} intakes: closing dates by degree level, how the intakes work, and how early to lodge for a student visa.`;
-  const url = `/universities/${slug}/deadlines`;
-  return {
+  return pageMetadata({
     title,
     description,
-    alternates: { canonical: url },
-    openGraph: { title, description, url, type: "article" },
-    twitter: { card: "summary_large_image", title, description },
+    path: `/universities/${slug}/deadlines`,
+    type: "article",
     ...(DEADLINE_PAGE_INDEXED.has(slug)
       ? {}
       : { robots: { index: false, follow: true } }),
-  };
+  });
 }
 
 export default async function UniversityDeadlinesPage({
@@ -173,11 +176,7 @@ export default async function UniversityDeadlinesPage({
   return (
     <main className="mx-auto w-full max-w-2xl px-6 pt-8 pb-16">
       {jsonLd.map((block, i) => (
-        <script
-          key={i}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(block) }}
-        />
+        <JsonLd key={i} data={block} />
       ))}
 
       <Breadcrumbs items={breadcrumbs} />

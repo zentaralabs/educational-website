@@ -11,6 +11,8 @@ import { flagEmoji } from "@/lib/flag";
 import { APPLY_GUIDE_SLUGS, getApplyGuide } from "@/lib/apply-guides";
 import { getOriginCountry } from "@/lib/origin-countries";
 import { SITE_NAME, SITE_URL } from "@/lib/site-config";
+import { JsonLd } from "@/lib/json-ld";
+import { composeTitle, pageMetadata } from "@/lib/page-metadata";
 
 export const revalidate = 3600;
 
@@ -26,23 +28,12 @@ export async function generateMetadata({
   const { country } = await params;
   const guide = getApplyGuide(country);
   if (!guide) return {};
-  const url = `/international/${country}/how-to-apply`;
-  return {
-    title: guide.metaTitle,
+  return pageMetadata({
+    title: composeTitle(guide.metaTitle),
     description: guide.metaDescription,
-    alternates: { canonical: url },
-    openGraph: {
-      title: guide.metaTitle,
-      description: guide.metaDescription,
-      url,
-      type: "article",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: guide.metaTitle,
-      description: guide.metaDescription,
-    },
-  };
+    path: `/international/${country}/how-to-apply`,
+    type: "article",
+  });
 }
 
 export default async function HowToApplyPage({
@@ -91,11 +82,7 @@ export default async function HowToApplyPage({
   return (
     <main className="mx-auto w-full max-w-2xl px-6 pt-8 pb-16">
       {jsonLd.map((block, i) => (
-        <script
-          key={i}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(block) }}
-        />
+        <JsonLd key={i} data={block} />
       ))}
 
       <Breadcrumbs items={breadcrumbs} />

@@ -32,6 +32,8 @@ import {
   type ComparisonUniversityRow,
 } from "@/lib/queries/public-universities";
 import { SITE_YEAR } from "@/lib/site-config";
+import { JsonLd } from "@/lib/json-ld";
+import { composeTitle, pageMetadata } from "@/lib/page-metadata";
 
 export const revalidate = 3600;
 
@@ -64,29 +66,27 @@ export async function generateMetadata({
   const pair = await loadPair(slug);
   if (pair) {
     const [a, b] = pair;
-    const title = `${a.name} vs ${b.name}: Which to Choose (${SITE_YEAR})`;
-    const description = `${a.name} compared with ${b.name} for international students: tuition, selectivity, entry requirements, and how the two differ.`;
-    const url = `/compare/${slug}`;
-    return {
+    const title = composeTitle(`${a.name} vs ${b.name}`, [
+      `Which to Choose (${SITE_YEAR})`,
+      `Which to Choose`,
+      `${SITE_YEAR}`,
+    ]);
+    return pageMetadata({
       title,
-      description,
-      alternates: { canonical: url },
-      openGraph: { title, description, url, type: "article" },
-      twitter: { card: "summary_large_image", title, description },
-    };
+      description: `${a.name} compared with ${b.name} for international students: tuition, selectivity, entry requirements, and how the two differ.`,
+      path: `/compare/${slug}`,
+      type: "article",
+    });
   }
 
   const guide = await getPublishedGuide(slug);
   if (!guide || guide.category !== "comparison") return {};
-  const title = guide.title;
-  const description = guide.excerpt ?? guide.content.slice(0, 155);
-  return {
-    title,
-    description,
-    alternates: { canonical: `/compare/${slug}` },
-    openGraph: { title, description, url: `/compare/${slug}`, type: "article" },
-    twitter: { card: "summary_large_image", title, description },
-  };
+  return pageMetadata({
+    title: guide.meta_title ?? guide.title,
+    description: guide.excerpt ?? guide.content,
+    path: `/compare/${slug}`,
+    type: "article",
+  });
 }
 
 type Uni = CollectionUniversity;
@@ -327,14 +327,8 @@ export default async function ComparisonPage({
 
     return (
       <main className="mx-auto w-full max-w-3xl px-6 pt-8 pb-16">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd(breadcrumbs)) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(faq)) }}
-        />
+        <JsonLd data={breadcrumbJsonLd(breadcrumbs)} />
+        <JsonLd data={faqJsonLd(faq)} />
 
         <div>
           <Breadcrumbs items={breadcrumbs} />
@@ -498,10 +492,7 @@ export default async function ComparisonPage({
 
   return (
     <main className="mx-auto w-full max-w-5xl px-6 pt-8 pb-16">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd(breadcrumbs)) }}
-      />
+      <JsonLd data={breadcrumbJsonLd(breadcrumbs)} />
 
       <div className="mx-auto max-w-3xl">
         <Breadcrumbs items={breadcrumbs} />

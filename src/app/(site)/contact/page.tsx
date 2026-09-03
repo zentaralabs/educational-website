@@ -1,10 +1,12 @@
 import { LegalPage } from "@/components/site/LegalPage";
+import { pageMetadata } from "@/lib/page-metadata";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Contact",
   description: "How to reach Where To Apply with corrections, questions, or feedback.",
-  alternates: { canonical: "/contact" },
-};
+  path: "/contact",
+  type: "website",
+});
 
 export default function ContactPage() {
   return (

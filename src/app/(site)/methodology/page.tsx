@@ -3,15 +3,18 @@ import { LegalPage } from "@/components/site/LegalPage";
 import { datasetJsonLd } from "@/lib/dataset-jsonld";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import { getDatasetStats } from "@/lib/queries/public-stats";
+import { JsonLd } from "@/lib/json-ld";
+import { pageMetadata } from "@/lib/page-metadata";
 
 export const revalidate = 3600;
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Methodology & Data Sources",
   description:
     "How Where To Apply builds and maintains its dataset of Australian university deadlines, tuition, English requirements, scholarships, and visa facts: sources, update cadence, coverage, and how to cite it.",
-  alternates: { canonical: "/methodology" },
-};
+  path: "/methodology",
+  type: "website",
+});
 
 /** Round down to a friendly floor so the figure never overstates coverage. */
 function floorTo(n: number, step: number) {
@@ -59,16 +62,8 @@ export default async function MethodologyPage() {
 
   return (
     <LegalPage title="Methodology & data sources" updated="August 29, 2026">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(dataset) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbJsonLd(breadcrumbs)),
-        }}
-      />
+      <JsonLd data={dataset} />
+      <JsonLd data={breadcrumbJsonLd(breadcrumbs)} />
 
       <p>
         Where To Apply is built on a structured dataset, not a pile of blog

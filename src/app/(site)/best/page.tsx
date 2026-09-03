@@ -4,15 +4,21 @@ import {
   BEST_CATEGORY_ORDER,
   COLLECTIONS,
 } from "@/lib/collections";
+import { pageMetadata } from "@/lib/page-metadata";
+import { Breadcrumbs } from "@/components/site/Breadcrumbs";
+import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
+import { itemListJsonLd } from "@/lib/itemlist-jsonld";
+import { JsonLd } from "@/lib/json-ld";
 
 export const revalidate = 3600;
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Best Universities in Australia for International Students",
   description:
     "Shortlists of Australian universities ranked by first-year cost, number of intakes, regional migration advantages, application fees, and automatic scholarships. Each list shows how it was built.",
-  alternates: { canonical: "/best" },
-};
+  path: "/best",
+  type: "website",
+});
 
 export default function BestIndexPage() {
   const collections = COLLECTIONS.map((c) => ({
@@ -28,8 +34,20 @@ export default function BestIndexPage() {
     label: BEST_CATEGORY_LABELS[key],
   }));
 
+  const breadcrumbs = [{ label: "Home", href: "/" }, { label: "Best universities" }];
+
   return (
     <main className="mx-auto w-full max-w-3xl px-6 pt-8 pb-16">
+      <JsonLd data={breadcrumbJsonLd(breadcrumbs)} />
+      <JsonLd
+        data={itemListJsonLd({
+          name: "Shortlists of Australian universities for international students",
+          items: collections.map((c) => ({ path: `/best/${c.slug}`, name: c.title })),
+        })}
+      />
+
+      <Breadcrumbs items={breadcrumbs} />
+
       <h1 className="font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
         Best universities in Australia, by category
       </h1>

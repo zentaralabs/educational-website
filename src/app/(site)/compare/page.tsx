@@ -3,15 +3,21 @@ import { UniversityPicker } from "@/components/site/UniversityPicker";
 import { COMPARISON_PAIRS, vsSlug } from "@/lib/comparisons";
 import { listPublishedGuides } from "@/lib/queries/public-guides";
 import { listPublishedUniversityOptions } from "@/lib/queries/public-universities";
+import { pageMetadata } from "@/lib/page-metadata";
+import { Breadcrumbs } from "@/components/site/Breadcrumbs";
+import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
+import { itemListJsonLd } from "@/lib/itemlist-jsonld";
+import { JsonLd } from "@/lib/json-ld";
 
 export const revalidate = 3600;
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Compare Australian Universities: Cost, Entry & Deadlines",
   description:
     "Side-by-side comparisons of Australian universities for international students: tuition, selectivity, entry requirements, and application deadlines.",
-  alternates: { canonical: "/compare" },
-};
+  path: "/compare",
+  type: "website",
+});
 
 export default async function CompareIndexPage() {
   const [comparisons, options] = await Promise.all([
@@ -20,8 +26,23 @@ export default async function CompareIndexPage() {
   ]);
   const nameBySlug = new Map(options.map((o) => [o.slug, o.name]));
 
+  const breadcrumbs = [{ label: "Home", href: "/" }, { label: "Compare" }];
+
   return (
     <main className="mx-auto w-full max-w-3xl px-6 pt-8 pb-16">
+      <JsonLd data={breadcrumbJsonLd(breadcrumbs)} />
+      <JsonLd
+        data={itemListJsonLd({
+          name: "Head-to-head comparisons of Australian universities",
+          items: COMPARISON_PAIRS.map(([a, b]) => ({
+            path: `/compare/${vsSlug(a, b)}`,
+            name: `${nameBySlug.get(a) ?? a} vs ${nameBySlug.get(b) ?? b}`,
+          })),
+        })}
+      />
+
+      <Breadcrumbs items={breadcrumbs} />
+
       <h1 className="font-display text-3xl font-semibold text-ink text-balance">
         Compare Australian universities
       </h1>

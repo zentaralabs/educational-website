@@ -9,6 +9,8 @@ import {
   listPublishedUniversityOptions,
 } from "@/lib/queries/public-universities";
 import { listPageCanonical } from "@/lib/list-page-metadata";
+import { JsonLd } from "@/lib/json-ld";
+import { pageMetadata } from "@/lib/page-metadata";
 
 export async function generateMetadata({
   searchParams,
@@ -18,9 +20,13 @@ export async function generateMetadata({
   const { u } = await searchParams;
 
   return {
-    title: "Compare Australian Universities Side by Side",
-    description:
-      "Pick any two or more Australian universities and compare tuition, admission requirements, deadlines, and selectivity in one table.",
+    ...pageMetadata({
+      title: "Compare Australian Universities Side by Side",
+      description:
+        "Pick any two or more Australian universities and compare tuition, admission requirements, deadlines, and selectivity in one table.",
+      path: "/compare/universities",
+      type: "website",
+    }),
     ...listPageCanonical({
       base: "/compare/universities",
       isFiltered: Boolean(u?.trim()),
@@ -52,10 +58,7 @@ export default async function CompareUniversitiesPage({
 
   return (
     <main className="mx-auto w-full max-w-5xl px-6 pt-8 pb-16">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd(breadcrumbs)) }}
-      />
+      <JsonLd data={breadcrumbJsonLd(breadcrumbs)} />
 
       <div className="mx-auto max-w-3xl">
         <Breadcrumbs items={breadcrumbs} />

@@ -13,7 +13,9 @@ import { listRecentGuides } from "@/lib/queries/public-guides";
 import { getHomepageStats } from "@/lib/queries/public-stats";
 import { listFeaturedUniversities } from "@/lib/queries/public-universities";
 import { flagEmoji } from "@/lib/flag";
-import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site-config";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_URL, SITE_YEAR } from "@/lib/site-config";
+import { JsonLd } from "@/lib/json-ld";
+import { pageMetadata } from "@/lib/page-metadata";
 
 const websiteJsonLd = {
   "@context": "https://schema.org",
@@ -35,14 +37,12 @@ const websiteJsonLd = {
 
 export const revalidate = 3600;
 
-export const metadata = {
-  title: {
-    absolute:
-      "Australian University Deadlines, Admissions & Costs | Where To Apply",
-  },
+export const metadata = pageMetadata({
+  title: `Study in Australia ${SITE_YEAR}: Deadlines, Costs & Universities`,
   description: SITE_DESCRIPTION,
-  alternates: { canonical: "/" },
-};
+  path: "/",
+  type: "website",
+});
 
 const TASKS = [
   {
@@ -123,10 +123,7 @@ export default async function Home() {
 
   return (
     <main className="w-full">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
-      />
+      <JsonLd data={websiteJsonLd} />
       {/* Hero */}
       <div className="relative overflow-hidden">
         <div
@@ -146,20 +143,27 @@ export default async function Home() {
             {stats.deadlineCount.toLocaleString()} deadlines
           </p>
 
+          {/* The H1 carries the entity the page is about ("study in
+              Australia") rather than the brand line it used to lead with.
+              "Where should you apply?" was the strongest signal on the
+              homepage and said nothing a search engine could match a query
+              to; it now runs as the second line, where it still sets the
+              tone without spending the page's one H1 on it. */}
           <h1
             className="animate-fade-up font-display text-[2.5rem] leading-[1.05] font-semibold text-ink text-balance sm:text-6xl"
             style={{ animationDelay: "40ms" }}
           >
-            Where should you apply?
+            Study in Australia
+            <span className="block text-slate">Where should you apply?</span>
           </h1>
 
           <p
             className="animate-fade-up mx-auto mt-4 max-w-xl font-body text-base text-slate text-balance sm:text-lg"
             style={{ animationDelay: "80ms" }}
           >
-            Compare Australian universities and courses: application deadlines,
-            tuition, entry requirements, scholarships, and student visas, all
-            in one place.
+            Compare Australian universities and courses for international
+            students: application deadlines, tuition, entry requirements,
+            scholarships, and student visas, all in one place.
           </p>
 
           <div

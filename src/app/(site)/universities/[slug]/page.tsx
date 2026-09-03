@@ -30,6 +30,8 @@ import {
   listPublishedUniversitySlugs,
 } from "@/lib/queries/public-universities";
 import { pickPrimarySource } from "@/lib/sources";
+import { JsonLd } from "@/lib/json-ld";
+import { composeTitle, pageMetadata } from "@/lib/page-metadata";
 
 // Indicative single-student annual living cost in Australia when a
 // city-specific figure isn't set — anchored to the Home Affairs financial
@@ -75,20 +77,24 @@ export async function generateMetadata({
   const university = await getPublishedUniversity(slug);
   if (!university) return {};
 
-  const title = `${university.name}: Fees, Entry Requirements & Deadlines ${SITE_YEAR}`;
+  const title = composeTitle(university.name, [
+    `Fees, Entry Requirements & Deadlines ${SITE_YEAR}`,
+    `Fees, Entry & Deadlines ${SITE_YEAR}`,
+    `Fees & Entry Requirements ${SITE_YEAR}`,
+    `Fees & Entry ${SITE_YEAR}`,
+  ]);
   const description =
     `${university.name} for international students${university.city ? ` in ${university.city.split(",")[0]}` : ""}: tuition fees, entry requirements, application deadlines, and scholarships. ` +
-    (university.distinctive_summary?.slice(0, 90) ?? "Independently researched and dated.");
+    (university.distinctive_summary ?? "Independently researched and dated.");
   const url = `/universities/${slug}`;
-  const ogImage = `${url}/og`;
 
-  return {
+  return pageMetadata({
     title,
     description,
-    alternates: { canonical: url },
-    openGraph: { title, description, url, type: "website", images: [ogImage] },
-    twitter: { card: "summary_large_image", title, description, images: [ogImage] },
-  };
+    path: url,
+    type: "website",
+    image: `${url}/og`,
+  });
 }
 
 export default async function UniversityProfilePage({
@@ -250,19 +256,10 @@ export default async function UniversityProfilePage({
 
   return (
     <main className="mx-auto w-full max-w-3xl px-6 pt-8 pb-16">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd(breadcrumbs)) }}
-      />
+      <JsonLd data={jsonLd} />
+      <JsonLd data={breadcrumbJsonLd(breadcrumbs)} />
       {faqItems.length > 0 && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(faqItems)) }}
-        />
+        <JsonLd data={faqJsonLd(faqItems)} />
       )}
 
       <Breadcrumbs items={breadcrumbs} />

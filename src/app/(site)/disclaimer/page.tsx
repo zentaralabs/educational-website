@@ -1,11 +1,13 @@
 import { LegalPage } from "@/components/site/LegalPage";
+import { pageMetadata } from "@/lib/page-metadata";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Disclaimer",
   description:
     "Where To Apply provides informational content only, not official admissions, financial, or legal advice.",
-  alternates: { canonical: "/disclaimer" },
-};
+  path: "/disclaimer",
+  type: "website",
+});
 
 export default function DisclaimerPage() {
   return (

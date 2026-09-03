@@ -160,6 +160,8 @@ export async function listAllBlogPostSlugsForSitemap(): Promise<
 export type PublicBlogPostRow = {
   slug: string;
   title: string;
+  /** Short <title> for search results; falls back to `title`. */
+  meta_title: string | null;
   content: string;
   excerpt: string | null;
   tags: string[] | null;
@@ -196,7 +198,7 @@ export async function getPublishedBlogPost(slug: string): Promise<PublicBlogPost
   const { data, error } = await supabase
     .from("blog_posts")
     .select(
-      "slug, title, content, excerpt, tags, published_at, last_verified_at, source_urls, word_count, author:authors!author_id(name, bio, credentials), reviewed_by:authors!reviewed_by_id(name)",
+      "slug, title, meta_title, content, excerpt, tags, published_at, last_verified_at, source_urls, word_count, author:authors!author_id(name, bio, credentials), reviewed_by:authors!reviewed_by_id(name)",
     )
     .eq("slug", slug)
     .eq("status", "published")

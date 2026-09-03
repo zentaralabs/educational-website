@@ -87,6 +87,80 @@ canonical tags, per-page OG, breadcrumb/FAQ/Dataset schema, `content_indexable`
 pruning, GA4 + first-party proxy + key events, GSC/Bing/Yandex properties,
 IndexNow, apex→www (verify on host), contact email fixed.
 
+## Phase 0.5 — site-wide audit  ·  STATUS: DONE 2026-09-03
+
+A full source-level + live-crawl audit (all 341 indexable URLs fetched and
+parsed) found five real SEO defects and four security gaps. All fixed; see the
+2026-09-03 "Site-wide audit" entry in `SEO_CHANGELOG.md` for the detail.
+
+The two that mattered:
+
+- **Title truncation was site-wide.** 324 of 341 pages had a `<title>` over 65
+  characters, 301 over 70, longest 134; Google renders about 60. The visa pages
+  buried "Subclass NNN" — the actual query — past character 55, so it never
+  appeared in the snippet. All 341 pages are now inside the budget (max 60),
+  with keyword-first templates. This is the one change on the site that can
+  move CTR without waiting for authority.
+- **The sitemap was 72% program cards.** 868 of 1,209 URLs, on a domain where
+  Google had discovered about 61 URLs in total. Programs now live in
+  `/sitemap-programs.xml`; `/sitemap.xml` is 341 URLs of pages that can rank.
+  As a side effect this finally makes the "do program pages earn their keep?"
+  question answerable from GSC's per-sitemap coverage report.
+
+Plus: 216 of 341 pages were serving no `og:image` at all (a route declaring its
+own `openGraph` silently drops the root `opengraph-image`); five hub pages had
+no BreadcrumbList or ItemList; the homepage H1 carried no entity; and the
+source-country pages published AUD only, where every competitor that outranks
+them leads with the figure in NPR/INR lakh.
+
+### Open items from this audit (owner: Roman)
+
+- [ ] Submit `/sitemap-programs.xml` in GSC and Bing; re-submit `/sitemap.xml`.
+- [ ] Watch the per-sitemap coverage split for ~4 weeks. If program pages sit at
+      near-zero indexed *and* near-zero impressions by ~Nov, raise the
+      indexability floor and drop them from the sitemap entirely.
+- [ ] Refresh `src/lib/fx.ts` rates each quarter alongside `refresh-unis`.
+      One table, one `RATES_AS_OF` date; the pages render the date they carry.
+- [ ] Before any AdSense launch: the cookie banner is **not** a Google-certified
+      CMP, so it cannot lawfully gate ad serving to EEA/UK visitors. Either
+      adopt Google's Privacy & Messaging consent module or restrict ad serving
+      to non-EEA/UK traffic. See the note in `CookieConsentBanner.tsx`.
+
+## Keyword strategy: which fights to pick
+
+The competitive set splits into three tiers, and the site has been spending
+effort in the wrong one.
+
+**Tier A — unwinnable, stop spending here.** Navigational and government
+queries: "study in australia", "monash university", "university of sydney".
+Held by studyaustralia.gov.au, the universities themselves, and IDP. GSC
+confirms the shape: the Sydney profile page drew 103 impressions and 0 clicks,
+Monash 54/0, RMIT 39/0. University profile pages are internal-linking and
+data infrastructure. They are not a traffic strategy.
+
+**Tier B — Indian study-abroad portals. Winnable in 6-18 months, on links.**
+"cheapest universities in australia", "intakes in australia", "IT course fees
+australia". Held by shiksha, collegedunia, careers360, yocket, leapscholar,
+edvoy, meridean, avanse — DR 60-80 domains. Their content is demonstrably
+vaguer than ours: they publish "Monash closes around 31 October, based on the
+last cycle" against our 107-row per-university table with a last-checked date
+on every row. We win on substance and lose on authority, which is exactly the
+situation backlinks fix. Do not write more content for this tier; the content
+is already better.
+
+**Tier C — migration agents and local consultancies. Winnable now.**
+"subclass 494", "494 visa", "genuine student statement examples", "study in
+australia from nepal", "study in regional australia", "student visa refusal
+reasons". Held by visaenvoy, y-axis, solmigration, aeccglobal, and Nepali
+consultancies (kiec.edu.np, raineducation.edu.np, goreto.edu.np). These are
+small-to-mid domains whose pages exist to capture a lead, and they are beatable
+on both authority and trust. This is the beachhead, and it is the same wedge
+`PROJECT_STATUS` §29 already identified.
+
+Two things were costing us Tier C and are now fixed: pages were titled after
+the Department's official name rather than the searched term, and the cost
+figures were AUD-only where the reader budgets in lakh.
+
 ## Phase 1 — narrow content spike on the wedge  ·  weeks 2–10
 
 Goal: ~15–20 pages that are unambiguously the best page on the internet for a

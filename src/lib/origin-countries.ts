@@ -16,6 +16,12 @@ export type OriginCountry = {
   name: string;
   /** Adjective for citizens, e.g. "Indian". */
   demonym: string;
+  /**
+   * ISO 4217 code for the reader's own currency, used to show the AUD figures
+   * in the units they will actually budget in (see `@/lib/fx`). Optional: a
+   * country with no rate on file simply shows AUD only.
+   */
+  currency?: string;
   /** Answer-first intro, 2 short paragraphs. */
   intro: string[];
   /** Country-specific points about applying to a university. */
@@ -40,6 +46,7 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     code: "IN",
     name: "India",
     demonym: "Indian",
+    currency: "INR",
     intro: [
       "Indian students can study at any Australian university, and India is one of the two largest sources of international students in Australia. A first year usually costs between AUD 40,000 and AUD 75,000 all in, you apply either directly to the university or through an authorised agent, and the visa is the subclass 500 student visa.",
       "What is different for Indian applicants: in January 2026 the Australian Government raised India to the highest student-visa evidence level, several universities only accept applications from Indian citizens through an approved agent, and some set earlier deadlines. None of this changes what you are eligible for. It changes how you prepare.",
@@ -105,6 +112,7 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     code: "NP",
     name: "Nepal",
     demonym: "Nepali",
+    currency: "NPR",
     intro: [
       "Nepal is one of the largest sources of international students in Australia relative to its population. You can study at any Australian university. A first year costs roughly AUD 40,000 to 70,000 all in, and the visa is the subclass 500.",
       "Two things are specific to Nepal. You need a No Objection Certificate from the Ministry of Education before you can send tuition abroad or lodge the visa. And in January 2026 the Australian Government raised Nepal to the highest student-visa evidence level, so the financial and document checks are now more thorough.",
@@ -166,6 +174,7 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     code: "PK",
     name: "Pakistan",
     demonym: "Pakistani",
+    currency: "PKR",
     intro: [
       "Pakistani students can study at any Australian university. A first year costs roughly AUD 40,000 to 75,000 all in, and the visa is the subclass 500. Pakistan sits at the highest student-visa evidence level, so the financial and academic-document checks are thorough.",
       "The parts specific to Pakistan are document attestation and how you apply. University degrees need Higher Education Commission (HEC) attestation and school certificates need Inter Board Committee of Chairmen (IBCC) attestation, and several universities only accept applications from Pakistani citizens through an authorised agent.",
@@ -227,6 +236,7 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     code: "CN",
     name: "China",
     demonym: "Chinese",
+    currency: "CNY",
     intro: [
       "China is the largest single source of international students in Australia. You can study at any university. A first year costs roughly AUD 45,000 to 80,000 all in, and the visa is the subclass 500. China generally sits at a lower student-visa evidence level than the South Asian markets, especially for the older research universities.",
       "The parts specific to China are credential verification and the undergraduate entry route. Australian universities usually want a verification report for your Chinese qualifications, and for school leavers the gaokao is now the main way into an Australian bachelor's degree.",
@@ -288,6 +298,7 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     code: "VN",
     name: "Vietnam",
     demonym: "Vietnamese",
+    currency: "VND",
     intro: [
       "Vietnam is a large and growing source of international students in Australia. You can study at any university. A first year costs roughly AUD 40,000 to 75,000 all in, and the visa is the subclass 500. Vietnam sits at student-visa Evidence Level 2, which is more favourable than the Evidence Level 3 markets.",
       "There is not much that is unusual for Vietnamese applicants. The main points are credential recognition of a four-year Vietnamese bachelor's, English evidence, and choosing between applying directly or through an agent.",
@@ -348,6 +359,7 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     code: "BD",
     name: "Bangladesh",
     demonym: "Bangladeshi",
+    currency: "BDT",
     intro: [
       "Bangladeshi students can study at any Australian university. A first year costs roughly AUD 40,000 to 75,000 all in, and the visa is the subclass 500. In January 2026 the Australian Government raised Bangladesh to the highest student-visa evidence level, so the financial and document checks are now thorough.",
       "The parts specific to Bangladesh are the higher visa scrutiny, how universities treat a three-year pass degree, and the fact that several universities only accept applications from Bangladeshi citizens through an authorised agent.",
@@ -408,6 +420,7 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     code: "LK",
     name: "Sri Lanka",
     demonym: "Sri Lankan",
+    currency: "LKR",
     intro: [
       "Sri Lankan students can study at any Australian university. A first year costs roughly AUD 40,000 to 75,000 all in, and the visa is the subclass 500. Sri Lanka moved from the lowest student-visa evidence level to Evidence Level 2 in late 2025, so the financial and English documentation expected is now higher than before.",
       "Not much is unusual for Sri Lankan applicants. The main points are how universities read the local A-Level and Z-score, English evidence, and applying directly or through an agent.",
@@ -468,6 +481,7 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     code: "ID",
     name: "Indonesia",
     demonym: "Indonesian",
+    currency: "IDR",
     intro: [
       "Indonesian students can study at any Australian university, and Indonesia is one of Australia's closest large source countries. A first year costs roughly AUD 40,000 to 75,000 all in, and the visa is the subclass 500. Indonesia moved to student-visa Evidence Level 2 in early 2026 after a spell at Level 1, so financial evidence and an English test result are now expected in most applications.",
       "Not much is unusual for Indonesian applicants. The main points are how universities treat the SMA certificate and the S1 degree, English evidence, and whether your funding is personal savings or a scholarship such as LPDP.",
@@ -528,6 +542,7 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     code: "PH",
     name: "Philippines",
     demonym: "Filipino",
+    currency: "PHP",
     intro: [
       "Filipino students can study at any Australian university, and the Philippines is a fast-growing source of students, especially in nursing and health. A first year costs roughly AUD 40,000 to 75,000 all in, and the visa is the subclass 500. The Philippines is at student-visa Evidence Level 3, the highest tier, so the financial and document checks are thorough.",
       "The parts specific to the Philippines are the higher visa scrutiny, how universities read a Philippine bachelor's degree now that the country has 12 years of schooling, English evidence, and the separate registration step if you plan to work as a nurse.",
@@ -589,6 +604,7 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     code: "TH",
     name: "Thailand",
     demonym: "Thai",
+    currency: "THB",
     intro: [
       "Thai students can study at any Australian university. A first year costs roughly AUD 40,000 to 75,000 all in, and the visa is the subclass 500. Thailand sits at the lower end of the student-visa evidence scale, so the upfront financial and English documentation is lighter than for the higher-scrutiny markets.",
       "Not much is unusual for Thai applicants. The main points are how universities read the Mathayom 6 certificate and a Thai bachelor's degree, English evidence, and choosing between applying directly or through an agent.",
@@ -649,6 +665,7 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     code: "KH",
     name: "Cambodia",
     demonym: "Cambodian",
+    currency: "KHR",
     intro: [
       "Cambodian students can study at any Australian university. A first year costs roughly AUD 40,000 to 75,000 all in, and the visa is the subclass 500. Cambodia is a small source of students in Australia, and scholarships fund a large share of those who go.",
       "The parts specific to Cambodia are how universities read the Bac II and a Cambodian bachelor's degree, English evidence, and documenting a source of funds that satisfies the Genuine Student requirement.",
@@ -709,6 +726,7 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     code: "MY",
     name: "Malaysia",
     demonym: "Malaysian",
+    currency: "MYR",
     intro: [
       "Malaysian students can study at any Australian university, and Malaysia is one of Australia's longest-standing student markets. A first year costs roughly AUD 40,000 to 75,000 all in, and the visa is the subclass 500. Malaysia sits at student-visa Evidence Level 1, the lowest tier, so many applicants are not asked for financial evidence or an English test upfront.",
       "The parts specific to Malaysia are the twinning and foundation routes that let you start in Malaysia and finish in Australia, how universities read SPM, STPM, and matriculation results, and the fact that Australian campuses in Malaysia offer the same degrees closer to home.",
@@ -769,6 +787,7 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     code: "BT",
     name: "Bhutan",
     demonym: "Bhutanese",
+    currency: "BTN",
     intro: [
       "Bhutanese students can study at any Australian university, and Australia has become the leading overseas destination for students from Bhutan. A first year costs roughly AUD 40,000 to 75,000 all in, and the visa is the subclass 500. In January 2026 the Australian Government raised Bhutan to student-visa Evidence Level 3, the highest tier, alongside India, Nepal, and Bangladesh.",
       "The parts specific to Bhutan are the higher visa scrutiny, the Royal Monetary Authority approval needed to move money out of the country, and how universities read the Bhutan Higher Secondary Education Certificate and a Bhutanese bachelor's degree.",
@@ -829,6 +848,7 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     code: "MM",
     name: "Myanmar",
     demonym: "Myanmar",
+    currency: "MMK",
     intro: [
       "Students from Myanmar can study at any Australian university. A first year costs roughly AUD 40,000 to 75,000 all in, and the visa is the subclass 500. Since the 2021 military takeover, banking restrictions and document access have made applications from Myanmar harder to put together, and visa scrutiny is high.",
       "The parts specific to Myanmar are proving a source of funds through a banking system under sanctions and capital controls, getting academic documents certified, and a Genuine Student statement that case officers will read closely.",
@@ -889,6 +909,7 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     code: "MN",
     name: "Mongolia",
     demonym: "Mongolian",
+    currency: "MNT",
     intro: [
       "Mongolian students can study at any Australian university. A first year costs roughly AUD 40,000 to 75,000 all in, and the visa is the subclass 500. Mongolia is a small but growing source of students, with a strong link to Australia through the mining and resources sector.",
       "Not much is unusual for Mongolian applicants. The main points are how universities read the secondary school certificate and a Mongolian bachelor's degree, English evidence, and documenting a source of funds.",
@@ -949,6 +970,7 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     code: "CO",
     name: "Colombia",
     demonym: "Colombian",
+    currency: "COP",
     intro: [
       "Colombian students can study at any Australian university, and Colombia is now one of Australia's largest sources of international students. A first year of a bachelor's or master's costs roughly AUD 40,000 to 75,000 all in, and the visa is the subclass 500. Most Colombians, though, come for English-language or vocational courses rather than a degree, and the visa steps differ a little for those.",
       "The parts specific to Colombia are the strong pull toward English and vocational study combined with part-time work, how universities read the Bachiller and a Colombian professional degree, and a Genuine Student statement that has to explain the study choice convincingly.",
@@ -1009,6 +1031,7 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     code: "BR",
     name: "Brazil",
     demonym: "Brazilian",
+    currency: "BRL",
     intro: [
       "Brazilian students can study at any Australian university, and Brazil is one of Australia's largest sources of international students. A first year of a bachelor's or master's costs roughly AUD 40,000 to 75,000 all in, and the visa is the subclass 500. As with Colombia, most Brazilians come for English-language or vocational courses rather than a degree.",
       "The parts specific to Brazil are the pull toward English and vocational study with part-time work, how universities read the Ensino Medio certificate and a Brazilian bachelor's degree, and a Genuine Student statement that explains the study choice.",
@@ -1069,6 +1092,7 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     code: "KE",
     name: "Kenya",
     demonym: "Kenyan",
+    currency: "KES",
     intro: [
       "Kenyan students can study at any Australian university. A first year costs roughly AUD 40,000 to 75,000 all in, and the visa is the subclass 500. Kenya is a growing African source market for Australia, and financial evidence is the part of the application that needs the most work.",
       "The parts specific to Kenya are the close look at source of funds, how universities read the KCSE and a Kenyan bachelor's degree, and a Genuine Student statement that connects the course to your plans.",
@@ -1129,6 +1153,7 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     code: "NG",
     name: "Nigeria",
     demonym: "Nigerian",
+    currency: "NGN",
     intro: [
       "Nigerian students can study at any Australian university. A first year costs roughly AUD 40,000 to 75,000 all in, and the visa is the subclass 500. Nigeria is one of Australia's fastest-growing African source markets, and the student visa has a higher refusal rate for Nigerian applicants than the global average, almost always over financial evidence.",
       "The parts specific to Nigeria are the close look at source of funds and sponsors, how universities read WASSCE and a Nigerian bachelor's degree, and a Genuine Student statement that stands up to scrutiny.",
@@ -1189,6 +1214,7 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     code: "KR",
     name: "South Korea",
     demonym: "South Korean",
+    currency: "KRW",
     intro: [
       "South Korean students can study at any Australian university. A first year costs roughly AUD 40,000 to 80,000 all in, and the visa is the subclass 500. South Korea has long sent students to Australia, split between English-language and vocational courses and full degrees, and it is treated as a lower-risk country for the student visa.",
       "Not much is unusual for South Korean applicants. The main points are how universities read a Korean high school diploma and a Korean bachelor's degree, English evidence, and the choice between applying directly or through an agent.",
@@ -1249,6 +1275,7 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     code: "JP",
     name: "Japan",
     demonym: "Japanese",
+    currency: "JPY",
     intro: [
       "Japanese students can study at any Australian university. A first year of a degree costs roughly AUD 40,000 to 80,000 all in, and the visa is the subclass 500. Most Japanese students in Australia are on English-language courses or one or two semester exchanges rather than full degrees, and Japan is treated as a low-risk country for the student visa, so the evidence requirements are among the lightest.",
       "Not much is unusual for Japanese applicants. The main points are how universities read a Japanese high school diploma and a Japanese bachelor's degree, English evidence, and, for shorter stays, whether a study visa or a working holiday visa fits better.",
@@ -1309,6 +1336,7 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     code: "TW",
     name: "Taiwan",
     demonym: "Taiwanese",
+    currency: "TWD",
     intro: [
       "Taiwanese students can study at any Australian university. A first year of a degree costs roughly AUD 40,000 to 80,000 all in, and the visa is the subclass 500. Taiwan is a steady, mid-sized source of students, split between full degrees, English-language courses, and working holidays, and it is treated as a low-risk country for the student visa.",
       "Not much is unusual for Taiwanese applicants. The main points are how universities read a Taiwanese senior high school diploma and a Taiwanese bachelor's degree, English evidence, and, for shorter stays, whether a study visa or a working holiday visa fits better.",
@@ -1369,6 +1397,7 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     code: "HK",
     name: "Hong Kong",
     demonym: "Hong Kong",
+    currency: "HKD",
     intro: [
       "Students from Hong Kong can study at any Australian university, and Hong Kong is a long-standing, sizeable source of students, most of them in full bachelor's and master's degrees. A first year costs roughly AUD 40,000 to 80,000 all in, and the visa is the subclass 500. Hong Kong is treated as a low-risk country for the student visa.",
       "Not much is unusual for applicants from Hong Kong. The main points are how universities read the Hong Kong Diploma of Secondary Education, which most take directly, and a Hong Kong bachelor's degree, plus English evidence.",

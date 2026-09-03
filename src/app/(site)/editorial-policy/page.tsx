@@ -1,11 +1,13 @@
 import { LegalPage } from "@/components/site/LegalPage";
+import { pageMetadata } from "@/lib/page-metadata";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Editorial Policy",
   description:
     "How Where To Apply sources facts, verifies them, handles corrections, uses AI assistance, and keeps advertising separate from editorial.",
-  alternates: { canonical: "/editorial-policy" },
-};
+  path: "/editorial-policy",
+  type: "website",
+});
 
 export default function EditorialPolicyPage() {
   return (

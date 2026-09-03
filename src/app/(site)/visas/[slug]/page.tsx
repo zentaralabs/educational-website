@@ -18,6 +18,8 @@ import {
   listPublishedVisaSlugs,
 } from "@/lib/queries/public-visas";
 import { VISA_CATEGORY_LABELS } from "@/lib/visa-categories";
+import { JsonLd } from "@/lib/json-ld";
+import { composeTitle, pageMetadata } from "@/lib/page-metadata";
 
 export const revalidate = 3600;
 
@@ -34,21 +36,28 @@ export async function generateMetadata({
   const { slug } = await params;
   const visa = await getPublishedVisa(slug);
   if (!visa) return {};
-  const title = `${visa.name} (Subclass ${visa.code}): Eligibility, ${
-    visa.is_points_tested ? "Points & Cost" : "Requirements & Cost"
-  } ${SITE_YEAR}`;
+  // Lead with "Subclass NNN" — that, not the Department's full official name,
+  // is what people type. The old title spent its first 55 characters on
+  // "Skilled Employer Sponsored Regional (Provisional) visa" and pushed the
+  // subclass number out of the visible part of the snippet entirely.
+  const title = composeTitle(
+    `Subclass ${visa.code} Visa`,
+    [
+      `Eligibility, ${visa.is_points_tested ? "Points" : "Requirements"} & Cost ${SITE_YEAR}`,
+      `Eligibility & Cost ${SITE_YEAR}`,
+      `${SITE_YEAR} Guide`,
+    ],
+  );
   const description =
     visa.short_description ??
-    visa.summary?.slice(0, 155) ??
+    visa.summary ??
     `${visa.name} (subclass ${visa.code}): who it is for, eligibility, cost, processing time, and the pathway to permanent residence.`;
-  const url = `/visas/${slug}`;
-  return {
+  return pageMetadata({
     title,
     description,
-    alternates: { canonical: url },
-    openGraph: { title, description, url, type: "article" },
-    twitter: { card: "summary_large_image", title, description },
-  };
+    path: `/visas/${slug}`,
+    type: "article",
+  });
 }
 
 function Fact({ label, value }: { label: string; value: string | null }) {
@@ -95,11 +104,7 @@ export default async function VisaPage({
   return (
     <main className="mx-auto w-full max-w-2xl px-6 pt-8 pb-16">
       {jsonLdBlocks.map((block, i) => (
-        <script
-          key={i}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(block) }}
-        />
+        <JsonLd key={i} data={block} />
       ))}
 
       <Breadcrumbs items={breadcrumbs} />

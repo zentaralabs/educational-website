@@ -13,6 +13,8 @@ import {
 } from "@/lib/queries/public-blog-posts";
 import { listPageCanonical } from "@/lib/list-page-metadata";
 import { readingMinutesFromWords } from "@/lib/reading";
+import { JsonLd } from "@/lib/json-ld";
+import { pageMetadata } from "@/lib/page-metadata";
 
 export const revalidate = 3600;
 
@@ -29,9 +31,14 @@ export async function generateMetadata({
   });
 
   return {
-    title: "Study in Australia Blog: Visa, Fee & Admissions News",
-    description:
-      "News and analysis for international students bound for Australia: student visa changes, fee and deadline updates, and policy shifts, with every claim dated and sourced.",
+    ...pageMetadata({
+      title: "Study in Australia Blog: Visa & Admissions News",
+      description:
+        "News and analysis for international students bound for Australia: student visa changes, fee and deadline updates, and policy shifts, with every claim dated and sourced.",
+      path: "/blog",
+      type: "website",
+    }),
+    // `listPageCanonical` owns canonical + robots for filtered/paginated views.
     ...canonical,
     alternates: {
       ...canonical.alternates,
@@ -83,22 +90,12 @@ export default async function BlogIndexPage({
 
   return (
     <main className="mx-auto w-full max-w-4xl px-6 pt-8 pb-16">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd(breadcrumbs)) }}
-      />
+      <JsonLd data={breadcrumbJsonLd(breadcrumbs)} />
       {showListSchema && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(
-              itemListJsonLd({
+        <JsonLd data={itemListJsonLd({
                 name: "Study in Australia: news and analysis",
                 items: rows.map((p) => ({ path: `/blog/${p.slug}`, name: p.title })),
-              }),
-            ),
-          }}
-        />
+              })} />
       )}
 
       <Breadcrumbs items={breadcrumbs} />

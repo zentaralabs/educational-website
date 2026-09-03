@@ -16,6 +16,8 @@ import {
 import { formatCurrency } from "@/lib/format";
 import { SITE_URL, SITE_YEAR } from "@/lib/site-config";
 import { listCollectionUniversities } from "@/lib/queries/public-collections";
+import { JsonLd } from "@/lib/json-ld";
+import { composeTitle, pageMetadata } from "@/lib/page-metadata";
 
 export const revalidate = 3600;
 
@@ -38,16 +40,17 @@ export async function generateMetadata({
   const s = stateBySlug(state);
   if (!s) return {};
   const name = withArticle(s.code, s.name);
-  const title = `Universities in ${name} for International Students (${SITE_YEAR})`;
+  const title = composeTitle(`Universities in ${name} ${SITE_YEAR}`, [
+    "For International Students",
+    "International Students",
+  ]);
   const description = `Every university in ${name}, with international tuition, English requirements, intakes, and whether the campus counts as regional for skilled-migration points.`;
-  const url = `/universities/in/${state}`;
-  return {
+  return pageMetadata({
     title,
     description,
-    alternates: { canonical: url },
-    openGraph: { title, description, url, type: "website" },
-    twitter: { card: "summary_large_image", title, description },
-  };
+    path: `/universities/in/${state}`,
+    type: "website",
+  });
 }
 
 export default async function UniversitiesByStatePage({
@@ -111,11 +114,7 @@ export default async function UniversitiesByStatePage({
   return (
     <main className="mx-auto w-full max-w-2xl px-6 pt-8 pb-16">
       {jsonLd.map((block, i) => (
-        <script
-          key={i}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(block) }}
-        />
+        <JsonLd key={i} data={block} />
       ))}
 
       <Breadcrumbs items={breadcrumbs} />

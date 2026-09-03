@@ -15,6 +15,8 @@ import {
   isProgramIndexable,
   resolveProgramSlugById,
 } from "@/lib/queries/public-programs";
+import { JsonLd } from "@/lib/json-ld";
+import { composeTitle, pageMetadata } from "@/lib/page-metadata";
 
 const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
@@ -81,23 +83,25 @@ export async function generateMetadata({
   const program = await loadProgram(slug, programSlug);
   if (!program) return {};
 
-  const title = `${program.name}, ${program.university!.name}: Fees & Entry Requirements ${SITE_YEAR}`;
+  const title = composeTitle(`${program.name}, ${program.university!.name}`, [
+    `Fees & Entry Requirements ${SITE_YEAR}`,
+    `Fees & Entry ${SITE_YEAR}`,
+    `${SITE_YEAR}`,
+  ]);
   const description = `${program.name} at ${program.university!.name} for international students: tuition fees, entry requirements, English test score, duration${program.subject?.name ? `, and how it fits the ${program.subject.name} field` : ""}.`;
-  const url = `/universities/${slug}/programs/${program.slug}`;
 
-  return {
+  return pageMetadata({
     title,
     description,
-    alternates: { canonical: url },
-    openGraph: { title, description, url, type: "website" },
-    twitter: { card: "summary_large_image", title, description },
+    path: `/universities/${slug}/programs/${program.slug}`,
+    type: "website",
     // Index only programs with real sourced content of their own — a parsed
     // curriculum or an "About this program" description of 110+ words (see
     // `isProgramIndexable`). The short templated long-tail cards stay
     // noindex, still live for users and internal links, pending a later
     // verification wave. See PROJECT_STATUS "Description pass".
     robots: { index: isProgramIndexable(program), follow: true },
-  };
+  });
 }
 
 export default async function ProgramDetailPage({
@@ -150,14 +154,8 @@ export default async function ProgramDetailPage({
 
   return (
     <main className="mx-auto w-full max-w-3xl px-6 pt-8 pb-16">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd(breadcrumbs)) }}
-      />
+      <JsonLd data={jsonLd} />
+      <JsonLd data={breadcrumbJsonLd(breadcrumbs)} />
 
       <Breadcrumbs items={breadcrumbs} />
 

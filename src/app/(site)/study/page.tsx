@@ -2,21 +2,39 @@ import Link from "next/link";
 import { ArrowUpRightIcon } from "@/components/site/icons";
 import { formatCurrency } from "@/lib/format";
 import { listPublishedSubjects } from "@/lib/queries/public-subjects";
+import { pageMetadata } from "@/lib/page-metadata";
+import { Breadcrumbs } from "@/components/site/Breadcrumbs";
+import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
+import { itemListJsonLd } from "@/lib/itemlist-jsonld";
+import { JsonLd } from "@/lib/json-ld";
 
 export const revalidate = 3600;
 
-export const metadata = {
-  title: "Study in Australia by Subject: Programs, Costs & Entry",
+export const metadata = pageMetadata({
+  title: "Study in Australia by Subject: Courses, Cost & Entry",
   description:
     "Every field of study at Australian universities for international students: how many programs, how many universities, cheapest tuition, entry requirements, and the pathway to permanent residence.",
-  alternates: { canonical: "/study" },
-};
+  path: "/study",
+  type: "website",
+});
 
 export default async function StudyIndexPage() {
   const subjects = await listPublishedSubjects();
 
+  const breadcrumbs = [{ label: "Home", href: "/" }, { label: "Subjects" }];
+
   return (
     <main className="mx-auto w-full max-w-3xl px-6 pt-8 pb-16">
+      <JsonLd data={breadcrumbJsonLd(breadcrumbs)} />
+      <JsonLd
+        data={itemListJsonLd({
+          name: "Fields of study at Australian universities",
+          items: subjects.map((s) => ({ path: `/study/${s.slug}`, name: s.name })),
+        })}
+      />
+
+      <Breadcrumbs items={breadcrumbs} />
+
       <h1 className="font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
         Study by subject in Australia
       </h1>

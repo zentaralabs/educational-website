@@ -1,14 +1,16 @@
 import { LegalPage } from "@/components/site/LegalPage";
+import { pageMetadata } from "@/lib/page-metadata";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Privacy Policy",
   description: "How Where To Apply collects, uses, and protects visitor data.",
-  alternates: { canonical: "/privacy" },
-};
+  path: "/privacy",
+  type: "website",
+});
 
 export default function PrivacyPage() {
   return (
-    <LegalPage title="Privacy Policy" updated="August 20, 2026">
+    <LegalPage title="Privacy Policy" updated="September 3, 2026">
       <p>
         This policy explains what data Where To Apply (&ldquo;we&rdquo;,
         &ldquo;us&rdquo;) collects when you visit this site, and how it&rsquo;s
@@ -37,18 +39,76 @@ export default function PrivacyPage() {
 
       <h2>Cookies</h2>
       <p>
-        Essential cookies (e.g. remembering your consent choice) are set
-        regardless. Analytics cookies are only set if you accept them via
-        the consent banner. You can withdraw consent at any time by clearing
-        your browser&rsquo;s cookies for this site.
+        Your consent choice itself is stored in your browser&rsquo;s local
+        storage, not in a cookie, and never leaves your device. Analytics
+        cookies (Google Analytics 4) are set only if you accept them via the
+        consent banner. You can withdraw consent at any time by clearing this
+        site&rsquo;s data in your browser, which brings the banner back on
+        your next visit.
+      </p>
+      <p>
+        If advertising is introduced, advertising cookies will be treated the
+        same way: not set until you have accepted them, and, for visitors in
+        the UK and EEA, gathered through a consent tool that meets the
+        applicable consent requirements.
       </p>
 
       <h2>Advertising</h2>
       <p>
-        This site may display ads served by third-party ad networks (such as
-        Google AdSense), which may use cookies to serve ads based on your
-        visits to this and other sites. You can opt out of personalized
-        advertising through your ad settings with the relevant provider.
+        This site may display ads served by third-party ad networks. Where
+        those ads are served by Google AdSense, the following applies.
+      </p>
+      <ul>
+        <li>
+          Third-party vendors, including Google, use cookies to serve ads
+          based on your prior visits to this website or other websites.
+        </li>
+        <li>
+          Google&rsquo;s use of advertising cookies enables it and its
+          partners to serve ads to you based on your visit to this site
+          and/or other sites on the internet.
+        </li>
+        <li>
+          You can opt out of personalised advertising by visiting{" "}
+          <a
+            href="https://www.google.com/settings/ads"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            Google Ads Settings
+          </a>
+          . You can opt out of a third-party vendor&rsquo;s use of cookies for
+          personalised advertising at{" "}
+          <a
+            href="https://www.aboutads.info/choices/"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            aboutads.info
+          </a>
+          .
+        </li>
+        <li>
+          More detail on how Google handles data from sites that use its
+          services is at{" "}
+          <a
+            href="https://policies.google.com/technologies/partner-sites"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            How Google uses information from sites or apps that use our
+            services
+          </a>
+          .
+        </li>
+      </ul>
+      <p>
+        No advertising is served on this site at the time of writing. If and
+        when it is, ads will be labelled and kept off the pages people use to
+        make a decision &mdash; calculators, verified data tables, and visa
+        and deadline reference pages. Advertising never influences which
+        universities, scholarships, or providers appear, or in what order; see
+        our <a href="/editorial-policy">editorial policy</a>.
       </p>
 
       <h2>Third-party links</h2>

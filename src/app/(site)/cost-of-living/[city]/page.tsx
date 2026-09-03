@@ -16,6 +16,8 @@ import { faqJsonLd } from "@/lib/faq";
 import { formatCurrency } from "@/lib/format";
 import { listPublishedUniversityOptions } from "@/lib/queries/public-universities";
 import { SITE_YEAR } from "@/lib/site-config";
+import { JsonLd } from "@/lib/json-ld";
+import { composeTitle, pageMetadata } from "@/lib/page-metadata";
 
 export const revalidate = 3600;
 
@@ -31,15 +33,17 @@ export async function generateMetadata({
   const { city } = await params;
   const c = getCity(city);
   if (!c) return {};
-  const title = `Cost of living in ${c.name} for international students ${SITE_YEAR}`;
+  const title = composeTitle(`Cost of Living in ${c.name} ${SITE_YEAR}`, [
+    "International Student Budget",
+    "Student Budget",
+  ]);
   const description = `What it costs to live in ${c.name} as an international student: rent, food, transport, and bills, with an estimated annual total of ${formatCurrency(annualLow(c), "AUD")} to ${formatCurrency(annualHigh(c), "AUD")} sharing accommodation.`;
-  return {
+  return pageMetadata({
     title,
     description,
-    alternates: { canonical: `/cost-of-living/${city}` },
-    openGraph: { title, description, url: `/cost-of-living/${city}`, type: "article" },
-    twitter: { card: "summary_large_image", title, description },
-  };
+    path: `/cost-of-living/${city}`,
+    type: "article",
+  });
 }
 
 function Row({ label, value }: { label: string; value: string }) {
@@ -79,14 +83,8 @@ export default async function CityCostPage({
 
   return (
     <main className="mx-auto w-full max-w-2xl px-6 pt-8 pb-16">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd(breadcrumbs)) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(c.faq)) }}
-      />
+      <JsonLd data={breadcrumbJsonLd(breadcrumbs)} />
+      <JsonLd data={faqJsonLd(c.faq)} />
 
       <Breadcrumbs items={breadcrumbs} />
 

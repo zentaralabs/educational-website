@@ -2,15 +2,18 @@ import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { QuizForm } from "@/components/site/QuizForm";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import { listQuizOptions } from "@/lib/queries/public-quiz";
+import { JsonLd } from "@/lib/json-ld";
+import { pageMetadata } from "@/lib/page-metadata";
 
 export const revalidate = 3600;
 
-export const metadata = {
-  title: "Which Australian University Is Right for You? (Quiz)",
+export const metadata = pageMetadata({
+  title: "Australian University Quiz: Which One Fits You?",
   description:
     "Match yourself to real Australian universities by degree level, field of study, budget, IELTS, city, institution type, regional campus, and scholarships.",
-  alternates: { canonical: "/quiz" },
-};
+  path: "/quiz",
+  type: "website",
+});
 
 export default async function QuizPage() {
   const { degreeLevels, subjects, cities } = await listQuizOptions();
@@ -19,10 +22,7 @@ export default async function QuizPage() {
 
   return (
     <main className="mx-auto w-full max-w-2xl px-6 pt-8 pb-16">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd(breadcrumbs)) }}
-      />
+      <JsonLd data={breadcrumbJsonLd(breadcrumbs)} />
       <Breadcrumbs items={breadcrumbs} />
 
       <h1 className="font-display text-3xl font-semibold text-ink text-balance">

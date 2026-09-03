@@ -5,6 +5,26 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
 import { createClient } from "@/lib/supabase/client";
 
+/**
+ * `?next=` decides where a successful sign-in lands, and it comes from the
+ * URL, so it is attacker-controlled: `/login?next=https://evil.example` (or
+ * the protocol-relative `//evil.example`) would otherwise turn this form into
+ * an open redirect on a domain the victim just typed a password into — the
+ * standard setup for a credential-phishing hop.
+ *
+ * Only a single-slash, same-origin path is allowed through; anything else
+ * falls back to the admin dashboard.
+ */
+function safeNext(raw: string | null): string {
+  if (!raw) return "/admin";
+  // Reject absolute URLs, protocol-relative URLs, and backslash variants that
+  // some browsers normalise to "//".
+  if (!raw.startsWith("/") || raw.startsWith("//") || raw.startsWith("/\\")) {
+    return "/admin";
+  }
+  return raw;
+}
+
 export function LoginForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -31,8 +51,7 @@ export function LoginForm() {
       return;
     }
 
-    const next = searchParams.get("next") || "/admin";
-    router.push(next);
+    router.push(safeNext(searchParams.get("next")));
     router.refresh();
   }
 
