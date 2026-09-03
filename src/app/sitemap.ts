@@ -9,6 +9,7 @@ import { listPublishedGuideSlugsForSitemap } from "@/lib/queries/public-guides";
 import { AU_STATES } from "@/lib/australia";
 import { DEADLINE_PAGE_INDEXED } from "@/lib/deadline-detail";
 import { INTAKE_HUB_SLUGS } from "@/lib/intakes";
+import { APPLY_GUIDE_SLUGS } from "@/lib/apply-guides";
 import { ORIGIN_COUNTRY_SLUGS } from "@/lib/origin-countries";
 import { listPublishedScholarshipSlugsForSitemap } from "@/lib/queries/public-scholarships";
 import { listPublishedSubjects } from "@/lib/queries/public-subjects";
@@ -231,6 +232,17 @@ async function buildDynamicEntries(): Promise<MetadataRoute.Sitemap> {
     }),
   );
 
+  // Per-country "how to apply" deep pages (/international/{country}/how-to-apply),
+  // config-driven (apply-guides.ts), only for countries with a verified guide.
+  const applyGuideEntries: MetadataRoute.Sitemap = APPLY_GUIDE_SLUGS.map(
+    (slug) => ({
+      url: `${SITE_URL}/international/${slug}/how-to-apply`,
+      lastModified: CONFIG_LAST_MODIFIED,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    }),
+  );
+
   const stateEntries: MetadataRoute.Sitemap = AU_STATES.map((s) => ({
     url: `${SITE_URL}/universities/in/${s.slug}`,
     lastModified: CONFIG_LAST_MODIFIED,
@@ -264,6 +276,7 @@ async function buildDynamicEntries(): Promise<MetadataRoute.Sitemap> {
     ...subjectEntries,
     ...cityEntries,
     ...originCountryEntries,
+    ...applyGuideEntries,
     ...stateEntries,
     ...programEntries,
   ];

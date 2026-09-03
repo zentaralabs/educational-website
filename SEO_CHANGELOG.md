@@ -10,6 +10,39 @@ Redirects · Canonical/sitemap/metadata changes · Testing done.**
 
 ---
 
+## 2026-09-03 · Source-country "how to apply" deep pages (Nepal, India, Pakistan)
+
+- **Change:** New route `/international/{country}/how-to-apply` for the three
+  priority source countries. Config in `src/lib/apply-guides.ts` (`APPLY_GUIDES`,
+  keyed by country slug), route `src/app/(site)/international/[country]/how-to-apply/page.tsx`.
+  Each page is the procedural companion to the `/international/{country}`
+  overview: 8-9 ordered steps, a grouped documents checklist, a working-back
+  timeline for a February intake, country-specific refusal pitfalls, and a
+  5-item FAQ. Only countries with a verified guide get a page (route + sitemap
+  are gated on `APPLY_GUIDE_SLUGS`). Phase 1 content spike, item 2.
+- **Affected routes:** new — `/international/nepal/how-to-apply`,
+  `/international/india/how-to-apply`, `/international/pakistan/how-to-apply`.
+  The matching `/international/{country}` overview pages gain one internal CTA
+  link (conditional on a guide existing); no other existing pages change.
+- **SEO impact:** LOW-MED (3 new indexable pages targeting "how to apply to
+  australian university from {country}"; no existing URL changes).
+- **Redirects:** none.
+- **Canonical / sitemap / metadata:** each page self-canonical; sitemap adds
+  the 3 via `APPLY_GUIDE_SLUGS` (priority 0.7); Article + BreadcrumbList +
+  FAQPage JSON-LD. `CONFIG_LAST_MODIFIED` already 2026-09-03.
+- **Files:** `src/lib/apply-guides.ts` (new),
+  `src/app/(site)/international/[country]/how-to-apply/page.tsx` (new),
+  `src/app/sitemap.ts`, `src/app/(site)/international/[country]/page.tsx`.
+- **Testing:** `next build` passes (3 pages prerender as SSG); `tsc --noEmit`
+  + `eslint` clean; zero em/en dashes; all 3 render locally with correct
+  steps/checklist/timeline/FAQ, breadcrumb, and 4 JSON-LD blocks;
+  `/international/vietnam/how-to-apply` correctly 404s; CTA link shows on the
+  Nepal/Pakistan overview pages and not Vietnam; sitemap total 1202 -> 1206.
+- **Post-deploy:** POST `/api/revalidate`, then submit the 3 URLs to GSC URL
+  Inspection + Bing and resubmit the sitemap.
+
+---
+
 ## 2026-09-03 · Per-intake deadline hub: `/deadlines/february-2027-intake`
 
 - **Change:** New editorial landing page wrapping the live per-university
