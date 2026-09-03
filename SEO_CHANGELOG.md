@@ -10,6 +10,41 @@ Redirects · Canonical/sitemap/metadata changes · Testing done.**
 
 ---
 
+## 2026-09-03 · "Documents checklist for an Australian student visa" guide (GROWTH_PLAN "C")
+
+- **Change:** New guide `documents-checklist-for-an-australian-student-visa`
+  (category `country-guide`, AU). The last non-overlapping guide topic: a
+  category-by-category common-core document list for the subclass 500, framed
+  around the fact that there is no universal list (the Home Affairs Document
+  Checklist Tool builds it from passport country + provider + evidence level).
+  1,347 words, GFM sub-sections for identity / enrolment / Genuine Student /
+  financial / English / health / character / under-18 / family, plus a
+  plain-text FAQ (6 question headings). Ties together the proving-funds, GS,
+  OSHC, and qualifications-recognition guides.
+- **DB row written + revalidated live**; seed backup added to
+  `seed_visa_content.mjs`.
+- **Internal links:** added to `related-content.ts` (`GUIDE_LABEL` +
+  `GUIDE_RELATED` entry, plus slotted into the student-500, proving-funds,
+  GS-examples, and without-an-agent related blocks) and into the
+  `/international/{country}/how-to-apply` page's related array.
+- **Affected routes:** new — `/guides/documents-checklist-for-an-australian-student-visa`.
+  student-500 + 3 guides + 3 how-to-apply pages change one related link.
+- **SEO impact:** LOW-MED (one new indexable page targeting "documents
+  required for australia student visa" / "student visa checklist australia").
+- **Files:** `scripts/seed_visa_content.mjs` (new entry),
+  `src/lib/related-content.ts`, `src/app/(site)/international/[country]/how-to-apply/page.tsx`.
+- **Testing:** `tsc` + `eslint` clean; zero em dashes (`check_em_dashes.mjs`);
+  no FAQ markdown-link leak; every referenced slug validated vs DB; live page
+  renders all sections + FAQPage schema + 200.
+- **Fact-check:** verified against the Home Affairs subclass 500 "Step by step"
+  and Genuine Student pages on 2026-09-03 — the Document Checklist Tool and its
+  twice-yearly (31 Mar / 30 Sep) update cadence, the "decision-ready"
+  expectation, the 150-word GS response cap, the AUD 2,500 charge (non-refunded
+  on refusal), the AUD 29,710 living-cost figure, CoE-valid-at-decision.
+- **Post-deploy:** POST `/api/revalidate` (done); submit URL to GSC + Bing.
+
+---
+
 ## 2026-09-03 · Strengthen subject pages + subject-aware internal links (GROWTH_PLAN "B")
 
 - **Why:** GSC shows `/study/law` drawing impressions for "law degree australia"

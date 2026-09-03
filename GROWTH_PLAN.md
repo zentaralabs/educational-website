@@ -146,10 +146,17 @@ specific Nepal/India → Australia → work/PR query. Depth over breadth.
       curated subjects got subject-aware related lists. `/best/regional-...`
       and `/best/affordable-...` now link their explainer guide (regional +
       cost cannibalisation loops closed). SEO_CHANGELOG 2026-09-03.
-- [ ] **C: fill the one remaining non-overlapping guide gap** — "documents
-      checklist for the student visa". Gradual.
+- [x] **C: documents checklist guide — 2026-09-03.**
+      `/guides/documents-checklist-for-an-australian-student-visa` (DB row +
+      seed backup). Category-by-category common-core list framed around the
+      Document Checklist Tool. Wired into related-content + the how-to-apply
+      pages. This closes the guide build-out: **34 → 35 guides, and the
+      remaining obvious topics all overlap existing ones. Stop adding guides.**
 - [ ] Keep Track A news cadence: invitation rounds (`add-round` skill), MD
       changes, fee changes — publish within 24–48h.
+- [ ] **The only lever left that moves position 38 → page 1 is BACKLINKS.**
+      Work `BACKLINKS.md` (directories + Connectively/Qwoted journalist
+      requests). Owner: Roman.
 
 ### GSC snapshot 2026-09-03 (why the pivot)
 

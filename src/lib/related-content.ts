@@ -26,6 +26,7 @@ const GUIDE_LABEL: Record<string, string> = {
   "choosing-a-regional-area-to-study-in-australia": "Studying in regional Australia",
   "commonwealth-supported-places-explained": "Commonwealth Supported Places (CSP)",
   "cricos-and-course-accreditation-explained": "CRICOS and AQF explained",
+  "documents-checklist-for-an-australian-student-visa": "Student visa documents checklist",
   "february-vs-july-intake-in-australia": "February or July intake",
   "first-month-in-australia-international-student-checklist": "Your first month in Australia",
   "genuine-student-requirement-how-to-write-your-statement":
@@ -174,8 +175,16 @@ const GUIDE_RELATED: Record<string, RelatedLink[]> = {
   "genuine-student-statement-examples": [
     g("genuine-student-requirement-how-to-write-your-statement"),
     g("proving-funds-for-an-australian-student-visa"),
-    g("study-gaps-and-the-australian-student-visa"),
+    g("documents-checklist-for-an-australian-student-visa"),
     g("what-to-do-if-your-student-visa-is-refused"),
+    v("student-500"),
+    COUNTRY_HUB,
+  ],
+  "documents-checklist-for-an-australian-student-visa": [
+    g("proving-funds-for-an-australian-student-visa"),
+    g("genuine-student-requirement-how-to-write-your-statement"),
+    g("oshc-health-cover-for-international-students"),
+    g("applying-to-australian-universities-without-an-agent"),
     v("student-500"),
     COUNTRY_HUB,
   ],
@@ -214,11 +223,11 @@ const GUIDE_RELATED: Record<string, RelatedLink[]> = {
     v("student-500"),
   ],
   "proving-funds-for-an-australian-student-visa": [
-    g("real-cost-of-studying-in-australia"),
     g("moving-money-to-australia-for-the-student-visa"),
+    g("documents-checklist-for-an-australian-student-visa"),
     g("genuine-student-requirement-how-to-write-your-statement"),
+    g("real-cost-of-studying-in-australia"),
     v("student-500"),
-    COST_CALC,
     COUNTRY_HUB,
   ],
   "moving-money-to-australia-for-the-student-visa": [
@@ -277,7 +286,7 @@ const GUIDE_RELATED: Record<string, RelatedLink[]> = {
   ],
   "applying-to-australian-universities-without-an-agent": [
     g("getting-your-qualifications-recognised-in-australia"),
-    g("genuine-student-requirement-how-to-write-your-statement"),
+    g("documents-checklist-for-an-australian-student-visa"),
     g("check-australian-university-student-visa-priority"),
     applyFrom("nepal", "Nepal"),
     applyFrom("india", "India"),
@@ -380,9 +389,9 @@ const GUIDE_RELATED: Record<string, RelatedLink[]> = {
 const VISA_RELATED: Record<string, RelatedLink[]> = {
   "student-500": [
     g("genuine-student-requirement-how-to-write-your-statement"),
+    g("documents-checklist-for-an-australian-student-visa"),
     g("proving-funds-for-an-australian-student-visa"),
     g("working-while-you-study-in-australia"),
-    g("applying-to-australian-universities-without-an-agent"),
     FEB_INTAKE,
     v("temporary-graduate-485"),
   ],
