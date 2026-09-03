@@ -190,6 +190,90 @@ const guides = [
     ],
   },
   {
+    slug: "genuine-student-statement-examples",
+    title: "Genuine Student statement examples (illustrative)",
+    category: "country-guide",
+    country: "AU",
+    excerpt:
+      "Four worked examples of Genuine Student responses for common situations, with notes on why each one works. Illustrative only: copying a sample is a known red flag, so write yours in your own words.",
+    content: `The [Genuine Student requirement](/guides/genuine-student-requirement-how-to-write-your-statement) replaced the Genuine Temporary Entrant test for [subclass 500](/visas/student-500) applications lodged on or after 23 March 2024. Inside the application form it is a set of short written responses, each capped at 150 words, that a case officer reads alongside your documents.
+
+The examples below are written for common situations. They are illustrative and fictional. Do not copy them. A statement that reads like a template with the nouns swapped, or one that matches a sibling's or an agent's wording, is a known red flag, and officers are trained to spot it. Use these to see what a specific, evidence-backed answer looks like, then write your own.
+
+## The four questions
+
+The form asks you to:
+
+1. Give details of your current circumstances, including ties to family, community, employment, and your economic situation.
+2. Explain why you want to study this course, at this provider, in Australia, and show you understand the course and what living and studying here involves.
+3. Explain how completing the course will benefit you.
+4. Add any other relevant information.
+
+There is a fifth question if you have held a student visa before or are applying in Australia from another visa. The department says it prefers answers in the form fields rather than an attached statement, and gives more weight to claims backed by evidence.
+
+## Example 1: career changer moving into IT
+
+*Question 2, why this course and provider.* Applicant has a commerce degree and three years in bank operations.
+
+> I want the Master of Information Technology at this university because its first eight units bring non-IT graduates to a common baseline in programming, databases, and systems before specialisation. About half of each intake enters without an IT background, which matches mine. I have completed the CS50 and Google IT Support courses to confirm the field suits me, and I have chosen the cybersecurity specialisation because my current employer, a bank, is expanding its security operations team and has told me in writing that this qualification would let me apply internally. I understand the course is 1.5 years full time, that I can work up to 48 hours a fortnight in session, and that Perth living costs run about AUD 30,000 a year.
+
+Why this works: it names the course structure, gives concrete proof of interest, ties the specialisation to a named employer with a letter, and shows the applicant has researched the work rules and living costs.
+
+## Example 2: direct progression in nursing
+
+*Question 1, current circumstances.* Applicant finished a Bachelor of Nursing at home last year and works in a public hospital.
+
+> I am 23 and live with my parents and younger brother in Kathmandu. Since graduating I have worked as a registered nurse in the medical ward of a government hospital, where my supervisor can confirm my role and dates. My father runs a pharmacy supply business that employs six people and will fund my study, with bank statements showing the account building over the last ten months. My mother and brother remain here, and my employer has offered to hold my position open, which I would return to as a more senior nurse. Nepal has a shortage of critical care nurses and no local master's in that specialty.
+
+Why this works: it is concrete about family, employment, and finances, points to evidence for each claim, and gives a real reason the course is not available at home. See [applying from Nepal](/international/nepal) for what else Nepali applicants need to prepare.
+
+## Example 3: explaining a study gap
+
+*Question 1 or the additional-information field.* Applicant finished a bachelor's four years ago.
+
+> Between finishing my Bachelor of Commerce in 2022 and now I worked full time as an accounts officer at a logistics company, with payslips and a reference letter covering the period. I did not study during this time because I was supporting my family after my father's illness and saving for tuition. That saving is the account history attached to this application. The work has shown me that I need formal data analytics skills to move from bookkeeping into a financial analyst role, which is why I am applying now rather than earlier.
+
+Why this works: it states what the applicant did during the gap, names the evidence, gives an honest reason, and connects the gap to the decision to study now. There is more on this in [study gaps and the student visa](/guides/study-gaps-and-the-australian-student-visa).
+
+## Example 4: a sideways or step-down move
+
+*Question 3, how the course benefits you.* Applicant holds a master's in mechanical engineering and is applying for a graduate diploma in project management.
+
+> I have a Master of Mechanical Engineering and six years designing HVAC systems. I am applying for the Graduate Diploma of Project Management, which sits below my current qualification level, because my last two roles have been project lead positions and my employer requires a formal project management credential for promotion to senior project manager. The diploma is the shortest recognised pathway to that credential. My employer's letter, attached, confirms the promotion is conditional on it.
+
+Why this works: it names the apparent problem directly, gives a specific professional reason, and backs it with an employer letter rather than leaving the officer to guess.
+
+## What separates these from a weak statement
+
+Every example above does the same things: it answers the exact question asked, it uses names and numbers instead of general praise for Australia, and every claim points to a document in the application. A weak statement talks about world-class education and a multicultural society, gives no verifiable detail, and leaves obvious questions unanswered.
+
+For the full method, including how to handle a previous refusal and how to keep your answers consistent with your [financial evidence](/guides/proving-funds-for-an-australian-student-visa), see the main [Genuine Student statement guide](/guides/genuine-student-requirement-how-to-write-your-statement). If your application has already been refused, read [what to do next](/guides/what-to-do-if-your-student-visa-is-refused).
+
+## Can I copy one of these examples?
+
+No. These are fictional and written to show structure, not to be submitted. Case officers read large volumes of these responses and are trained to recognise templated or shared wording. A statement that is not clearly in your own voice, or that matches another application, undermines the rest of your case. Write your own answers using your real course, employer, and circumstances.
+
+## Is there a word limit on the Genuine Student responses?
+
+Yes. The online form caps each response at 150 words. Answers must be in English. The department prefers you use the form fields rather than attaching a separate statement, so write concisely and put supporting detail into the documents you attach instead.
+
+## Do I need to attach a separate Genuine Student statement?
+
+Generally no. The department says it prefers responses entered directly in the application form. You still attach supporting documents, transcripts, employment evidence, bank statements, and any letters, and the assessment gives more weight to claims that the evidence backs up.
+
+## What if English is not my first language?
+
+Write the responses yourself in clear, simple English rather than paying someone to produce polished text that does not sound like you. A plain answer in your own words is more convincing than fluent wording that does not match your English test result or your interview, if you have one.
+
+## Where the facts here come from
+
+Every rule on this page, the 23 March 2024 start date, the four form questions, the 150-word limit, and the English-only requirement, is taken from the Department of Home Affairs Genuine Student requirement page, checked on the date shown above. Immigration rules change, so confirm the current position on the official page before you lodge.`,
+    sources: [
+      "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500/genuine-student-requirement",
+      "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
+    ],
+  },
+  {
     slug: "getting-a-skills-assessment-in-australia",
     title: "How to get a skills assessment for skilled migration",
     category: "country-guide",
