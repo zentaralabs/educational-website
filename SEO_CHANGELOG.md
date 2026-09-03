@@ -10,6 +10,43 @@ Redirects · Canonical/sitemap/metadata changes · Testing done.**
 
 ---
 
+## 2026-09-03 · Internal-linking pass + cannibalisation routing
+
+- **Change:** Rewrote `src/lib/related-content.ts`. Before: 17 of 34 published
+  guides had no `GUIDE_RELATED` entry, so half the guide library rendered no
+  "Keep reading" block and was an internal-link dead end. Now every guide,
+  every visa subclass, and every blog post has a 3-6 link related block with
+  descriptive anchors. Added `GUIDE_LABEL` entries for all 34 guides, new
+  constants (`JULY_INTAKE`, `DEADLINES`, `COST_CALC`, `REGIONAL_UNIS`,
+  `AFFORDABLE_UNIS`, per-country `applyFrom`), and fixed 3 stale blog slugs
+  in `BLOG_RELATED`.
+- **Cannibalisation routing** (documented in the file header + GROWTH_PLAN):
+  - Intake timing: `/deadlines/{feb,july}-2027-intake` are canonical. The
+    `february-vs-july-intake-in-australia` guide now links both hubs + the
+    calendar first (it is the decision page, the hubs hold the data).
+  - Regional study: `choosing-a-regional-area-to-study-in-australia` is
+    canonical for the concept; it and the 491/494 visa pages now link the
+    `/best/regional-...` collection as the "see the universities" companion.
+  - How to apply: `applying-to-australian-universities-without-an-agent` is
+    canonical for the generic process and now links the country hub + the
+    Nepal/India `how-to-apply` deep pages.
+- **Homepage `POPULAR` row:** dropped the two noindexed `/compare/{a}-vs-{b}`
+  links and two lower-priority `/best` collections; added the two intake
+  hubs, the regional collection, and the Nepal/India source-country pages.
+- **Affected routes:** no URLs change. Every guide/visa/blog detail page and
+  the homepage change which internal links they render.
+- **SEO impact:** MED (concentrates internal PageRank on the ~20 pages that
+  can rank; removes 17 dead-end pages; reduces signal-splitting on the intake
+  and regional clusters).
+- **Files:** `src/lib/related-content.ts`, `src/app/(site)/page.tsx`.
+- **Testing:** `next build` passes; `tsc` + `eslint` clean; zero em dashes;
+  every referenced guide/visa/blog slug validated against the DB; verified a
+  previously-dead-end guide (`february-vs-july-intake-in-australia`) now
+  renders a 6-link block routing to both intake hubs.
+- **Post-deploy:** POST `/api/revalidate` for the guide/blog/homepage tags.
+
+---
+
 ## 2026-09-03 · July 2027 intake deadline hub
 
 - **Change:** Second entry (`JULY_2027`) in `src/lib/intakes.ts`, cloned from
