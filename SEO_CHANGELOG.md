@@ -10,6 +10,32 @@ Redirects · Canonical/sitemap/metadata changes · Testing done.**
 
 ---
 
+## 2026-09-03 · Add 4 source-country pages: South Korea, Japan, Taiwan, Hong Kong
+
+- **Change:** 4 new entries in `src/lib/origin-countries.ts` (`south-korea`,
+  `japan`, `taiwan`, `hong-kong`). English pages targeting the English-searching
+  slice of those East Asian markets. Localised/translated pages were considered
+  and **rejected** (cuts against the English-research wedge; unrankable in-language
+  for a new domain; no i18n infra; maintenance multiplier). Revisit only if GSC
+  shows real non-English query demand in ~2–3 months.
+- **Affected routes:** new — `/international/south-korea`, `/international/japan`,
+  `/international/taiwan`, `/international/hong-kong`. Hub `/international` gains 4
+  list items. Nothing existing changed. (Sri Lanka was already covered.)
+- **SEO impact:** LOW-MED (new indexable pages, no change to existing URLs).
+- **Redirects:** none.
+- **Canonical / sitemap / metadata:** each page self-canonical via the shared
+  `[country]` route; sitemap auto-derives from `ORIGIN_COUNTRY_SLUGS` (now 23);
+  `CONFIG_LAST_MODIFIED` in `sitemap.ts` bumped to 2026-09-03. FAQ + Breadcrumb
+  JSON-LD render per the existing template.
+- **Files:** `src/lib/origin-countries.ts`, `src/app/sitemap.ts`.
+- **Testing:** `tsc --noEmit` + `eslint` clean; zero em/en dashes; all 4 pages
+  render locally with correct title/flag/sections and no console errors; all 4
+  appear in `/sitemap.xml`; hub lists 23.
+- **Post-deploy:** POST `/api/revalidate` (or full revalidate) so ISR picks up
+  the new routes + hub + sitemap, then resubmit the sitemap in GSC / Bing / Yandex.
+
+---
+
 ## 2026-08-30 · URL architecture decision: flat, Australia-only, no `/australia/` prefix
 
 - **Change:** Formalised the URL structure. Public routes stay **flat and
