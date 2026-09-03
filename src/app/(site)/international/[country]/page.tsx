@@ -66,7 +66,7 @@ export default async function OriginCountryPage({
 
   const related = [
     { href: "/universities", label: "Browse all Australian universities" },
-    { href: "/deadlines", label: "Application deadline calendar" },
+    { href: "/deadlines/february-2027-intake", label: "February 2027 intake deadlines" },
     { href: "/visas/student-500", label: "Student visa (subclass 500) explained" },
     { href: "/best/affordable-australian-universities-for-international-students", label: "Most affordable universities" },
     { href: "/scholarships", label: "Scholarships for international students" },

@@ -90,6 +90,57 @@ export async function listUpcomingDeadlines(limit = 5): Promise<PublicDeadlineRo
   })[]).map((row) => ({ ...row, country: row.university?.country ?? null }));
 }
 
+export type IntakeDeadlineRow = {
+  id: string;
+  deadline_date: string;
+  is_rolling: boolean;
+  notes: string | null;
+  last_verified_at: string | null;
+  source_url: string | null;
+  university: { name: string; slug: string } | null;
+  deadline_type: { name: string } | null;
+  degree_level: { name: string } | null;
+};
+
+/**
+ * Every published deadline row for a set of intake types (e.g. ["Semester 1"]
+ * for the February intake), across all launched-country universities, with
+ * the notes / verification fields the per-intake hub tables need. Unpaginated
+ * on purpose: the hub renders one master table of the whole set, grouped by
+ * university. ~110 rows at present, well under the PostgREST default cap.
+ */
+export async function listIntakeDeadlines(
+  intakeTypes: string[],
+): Promise<IntakeDeadlineRow[]> {
+  const supabase = createPublicClient(["deadlines:list"]);
+
+  const { data, error } = await supabase
+    .from("deadlines")
+    .select(
+      "id, deadline_date, is_rolling, notes, last_verified_at, source_url, university:universities!inner(name, slug, country:countries!inner(is_launched)), deadline_type:deadline_types!inner(name), degree_level:degree_levels!inner(name)",
+    )
+    .eq("status", "published")
+    .eq("university.country.is_launched", true)
+    .in("deadline_type.name", intakeTypes)
+    .order("deadline_date");
+
+  if (error) throw error;
+
+  return ((data ?? []) as unknown as IntakeDeadlineRow[]).map((row) => ({
+    id: row.id,
+    deadline_date: row.deadline_date,
+    is_rolling: row.is_rolling,
+    notes: row.notes,
+    last_verified_at: row.last_verified_at,
+    source_url: row.source_url,
+    university: row.university
+      ? { name: row.university.name, slug: row.university.slug }
+      : null,
+    deadline_type: row.deadline_type,
+    degree_level: row.degree_level,
+  }));
+}
+
 export async function listDeadlineFilterOptions() {
   const supabase = createPublicClient(["deadlines:list"]);
   const [countries, published] = await Promise.all([
