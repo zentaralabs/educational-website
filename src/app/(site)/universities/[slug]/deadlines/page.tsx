@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
+import { DeadlineTable } from "@/components/site/DeadlineTable";
 import { FaqSection } from "@/components/site/FaqSection";
 import { VerifiedInline } from "@/components/site/VerifiedInline";
 import { WhyTrust } from "@/components/site/WhyTrust";
-import { StatusBadge } from "@/components/StatusBadge";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import { deadlineBadgeStatus } from "@/lib/deadline-status";
 import { DEADLINE_PAGE_INDEXED } from "@/lib/deadline-detail";
@@ -185,43 +185,51 @@ export default async function UniversityDeadlinesPage({
         {name} application deadlines {INTAKE_YEAR}
       </h1>
 
+      {/* The date is the whole reason for this page, so it leads as a display
+          figure rather than sitting mid-sentence in the prose below. When the
+          university has no firm date we say so here instead of inventing one. */}
+      <div className="mt-6 rounded-xl border border-line bg-mist px-5 py-4">
+        <p className="font-body text-xs font-semibold tracking-wide text-slate uppercase">
+          {next ? "Next deadline" : "How applications close"}
+        </p>
+        <p className="mt-1 font-display text-2xl font-semibold text-ink sm:text-3xl">
+          {next ? (
+            <time dateTime={next.deadline_date}>
+              {new Date(next.deadline_date).toLocaleDateString("en-AU", {
+                day: "numeric",
+                month: "long",
+                year: "numeric",
+              })}
+            </time>
+          ) : allRolling ? (
+            "Rolling admissions"
+          ) : (
+            "Fixed intakes, no single deadline"
+          )}
+        </p>
+        {next?.deadline_type?.name && (
+          <p className="mt-1 font-body text-sm text-slate">
+            {next.deadline_type.name}
+            {next.degree_level && ` · ${next.degree_level.name}`}
+          </p>
+        )}
+      </div>
+
       <p className="mt-4 rounded-md border border-ink/15 bg-ink/[0.02] px-4 py-3 font-body text-base text-ink">
         {answer}
       </p>
 
-      <div className="mt-8 overflow-hidden rounded-md border border-ink/10 bg-paper">
-        {deadlines.map((d, i) => {
-          const status = deadlineBadgeStatus(d.deadline_date, d.is_rolling);
-          return (
-            <div
-              key={d.id}
-              className="flex items-center justify-between gap-4 border-l-4 px-4 py-3 text-sm"
-              style={{
-                borderLeftColor: `var(--color-status-${status})`,
-                borderBottomWidth: i < deadlines.length - 1 ? 1 : 0,
-                borderBottomColor:
-                  "color-mix(in srgb, var(--color-ink) 10%, transparent)",
-              }}
-            >
-              <span className="text-ink">
-                {d.deadline_type?.name}
-                {d.degree_level && ` · ${d.degree_level.name}`}
-              </span>
-              <div className="flex flex-shrink-0 items-center gap-3">
-                <span className="font-utility text-xs text-slate">
-                  {d.is_rolling
-                    ? "ROLLING"
-                    : new Date(d.deadline_date).toLocaleDateString("en-AU", {
-                        day: "numeric",
-                        month: "short",
-                        year: "numeric",
-                      })}
-                </span>
-                <StatusBadge status={status} />
-              </div>
-            </div>
-          );
-        })}
+      <div className="mt-8">
+        <DeadlineTable
+          items={deadlines.map((d) => ({
+            id: d.id,
+            label: [d.deadline_type?.name, d.degree_level?.name]
+              .filter(Boolean)
+              .join(" · "),
+            deadlineDate: d.deadline_date,
+            isRolling: d.is_rolling,
+          }))}
+        />
       </div>
 
       <VerifiedInline date={verifiedAt} source={source} />

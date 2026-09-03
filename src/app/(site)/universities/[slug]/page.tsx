@@ -5,6 +5,7 @@ import { AdmissionsRequirementFacts } from "@/components/site/AdmissionsRequirem
 import { UniversityAtAGlance } from "@/components/site/UniversityAtAGlance";
 import { GO8_SLUGS, isRegionalCity } from "@/lib/australia";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
+import { DeadlineTable } from "@/components/site/DeadlineTable";
 import { GuideContent } from "@/components/site/GuideContent";
 import { CheckBadgeIcon } from "@/components/site/icons";
 import { Fact, FactBox, ProfileSection } from "@/components/site/ProfileSection";
@@ -606,46 +607,21 @@ export default async function UniversityProfilePage({
               university&rsquo;s site.
             </p>
           )}
-          <div className="overflow-hidden rounded-md border border-ink/10 bg-paper">
-            {deadlines.map((d, i) => {
-              const status = deadlineBadgeStatus(d.deadline_date, d.is_rolling);
-              return (
-                <div
-                  key={d.id}
-                  className="border-l-4 px-4 py-3 text-sm"
-                  style={{
-                    borderLeftColor: `var(--color-status-${status})`,
-                    borderBottomWidth: i < deadlines.length - 1 ? 1 : 0,
-                    borderBottomColor:
-                      "color-mix(in srgb, var(--color-ink) 10%, transparent)",
-                  }}
-                >
-                  <div className="flex items-center justify-between gap-4">
-                    <span className="text-ink">
-                      {d.deadline_type?.name}
-                      {d.degree_level && ` · ${d.degree_level.name}`}
-                      {d.application_platform && ` · ${d.application_platform.name}`}
-                    </span>
-                    <div className="flex flex-shrink-0 items-center gap-3">
-                      <span className="font-utility text-xs text-slate">
-                        {d.is_rolling
-                          ? "ROLLING"
-                          : new Date(d.deadline_date).toLocaleDateString("en-AU", {
-                              day: "numeric",
-                              month: "short",
-                              year: "numeric",
-                            })}
-                      </span>
-                      <StatusBadge status={status} />
-                    </div>
-                  </div>
-                  {d.notes && (
-                    <p className="mt-1.5 font-body text-xs text-slate">{d.notes}</p>
-                  )}
-                </div>
-              );
-            })}
-          </div>
+          <DeadlineTable
+            items={deadlines.map((d) => ({
+              id: d.id,
+              label: [
+                d.deadline_type?.name,
+                d.degree_level?.name,
+                d.application_platform?.name,
+              ]
+                .filter(Boolean)
+                .join(" · "),
+              deadlineDate: d.deadline_date,
+              isRolling: d.is_rolling,
+              notes: d.notes,
+            }))}
+          />
           <VerifiedInline
             date={deadlineVerifiedAt}
             source={deadlineSource}
