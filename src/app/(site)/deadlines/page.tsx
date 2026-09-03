@@ -144,18 +144,26 @@ export default async function DeadlinesPage({
         earlier. Confirm the date for your specific course with the university.
       </p>
 
-      <Link
-        href="/deadlines/february-2027-intake"
-        className="mt-4 flex items-center justify-between gap-3 rounded-xl border border-status-open/30 bg-status-open/[0.04] px-4 py-3 font-body text-sm transition-colors duration-150 hover:border-status-open/50"
-      >
-        <span className="text-ink">
-          <span className="font-semibold">February 2027 intake:</span> the full
-          per-university table, a when-to-apply timeline, and what has changed
-        </span>
-        <span aria-hidden="true" className="text-status-open">
-          &rarr;
-        </span>
-      </Link>
+      <div className="mt-4 flex flex-col gap-2 sm:flex-row">
+        {[
+          { href: "/deadlines/february-2027-intake", label: "February 2027 intake" },
+          { href: "/deadlines/july-2027-intake", label: "July 2027 intake" },
+        ].map((hub) => (
+          <Link
+            key={hub.href}
+            href={hub.href}
+            className="flex flex-1 items-center justify-between gap-3 rounded-xl border border-status-open/30 bg-status-open/[0.04] px-4 py-3 font-body text-sm transition-colors duration-150 hover:border-status-open/50"
+          >
+            <span className="text-ink">
+              <span className="font-semibold">{hub.label}:</span> full table,
+              timeline, and what changed
+            </span>
+            <span aria-hidden="true" className="text-status-open">
+              &rarr;
+            </span>
+          </Link>
+        ))}
+      </div>
 
       <form
         method="GET"

@@ -10,6 +10,28 @@ Redirects · Canonical/sitemap/metadata changes · Testing done.**
 
 ---
 
+## 2026-09-03 · July 2027 intake deadline hub
+
+- **Change:** Second entry (`JULY_2027`) in `src/lib/intakes.ts`, cloned from
+  the February hub: Semester 2 deadline table (~105 rows), July-timed
+  when-to-apply timeline, July-vs-February decision, "what changed" log, FAQ.
+  The intake-page component gained an alt-intake cross-link (renders when
+  `hub.altIntake.slug` is set); `/deadlines` now links both hubs.
+- **Affected routes:** new — `/deadlines/july-2027-intake`. `/deadlines` and
+  `/deadlines/february-2027-intake` each gain one internal link to it.
+- **SEO impact:** LOW-MED (one new indexable page; no existing URL changes).
+- **Redirects:** none.
+- **Canonical / sitemap / metadata:** self-canonical; sitemap adds it via
+  `INTAKE_HUB_SLUGS` (now 2); Article + Dataset + BreadcrumbList + FAQPage.
+- **Files:** `src/lib/intakes.ts`, `src/app/(site)/deadlines/[intake]/page.tsx`,
+  `src/app/(site)/deadlines/page.tsx`.
+- **Testing:** `next build` passes (prerenders as SSG); `tsc` + `eslint` clean;
+  zero em dashes; renders locally with 105 rows / 53 universities, all
+  sections, 5 JSON-LD blocks, working cross-links; sitemap 1206 -> 1207.
+- **Post-deploy:** POST `/api/revalidate`, submit the URL to GSC + Bing.
+
+---
+
 ## 2026-09-03 · Source-country "how to apply" deep pages (Nepal, India, Pakistan)
 
 - **Change:** New route `/international/{country}/how-to-apply` for the three

@@ -204,6 +204,18 @@ export default async function IntakeDeadlinePage({
             <p key={p.slice(0, 24)}>{p}</p>
           ))}
         </div>
+        {hub.altIntake.slug && (
+          <p className="mt-3 font-body text-sm text-slate">
+            Considering the other intake instead? See the{" "}
+            <Link
+              href={`/deadlines/${hub.altIntake.slug}`}
+              className="font-medium text-status-open underline underline-offset-2"
+            >
+              {hub.altIntake.name} intake deadlines
+            </Link>
+            .
+          </p>
+        )}
       </ProfileSection>
 
       <ProfileSection title="When to start: the timeline">
