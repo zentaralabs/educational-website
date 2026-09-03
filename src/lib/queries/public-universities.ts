@@ -1,3 +1,4 @@
+import type { DeadlineDateKind } from "@/lib/deadline-status";
 import { createPublicClient } from "@/lib/supabase/public";
 import type { Database } from "@/lib/supabase/types";
 
@@ -328,6 +329,7 @@ export type PublicDeadlineForUniversity = {
   id: string;
   deadline_date: string;
   is_rolling: boolean;
+  date_kind: DeadlineDateKind;
   notes: string | null;
   source_url: string | null;
   last_verified_at: string | null;
@@ -343,7 +345,7 @@ export async function getPublishedDeadlinesForUniversity(
   const { data, error } = await supabase
     .from("deadlines")
     .select(
-      "id, deadline_date, is_rolling, notes, source_url, last_verified_at, degree_level:degree_levels(name), deadline_type:deadline_types(name), application_platform:application_platforms(name)",
+      "id, deadline_date, is_rolling, date_kind, notes, source_url, last_verified_at, degree_level:degree_levels(name), deadline_type:deadline_types(name), application_platform:application_platforms(name)",
     )
     .eq("university_id", universityId)
     .eq("status", "published")

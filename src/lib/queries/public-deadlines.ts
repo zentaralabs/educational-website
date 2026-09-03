@@ -1,9 +1,11 @@
+import type { DeadlineDateKind } from "@/lib/deadline-status";
 import { createPublicClient } from "@/lib/supabase/public";
 
 export type PublicDeadlineRow = {
   id: string;
   deadline_date: string;
   is_rolling: boolean;
+  date_kind: DeadlineDateKind;
   university: { name: string; slug: string } | null;
   deadline_type: { name: string } | null;
   degree_level: { name: string } | null;
@@ -27,7 +29,7 @@ export async function listPublishedDeadlines(
   let query = supabase
     .from("deadlines")
     .select(
-      "id, deadline_date, is_rolling, university:universities!inner(name, slug, country:countries!inner(code, name)), deadline_type:deadline_types!inner(name), degree_level:degree_levels!inner(name)",
+      "id, deadline_date, is_rolling, date_kind, university:universities!inner(name, slug, country:countries!inner(code, name)), deadline_type:deadline_types!inner(name), degree_level:degree_levels!inner(name)",
       { count: "exact" },
     )
     .eq("status", "published")
@@ -59,9 +61,14 @@ export async function listPublishedDeadlines(
 }
 
 /**
- * The next few genuine (non-rolling) deadlines still in the future — for the
- * homepage "upcoming deadlines" strip. Kept separate from listPublishedDeadlines
- * so the homepage doesn't pull the full paginated/filterable set.
+ * The next few genuine deadlines still in the future — for the homepage
+ * "upcoming deadlines" strip. Kept separate from listPublishedDeadlines so
+ * the homepage doesn't pull the full paginated/filterable set.
+ *
+ * Restricted to university-published closing dates. The strip is labelled
+ * "closing soon", which is only true of a date the university actually set;
+ * our own recommended apply-by guidance would put four identical anchor
+ * dates on the homepage and call them deadlines.
  */
 export async function listUpcomingDeadlines(limit = 5): Promise<PublicDeadlineRow[]> {
   const supabase = createPublicClient(["deadlines:list"]);
@@ -70,11 +77,11 @@ export async function listUpcomingDeadlines(limit = 5): Promise<PublicDeadlineRo
   const { data, error } = await supabase
     .from("deadlines")
     .select(
-      "id, deadline_date, is_rolling, university:universities!inner(name, slug, country:countries!inner(code, name)), deadline_type:deadline_types!inner(name), degree_level:degree_levels!inner(name)",
+      "id, deadline_date, is_rolling, date_kind, university:universities!inner(name, slug, country:countries!inner(code, name)), deadline_type:deadline_types!inner(name), degree_level:degree_levels!inner(name)",
     )
     .eq("status", "published")
     .eq("university.country.is_launched", true)
-    .eq("is_rolling", false)
+    .eq("date_kind", "closing_date")
     .gte("deadline_date", today)
     .order("deadline_date")
     .limit(limit);
@@ -94,6 +101,7 @@ export type IntakeDeadlineRow = {
   id: string;
   deadline_date: string;
   is_rolling: boolean;
+  date_kind: DeadlineDateKind;
   notes: string | null;
   last_verified_at: string | null;
   source_url: string | null;
@@ -117,7 +125,7 @@ export async function listIntakeDeadlines(
   const { data, error } = await supabase
     .from("deadlines")
     .select(
-      "id, deadline_date, is_rolling, notes, last_verified_at, source_url, university:universities!inner(name, slug, country:countries!inner(is_launched)), deadline_type:deadline_types!inner(name), degree_level:degree_levels!inner(name)",
+      "id, deadline_date, is_rolling, date_kind, notes, last_verified_at, source_url, university:universities!inner(name, slug, country:countries!inner(is_launched)), deadline_type:deadline_types!inner(name), degree_level:degree_levels!inner(name)",
     )
     .eq("status", "published")
     .eq("university.country.is_launched", true)
@@ -130,6 +138,7 @@ export async function listIntakeDeadlines(
     id: row.id,
     deadline_date: row.deadline_date,
     is_rolling: row.is_rolling,
+    date_kind: row.date_kind,
     notes: row.notes,
     last_verified_at: row.last_verified_at,
     source_url: row.source_url,

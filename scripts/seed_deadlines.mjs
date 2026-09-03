@@ -500,8 +500,8 @@ try {
         await client.query(
           `insert into deadlines
             (university_id, degree_level_id, deadline_type_id, deadline_date,
-             notes, is_rolling, status, last_verified_at, source_url)
-           values ($1,$2,$3,$4,$5,$6,'published',$7,$8)`,
+             notes, is_rolling, date_kind, status, last_verified_at, source_url)
+           values ($1,$2,$3,$4,$5,$6,$7,'published',$8,$9)`,
           [
             u.id,
             dlevel[row.level],
@@ -509,6 +509,9 @@ try {
             row.date,
             row.note,
             Boolean(row.is_rolling),
+            // A rolling row's date is an anchor for sorting, not a published
+            // cut-off, so only the firm rows here count as closing dates.
+            row.is_rolling ? "recommended" : "closing_date",
             TODAY,
             row.source ?? u.website_url,
           ],
@@ -528,10 +531,10 @@ try {
     }
 
     // Every non-Go8 university we checked assesses international applications
-    // on a rolling basis, but the /deadlines calendar is only useful if it
-    // shows a date, so these rows keep is_rolling = false and a recommended
-    // date while the note makes the rolling reality explicit. `rollingNote`
-    // is the university's own guidance where we verified it. NIDA is the one
+    // on a rolling basis, so these rows carry a recommended apply-by date
+    // rather than a published cut-off: date_kind = 'recommended' makes the UI
+    // show it to the month and skip the OPEN/UPCOMING stamp. `rollingNote` is
+    // the university's own guidance where we verified it. NIDA is the one
     // real exception (single audition-based cohort with a hard cut-off).
     const rollingNote = ROLLING[u.slug];
 
@@ -541,8 +544,8 @@ try {
       await client.query(
         `insert into deadlines
           (university_id, degree_level_id, deadline_type_id, deadline_date,
-           notes, is_rolling, status, last_verified_at, source_url)
-         values ($1,$2,$3,$4,$5,$6,'published',$7,$8)`,
+           notes, is_rolling, date_kind, status, last_verified_at, source_url)
+         values ($1,$2,$3,$4,$5,$6,$7,'published',$8,$9)`,
         [
           u.id,
           dlevel[intake.level],
@@ -551,7 +554,10 @@ try {
           isNida
             ? `Application and audition cut-off for the ${intake.when} intake at NIDA. NIDA runs one audition-based intake a year, so this is a firm date, not a guide.`
             : noteFor(intake, u.name, rollingNote),
-          isNida,
+          // NIDA's note calls its date firm, so it must not render as rolling
+          // guidance the way it used to; it is a published cut-off.
+          false,
+          isNida ? "closing_date" : "recommended",
           TODAY,
           ROLLING_SOURCE[u.slug] ?? u.website_url,
         ],

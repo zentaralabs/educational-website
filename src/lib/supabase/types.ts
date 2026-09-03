@@ -2,6 +2,9 @@
 // Regenerate with the Supabase CLI once available for full accuracy:
 //   npx supabase gen types typescript --project-id <project-id> > src/lib/supabase/types.ts
 
+/** deadlines.date_kind — see supabase/migrations/0026_add_deadline_date_kind.sql. */
+export type DeadlineDateKind = "closing_date" | "recommended";
+
 export type ContentStatus =
   | "draft"
   | "needs_review"
@@ -280,6 +283,7 @@ export interface Database {
           application_platform_id: number | null;
           notes: string | null;
           is_rolling: boolean;
+          date_kind: DeadlineDateKind;
           status: ContentStatus;
           last_verified_at: string | null;
           source_url: string | null;
@@ -295,6 +299,7 @@ export interface Database {
           application_platform_id?: number | null;
           notes?: string | null;
           is_rolling?: boolean;
+          date_kind?: DeadlineDateKind;
           status?: ContentStatus;
           last_verified_at?: string | null;
           source_url?: string | null;

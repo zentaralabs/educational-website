@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { StatusBadge } from "@/components/StatusBadge";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
+import { DeadlineTable } from "@/components/site/DeadlineTable";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import { listPageCanonical } from "@/lib/list-page-metadata";
 import { SITE_NAME, SITE_URL, SITE_YEAR } from "@/lib/site-config";
-import { deadlineBadgeStatus, formatDeadlineDate } from "@/lib/deadline-status";
 import {
   listDeadlineFilterOptions,
   listPublishedDeadlines,
@@ -45,15 +44,17 @@ export async function generateMetadata({
   };
 }
 
+// Every row now shows a month, including the rolling ones (whose date is our
+// recommended apply-by), so they all group by that month. A separate
+// "Rolling" bucket would put a heading saying one thing over rows saying
+// another.
 function groupByMonth(deadlines: PublicDeadlineRow[]) {
   const groups = new Map<string, PublicDeadlineRow[]>();
   for (const d of deadlines) {
-    const key = d.is_rolling
-      ? "Rolling"
-      : new Date(d.deadline_date).toLocaleDateString("en-US", {
-          month: "long",
-          year: "numeric",
-        });
+    const key = new Date(d.deadline_date).toLocaleDateString("en-US", {
+      month: "long",
+      year: "numeric",
+    });
     if (!groups.has(key)) groups.set(key, []);
     groups.get(key)!.push(d);
   }
@@ -233,43 +234,29 @@ export default async function DeadlinesPage({
             <h2 className="mb-2 font-utility text-xs font-semibold tracking-widest text-slate uppercase">
               {month}
             </h2>
-            <div className="overflow-hidden rounded-md border border-ink/15">
-              {rows.map((d, i) => {
-                const status = deadlineBadgeStatus(d.deadline_date, d.is_rolling);
-                return (
-                  <Link
-                    key={d.id}
-                    href={d.university ? `/universities/${d.university.slug}` : "#"}
-                    className="flex items-center justify-between gap-4 border-l-4 px-4 py-3 text-sm transition-colors duration-150 hover:bg-ink/[0.03]"
-                    style={{
-                      borderLeftColor: `var(--color-status-${status})`,
-                      borderBottomWidth: i < rows.length - 1 ? 1 : 0,
-                      borderBottomColor:
-                        "color-mix(in srgb, var(--color-ink) 10%, transparent)",
-                    }}
-                  >
-                    <span className="text-ink">
-                      <span className="font-medium">{d.university?.name}</span>
-                      {" · "}
-                      {d.deadline_type?.name}
-                      {d.degree_level && ` (${d.degree_level.name})`}
+            <DeadlineTable
+              labelHeading="University"
+              pulseOnOpen
+              items={rows.map((d) => ({
+                id: d.id,
+                label: (
+                  <>
+                    <span className="font-medium text-ink">
+                      {d.university?.name}
                     </span>
-                    <div className="flex items-center gap-3">
-                      <span className="flex items-center gap-1.5 font-utility text-xs text-slate">
-                        {status === "open" && (
-                          <span
-                            aria-hidden="true"
-                            className="animate-pulse-dot h-1.5 w-1.5 rounded-full bg-status-open"
-                          />
-                        )}
-                        {formatDeadlineDate(d.deadline_date, d.is_rolling)}
-                      </span>
-                      <StatusBadge status={status} />
-                    </div>
-                  </Link>
-                );
-              })}
-            </div>
+                    {" · "}
+                    {d.deadline_type?.name}
+                    {d.degree_level && ` (${d.degree_level.name})`}
+                  </>
+                ),
+                deadlineDate: d.deadline_date,
+                isRolling: d.is_rolling,
+                dateKind: d.date_kind,
+                ...(d.university
+                  ? { href: `/universities/${d.university.slug}` }
+                  : {}),
+              }))}
+            />
           </section>
         ))}
       </div>

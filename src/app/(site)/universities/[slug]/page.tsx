@@ -5,6 +5,7 @@ import { AdmissionsRequirementFacts } from "@/components/site/AdmissionsRequirem
 import { UniversityAtAGlance } from "@/components/site/UniversityAtAGlance";
 import { GO8_SLUGS, isRegionalCity } from "@/lib/australia";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
+import { DeadlineTable } from "@/components/site/DeadlineTable";
 import { GuideContent } from "@/components/site/GuideContent";
 import { CheckBadgeIcon } from "@/components/site/icons";
 import { Fact, FactBox, ProfileSection } from "@/components/site/ProfileSection";
@@ -18,7 +19,7 @@ import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import { FaqSection } from "@/components/site/FaqSection";
 import { faqJsonLd, universityFaq } from "@/lib/faq";
 import { SITE_URL, SITE_YEAR } from "@/lib/site-config";
-import { deadlineBadgeStatus } from "@/lib/deadline-status";
+import { deadlineBadgeStatus, formatDeadlineDateLong } from "@/lib/deadline-status";
 import { formatCurrency, selectivityLabel } from "@/lib/format";
 import { getPublishedProgramsForUniversity } from "@/lib/queries/public-programs";
 import {
@@ -165,9 +166,14 @@ export default async function UniversityProfilePage({
       .sort()
       .at(-1) ?? university.last_verified_at;
 
-  const nextDeadline = deadlines.find(
-    (d) => !d.is_rolling && deadlineBadgeStatus(d.deadline_date, d.is_rolling) === "upcoming",
-  );
+  // Prefer a date the university actually published; fall back to our own
+  // apply-by guidance, said as guidance rather than as a deadline.
+  const upcomingDeadlines = deadlines
+    .filter((d) => deadlineBadgeStatus(d.deadline_date, d.is_rolling) !== "closed")
+    .sort((a, b) => a.deadline_date.localeCompare(b.deadline_date));
+  const nextDeadline =
+    upcomingDeadlines.find((d) => d.date_kind === "closing_date") ??
+    upcomingDeadlines[0];
 
   const intakeTypes = [
     ...new Set(
@@ -324,19 +330,38 @@ export default async function UniversityProfilePage({
           fact so it's citable without context. */}
       {nextDeadline && (
         <p className="mt-6 rounded-md border border-ink/15 bg-ink/[0.02] px-4 py-3 font-body text-base text-ink">
-          The recommended date to apply to {university.name} for its next intake
-          {nextDeadline.deadline_type?.name
-            ? ` (${nextDeadline.deadline_type.name})`
-            : ""}{" "}
-          is{" "}
-          <strong className="font-semibold">
-            {new Date(nextDeadline.deadline_date).toLocaleDateString("en-US", {
-              month: "long",
-              day: "numeric",
-              year: "numeric",
-            })}
-          </strong>
-          . Competitive courses close earlier.
+          {nextDeadline.date_kind === "closing_date" ? (
+            <>
+              The closing date to apply to {university.name} for its next intake
+              {nextDeadline.deadline_type?.name
+                ? ` (${nextDeadline.deadline_type.name})`
+                : ""}{" "}
+              is{" "}
+              <strong className="font-semibold">
+                {formatDeadlineDateLong(
+                  nextDeadline.deadline_date,
+                  nextDeadline.date_kind,
+                )}
+              </strong>
+              . Individual courses can close earlier.
+            </>
+          ) : (
+            <>
+              {university.name} does not publish a single closing date. For its
+              next intake
+              {nextDeadline.deadline_type?.name
+                ? ` (${nextDeadline.deadline_type.name})`
+                : ""}
+              , we recommend applying{" "}
+              <strong className="font-semibold">
+                {formatDeadlineDateLong(
+                  nextDeadline.deadline_date,
+                  nextDeadline.date_kind,
+                )}
+              </strong>
+              , roughly three to four months ahead.
+            </>
+          )}
         </p>
       )}
 
@@ -606,46 +631,22 @@ export default async function UniversityProfilePage({
               university&rsquo;s site.
             </p>
           )}
-          <div className="overflow-hidden rounded-md border border-ink/10 bg-paper">
-            {deadlines.map((d, i) => {
-              const status = deadlineBadgeStatus(d.deadline_date, d.is_rolling);
-              return (
-                <div
-                  key={d.id}
-                  className="border-l-4 px-4 py-3 text-sm"
-                  style={{
-                    borderLeftColor: `var(--color-status-${status})`,
-                    borderBottomWidth: i < deadlines.length - 1 ? 1 : 0,
-                    borderBottomColor:
-                      "color-mix(in srgb, var(--color-ink) 10%, transparent)",
-                  }}
-                >
-                  <div className="flex items-center justify-between gap-4">
-                    <span className="text-ink">
-                      {d.deadline_type?.name}
-                      {d.degree_level && ` · ${d.degree_level.name}`}
-                      {d.application_platform && ` · ${d.application_platform.name}`}
-                    </span>
-                    <div className="flex flex-shrink-0 items-center gap-3">
-                      <span className="font-utility text-xs text-slate">
-                        {d.is_rolling
-                          ? "ROLLING"
-                          : new Date(d.deadline_date).toLocaleDateString("en-AU", {
-                              day: "numeric",
-                              month: "short",
-                              year: "numeric",
-                            })}
-                      </span>
-                      <StatusBadge status={status} />
-                    </div>
-                  </div>
-                  {d.notes && (
-                    <p className="mt-1.5 font-body text-xs text-slate">{d.notes}</p>
-                  )}
-                </div>
-              );
-            })}
-          </div>
+          <DeadlineTable
+            items={deadlines.map((d) => ({
+              id: d.id,
+              label: [
+                d.deadline_type?.name,
+                d.degree_level?.name,
+                d.application_platform?.name,
+              ]
+                .filter(Boolean)
+                .join(" · "),
+              deadlineDate: d.deadline_date,
+              isRolling: d.is_rolling,
+              dateKind: d.date_kind,
+              notes: d.notes,
+            }))}
+          />
           <VerifiedInline
             date={deadlineVerifiedAt}
             source={deadlineSource}
