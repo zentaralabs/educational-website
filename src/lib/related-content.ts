@@ -76,6 +76,10 @@ const COUNTRY_HUB: RelatedLink = {
   href: "/international",
   label: "Applying from your country",
 };
+const FEB_INTAKE: RelatedLink = {
+  href: "/deadlines/february-2027-intake",
+  label: "February 2027 intake deadlines",
+};
 
 // ---------------------------------------------------------------------------
 // Guides
@@ -103,6 +107,7 @@ const GUIDE_RELATED: Record<string, RelatedLink[]> = {
     g("what-to-do-if-your-student-visa-is-refused"),
     g("cricos-and-course-accreditation-explained"),
     v("student-500"),
+    FEB_INTAKE,
     COUNTRY_HUB,
   ],
   "getting-a-skills-assessment-in-australia": [
@@ -196,7 +201,7 @@ const VISA_RELATED: Record<string, RelatedLink[]> = {
     g("genuine-student-requirement-how-to-write-your-statement"),
     g("proving-funds-for-an-australian-student-visa"),
     g("working-while-you-study-in-australia"),
-    g("oshc-health-cover-for-international-students"),
+    FEB_INTAKE,
     COUNTRY_HUB,
     v("temporary-graduate-485"),
   ],
@@ -314,6 +319,7 @@ const BLOG_RELATED: Record<string, RelatedLink[]> = {
     { href: "/universities/adelaide-university", label: "Adelaide University profile" },
     { href: "/compare/universities", label: "Compare universities" },
     g("real-cost-of-studying-in-australia"),
+    FEB_INTAKE,
   ],
   "genuine-student-test-explained": [
     g("genuine-student-requirement-how-to-write-your-statement"),

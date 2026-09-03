@@ -8,6 +8,7 @@ import { listAllBlogPostSlugsForSitemap } from "@/lib/queries/public-blog-posts"
 import { listPublishedGuideSlugsForSitemap } from "@/lib/queries/public-guides";
 import { AU_STATES } from "@/lib/australia";
 import { DEADLINE_PAGE_INDEXED } from "@/lib/deadline-detail";
+import { INTAKE_HUB_SLUGS } from "@/lib/intakes";
 import { ORIGIN_COUNTRY_SLUGS } from "@/lib/origin-countries";
 import { listPublishedScholarshipSlugsForSitemap } from "@/lib/queries/public-scholarships";
 import { listPublishedSubjects } from "@/lib/queries/public-subjects";
@@ -141,6 +142,15 @@ async function buildDynamicEntries(): Promise<MetadataRoute.Sitemap> {
       priority: 0.7,
     }));
 
+  // Per-intake deadline hubs (/deadlines/{slug}) — editorial landing pages
+  // over the live deadline table, config-driven (intakes.ts).
+  const intakeHubEntries: MetadataRoute.Sitemap = INTAKE_HUB_SLUGS.map((slug) => ({
+    url: `${SITE_URL}/deadlines/${slug}`,
+    lastModified: CONFIG_LAST_MODIFIED,
+    changeFrequency: "weekly" as const,
+    priority: 0.8,
+  }));
+
   const guideEntries: MetadataRoute.Sitemap = guides.map((g) => ({
     url: `${SITE_URL}/guides/${g.slug}`,
     lastModified: modOr(g.updatedAt),
@@ -244,6 +254,7 @@ async function buildDynamicEntries(): Promise<MetadataRoute.Sitemap> {
   return [
     ...universityEntries,
     ...universityDeadlineEntries,
+    ...intakeHubEntries,
     ...guideEntries,
     ...comparisonEntries,
     ...blogEntries,

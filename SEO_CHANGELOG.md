@@ -10,6 +10,42 @@ Redirects · Canonical/sitemap/metadata changes · Testing done.**
 
 ---
 
+## 2026-09-03 · Per-intake deadline hub: `/deadlines/february-2027-intake`
+
+- **Change:** New editorial landing page wrapping the live per-university
+  deadline table for one intake. Config in `src/lib/intakes.ts` (`INTAKE_HUBS`,
+  currently one entry), route `src/app/(site)/deadlines/[intake]/page.tsx`,
+  new query `listIntakeDeadlines(intakeTypes)` in `public-deadlines.ts`
+  (unpaginated, selects `notes` / `last_verified_at` / `source_url`). Renders
+  a 107-row table grouped by university with per-row source + last-checked
+  date, a when-to-apply timeline, a Feb-vs-July decision section, a dated
+  "what changed" log, and a 7-item FAQ. First of the Phase-1 content spike in
+  `GROWTH_PLAN.md`; skeleton is built to clone for July / future intakes.
+- **Affected routes:** new — `/deadlines/february-2027-intake`. Existing
+  `/deadlines` gains one internal CTA link. `/visas/student-500`, the guide
+  `genuine-student-requirement-how-to-write-your-statement`, the blog post
+  `adelaide-university-merger-what-it-means`, and every `/international/{country}`
+  page gain a "February 2027 intake deadlines" related link (the country pages
+  swap their generic `/deadlines` link for it).
+- **SEO impact:** LOW-MED (one new indexable page, no existing URL changes;
+  internal-link graph now feeds the hub from ~30 pages).
+- **Redirects:** none.
+- **Canonical / sitemap / metadata:** self-canonical `/deadlines/february-2027-intake`;
+  sitemap adds it via `INTAKE_HUB_SLUGS` (priority 0.8); Article + Dataset +
+  BreadcrumbList + FAQPage JSON-LD. `CONFIG_LAST_MODIFIED` already 2026-09-03.
+- **Files:** `src/lib/intakes.ts` (new), `src/app/(site)/deadlines/[intake]/page.tsx`
+  (new), `src/lib/queries/public-deadlines.ts`, `src/app/sitemap.ts`,
+  `src/app/(site)/deadlines/page.tsx`, `src/lib/related-content.ts`,
+  `src/app/(site)/international/[country]/page.tsx`.
+- **Testing:** `tsc --noEmit` + `eslint` clean; zero em/en dashes; page renders
+  locally with 107 table rows across 54 universities, all sections, 5 JSON-LD
+  blocks, related links resolving; console clean; CTA link present on `/deadlines`.
+- **Post-deploy:** POST `/api/revalidate` so ISR picks up the new route + sitemap
+  + the edited pages, then submit `/deadlines/february-2027-intake` to GSC URL
+  Inspection and Bing, and resubmit the sitemap.
+
+---
+
 ## 2026-09-03 · Add 4 source-country pages: South Korea, Japan, Taiwan, Hong Kong
 
 - **Change:** 4 new entries in `src/lib/origin-countries.ts` (`south-korea`,
