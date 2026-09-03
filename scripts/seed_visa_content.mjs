@@ -13,7 +13,7 @@ const env = Object.fromEntries(
 );
 
 const AUTHOR_ID = "6e1c0e5b-ed26-497c-a09c-e9539c6761e8";
-const TODAY = "2026-09-02";
+const TODAY = "2026-09-03";
 const SITE_URL = (env.NEXT_PUBLIC_SITE_URL ?? "https://www.wheretoapply.xyz").replace(/\/$/, "");
 const INDEXNOW_KEY = "b1d94f7a2c8e4056a3f61e0d5c927b8f";
 
@@ -956,6 +956,89 @@ Yes, for the four-year lawful residence part. Any period you were lawfully in Au
       "https://immi.homeaffairs.gov.au/help-support/tools/residence-calculator",
     ],
   },
+  {
+    slug: "check-australian-university-student-visa-priority",
+    title: "How to check an Australian university's student visa priority status",
+    category: "country-guide",
+    country: "AU",
+    excerpt:
+      "Since November 2025, the university you apply to decides whether your student visa starts processing in 1 to 4 weeks or 9 to 12. Here is how to check a provider's status before you lodge.",
+    content: `Two students lodge an offshore [Subclass 500](/visas/student-500) application on the same day with identical paperwork. One chose a university that is still taking new international enrolments freely. The other chose one that has nearly filled its allocation for the year. The first application starts processing within a month. The second waits two to three months before a case officer opens it. Nothing about the applicants differs. Only the provider.
+
+This is Ministerial Direction 115. It applies to offshore student visa applications lodged on or after 14 November 2025, it replaced Ministerial Direction 111, and it added a third priority tier. It is not a cap, and it does not change whether your visa is granted or refused. It sets your place in the queue.
+
+## How the priority is decided
+
+Each year the Australian Government sets a National Planning Level for new international student commencements and gives every education provider an indicative allocation, often called a New Overseas Student Commencement (NOSC) allocation. The Department of Education tracks how many Confirmations of Enrolment each provider has issued against that number. Where the provider sits on the day you lodge sets your priority.
+
+| Priority | Provider status | Department aims to start processing |
+| --- | --- | --- |
+| Priority 1 | Below 80% of its allocation | 1 to 4 weeks after lodgement |
+| Priority 2 | Has reached 80% (the prioritisation threshold) | 5 to 8 weeks after lodgement |
+| Priority 3 | Has exceeded its allocation by 15% (the upper threshold) | 9 to 12 weeks after lodgement |
+
+Those windows are the department's own estimate based on 2025 lodgement volumes. They stretch in the busy months before the February and July intakes.
+
+## Who is Priority 1 regardless of the provider
+
+Some applications sit in Priority 1 no matter how full the provider is:
+
+- School students and standalone ELICOS (English course) students
+- Students in a masters by research or a PhD
+- Students at a TAFE provider, and recognised pilot training courses
+- Government, DFAT and Defence scholarship holders
+- Passport holders and residents of the Pacific and Timor-Leste
+- A subsequent entrant application that includes a child under 18
+
+If you are doing a coursework bachelor or masters at a university or a private college, your priority follows that provider's allocation status.
+
+## Checking a provider before you apply
+
+**Higher education and dual-sector providers.** The Department of Education publishes a Visa Prioritisation Status list and updates it weekly. It shows each provider's current tier. Check it for every university on your shortlist before you accept an offer, then check it again on the day you lodge, because the status is fixed at lodgement and moves during the year.
+
+**Vocational (VET) providers.** There is no public list. Ask the provider directly whether it has reached its prioritisation threshold or its upper threshold.
+
+**Packaged courses.** If you have a package, for example an ELICOS course then a bachelor degree, the priority is set by the provider of the main Confirmation of Enrolment, usually the final course. Applications lodged between 15 November and 31 December are assessed against the main provider's progress toward the following year's allocation.
+
+## What to do with the information
+
+- **Shortlist on status, not only ranking.** Build a list with the [universities directory](/universities) and the [comparison tool](/compare/universities), then check each option against the Visa Prioritisation Status list. A Priority 1 university can save you two months.
+- **Apply early in the calendar year.** Allocations fill as the year runs. A university that is Priority 1 in February can be Priority 2 by September and Priority 3 by November.
+- **Work backwards from your course start date.** For a Priority 1 provider, lodging six to eight weeks ahead is usually enough. For Priority 3, you need three to four months, and even then processing only starts at about week nine.
+- **Lodge a complete application.** Priority decides when your file is picked up. A file missing financial evidence, [health cover](/guides/oshc-health-cover-for-international-students) or a [Genuine Student statement](/guides/genuine-student-requirement-how-to-write-your-statement) then stalls again once it is opened. See [proving your funds](/guides/proving-funds-for-an-australian-student-visa).
+- **Track application close dates separately** in the [deadline calendar](/deadlines). Those are set by the university and are not the same as visa processing time.
+
+## Worked example
+
+Maria is offered a place in a Master of Public Health starting in February. In October she checks the Visa Prioritisation Status list. University A is Priority 1. University B, the one she preferred, is Priority 3.
+
+| | University A (Priority 1) | University B (Priority 3) |
+| --- | --- | --- |
+| Processing starts | 1 to 4 weeks after lodgement | 9 to 12 weeks after lodgement |
+| Latest safe lodgement for a February start | late November | around August |
+
+It is already past University B's safe date. Maria accepts University A's offer, or she defers University B to the July intake and lodges early in the new year once that provider's allocation resets. She does not lodge with a Priority 3 provider and hope it clears in time.
+
+## Does this apply if I am already in Australia?
+
+No. Ministerial Direction 115 covers applications lodged from outside Australia. If you lodge a student visa from inside Australia, the department aims to assess applications broadly in the order they are received.
+
+## Can my priority change after I lodge?
+
+No. Your priority is fixed on the day you lodge, based on the provider's status that day. If the provider crosses a threshold the following week, your application keeps the priority it had. This is why the lodgement date matters, and why it is worth saving a copy of the provider's status on the day.
+
+## What if the university I want is Priority 3?
+
+You have three realistic options: choose a different university that is Priority 1 or 2 for the same course, defer to a later intake and apply after the provider's allocation resets at the start of the next calendar year, or lodge anyway and accept that processing will not begin for nine to twelve weeks. If your course starts soon, the third option usually does not work.
+
+## Is a Priority 3 university a worse university?
+
+Not on its own. Priority 3 means the university filled its international allocation quickly, which often reflects strong demand. The tier is about queue position for visa processing in a given year, not teaching or graduate outcomes. Judge the university on its profile, fees and course, and treat the priority status as a timing constraint to plan around.`,
+    sources: [
+      "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-processing-times/visa-processing-priorities/student-visa",
+      "https://www.education.gov.au/managed-system-international-education/resources/visa-prioritisation-status",
+    ],
+  },
 ];
 
 // ---------------------------------------------------------------------------
@@ -1248,6 +1331,70 @@ There is no single number. Each occupation has its own cut-off in each round, se
 Raise your score where you can. Rounds are roughly quarterly, so waiting for a lower cut-off can cost months with no guarantee it moves. Extra points from English, work experience, a skilled partner, or state nomination are more reliable than hoping the queue thins.`,
     sources: [
       "https://immi.homeaffairs.gov.au/visas/working-in-australia/skillselect/invitation-rounds",
+    ],
+  },
+  {
+    slug: "ministerial-direction-115-student-visa-priority",
+    title:
+      "Ministerial Direction 115: your university now sets how fast your student visa moves",
+    published_at: "2026-09-03",
+    tags: ["visas", "australia", "student-visa"],
+    excerpt:
+      "On 14 November 2025 a new Ministerial Direction replaced MD 111 and added a third processing tier for offshore student visas. Which university you apply to now decides whether processing starts in weeks or months.",
+    content: `For offshore [Subclass 500](/visas/student-500) student visa applications lodged on or after 14 November 2025, the order in which the Department of Home Affairs works through the queue is set by Ministerial Direction 115. It replaced Ministerial Direction 111 and changed the model from two tiers to three.
+
+A Ministerial Direction is not a visa cap and does not set the criteria to grant or refuse a visa. What it does is decide whose application gets looked at first. Under MD 115, for a coursework degree, that order depends almost entirely on the education provider you name.
+
+## What changed from MD 111
+
+| | MD 111 (to 13 Nov 2025) | MD 115 (from 14 Nov 2025) |
+| --- | --- | --- |
+| Tiers | 2 (High, Standard) | 3 (Priority 1, 2, 3) |
+| Trigger | Provider at 80% of its allocation dropped from High to Standard | Provider at 80% drops to Priority 2; a provider 15% over its allocation drops to Priority 3 |
+| Allocation year used | The current calendar year | The year the application is lodged in, or the next year for applications lodged 15 to 31 December |
+
+The practical effect of the third tier is a longer wait for applicants to the most oversubscribed universities.
+
+## The three tiers
+
+Each year the government sets a National Planning Level for new international student commencements and gives every provider an indicative allocation. The Department of Education counts Confirmations of Enrolment against that number. Your priority is set on the day you lodge.
+
+| Priority | Provider status | Processing aims to start |
+| --- | --- | --- |
+| Priority 1 | Under 80% of its allocation | 1 to 4 weeks after lodgement |
+| Priority 2 | Reached 80% (prioritisation threshold) | 5 to 8 weeks after lodgement |
+| Priority 3 | Exceeded its allocation by 15% (upper threshold) | 9 to 12 weeks after lodgement |
+
+School, standalone ELICOS, TAFE, research degree, government scholarship and Pacific applicants stay in Priority 1 regardless of the provider. For a coursework bachelor or masters, the provider decides.
+
+## Why it matters this application cycle
+
+Allocations fill through the year. A university that is comfortably Priority 1 in February can slip to Priority 2 by mid-year and Priority 3 by the following spring, ahead of the next February intake. Two applicants to the same course, lodging weeks apart, can land in different tiers.
+
+If you are applying now for a February 2027 start, check each shortlisted university's status before you accept an offer, and again on the day you lodge. The Department of Education publishes a Visa Prioritisation Status list for higher education providers and updates it weekly. For the step by step, see [how to check an Australian university's student visa priority status](/guides/check-australian-university-student-visa-priority).
+
+## How this sits with the rest of the squeeze
+
+MD 115 is one of three pressures on student visa applicants right now. The other two are the [Genuine Student requirement](/blog/genuine-student-test-explained), in place since March 2024, and financial scrutiny, with the single-applicant living cost figure at A$29,710 and officers checking that funds are genuinely available. The [refusal rate hit a 20-year high in early 2026](/blog/student-visa-refusal-rate-20-year-high-2026), and the [application fee rose to A$2,500](/blog/australia-student-visa-fee-increase-2026) on 1 July 2026, which raises the cost of a slow or refused attempt.
+
+MD 115 does not add to your refusal risk. It adds to your timeline risk. A Priority 3 provider plus a course that starts in three months is a combination that does not resolve in time.
+
+The skilled visa equivalent, for people further along the study to work pathway, is [Ministerial Direction 119](/blog/ministerial-direction-119-skilled-visa-priorities), which orders 189, 190 and 491 processing on separate grounds.
+
+## Does the direction affect onshore applications?
+
+No. Ministerial Direction 115 applies only to applications lodged from outside Australia. Applications lodged from inside Australia are assessed broadly in order of lodgement.
+
+## Is this the same as Ministerial Direction 119?
+
+No. Ministerial Direction 119 sets processing priorities for skilled visas such as the 189, 190 and 491, and is a separate instrument. Ministerial Direction 115 covers only the offshore Subclass 500 student visa.
+
+## Will my priority improve if the provider drops back below the threshold?
+
+No. Your priority is locked in on the day you lodge. Later changes to the provider's allocation status do not move your application up or down.`,
+    sources: [
+      "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-processing-times/visa-processing-priorities/student-visa",
+      "https://www.education.gov.au/managed-system-international-education/resources/visa-prioritisation-status",
     ],
   },
 ];
