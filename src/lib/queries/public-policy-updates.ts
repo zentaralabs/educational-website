@@ -56,9 +56,10 @@ export async function listLatestPolicyUpdate(): Promise<PublicPolicyUpdate | nul
 /**
  * How long a change stays "fresh" enough to surface on the homepage. Past
  * this the /updates page still lists it, but the homepage strip is hidden so
- * it never shows a stale "latest update".
+ * it never shows a stale "latest update". Policy changes have a longer "still
+ * news" tail than a deadline reminder, so this is 12 weeks rather than 8.
  */
-const HOMEPAGE_STRIP_MAX_AGE_DAYS = 56;
+const HOMEPAGE_STRIP_MAX_AGE_DAYS = 84;
 
 export function isFreshForHomepage(update: Pick<PublicPolicyUpdate, "announced_date">): boolean {
   const ageMs = Date.now() - new Date(update.announced_date).getTime();
