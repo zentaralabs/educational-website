@@ -83,9 +83,9 @@ export default async function HowToApplyPage({
     { href: `/international/${country}`, label: `Study in Australia from ${c.name}` },
     { href: "/deadlines/february-2027-intake", label: "February 2027 intake deadlines" },
     { href: "/visas/student-500", label: "Student visa (subclass 500) explained" },
+    { href: "/guides/documents-checklist-for-an-australian-student-visa", label: "Student visa documents checklist" },
     { href: "/guides/proving-funds-for-an-australian-student-visa", label: "Proving funds for the student visa" },
     { href: "/guides/genuine-student-requirement-how-to-write-your-statement", label: "Writing your Genuine Student statement" },
-    { href: "/cost-calculator", label: "Calculate the total cost of your degree" },
   ];
 
   return (

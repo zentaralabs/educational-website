@@ -274,6 +274,126 @@ Every rule on this page, the 23 March 2024 start date, the four form questions, 
     ],
   },
   {
+    slug: "documents-checklist-for-an-australian-student-visa",
+    title: "Documents checklist for an Australian student visa",
+    category: "country-guide",
+    country: "AU",
+    excerpt:
+      "There is no single universal checklist. The Document Checklist Tool builds yours from your passport country and provider. Here is the common core, category by category, and how evidence levels change what you upload.",
+    content: `There is no single document list that applies to every applicant for the [subclass 500 student visa](/visas/student-500). The Department of Home Affairs builds your list from two things: your country of passport and your education provider. Together these set your evidence level, which decides how much you have to upload upfront.
+
+This guide covers the common core that almost everyone provides, and how to get your exact list.
+
+## Start with the Document Checklist Tool
+
+Before you gather anything, run the Document Checklist Tool on the Home Affairs website. Enter your passport country and your provider (or select "I have not decided on a provider yet") and it returns the list that applies to you. It is updated twice a year, on 31 March and 30 September, so check it again in the week before you lodge.
+
+The tool tells you what evidence categories you need. For each one, the "Show steps" link explains what kind of document is accepted.
+
+## Evidence levels, briefly
+
+Your provider and your passport country combine into an evidence level. A higher level means you must attach more financial and English evidence with the application instead of being asked for it later. Since January 2026, India, Nepal, Bangladesh, and Bhutan sit at the highest level. The [applying-from-your-country pages](/international) note where each nationality stands.
+
+The level does not change what you are eligible for. It changes how complete your application has to be on day one.
+
+## The common core, by category
+
+### Identity
+
+- Passport valid well beyond your intended stay, with the bio page scanned
+- A recent passport-style photograph to the visa specification
+- National identity card or birth certificate if you have one
+- Change-of-name documents (marriage certificate, deed poll) if your names differ across documents
+
+### Enrolment
+
+- A valid Confirmation of Enrolment (CoE) for your course. You need this before you lodge, and it must still be valid when the visa is decided
+- A separate CoE for each course if you are studying a package (for example an ELICOS course before a bachelor's)
+
+### Genuine Student
+
+- Your four written responses in the application form, each capped at 150 words and in English. See [writing your Genuine Student statement](/guides/genuine-student-requirement-how-to-write-your-statement) and [worked examples](/guides/genuine-student-statement-examples)
+- Supporting evidence for the claims in those responses: academic transcripts, employment letters, evidence of ties to your home country, and evidence of your economic circumstances
+
+### Financial capacity
+
+- Bank statements showing a genuine savings history, ideally three to six months, not a single recent balance
+- Evidence of the source of the funds: salary slips, a property sale deed, fixed deposit certificates, or a sanctioned and disbursed education loan
+- If a parent or relative is sponsoring you: their income and employment proof, plus a document proving the relationship
+- A scholarship or sponsorship letter stating exactly what is covered and for how long
+- The funds must cover twelve months of living costs (AUD 29,710, set by the Australian Government), first-year tuition or the balance after any deposit paid, and travel of roughly AUD 2,000 to 2,500. See [proving you can afford to study](/guides/proving-funds-for-an-australian-student-visa)
+
+### English proficiency
+
+- A recognised English test result (IELTS, PTE Academic, TOEFL iBT, OET, or Cambridge C1 Advanced), or
+- Evidence you are exempt, for example a passport from the UK, Ireland, USA, Canada, or New Zealand, or five years of study in English, or
+- Evidence you are enrolled in a packaged ELICOS course to reach the required level. See [studying without IELTS](/guides/studying-in-australia-without-ielts)
+
+### Health
+
+- An Overseas Student Health Cover (OSHC) policy for the full length of the visa, or evidence you fall in an exemption category. See [OSHC health cover](/guides/oshc-health-cover-for-international-students)
+- A health examination if the tool says you need one. It is arranged through the application and completed at a panel clinic. Applicants from some countries need a chest X-ray for tuberculosis screening
+
+### Character
+
+- Police certificates from every country you have lived in for twelve months or more over the last ten years, if you are asked for them
+- A completed Form 80 (personal particulars) if the department requests it
+
+### If you are under 18
+
+- Evidence of a welfare arrangement: either a Confirmation of Appropriate Accommodation and Welfare (CAAW) letter from your provider, or a nominated student guardian
+- Parental or legal guardian consent
+
+### If you are including family
+
+- Marriage certificate, or evidence of a de facto relationship of at least twelve months
+- Birth certificates for dependent children
+- Additional financial capacity for each family member
+- Each family member's own health cover, and health and character documents if required. See [bringing your partner and children](/guides/bringing-family-on-an-australian-student-visa)
+
+## Certified copies and translations
+
+Provide colour scans of original documents. Where the tool or the form asks for certified copies, have them certified by an authorised person in your country. Any document not in English needs a full translation by an accredited translator, submitted alongside the original.
+
+## Lodge a decision-ready application
+
+The department is explicit that an application lodged without the relevant documentation may be refused or delayed. A missing bank statement or a weak Genuine Student answer can sink an application that looks fine on paper, and the AUD 2,500 charge is not refunded on a refusal. Attach everything the form and the checklist ask for before you submit, rather than planning to send it later.
+
+After lodging, check your ImmiAccount regularly and respond to any request for more information promptly. You do not need to wait until the deadline.
+
+## Is there one document checklist for every student visa applicant?
+
+No. The list depends on your country of passport and your education provider, which set your evidence level. Two applicants at the same university can have different checklists. Always generate your own list with the Document Checklist Tool on the Home Affairs website, and re-check it just before you lodge because it is updated twice a year.
+
+## What is an evidence level?
+
+It is a rating that combines your provider and your passport country. A higher evidence level means you must attach full financial and English evidence with the application. A lower level means the department may accept a declaration and ask for evidence only if it has concerns. The levels are reviewed periodically, so check your current position when you apply.
+
+## Do I need police certificates for an Australian student visa?
+
+Only if you are asked for them. When required, you provide a police certificate from each country you have lived in for a cumulative twelve months or more in the last ten years, including your home country. Order them early, as some take weeks to issue.
+
+## Do I need a medical examination for a student visa?
+
+It depends on your country, your intended activities, and how long you plan to stay. The application and the Document Checklist Tool tell you if a health examination is required. If it is, you complete it at an approved panel clinic, and applicants from higher-risk countries also have a chest X-ray for tuberculosis.
+
+## How recent do my bank statements need to be?
+
+There is no fixed rule, but a single recent large balance is the weakest evidence you can give. Case officers look for a genuine savings history, so statements covering the last three to six months, showing the balance building rather than appearing suddenly, are far more convincing.
+
+## Do translated documents need to be certified?
+
+Yes. A document that is not in English must be translated in full by an accredited translator, and the translation is submitted with a scan of the original. A rough or partial translation is not accepted.
+
+## Where the facts here come from
+
+The visa requirements, the role of the Document Checklist Tool and its twice-yearly update schedule, the Genuine Student format, and the "decision-ready" expectation are taken from the Department of Home Affairs subclass 500 pages, checked on the date shown above. Immigration rules and evidence levels change, so generate your own checklist on the official site and confirm every figure before you lodge.`,
+    sources: [
+      "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
+      "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500/genuine-student-requirement",
+    ],
+  },
+  {
     slug: "getting-a-skills-assessment-in-australia",
     title: "How to get a skills assessment for skilled migration",
     category: "country-guide",
