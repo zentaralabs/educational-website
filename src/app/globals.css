@@ -15,10 +15,6 @@
   --color-mist: #f3f5f9;
   --color-line: #e0e5ee;
 
-  /* The tint the homepage "sheet" sits on — one step darker than paper so
-     the rounded white panel reads as a distinct surface. Homepage only. */
-  --color-ground: #eaeef4;
-
   --color-status-open: #3f6b4f;
   --color-status-pending: #b8823d;
   --color-status-closed: #8b3a3a;
@@ -35,8 +31,6 @@
   --color-slate: var(--color-slate);
   --color-mist: var(--color-mist);
   --color-line: var(--color-line);
-
-  --color-ground: var(--color-ground);
 
   --color-status-open: var(--color-status-open);
   --color-status-pending: var(--color-status-pending);

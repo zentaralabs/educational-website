@@ -142,11 +142,10 @@ export default async function Home() {
   const roundedCourses = Math.floor(stats.programCount / 100) * 100;
 
   return (
-    <main className="w-full bg-ground">
+    <main className="w-full">
       <JsonLd data={websiteJsonLd} />
 
-      <div className="mx-auto max-w-6xl px-3 py-5 sm:px-6 sm:py-10">
-        <div className="rounded-[1.75rem] border border-line bg-paper px-5 py-7 shadow-[0_2px_4px_rgba(22,35,63,0.05),0_28px_64px_-28px_rgba(22,35,63,0.22)] sm:rounded-[2.25rem] sm:px-9 sm:py-10 lg:px-12">
+      <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8">
 
           {/* HERO */}
           <section className="grid items-center gap-8 lg:grid-cols-[1.55fr_1fr] lg:gap-12">
@@ -489,7 +488,6 @@ export default async function Home() {
           </p>
 
           <WhyTrust className="scroll-reveal mt-8" />
-        </div>
       </div>
 
       <ScrollCue />
