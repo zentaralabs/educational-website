@@ -8,7 +8,7 @@ import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import { FaqSection } from "@/components/site/FaqSection";
 import { RelatedLinks } from "@/components/site/RelatedLinks";
 import { faqJsonLd, visaFaq } from "@/lib/faq";
-import { visaRelated } from "@/lib/related-content";
+import { RELATED_LIMIT, visaRelated } from "@/lib/related-content";
 import { SITE_YEAR } from "@/lib/site-config";
 import { extractFaqItems } from "@/lib/extract-faq";
 import { authorInitials } from "@/lib/format";
@@ -274,7 +274,7 @@ export default async function VisaPage({
       <RelatedLinks
         className="mt-12 border-t border-ink/10 pt-6"
         heading="Related guides and visas"
-        items={visaRelated(slug).slice(0, 6)}
+        items={visaRelated(slug).slice(0, RELATED_LIMIT)}
       />
 
       <div className="mt-10 flex items-center gap-2 rounded-xl bg-status-open/5 px-4 py-3">

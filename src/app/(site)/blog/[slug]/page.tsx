@@ -10,7 +10,7 @@ import { ArrowUpRightIcon, CheckBadgeIcon } from "@/components/site/icons";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import { extractFaqItems } from "@/lib/extract-faq";
 import { faqJsonLd } from "@/lib/faq";
-import { blogRelated } from "@/lib/related-content";
+import { RELATED_LIMIT, blogRelated } from "@/lib/related-content";
 import {
   getPublishedBlogPost,
   listRecentBlogPosts,
@@ -143,7 +143,7 @@ export default async function BlogPostPage({
             <RelatedLinks
               className="mt-12 border-t border-line pt-8"
               heading="Related reading"
-              items={blogRelated(post.slug).slice(0, 6)}
+              items={blogRelated(post.slug).slice(0, RELATED_LIMIT)}
             />
 
             {more.length > 0 && (

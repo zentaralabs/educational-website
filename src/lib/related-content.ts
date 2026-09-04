@@ -18,6 +18,16 @@
 
 export type RelatedLink = { href: string; label: string };
 
+/**
+ * How many links a related block renders. Every consumer slices to this, so a
+ * list longer than it does not error or overflow: the extra entries are just
+ * dropped, invisibly, and the page quietly loses an internal link. That bit
+ * twice (the 485 list dropping `skills-in-demand-482`, the 189 list dropping
+ * its own points calculator), so the check below turns it into console noise
+ * instead of silence.
+ */
+export const RELATED_LIMIT = 6;
+
 const GUIDE_LABEL: Record<string, string> = {
   "applying-to-australian-universities-without-an-agent": "Applying without an agent",
   "australia-student-visa-cost": "Student visa cost breakdown",
@@ -428,10 +438,13 @@ const VISA_RELATED: Record<string, RelatedLink[]> = {
     g("what-to-do-if-your-student-visa-is-refused"),
     g("study-to-permanent-residence-pathway-australia"),
   ],
+  // Was 7 entries against a 6-link render, which silently dropped CALCULATOR:
+  // the points calculator, on the page for a points-tested visa. Trimmed the
+  // study-to-PR guide instead, the broadest page of the set and already the
+  // most linked in this file, so both tools survive.
   "skilled-independent-189": [
     g("how-the-australian-points-test-works"),
     g("getting-a-skills-assessment-in-australia"),
-    g("study-to-permanent-residence-pathway-australia"),
     v("skilled-nominated-190"),
     v("skilled-work-regional-491"),
     ROUNDS,
@@ -593,6 +606,28 @@ const BLOG_RELATED: Record<string, RelatedLink[]> = {
 };
 
 // ---------------------------------------------------------------------------
+
+// Runs once at import, in every environment on purpose: `next build` sets
+// NODE_ENV=production, and the build is exactly where an over-long list should
+// surface. Silent while every list is within the cap, which is the normal case.
+for (const [kind, map] of [
+  ["guide", GUIDE_RELATED],
+  ["visa", VISA_RELATED],
+  ["blog", BLOG_RELATED],
+] as const) {
+  for (const [slug, links] of Object.entries(map)) {
+    if (links.length > RELATED_LIMIT) {
+      console.warn(
+        `[related-content] ${kind} "${slug}" lists ${links.length} links but only ` +
+          `${RELATED_LIMIT} render. The last ${links.length - RELATED_LIMIT} are dropped: ` +
+          links
+            .slice(RELATED_LIMIT)
+            .map((l) => l.href)
+            .join(", "),
+      );
+    }
+  }
+}
 
 export function guideRelated(slug: string): RelatedLink[] {
   return GUIDE_RELATED[slug] ?? [];
