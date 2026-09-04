@@ -79,6 +79,65 @@ export default function WamCalculatorPage() {
         <WamCalculator />
       </div>
 
+      <div className="mt-10">
+        <h2 className="mb-3 font-display text-lg font-semibold text-ink">
+          Worked example
+        </h2>
+        <p className="font-body text-sm leading-relaxed text-slate">
+          Say a semester looks like this (click{" "}
+          <strong className="font-semibold text-ink">Try an example</strong>{" "}
+          above to load these numbers into the calculator):
+        </p>
+        <div className="mt-3 overflow-hidden rounded-xl border border-line">
+          <table className="w-full font-body text-sm">
+            <thead>
+              <tr className="border-b border-ink/10 bg-mist text-left">
+                <th className="px-4 py-2 font-utility text-xs font-semibold tracking-wide text-slate uppercase">
+                  Subject
+                </th>
+                <th className="px-4 py-2 font-utility text-xs font-semibold tracking-wide text-slate uppercase">
+                  Mark
+                </th>
+                <th className="px-4 py-2 font-utility text-xs font-semibold tracking-wide text-slate uppercase">
+                  Credit points
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                ["Introduction to Data Science", "85", "6"],
+                ["Applied Statistics", "68", "6"],
+                ["Research Methods", "72", "12"],
+              ].map(([name, mark, cp], i, arr) => (
+                <tr
+                  key={name}
+                  style={{
+                    borderBottomWidth: i < arr.length - 1 ? 1 : 0,
+                    borderBottomColor: "color-mix(in srgb, var(--color-ink) 10%, transparent)",
+                  }}
+                >
+                  <td className="px-4 py-2 text-ink">{name}</td>
+                  <td className="px-4 py-2 font-utility text-ink">{mark}</td>
+                  <td className="px-4 py-2 font-utility text-ink">{cp}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="mt-3 font-body text-sm leading-relaxed text-slate">
+          Multiply each mark by its credit points: (85 &times; 6) + (68
+          &times; 6) + (72 &times; 12) = 510 + 408 + 864 ={" "}
+          <strong className="font-semibold text-ink">1,782</strong>. Divide by
+          the total credit points (6 + 6 + 12 = 24):{" "}
+          <strong className="font-semibold text-ink">1,782 &divide; 24 = 74.25</strong>.
+          That&rsquo;s a Credit average, about 5.0 on the 7-point GPA scale,
+          even though two of the three marks were in Distinction territory.
+          The 12-credit-point subject at 72 carries twice the weight of
+          either 6-credit-point subject, which is what pulls the overall WAM
+          down to 74.25 instead of a simple average of 75.
+        </p>
+      </div>
+
       <FaqSection heading="WAM: common questions" items={FAQ} />
 
       <div className="mt-10 border-t border-ink/10 pt-6">

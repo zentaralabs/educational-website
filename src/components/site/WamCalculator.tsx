@@ -22,6 +22,16 @@ const STARTER: Subject[] = [
   makeSubject({ name: "Subject 3" }),
 ];
 
+// Mirrors the worked example in the page copy below the calculator, so a
+// reader can follow the maths by hand and then click through to see the
+// same numbers land in the tool. Chosen so the 12-credit-point subject
+// visibly pulls the average down, demonstrating why WAM isn't a simple mean.
+const EXAMPLE: Subject[] = [
+  makeSubject({ name: "Introduction to Data Science", mark: 85, creditPoints: 6 }),
+  makeSubject({ name: "Applied Statistics", mark: 68, creditPoints: 6 }),
+  makeSubject({ name: "Research Methods", mark: 72, creditPoints: 12 }),
+];
+
 const BANDS = [
   { min: 85, label: "High Distinction", grade: "HD", gpa: 7 },
   { min: 75, label: "Distinction", grade: "D", gpa: 6 },
@@ -56,6 +66,13 @@ export function WamCalculator() {
 
   function addSubject() {
     setSubjects((prev) => [...prev, makeSubject({ name: `Subject ${prev.length + 1}` })]);
+  }
+
+  function loadExample() {
+    markUsed();
+    setSubjects(
+      EXAMPLE.map((s) => makeSubject({ name: s.name, mark: s.mark, creditPoints: s.creditPoints })),
+    );
   }
 
   function removeSubject(id: string) {
@@ -145,13 +162,22 @@ export function WamCalculator() {
             </div>
           ))}
         </div>
-        <button
-          type="button"
-          onClick={addSubject}
-          className="mt-3 rounded-lg border border-line px-3 py-1.5 font-body text-sm font-medium text-ink transition-colors duration-150 hover:border-status-open/50 hover:text-status-open"
-        >
-          + Add subject
-        </button>
+        <div className="mt-3 flex flex-wrap items-center gap-2">
+          <button
+            type="button"
+            onClick={addSubject}
+            className="rounded-lg border border-line px-3 py-1.5 font-body text-sm font-medium text-ink transition-colors duration-150 hover:border-status-open/50 hover:text-status-open"
+          >
+            + Add subject
+          </button>
+          <button
+            type="button"
+            onClick={loadExample}
+            className="rounded-lg px-3 py-1.5 font-body text-sm font-medium text-slate underline decoration-dotted underline-offset-4 transition-colors duration-150 hover:text-status-open"
+          >
+            Try an example
+          </button>
+        </div>
       </div>
 
       {result ? (
