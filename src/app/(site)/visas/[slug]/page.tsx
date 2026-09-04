@@ -40,8 +40,12 @@ export async function generateMetadata({
   // is what people type. The old title spent its first 55 characters on
   // "Skilled Employer Sponsored Regional (Provisional) visa" and pushed the
   // subclass number out of the visible part of the snippet entirely.
+  //
+  // `meta_title` overrides that lead for rows where the code is not the query.
+  // The bridging row spans 010/020/030, a string nobody searches, so it leads
+  // with "Bridging visa" instead. See 0028_add_visa_meta_title.sql.
   const title = composeTitle(
-    `Subclass ${visa.code} Visa`,
+    visa.meta_title ?? `Subclass ${visa.code} Visa`,
     [
       `Eligibility, ${visa.is_points_tested ? "Points" : "Requirements"} & Cost ${SITE_YEAR}`,
       `Eligibility & Cost ${SITE_YEAR}`,

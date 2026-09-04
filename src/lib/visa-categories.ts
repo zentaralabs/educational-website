@@ -8,6 +8,7 @@ export const VISA_CATEGORY_LABELS: Record<string, string> = {
   "business-investor": "Business & investor",
   "working-holiday": "Working holiday",
   visitor: "Visitor",
+  bridging: "Bridging",
   other: "Other",
 };
 
@@ -26,6 +27,7 @@ export const VISA_CATEGORY_ORDER: string[] = [
   "visitor",
   "graduate",
   "student",
+  "bridging",
   "business-investor",
   "other",
 ];

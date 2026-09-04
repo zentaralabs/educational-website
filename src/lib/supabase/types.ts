@@ -443,6 +443,8 @@ export interface Database {
           slug: string;
           code: string;
           name: string;
+          /** See 0028_add_visa_meta_title.sql. Overrides the "Subclass NNN Visa" title lead. */
+          meta_title: string | null;
           category: string;
           stream: string | null;
           short_description: string | null;
@@ -474,6 +476,7 @@ export interface Database {
           slug: string;
           code: string;
           name: string;
+          meta_title?: string | null;
           category: string;
           stream?: string | null;
           short_description?: string | null;

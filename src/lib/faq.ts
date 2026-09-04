@@ -112,6 +112,7 @@ export function universityFaq(u: UniFaqInput): FaqItem[] {
 type VisaFaqInput = {
   name: string;
   code: string;
+  category: string;
   base_application_charge: string | null;
   processing_time: string | null;
   age_limit: string | null;
@@ -123,6 +124,15 @@ type VisaFaqInput = {
 };
 
 export function visaFaq(v: VisaFaqInput): FaqItem[] {
+  // Every answer below assumes a substantive visa you apply for on its own
+  // merits: that including family costs extra, that a skills assessment might
+  // be involved, that "moving onto a skilled visa afterward" is the next step.
+  // None of that holds for a bridging visa, which is granted alongside another
+  // application and spans several subclass numbers, so "the subclass
+  // 010/020/030 visa" is not a phrase anyone says. Those pages carry their own
+  // question-headed sections in `content`, which extractFaqItems picks up.
+  if (v.category === "bridging") return [];
+
   const items: FaqItem[] = [];
   const label = `${v.name} (subclass ${v.code})`;
 

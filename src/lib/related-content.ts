@@ -75,6 +75,7 @@ const VISA_LABEL: Record<string, string> = {
   "partner-visa-309-100": "Partner visa, offshore (309/100)",
   "work-holiday-462": "Work and Holiday visa (462)",
   "visitor-visa-600": "Visitor visa (600)",
+  "bridging-visa-a-b-c": "Bridging visas (A, B and C)",
 };
 
 const g = (slug: string): RelatedLink => ({
@@ -277,6 +278,8 @@ const GUIDE_RELATED: Record<string, RelatedLink[]> = {
     g("study-to-permanent-residence-pathway-australia"),
     v("student-500"),
     v("temporary-graduate-485"),
+    // Work rights change again once the 500 lapses onto a bridging visa.
+    v("bridging-visa-a-b-c"),
   ],
   "bringing-family-on-an-australian-student-visa": [
     g("working-while-you-study-in-australia"),
@@ -289,6 +292,8 @@ const GUIDE_RELATED: Record<string, RelatedLink[]> = {
     g("genuine-student-statement-examples"),
     g("proving-funds-for-an-australian-student-visa"),
     v("student-500"),
+    // A bridging visa is what holds lawful status during a review.
+    v("bridging-visa-a-b-c"),
     COUNTRY_HUB,
   ],
   "applying-to-australian-universities-without-an-agent": [
@@ -402,13 +407,26 @@ const VISA_RELATED: Record<string, RelatedLink[]> = {
     FEB_INTAKE,
     v("temporary-graduate-485"),
   ],
+  // Exactly 6: the page renders `visaRelated(slug).slice(0, 6)`, so a 7th
+  // entry is silently dropped rather than shown. Adding the bridging visa
+  // here displaced `student-500`, which is the right one to lose: it already
+  // has 28 inbound entries in this file and a reader on the 485 page is past
+  // the student-visa stage, where `skills-in-demand-482` has only 7.
   "temporary-graduate-485": [
     g("temporary-graduate-visa-485-guide"),
     g("study-to-permanent-residence-pathway-australia"),
     b("485-graduate-visa-age-limit-drops-to-35", "The 485 age limit dropped to 35"),
-    v("student-500"),
+    // The 500-to-485 gap is the bridging visa's single most common use.
+    v("bridging-visa-a-b-c"),
     v("skilled-independent-189"),
     v("skills-in-demand-482"),
+  ],
+  "bridging-visa-a-b-c": [
+    v("student-500"),
+    v("temporary-graduate-485"),
+    g("working-while-you-study-in-australia"),
+    g("what-to-do-if-your-student-visa-is-refused"),
+    g("study-to-permanent-residence-pathway-australia"),
   ],
   "skilled-independent-189": [
     g("how-the-australian-points-test-works"),
