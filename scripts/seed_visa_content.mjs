@@ -1243,6 +1243,28 @@ Not on its own. Priority 3 means the university filled its international allocat
       "https://www.education.gov.au/managed-system-international-education/resources/visa-prioritisation-status",
     ],
   },
+  {
+    slug: "skilled-occupation-lists-explained",
+    title: "MLTSSL, STSOL, CSOL and ROL: Australia's skilled occupation lists explained",
+    // Short SERP title: the editorial title above is 79 characters before the
+    // " | Where To Apply" suffix, well past the ~60 Google renders. See the
+    // note on `meta_title` near the guides upsert below.
+    metaTitle: "Skilled Occupation Lists: MLTSSL, STSOL & CSOL",
+    // Verified today directly against Home Affairs; every other row in this
+    // file keeps the shared TODAY const from whenever it was last checked.
+    lastVerifiedAt: "2026-09-04",
+    category: "country-guide",
+    country: "AU",
+    excerpt:
+      "What MLTSSL, STSOL, CSOL and ROL actually are, which visa uses which one, the two ANZSCO code versions running in parallel, and how to check your own occupation.",
+    content:
+      "Every skilled visa page on this site mentions an occupation list. None of them explain what MLTSSL, STSOL, CSOL or ROL actually are, because they are reference facts, not something you choose. Here is what each one does, which visa draws from which, and the one detail that catches almost everyone out: Home Affairs runs two different versions of the underlying occupation classification at once.\n\n## The four lists\n\nHome Affairs calls this the \"combined list of eligible skilled occupations\". It is really four separate lists, and which one applies depends on the visa.\n\n| List | Full name | Used by |\n| --- | --- | --- |\n| CSOL | Core Skills Occupation List | [Skills in Demand (482) Core Skills stream](/visas/skills-in-demand-482), [Employer Nomination Scheme (186) Direct Entry](/visas/employer-nomination-scheme-186) |\n| MLTSSL | Medium and Long-term Strategic Skills List | [Skilled Independent (189)](/visas/skilled-independent-189), and feeds into [190](/visas/skilled-nominated-190), [491](/visas/skilled-work-regional-491) and [485](/visas/temporary-graduate-485) eligibility |\n| STSOL | Short-term Skilled Occupation List | [190](/visas/skilled-nominated-190), [407 Training visa](/visas/training-visa-407), [491](/visas/skilled-work-regional-491), some [485](/visas/temporary-graduate-485) occupations |\n| ROL | Regional Occupation List | [491](/visas/skilled-work-regional-491), [494](/visas/skilled-employer-sponsored-regional-494), broader than the other three |\n\nAn occupation can sit on more than one list at once, and which visas can use it for that occupation depends on the combination. Home Affairs publishes the authoritative combined list, searchable by occupation or by visa, and that search tool is the only place to get a current answer. It updates without notice; nothing that reproduces a fixed copy of it stays accurate for long, including a table on this page.\n\n## Which visa uses which list\n\nThe [189](/visas/skilled-independent-189) is the narrowest: MLTSSL only, no exceptions. State and territory nomination for the [190](/visas/skilled-nominated-190) and [491](/visas/skilled-work-regional-491) draws on MLTSSL, STSOL and each state's own occupation priorities, so an occupation that misses out on the 189 can still work through a state. The [482 Core Skills stream](/visas/skills-in-demand-482) runs entirely off the CSOL, introduced in December 2024 when it replaced the old Temporary Skill Shortage visa's Medium-Term list. The [494](/visas/skilled-employer-sponsored-regional-494) and the regional stream of the [491](/visas/skilled-work-regional-491) use the ROL, which is deliberately the broadest of the four so employers and states outside the big three cities have more occupations to work with. The [temporary Graduate visa (485)](/visas/temporary-graduate-485) only checks an occupation list for its Post-Vocational Education Work stream; the Post-Higher Education Work stream, the one most bachelor and masters graduates use, does not check a list at all.\n\nOne correction worth stating plainly: the CSOL is not phasing out the MLTSSL for points-tested visas. They serve different visa types entirely. The CSOL feeds the 482 and the 186 Direct Entry pathway, both employer-sponsored. The MLTSSL feeds the 189, which has no employer and is not going anywhere.\n\n## ANZSCO: the classification underneath every list\n\nEach occupation on every list is identified by an ANZSCO code, not a job title. ANZSCO, the Australian and New Zealand Standard Classification of Occupations, is maintained by the Australian Bureau of Statistics and sets the skill level, and the qualifications or experience expected, for each occupation code.\n\nThe detail that trips people up: Home Affairs currently runs two different ANZSCO versions side by side, depending on the visa.\n\n| ANZSCO version | Used for |\n| --- | --- |\n| 2022 | [Skills in Demand (482)](/visas/skills-in-demand-482) and [Employer Nomination Scheme (186)](/visas/employer-nomination-scheme-186), covering CSOL occupations |\n| 2013 | Every other skilled visa, covering MLTSSL, STSOL and ROL occupations |\n\nThe 2022 revision split some occupations into narrower specialisations and merged or renamed others. An occupation coded one way under the 2013 version can carry a different code, or not exist as a standalone code at all, under the 2022 version. If you are comparing your eligibility across an employer-sponsored visa and a points-tested one, check the code under both versions rather than assuming they line up, and use the version that matches the visa you are actually applying for.\n\n## How to check your own occupation\n\nUse the Home Affairs skilled occupation list search, linked in the sources below. Search by occupation title or ANZSCO code, and it shows every visa that occupation is eligible for, which list it sits on, any caveats that limit how it can be used, and which authority carries out the skills assessment for it. This is the definitive source. A registered migration agent's website, a coaching centre's blog, or a forum post repeating last year's list is not, because occupations are added and removed with no fixed schedule.\n\n## Being on a list is not the same as a positive skills assessment\n\nAn occupation appearing on the right list is necessary but not sufficient. You still need a positive [skills assessment](/guides/getting-a-skills-assessment-in-australia) from the specific authority that assesses that occupation, VETASSESS, a professional body such as CPA Australia or Engineers Australia, or a state or territory authority depending on the field. The list tells you the occupation is eligible in principle. The assessment tells the Department that you personally meet the standard for it.\n\n## Occupation ceilings, briefly\n\nFor the points-tested [189](/visas/skilled-independent-189), each occupation also has an annual ceiling on how many invitations it can receive, on top of simply being on the MLTSSL. A popular occupation can fill its ceiling for the program year well before the points cut-off would otherwise suggest. The [invitation rounds tracker](/visas/invitation-rounds) records the cut-off score and occupation notes for every round, which is the closest thing to a real-time read on how a given occupation's ceiling is tracking.\n\n## Do occupations get removed from these lists?\n\nYes, without a fixed schedule, based on labour market analysis from Jobs and Skills Australia. If your occupation is removed after your visa is already granted, the removal does not affect a visa you already hold. It only matters again if your circumstances change, for example a new employer needs to nominate you and your occupation is no longer eligible.\n\n## Does removal affect an application already in progress?\n\nHome Affairs states that a pending nomination or visa application is not adversely affected by a subsequent removal of the occupation from the list. The risk sits with applications not yet lodged.\n\n## Can one occupation appear on more than one list?\n\nYes, and most do. An occupation might sit on the STSOL and the CSOL together, or the MLTSSL and the CSOL together, which is exactly why the same job can be eligible for a state-nominated visa and an employer-sponsored one at the same time, under two different ANZSCO versions, assessed by the same authority.\n\n## Where the two ANZSCO versions actually matters\n\nSomeone weighing a [482 employer-sponsored visa](/visas/skills-in-demand-482) against a [189 points-tested application](/visas/skilled-independent-189) for what feels like the same job should check both: the 2022 code for the 482 route, the 2013 code for the 189 route. They are not guaranteed to describe the occupation the same way.",
+    sources: [
+      "https://immi.homeaffairs.gov.au/visas/working-in-australia/skill-occupation-list",
+      "https://www.abs.gov.au/statistics/classifications/anzsco-australian-and-new-zealand-standard-classification-occupations/2022",
+      "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skills-in-demand-visa-subclass-482/core-skills-stream",
+    ],
+  },
 ];
 
 // ---------------------------------------------------------------------------
@@ -1621,12 +1643,19 @@ try {
   for (const g of guides) {
     await client.query(
       `insert into guides
-        (slug, title, category, country_id, content, excerpt, word_count,
+        (slug, title, meta_title, category, country_id, content, excerpt, word_count,
          author_id, status, last_verified_at, source_urls,
          qa_facts_verified, qa_sentence_variation_checked, qa_firsthand_detail_added)
-       values ($1,$2,$3,$4,$5,$6,$7,$8,'published',$9,$10,true,true,true)
+       values ($1,$2,$3,$4,$5,$6,$7,$8,$9,'published',$10,$11,true,true,true)
        on conflict (slug) do update set
-         title = excluded.title, category = excluded.category,
+         title = excluded.title,
+         -- coalesce, not overwrite: most entries in this file have no
+         -- metaTitle (their editorial title already fits the SERP budget),
+         -- so a blind assignment would null out any value
+         -- scripts/seed_meta_titles.mjs backfilled for a row this file also
+         -- happens to define. Only an explicit metaTitle here should change it.
+         meta_title = coalesce(excluded.meta_title, guides.meta_title),
+         category = excluded.category,
          country_id = excluded.country_id, content = excluded.content,
          excerpt = excluded.excerpt, word_count = excluded.word_count,
          status = 'published', last_verified_at = excluded.last_verified_at,
@@ -1634,13 +1663,20 @@ try {
       [
         g.slug,
         g.title,
+        // `metaTitle` is optional per-guide: most editorial titles fit the
+        // ~60-char SERP budget on their own, so `meta_title` stays null and
+        // page-metadata.ts falls back to `title`. See 0025_add_meta_title.sql.
+        g.metaTitle ?? null,
         g.category,
         g.country ? countryId[g.country] : null,
         g.content,
         g.excerpt,
         wc(g.content),
         AUTHOR_ID,
-        TODAY,
+        // A row may carry its own verified-today date distinct from the
+        // file's bulk TODAY, so re-running this script for one new entry
+        // does not falsely re-stamp every other guide as checked today.
+        g.lastVerifiedAt ?? TODAY,
         g.sources,
       ],
     );
