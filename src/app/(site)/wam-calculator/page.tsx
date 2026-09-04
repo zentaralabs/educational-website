@@ -12,7 +12,7 @@ export const revalidate = 86400;
 
 const title = `WAM Calculator: Weighted Average Mark (${SITE_YEAR})`;
 const description =
-  "Work out your Weighted Average Mark (WAM) for an Australian university: enter each subject's mark and credit points to get your WAM, grade band, and 7-point GPA estimate.";
+  "Calculate your Australian university WAM (Weighted Average Mark): enter subject marks and credit points to get your WAM, grade band, and GPA estimate.";
 
 export const metadata = pageMetadata({
   title,
