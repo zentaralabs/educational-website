@@ -65,7 +65,7 @@ export default async function CollectionPage({
   };
 
   return (
-    <main className="mx-auto w-full max-w-2xl px-6 pt-8 pb-16">
+    <main className="mx-auto w-full max-w-3xl px-6 pt-8 pb-16">
       <JsonLd data={breadcrumbJsonLd(breadcrumbs)} />
       <JsonLd data={itemListJsonLd} />
       <Breadcrumbs items={breadcrumbs} />
@@ -114,7 +114,7 @@ export default async function CollectionPage({
       )}
 
       <div className="mt-10 rounded-2xl border border-line bg-mist p-5">
-        <h2 className="font-body text-xs font-semibold tracking-wide text-slate uppercase">
+        <h2 className="font-body text-[0.8rem] font-semibold tracking-wide text-slate uppercase">
           How this list was built
         </h2>
         <p className="mt-2 font-body text-sm text-slate">{collection.methodology}</p>
@@ -136,7 +136,7 @@ export default async function CollectionPage({
       )}
 
       <div className="mt-10 border-t border-ink/10 pt-6">
-        <h2 className="mb-3 font-body text-xs font-semibold tracking-wide text-slate uppercase">
+        <h2 className="mb-3 font-body text-[0.8rem] font-semibold tracking-wide text-slate uppercase">
           Other decision guides
         </h2>
         <ul className="grid gap-2 sm:grid-cols-2">

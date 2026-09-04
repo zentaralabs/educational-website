@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
+import { FaqSection } from "@/components/site/FaqSection";
+import { SectionHeading } from "@/components/site/SectionHeading";
 import { ArrowUpRightIcon } from "@/components/site/icons";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import { SITE_URL, SITE_YEAR } from "@/lib/site-config";
@@ -122,7 +124,7 @@ export default async function SubjectPage({
   }
 
   return (
-    <main className="mx-auto w-full max-w-2xl px-6 pt-8 pb-16">
+    <main className="mx-auto w-full max-w-4xl px-6 pt-8 pb-16">
       {jsonLd.map((block, i) => (
         <JsonLd key={i} data={block} />
       ))}
@@ -130,7 +132,7 @@ export default async function SubjectPage({
       <Breadcrumbs items={breadcrumbs} />
 
       <div className="rounded-2xl bg-gradient-to-br from-ink/[0.04] via-ink/[0.02] to-transparent p-6 sm:p-8">
-        <p className="flex items-center gap-2 font-utility text-xs font-semibold tracking-wide text-status-open uppercase">
+        <p className="flex items-center gap-2 font-utility text-[0.8rem] font-semibold tracking-wide text-slate uppercase">
           <span className="inline-block h-1.5 w-1.5 rounded-full bg-status-open" />
           Study in Australia
         </p>
@@ -139,7 +141,7 @@ export default async function SubjectPage({
         </h1>
       </div>
 
-      <dl className="mt-8 grid grid-cols-3 gap-3">
+      <dl className="mt-8 grid grid-cols-3 gap-3 sm:max-w-2xl">
         <div className="rounded-xl border border-line bg-mist px-4 py-3">
           <dt className="font-utility text-xs font-semibold tracking-wide text-slate uppercase">
             Programs
@@ -172,7 +174,7 @@ export default async function SubjectPage({
         <p className="mt-3 font-body text-xs text-slate">{content.costNote}</p>
       )}
 
-      <div className="mt-8 flex flex-col gap-3">
+      <div className="mt-8 flex max-w-2xl flex-col gap-3">
         {intro.map((p) => (
           <p key={p.slice(0, 24)} className="font-body text-base leading-relaxed text-ink">
             {p}
@@ -186,7 +188,7 @@ export default async function SubjectPage({
       </div>
 
       {content?.careers && (
-        <p className="mt-6 rounded-xl border border-status-open/25 bg-status-open/5 p-5 font-body text-sm text-ink">
+        <p className="mt-6 max-w-2xl rounded-xl border border-status-open/25 bg-status-open/5 p-5 font-body text-sm text-ink">
           <span className="font-semibold">Migration angle. </span>
           {content.careers}
         </p>
@@ -199,9 +201,7 @@ export default async function SubjectPage({
 
       {strongAt.length > 0 && (
         <section className="mt-10">
-          <h2 className="mb-3 font-display text-xl font-semibold text-ink">
-            Universities known for {subject.name}
-          </h2>
+          <SectionHeading>Universities known for {subject.name}</SectionHeading>
           <p className="mb-4 font-body text-sm text-slate">
             There is no official field-level ranking of Australian universities.
             These are the ones with a recognised reputation in {subject.name},
@@ -232,10 +232,10 @@ export default async function SubjectPage({
         </section>
       )}
 
-      <section className="mt-10">
-        <h2 className="mb-3 font-display text-xl font-semibold text-ink">
+      <section className="mt-10 max-w-2xl">
+        <SectionHeading>
           {content?.requirements ? `Entry requirements for ${subject.name}` : "Typical entry requirements"}
-        </h2>
+        </SectionHeading>
         {content?.requirements ? (
           <div className="flex flex-col gap-3">
             {content.requirements.map((p) => (
@@ -252,27 +252,14 @@ export default async function SubjectPage({
       </section>
 
       {content?.faq && content.faq.length > 0 && (
-        <section className="mt-10">
-          <h2 className="mb-3 font-display text-xl font-semibold text-ink">
-            {subject.name} in Australia: common questions
-          </h2>
-          <div className="flex flex-col gap-4">
-            {content.faq.map((f) => (
-              <div key={f.q}>
-                <h3 className="font-body text-base font-semibold text-ink">
-                  {f.q}
-                </h3>
-                <p className="mt-1 font-body text-base leading-relaxed text-slate">
-                  {f.a}
-                </p>
-              </div>
-            ))}
-          </div>
-        </section>
+        <FaqSection
+          heading={`${subject.name} in Australia: common questions`}
+          items={content.faq}
+        />
       )}
 
       <section className="mt-10 border-t border-line pt-6">
-        <h2 className="mb-3 font-body text-xs font-semibold tracking-wide text-slate uppercase">
+        <h2 className="mb-3 font-body text-[0.8rem] font-semibold tracking-wide text-slate uppercase">
           Related
         </h2>
         <ul className="grid gap-2 sm:grid-cols-2">
