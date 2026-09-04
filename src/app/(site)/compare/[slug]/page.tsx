@@ -326,14 +326,14 @@ export default async function ComparisonPage({
     ];
 
     return (
-      <main className="mx-auto w-full max-w-3xl px-6 pt-8 pb-16">
+      <main className="mx-auto w-full max-w-4xl px-6 pt-8 pb-16">
         <JsonLd data={breadcrumbJsonLd(breadcrumbs)} />
         <JsonLd data={faqJsonLd(faq)} />
 
         <div>
           <Breadcrumbs items={breadcrumbs} />
           <div className="rounded-2xl bg-gradient-to-br from-ink/[0.04] via-ink/[0.02] to-transparent p-6 sm:p-8">
-            <p className="flex items-center gap-2 font-utility text-xs font-semibold tracking-wide text-status-open uppercase">
+            <p className="flex items-center gap-2 font-utility text-[0.8rem] font-semibold tracking-wide text-slate uppercase">
               <span className="inline-block h-1.5 w-1.5 rounded-full bg-status-open" />
               Comparison
             </p>
@@ -342,7 +342,7 @@ export default async function ComparisonPage({
             </h1>
           </div>
 
-          <div className="mt-6 flex flex-col gap-3">
+          <div className="mt-6 flex max-w-2xl flex-col gap-3">
             {intro.map((p) => (
               <p key={p} className="font-body text-base leading-relaxed text-ink">
                 {p}
@@ -400,7 +400,7 @@ export default async function ComparisonPage({
           )}
 
           {(ca.who_is_it_for || cb.who_is_it_for) && (
-            <div className="mt-8 flex flex-col gap-5">
+            <div className="mt-8 flex max-w-2xl flex-col gap-5">
               {[ca, cb].map(
                 (u) =>
                   u.who_is_it_for && (
@@ -420,7 +420,7 @@ export default async function ComparisonPage({
           <FaqSection heading={`${a.name} vs ${b.name}: common questions`} items={faq} />
 
           <div className="mt-10 border-t border-line pt-6">
-            <h2 className="mb-3 font-body text-xs font-semibold tracking-wide text-slate uppercase">
+            <h2 className="mb-3 font-body text-[0.8rem] font-semibold tracking-wide text-slate uppercase">
               Go deeper
             </h2>
             <ul className="grid gap-2 sm:grid-cols-2">
@@ -447,7 +447,7 @@ export default async function ComparisonPage({
           </div>
 
           <div className="mt-8">
-            <h2 className="mb-3 font-body text-xs font-semibold tracking-wide text-slate uppercase">
+            <h2 className="mb-3 font-body text-[0.8rem] font-semibold tracking-wide text-slate uppercase">
               Other comparisons
             </h2>
             <ul className="grid gap-2 sm:grid-cols-2">
@@ -498,7 +498,7 @@ export default async function ComparisonPage({
         <Breadcrumbs items={breadcrumbs} />
 
         <div className="rounded-2xl bg-gradient-to-br from-ink/[0.04] via-ink/[0.02] to-transparent p-6 sm:p-8">
-          <p className="flex items-center gap-2 font-utility text-xs font-semibold tracking-wide text-status-open uppercase">
+          <p className="flex items-center gap-2 font-utility text-[0.8rem] font-semibold tracking-wide text-slate uppercase">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-status-open" />
             Comparison
             {guide.country && ` · ${guide.country.name}`}
@@ -540,7 +540,7 @@ export default async function ComparisonPage({
 
         {related.guides.length > 0 && (
           <div className="mt-10 border-t border-ink/10 pt-6">
-            <h2 className="mb-4 font-body text-xs font-semibold tracking-wide text-slate uppercase">
+            <h2 className="mb-4 font-body text-[0.8rem] font-semibold tracking-wide text-slate uppercase">
               Related guides
             </h2>
             <ul className="grid gap-3 sm:grid-cols-2">

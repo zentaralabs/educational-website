@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { FaqSection } from "@/components/site/FaqSection";
+import { SectionHeading } from "@/components/site/SectionHeading";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import {
   CITY_COSTS,
@@ -82,26 +83,26 @@ export default async function CityCostPage({
   ];
 
   return (
-    <main className="mx-auto w-full max-w-2xl px-6 pt-8 pb-16">
+    <main className="mx-auto w-full max-w-4xl px-6 pt-8 pb-16">
       <JsonLd data={breadcrumbJsonLd(breadcrumbs)} />
       <JsonLd data={faqJsonLd(c.faq)} />
 
       <Breadcrumbs items={breadcrumbs} />
 
       <div className="rounded-2xl bg-gradient-to-br from-ink/[0.04] via-ink/[0.02] to-transparent p-6 sm:p-8">
-        <p className="flex items-center gap-2 font-utility text-xs font-semibold tracking-wide text-status-open uppercase">
+        <p className="flex items-center gap-2 font-utility text-[0.8rem] font-semibold tracking-wide text-slate uppercase">
           <span className="inline-block h-1.5 w-1.5 rounded-full bg-status-open" />
           {c.state} · Cost of living
         </p>
         <h1 className="mt-2 font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
           Cost of living in {c.name}
         </h1>
-        <p className="mt-4 font-body text-base leading-relaxed text-slate">
+        <p className="mt-4 max-w-2xl font-body text-base leading-relaxed text-ink/80">
           {c.blurb}
         </p>
       </div>
 
-      <div className="mt-8 rounded-2xl border border-status-open/25 bg-status-open/5 p-5">
+      <div className="mt-8 max-w-2xl rounded-2xl border border-status-open/25 bg-status-open/5 p-5">
         <p className="font-utility text-xs font-semibold tracking-wide text-slate uppercase">
           Estimated annual cost, sharing accommodation
         </p>
@@ -117,10 +118,8 @@ export default async function CityCostPage({
         </p>
       </div>
 
-      <section className="mt-10">
-        <h2 className="mb-3 font-display text-xl font-semibold text-ink">
-          Weekly breakdown
-        </h2>
+      <section className="mt-10 max-w-2xl">
+        <SectionHeading>Weekly breakdown</SectionHeading>
         <div className="overflow-hidden rounded-xl border border-line divide-y divide-line">
           <Row
             label="Rent, room in a shared house"
@@ -145,10 +144,8 @@ export default async function CityCostPage({
       </section>
 
       {unis.length > 0 && (
-        <section className="mt-10">
-          <h2 className="mb-3 font-display text-xl font-semibold text-ink">
-            Universities in {c.name}
-          </h2>
+        <section className="mt-10 max-w-2xl">
+          <SectionHeading>Universities in {c.name}</SectionHeading>
           <ul className="flex flex-wrap gap-2">
             {unis.map((u) => (
               <li key={u.slug}>

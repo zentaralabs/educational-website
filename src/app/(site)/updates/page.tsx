@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
+import { FaqSection } from "@/components/site/FaqSection";
 import { LastVerified } from "@/components/site/LastVerified";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import { faqJsonLd, type FaqItem } from "@/lib/faq";
@@ -106,7 +107,7 @@ export default async function UpdatesPage() {
       <h1 className="font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
         Australia student &amp; visa updates
       </h1>
-      <p className="mt-3 font-body text-base text-slate">
+      <p className="mt-3 max-w-2xl font-body text-base text-ink/80">
         A dated log of policy changes that affect applying to study in
         Australia: student visa charges, processing priorities, post-study
         work, English-test recognition, and the international-student planning
@@ -116,7 +117,7 @@ export default async function UpdatesPage() {
 
       {latest && (
         <div className="mt-8 rounded-2xl border border-status-open/30 bg-status-open/5 p-5">
-          <p className="font-body text-xs font-semibold tracking-wide text-status-open uppercase">
+          <p className="font-body text-[0.8rem] font-semibold tracking-wide text-slate uppercase">
             Latest update
           </p>
           <h2
@@ -143,7 +144,7 @@ export default async function UpdatesPage() {
         <div className="mt-12 flex flex-col gap-10">
           {years.map((year) => (
             <section key={year}>
-              <h2 className="mb-4 font-body text-xs font-semibold tracking-wide text-slate uppercase">
+              <h2 className="mb-4 font-body text-[0.8rem] font-semibold tracking-wide text-slate uppercase">
                 {year}
               </h2>
               <div className="flex flex-col gap-8">
@@ -171,7 +172,7 @@ export default async function UpdatesPage() {
                     <h3 className="mt-1.5 font-body text-lg font-semibold text-ink">
                       {u.title}
                     </h3>
-                    <p className="mt-1.5 font-body text-sm leading-relaxed text-slate">
+                    <p className="mt-1.5 font-body text-sm leading-relaxed text-ink/80">
                       {u.summary}
                     </p>
 
@@ -257,21 +258,7 @@ export default async function UpdatesPage() {
         </p>
       </div>
 
-      <section className="mt-12">
-        <h2 className="font-display text-xl font-semibold text-ink">
-          Common questions
-        </h2>
-        <dl className="mt-4 flex flex-col gap-6">
-          {faq.map((f) => (
-            <div key={f.q}>
-              <dt className="font-body text-base font-semibold text-ink">
-                {f.q}
-              </dt>
-              <dd className="mt-1 font-body text-sm text-slate">{f.a}</dd>
-            </div>
-          ))}
-        </dl>
-      </section>
+      <FaqSection heading="Common questions" items={faq} />
 
       <div className="mt-10">
         <LastVerified date={latestVerified} sources={allSources} />

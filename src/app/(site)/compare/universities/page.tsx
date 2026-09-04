@@ -64,14 +64,14 @@ export default async function CompareUniversitiesPage({
         <Breadcrumbs items={breadcrumbs} />
 
         <div className="rounded-2xl bg-gradient-to-br from-ink/[0.04] via-ink/[0.02] to-transparent p-6 sm:p-8">
-          <p className="flex items-center gap-2 font-utility text-xs font-semibold tracking-wide text-status-open uppercase">
+          <p className="flex items-center gap-2 font-utility text-[0.8rem] font-semibold tracking-wide text-slate uppercase">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-status-open" />
             Side-by-side
           </p>
           <h1 className="mt-2 font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
             Compare universities
           </h1>
-          <p className="mt-2 font-body text-base text-slate">
+          <p className="mt-2 font-body text-base text-ink/80">
             Pick any two or more universities to compare tuition, selectivity, and requirements.
           </p>
         </div>
