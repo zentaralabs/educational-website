@@ -28,6 +28,7 @@ const NAV: NavItem[] = [
     label: "Visas",
     children: [
       { label: "All visa subclasses", href: "/visas", hint: "Student, graduate, skilled, family, working holiday" },
+      { label: "Occupations", href: "/occupations", hint: "Which degree leads to which skilled occupation" },
       { label: "Updates", href: "/updates", hint: "Student visa & policy changes, dated and sourced" },
       { label: "Points calculator", href: "/visas/points-calculator", hint: "Estimate your skilled migration score" },
       { label: "Invitation rounds", href: "/visas/invitation-rounds", hint: "SkillSelect cut-offs, round by round" },

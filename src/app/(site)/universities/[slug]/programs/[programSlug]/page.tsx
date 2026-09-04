@@ -7,10 +7,11 @@ import { WhyTrust } from "@/components/site/WhyTrust";
 import { ProgramAdmissionsBlock } from "@/components/site/ProgramAdmissionsBlock";
 import { ProgramSidebar } from "@/components/site/ProgramSidebar";
 import { OutboundLink } from "@/components/site/OutboundLink";
-import { ArrowUpRightIcon, BookIcon } from "@/components/site/icons";
+import { ArrowUpRightIcon, BookIcon, PassportIcon } from "@/components/site/icons";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import { SITE_YEAR } from "@/lib/site-config";
 import {
+  getProgramOccupations,
   getPublishedProgramBySlug,
   isProgramIndexable,
   resolveProgramSlugById,
@@ -113,6 +114,8 @@ export default async function ProgramDetailPage({
   await redirectIfLegacyId(slug, programSlug);
   const program = await loadProgram(slug, programSlug);
   if (!program) notFound();
+
+  const occupations = await getProgramOccupations(program.id);
 
   const university = program.university!;
   const curriculumTerms = program.curriculum
@@ -299,6 +302,80 @@ export default async function ProgramDetailPage({
               </div>
             ))}
           </div>
+        </ProfileSection>
+      )}
+
+      {occupations.length > 0 && (
+        <ProfileSection title="Career & PR pathway">
+          <p className="mb-4 flex items-center gap-2 font-body text-sm text-slate">
+            <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-status-open/10 text-status-open">
+              <PassportIcon className="h-3.5 w-3.5" />
+            </span>
+            Occupations this degree typically leads to, and their skilled-migration list status
+          </p>
+          <div className="flex flex-col gap-3">
+            {occupations.map(({ occupation, relevance, pathway_note }) => {
+              if (!occupation) return null;
+              const lists = [
+                occupation.mltssl && "MLTSSL",
+                occupation.stsol && "STSOL",
+                occupation.rol && "ROL",
+                occupation.csol && "CSOL",
+              ].filter(Boolean) as string[];
+              return (
+                <Link
+                  key={occupation.slug}
+                  href={`/occupations/${occupation.slug}`}
+                  className="block rounded-xl border border-line bg-mist p-4 transition-all duration-150 hover:-translate-y-0.5 hover:border-status-open/30 hover:shadow-[0_14px_36px_-18px_rgba(22,35,63,0.28)]"
+                >
+                  <div className="flex flex-wrap items-center justify-between gap-2">
+                    <p className="font-body text-sm font-semibold text-ink">
+                      {occupation.name}
+                      <span className="ml-2 font-utility text-[11px] font-normal text-slate">
+                        ANZSCO {occupation.anzsco_code}
+                      </span>
+                    </p>
+                    <div className="flex flex-wrap gap-1.5">
+                      {relevance === "primary" && (
+                        <span className="rounded-full bg-status-open/10 px-2 py-0.5 font-utility text-[10px] font-semibold text-status-open">
+                          Primary outcome
+                        </span>
+                      )}
+                      {lists.map((list) => (
+                        <span
+                          key={list}
+                          className="rounded-full bg-ink/[0.05] px-2 py-0.5 font-utility text-[10px] text-slate"
+                        >
+                          {list}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  {(pathway_note ?? occupation.visa_pathway_note ?? occupation.summary) && (
+                    <p className="mt-2 font-body text-sm text-slate">
+                      {pathway_note ?? occupation.visa_pathway_note ?? occupation.summary}
+                    </p>
+                  )}
+                  {occupation.assessing_authority && (
+                    <p className="mt-1.5 font-body text-xs text-slate">
+                      Assessed by {occupation.assessing_authority}
+                    </p>
+                  )}
+                </Link>
+              );
+            })}
+          </div>
+          <p className="mt-3 font-body text-xs text-slate">
+            List membership changes over time and does not guarantee an invitation. See the{" "}
+            <Link href="/guides/skilled-occupation-lists-explained" className="underline underline-offset-2 hover:text-ink">
+              skilled occupation lists guide
+            </Link>{" "}
+            and the{" "}
+            <Link href="/visas/points-calculator" className="underline underline-offset-2 hover:text-ink">
+              points calculator
+            </Link>{" "}
+            before relying on this for a visa decision.
+          </p>
         </ProfileSection>
       )}
 

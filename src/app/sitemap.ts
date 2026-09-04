@@ -15,6 +15,7 @@ import { listPublishedScholarshipSlugsForSitemap } from "@/lib/queries/public-sc
 import { listPublishedSubjects } from "@/lib/queries/public-subjects";
 import { listPublishedUniversitySlugsForSitemap } from "@/lib/queries/public-universities";
 import { listPublishedVisaSlugsForSitemap } from "@/lib/queries/public-visas";
+import { listPublishedOccupationSlugsForSitemap } from "@/lib/queries/public-occupations";
 
 /**
  * The site's primary sitemap: everything a search engine should spend its
@@ -83,6 +84,7 @@ const STATIC_ROUTES: Array<{ path: string; priority: number; changeFrequency: Me
   { path: "/study", priority: 0.8, changeFrequency: "weekly" },
   { path: "/cost-of-living", priority: 0.7, changeFrequency: "monthly" },
   { path: "/visas", priority: 0.8, changeFrequency: "weekly" },
+  { path: "/occupations", priority: 0.7, changeFrequency: "weekly" },
   { path: "/visas/invitation-rounds", priority: 0.7, changeFrequency: "weekly" },
   { path: "/visas/points-calculator", priority: 0.8, changeFrequency: "monthly" },
   { path: "/updates", priority: 0.7, changeFrequency: "weekly" },
@@ -112,6 +114,7 @@ async function buildDynamicEntries(): Promise<MetadataRoute.Sitemap> {
     comparisonGuides,
     blogPosts,
     visas,
+    occupations,
     scholarships,
     subjects,
   ] = await Promise.all([
@@ -124,6 +127,7 @@ async function buildDynamicEntries(): Promise<MetadataRoute.Sitemap> {
     ),
     safe("blog posts", listAllBlogPostSlugsForSitemap),
     safe("visas", listPublishedVisaSlugsForSitemap),
+    safe("occupations", listPublishedOccupationSlugsForSitemap),
     safe("scholarships", listPublishedScholarshipSlugsForSitemap),
     safe("subjects", listPublishedSubjects),
   ]);
@@ -200,6 +204,13 @@ async function buildDynamicEntries(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }));
 
+  const occupationEntries: MetadataRoute.Sitemap = occupations.map((o) => ({
+    url: `${SITE_URL}/occupations/${o.slug}`,
+    lastModified: modOr(o.updatedAt),
+    changeFrequency: "monthly",
+    priority: 0.6,
+  }));
+
   const scholarshipEntries: MetadataRoute.Sitemap = scholarships.map((s) => ({
     url: `${SITE_URL}/scholarships/${s.slug}`,
     lastModified: modOr(s.updatedAt),
@@ -268,6 +279,7 @@ async function buildDynamicEntries(): Promise<MetadataRoute.Sitemap> {
     ...comparisonEntries,
     ...blogEntries,
     ...visaEntries,
+    ...occupationEntries,
     ...scholarshipEntries,
     ...collectionEntries,
     ...subjectEntries,

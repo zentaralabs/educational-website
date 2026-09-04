@@ -68,6 +68,23 @@ export async function getPublishedProgramsForUniversity(
   return (data ?? []) as unknown as PublicProgramRow[];
 }
 
+export type ProgramOccupation = {
+  relevance: "primary" | "related";
+  pathway_note: string | null;
+  occupation: {
+    slug: string;
+    name: string;
+    anzsco_code: string;
+    summary: string | null;
+    assessing_authority: string | null;
+    visa_pathway_note: string | null;
+    mltssl: boolean;
+    stsol: boolean;
+    rol: boolean;
+    csol: boolean;
+  } | null;
+};
+
 export type PublicProgramDetail = PublicProgramRow & {
   description: string | null;
   curriculum: string | null;
@@ -124,6 +141,27 @@ export async function getPublishedProgramBySlug(
   if (error) throw error;
   if (!data) return null;
   return data as unknown as PublicProgramDetail;
+}
+
+/**
+ * Career/PR-pathway occupations linked to a program (migration 0030). Only
+ * published occupations are returned — `program_occupations` itself has no
+ * draft workflow (it's a pure join, see the migration), so visibility is
+ * enforced by filtering on the joined occupation's status here.
+ */
+export async function getProgramOccupations(programId: string): Promise<ProgramOccupation[]> {
+  const supabase = createPublicClient([`program-occupations:${programId}`]);
+  const { data, error } = await supabase
+    .from("program_occupations")
+    .select(
+      "relevance, pathway_note, occupation:occupations!inner(slug, name, anzsco_code, summary, assessing_authority, visa_pathway_note, mltssl, stsol, rol, csol, status)",
+    )
+    .eq("program_id", programId)
+    .eq("occupation.status", "published")
+    .order("relevance");
+
+  if (error) throw error;
+  return (data ?? []) as unknown as ProgramOccupation[];
 }
 
 /**
