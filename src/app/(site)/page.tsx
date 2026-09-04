@@ -149,7 +149,7 @@ export default async function Home() {
 
           {/* HERO */}
           <section>
-            <div className="min-w-0">
+            <div className="mx-auto min-w-0 max-w-2xl text-center">
               <p
                 className={`animate-fade-up ${eyebrowClass}`}
                 style={{ animationDelay: "0ms" }}
@@ -168,7 +168,7 @@ export default async function Home() {
               </h1>
 
               <p
-                className="animate-fade-up mt-4 max-w-xl font-body text-base text-ink/80 sm:text-lg"
+                className="animate-fade-up mx-auto mt-4 max-w-xl font-body text-base text-ink/80 sm:text-lg"
                 style={{ animationDelay: "80ms" }}
               >
                 Application deadlines, tuition, visa subclasses, and the policy
@@ -180,8 +180,8 @@ export default async function Home() {
                 className="animate-fade-up"
                 style={{ animationDelay: "120ms" }}
               >
-                <SearchBar className="mt-6 !mx-0 max-w-xl" />
-                <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2">
+                <SearchBar className="mx-auto mt-6 max-w-xl" />
+                <div className="mt-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
                   <StudentTypeToggle />
                   <span className="font-body text-sm text-slate">
                     or{" "}
@@ -199,7 +199,7 @@ export default async function Home() {
               {heroUpdate && (
                 <Link
                   href="/updates"
-                  className="animate-fade-up mt-5 flex max-w-xl items-center gap-2.5 rounded-full border border-line bg-mist px-4 py-2 transition-colors duration-150 hover:border-status-pending/40"
+                  className="animate-fade-up mx-auto mt-5 flex max-w-xl items-center gap-2.5 rounded-full border border-line bg-mist px-4 py-2 text-left transition-colors duration-150 hover:border-status-pending/40"
                   style={{ animationDelay: "160ms" }}
                 >
                   <span

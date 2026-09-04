@@ -3,14 +3,19 @@ import { SectionHeading } from "@/components/site/SectionHeading";
 export function ProfileSection({
   title,
   children,
+  /** Constrain the body to a comfortable reading measure. Use for
+   * prose-heavy sections on wide (max-w-4xl) pages; leave off for
+   * sections whose content is a full-width table or fact grid. */
+  narrow = false,
 }: {
   title: string;
   children: React.ReactNode;
+  narrow?: boolean;
 }) {
   return (
     <section className="mt-8 border-t border-ink/10 pt-8 first:mt-0 first:border-t-0 first:pt-0">
       <SectionHeading>{title}</SectionHeading>
-      {children}
+      {narrow ? <div className="max-w-2xl">{children}</div> : children}
     </section>
   );
 }

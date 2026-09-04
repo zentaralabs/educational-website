@@ -138,7 +138,7 @@ export default async function IntakeDeadlinePage({
   ];
 
   return (
-    <main className="mx-auto w-full max-w-3xl px-6 pt-8 pb-16">
+    <main className="mx-auto w-full max-w-4xl px-6 pt-8 pb-16">
       {jsonLd.map((block, i) => (
         <JsonLd key={i} data={block} />
       ))}
@@ -146,14 +146,14 @@ export default async function IntakeDeadlinePage({
       <Breadcrumbs items={breadcrumbs} />
 
       <div className="rounded-2xl bg-gradient-to-br from-ink/[0.04] via-ink/[0.02] to-transparent p-6 sm:p-8">
-        <p className="flex items-center gap-2 font-utility text-xs font-semibold tracking-wide text-status-open uppercase">
+        <p className="flex items-center gap-2 font-utility text-[0.8rem] font-semibold tracking-wide text-slate uppercase">
           <span className="inline-block h-1.5 w-1.5 rounded-full bg-status-open" />
           Australian university deadlines
         </p>
         <h1 className="mt-2 font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
           {hub.intakeName} intake deadlines for Australian universities
         </h1>
-        <p className="mt-3 font-body text-base text-slate">
+        <p className="mt-3 max-w-2xl font-body text-base text-ink/80">
           {rows.length} sourced application dates across {groups.length}{" "}
           Australian universities, undergraduate and postgraduate. Courses in
           this intake start in {hub.startWindow}.
@@ -179,13 +179,13 @@ export default async function IntakeDeadlinePage({
         </ul>
       </section>
 
-      <div className="mt-8 flex flex-col gap-3 font-body text-base leading-relaxed text-ink">
+      <div className="mt-8 flex max-w-2xl flex-col gap-3 font-body text-base leading-relaxed text-ink">
         {hub.intro.map((p) => (
           <p key={p.slice(0, 24)}>{p}</p>
         ))}
       </div>
 
-      <ProfileSection title={`Is the ${hub.intakeName} intake right for you?`}>
+      <ProfileSection narrow title={`Is the ${hub.intakeName} intake right for you?`}>
         <div className="flex flex-col gap-3 font-body text-base leading-relaxed text-ink">
           {hub.decision.map((p) => (
             <p key={p.slice(0, 24)}>{p}</p>
@@ -205,7 +205,7 @@ export default async function IntakeDeadlinePage({
         )}
       </ProfileSection>
 
-      <ProfileSection title="When to start: the timeline">
+      <ProfileSection narrow title="When to start: the timeline">
         <ol className="flex flex-col gap-4">
           {hub.timeline.map((t) => (
             <li key={t.step} className="border-l-2 border-status-open/30 pl-4">
