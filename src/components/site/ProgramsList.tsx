@@ -28,10 +28,15 @@ export function ProgramsList({
 
   const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
   const currentPage = Math.min(page, totalPages);
-  const pageItems = filtered.slice(
-    (currentPage - 1) * PAGE_SIZE,
-    currentPage * PAGE_SIZE,
-  );
+  const pageStart = (currentPage - 1) * PAGE_SIZE;
+  const pageItems = filtered.slice(pageStart, pageStart + PAGE_SIZE);
+
+  // Every program keeps a real <Link> in the DOM at all times so crawlers can
+  // find and follow every program page, even though only the current
+  // page/search result is visible to a person. Pagination and search here are
+  // a client-side view filter, not a way to hide links from the crawl graph.
+  const filteredIds = useMemo(() => new Set(filtered.map((p) => p.id)), [filtered]);
+  const pageIds = useMemo(() => new Set(pageItems.map((p) => p.id)), [pageItems]);
 
   if (programs.length === 0) return null;
 
@@ -50,35 +55,36 @@ export function ProgramsList({
         />
       )}
 
-      {filtered.length === 0 ? (
+      {filtered.length === 0 && (
         <p className="rounded-md border border-ink/10 px-4 py-6 text-center font-body text-sm text-slate">
           No programs match &ldquo;{query}&rdquo;.
         </p>
-      ) : (
-        <div className="flex flex-col gap-2">
-          {pageItems.map((p) => (
-            <Link
-              key={p.id}
-              href={`/universities/${universitySlug}/programs/${p.slug}`}
-              className="group flex items-center justify-between gap-4 rounded-md border border-ink/10 bg-paper py-3 pr-3 pl-3 text-sm transition-colors duration-150 hover:border-status-open/60 hover:bg-ink/[0.015]"
-              style={{ borderLeftWidth: 3, borderLeftColor: "var(--color-status-open)" }}
-            >
-              <div className="min-w-0">
-                <p className="truncate text-ink">{p.name}</p>
-                <p className="mt-0.5 truncate font-utility text-xs text-slate">
-                  {[p.degree_level?.name, p.subject?.name].filter(Boolean).join(" · ")}
-                </p>
-              </div>
-              <span
-                aria-hidden="true"
-                className="flex-shrink-0 text-slate transition-transform duration-150 group-hover:translate-x-0.5 group-hover:text-status-open"
-              >
-                →
-              </span>
-            </Link>
-          ))}
-        </div>
       )}
+
+      <div className="flex flex-col gap-2" hidden={filtered.length === 0}>
+        {programs.map((p) => (
+          <Link
+            key={p.id}
+            href={`/universities/${universitySlug}/programs/${p.slug}`}
+            hidden={!(filteredIds.has(p.id) && pageIds.has(p.id))}
+            className="group flex items-center justify-between gap-4 rounded-md border border-ink/10 bg-paper py-3 pr-3 pl-3 text-sm transition-colors duration-150 hover:border-status-open/60 hover:bg-ink/[0.015]"
+            style={{ borderLeftWidth: 3, borderLeftColor: "var(--color-status-open)" }}
+          >
+            <div className="min-w-0">
+              <p className="truncate text-ink">{p.name}</p>
+              <p className="mt-0.5 truncate font-utility text-xs text-slate">
+                {[p.degree_level?.name, p.subject?.name].filter(Boolean).join(" · ")}
+              </p>
+            </div>
+            <span
+              aria-hidden="true"
+              className="flex-shrink-0 text-slate transition-transform duration-150 group-hover:translate-x-0.5 group-hover:text-status-open"
+            >
+              →
+            </span>
+          </Link>
+        ))}
+      </div>
 
       {totalPages > 1 && (
         <div className="mt-3 flex items-center justify-between">
