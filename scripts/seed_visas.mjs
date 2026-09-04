@@ -182,7 +182,14 @@ const visas = [
       "Competent English (IELTS 6 equivalent) to qualify; Proficient (7) and Superior (8) add points",
     work_experience_requirement:
       "None mandatory, but skilled experience is where most points come from",
-    occupation_list: "MLTSSL, being replaced progressively by the Core Skills Occupation List",
+    // Corrected 2026-09-04: this previously said MLTSSL was "being replaced
+    // progressively by the Core Skills Occupation List", which is wrong. CSOL
+    // feeds the 482 and the 186 Direct Entry pathway, both employer-sponsored;
+    // it does not apply to the 189 at all. Confirmed directly against
+    // immi.homeaffairs.gov.au/visas/working-in-australia/skill-occupation-list.
+    // See the new guide: /guides/skilled-occupation-lists-explained.
+    occupation_list:
+      "MLTSSL only, assessed under the 2013 ANZSCO version. The CSOL does not apply to this visa.",
     eligibility:
       "To be invited you generally need:\n\n- An occupation on the relevant skilled list\n- A positive skills assessment from the assessing authority for that occupation\n- At least 65 points on the points test (the floor to be invited, not a guarantee)\n- Competent English or better\n- To be under 45 when invited\n- Health and character clearance",
     conditions:
