@@ -254,6 +254,64 @@ export interface Database {
           source_url?: string | null;
         }
       >;
+      // occupations / program_occupations — see supabase/migrations/0030_add_occupations.sql.
+      occupations: Table<
+        {
+          id: string;
+          anzsco_code: string;
+          name: string;
+          slug: string;
+          skill_level: number | null;
+          assessing_authority: string | null;
+          assessing_authority_url: string | null;
+          mltssl: boolean;
+          stsol: boolean;
+          rol: boolean;
+          csol: boolean;
+          visa_pathway_note: string | null;
+          summary: string | null;
+          status: ContentStatus;
+          last_verified_at: string | null;
+          source_url: string | null;
+          created_at: string;
+          updated_at: string;
+        },
+        {
+          id?: string;
+          anzsco_code: string;
+          name: string;
+          slug: string;
+          skill_level?: number | null;
+          assessing_authority?: string | null;
+          assessing_authority_url?: string | null;
+          mltssl?: boolean;
+          stsol?: boolean;
+          rol?: boolean;
+          csol?: boolean;
+          visa_pathway_note?: string | null;
+          summary?: string | null;
+          status?: ContentStatus;
+          last_verified_at?: string | null;
+          source_url?: string | null;
+        }
+      >;
+      program_occupations: Table<
+        {
+          id: string;
+          program_id: string;
+          occupation_id: string;
+          relevance: "primary" | "related";
+          pathway_note: string | null;
+          created_at: string;
+        },
+        {
+          id?: string;
+          program_id: string;
+          occupation_id: string;
+          relevance?: "primary" | "related";
+          pathway_note?: string | null;
+        }
+      >;
       subjects: Table<
         { id: number; name: string; slug: string | null },
         { id?: number; name: string; slug?: string | null }
