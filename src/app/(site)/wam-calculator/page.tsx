@@ -42,6 +42,10 @@ const FAQ = [
     q: "Does every university calculate WAM the same way?",
     a: "The basic formula is standard, but some universities apply extra weighting by year of study when calculating WAM for honours entry, giving your final year more weight than your first. This calculator uses the standard, unweighted-by-year formula that covers general admission purposes. Check your university's official policy if you're calculating WAM specifically for honours entry.",
   },
+  {
+    q: "Does a failed subject still count if I repeated and passed it?",
+    a: "Usually, yes. At most Australian universities, every attempt at a subject stays on your transcript and counts toward your WAM, including a fail you later repeated and passed. Add the failed attempt as its own row alongside the repeat so your WAM here reflects both, rather than only your best result.",
+  },
 ];
 
 const breadcrumbs = [
