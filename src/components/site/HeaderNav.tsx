@@ -20,6 +20,7 @@ const NAV: NavItem[] = [
       { label: "Compare", href: "/compare", hint: "Universities side by side" },
       { label: "Cost of living", href: "/cost-of-living", hint: "Monthly budgets by city" },
       { label: "Cost calculator", href: "/cost-calculator", hint: "Full cost of your degree" },
+      { label: "WAM calculator", href: "/wam-calculator", hint: "Weighted Average Mark from your subject marks" },
       { label: "By country", href: "/international", hint: "Applying from India, Nepal, China and more" },
     ],
   },
