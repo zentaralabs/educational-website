@@ -81,3 +81,52 @@ export function RssIcon({ className = "" }: IconProps) {
     </svg>
   );
 }
+
+export function BuildingIcon({ className = "" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round" className={`${base} ${className}`}>
+      <path d="M4 9 12 4l8 5" />
+      <path d="M5 9v11h14V9" />
+      <path d="M10 20v-4h4v4" />
+      <path d="M8.5 12.5h.01M15.5 12.5h.01" />
+    </svg>
+  );
+}
+
+export function CalendarIcon({ className = "" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round" className={`${base} ${className}`}>
+      <rect x="4" y="5" width="16" height="16" rx="2" />
+      <path d="M4 9.5h16M8.5 3v3.5M15.5 3v3.5" />
+    </svg>
+  );
+}
+
+export function BarsIcon({ className = "" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round" className={`${base} ${className}`}>
+      <path d="M4.5 20h15" />
+      <path d="M7.5 20v-7M12 20V8m4.5 12v-5" />
+    </svg>
+  );
+}
+
+export function PassportIcon({ className = "" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round" className={`${base} ${className}`}>
+      <path d="M7 3h7l5 5v13H7z" />
+      <path d="M14 3v5h5" />
+      <circle cx="12.5" cy="14.5" r="2.4" />
+    </svg>
+  );
+}
+
+export function CalculatorIcon({ className = "" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round" className={`${base} ${className}`}>
+      <rect x="5" y="3" width="14" height="18" rx="2" />
+      <rect x="8" y="6" width="8" height="3.4" />
+      <path d="M8.6 13h.01M12 13h.01M15.4 13h.01M8.6 16.6h.01M12 16.6h.01M15.4 16.6h.01" />
+    </svg>
+  );
+}
