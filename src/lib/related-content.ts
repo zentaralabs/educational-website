@@ -18,6 +18,16 @@
 
 export type RelatedLink = { href: string; label: string };
 
+/**
+ * How many links a related block renders. Every consumer slices to this, so a
+ * list longer than it does not error or overflow: the extra entries are just
+ * dropped, invisibly, and the page quietly loses an internal link. That bit
+ * twice (the 485 list dropping `skills-in-demand-482`, the 189 list dropping
+ * its own points calculator), so the check below turns it into console noise
+ * instead of silence.
+ */
+export const RELATED_LIMIT = 6;
+
 const GUIDE_LABEL: Record<string, string> = {
   "applying-to-australian-universities-without-an-agent": "Applying without an agent",
   "australia-student-visa-cost": "Student visa cost breakdown",
@@ -75,6 +85,7 @@ const VISA_LABEL: Record<string, string> = {
   "partner-visa-309-100": "Partner visa, offshore (309/100)",
   "work-holiday-462": "Work and Holiday visa (462)",
   "visitor-visa-600": "Visitor visa (600)",
+  "bridging-visa-a-b-c": "Bridging visas (A, B and C)",
 };
 
 const g = (slug: string): RelatedLink => ({
@@ -277,6 +288,8 @@ const GUIDE_RELATED: Record<string, RelatedLink[]> = {
     g("study-to-permanent-residence-pathway-australia"),
     v("student-500"),
     v("temporary-graduate-485"),
+    // Work rights change again once the 500 lapses onto a bridging visa.
+    v("bridging-visa-a-b-c"),
   ],
   "bringing-family-on-an-australian-student-visa": [
     g("working-while-you-study-in-australia"),
@@ -289,6 +302,8 @@ const GUIDE_RELATED: Record<string, RelatedLink[]> = {
     g("genuine-student-statement-examples"),
     g("proving-funds-for-an-australian-student-visa"),
     v("student-500"),
+    // A bridging visa is what holds lawful status during a review.
+    v("bridging-visa-a-b-c"),
     COUNTRY_HUB,
   ],
   "applying-to-australian-universities-without-an-agent": [
@@ -402,18 +417,34 @@ const VISA_RELATED: Record<string, RelatedLink[]> = {
     FEB_INTAKE,
     v("temporary-graduate-485"),
   ],
+  // Exactly 6: the page renders `visaRelated(slug).slice(0, 6)`, so a 7th
+  // entry is silently dropped rather than shown. Adding the bridging visa
+  // here displaced `student-500`, which is the right one to lose: it already
+  // has 28 inbound entries in this file and a reader on the 485 page is past
+  // the student-visa stage, where `skills-in-demand-482` has only 7.
   "temporary-graduate-485": [
     g("temporary-graduate-visa-485-guide"),
     g("study-to-permanent-residence-pathway-australia"),
     b("485-graduate-visa-age-limit-drops-to-35", "The 485 age limit dropped to 35"),
-    v("student-500"),
+    // The 500-to-485 gap is the bridging visa's single most common use.
+    v("bridging-visa-a-b-c"),
     v("skilled-independent-189"),
     v("skills-in-demand-482"),
   ],
+  "bridging-visa-a-b-c": [
+    v("student-500"),
+    v("temporary-graduate-485"),
+    g("working-while-you-study-in-australia"),
+    g("what-to-do-if-your-student-visa-is-refused"),
+    g("study-to-permanent-residence-pathway-australia"),
+  ],
+  // Was 7 entries against a 6-link render, which silently dropped CALCULATOR:
+  // the points calculator, on the page for a points-tested visa. Trimmed the
+  // study-to-PR guide instead, the broadest page of the set and already the
+  // most linked in this file, so both tools survive.
   "skilled-independent-189": [
     g("how-the-australian-points-test-works"),
     g("getting-a-skills-assessment-in-australia"),
-    g("study-to-permanent-residence-pathway-australia"),
     v("skilled-nominated-190"),
     v("skilled-work-regional-491"),
     ROUNDS,
@@ -575,6 +606,28 @@ const BLOG_RELATED: Record<string, RelatedLink[]> = {
 };
 
 // ---------------------------------------------------------------------------
+
+// Runs once at import, in every environment on purpose: `next build` sets
+// NODE_ENV=production, and the build is exactly where an over-long list should
+// surface. Silent while every list is within the cap, which is the normal case.
+for (const [kind, map] of [
+  ["guide", GUIDE_RELATED],
+  ["visa", VISA_RELATED],
+  ["blog", BLOG_RELATED],
+] as const) {
+  for (const [slug, links] of Object.entries(map)) {
+    if (links.length > RELATED_LIMIT) {
+      console.warn(
+        `[related-content] ${kind} "${slug}" lists ${links.length} links but only ` +
+          `${RELATED_LIMIT} render. The last ${links.length - RELATED_LIMIT} are dropped: ` +
+          links
+            .slice(RELATED_LIMIT)
+            .map((l) => l.href)
+            .join(", "),
+      );
+    }
+  }
+}
 
 export function guideRelated(slug: string): RelatedLink[] {
   return GUIDE_RELATED[slug] ?? [];

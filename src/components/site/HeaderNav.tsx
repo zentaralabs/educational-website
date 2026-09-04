@@ -1,7 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useId, useRef, useState } from "react";
+import { SearchIcon } from "./icons";
 
 type NavLink = { label: string; href: string; hint?: string };
 type NavItem = NavLink | { label: string; children: NavLink[] };
@@ -56,6 +58,8 @@ export function HeaderNav() {
   const [openLabel, setOpenLabel] = useState<string | null>(null);
   const navRef = useRef<HTMLElement>(null);
   const menuId = useId();
+  const router = useRouter();
+  const pathname = usePathname();
 
   const close = () => setOpenLabel(null);
 
@@ -77,6 +81,22 @@ export function HeaderNav() {
       document.removeEventListener("keydown", onKeyDown);
     };
   }, [openLabel]);
+
+  // Site-wide Cmd/Ctrl+K: jump to /search from anywhere. HeaderNav renders
+  // on every page, so this is the one place that can make the shortcut work
+  // outside the homepage and /search itself. On /search already, SearchBar's
+  // own listener focuses the input instead — this one steps aside there.
+  useEffect(() => {
+    function onKeyDown(e: KeyboardEvent) {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
+        if (pathname === "/search") return;
+        e.preventDefault();
+        router.push("/search");
+      }
+    }
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [pathname, router]);
 
   return (
     <nav
@@ -161,6 +181,16 @@ export function HeaderNav() {
           </div>
         );
       })}
+
+      <Link
+        href="/search"
+        onClick={close}
+        aria-label="Search"
+        title="Search (⌘K)"
+        className="flex h-8 w-8 items-center justify-center rounded-md text-ink/75 transition-colors duration-150 hover:bg-ink/5 hover:text-ink"
+      >
+        <SearchIcon className="h-[18px] w-[18px]" />
+      </Link>
     </nav>
   );
 }

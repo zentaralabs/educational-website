@@ -15,7 +15,7 @@ import {
   listPublishedGuideSlugs,
 } from "@/lib/queries/public-guides";
 import { readingMinutes } from "@/lib/reading";
-import { guideRelated } from "@/lib/related-content";
+import { RELATED_LIMIT, guideRelated } from "@/lib/related-content";
 import { RelatedLinks } from "@/components/site/RelatedLinks";
 import { SITE_NAME, SITE_URL } from "@/lib/site-config";
 import { extractToc } from "@/lib/toc";
@@ -154,7 +154,7 @@ export default async function GuidePage({
                 const curated = guideRelated(guide.slug).filter(
                   (l) => !seen.has(l.href),
                 );
-                return [...dbLinks, ...curated].slice(0, 6);
+                return [...dbLinks, ...curated].slice(0, RELATED_LIMIT);
               })()}
             />
           </>

@@ -25,6 +25,9 @@ export default async function SearchPage({
         visas: [],
         scholarships: [],
         blogPosts: [],
+        subjects: [],
+        originCountries: [],
+        cities: [],
       };
   const total =
     results.universities.length +
@@ -32,7 +35,10 @@ export default async function SearchPage({
     results.programs.length +
     results.visas.length +
     results.scholarships.length +
-    results.blogPosts.length;
+    results.blogPosts.length +
+    results.subjects.length +
+    results.originCountries.length +
+    results.cities.length;
 
   return (
     <main className="mx-auto w-full max-w-2xl px-6 pt-8 pb-16">
@@ -41,7 +47,7 @@ export default async function SearchPage({
       </h1>
 
       <div className="mt-6">
-        <SearchBar defaultValue={q} />
+        <SearchBar defaultValue={q} autoFocus />
       </div>
 
       {q.trim() && (
@@ -88,6 +94,26 @@ export default async function SearchPage({
                   {v.name}
                 </Link>
                 <p className="mt-0.5 text-sm text-slate">Subclass {v.code}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {results.subjects.length > 0 && (
+        <section className="mt-8">
+          <h2 className="mb-3 font-body text-xs font-semibold tracking-wide text-slate uppercase">
+            Fields of study
+          </h2>
+          <ul className="flex flex-col gap-3">
+            {results.subjects.map((s) => (
+              <li key={s.slug} className="border-b border-ink/10 pb-3">
+                <Link
+                  href={`/study/${s.slug}`}
+                  className="font-body text-base text-ink hover:underline"
+                >
+                  {s.name}
+                </Link>
               </li>
             ))}
           </ul>
@@ -174,6 +200,47 @@ export default async function SearchPage({
                 >
                   {b.title}
                 </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {results.originCountries.length > 0 && (
+        <section className="mt-8">
+          <h2 className="mb-3 font-body text-xs font-semibold tracking-wide text-slate uppercase">
+            Applying from
+          </h2>
+          <ul className="flex flex-col gap-3">
+            {results.originCountries.map((c) => (
+              <li key={c.slug} className="border-b border-ink/10 pb-3">
+                <Link
+                  href={`/international/${c.slug}`}
+                  className="font-body text-base text-ink hover:underline"
+                >
+                  Study in Australia from {c.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {results.cities.length > 0 && (
+        <section className="mt-8">
+          <h2 className="mb-3 font-body text-xs font-semibold tracking-wide text-slate uppercase">
+            Cost of living
+          </h2>
+          <ul className="flex flex-col gap-3">
+            {results.cities.map((c) => (
+              <li key={c.slug} className="border-b border-ink/10 pb-3">
+                <Link
+                  href={`/cost-of-living/${c.slug}`}
+                  className="font-body text-base text-ink hover:underline"
+                >
+                  {c.name}
+                </Link>
+                <p className="mt-0.5 text-sm text-slate">{c.state}</p>
               </li>
             ))}
           </ul>

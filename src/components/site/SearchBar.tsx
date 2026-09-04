@@ -7,14 +7,24 @@ import { AnimatedPlaceholder } from "./AnimatedPlaceholder";
 export function SearchBar({
   defaultValue = "",
   className = "mt-6",
+  autoFocus = false,
 }: {
   defaultValue?: string;
   className?: string;
+  /** Focus on mount — for the dedicated /search page, not the homepage hero. */
+  autoFocus?: boolean;
 }) {
   const router = useRouter();
   const [value, setValue] = useState(defaultValue);
   const [focused, setFocused] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if (autoFocus) inputRef.current?.focus();
+    // Mount-only: this is the /search page's opening focus, not something
+    // that should re-fire as `autoFocus` or `defaultValue` change.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     function onKeyDown(e: KeyboardEvent) {

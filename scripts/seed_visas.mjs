@@ -117,6 +117,48 @@ const visas = [
     ],
   },
   {
+    slug: "bridging-visa-a-b-c",
+    code: "010/020/030",
+    name: "Bridging visa (A, B and C)",
+    // "Subclass 010/020/030 Visa", the default title lead, is a string with no
+    // search volume. "Bridging visa" is the query. See 0028_add_visa_meta_title.sql.
+    meta_title: "Bridging Visa Australia (010, 020, 030)",
+    category: "bridging",
+    stream: "Bridging visa A (010), B (020) and C (030)",
+    short_description:
+      "The visa that keeps you lawfully in Australia after your current visa ends, while the next application is still being decided.",
+    summary:
+      "A bridging visa is not something you choose. When you lodge an eligible application for a new visa while you are in Australia, Home Affairs almost always grants one automatically, and it sits dormant until your current visa ceases. For most students the relevant one is the Bridging visa A, which covers the gap between a subclass 500 expiring and a 485 being decided. The two facts that catch people out: it does not let you back into Australia if you leave, and it does not automatically come with work rights.",
+    is_points_tested: false,
+    min_points: null,
+    stay_period:
+      "Until your substantive visa application is finally determined, or your review proceedings end",
+    leads_to_pr: false,
+    pr_pathway:
+      "A bridging visa is not a step toward permanent residence and holds no points. It protects your lawful status while a step that does count is being decided, such as a 485 lodged before your student visa ends, or a 189 or 190 lodged before your 485 ends. Time on a bridging visa does not count as time on the substantive visa it bridges to.",
+    base_application_charge:
+      "Bridging visa A and Bridging visa C are free. Bridging visa B costs AUD 575, except in limited circumstances, and from 1 July 2026 a lower charge applies to eligible Pacific Island and Timor-Leste citizens.",
+    processing_time:
+      "Home Affairs publishes no processing times for bridging visas. A BVA or BVC is normally granted as part of your substantive visa application rather than assessed separately",
+    age_limit: "Any age",
+    english_requirement: null,
+    work_experience_requirement: null,
+    occupation_list: null,
+    eligibility:
+      "Which one you are granted depends on what you held when you lodged your new application:\n\n- **Bridging visa A (010)** requires that you hold, or have held, a substantive visa, that you applied in Australia for a new substantive visa that has not been finally determined, and that you are in Australia both when you apply and when it is granted. This is the ordinary case for a student moving from a 500 to a 485.\n- **Bridging visa C (030)** applies where you did **not** hold a substantive visa when you lodged the new application. You must also not hold, or have held since your last substantive visa, a Bridging visa E.\n- **Bridging visa B (020)** is the only one you normally apply for deliberately. You must already hold a BVA or BVB, and you must give substantial reasons, with supporting documents, for needing to leave and return.\n\nAll three need you to meet the character requirement, and there is no age limit or English requirement. Since 1 August 2022 they can only be applied for online, through ImmiAccount or the online webform, and you must apply the same way you applied for the substantive visa. If you have applied for judicial review, the webform is the only route.\n\nYou cannot hold a bridging visa while waiting on a citizenship application.",
+    conditions:
+      "**Work.** Work rights are not automatic and are not the same for everyone. Your grant letter states the conditions that apply, and VEVO shows whether you have work restrictions. If your BVA does not permit work, you can apply for a further BVA that does, but you generally have to demonstrate financial hardship. A BVC granted with your substantive visa application does not permit work at all unless the visa you applied for is on a short list Home Affairs publishes. You cannot be granted a work-permitting BVA if your current BVA restricts work and was granted either for judicial review or in connection with a protection visa application.\n\n**Travel.** A BVA and a BVC do not support return travel. If you leave Australia while one is in effect, it ceases on departure and you cannot come back on it. Only a BVB carries a travel facility, granted for single or multiple journeys and valid until a stated date, and it must be granted before you go.\n\n**While your current visa is still valid**, you keep complying with that visa's conditions. The bridging visa's conditions replace them only once it comes into effect.",
+    content:
+      "## When a bridging visa actually starts\n\nA bridging visa is granted long before it does anything. It is dormant while your current substantive visa is still valid, and comes into effect only when that visa ceases (or, if your visa has already ceased, at grant).\n\nThis is the single most misread part of the system. A student whose subclass 500 runs to 15 March does not gain the 485's unrestricted work rights the day the BVA lands in their inbox. The 500 is still the visa in force, so the 48 hour fortnightly cap still applies. On 16 March the 500 ceases, the BVA comes into effect, and its conditions take over with no further paperwork.\n\n## Why leaving Australia is the expensive mistake\n\nA BVA or BVC that is in effect ends the moment you depart Australia, and it will not bring you back. If your substantive application is still undecided, you are then offshore with no visa to return on, and an onshore application such as a 485 generally cannot be granted while you are outside the country.\n\nThe fix has to happen before you fly. A Bridging visa B is applied for and granted while you are still in Australia, costs AUD 575, and needs substantial reasons plus documents showing why the trip is necessary. A funeral, a family illness, or a wedding you can evidence is the sort of thing this exists for.\n\n## What ends a bridging visa\n\nA BVA ends immediately if you leave Australia while it is in effect, if the substantive visa you applied for is granted, if another bridging visa is granted for the same application, or if either visa is cancelled.\n\nOtherwise it runs until your application is finally determined: refused, withdrawn, or decided on review. Home Affairs does not publish a single wind-down figure that covers every case, so use VEVO to see the date you must leave by once you have been notified of an outcome.\n\n## How much does a bridging visa cost?\n\nBridging visa A and Bridging visa C are free. Bridging visa B, the one that lets you leave and return, costs AUD 575 except in limited circumstances, and from 1 July 2026 eligible Pacific Island and Timor-Leste citizens pay less. Be wary of any site quoting a fee to activate work rights on a BVA: applying for a further BVA is free too.\n\n## How long does a bridging visa last?\n\nThere is no fixed length. It lasts as long as your substantive visa application takes, then ends a set period after you are notified of the outcome. Home Affairs does not publish a single figure covering every case, so check VEVO for the date you must leave by once a decision is made.\n\n## Do I get work rights on a bridging visa?\n\nNot automatically. Work rights come from the conditions written into your grant letter, and you should check them in VEVO rather than assuming they carry over. If your bridging visa does not let you work, you can apply for a further Bridging visa A that does, but you will usually have to show that you are in financial hardship.\n\n## Can I travel home while my 485 is being processed?\n\nOnly if you are granted a Bridging visa B before you leave. A Bridging visa A ceases as soon as you depart Australia and cannot be used to return, which would leave your 485 undecided and you offshore.\n\n## Does time on a bridging visa count toward permanent residence?\n\nNo. A bridging visa holds your lawful status while something else is decided. It carries no points, and the time on it is not time on the visa it bridges to. It does not stop you accruing skilled work experience, but the visa itself contributes nothing to a points score.\n\n## What about Bridging visa E?\n\nBridging visa E is a different thing, for people who are already unlawful or who are making arrangements to leave Australia. If you have applied on time and held a valid visa, it is not the one you will be dealing with, and holding one in the past can block a Bridging visa C.",
+    source_urls: [
+      `${HOMEAFFAIRS}/bridging-visa-a-010`,
+      `${HOMEAFFAIRS}/bridging-visa-b-020`,
+      `${HOMEAFFAIRS}/bridging-visa-c-030`,
+      "https://immi.homeaffairs.gov.au/entering-and-leaving-australia/travelling-and-your-visa/travel-on-a-bridging-visa",
+    ],
+    last_verified_at: "2026-09-04",
+  },
+  {
     slug: "skilled-independent-189",
     code: "189",
     name: "Skilled Independent visa",
@@ -769,8 +811,12 @@ try {
 
   const codeToId = {};
   for (const v of visas) {
-    const cols = Object.keys(v);
-    const vals = cols.map((c) => v[c]);
+    // A row may carry its own `last_verified_at` when it was checked against
+    // official sources on a different date from the bulk TODAY sweep. Pulled
+    // out of the column list so it is not inserted twice.
+    const { last_verified_at: verifiedOn, ...fields } = v;
+    const cols = Object.keys(fields);
+    const vals = cols.map((c) => fields[c]);
     const placeholders = cols.map((_, i) => `$${i + 1}`);
     const res = await client.query(
       `insert into visa_subclasses (${cols.join(", ")}, status, author_id, last_verified_at)
@@ -779,7 +825,7 @@ try {
          ${cols.filter((c) => c !== "slug").map((c) => `${c} = excluded.${c}`).join(", ")},
          status = 'published', last_verified_at = excluded.last_verified_at, updated_at = now()
        returning id, code`,
-      [...vals, AUTHOR_ID, TODAY],
+      [...vals, AUTHOR_ID, verifiedOn ?? TODAY],
     );
     codeToId[res.rows[0].code] = res.rows[0].id;
     console.log("visa", res.rows[0].code, res.rows[0].id);

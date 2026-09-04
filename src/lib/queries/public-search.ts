@@ -1,4 +1,7 @@
 import { createPublicClient } from "@/lib/supabase/public";
+import { listPublishedSubjects } from "@/lib/queries/public-subjects";
+import { ORIGIN_COUNTRIES, ORIGIN_COUNTRY_SLUGS } from "@/lib/origin-countries";
+import { CITY_COSTS } from "@/lib/cities";
 
 export type SearchResults = {
   universities: { slug: string; name: string; city: string | null }[];
@@ -13,6 +16,12 @@ export type SearchResults = {
   visas: { slug: string; code: string; name: string }[];
   scholarships: { slug: string; name: string; scope: string }[];
   blogPosts: { slug: string; title: string }[];
+  /** Fields of study, e.g. "Nursing" → /study/nursing. */
+  subjects: { slug: string; name: string }[];
+  /** Applying-from-<country> hubs, e.g. "Nepal" → /international/nepal. */
+  originCountries: { slug: string; name: string }[];
+  /** Cost-of-living city pages, e.g. "Melbourne" → /cost-of-living/melbourne. */
+  cities: { slug: string; name: string; state: string }[];
 };
 
 const EMPTY: SearchResults = {
@@ -22,6 +31,9 @@ const EMPTY: SearchResults = {
   visas: [],
   scholarships: [],
   blogPosts: [],
+  subjects: [],
+  originCountries: [],
+  cities: [],
 };
 
 // Filler words that carry no signal in a "what do I want to study" query.
@@ -95,7 +107,7 @@ export async function searchSite(query: string): Promise<SearchResults> {
     ? `${orIlike(["name"], tokens)},subject_id.in.(${subjectIds.join(",")})`
     : orIlike(["name"], tokens);
 
-  const [universities, guides, programs, visas, scholarships, blogPosts] =
+  const [universities, guides, programs, visas, scholarships, blogPosts, subjects] =
     await Promise.all([
       supabase
         .from("universities")
@@ -139,6 +151,9 @@ export async function searchSite(query: string): Promise<SearchResults> {
         .eq("status", "published")
         .or(orIlike(["title", "excerpt"], tokens))
         .limit(20),
+      // Subjects and universities/programs share the wedge: someone typing
+      // "nursing" wants the subject hub as much as any one program.
+      listPublishedSubjects(),
     ]);
 
   for (const r of [universities, guides, programs, visas, scholarships, blogPosts]) {
@@ -234,5 +249,23 @@ export async function searchSite(query: string): Promise<SearchResults> {
     blogPosts: rank(blogRows, (b) => `${b.title} ${b.excerpt ?? ""}`, 8).map(
       (b) => ({ slug: b.slug, title: b.title }),
     ),
+    subjects: rank(subjects, (s) => s.name, 8).map((s) => ({
+      slug: s.slug,
+      name: s.name,
+    })),
+    // Config-driven, not a DB round trip: filter in memory the same way the
+    // DB queries above filter with `ilike`. Named `originCountries`, not
+    // `countries`, to keep it distinct from the `countries` DB table used
+    // everywhere else in this file for the destination country.
+    originCountries: rank(
+      ORIGIN_COUNTRY_SLUGS.map((slug) => ORIGIN_COUNTRIES[slug]),
+      (c) => `${c.name} ${c.demonym}`,
+      8,
+    ).map((c) => ({ slug: c.slug, name: c.name })),
+    cities: rank(CITY_COSTS, (c) => `${c.name} ${c.state}`, 8).map((c) => ({
+      slug: c.slug,
+      name: c.name,
+      state: c.state,
+    })),
   };
 }
