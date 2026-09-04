@@ -10,6 +10,39 @@ Redirects · Canonical/sitemap/metadata changes · Testing done.**
 
 ---
 
+## 2026-09-04 · Pin Vercel Function Region to match the database (`vercel.json`)
+
+**Affected:** every server-rendered request (all 6 `searchParams` pages that
+render dynamically — `/deadlines`, `/blog`, `/scholarships`, `/search`,
+`/compare/universities`, `/quiz/results` — plus the first hit after any ISR
+page revalidates). **SEO impact: LOW** direct (no URL/metadata/robots change)
+but real for Core Web Vitals / crawl efficiency, since a slow TTFB is a
+ranking input and a friendlier one for a bot with a crawl budget.
+
+**Problem:** the Supabase project (`aeekmpmapzgkoatdygis`) runs on AWS
+`ap-southeast-1` (Singapore) — confirmed via the Supabase dashboard. The
+Vercel project had no `vercel.json` and no per-route region config, so every
+function ran in Vercel's untouched default, `iad1` (Washington, D.C.). Every
+`searchParams` page therefore paid a Singapore↔Virginia round trip (measured
+~550-600ms extra vs. the same code run near the database) on every single
+request, since none of these pages can be served from the CDN. `/deadlines`
+was worst (760-2029ms TTFB) because it also runs the heaviest query of the
+six (an unfiltered 3-join scan of all ~221 published rows, to build two
+dropdown lists) — a separate, smaller issue, not fixed here.
+
+**Fix:** `vercel.json` at the repo root, `{"regions": ["sin1"]}` (Vercel's
+Singapore region, matching `ap-southeast-1`). Config-only, no app code
+touched. Vercel's own guidance: "Functions should be executed in the same
+region as your database, or as close to it as possible." Hobby plan allows
+one region, which is what this sets.
+
+**Testing done:** `next build` succeeds unchanged; `vercel.json` validated as
+well-formed JSON. Region takes effect on next deploy — re-measure TTFB on
+the 6 dynamic pages afterward (see memory `dynamic-pages-perf-2026-09-04`
+for the baseline numbers to compare against).
+
+---
+
 ## 2026-09-03 · Site-wide audit: title/description budget, sitemap split, OG cards, security headers
 
 Full source-level + live-crawl audit of the deployed site (341 indexable URLs
