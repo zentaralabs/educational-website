@@ -80,7 +80,7 @@ export default async function HowToApplyPage({
   ];
 
   return (
-    <main className="mx-auto w-full max-w-2xl px-6 pt-8 pb-16">
+    <main className="mx-auto w-full max-w-4xl px-6 pt-8 pb-16">
       {jsonLd.map((block, i) => (
         <JsonLd key={i} data={block} />
       ))}
@@ -88,7 +88,7 @@ export default async function HowToApplyPage({
       <Breadcrumbs items={breadcrumbs} />
 
       <div className="rounded-2xl bg-gradient-to-br from-ink/[0.04] via-ink/[0.02] to-transparent p-6 sm:p-8">
-        <p className="flex items-center gap-2 font-utility text-xs font-semibold tracking-wide text-status-open uppercase">
+        <p className="flex items-center gap-2 font-utility text-[0.8rem] font-semibold tracking-wide text-slate uppercase">
           <span className="inline-block h-1.5 w-1.5 rounded-full bg-status-open" />
           Applying from {c.name}
         </p>
@@ -98,7 +98,7 @@ export default async function HowToApplyPage({
         </h1>
       </div>
 
-      <div className="mt-6 flex flex-col gap-3 font-body text-base leading-relaxed text-ink">
+      <div className="mt-6 flex max-w-2xl flex-col gap-3 font-body text-base leading-relaxed text-ink">
         {guide.intro.map((p) => (
           <p key={p.slice(0, 24)}>{p}</p>
         ))}
@@ -114,7 +114,7 @@ export default async function HowToApplyPage({
         </p>
       </div>
 
-      <ProfileSection title="The steps, in order">
+      <ProfileSection narrow title="The steps, in order">
         <ol className="flex flex-col gap-6">
           {guide.steps.map((step, i) => (
             <li key={step.title} className="flex gap-4">
@@ -165,7 +165,7 @@ export default async function HowToApplyPage({
         </div>
       </ProfileSection>
 
-      <ProfileSection title="A working timeline for a February intake">
+      <ProfileSection narrow title="A working timeline for a February intake">
         <p className="mb-4 font-body text-sm text-slate">
           Semester 1 courses start in late February or early March. Working back
           from that, and allowing for the checks specific to {c.name}:
@@ -195,7 +195,7 @@ export default async function HowToApplyPage({
         </p>
       </ProfileSection>
 
-      <ProfileSection title={`Where ${c.demonym} applications go wrong`}>
+      <ProfileSection narrow title={`Where ${c.demonym} applications go wrong`}>
         <ul className="flex flex-col gap-2">
           {guide.pitfalls.map((p) => (
             <li key={p.slice(0, 24)} className="flex gap-2 font-body text-sm text-ink">

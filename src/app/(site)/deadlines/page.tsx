@@ -114,21 +114,21 @@ export default async function DeadlinesPage({
   const breadcrumbs = [{ label: "Home", href: "/" }, { label: "Deadlines" }];
 
   return (
-    <main className="mx-auto w-full max-w-3xl px-6 pt-8 pb-16">
+    <main className="mx-auto w-full max-w-4xl px-6 pt-8 pb-16">
       <JsonLd data={jsonLd} />
       <JsonLd data={breadcrumbJsonLd(breadcrumbs)} />
 
       <Breadcrumbs items={breadcrumbs} />
 
       <div className="rounded-2xl bg-gradient-to-br from-ink/[0.04] via-ink/[0.02] to-transparent p-6 sm:p-8">
-        <p className="flex items-center gap-2 font-utility text-xs font-semibold tracking-wide text-status-open uppercase">
+        <p className="flex items-center gap-2 font-utility text-[0.8rem] font-semibold tracking-wide text-slate uppercase">
           <span className="inline-block h-1.5 w-1.5 rounded-full bg-status-open" />
           {totalCount} sourced deadlines
         </p>
         <h1 className="mt-2 font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
           Application deadline calendar
         </h1>
-        <p className="mt-2 font-body text-base text-slate">
+        <p className="mt-2 max-w-2xl font-body text-base text-ink/80">
           Recommended international application dates for each intake, filterable
           by country, degree level, and intake.
         </p>
@@ -231,7 +231,7 @@ export default async function DeadlinesPage({
         )}
         {[...grouped.entries()].map(([month, rows]) => (
           <section key={month}>
-            <h2 className="mb-2 font-utility text-xs font-semibold tracking-wide text-slate uppercase">
+            <h2 className="mb-2 font-utility text-[0.8rem] font-semibold tracking-wide text-slate uppercase">
               {month}
             </h2>
             <DeadlineTable

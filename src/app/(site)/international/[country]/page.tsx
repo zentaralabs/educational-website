@@ -90,7 +90,7 @@ export default async function OriginCountryPage({
   ];
 
   return (
-    <main className="mx-auto w-full max-w-2xl px-6 pt-8 pb-16">
+    <main className="mx-auto w-full max-w-4xl px-6 pt-8 pb-16">
       {jsonLd.map((block, i) => (
         <JsonLd key={i} data={block} />
       ))}
@@ -98,7 +98,7 @@ export default async function OriginCountryPage({
       <Breadcrumbs items={breadcrumbs} />
 
       <div className="rounded-2xl bg-gradient-to-br from-ink/[0.04] via-ink/[0.02] to-transparent p-6 sm:p-8">
-        <p className="flex items-center gap-2 font-utility text-xs font-semibold tracking-wide text-status-open uppercase">
+        <p className="flex items-center gap-2 font-utility text-[0.8rem] font-semibold tracking-wide text-slate uppercase">
           <span className="inline-block h-1.5 w-1.5 rounded-full bg-status-open" />
           Study in Australia
         </p>
@@ -108,7 +108,7 @@ export default async function OriginCountryPage({
         </h1>
       </div>
 
-      <div className="mt-6 flex flex-col gap-3 font-body text-base leading-relaxed text-ink">
+      <div className="mt-6 flex max-w-2xl flex-col gap-3 font-body text-base leading-relaxed text-ink">
         {c.intro.map((p) => (
           <p key={p.slice(0, 24)}>{p}</p>
         ))}
@@ -144,7 +144,7 @@ export default async function OriginCountryPage({
         </p>
       </ProfileSection>
 
-      <ProfileSection title={`Applying from ${c.name}`}>
+      <ProfileSection narrow title={`Applying from ${c.name}`}>
         <div className="flex flex-col gap-3 font-body text-base leading-relaxed text-ink">
           {c.applying.map((p) => (
             <p key={p.slice(0, 24)}>{p}</p>
@@ -168,7 +168,7 @@ export default async function OriginCountryPage({
         )}
       </ProfileSection>
 
-      <ProfileSection title="What it costs">
+      <ProfileSection narrow title="What it costs">
         <div className="flex flex-col gap-3 font-body text-base leading-relaxed text-ink">
           {localBudget && (
             <p>
@@ -208,7 +208,7 @@ export default async function OriginCountryPage({
         </div>
       </ProfileSection>
 
-      <ProfileSection title="Your qualifications and English">
+      <ProfileSection narrow title="Your qualifications and English">
         <div className="flex flex-col gap-3 font-body text-base leading-relaxed text-ink">
           {c.credentials.map((p) => (
             <p key={p.slice(0, 24)}>{p}</p>
@@ -216,7 +216,7 @@ export default async function OriginCountryPage({
         </div>
       </ProfileSection>
 
-      <ProfileSection title="The student visa">
+      <ProfileSection narrow title="The student visa">
         <div className="flex flex-col gap-3 font-body text-base leading-relaxed text-ink">
           <p>
             International students hold the subclass 500 student visa. You apply
@@ -242,7 +242,7 @@ export default async function OriginCountryPage({
         </div>
       </ProfileSection>
 
-      <ProfileSection title="After you graduate">
+      <ProfileSection narrow title="After you graduate">
         <div className="flex flex-col gap-3 font-body text-base leading-relaxed text-ink">
           <p>
             Most bachelor&rsquo;s and master&rsquo;s graduates qualify for a{" "}
@@ -276,7 +276,7 @@ export default async function OriginCountryPage({
         </div>
       </ProfileSection>
 
-      <ProfileSection title={`Popular fields for ${c.demonym} students`}>
+      <ProfileSection narrow title={`Popular fields for ${c.demonym} students`}>
         <ul className="flex flex-col gap-1.5">
           {c.popularFields.map((f) => (
             <li key={f} className="flex gap-2 font-body text-base text-ink">
@@ -300,7 +300,7 @@ export default async function OriginCountryPage({
 
       <FaqSection heading={`Studying in Australia from ${c.name}: common questions`} items={c.faq} />
 
-      <ProfileSection title="Applying from another country">
+      <ProfileSection narrow title="Applying from another country">
         <p className="mb-3 font-body text-sm text-slate">
           The generic steps are the same everywhere. What changes by country is
           agent-versus-direct application, how your qualifications convert, and
