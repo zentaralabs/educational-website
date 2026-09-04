@@ -98,7 +98,7 @@ export default async function OriginCountryPage({
       <Breadcrumbs items={breadcrumbs} />
 
       <div className="rounded-2xl bg-gradient-to-br from-ink/[0.04] via-ink/[0.02] to-transparent p-6 sm:p-8">
-        <p className="flex items-center gap-2 font-utility text-xs font-semibold tracking-widest text-status-open uppercase">
+        <p className="flex items-center gap-2 font-utility text-xs font-semibold tracking-wide text-status-open uppercase">
           <span className="inline-block h-1.5 w-1.5 rounded-full bg-status-open" />
           Study in Australia
         </p>

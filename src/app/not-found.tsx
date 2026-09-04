@@ -22,7 +22,7 @@ export default function NotFound() {
     <div className="flex min-h-screen flex-col">
       <SiteHeader />
       <main className="mx-auto w-full max-w-2xl flex-1 px-6 py-16">
-        <p className="font-utility text-xs font-semibold tracking-widest text-slate uppercase">
+        <p className="font-utility text-xs font-semibold tracking-wide text-slate uppercase">
           404
         </p>
         <h1 className="mt-2 font-display text-3xl font-semibold text-ink text-balance">

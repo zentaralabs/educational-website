@@ -6,7 +6,14 @@ import { LastVerified } from "@/components/site/LastVerified";
 import { ArrowUpRightIcon, CheckBadgeIcon } from "@/components/site/icons";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import { FaqSection } from "@/components/site/FaqSection";
+import { Fact, FactGrid } from "@/components/site/FactGrid";
 import { RelatedLinks } from "@/components/site/RelatedLinks";
+import { SectionHeading } from "@/components/site/SectionHeading";
+import {
+  EligibilityChecklist,
+  VisaStreams,
+  type VisaStream,
+} from "@/components/site/visa-blocks";
 import { faqJsonLd, visaFaq } from "@/lib/faq";
 import { RELATED_LIMIT, visaRelated } from "@/lib/related-content";
 import { SITE_YEAR } from "@/lib/site-config";
@@ -64,18 +71,6 @@ export async function generateMetadata({
   });
 }
 
-function Fact({ label, value }: { label: string; value: string | null }) {
-  if (!value) return null;
-  return (
-    <div className="rounded-xl border border-line bg-mist px-4 py-3">
-      <dt className="font-utility text-[0.7rem] font-semibold tracking-widest text-slate uppercase">
-        {label}
-      </dt>
-      <dd className="mt-1 font-body text-sm font-medium text-ink">{value}</dd>
-    </div>
-  );
-}
-
 export default async function VisaPage({
   params,
 }: {
@@ -88,6 +83,8 @@ export default async function VisaPage({
   const rounds = visa.is_points_tested
     ? await listPublishedInvitationRounds({ visaCode: visa.code, limit: 6 })
     : [];
+
+  const streams = (visa.streams as VisaStream[] | null) ?? null;
 
   const contentFaq = (
     visa.content ? extractFaqItems(visa.content) : []
@@ -106,7 +103,7 @@ export default async function VisaPage({
   }
 
   return (
-    <main className="mx-auto w-full max-w-2xl px-6 pt-8 pb-16">
+    <main className="mx-auto w-full max-w-4xl px-6 pt-8 pb-16">
       {jsonLdBlocks.map((block, i) => (
         <JsonLd key={i} data={block} />
       ))}
@@ -114,7 +111,7 @@ export default async function VisaPage({
       <Breadcrumbs items={breadcrumbs} />
 
       <div className="rounded-2xl bg-gradient-to-br from-ink/[0.04] via-ink/[0.02] to-transparent p-6 sm:p-8">
-        <p className="flex items-center gap-2 font-utility text-xs font-semibold tracking-widest text-status-open uppercase">
+        <p className="flex items-center gap-2 font-utility text-[0.8rem] font-semibold tracking-wide text-slate uppercase">
           <span className="inline-block h-1.5 w-1.5 rounded-full bg-status-open" />
           Subclass {visa.code}
           {" · "}
@@ -125,7 +122,7 @@ export default async function VisaPage({
           {visa.name}
         </h1>
         {visa.summary && (
-          <p className="mt-4 font-body text-base leading-relaxed text-slate">
+          <p className="mt-4 max-w-2xl font-body text-base leading-relaxed text-ink/90 sm:text-lg">
             {visa.summary}
           </p>
         )}
@@ -143,7 +140,7 @@ export default async function VisaPage({
         )}
       </div>
 
-      <dl className="mt-8 grid gap-3 sm:grid-cols-2">
+      <FactGrid>
         <Fact label="Stay period" value={visa.stay_period} />
         <Fact
           label="Permanent residence"
@@ -170,22 +167,41 @@ export default async function VisaPage({
           value={visa.work_experience_requirement}
         />
         <Fact label="Skilled occupation list" value={visa.occupation_list} />
-      </dl>
+      </FactGrid>
 
-      {visa.eligibility && (
-        <section className="mt-10">
-          <h2 className="mb-3 font-display text-xl font-semibold text-ink">
-            Who it&rsquo;s for
-          </h2>
-          <GuideContent content={visa.eligibility} />
-        </section>
-      )}
+      {/* Eligibility checklist + streams sidebar. A two-column grid only when
+          the visa actually has streams to show alongside; otherwise the
+          checklist runs in the contained reading column. */}
+      {(() => {
+        const hasChecklist = Boolean(
+          visa.eligibility && visa.eligibility.includes("\n- "),
+        );
+        const eligibilityBlock = hasChecklist ? (
+          <EligibilityChecklist
+            content={visa.eligibility as string}
+            heading="Who it's for"
+          />
+        ) : visa.eligibility ? (
+          <section>
+            <SectionHeading>Who it&rsquo;s for</SectionHeading>
+            <GuideContent content={visa.eligibility} />
+          </section>
+        ) : null;
+
+        if (streams && streams.length > 0) {
+          return (
+            <div className="mt-10 grid items-start gap-x-10 gap-y-8 lg:grid-cols-[1.6fr_1fr]">
+              <div>{eligibilityBlock}</div>
+              <VisaStreams streams={streams} />
+            </div>
+          );
+        }
+        return <div className="mt-10 max-w-2xl">{eligibilityBlock}</div>;
+      })()}
 
       {visa.pr_pathway && (
-        <section className="mt-10">
-          <h2 className="mb-3 font-display text-xl font-semibold text-ink">
-            Pathway to permanent residence
-          </h2>
+        <section className="mt-10 max-w-2xl">
+          <SectionHeading>Pathway to permanent residence</SectionHeading>
           <p className="font-body text-base leading-relaxed text-ink">
             {visa.pr_pathway}
           </p>
@@ -193,21 +209,20 @@ export default async function VisaPage({
       )}
 
       {visa.content && (
-        <section className="mt-10">
+        <section className="mt-10 max-w-2xl">
           <GuideContent content={visa.content} />
         </section>
       )}
 
       {visa.conditions && (
-        <section className="mt-10">
-          <h2 className="mb-3 font-display text-xl font-semibold text-ink">
-            Visa conditions
-          </h2>
+        <section className="mt-10 max-w-2xl">
+          <SectionHeading>Visa conditions</SectionHeading>
           <GuideContent content={visa.conditions} />
         </section>
       )}
 
       <FaqSection
+        grid
         heading={`${visa.name} (subclass ${visa.code}): common questions`}
         items={faqItems}
       />
@@ -215,9 +230,9 @@ export default async function VisaPage({
       {rounds.length > 0 && (
         <section className="mt-10 border-t border-ink/10 pt-6">
           <div className="flex items-baseline justify-between gap-3">
-            <h2 className="font-display text-xl font-semibold text-ink">
+            <SectionHeading className="mb-0">
               Recent invitation rounds
-            </h2>
+            </SectionHeading>
             <Link
               href="/visas/invitation-rounds"
               className="font-body text-sm text-status-open underline underline-offset-2"

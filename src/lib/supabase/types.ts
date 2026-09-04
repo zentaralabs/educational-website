@@ -447,6 +447,10 @@ export interface Database {
           meta_title: string | null;
           category: string;
           stream: string | null;
+          /** See 0029_add_visa_streams.sql. Per-stream sidebar cards; null for single-stream visas. */
+          streams:
+            | { name: string; description: string; duration: string | null }[]
+            | null;
           short_description: string | null;
           summary: string | null;
           is_points_tested: boolean;
@@ -479,6 +483,9 @@ export interface Database {
           meta_title?: string | null;
           category: string;
           stream?: string | null;
+          streams?:
+            | { name: string; description: string; duration: string | null }[]
+            | null;
           short_description?: string | null;
           summary?: string | null;
           is_points_tested?: boolean;

@@ -78,7 +78,7 @@ export function TableOfContents({
   if (variant === "panel") {
     return (
       <details className="group mb-8 rounded-xl border border-line bg-mist px-4 py-3 lg:hidden">
-        <summary className="flex cursor-pointer items-center justify-between font-body text-xs font-semibold tracking-widest text-slate uppercase [&::-webkit-details-marker]:hidden">
+        <summary className="flex cursor-pointer items-center justify-between font-body text-xs font-semibold tracking-wide text-slate uppercase [&::-webkit-details-marker]:hidden">
           On this page
           <span className="text-base transition-transform duration-150 group-open:rotate-90">
             &rsaquo;
@@ -91,7 +91,7 @@ export function TableOfContents({
 
   return (
     <nav className="sticky top-24 hidden max-h-[calc(100vh-8rem)] overflow-y-auto lg:block">
-      <p className="mb-2 pl-3 font-body text-xs font-semibold tracking-widest text-slate uppercase">
+      <p className="mb-2 pl-3 font-body text-xs font-semibold tracking-wide text-slate uppercase">
         On this page
       </p>
       {list}

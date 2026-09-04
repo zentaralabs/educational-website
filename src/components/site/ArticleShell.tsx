@@ -31,7 +31,7 @@ export function ArticleShell({
       <Breadcrumbs items={breadcrumbs} />
 
       <header className="border-b border-line pb-8 lg:max-w-[46rem]">
-        <div className="flex items-center gap-2 font-utility text-xs font-semibold tracking-widest text-status-open uppercase">
+        <div className="flex items-center gap-2 font-utility text-[0.8rem] font-semibold tracking-wide text-slate uppercase">
           <span className="inline-block h-1.5 w-1.5 rounded-full bg-status-open" />
           {eyebrow}
         </div>

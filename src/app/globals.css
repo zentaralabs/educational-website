@@ -8,7 +8,9 @@
 :root {
   --color-paper: #ffffff;
   --color-ink: #16233f;
-  --color-slate: #46587a;
+  /* Darkened from #46587a (2026-09-04): the lighter slate read as washed-out
+     for secondary/label text. This is ~7.8:1 on paper, comfortably AA. */
+  --color-slate: #3c4a66;
 
   /* Recessed surface + a visible-but-soft hairline. Introduced to give the
      UI depth — bg-ink/[0.02] and border-ink/10 were near-invisible. */
@@ -47,8 +49,11 @@ body {
   background: var(--color-paper);
   color: var(--color-ink);
   line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+  /* Left on `auto` deliberately: `antialiased` renders Public Sans too thin
+     and washed-out on macOS, which readers flagged as hard to read.
+     `text-rendering: optimizeLegibility` had the same thinning effect on
+     some systems, so it is left at the browser default too. */
+  -webkit-font-smoothing: auto;
 }
 
 /* Fraunces carries the brand. Let the browser pick the optical size from the

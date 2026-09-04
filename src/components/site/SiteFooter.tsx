@@ -37,7 +37,7 @@ const SITE = [
 const linkCls =
   "font-body text-sm text-slate transition-colors duration-150 hover:text-ink";
 const headingCls =
-  "font-body text-xs font-semibold tracking-widest text-ink uppercase";
+  "font-body text-xs font-semibold tracking-wide text-ink uppercase";
 
 export async function SiteFooter() {
   const countries = await listPublicCountries();

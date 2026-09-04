@@ -146,7 +146,7 @@ export default async function IntakeDeadlinePage({
       <Breadcrumbs items={breadcrumbs} />
 
       <div className="rounded-2xl bg-gradient-to-br from-ink/[0.04] via-ink/[0.02] to-transparent p-6 sm:p-8">
-        <p className="flex items-center gap-2 font-utility text-xs font-semibold tracking-widest text-status-open uppercase">
+        <p className="flex items-center gap-2 font-utility text-xs font-semibold tracking-wide text-status-open uppercase">
           <span className="inline-block h-1.5 w-1.5 rounded-full bg-status-open" />
           Australian university deadlines
         </p>
@@ -167,7 +167,7 @@ export default async function IntakeDeadlinePage({
       </div>
 
       <section className="mt-6 rounded-xl border border-status-pending/25 bg-status-pending/5 p-4 sm:p-5">
-        <h2 className="font-utility text-xs font-semibold tracking-widest text-slate uppercase">
+        <h2 className="font-utility text-xs font-semibold tracking-wide text-slate uppercase">
           What changed
         </h2>
         <ul className="mt-3 flex flex-col gap-3">

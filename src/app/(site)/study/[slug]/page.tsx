@@ -130,7 +130,7 @@ export default async function SubjectPage({
       <Breadcrumbs items={breadcrumbs} />
 
       <div className="rounded-2xl bg-gradient-to-br from-ink/[0.04] via-ink/[0.02] to-transparent p-6 sm:p-8">
-        <p className="flex items-center gap-2 font-utility text-xs font-semibold tracking-widest text-status-open uppercase">
+        <p className="flex items-center gap-2 font-utility text-xs font-semibold tracking-wide text-status-open uppercase">
           <span className="inline-block h-1.5 w-1.5 rounded-full bg-status-open" />
           Study in Australia
         </p>
@@ -141,7 +141,7 @@ export default async function SubjectPage({
 
       <dl className="mt-8 grid grid-cols-3 gap-3">
         <div className="rounded-xl border border-line bg-mist px-4 py-3">
-          <dt className="font-utility text-[0.7rem] font-semibold tracking-widest text-slate uppercase">
+          <dt className="font-utility text-xs font-semibold tracking-wide text-slate uppercase">
             Programs
           </dt>
           <dd className="mt-1 font-display text-xl font-semibold text-ink">
@@ -149,7 +149,7 @@ export default async function SubjectPage({
           </dd>
         </div>
         <div className="rounded-xl border border-line bg-mist px-4 py-3">
-          <dt className="font-utility text-[0.7rem] font-semibold tracking-widest text-slate uppercase">
+          <dt className="font-utility text-xs font-semibold tracking-wide text-slate uppercase">
             Universities
           </dt>
           <dd className="mt-1 font-display text-xl font-semibold text-ink">
@@ -157,7 +157,7 @@ export default async function SubjectPage({
           </dd>
         </div>
         <div className="rounded-xl border border-line bg-mist px-4 py-3">
-          <dt className="font-utility text-[0.7rem] font-semibold tracking-widest text-slate uppercase">
+          <dt className="font-utility text-xs font-semibold tracking-wide text-slate uppercase">
             Tuition from
           </dt>
           <dd className="mt-1 font-display text-xl font-semibold text-status-open">

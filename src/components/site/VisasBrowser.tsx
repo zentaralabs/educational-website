@@ -25,7 +25,7 @@ function VisaCard({ v }: { v: BrowserVisa }) {
       href={`/visas/${v.slug}`}
       className="group flex flex-col gap-1.5 rounded-2xl border border-line bg-mist p-5 transition-all duration-150 hover:-translate-y-0.5 hover:border-status-open/30 hover:shadow-[0_14px_36px_-18px_rgba(22,35,63,0.28)] sm:p-6"
     >
-      <span className="flex items-center gap-2 font-utility text-xs font-semibold tracking-widest text-status-open uppercase">
+      <span className="flex items-center gap-2 font-utility text-xs font-semibold tracking-wide text-status-open uppercase">
         <span className="inline-block h-1.5 w-1.5 rounded-full bg-status-open" />
         Subclass {v.code}
         {v.stream && ` · ${v.stream}`}

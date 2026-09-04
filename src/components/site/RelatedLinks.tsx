@@ -19,7 +19,7 @@ export function RelatedLinks({
   if (items.length === 0) return null;
   return (
     <div className={className}>
-      <h2 className="mb-4 font-body text-xs font-semibold tracking-widest text-slate uppercase">
+      <h2 className="mb-4 font-body text-xs font-semibold tracking-wide text-slate uppercase">
         {heading}
       </h2>
       <ul className="grid gap-3 sm:grid-cols-2">

@@ -31,7 +31,7 @@ export function PostCard({
       }`}
     >
       {(eyebrow || isNew) && (
-        <span className="flex items-center gap-2 font-utility text-xs font-semibold tracking-widest uppercase">
+        <span className="flex items-center gap-2 font-utility text-xs font-semibold tracking-wide uppercase">
           {isNew && (
             <span className="rounded-full bg-status-open/10 px-2 py-0.5 text-status-open">
               New

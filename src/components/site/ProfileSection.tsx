@@ -1,3 +1,5 @@
+import { SectionHeading } from "@/components/site/SectionHeading";
+
 export function ProfileSection({
   title,
   children,
@@ -7,13 +9,7 @@ export function ProfileSection({
 }) {
   return (
     <section className="mt-8 border-t border-ink/10 pt-8 first:mt-0 first:border-t-0 first:pt-0">
-      <h2 className="mb-4 flex items-center gap-2 font-display text-xl font-semibold text-ink">
-        <span
-          className="inline-block h-5 w-1 rounded-full"
-          style={{ backgroundColor: "color-mix(in srgb, var(--color-status-open) 60%, transparent)" }}
-        />
-        {title}
-      </h2>
+      <SectionHeading>{title}</SectionHeading>
       {children}
     </section>
   );
