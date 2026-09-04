@@ -261,7 +261,7 @@ export default async function UniversityProfilePage({
       : [];
 
   return (
-    <main className="mx-auto w-full max-w-3xl px-6 pt-8 pb-16">
+    <main className="mx-auto w-full max-w-4xl px-6 pt-8 pb-16">
       <JsonLd data={jsonLd} />
       <JsonLd data={breadcrumbJsonLd(breadcrumbs)} />
       {faqItems.length > 0 && (
@@ -271,7 +271,7 @@ export default async function UniversityProfilePage({
       <Breadcrumbs items={breadcrumbs} />
 
       <div className="rounded-2xl bg-gradient-to-br from-ink/[0.04] via-ink/[0.02] to-transparent p-6 sm:p-8">
-        <p className="flex items-center gap-2 font-utility text-xs font-semibold tracking-widest text-status-open uppercase">
+        <p className="flex items-center gap-2 font-utility text-[0.8rem] font-semibold tracking-wide text-slate uppercase">
           <span className="inline-block h-1.5 w-1.5 rounded-full bg-status-open" />
           {[university.city, university.region, university.country?.name]
             .filter(Boolean)
@@ -482,7 +482,7 @@ export default async function UniversityProfilePage({
 
           {budgetLow && budgetHigh && (
             <div className="mt-4 rounded-xl border border-status-pending/25 bg-status-pending/5 p-5">
-              <p className="font-utility text-xs font-semibold tracking-widest text-slate uppercase">
+              <p className="font-utility text-xs font-semibold tracking-wide text-slate uppercase">
                 Estimated first-year budget
               </p>
               <p className="mt-1 font-display text-2xl font-semibold text-ink">

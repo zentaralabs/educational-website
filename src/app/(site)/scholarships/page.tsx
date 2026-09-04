@@ -138,7 +138,7 @@ export default async function ScholarshipsIndexPage({
         <div className="mt-10 flex flex-col gap-10">
           {scopes.map((scope) => (
             <section key={scope}>
-              <h2 className="mb-4 font-body text-xs font-semibold tracking-widest text-slate uppercase">
+              <h2 className="mb-4 font-body text-xs font-semibold tracking-wide text-slate uppercase">
                 {SCHOLARSHIP_SCOPE_LABELS[scope] ?? scope}
               </h2>
               <ul className="flex flex-col gap-4">

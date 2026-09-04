@@ -22,7 +22,7 @@ const LINKS = [
 export default function NotFound() {
   return (
     <main className="mx-auto w-full max-w-2xl px-6 py-16">
-      <p className="font-utility text-xs font-semibold tracking-widest text-slate uppercase">
+      <p className="font-utility text-xs font-semibold tracking-wide text-slate uppercase">
         404
       </p>
       <h1 className="mt-2 font-display text-3xl font-semibold text-ink text-balance">

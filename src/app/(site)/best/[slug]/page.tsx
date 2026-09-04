@@ -114,7 +114,7 @@ export default async function CollectionPage({
       )}
 
       <div className="mt-10 rounded-2xl border border-line bg-mist p-5">
-        <h2 className="font-body text-xs font-semibold tracking-widest text-slate uppercase">
+        <h2 className="font-body text-xs font-semibold tracking-wide text-slate uppercase">
           How this list was built
         </h2>
         <p className="mt-2 font-body text-sm text-slate">{collection.methodology}</p>

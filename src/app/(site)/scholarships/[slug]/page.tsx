@@ -6,6 +6,8 @@ import { LastVerified } from "@/components/site/LastVerified";
 import { CheckBadgeIcon } from "@/components/site/icons";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import { FaqSection } from "@/components/site/FaqSection";
+import { Fact, FactGrid } from "@/components/site/FactGrid";
+import { SectionHeading } from "@/components/site/SectionHeading";
 import { faqJsonLd, scholarshipFaq } from "@/lib/faq";
 import { SITE_YEAR } from "@/lib/site-config";
 import {
@@ -49,18 +51,6 @@ export async function generateMetadata({
   });
 }
 
-function Fact({ label, value }: { label: string; value: string | null }) {
-  if (!value) return null;
-  return (
-    <div className="rounded-xl border border-line bg-mist px-4 py-3">
-      <dt className="font-utility text-[0.7rem] font-semibold tracking-widest text-slate uppercase">
-        {label}
-      </dt>
-      <dd className="mt-1 font-body text-sm font-medium text-ink">{value}</dd>
-    </div>
-  );
-}
-
 export default async function ScholarshipPage({
   params,
 }: {
@@ -79,7 +69,7 @@ export default async function ScholarshipPage({
   const faqItems = scholarshipFaq(s);
 
   return (
-    <main className="mx-auto w-full max-w-2xl px-6 pt-8 pb-16">
+    <main className="mx-auto w-full max-w-4xl px-6 pt-8 pb-16">
       <JsonLd data={breadcrumbJsonLd(breadcrumbs)} />
       {faqItems.length > 0 && (
         <JsonLd data={faqJsonLd(faqItems)} />
@@ -87,7 +77,7 @@ export default async function ScholarshipPage({
       <Breadcrumbs items={breadcrumbs} />
 
       <div className="rounded-2xl bg-gradient-to-br from-ink/[0.04] via-ink/[0.02] to-transparent p-6 sm:p-8">
-        <p className="flex items-center gap-2 font-utility text-xs font-semibold tracking-widest text-status-open uppercase">
+        <p className="flex items-center gap-2 font-utility text-[0.8rem] font-semibold tracking-wide text-slate uppercase">
           <span className="inline-block h-1.5 w-1.5 rounded-full bg-status-open" />
           {SCHOLARSHIP_SCOPE_LABELS[s.scope] ?? s.scope}
           {s.universities.length === 1 && ` · ${s.universities[0].name}`}
@@ -102,7 +92,7 @@ export default async function ScholarshipPage({
         )}
       </div>
 
-      <dl className="mt-8 grid gap-3 sm:grid-cols-2">
+      <FactGrid>
         <Fact label="Study level" value={s.study_level} />
         <Fact
           label="How to get it"
@@ -130,13 +120,11 @@ export default async function ScholarshipPage({
           label="Country"
           value={s.country?.name ?? (s.universities.length ? "Australia" : null)}
         />
-      </dl>
+      </FactGrid>
 
       {s.eligibility && (
-        <section className="mt-10">
-          <h2 className="mb-3 font-display text-xl font-semibold text-ink">
-            Who is eligible
-          </h2>
+        <section className="mt-10 max-w-2xl">
+          <SectionHeading>Who is eligible</SectionHeading>
           <p className="font-body text-base leading-relaxed text-ink">
             {s.eligibility}
           </p>
@@ -144,16 +132,18 @@ export default async function ScholarshipPage({
       )}
 
       {s.description && (
-        <section className="mt-10">
+        <section className="mt-10 max-w-2xl">
           <GuideContent content={s.description} />
         </section>
       )}
 
       {s.universities.length > 0 && (
         <section className="mt-10">
-          <h2 className="mb-3 font-display text-xl font-semibold text-ink">
-            {s.universities.length === 1 ? "Offered at" : "Participating universities"}
-          </h2>
+          <SectionHeading>
+            {s.universities.length === 1
+              ? "Offered at"
+              : "Participating universities"}
+          </SectionHeading>
           <ul className="flex flex-wrap gap-2">
             {s.universities.map((u) => (
               <li key={u.slug}>

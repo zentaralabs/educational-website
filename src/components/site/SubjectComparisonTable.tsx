@@ -76,7 +76,7 @@ export function SubjectComparisonTable({
             international tuition, and IELTS requirement, sorted by tuition.
           </caption>
           <thead>
-            <tr className="bg-mist font-utility text-[0.7rem] font-semibold tracking-widest text-slate uppercase">
+            <tr className="bg-mist font-utility text-xs font-semibold tracking-wide text-slate uppercase">
               <th className="px-3 py-2.5">University</th>
               <th className="px-3 py-2.5">Program</th>
               <th className="px-3 py-2.5">Level</th>

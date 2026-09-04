@@ -128,7 +128,7 @@ export default async function UniversitiesByStatePage({
       </div>
 
       <div className="mt-6 rounded-2xl border border-status-open/25 bg-status-open/5 p-5">
-        <h2 className="font-body text-xs font-semibold tracking-widest text-slate uppercase">
+        <h2 className="font-body text-xs font-semibold tracking-wide text-slate uppercase">
           Regional migration
         </h2>
         <p className="mt-2 font-body text-sm leading-relaxed text-ink">

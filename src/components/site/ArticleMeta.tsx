@@ -33,7 +33,7 @@ export function ArticleMeta({
     <div className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-2 font-body text-sm text-slate">
       {author && (
         <span className="flex items-center gap-2">
-          <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-ink font-utility text-[0.7rem] font-semibold text-paper">
+          <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-ink font-utility text-xs font-semibold text-paper">
             {authorInitials(author.name)}
           </span>
           <span>

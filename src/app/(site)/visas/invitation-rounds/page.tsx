@@ -136,7 +136,7 @@ export default async function InvitationRoundsPage() {
 
       {latestActual && (
         <div className="mt-8 rounded-2xl border border-status-open/30 bg-status-open/5 p-5">
-          <p className="font-body text-xs font-semibold tracking-widest text-status-open uppercase">
+          <p className="font-body text-xs font-semibold tracking-wide text-status-open uppercase">
             Latest round
           </p>
           <p className="mt-2 font-display text-xl font-semibold text-ink">
@@ -189,7 +189,7 @@ export default async function InvitationRoundsPage() {
         <div className="mt-12 flex flex-col gap-10">
           {years.map((year) => (
             <section key={year}>
-              <h2 className="mb-4 font-body text-xs font-semibold tracking-widest text-slate uppercase">
+              <h2 className="mb-4 font-body text-xs font-semibold tracking-wide text-slate uppercase">
                 {year === "Other" ? "Other rounds" : `${year} program year`}
               </h2>
               <div className="overflow-x-auto">

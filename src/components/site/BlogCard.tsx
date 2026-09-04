@@ -36,7 +36,7 @@ export function BlogCard({
           : "border-line bg-paper p-5"
       }`}
     >
-      <div className="flex items-center gap-2 font-utility text-xs tracking-widest text-status-open uppercase">
+      <div className="flex items-center gap-2 font-utility text-xs tracking-wide text-status-open uppercase">
         {featured && <span>Latest</span>}
         {featured && primaryTag && <span aria-hidden className="text-ink/25">·</span>}
         {primaryTag && <span className={featured ? "text-slate" : ""}>{primaryTag.replace(/-/g, " ")}</span>}

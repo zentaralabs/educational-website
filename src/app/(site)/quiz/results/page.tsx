@@ -36,7 +36,7 @@ function Stat({
 }) {
   return (
     <div className="flex flex-col gap-1">
-      <dt className="font-body text-[0.7rem] font-semibold tracking-wide text-slate uppercase">
+      <dt className="font-body text-xs font-semibold tracking-wide text-slate uppercase">
         {label}
       </dt>
       <dd

@@ -27,7 +27,7 @@ export function StatusBadge({ status }: { status: BadgeStatus }) {
 
   return (
     <span
-      className="inline-flex items-center rounded-sm border-2 px-2 py-0.5 font-utility text-xs font-semibold tracking-widest"
+      className="inline-flex items-center rounded-sm border-2 px-2 py-0.5 font-utility text-xs font-semibold tracking-wide"
       style={{
         color,
         borderColor: color,

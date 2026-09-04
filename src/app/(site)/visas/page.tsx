@@ -163,7 +163,7 @@ export default async function VisasIndexPage() {
                     {i + 1}
                   </span>
                   <span className="min-w-0">
-                    <span className="font-utility text-xs font-semibold tracking-widest text-status-open uppercase">
+                    <span className="font-utility text-xs font-semibold tracking-wide text-status-open uppercase">
                       {step.role}
                     </span>
                     <span className="flex items-center gap-2">

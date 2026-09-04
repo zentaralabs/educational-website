@@ -109,12 +109,12 @@ function daysUntil(dateStr: string): number {
 }
 
 const eyebrowClass =
-  "font-utility text-[0.7rem] font-semibold tracking-[0.16em] text-status-open uppercase";
+  "font-utility text-[0.8rem] font-semibold tracking-wide text-slate uppercase";
 const sectionTitleClass = "font-display text-2xl font-semibold text-ink text-balance";
 const moreLinkClass =
   "font-body text-sm font-medium text-status-open underline underline-offset-2 whitespace-nowrap";
 const thClass =
-  "px-4 py-3 font-utility text-[0.68rem] font-semibold tracking-widest text-slate uppercase";
+  "px-4 py-3 font-utility text-xs font-semibold tracking-wide text-slate uppercase";
 
 export default async function Home() {
   const [
@@ -148,7 +148,7 @@ export default async function Home() {
       <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8">
 
           {/* HERO */}
-          <section className="grid items-center gap-8 lg:grid-cols-[1.55fr_1fr] lg:gap-12">
+          <section>
             <div className="min-w-0">
               <p
                 className={`animate-fade-up ${eyebrowClass}`}
@@ -168,7 +168,7 @@ export default async function Home() {
               </h1>
 
               <p
-                className="animate-fade-up mt-4 max-w-xl font-body text-base text-slate sm:text-lg"
+                className="animate-fade-up mt-4 max-w-xl font-body text-base text-ink/80 sm:text-lg"
                 style={{ animationDelay: "80ms" }}
               >
                 Application deadlines, tuition, visa subclasses, and the policy
@@ -207,7 +207,7 @@ export default async function Home() {
                     className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-status-pending"
                   />
                   <span className="min-w-0 flex-1 truncate font-body text-sm text-ink">
-                    <span className="font-utility text-[0.7rem] tracking-wide text-slate uppercase">
+                    <span className="font-utility text-xs tracking-wide text-slate uppercase">
                       Latest update{" "}
                     </span>
                     {heroUpdate.title}
@@ -225,33 +225,32 @@ export default async function Home() {
                 </Link>
               )}
             </div>
+          </section>
 
-            <aside
-              className="animate-fade-up min-w-0 rounded-2xl border border-line bg-mist p-5 sm:p-6"
-              style={{ animationDelay: "120ms" }}
-            >
-              <h2 className="font-utility text-[0.7rem] font-semibold tracking-[0.14em] text-slate uppercase">
-                Popular right now
-              </h2>
-              <ul className="mt-1 divide-y divide-line">
+          {/* POPULAR RIGHT NOW — quick jumps, sits under the search */}
+          <section className="scroll-reveal mt-10">
+            <div className="rounded-2xl border border-line bg-mist p-5 sm:p-6">
+              <div className="mb-2 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                <h2 className="font-utility text-[0.8rem] font-semibold tracking-wide text-slate uppercase">
+                  Popular right now
+                </h2>
+                <Link href="/best" className={moreLinkClass}>
+                  Browse all shortlists &rarr;
+                </Link>
+              </div>
+              <ul className="grid gap-x-8 sm:grid-cols-2 lg:grid-cols-3">
                 {POPULAR.slice(0, 6).map((p) => (
-                  <li key={p.href}>
+                  <li key={p.href} className="border-t border-line/70 first:border-t-0 sm:[&:nth-child(2)]:border-t-0 lg:[&:nth-child(3)]:border-t-0">
                     <Link
                       href={p.href}
-                      className="block py-2.5 font-body text-[0.92rem] font-medium text-ink transition-colors hover:text-status-open"
+                      className="block py-2.5 font-body text-[0.95rem] font-medium text-ink transition-colors hover:text-status-open"
                     >
                       {p.label}
                     </Link>
                   </li>
                 ))}
               </ul>
-              <Link
-                href="/best"
-                className="mt-3 inline-block font-body text-sm font-semibold text-status-open"
-              >
-                Browse all shortlists &rarr;
-              </Link>
-            </aside>
+            </div>
           </section>
 
           {/* NEXT DEADLINES — the flagship data, always open */}
@@ -291,11 +290,11 @@ export default async function Home() {
                               {d.university?.name}
                             </Link>
                           </td>
-                          <td className="px-4 py-3 font-body text-sm text-slate">
+                          <td className="px-4 py-3 font-body text-sm text-ink/75">
                             {d.deadline_type?.name}
                             {d.degree_level ? ` · ${d.degree_level.name}` : ""}
                           </td>
-                          <td className="px-4 py-3 font-utility text-sm text-slate">
+                          <td className="px-4 py-3 font-utility text-sm text-ink/75">
                             {rolling
                               ? "Rolling"
                               : formatDeadlineDate(d.deadline_date, d.date_kind)}
@@ -345,7 +344,7 @@ export default async function Home() {
                       <span className="mt-0.5 font-body text-[0.95rem] font-semibold text-ink group-hover:underline">
                         {label}
                       </span>
-                      <span className="font-body text-[0.82rem] text-slate">
+                      <span className="font-body text-sm text-slate">
                         {desc}
                       </span>
                     </Link>

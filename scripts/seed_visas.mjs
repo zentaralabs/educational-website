@@ -84,6 +84,29 @@ const visas = [
     name: "Temporary Graduate visa",
     category: "graduate",
     stream: "Post-Higher Education Work and Post-Vocational Education Work",
+    // Structured stream cards for the /visas/[slug] sidebar. `duration` is a
+    // short label; the fuller qualification-by-qualification breakdown lives
+    // in the "How long you can stay" table in `content`.
+    streams: JSON.stringify([
+      {
+        name: "Post-Higher Education Work",
+        description:
+          "For graduates of a bachelor degree or higher. No nominated occupation or skills assessment needed.",
+        duration: "2 to 3 years",
+      },
+      {
+        name: "Post-Vocational Education Work",
+        description:
+          "For graduates of a diploma or trade qualification. Needs a nominated occupation on a skills list and a skills assessment.",
+        duration: "18 months",
+      },
+      {
+        name: "Second Post-Higher Education Work",
+        description:
+          "A one-off further visa for first-stream holders who studied and lived in a designated regional area.",
+        duration: "1 to 2 extra years",
+      },
+    ]),
     short_description:
       "Post-study work visa for recent graduates of Australian qualifications. Full work rights, no employer sponsor needed.",
     summary:
@@ -110,7 +133,7 @@ const visas = [
     conditions:
       "The 485 carries no work-hour limit and no employer restriction. You are expected to keep health cover for the visa period. It cannot usually be applied for onshore more than once for the same stream.",
     content:
-      "## How long you can stay\n\n- Bachelor degree, including honours: 2 years\n- Masters by coursework: 2 years\n- Masters by research: 3 years\n- Doctoral degree: 3 years\n- Diploma or trade qualification (Post-Vocational stream): 18 months\n\nGraduates who studied and live in designated regional areas have in past years been offered a further one to two year extension. Indian nationals have separate arrangements under a bilateral agreement.\n\n## Why the experience you get here matters\n\nSkilled visa points and skills assessments both reward post-qualification skilled work. A year of relevant full-time work on a 485 is often the difference between an EOI that gets invited and one that does not.\n\n## Recent tightening\n\nThe age limit dropped from 50 to 35 for most applicants, stay periods were trimmed from the temporary pandemic-era extensions, and English requirements rose. Check the current settings before you plan around this visa.",
+      "## How long you can stay\n\n| Qualification level | Visa length |\n| --- | --- |\n| Bachelor degree, including honours | 2 years |\n| Masters by coursework | 2 years |\n| Masters by research | 3 years |\n| Doctoral degree | 3 years |\n| Diploma or trade qualification (Post-Vocational stream) | 18 months |\n\nGraduates who studied and live in designated regional areas have in past years been offered a further one to two year extension. Indian nationals have separate arrangements under a bilateral agreement.\n\n## Why the experience you get here matters\n\nSkilled visa points and skills assessments both reward post-qualification skilled work. A year of relevant full-time work on a 485 is often the difference between an EOI that gets invited and one that does not.\n\n## Recent tightening\n\nThe age limit dropped from 50 to 35 for most applicants, stay periods were trimmed from the temporary pandemic-era extensions, and English requirements rose. Check the current settings before you plan around this visa.",
     source_urls: [
       `${STUDYAUS}/temporary-graduate-visa-subclass-485`,
       `${HOMEAFFAIRS}/temporary-graduate-485`,
@@ -241,6 +264,20 @@ const visas = [
     name: "Skilled Work Regional (Provisional) visa",
     category: "skilled",
     stream: "State or territory nominated, and family sponsored",
+    streams: JSON.stringify([
+      {
+        name: "State or territory nominated",
+        description:
+          "Nominated by a state or territory government for one of its regional areas. Usually needs a state-specific Expression of Interest and often a period already living in the state.",
+        duration: "5 years provisional",
+      },
+      {
+        name: "Family sponsored",
+        description:
+          "Sponsored by an eligible relative who is a settled citizen or permanent resident living in a designated regional area. No state involvement. Invitation rounds are small.",
+        duration: "5 years provisional",
+      },
+    ]),
     short_description:
       "Five-year provisional visa for skilled workers in regional Australia. Adds 15 points and leads to PR through the 191.",
     summary:
@@ -309,6 +346,26 @@ const visas = [
     name: "Skills in Demand visa",
     category: "employer-sponsored",
     stream: "Specialist Skills, Core Skills, and Essential Skills",
+    streams: JSON.stringify([
+      {
+        name: "Specialist Skills",
+        description:
+          "Salary at or above AUD 141,210. Most occupations eligible, no occupation list check, faster processing.",
+        duration: "Up to 4 years",
+      },
+      {
+        name: "Core Skills",
+        description:
+          "Occupation on the Core Skills Occupation List and salary at or above the Core Skills Income Threshold of AUD 76,515.",
+        duration: "Up to 4 years",
+      },
+      {
+        name: "Essential Skills",
+        description:
+          "Planned for lower-paid but critical roles under sector agreements. Not open to applicants yet.",
+        duration: "Not yet open",
+      },
+    ]),
     short_description:
       "Employer-sponsored work visa, up to 4 years, that replaced the Temporary Skill Shortage visa in December 2024.",
     summary:
@@ -344,6 +401,20 @@ const visas = [
     name: "Employer Nomination Scheme visa",
     category: "employer-sponsored",
     stream: "Temporary Residence Transition and Direct Entry",
+    streams: JSON.stringify([
+      {
+        name: "Temporary Residence Transition",
+        description:
+          "For workers who have spent 2 years with their sponsor on a 482, 457, or TSS visa in the same occupation. No occupation list check. Most 186 grants are this stream.",
+        duration: "Permanent",
+      },
+      {
+        name: "Direct Entry",
+        description:
+          "For people with 3 years of relevant experience and a positive skills assessment who have not held a sponsored visa. Uses the Core Skills Occupation List. Much less commonly granted.",
+        duration: "Permanent",
+      },
+    ]),
     short_description:
       "Permanent residence for skilled workers nominated by their Australian employer.",
     summary:

@@ -148,7 +148,7 @@ export default async function BlogPostPage({
 
             {more.length > 0 && (
               <div className="mt-12 border-t border-line pt-8">
-                <h2 className="mb-4 font-body text-xs font-semibold tracking-widest text-slate uppercase">
+                <h2 className="mb-4 font-body text-xs font-semibold tracking-wide text-slate uppercase">
                   More from the blog
                 </h2>
                 <ul className="grid gap-3 sm:grid-cols-2">

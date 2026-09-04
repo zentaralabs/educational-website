@@ -89,7 +89,7 @@ export default async function CityCostPage({
       <Breadcrumbs items={breadcrumbs} />
 
       <div className="rounded-2xl bg-gradient-to-br from-ink/[0.04] via-ink/[0.02] to-transparent p-6 sm:p-8">
-        <p className="flex items-center gap-2 font-utility text-xs font-semibold tracking-widest text-status-open uppercase">
+        <p className="flex items-center gap-2 font-utility text-xs font-semibold tracking-wide text-status-open uppercase">
           <span className="inline-block h-1.5 w-1.5 rounded-full bg-status-open" />
           {c.state} · Cost of living
         </p>
@@ -102,7 +102,7 @@ export default async function CityCostPage({
       </div>
 
       <div className="mt-8 rounded-2xl border border-status-open/25 bg-status-open/5 p-5">
-        <p className="font-utility text-xs font-semibold tracking-widest text-slate uppercase">
+        <p className="font-utility text-xs font-semibold tracking-wide text-slate uppercase">
           Estimated annual cost, sharing accommodation
         </p>
         <p className="mt-1 font-display text-2xl font-semibold text-ink">
