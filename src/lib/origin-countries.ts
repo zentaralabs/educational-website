@@ -119,11 +119,14 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     ],
     applying: [
       "Apply through the university's international portal or an authorised agent. Several universities only accept applications from Nepali citizens through an agent, so check each university's how-to-apply page. Where direct application is allowed, it is free at many universities.",
-      "You need a No Objection Certificate (NOC) from Nepal's Ministry of Education, Science and Technology. It is issued online at noc.moest.gov.np for a small fee, usually within a week, and Nepali banks require it before they will remit your tuition. Apply for it once you have your offer letter.",
+      "You need a No Objection Certificate (NOC) from Nepal's Ministry of Education, Science and Technology. It is issued online at noc.moest.gov.np for a small fee, usually within a week, and Nepali banks require it before they will remit your tuition. Apply for it once you have your offer letter. It is a direct application you lodge yourself; no agent needs to charge an extra fee to process or speed it up.",
       "Deadlines are earlier at universities that apply their higher-scrutiny country dates to Nepal (Western Australia especially). Apply three to four months before your intake. Most universities run February and July intakes and assess on a rolling basis.",
+      "Nepal's education-consultancy sector is only loosely licensed, and that is where most of the scam risk sits, not with the Australian universities themselves. Of the roughly 5,000 consultancies operating in the Kathmandu Valley, only about 900 hold a current operating permit from the Ministry of Education, Science and Technology; the rest work without one. In May 2026 the Kathmandu Valley Crime Investigation Office raided 95 consultancies across Kathmandu, Lalitpur, and Bhaktapur and detained 69 operators, seizing fake government seals used to forge documents. Before you pay anyone, confirm the agent is on your target university's own published list of authorised agents, and that the consultancy itself holds a current MoEST permit.",
+      "The Australian Embassy in Nepal warns against a specific set of tactics: an agent who guarantees you a visa outcome for a fee, one who asks you to hand over your passport, or one who tells you that you can switch from a visitor visa to a student visa after you arrive (you cannot, and attempting it damages your immigration record). An agent working in Australia should be registered with the Office of Migration Agents Registration Authority (OMARA) and able to give you a Migration Agent Registration Number you can check yourself on the OMARA website.",
     ],
     visaNote: [
-      "In January 2026 the Australian Government moved Nepal to student-visa Evidence Level 3, the highest tier, alongside India, Bangladesh, and Bhutan. Case officers cited forged bank guarantees and fake academic documents. You now need to provide, upfront, several months of genuine bank statements, a documented source of funds, and authenticated transcripts. Processing is slower. Check the current level when you apply.",
+      "In January 2026 the Australian Government moved Nepal to student-visa Evidence Level 3, the highest tier, alongside India, Bangladesh, and Bhutan. Home Affairs calculates a country's evidence level from a weighted index of visa cancellations, refusals, and overstay rates, and the rate of refusals for a fraud reason carries the single largest weight (40 percent) in that index; a score above 2.7 places a country at Level 3. Sector reporting at the time linked the move to a rise in forged bank guarantees and fraudulent academic documents detected during the November to December 2025 lodgement peak. You now need to provide, upfront, several months of genuine bank statements, a documented source of funds, and authenticated transcripts, and processing is slower. Check the current level when you apply, since these are reviewed.",
+      "Home Affairs does not publish a Nepal-specific grant or refusal rate, so treat the exact percentages you see quoted on education-consultancy websites with caution; figures in circulation range from roughly 25 percent to 85 percent because they measure different things (lodged versus decided applications, onshore versus offshore, and an unfiltered pool versus a 'decision-ready' subset). What Home Affairs does publish is volume: in the 2025-26 program year to 31 December 2025, Nepal was Australia's third largest source of student visa lodgements (23,072, up 54.6 percent on the same period the year before) and the third largest by visas granted (18,744, up 40.5 percent), behind only China and India in both counts.",
       "The usual reasons Nepali applications are refused are funds that appear shortly before applying with no history, loans that are approved in principle rather than disbursed, and a course that does not follow on from previous study. Show a savings pattern that predates your decision to study abroad.",
     ],
     credentials: [
@@ -159,14 +162,23 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
         q: "Do Nepali students need to apply through an agent?",
         a: "Some universities require it. Several, mostly in Western Australia, only accept applications from Nepali citizens through an authorised agent. Others take direct applications. Check the university's how-to-apply page.",
       },
+      {
+        q: "How do I know if a Nepali education agent is legitimate?",
+        a: "Check that the agent appears on your target university's own published list of authorised agents, and, if they operate in Australia, that they hold a Migration Agent Registration Number you can verify on the OMARA website. Be wary of anyone who guarantees a visa outcome, asks you to hand over your passport, or says you can switch from a visitor visa to a student visa after you arrive; the Australian Embassy in Nepal specifically warns against all three. A 2026 police crackdown found that most raided Kathmandu Valley consultancies were operating without a current Ministry of Education permit, so also confirm the consultancy itself is properly registered.",
+      },
     ],
     sources: [
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
       "https://noc.moest.gov.np/",
       "https://immi.homeaffairs.gov.au/news-media/archive/article?itemId=1196",
       "https://www.studyaustralia.gov.au/",
+      "https://immi.homeaffairs.gov.au/what-we-do/education-program/what-we-do/evidence-levels",
+      "https://www.homeaffairs.gov.au/research-and-stats/files/student-temporary-grad-program-report-dec-2025.pdf",
+      "https://nepal.embassy.gov.au/kmdu/Stay_safe_from_visa_scams.html",
+      "https://kathmandupost.com/national/2026/05/16/arrests-device-seizures-in-crackdown-on-consultancies-over-shady-student-migration-process",
+      "https://english.onlinekhabar.com/over-4100-education-consultancies-operating-without-registration-across-nepal.html",
     ],
-    lastVerified: "2026-08-29",
+    lastVerified: "2026-09-05",
   },
 
   pakistan: {
