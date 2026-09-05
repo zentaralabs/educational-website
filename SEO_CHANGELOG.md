@@ -10,6 +10,60 @@ Redirects · Canonical/sitemap/metadata changes · Testing done.**
 
 ---
 
+## 2026-09-05 · CRICOS course-register import: programs table 1,103 → ~7,100
+
+**Affected routes:** `/universities/{slug}/programs/{program-slug}` (≈6,000 new
+pages) and the "Academics" program list on every `/universities/{slug}`.
+
+**Why:** the `programs` table was a one-off AI import that only ever held a
+thin, uneven slice of each university (most sat at 8–14 rows; a real
+catalogue is 200–600). Rebuilt the catalogue from the Commonwealth Register
+of Institutions and Courses for Overseas Students (CRICOS) — the official
+national list of every course an overseas student can enrol in, per provider
+(monthly open-data snapshot from data.gov.au, filtered to our 56
+institutions: `scripts/data/cricos-courses.csv`).
+
+**What the import does** (`scripts/build_programs_catalog.mjs` →
+`scripts/data/programs.json` → `scripts/seed_programs.mjs`):
+- Skips expired, combined/double, and sub-AQF-Diploma (Cert I–IV, secondary,
+  short-course) rows.
+- Matches a register course to an existing program by university + name and
+  only stamps its `cricos_code` (migration 0031); never touches a curated
+  row's name, description, curriculum, status, duration or tuition.
+- Adds every unmatched course as a new `published` row carrying name, degree
+  level, subject (mapped from ASCED field of education), an indicative
+  annualised tuition (register whole-of-course fee ÷ duration, clamped to
+  A$8k–150k) and duration, plus `cricos_code`. No description.
+
+**SEO impact: LOW / net-positive.**
+- **Indexation:** unchanged gate. New bare rows have no description, so
+  `content_indexable` (generated col, migration 0023) is `false` → they are
+  `robots: noindex, follow` and **excluded from the sitemap**, exactly like
+  the existing description-less long tail. Sitemap URL count is unchanged.
+  They are live for users and fully crawlable as internal links (every
+  program `<Link>` stays in the DOM behind the list's search/pagination — see
+  PR #25).
+- **Canonicals / redirects / metadata:** none changed. Slugs are generated
+  unique-per-university the same way `createProgram` does it.
+- A bare program page renders a facts-only card (level, subject, indicative
+  tuition/duration, English from the university, CRICOS provenance note
+  linking to the provider and our university overview) instead of the
+  "About this program" section.
+
+**Follow-on (not done here):** demand-first enrichment — write real sourced
+descriptions for the highest-intent programs so `isProgramIndexable` flips
+them to indexed, in batches, via the existing description-pass workflow.
+
+**Rollback:** `scripts/data/programs-catalog-added.json` lists every new row
+id. `git checkout scripts/data/programs.json` restores the pre-import file;
+delete the added ids from the DB to fully revert.
+
+**Testing done:** `tsc --noEmit` clean; build script dry-run reviewed
+per-university (counts now 90–400/uni, matching real catalogue sizes);
+sampled ~40 generated rows for name/level/subject/tuition sanity; combined-
+degree and ALL-CAPS filters verified to leave 0 leaks; seed dry-run
+(`1,103 update / ~6,000 insert`) before commit.
+
 ## 2026-09-04 · Pin Vercel Function Region to match the database (`vercel.json`)
 
 **Affected:** every server-rendered request (all 6 `searchParams` pages that

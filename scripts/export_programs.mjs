@@ -55,6 +55,7 @@ const FIELDS = [
   "intake_dates",
   "last_verified_at",
   "source_url",
+  "cricos_code",
 ];
 
 const client = new pg.Client({ connectionString: env.DATABASE_URL });
