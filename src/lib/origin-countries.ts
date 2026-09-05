@@ -483,8 +483,9 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "Most universities run February and July intakes and assess on a rolling basis. Apply two to three months ahead. Use the universities directory to shortlist and the deadline calendar for the recommended dates.",
     ],
     visaNote: [
-      "Sri Lanka is at student-visa Evidence Level 2 after moving up from Level 1 in late 2025. The upfront financial and English evidence is more than it used to be but still lighter than for the Evidence Level 3 countries. Be ready to show funds for tuition, travel, and 12 months of living costs, and to meet the Genuine Student requirement.",
-      "Where Sri Lankan applications run into trouble it is usually over source of funds, exchange-control paperwork for moving money out of the country, or a study plan that does not fit the applicant's background. A documented savings history addresses most of it.",
+      "Sri Lanka is at student-visa Evidence Level 2, having moved up from Level 1 in late 2025. Home Affairs sets evidence levels from a weighted index across five factors: visa cancellations (25% weighting), refusals for a fraud reason (40%), other refusals (10%), the rate of visa holders becoming unlawful non-citizens (15%), and subsequent protection-visa applications (10%). An index below 1.0 sits at Level 1, an index between 1.0 and 2.7 sits at Level 2, and anything above 2.7 sits at Level 3. Sri Lanka's index crossed above 1.0 in late 2025, moving it to Level 2, but it is nowhere near the 2.7 threshold that puts Nepal, India, Pakistan, and Bangladesh at Level 3. In practice this means more upfront financial and English evidence than Sri Lanka faced before, but a lighter document check than the Level 3 countries.",
+      "Home Affairs' own student visa program report puts Sri Lankan volumes in context. In the six months to 31 December 2025, Sri Lankan citizens lodged 4,397 student visa applications (2.1% of the national total, down 2.0% on the same period a year earlier) and were granted 4,076 (2.3% of the total, down 21.8%), as overall applicant numbers cooled. The onshore grant rate for Sri Lankan applicants rose across the year, from 73.4% in the quarter to December 2024 to 85.6% in the quarter to December 2025; the offshore grant rate eased over the same run of quarters, from 94.1% to 87.3%. Sri Lankan media later reported a sharper jump in refusals into 2026, citing Home Affairs and Australian Bureau of Statistics figures showing about 38% of Sri Lankan student visa applications refused in February 2026, a level still well below Nepal (65%), Bangladesh (51%), and India (40%) in the same reporting.",
+      "Where Sri Lankan applications run into trouble it is usually over source of funds, exchange-control paperwork for moving money out of the country, or a study plan that does not fit the applicant's background. A documented savings history addresses most of it. Sri Lanka's exchange controls have also pushed some families toward informal undiyal or hawala money-transfer networks to move tuition and living-cost money out of the country. The Central Bank of Sri Lanka treats these transfers as a money-laundering offence, and Sri Lankan academics writing in The Island have specifically named students funded from home as easy targets for bogus brokers, since the transfers are unregulated and unrecoverable if a broker disappears with the money. Send fees and living costs through a bank or the university's own payment gateway, not an informal broker.",
     ],
     credentials: [
       "For undergraduate entry, universities take the Sri Lankan A-Level (or the London A-Level) and, for local A-Levels, sometimes the Z-score. A local bachelor's, usually three or four years, is accepted for master's entry, with competitive courses wanting a higher class or GPA.",
@@ -501,7 +502,7 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     faq: [
       {
         q: "What is Sri Lanka's assessment level for the Australian student visa?",
-        a: "Sri Lanka is at Evidence Level 2, having moved up from Level 1 in late 2025. That means more financial and English documentation than before, though less than the Evidence Level 3 countries. Levels are reviewed, so check the current position when you apply.",
+        a: "Sri Lanka is at Evidence Level 2, having moved up from Level 1 in late 2025. Home Affairs scores each country on a weighted index of cancellations, fraud-related refusals, other refusals, unlawful non-citizen rates, and protection-visa claims; a score between 1.0 and 2.7 is Level 2, below 1.0 is Level 1, and above 2.7 is Level 3. Sri Lanka's score moved just above 1.0, well short of the Level 3 threshold that applies to Nepal, India, Pakistan, and Bangladesh. Levels are reviewed, so check the current position when you apply.",
       },
       {
         q: "Is a Sri Lankan bachelor's degree accepted in Australia?",
@@ -524,8 +525,12 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
       "https://immi.homeaffairs.gov.au/news-media/archive/article?itemId=1196",
       "https://www.studyaustralia.gov.au/",
+      "https://immi.homeaffairs.gov.au/what-we-do/education-program/what-we-do/evidence-levels",
+      "https://www.homeaffairs.gov.au/research-and-stats/files/student-temporary-grad-program-report-dec-2025.pdf",
+      "https://www.dailymirror.lk/breaking-news/Rejection-of-Sri-Lankan-student-visa-applications-to-Australia-surge-to-38/108-339491",
+      "https://island.lk/undial-and-hawala-is-the-risk-worth-taking/",
     ],
-    lastVerified: "2026-08-29",
+    lastVerified: "2026-09-05",
   },
 
   indonesia: {
