@@ -46,3 +46,6 @@ next-env.d.ts
 
 # claude code agent worktrees (scratch)
 /.claude/worktrees/
+
+# Transient program-enrichment worklists (source of truth is programs.json)
+scripts/data/_*
