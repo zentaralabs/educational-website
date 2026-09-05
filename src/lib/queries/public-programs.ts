@@ -47,6 +47,7 @@ export type PublicProgramRow = {
   pte_speaking: number | null;
   last_verified_at: string | null;
   source_url: string | null;
+  cricos_code: string | null;
   degree_level: { name: string } | null;
   subject: { name: string } | null;
 };
@@ -58,7 +59,7 @@ export async function getPublishedProgramsForUniversity(
   const { data, error } = await supabase
     .from("programs")
     .select(
-      "id, slug, name, duration_years, tuition_international, tuition_domestic, tuition_domestic_is_csp, currency, application_url, admission_requirements, english_requirements, ielts_overall, ielts_listening, ielts_reading, ielts_writing, ielts_speaking, pte_overall, pte_listening, pte_reading, pte_writing, pte_speaking, last_verified_at, source_url, degree_level:degree_levels(name), subject:subjects(name)",
+      "id, slug, name, duration_years, tuition_international, tuition_domestic, tuition_domestic_is_csp, currency, application_url, admission_requirements, english_requirements, ielts_overall, ielts_listening, ielts_reading, ielts_writing, ielts_speaking, pte_overall, pte_listening, pte_reading, pte_writing, pte_speaking, last_verified_at, source_url, cricos_code, degree_level:degree_levels(name), subject:subjects(name)",
     )
     .eq("university_id", universityId)
     .eq("status", "published")
@@ -114,7 +115,7 @@ export type PublicProgramDetail = PublicProgramRow & {
   } | null;
 };
 
-const PROGRAM_DETAIL_SELECT = `id, slug, name, description, curriculum, duration_years, tuition_international, tuition_domestic, tuition_domestic_is_csp, currency, application_url, admission_requirements, english_requirements, ielts_overall, ielts_listening, ielts_reading, ielts_writing, ielts_speaking, pte_overall, pte_listening, pte_reading, pte_writing, pte_speaking, last_verified_at, source_url,
+const PROGRAM_DETAIL_SELECT = `id, slug, name, description, curriculum, duration_years, tuition_international, tuition_domestic, tuition_domestic_is_csp, currency, application_url, admission_requirements, english_requirements, ielts_overall, ielts_listening, ielts_reading, ielts_writing, ielts_speaking, pte_overall, pte_listening, pte_reading, pte_writing, pte_speaking, last_verified_at, source_url, cricos_code,
       degree_level:degree_levels(name), subject:subjects(name),
       university:universities!inner(id, slug, name, status, city, apply_url, application_fee, tuition_international, tuition_domestic, tuition_domestic_is_csp, currency, ielts_overall, ielts_listening, ielts_reading, ielts_writing, ielts_speaking, pte_overall, pte_listening, pte_reading, pte_writing, pte_speaking, country:countries!inner(code, name, is_launched))`;
 

@@ -216,6 +216,8 @@ export interface Database {
           status: ContentStatus;
           last_verified_at: string | null;
           source_url: string | null;
+          /** CRICOS course code (migration 0031). Null on pre-register rows. */
+          cricos_code: string | null;
           /** Generated column (migration 0023): mirrors isProgramIndexable().
            * Read-only — never written. */
           content_indexable: boolean;
@@ -252,6 +254,7 @@ export interface Database {
           status?: ContentStatus;
           last_verified_at?: string | null;
           source_url?: string | null;
+          cricos_code?: string | null;
         }
       >;
       // occupations / program_occupations — see supabase/migrations/0030_add_occupations.sql.

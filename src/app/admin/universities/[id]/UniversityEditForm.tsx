@@ -408,6 +408,7 @@ function ProgramsPanel({
             subject,
             status: "draft",
             last_verified_at: null,
+            cricos_code: null,
             // Generated server-side (migration 0023); this optimistic value is
             // replaced by router.refresh() below.
             content_indexable:

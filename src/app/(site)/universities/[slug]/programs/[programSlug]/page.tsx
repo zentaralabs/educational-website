@@ -199,6 +199,42 @@ export default async function ProgramDetailPage({
       </div>
 
       <div className="mt-8 border-t border-ink/10 pt-8">
+        {!hasDescription && (
+          <div className="mb-6 rounded-2xl border border-line bg-mist p-6 font-body text-sm leading-7 text-slate sm:p-7">
+            <p className="text-ink">
+              The facts below come from the Commonwealth Register of Institutions and Courses for
+              Overseas Students (CRICOS
+              {program.cricos_code ? ` ${program.cricos_code}` : ""}), the official list of courses
+              Australian providers may offer to international students.
+            </p>
+            <p className="mt-3">
+              We have not published a full guide to this program yet. For the current course
+              structure, entry requirements and intake dates, check{" "}
+              {university.apply_url ? (
+                <OutboundLink
+                  event="apply_click"
+                  eventParams={{ university: university.name, program: program.name, location: "cricos_note" }}
+                  href={university.apply_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline underline-offset-2 hover:text-ink"
+                >
+                  {university.name}
+                </OutboundLink>
+              ) : (
+                university.name
+              )}{" "}
+              directly, or see our{" "}
+              <Link
+                href={`/universities/${university.slug}`}
+                className="underline underline-offset-2 hover:text-ink"
+              >
+                {university.name} overview
+              </Link>
+              .
+            </p>
+          </div>
+        )}
         {hasDescription && (
           <>
             <h2 className="mb-4 flex items-center gap-2 font-display text-xl font-semibold text-ink">
