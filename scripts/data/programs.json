@@ -10534,13 +10534,13 @@
     "name": "Master of Project Management",
     "slug": "master-of-project-management",
     "status": "published",
-    "duration_years": "2.0",
+    "duration_years": "1.5",
     "tuition_international": "50500",
     "tuition_domestic": null,
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "Adelaide University Master of Project Management is a 1.5-year AQF Level 9 degree, available in online or intensive mode, accredited by the Project Management Institute Global Accreditation Center. Students can weight the degree toward portfolio and program management, enterprise transformation and innovation, project governance or complex decision-making, and toward the end complete an industry project on a topic of their choice plus a choice of internship, career development or research-skills course. It is part of a stackable set: students can exit after six months with a graduate certificate or after a year with a graduate diploma. Indicative international tuition is around A$50,500 per year. Graduates work across defence, construction, healthcare, information technology and government as project managers, project officers, business analysts and consultants.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -10556,7 +10556,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://adelaide.edu.au/study/degrees/master-of-project-management/",
     "cricos_code": "115952G"
   },
   {
@@ -13015,7 +13015,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Australian Catholic University Master of Public Health is a two-year degree requiring 160 credit points, including 80 credit points of specified public health units and 200 hours of public health professional practice. Core units include History and Principles of Public Health, Biostatistics, and Determinants of Health. Credit and recognition of prior learning can shorten the course for applicants with relevant study or work experience, and international students need Academic IELTS 6.5 overall with no band below 6.0. Indicative international tuition is around A$32,100 per year. About half of graduates work in the health sector and others in education, government and services, in roles such as policy analyst, project officer, program evaluator, researcher, health administrator, public health advocate and community development worker.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -13031,7 +13031,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.acu.edu.au/course/master-of-public-health",
     "cricos_code": "089309K"
   },
   {
@@ -19813,7 +19813,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "At ANU the Master of Engineering is offered as a set of two-year specialisations rather than a single generic degree, including electrical engineering, mechatronics, robotics automation and control, renewable energy, energy systems, and digital systems and telecommunications. Each is a 96-unit program, typically 36 to 48 units of compulsory courses plus at least 48 units of electives that can be drawn from across the University, with work-integrated learning delivered through group projects. Entry requires a four-year Bachelor of Engineering or Bachelor of Engineering (Honours), or international equivalent, in a cognate discipline with a minimum GPA of 5.0 on the ANU 7-point scale; admission is competitive. Indicative international tuition is around A$56,900 per year. Graduates enter professional engineering roles in their chosen field.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -19829,7 +19829,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://eng.anu.edu.au/study/master/",
     "cricos_code": "077326G"
   },
   {
@@ -21793,7 +21793,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The ANU Master of Project Management is a two-year, 96-unit degree from the ANU College of Business and Economics. Students begin with four introductory courses common to the Research School of Management postgraduate programs, then build depth in project management and breadth in leadership, technology, risk management, accounting, international business, strategy and more. Entry is competitive: applicants are ranked on a GPA calculated from all but the final semester of their bachelor degree, and must meet English requirements. The program is endorsed by the Australian Institute of Project Management, so graduates can obtain the Certified Practising Project Practitioner certificate for three years without further assessment. Indicative international tuition is around A$56,900 per year. Graduates work as project managers and consultants and in leadership, coordination and policy roles across many sectors.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -21809,7 +21809,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://programsandcourses.anu.edu.au/program/mprom",
     "cricos_code": "082344G"
   },
   {
@@ -21859,7 +21859,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The ANU Master of Public Health is an internationally recognised population-health qualification delivered by the National Centre for Epidemiology and Population Health, offered online or in person over two years (minimum 96 units), with an Advanced option that adds a research project. It covers fields such as ageing, mental health, health services research, global health, chronic and infectious disease epidemiology and modelling, and environment, climate and health, combining core skills courses with electives. Applicants with a bachelor degree or graduate certificate in a cognate discipline such as psychology, medicine, biology, allied health, anthropology or policy studies may receive up to 24 units of credit, and those with honours, a graduate diploma or a master degree up to 48 units. Indicative international tuition is around A$53,800 per year. Graduates work in NGOs, primary health care, policy, research and consultancy in Australia and with international health organisations.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -21875,7 +21875,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://programsandcourses.anu.edu.au/program/mpubh",
     "cricos_code": "082346F"
   },
   {
@@ -33673,7 +33673,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "Charles Darwin University Master of Data Science is a 160 credit point degree of core units, thesis research units, and specialist and general electives, with the specialist electives allowing an industry placement or an IT thesis. Entry requires a recognised bachelor degree with a major in computer science, information technology, information systems, statistics, mathematics or engineering, or a program with substantial quantitative content; applicants with at least five years of appropriate professional experience are also considered, along with CDU English requirements. The course can be studied online or on campus. Indicative international tuition is around A$36,400 per year. CDU reports being the second-ranked Australian university for postgraduate employment. Graduates work as data scientists, data analysts, data engineers and business analysts.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -33689,7 +33689,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.cdu.edu.au/study/course/master-data-science-sdasc3",
     "cricos_code": "103122M"
   },
   {
@@ -33805,7 +33805,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "Charles Darwin University Master of Engineering is a two-year degree with three specialist streams: civil and structural, electrical and electronics, and mechanical engineering, with applicants able to study only the stream matching their undergraduate engineering discipline. The final year includes a major research thesis and a system design project, and the course emphasises sustainability, creativity, teamwork, design, research and leadership. It includes 450 hours of professional practice to keep students current with engineering practice. Entry requires a recognised Bachelor of Engineering, Engineering Science, Engineering Technology or Technology, or equivalent, in the relevant discipline, plus CDU English requirements. Study is available fully online or on campus, full or part time. Indicative international tuition is around A$41,200 per year. CDU reports being the second-ranked Australian university for postgraduate employment. Graduates work in design, construction, infrastructure, energy, manufacturing and project management.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -33821,7 +33821,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.cdu.edu.au/study/course/master-engineering-seng02",
     "cricos_code": "068567K"
   },
   {
@@ -34135,7 +34135,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "Charles Darwin University Master of Project Management is a 160 credit point degree focused on the knowledge and skills to manage complex modern projects, combining project management theory with its application through projects and practical exercises. It consists of core units, elective units and a second-year placement unit that prepares students for professional practice. Applicants must meet CDU standard English language requirements for higher education, which can also be met by completing CDU English for Academic Purposes or its Accelerated International Masters Qualifying Program. Indicative international tuition is around A$38,200 per year. Graduates work as project managers, project officers and coordinators across engineering, business, information technology, construction, health, government and mining.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -34151,7 +34151,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.cdu.edu.au/study/course/master-project-management-sprjm1",
     "cricos_code": "112673E"
   },
   {
@@ -34195,13 +34195,13 @@
     "name": "Master of Public Health",
     "slug": "master-of-public-health",
     "status": "published",
-    "duration_years": "1.5",
+    "duration_years": "2.0",
     "tuition_international": "34700",
     "tuition_domestic": null,
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "Charles Darwin University Master of Public Health is coordinated and taught by educators from the Menzies School of Health Research. It builds advanced knowledge and skills in epidemiology, biostatistics, and quantitative and qualitative research methods, and the ability to formulate strategies for complex health and social issues. A one-year Graduate Diploma of Public Health articulates into the master for students who want a staged entry. International applicants must meet CDU standard English language requirements for higher education. Indicative international tuition is around A$34,700 per year. Graduates work in national and international health services and government, and in health, development and humanitarian organisations, as public health leaders, program planners, analysts, evaluators and policy officers, in areas such as communicable and chronic disease control, epidemiology, health policy and planning, and aid work.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -34217,7 +34217,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.cdu.edu.au/study/course/master-public-health-spubh1",
     "cricos_code": "0101051"
   },
   {
@@ -34828,7 +34828,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "Charles Sturt University Bachelor of Engineering (Honours) uses a distinctive 2+2 model: two years of on-campus, project-based study followed by two years of paid industry cadetship. Students choose a civil, mechanical or electrical specialisation in second year. Entry typically needs an ATAR of around 70, and international students need IELTS 6.0 overall with 6.0 in each band; students are encouraged to complete a maths bridging subject first. Indicative international tuition is around A$38,000 per year. The civil specialisation leads to roles such as construction engineer, council engineer, geotechnical engineer, structural engineer, project engineer, and water resources engineer, with civil engineering and construction management named among Australia most in-demand professions.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -34844,7 +34844,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://study.csu.edu.au/courses/bachelor-engineering-honours",
     "cricos_code": "117609F"
   },
   {
@@ -38755,7 +38755,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "CQUniversity Master of Data Analytics is the successor to its Master of Information Systems, with the first intake from Term 1 2027 and an updated structure. It is a 12-unit master, up to two years full-time or four years part-time, of core, specialist and elective units, with core units including ICT Project Preparation and Industry Engagement and a Postgraduate ICT Capstone Project, and electives such as Artificial Intelligence Integrated Internet of Things. The course builds sought-after skills in data analytics and business intelligence for professionals extending their expertise or moving into the data field. Indicative international tuition is around A$39,800 per year. Updated unit details are published progressively ahead of the 2027 launch.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -38771,7 +38771,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.cqu.edu.au/courses/master-of-data-analytics",
     "cricos_code": "121180G"
   },
   {
@@ -38788,7 +38788,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "CQUniversity Master of Engineering opens with a unit on Australian engineering practice and three project units that apply discipline knowledge in authentic projects, sometimes with an industry mentor, followed by 24 credit points of electives in areas such as sustainability, mining, project management and rail, and a two-term major research project. Students without prior industry experience complete an internship. To meet Engineers Australia accreditation requirements, students demonstrate 480 hours of engineering practice, with a further 180 hours gained through industry seminars, guest lectures and workshops. On completion graduates are recognised as graduate professional engineers in Australia. Indicative international tuition is around A$41,500 per year. Graduates work across the energy, infrastructure and resources industries.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -38804,7 +38804,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.cqu.edu.au/courses/cv82/master-of-engineering",
     "cricos_code": "088196M"
   },
   {
@@ -38821,7 +38821,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "CQUniversity Master of Information Systems is being replaced by the Master of Data Analytics from Term 1 2027, with the final intake for the Master of Information Systems in Term 3 2026. It is a 12-unit master, up to two years full-time or four years part-time, of core, specialist and often elective units designed to extend professional understanding or support a move into a new direction in information systems. CQUniversity teaches this course online and on campus, with credit available for relevant prior study or work experience. Prospective students starting in 2027 or later should apply for the Master of Data Analytics, which carries an updated structure focused on data analytics and business intelligence. Indicative international tuition is around A$39,700 per year.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -38837,7 +38837,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.cqu.edu.au/courses/cc53/master-of-information-systems",
     "cricos_code": "083580K"
   },
   {
@@ -39019,7 +39019,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "CQUniversity Master of Project Management develops advanced knowledge and skills to lead and manage projects in diverse settings, covering both the technical and the human side of project management through coursework and research as used in large commercial and public organisations. Students can add a minor in Hospital and Health Services Management, Information Systems, Information Technology or Management, and in the final year choose a research, practicum or internship stream; the practicum develops a project in a simulated company environment. The degree is fully accredited by the Project Management Institute Global Accreditation Centre, and graduates accrue professional development units. Indicative international tuition is around A$38,600 per year. Graduates work across engineering, business, information technology, construction, health, government, mining and transport.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -39035,7 +39035,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.cqu.edu.au/courses/cv84/master-of-project-management",
     "cricos_code": "088198J"
   },
   {
@@ -39052,7 +39052,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "CQUniversity Master of Public Health is built around the social-ecological model of health that underpins community-based and community-led public health, and is designed around innovative interventions for social change. Across its 12 units students study the origins and evolution of public health, complex adaptive systems thinking, social and environmental determinants of health, epidemiology and statistics, communicable diseases, social justice and partnership development. The indicative first-year fee covers a full-time year of eight units over two terms. Credit and recognition of prior learning can reduce the study load for students with relevant experience or prior study. Indicative international tuition is around A$35,800 per year. Graduates work in public health practice, health policy and planning, epidemiology, disease control, health research and community development.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -39068,7 +39068,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.cqu.edu.au/courses/cl45/master-of-public-health",
     "cricos_code": "097511G"
   },
   {
@@ -44689,13 +44689,13 @@
     "name": "Master of Project Management",
     "slug": "master-of-project-management",
     "status": "published",
-    "duration_years": "2.0",
+    "duration_years": "1.5",
     "tuition_international": "45700",
     "tuition_domestic": null,
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "Curtin University Master of Project Management has a professional stream and a research stream and is built in three levels, with completion of one level giving credit toward the next and exit points at graduate certificate and graduate diploma. Students choose the research or professional stream for their final semester. Applicants who already have significant project management experience can instead take the 1.5-year Master of Science (Project Management), which covers only the more advanced units. Entry requires a bachelor degree, or a related graduate certificate or diploma, plus Curtin academic and English standards. Indicative international tuition is around A$45,700 per year. Curtin teaches a broad approach that applies across construction, engineering, education, health, commerce, information technology and research and development, a field the Project Management Institute expects to add tens of millions of roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -44711,7 +44711,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.curtin.edu.au/study/offering/course-pg-master-of-project-management--mc-projm2/",
     "cricos_code": "098520K"
   },
   {
@@ -44761,7 +44761,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "Curtin University Master of Public Health is a two-year degree with a pathway to research; a 1.5-year Master of Public Health (Practice) is an accelerated route to working as a practitioner, with an applied focus on epidemiology and surveillance, research methods, disease prevention and control, health protection and promotion, and policy, governance and systems, ending in a professional capstone. All public health courses are available fully online, full or part time. In the second year of the comprehensive degree, students carry out research with an academic supervisor or build practice and leadership skills. Entry requires a bachelor degree, preferably in health, education, behavioural or social sciences or management, and may require a CV and personal statement; Curtin English requirements apply. Indicative international tuition is around A$47,900 per year. Graduates work in epidemiology, health policy, community health, disease surveillance, health promotion and emergency response.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -44777,7 +44777,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.curtin.edu.au/study/offering/course-pg-master-of-public-health--mc-pubhl/",
     "cricos_code": "064462G"
   },
   {
@@ -48952,7 +48952,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "Deakin University Master of Information Systems teaches students to solve real business problems by connecting people, data and technology, building expertise across digital business analysis, data management, cyber security strategy, project management and the ethics of digital transformation. It requires 8, 12 or 16 credit points depending on entry point and recognition of prior learning; full-time students study four credit points per trimester across two trimesters a year, so it takes two years and can be fast-tracked to 1.5. The course connects the strategic role of technology with the practical work of managing knowledge and information in modern organisations. Indicative international tuition is around A$45,100 per year. Graduates work in business analysis, information management, digital strategy and project delivery.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -48968,7 +48968,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.deakin.edu.au/course/master-information-systems",
     "cricos_code": "052316E"
   },
   {
@@ -49315,7 +49315,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "Deakin University Master of Public Health requires 16 credit points and normally takes two years full-time at four credit points per trimester across two trimesters a year, with a fast-track to 1.5 years for applicants with relevant qualifications or experience. Students tailor the degree by choosing electives from eight fields of study, including health promotion, public health nutrition, humanitarian assistance, and disability and inclusion. All students receive a two-year membership of the Public Health Association of Australia while studying. Recognition of prior learning can grant credit. Indicative international tuition is around A$44,500 per year. Graduates move into senior public health roles, work with international organisations such as UNICEF and with NGOs focused on cancer, tobacco, drugs, reproductive health, obesity, food security and violence, or continue to a PhD.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -49331,7 +49331,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.deakin.edu.au/course/master-public-health",
     "cricos_code": "020018B"
   },
   {
@@ -52582,7 +52582,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "Edith Cowan University Master of Engineering is for graduates who hold a non-professionally-accredited engineering or technology degree and want to upgrade to an accredited engineering qualification, or to move into a new specialisation such as civil and environmental or mechanical engineering. Students complete five core units, 11 specialisation units and a practicum unit, and must gain at least 12 weeks of full-time-equivalent practical work experience before graduating. ECU admission and English language requirements apply. Indicative international tuition is around A$45,400 per year. Graduates work as civil, environmental, structural and water resource engineers and as construction managers, in the development, design, improvement and construction of infrastructure and civil engineering systems.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -52598,7 +52598,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.ecu.edu.au/degrees/courses/master-of-engineering",
     "cricos_code": "067370J"
   },
   {
@@ -53209,7 +53209,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "Edith Cowan University Master of Project Management is a 12-unit degree in the School of Business and Law that equips students to design, implement and lead projects in almost any industry. It can be completed in as little as 24 months part-time, and a fast-track option of nine units and about 18 months is available to applicants with a relevant bachelor degree in project management, engineering or information technology, a project management major, any bachelor degree plus two years of project management experience, or a current professional certification such as PMP, CAPM, PMI-ACP or Chartered Project Professional. A graduate certificate or graduate diploma can also reduce the study load. Indicative international tuition is around A$40,100 per year. Graduates work as project managers across sectors.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -53225,7 +53225,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.ecu.edu.au/degrees/courses/master-of-project-management",
     "cricos_code": "079106D"
   },
   {
@@ -61954,7 +61954,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "Flinders University Master of Engineering Management is a two-year, 72-unit program from the College of Science and Engineering that balances business and management study with design and engineering study. First year covers human resource management, marketing strategy, decision making, accounting and engineering project management alongside engineering design, design communication and systems engineering; second year adds commercial law, supply chains and operations, manufacturing design and sustainability in engineering, plus electives such as managing negotiations, waste management and Industry 4.0 and a major capstone project. Entry requires a bachelor degree or equivalent, a Flinders graduate certificate or diploma in engineering management, or a TAFE diploma plus at least three years of engineering experience. Indicative international tuition is around A$40,400 per year. Graduates oversee engineering teams and projects across construction, manufacturing, energy, defence acquisition and large-scale software.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -61970,7 +61970,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.flinders.edu.au/study/courses/postgraduate-engineering-management",
     "cricos_code": "103246K"
   },
   {
@@ -74131,7 +74131,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "James Cook University Master of Engineering Management builds the professional and leadership attributes valued by industry, and suits both new engineering graduates and practising engineers. Subjects include leadership futures, sustainable enterprise, managing strategic resources and operations, project management principles, project governance and asset management, risk assessment and quality project management, management methods for complex projects, risk engineering and systems safety, systems engineering, and data science and strategic decision making, plus career planning and a professional placement. It is offered in Brisbane with February, May and September intakes, and JCU offers pathways for applicants who do not meet direct entry. Indicative international tuition is around A$39,300 per year. Graduates work as engineering managers, project managers, construction managers, commercial managers and design managers in the private, public and government sectors in Australia and overseas.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -74147,7 +74147,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.jcu.edu.au/courses/master-of-engineering-management",
     "cricos_code": "109381K"
   },
   {
@@ -81985,7 +81985,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "Macquarie University Bachelor of Business, first offered in 2024, introduces students to foundation and future-focused business units for work across many industries. The degree has a core zone of required units in the chosen area and a flexible zone that can be used for depth, a second major or specialisation, or units from elsewhere, and finishes with a capstone unit that integrates the degree. There are six majors in key business areas. Entry is based on a selection rank of ATAR or equivalent plus adjustment factors, and Macquarie offers early-entry schemes and other pathways that assess more than academic results. Indicative international tuition is around A$48,800 per year. Graduates leave with employability skills in strategic thinking, problem solving, communication, teamwork and ethical decision-making.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -82001,7 +82001,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.mq.edu.au/study/find-a-course/courses/bachelor-of-business",
     "cricos_code": "111851M"
   },
   {
@@ -87265,7 +87265,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "Macquarie University Master of Engineering (Professional) offers five specialisations: renewable energy and electrical engineering, environmental engineering, civil and construction engineering, mechatronics engineering, and mechanical engineering. It uses a zone structure, with a foundation zone for students coming from a different area, a core zone of compulsory units for the chosen specialisation, and electives to customise the degree. Multiple admission points and recognition of prior learning mean the length depends on prior study and experience. Entry requires an AQF level 7 bachelor qualification, or recognised equivalent, in a relevant engineering discipline for the chosen specialisation. Indicative international tuition is around A$36,000 per year. Graduates work as professional engineers in their specialisation across the private and public sectors.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -87281,7 +87281,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.mq.edu.au/study/find-a-course/courses/master-of-engineering-professional",
     "cricos_code": "085030B"
   },
   {
@@ -87628,7 +87628,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "Macquarie University Master of Engineering Management is offered through the Faculty of Science and Engineering and blends engineering practice with management, economics and project delivery. It is built from a foundation zone that gives students from a different background the necessary grounding and a core zone of compulsory management and engineering-management units. Multiple admission points mean the length depends on prior qualifications and experience, and recognition of prior learning can grant credit and shorten the degree. International students provide evidence of English proficiency. Indicative international tuition is around A$47,900 per year. The degree prepares engineers to move into leadership and management roles, and Macquarie also offers it combined with the Master of Management or Master of Information Systems Management. Graduates lead engineering teams and projects across the private and public sectors.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -87644,7 +87644,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://mq.edu.au/study/find-a-course/courses/master-of-engineering-management",
     "cricos_code": "099168B"
   },
   {
@@ -97429,7 +97429,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "Monash University Master of Civil Engineering is a 72-point degree structured in four parts: advanced expertise (24 points), common core units (12 points), discipline core units (24 points) and research units (12 points), completed within a maximum of five years. It offers water management and geomechanics specialisations, covering surface and ground water flow, stormwater management, water quality, flood forecasting and mitigation, and the effect of a changing climate on water resources. Entry requires a four-year Australian Bachelor of Engineering, or equivalent, in a discipline relevant to the chosen specialisation with at least a high credit (65 per cent) average, plus Monash English requirements. Indicative international tuition is around A$45,600 per year. Graduates design, build and lead major infrastructure projects across construction, water management and geotechnical engineering.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -97445,7 +97445,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.monash.edu/engineering/master-engineering/specialisations/civil-engineering",
     "cricos_code": "096265C"
   },
   {
@@ -111685,7 +111685,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "QUT Master of Engineering Management is designed for practising engineers who want the specialist skills and advanced knowledge for leadership and management roles across engineering fields. As a standalone degree it takes one year; it can also be combined with the Master of Project Management or the Master of Engineering Technology to complete two master degrees in two years. Study areas include quality control, organisational infrastructure management and the development of decision support systems, giving graduates the analytical tools to improve operational efficiency, typically in manufacturing and service organisations. Indicative international tuition is around A$48,000 per year. Graduates become specialist engineering managers and leaders of engineering processes within their professional field.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -111701,7 +111701,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.qut.edu.au/courses/master-of-engineering-management",
     "cricos_code": "006368G"
   },
   {
@@ -124687,7 +124687,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "Southern Cross University Master of Engineering Management uses a focused six-week unit model and requires the equivalent of eight units (96 credit points), which a full-time student completes in about a year. Learning is active and discussion-based, delivered on campus or fully online with workshops, virtual classes and online forums. Entry requires a four-year undergraduate degree in engineering or a cognate discipline, or a three-year degree in engineering or a cognate discipline plus at least two years of documented relevant work experience, or equivalent recognised prior learning and industry experience; international applicants and those who studied in another language meet English requirements. Indicative international tuition is around A$52,000 per year. Graduates step into engineering leadership and management roles across the sector.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -124703,7 +124703,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.scu.edu.au/study/courses/master-of-engineering-management-1209100/",
     "cricos_code": "114988C"
   },
   {
@@ -142897,13 +142897,13 @@
     "name": "Master of Information Technology",
     "slug": "master-of-information-technology",
     "status": "published",
-    "duration_years": "1.5",
+    "duration_years": "2.0",
     "tuition_international": "38000",
     "tuition_domestic": null,
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The University of Canberra Master of Information Technology and Systems is a transition master for graduates from any discipline, assuming no prior IT knowledge. It runs two years full-time, to a maximum of six years, with specialisations in Cybersecurity and in AI and Machine Learning, each 18 credit points, plus flexible unit choice and exit awards of a graduate certificate or graduate diploma. Work-integrated learning is built in, giving students real or work-like placements and professional connections. Entry requires an Australian bachelor degree in any field or equivalent, confident desktop-computer use, and strong spoken and written English. Indicative international tuition is around A$38,000 per year. Graduates enter information technology roles across industry, government and research.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -142919,7 +142919,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.canberra.edu.au/course/973AA/7/2026",
     "cricos_code": "054178E"
   },
   {
@@ -149767,7 +149767,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The University of Melbourne Master of Civil Engineering is a three-year degree, or two years if the student completed the Civil Engineering Systems major in their bachelor degree, which earns up to a year of credit. Students can specialise in Business, Energy or Structural, or study without a specialisation, and must clear an Engineering Practice hurdle before graduating. It carries the dual accreditation of Melbourne Master of Engineering, recognised internationally. Entry requires an AQF level 7 Bachelor of Engineering or equivalent in a cognate discipline such as civil or structural engineering with a weighted average of at least 65 per cent, plus the University English requirements. Indicative international tuition is around A$73,700 per year. Graduates work as professional civil and structural engineers worldwide.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -149783,7 +149783,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://study.unimelb.edu.au/find/courses/graduate/master-of-civil-engineering/",
     "cricos_code": "106105K"
   },
   {
@@ -151675,13 +151675,13 @@
     "name": "Master of Information Systems",
     "slug": "master-of-information-systems",
     "status": "published",
-    "duration_years": "1.5",
+    "duration_years": "2.0",
     "tuition_international": "45500",
     "tuition_domestic": null,
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The University of Melbourne Master of Information Systems is a 200-point degree, two years full-time or one to 1.5 years with relevant prior qualifications, combining foundation courses, core subjects and electives to build both technical knowledge and professional skills for supporting, managing and changing business processes. Entry options include an undergraduate degree in information systems with a weighted average of at least 65 per cent plus two years of relevant work experience; a four-year honours degree in information systems at 65 per cent; or a degree in any discipline at 65 per cent with an advanced graduate certificate or diploma in information systems. International applicants need an English performance band of 6.5. Indicative international tuition is around A$45,500 per year. Graduates work in IT leadership and consulting, business analysis, enterprise architecture, process mining, business analytics, cyber security management and project management.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -151697,7 +151697,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://study.unimelb.edu.au/find/courses/graduate/master-of-information-systems/",
     "cricos_code": "023203K"
   },
   {
@@ -156757,13 +156757,13 @@
     "name": "Master of Information Technology",
     "slug": "master-of-information-technology",
     "status": "published",
-    "duration_years": "2.2",
+    "duration_years": "2.0",
     "tuition_international": "33300",
     "tuition_domestic": null,
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The University of New England Master of Information Technology has a strong technical focus for graduates who want to refresh their skills or change careers into IT, and can be entered with no IT background, graduating ready for roles in private industry, government or research. Most students study online across three study periods a year with 24/7 tutor support, though some units include a mandatory on-campus intensive school in Armidale. A Graduate Diploma in Information Technology is available as an early exit. One entry pathway accepts a graduate certificate, graduate diploma or honours degree at AQF level 8 or overseas equivalent in a relevant discipline; applicants may need to demonstrate they meet the English language requirements. Indicative international tuition is around A$33,300 per year. Graduates work across software, systems, data and IT support roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -156779,7 +156779,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.une.edu.au/study/courses/master-of-information-technology",
     "cricos_code": "047297A"
   },
   {
@@ -185572,7 +185572,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The University of Tasmania Bachelor of Engineering (Specialisation) with Honours is billed as Australia first engineering degree built around Climate Safe Engineering, embedding climate mitigation and adaptation across civil, mechanical and electrical engineering. First year covers engineering fundamentals through a climate lens before students choose a specialisation; from second year they combine advanced technical skills with labs, workshops and real-world projects, complete 12 weeks of industry placement, and finish with an honours project. It can be taken combined with a Bachelor of Science. Admission requires a qualification equivalent to Australian Year 12, an AQF Certificate IV or above, or prior tertiary study at diploma level. Indicative international tuition is around A$47,400 per year. Graduates work as professional civil, mechanical and electrical engineers.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -185588,7 +185588,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.utas.edu.au/courses/sci-eng/courses/p4d-bachelor-of-engineering-specialisation-with-honours",
     "cricos_code": "089220G"
   },
   {
@@ -190522,7 +190522,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "UTS Bachelor of Engineering (Honours) prepares students for professional engineering practice with complex systems and large-scale projects. Majors include biomedical, civil, civil and environmental, data science, electrical, electronic, mechanical, mechanical and mechatronic, mechatronic and software engineering, with a Flexible option that lets students explore in first year before choosing; the fully accredited majors are recognised internationally under the Washington Accord. The degree is four years full-time or eight part-time. Entry is based on a selection rank that varies by major, and applicants need HSC Mathematics Extension 1, Physics and English (English Advanced recommended) or equivalents. Indicative international tuition is around A$54,800 per year. Career paths follow the chosen major across biomedical, civil and environmental, electrical and electronic, and mechanical and mechatronic engineering.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -190538,7 +190538,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uts.edu.au/for-students/engineering",
     "cricos_code": "084098A"
   },
   {
@@ -199228,13 +199228,13 @@
     "name": "Master of Civil Engineering",
     "slug": "master-of-civil-engineering",
     "status": "published",
-    "duration_years": "2.0",
+    "duration_years": "1.0",
     "tuition_international": "38500",
     "tuition_domestic": null,
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The University of the Sunshine Coast Master of Civil Engineering can be completed in 12 months across eight courses, combining online learning with on-campus intensive sessions. It suits recent civil engineering graduates and practising engineers who want to deepen their technical expertise or refresh their qualifications while continuing to work. Entry requires a completed four-year bachelor degree in civil engineering or a relevant discipline, or equivalent; work experience is not required and there is no application fee. The degree is seeking provisional accreditation from Engineers Australia. Indicative international tuition is around A$38,500 per year. Graduates apply advanced civil engineering knowledge to the planning, design, construction and maintenance of infrastructure such as buildings, bridges, roads and water systems.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -199250,7 +199250,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://studyitonline.usc.edu.au/programs/masters-civil-engineering/",
     "cricos_code": "115025B"
   },
   {
@@ -206263,7 +206263,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The University of Wollongong Bachelor of Business lets students try study areas before choosing a major in second year from Marketing, Management or Accounting. Students build practical skills alongside the core disciplines of business through project work and a Business Internship program that places them with industry partners such as KPMG, Mercer, NAB and Accor Hotels. A UOW College Diploma of Business provides entry into second year, and the degree is also offered online with scheduled classes. Indicative international tuition is around A$36,000 per year. UOW reports that over 90 per cent of its business students find employment after graduating. Graduates work in marketing, management and accounting roles across the private and public sectors.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -206279,7 +206279,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uow.edu.au/study/courses/bachelor-of-business/",
     "cricos_code": "075096M"
   },
   {
@@ -206758,7 +206758,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The University of Wollongong Bachelor of Engineering (Honours) lets students try all study areas before choosing a major in second year from biomedical, civil, computer and autonomous systems, electrical and electronics, environmental, materials, mechanical, mechatronic, mining, or telecommunications engineering and internet of things. A single major requires at least 192 credit points and normally takes four years; a double major requires 240 credit points and takes five, as do double degrees. Entry is based on an ATAR or equivalent at the level UOW sets each year. Indicative international tuition is around A$44,300 per year. Graduates work as professional engineers in their chosen discipline across construction, resources, manufacturing, energy and technology.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -206774,7 +206774,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uow.edu.au/study/courses/bachelor-of-engineering-honours-single-major/",
     "cricos_code": "083339G"
   },
   {
@@ -210520,7 +210520,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The University of Wollongong Master of Information Technology develops an in-depth understanding of the organisational, economic, regulatory and socio-technical issues in implementing and applying IT in business, and how to manage them. Students specialise in Information Design and Analysis, Information Systems Development, or Enterprise Systems. It suits both graduates moving into IT from another field and those extending an existing computing background into management and analysis roles. The degree is accredited by the Australian Computer Society at professional level, and the ACS reciprocal agreements give that recognition internationally. Indicative international tuition is around A$40,300 per year. Graduates work as IT managers, business and systems analysts, enterprise systems specialists and IT consultants.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -210536,7 +210536,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uow.edu.au/study/courses/master-of-information-technology/",
     "cricos_code": "083840F"
   },
   {
@@ -228307,7 +228307,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "Western Sydney University Bachelor of Engineering (Honours) is a four-year degree of 320 credit points with majors in advanced manufacturing, civil, construction, electrical, materials, mechanical, robotics and mechatronics, and sustainability engineering. Five majors (civil, construction, electrical, mechanical, and robotics and mechatronics) hold full Engineers Australia accreditation at the professional engineer level at the Penrith and Parramatta campuses, and three (civil, electrical and mechanical) at the Sydney City campuses. Western Sydney also offers an Advanced (Honours) version for high-achieving students. Entry requires English and mathematics at Band 5 or higher, or equivalents. Indicative international tuition is around A$40,900 per year. Graduates work as professional engineers in their chosen field.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -228323,7 +228323,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.westernsydney.edu.au/future/study/courses/undergraduate/bachelor-of-engineering-honours",
     "cricos_code": "089429B"
   },
   {
