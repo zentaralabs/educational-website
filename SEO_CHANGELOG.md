@@ -66,6 +66,13 @@ batches, via the existing description-pass workflow.
   of the teach-out / research-pathway rows that had been left as bare cards
   (Sydney BIT/BEng/LLB, Melbourne BEng, Melbourne+Monash Master of Commerce,
   UQ Master of Economics). Indexable program pages 910 → 952.
+- **2026-09-05 batch 3:** 40 more at ACU / ANU / CDU / CQU / Curtin / Deakin /
+  ECU / Flinders / JCU / Macquarie / QUT / Southern Cross / Adelaide / CSU /
+  UTas / UTS / Wollongong / Western Sydney / Newcastle / UNE / Melbourne /
+  Monash / Canberra — Master of Public Health, Project Management, Engineering
+  Management, Engineering / Civil Engineering, Bachelor of Engineering
+  (Honours), Master of IT / Information Systems / Data Science. Indexable
+  program pages 952 → 992.
 
 **Rollback:** `scripts/data/programs-catalog-added.json` lists every new row
 id. `git checkout scripts/data/programs.json` restores the pre-import file;
