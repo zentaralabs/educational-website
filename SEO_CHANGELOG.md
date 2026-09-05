@@ -59,6 +59,13 @@ batches, via the existing description-pass workflow.
   Cyber Security) at Melbourne / Sydney / UNSW / Monash / UQ / ANU / UWA /
   Adelaide. 115-160 words each, sourced from the official course page.
   Indexable program pages 868 → 910. Applied to prod + per-page revalidate.
+- **2026-09-05 batch 2 + status pass:** 42 more at UTS / RMIT / Deakin /
+  Macquarie / Newcastle / Wollongong / QUT / Griffith / Curtin / Monash /
+  UNSW / Western Sydney (Data Science, Analytics, IT, CS, Professional
+  Accounting, Cyber Security, Nursing, MBA), plus 7 status-accurate rewrites
+  of the teach-out / research-pathway rows that had been left as bare cards
+  (Sydney BIT/BEng/LLB, Melbourne BEng, Melbourne+Monash Master of Commerce,
+  UQ Master of Economics). Indexable program pages 910 → 952.
 
 **Rollback:** `scripts/data/programs-catalog-added.json` lists every new row
 id. `git checkout scripts/data/programs.json` restores the pre-import file;
