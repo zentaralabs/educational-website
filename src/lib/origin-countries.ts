@@ -337,16 +337,18 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     demonym: "Vietnamese",
     currency: "VND",
     intro: [
-      "Vietnam is a large and growing source of international students in Australia. You can study at any university. A first year costs roughly AUD 40,000 to 75,000 all in, and the visa is the subclass 500. Vietnam sits at student-visa Evidence Level 2, which is more favourable than the Evidence Level 3 markets.",
-      "There is not much that is unusual for Vietnamese applicants. The main points are credential recognition of a four-year Vietnamese bachelor's, English evidence, and choosing between applying directly or through an agent.",
+      "Vietnam is one of Australia's top five source countries for international education, and Vietnamese citizens can study at any Australian university. A first year costs roughly AUD 40,000 to 75,000 all in, and the visa is the subclass 500. Vietnam sits at student-visa Evidence Level 2, which is more favourable than the Evidence Level 3 markets such as India, Nepal, Bangladesh, and Pakistan.",
+      "There is not much that is unusual for Vietnamese applicants. The main points are credential recognition of a four-year Vietnamese bachelor's, English evidence, and choosing between applying directly or through an agent, since Vietnam has a large and highly commercialised study-abroad consulting industry.",
     ],
     applying: [
-      "Apply through the university's international portal or an authorised agent. Direct application is available at most universities for Vietnamese citizens, and agents are widely used for the offer, deposit, and visa steps.",
+      "Apply through the university's international portal or an authorised agent. Direct application is accepted at most universities for Vietnamese citizens, including at universities in Western Australia such as Curtin, which is the state where several other South and Southeast Asian markets face agent-only rules. Agents are still widely used in Vietnam for the offer, deposit, and visa steps, not because universities require it.",
       "Have certified copies of your transcripts and completion certificates ready, with certified English translations. Some universities want documents verified through the awarding institution.",
       "Most universities run February and July intakes and assess on a rolling basis. Apply two to three months ahead. Use the universities directory to shortlist and the deadline calendar for the recommended dates.",
+      "Vietnam's Ministry of Education and Training has put the number of study-abroad consulting firms operating in the country at more than 2,500, and most Vietnamese families use one because of the language barrier and the amount of paperwork involved, not because a university requires it. The Australian Embassy in Hanoi and the Consulate-General in Ho Chi Minh City both run standing visa-scam warning pages, most recently reissued around International Fraud Awareness Week in November 2025, describing social media posts that falsely promise an Australian visa for sums as high as VND 1.5 billion. Those warnings are about general migration fraud rather than education-agent fraud specifically; treat any agent who guarantees a visa outcome, asks you to pay before lodging, or wants to communicate only through Zalo, WhatsApp, or Facebook Messenger as a red flag, and track your own application through ImmiAccount.",
     ],
     visaNote: [
-      "Vietnam is at student-visa Evidence Level 2, so the upfront financial and English evidence requirements are lighter than for Evidence Level 3 countries, particularly at lower-risk providers. You should still be ready to show funds for tuition, travel, and 12 months of living costs, and to satisfy the Genuine Student requirement.",
+      "Home Affairs calculates a country's evidence level from a weighted index of visa cancellations (25 percent), refusals for a fraud reason (40 percent, the single largest weight), other refusals (10 percent), the rate of student visa holders becoming unlawful non-citizens (15 percent), and the rate of Subsequent Protection Visa applications (10 percent). A score below 1.0 sits at Level 1, a score between 1.0 and 2.7 sits at Level 2, and a score above 2.7 sits at Level 3. Vietnam sits within that Level 2 band, alongside China. Home Affairs does not publish a specific date for when Vietnam was set at Level 2, so treat its placement as an established, longstanding rating rather than a recent change, and check the current level when you apply since these are reviewed periodically.",
+      "Home Affairs' most recent quarterly program report (to 31 December 2025) shows Vietnam as Australia's ninth largest source of student visa lodgements in the 2025-26 program year to that date (5,647 applications, down 5.6 percent on the same period the year before, 2.7 percent of the total) and ninth largest by visas granted (4,487, down 30.8 percent, 2.5 percent of the total). Vietnam was also the fifth largest source of student visa holders in Australia as at 31 December 2025, with 22,322 people, though that was down 7.5 percent on a year earlier as the broader student visa population contracted. Grant rates for Vietnamese applicants were 80.7 percent for decisions made onshore and 85.8 percent offshore in the October to December 2025 quarter, both slightly higher than a year earlier (75.8 percent and 80.1 percent respectively), and above the equivalent rates for several Evidence Level 3 countries in the same report.",
       "Where Vietnamese applications run into trouble it is usually over source of funds, a gap between the study plan and the applicant's background, or thin Genuine Student statements. A documented savings history and a study plan that follows on from previous study address most of it.",
     ],
     credentials: [
@@ -368,7 +370,7 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       },
       {
         q: "What is Vietnam's assessment level for the Australian student visa?",
-        a: "Vietnam is at Evidence Level 2, which is medium risk. The upfront documentation is lighter than for the Evidence Level 3 countries, though you still need to show funds and meet the Genuine Student requirement. Levels are reviewed, so check when you apply.",
+        a: "Vietnam is at Evidence Level 2, which is medium risk. Home Affairs sets levels from a weighted index where fraud-related refusals carry the largest weight (40 percent), and a score between 1.0 and 2.7 places a country at Level 2. Home Affairs does not publish a date for when Vietnam was set at Level 2, so treat it as an established rating. Grant rates for Vietnamese applicants were above 80 percent in the most recent quarter reported, but you still need to show funds and meet the Genuine Student requirement. Levels are reviewed, so check when you apply.",
       },
       {
         q: "How much does it cost to study in Australia from Vietnam?",
@@ -380,15 +382,24 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       },
       {
         q: "Do Vietnamese students need to apply through an agent?",
-        a: "No, most universities accept direct applications from Vietnamese citizens. Agents are common because they manage the offer, deposit, and visa lodgement, but they are not required everywhere. Check the university's how-to-apply page.",
+        a: "No, most universities accept direct applications from Vietnamese citizens, including in Western Australia, where several other source countries face agent-only rules. Agents remain common in Vietnam because of the language barrier and paperwork involved, not because universities require them. Check the university's how-to-apply page.",
+      },
+      {
+        q: "Are there visa scams targeting Vietnamese students applying to Australia?",
+        a: "The Australian Embassy in Hanoi and the Consulate-General in Ho Chi Minh City both warn about visa scams, most recently around International Fraud Awareness Week in November 2025, describing social media posts that falsely promise a visa for large sums of money. These are general migration-fraud warnings rather than reports specific to student visas or education agents. Track your own application through ImmiAccount, and treat anyone who guarantees a visa outcome as a red flag.",
       },
     ],
     sources: [
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
       "https://immi.homeaffairs.gov.au/news-media/archive/article?itemId=1196",
       "https://www.studyaustralia.gov.au/",
+      "https://immi.homeaffairs.gov.au/what-we-do/education-program/what-we-do/evidence-levels",
+      "https://www.homeaffairs.gov.au/research-and-stats/files/student-temporary-grad-program-report-dec-2025.pdf",
+      "https://hcmc.vietnam.embassy.gov.au/hchi/HomeAffairs14Nov25.html",
+      "https://vietnam.embassy.gov.au/hnoi/MR251114.html",
+      "https://www.trade.gov/market-intelligence/vietnam-education-agents",
     ],
-    lastVerified: "2026-08-29",
+    lastVerified: "2026-09-05",
   },
 
   bangladesh: {
