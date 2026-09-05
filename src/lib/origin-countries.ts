@@ -405,9 +405,12 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "Apply through the university's international portal or an authorised agent. Several universities, and most in Western Australia, only accept applications from Bangladeshi citizens through an approved agent. Check each university's how-to-apply page.",
       "Have certified academic transcripts and certificates ready. Universities may ask for verification through the education board or the awarding university. Deadlines can be earlier for Bangladeshi applicants at universities that apply higher-scrutiny country dates, so apply three to four months ahead.",
       "Most universities run February and July intakes and assess on a rolling basis. Use the universities directory and the deadline calendar.",
+      "Bangladesh has no dedicated licensing authority for education and migration consultancies; most operate on a generic municipal trade licence, and a 2026 feature in The Business Standard on the sector argued this legal vacuum is the reason forged bank statements and fake admission offers keep surfacing. That gap is where most of the fraud risk sits, not with the Australian universities themselves. In July 2026, police in Dhaka arrested the operator of five linked visa and education consultancies, Just Thought Education Consultant among them, hours before he was due to board a flight to Australia; he is accused of taking roughly Tk 15.5 crore from about 350 students and families. Before you pay anyone, confirm the agent is on your target university's own published list of authorised agents.",
+      "The Australian High Commission in Dhaka lists specific warning signs: an agent who guarantees a visa outcome, one who asks for payment into a private or personal bank account rather than an official channel, one who charges extra to 'speed up' your biometrics appointment, or one who tells you to give false information on your application. It also warns that a genuine agent will never block your own access to ImmiAccount, the government's own application system, and to check for mismatches between what an agent tells you and what your ImmiAccount actually shows. In August 2026, Australia joined twelve other countries, including Canada, the UK, and Germany, in a joint statement to Bangladeshi visa applicants warning against falsified documents, unlicensed agents, and payments to unauthorised intermediaries; none of the missions said they work with agents at all. Separately, Australia's Department of Home Affairs opened a dedicated office in Dhaka in late 2025 as part of a multi-country 'Fighting Visa Fraud' campaign with Canada, New Zealand, and the UK.",
     ],
     visaNote: [
-      "In January 2026 the Australian Government moved Bangladesh to student-visa Evidence Level 3, the highest tier, alongside India, Nepal, and Bhutan. Case officers cited a rise in forged financial and academic documents. You now need to provide, upfront, several months of genuine bank statements, a documented source of funds, and authenticated transcripts, and processing runs longer. Check the current level when you apply.",
+      "In January 2026 the Australian Government moved Bangladesh to student-visa Evidence Level 3, the highest tier, alongside India, Nepal, and Bhutan. Home Affairs calculates a country's evidence level from a weighted index of visa cancellations, refusals, and overstay rates, and the rate of refusals for a fraud reason carries the single largest weight (40 percent) in that index; a score above 2.7 places a country at Level 3. A Home Affairs spokesperson confirmed the change took effect on 8 January 2026 to 'assist with the effective management of emerging integrity issues.' Trade and news reporting on the move linked it to a rise in forged financial and academic documents detected during the November to December 2025 lodgement peak, and to students who could not get into the US, UK, or Canada increasingly applying to Australia instead. You now need to provide, upfront, several months of genuine bank statements, a documented source of funds, and authenticated transcripts, and processing runs longer. Check the current level when you apply, since these are reviewed.",
+      "Home Affairs does not publish one Bangladesh-specific grant or refusal rate; the rate it does publish varies by quarter and by whether the decision is made in Australia or offshore. In its own figures, the grant rate for Bangladeshi applicants in the October to December 2025 quarter was 89.0 percent for decisions made in Australia, up from 85.8 percent the previous quarter, and 81.6 percent for decisions made offshore, down sharply from 97.8 percent the previous quarter. On volume, in the 2025-26 program year to 31 December 2025, Bangladesh was Australia's fourth largest source of student visa lodgements (10,502, up 86.7 percent on the same period the year before, 5.1 percent of the total) and fourth largest by visas granted (8,454, up 46.2 percent, 4.7 percent of the total), behind China, India, and Nepal in both counts. Bangladesh was also the fourth largest single nationality among student visa holders in Australia (26,604) as at 31 December 2025.",
       "Applications commonly fail on funds that appear shortly before applying, loans approved in principle rather than disbursed, and a course that does not follow on from previous study. A genuine savings history that predates your decision to study abroad is the strongest signal.",
     ],
     credentials: [
@@ -443,13 +446,25 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
         q: "Can I get PR in Australia after studying from Bangladesh?",
         a: "It is a common goal, not automatic. After graduating, most students move to a Temporary Graduate visa (subclass 485), gain skilled work experience, and then apply for a points-tested visa. Your occupation and points decide the outcome.",
       },
+      {
+        q: "How do I know if a Bangladeshi education agent for Australia is legitimate?",
+        a: "Check that the agent appears on your target university's own published list of authorised agents. Bangladesh has no licensing authority for education consultancies, so a trade licence alone proves nothing. Be wary of anyone who guarantees a visa outcome, asks you to pay into a personal bank account, charges extra to 'speed up' biometrics, or blocks your own access to ImmiAccount; the Australian High Commission in Dhaka specifically warns against all of these. A well-documented 2026 case, a Dhaka operator running five consultancies who was arrested boarding a flight to Australia after allegedly taking money from around 350 families, shows the risk sits with unregulated consultants, not with Australian universities.",
+      },
     ],
     sources: [
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
       "https://immi.homeaffairs.gov.au/news-media/archive/article?itemId=1196",
       "https://www.studyaustralia.gov.au/",
+      "https://immi.homeaffairs.gov.au/what-we-do/education-program/what-we-do/evidence-levels",
+      "https://www.homeaffairs.gov.au/research-and-stats/files/student-temporary-grad-program-report-dec-2025.pdf",
+      "https://bangladesh.embassy.gov.au/daca/scam-safe.html",
+      "https://www.thedailystar.net/news/australia-tightens-visa-scrutiny-bangladeshi-students-citing-integrity-issues-4079141",
+      "https://www.thedailystar.net/news/bangladesh/diplomacy/news/13-countries-warn-bangladeshis-seeking-visas-against-fake-documents-unauthorised-agents-4146736",
+      "https://www.tbsnews.net/bangladesh/crime/overseas-education-scam-just-thought-consultancy-owner-arrested-while-trying-leave",
+      "https://www.tbsnews.net/features/pursuit/why-bangladesh-must-regulate-its-education-consultancy-sector-1509841",
+      "https://www.bssnews.net/news/333986",
     ],
-    lastVerified: "2026-08-29",
+    lastVerified: "2026-09-05",
   },
 
   "sri-lanka": {
