@@ -709,16 +709,18 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     demonym: "Thai",
     currency: "THB",
     intro: [
-      "Thai students can study at any Australian university. A first year costs roughly AUD 40,000 to 75,000 all in, and the visa is the subclass 500. Thailand sits at the lower end of the student-visa evidence scale, so the upfront financial and English documentation is lighter than for the higher-scrutiny markets.",
+      "Thai students can study at any Australian university. A first year costs roughly AUD 40,000 to 75,000 all in, and the visa is the subclass 500. Thailand has long been treated by universities and agents as a lower-scrutiny market for the student visa, and Home Affairs does not publish a public evidence level by country, so treat any specific level quoted for Thailand online with caution and check the Document Checklist Tool for the current requirement. What is verifiable in Home Affairs' own data is that Thailand is now a small and shrinking source country: it did not rank among the top 15 nationalities by student visa lodgements or grants in the 2025-26 program year to 31 December 2025, and the number of Thai student visa holders in Australia fell 27.6 percent over the year to 10,674.",
       "Not much is unusual for Thai applicants. The main points are how universities read the Mathayom 6 certificate and a Thai bachelor's degree, English evidence, and choosing between applying directly or through an agent.",
     ],
     applying: [
       "Apply through the university's international portal or an authorised agent. Direct application is common for Thai citizens at most universities, and agents are also widely used for the offer, deposit, and visa steps.",
       "Have certified transcripts and your degree certificate ready, with certified English translations. Some universities want documents verified through the awarding institution or the Ministry of Higher Education.",
       "Most universities run February and July intakes and assess on a rolling basis. Apply two to three months ahead. Use the universities directory to shortlist and the deadline calendar for the recommended dates.",
+      "There is little public reporting of an Australia-specific student-visa agent fraud problem in Thailand, unlike some other source countries. The Australian Embassy in Bangkok's most substantive recent statement on the subject is a general fraud-awareness notice issued on 17 November 2025 for International Fraud Awareness Week, in which Australian Ambassador to Thailand Dr Angela Macdonald noted that more than 110,000 Thais travelled to Australia the previous year and reminded applicants to use official sources and be wary of anyone promising a guaranteed visa outcome or asking for payment through social media. Treat that as routine, proportionate advice rather than a sign of a specific problem with Thai applicants.",
     ],
     visaNote: [
-      "Thailand is treated as a lower-risk market for the student visa, so the upfront evidence is lighter than for the Evidence Level 3 countries. You should still be ready to show funds for tuition, travel, and 12 months of living costs, and to satisfy the Genuine Student requirement. Check the Document Checklist Tool on the Home Affairs website for your provider, since requirements vary by country and institution.",
+      "Home Affairs calculates a country's evidence level from a weighted index of visa cancellations (25 percent), refusals for a fraud reason (40 percent, the single largest weight), other refusals (10 percent), the rate of student visa holders becoming unlawful non-citizens (15 percent), and the rate of Subsequent Protection Visa applications (10 percent). A score below 1.0 sits at Level 1, a score between 1.0 and 2.7 sits at Level 2, and a score above 2.7 sits at Level 3. Home Affairs does not publish which band each country sits in, and third-party guides that quote a specific level for Thailand are not consistent with each other, so do not rely on any of them. Check the Document Checklist Tool on the Home Affairs website for your provider, since the actual documentary requirement depends on the country and institution combination.",
+      "Home Affairs' most recent quarterly program report (to 31 December 2025) shows Thailand's onshore (in Australia) grant rate at 60.6 percent in the October to December 2025 quarter, down from 74.3 percent the previous quarter and 78.0 percent in the same quarter a year earlier. Applications lodged in Australia by Thai citizens fell 31.7 percent year on year to 1,728, and grants fell 17.5 percent to 1,513, over the 2025-26 program year to that date. Thailand did not appear among the top 15 citizenship countries for combined onshore and offshore lodgements or grants in that period, and its student visa holder population in Australia fell 27.6 percent over the year to 10,674 as at 31 December 2025, the 13th largest nationality on issue. You should still be ready to show funds for tuition, travel, and 12 months of living costs, and to satisfy the Genuine Student requirement.",
       "Where Thai applications run into trouble it is usually over a thin Genuine Student statement, a course that does not connect to previous study or work, or funds that appear only just before applying. A clear study plan and a documented savings history address most of it.",
     ],
     credentials: [
@@ -736,7 +738,11 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     faq: [
       {
         q: "What is Thailand's assessment level for the Australian student visa?",
-        a: "Thailand is treated as a lower-risk market, so the upfront financial and English documentation is lighter than for the Evidence Level 3 countries. You still need to show funds and meet the Genuine Student requirement. Levels are reviewed and vary by provider, so check the Document Checklist Tool when you apply.",
+        a: "Home Affairs does not publish a public list of evidence levels by country, so treat any specific level quoted for Thailand online with caution. What is verifiable is the visa data itself: Thailand's onshore grant rate fell from 78.0 percent in the October to December 2024 quarter to 60.6 percent in the same quarter of 2025, and the number of Thai student visa holders in Australia fell 27.6 percent over that year to 10,674, the 13th largest nationality on issue. You still need to show funds and meet the Genuine Student requirement, so check the Document Checklist Tool on the Home Affairs website for your provider.",
+      },
+      {
+        q: "Are there visa scams targeting Thai students applying to Australia?",
+        a: "There is little public reporting of an Australia-specific student-visa agent fraud problem in Thailand. The Australian Embassy in Bangkok's most recent statement on the subject was a general fraud-awareness notice for International Fraud Awareness Week in November 2025, reminding applicants to use official sources and treat anyone promising a guaranteed visa outcome as a red flag. That is standard advice repeated for most source countries, not evidence of a specific problem with Thai applicants.",
       },
       {
         q: "Is a Thai bachelor's degree accepted in Australia?",
@@ -759,8 +765,11 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
       "https://immi.homeaffairs.gov.au/news-media/archive/article?itemId=1196",
       "https://www.studyaustralia.gov.au/",
+      "https://immi.homeaffairs.gov.au/what-we-do/education-program/what-we-do/evidence-levels",
+      "https://www.homeaffairs.gov.au/research-and-stats/files/student-temporary-grad-program-report-dec-2025.pdf",
+      "https://thailand.embassy.gov.au/bkok/PR2025_visa_fraud.html",
     ],
-    lastVerified: "2026-08-30",
+    lastVerified: "2026-09-05",
   },
 
   cambodia: {
