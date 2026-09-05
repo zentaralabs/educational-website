@@ -50,9 +50,15 @@ institutions: `scripts/data/cricos-courses.csv`).
   linking to the provider and our university overview) instead of the
   "About this program" section.
 
-**Follow-on (not done here):** demand-first enrichment — write real sourced
-descriptions for the highest-intent programs so `isProgramIndexable` flips
-them to indexed, in batches, via the existing description-pass workflow.
+**Follow-on:** demand-first enrichment — write real sourced descriptions for
+the highest-intent programs so `isProgramIndexable` flips them to indexed, in
+batches, via the existing description-pass workflow.
+
+- **2026-09-05 batch 1:** 42 Go8 + high-volume degrees (Data Science, IT,
+  Business Analytics, MBA, Commerce, Economics, Finance, Nursing, Psychology,
+  Cyber Security) at Melbourne / Sydney / UNSW / Monash / UQ / ANU / UWA /
+  Adelaide. 115-160 words each, sourced from the official course page.
+  Indexable program pages 868 → 910. Applied to prod + per-page revalidate.
 
 **Rollback:** `scripts/data/programs-catalog-added.json` lists every new row
 id. `git checkout scripts/data/programs.json` restores the pre-import file;
