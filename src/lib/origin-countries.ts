@@ -256,7 +256,6 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     sources: [
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
       "https://www.hec.gov.pk/english/services/students/DAS/Pages/default.aspx",
-      "https://immi.homeaffairs.gov.au/news-media/archive/article?itemId=1196",
       "https://www.studyaustralia.gov.au/",
       "https://immi.homeaffairs.gov.au/what-we-do/education-program/what-we-do/evidence-levels",
       "https://www.homeaffairs.gov.au/research-and-stats/files/student-temporary-grad-program-report-dec-2025.pdf",
@@ -337,7 +336,6 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     sources: [
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
       "https://www.chsi.com.cn/en/",
-      "https://immi.homeaffairs.gov.au/news-media/archive/article?itemId=1196",
       "https://www.studyaustralia.gov.au/",
       "https://immi.homeaffairs.gov.au/what-we-do/education-program/what-we-do/evidence-levels",
       "https://www.homeaffairs.gov.au/research-and-stats/files/student-temporary-grad-program-report-dec-2025.pdf",
@@ -413,7 +411,6 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     ],
     sources: [
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
-      "https://immi.homeaffairs.gov.au/news-media/archive/article?itemId=1196",
       "https://www.studyaustralia.gov.au/",
       "https://immi.homeaffairs.gov.au/what-we-do/education-program/what-we-do/evidence-levels",
       "https://www.homeaffairs.gov.au/research-and-stats/files/student-temporary-grad-program-report-dec-2025.pdf",
@@ -486,7 +483,6 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     ],
     sources: [
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
-      "https://immi.homeaffairs.gov.au/news-media/archive/article?itemId=1196",
       "https://www.studyaustralia.gov.au/",
       "https://immi.homeaffairs.gov.au/what-we-do/education-program/what-we-do/evidence-levels",
       "https://www.homeaffairs.gov.au/research-and-stats/files/student-temporary-grad-program-report-dec-2025.pdf",
@@ -556,7 +552,6 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     ],
     sources: [
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
-      "https://immi.homeaffairs.gov.au/news-media/archive/article?itemId=1196",
       "https://www.studyaustralia.gov.au/",
       "https://immi.homeaffairs.gov.au/what-we-do/education-program/what-we-do/evidence-levels",
       "https://www.homeaffairs.gov.au/research-and-stats/files/student-temporary-grad-program-report-dec-2025.pdf",
@@ -627,7 +622,6 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     ],
     sources: [
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
-      "https://immi.homeaffairs.gov.au/news-media/archive/article?itemId=1196",
       "https://www.studyaustralia.gov.au/",
       "https://immi.homeaffairs.gov.au/what-we-do/education-program/what-we-do/evidence-levels",
       "https://www.homeaffairs.gov.au/research-and-stats/files/student-temporary-grad-program-report-dec-2025.pdf",
@@ -699,7 +693,6 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     ],
     sources: [
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
-      "https://immi.homeaffairs.gov.au/news-media/archive/article?itemId=1196",
       "https://www.studyaustralia.gov.au/",
       "https://www.ahpra.gov.au/",
       "https://immi.homeaffairs.gov.au/what-we-do/education-program/what-we-do/evidence-levels",
@@ -773,7 +766,6 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     ],
     sources: [
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
-      "https://immi.homeaffairs.gov.au/news-media/archive/article?itemId=1196",
       "https://www.studyaustralia.gov.au/",
       "https://immi.homeaffairs.gov.au/what-we-do/education-program/what-we-do/evidence-levels",
       "https://www.homeaffairs.gov.au/research-and-stats/files/student-temporary-grad-program-report-dec-2025.pdf",
@@ -837,7 +829,6 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     ],
     sources: [
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
-      "https://immi.homeaffairs.gov.au/news-media/archive/article?itemId=1196",
       "https://www.studyaustralia.gov.au/",
     ],
     lastVerified: "2026-08-30",
@@ -898,7 +889,6 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     ],
     sources: [
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
-      "https://immi.homeaffairs.gov.au/news-media/archive/article?itemId=1196",
       "https://www.studyaustralia.gov.au/",
     ],
     lastVerified: "2026-08-30",
@@ -959,7 +949,6 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     ],
     sources: [
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
-      "https://immi.homeaffairs.gov.au/news-media/archive/article?itemId=1196",
       "https://www.studyaustralia.gov.au/",
     ],
     lastVerified: "2026-08-30",
@@ -1020,7 +1009,6 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     ],
     sources: [
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
-      "https://immi.homeaffairs.gov.au/news-media/archive/article?itemId=1196",
       "https://www.studyaustralia.gov.au/",
     ],
     lastVerified: "2026-08-30",
@@ -1081,7 +1069,6 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     ],
     sources: [
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
-      "https://immi.homeaffairs.gov.au/news-media/archive/article?itemId=1196",
       "https://www.studyaustralia.gov.au/",
     ],
     lastVerified: "2026-08-30",
@@ -1142,7 +1129,6 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     ],
     sources: [
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
-      "https://immi.homeaffairs.gov.au/news-media/archive/article?itemId=1196",
       "https://www.studyaustralia.gov.au/",
     ],
     lastVerified: "2026-08-30",
@@ -1203,7 +1189,6 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     ],
     sources: [
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
-      "https://immi.homeaffairs.gov.au/news-media/archive/article?itemId=1196",
       "https://www.studyaustralia.gov.au/",
     ],
     lastVerified: "2026-08-30",
@@ -1264,7 +1249,6 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     ],
     sources: [
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
-      "https://immi.homeaffairs.gov.au/news-media/archive/article?itemId=1196",
       "https://www.studyaustralia.gov.au/",
     ],
     lastVerified: "2026-08-30",
@@ -1325,7 +1309,6 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     ],
     sources: [
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
-      "https://immi.homeaffairs.gov.au/news-media/archive/article?itemId=1196",
       "https://www.studyaustralia.gov.au/",
     ],
     lastVerified: "2026-08-30",
@@ -1386,7 +1369,6 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     ],
     sources: [
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
-      "https://immi.homeaffairs.gov.au/news-media/archive/article?itemId=1196",
       "https://www.studyaustralia.gov.au/",
     ],
     lastVerified: "2026-09-03",
@@ -1447,7 +1429,6 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     ],
     sources: [
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
-      "https://immi.homeaffairs.gov.au/news-media/archive/article?itemId=1196",
       "https://www.studyaustralia.gov.au/",
     ],
     lastVerified: "2026-09-03",
@@ -1508,7 +1489,6 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     ],
     sources: [
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
-      "https://immi.homeaffairs.gov.au/news-media/archive/article?itemId=1196",
       "https://www.studyaustralia.gov.au/",
     ],
     lastVerified: "2026-09-03",
@@ -1569,7 +1549,6 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     ],
     sources: [
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
-      "https://immi.homeaffairs.gov.au/news-media/archive/article?itemId=1196",
       "https://www.studyaustralia.gov.au/",
     ],
     lastVerified: "2026-09-03",
