@@ -619,9 +619,12 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "Apply through the university's international portal or an authorised agent. Direct application is available at most universities for Filipino citizens, and agents are widely used for the offer, deposit, and visa steps.",
       "Have certified true copies of your transcript of records and diploma ready, and expect universities to verify them through the Philippine institution or CHED. Apply three to four months ahead, since Evidence Level 3 processing runs longer.",
       "Most universities run February and July intakes and assess on a rolling basis. Use the universities directory to shortlist and the deadline calendar for the recommended dates.",
+      "The Philippines runs one of the world's most institutionalised systems for policing overseas recruitment, though it was built for labour migration, not education specifically. The Department of Migrant Workers (DMW, the renamed POEA) took down 170,140 Facebook and TikTok pages for illegal recruitment between 2022 and November 2025, with 85,538 of those in 2025 alone, according to Philstar.com reporting from December 2025. Most of that activity is fake work-abroad job postings rather than study offers, but the DMW's own guidance applies equally to education agents: do not pay before you have a signed contract, do not deal with anyone who tells you to skip the official DMW or CHED process, and check for a government-issued ID and a verifiable licence. CHED has separately had to publicly disown Facebook pages impersonating it to push fake scholarship offers, so verify any scholarship or admission claim through CHED's own website rather than a social media post.",
+      "The Australian Embassy in Manila runs a dedicated \"Stay safe from visa scams\" page for Filipino applicants. It states that the Department of Home Affairs is the only official Australian visa provider, warns that a genuine agent will never ask you to pay in cryptocurrency or hand over your passport, and flags the specific claim that you can work on a Visitor visa or switch it to a Student visa once you are in Australia, which is not legal. It tells applicants to verify a migration agent's Migration Agent Registration Number through OMARA, to check their own visa details directly in ImmiAccount rather than relying on what an agent tells them, and to report suspected scams to Border Watch or the Department of Home Affairs Global Call Centre.",
     ],
     visaNote: [
-      "The Philippines is at student-visa Evidence Level 3, the highest tier. You need to provide, upfront, several months of genuine bank statements, a documented source of funds, and authenticated academic records, and processing is slower. Be ready to satisfy the Genuine Student requirement with a study plan that fits your background.",
+      "The Philippines is at student-visa Evidence Level 3, the highest tier under Home Affairs' Simplified Student Visa Framework. Home Affairs calculates a country's level from a weighted index of visa cancellations, refusals, and overstay rates, and the rate of refusals for a fraud reason carries the single largest weight (40 percent) in that index; a score above 2.7 places a country at Level 3. Trade reporting on Home Affairs' most recent evidence-level update, effective for applications lodged from 30 September 2025 and based on visa outcomes from 1 July 2024 to 30 June 2025, placed the Philippines at Level 3 alongside Fiji, Pakistan, and Colombia. Unlike India, Nepal, Bangladesh, and Bhutan, which were moved up to Level 3 in a separate out-of-cycle review on 8 January 2026, the Philippines was not part of that round. Home Affairs does not publish a specific date or trigger for when the Philippines first reached Level 3, so treat its placement as longstanding rather than a recent change, and check the current level when you apply, since these are reviewed periodically.",
+      "Home Affairs does not publish one Philippines-specific grant or refusal rate; the rate it does publish varies by quarter and by whether the decision is made in Australia or offshore. In the October to December 2025 quarter, the grant rate for Philippine applicants was 69.9 percent for decisions made in Australia, up from 64.9 percent the previous quarter but below the 75.4 percent all-countries average, and 68.2 percent for decisions made offshore, down slightly from 67.3 percent the previous quarter and well below the 83.8 percent all-countries offshore average. On volume, in the 2025-26 program year to 31 December 2025, the Philippines was Australia's fifth largest source of student visa lodgements (6,993, up 27.6 percent on the same period the year before, 3.4 percent of the total) and seventh largest by visas granted (5,063, down 1.2 percent, 2.8 percent of the total). The Philippines was also the fifth largest source of Temporary Graduate (subclass 485) visa lodgements (4,915, up 137.7 percent) and fourth largest by TGV grants (5,191, up 66.0 percent).",
       "Where Filipino applications run into trouble it is usually over funds that appear shortly before applying, sponsor income that is hard to document, or a course that does not follow on from previous study or work. A genuine savings history that predates your decision to study abroad is the strongest signal.",
     ],
     credentials: [
@@ -657,14 +660,24 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
         q: "Can I get PR in Australia after studying from the Philippines?",
         a: "It is a common pathway, not automatic. After graduating, most students move to a Temporary Graduate visa (subclass 485), gain skilled work experience, and then apply for a points-tested visa. Your occupation and points decide the outcome.",
       },
+      {
+        q: "How do I know if a Philippine education or visa agent is legitimate?",
+        a: "Check that any admissions agent appears on your target university's own published list of authorised agents, and, if they operate in Australia, verify their Migration Agent Registration Number on the OMARA website. Read the Australian Embassy Manila's \"Stay safe from visa scams\" page before you pay anyone: it warns that the Department of Home Affairs is the only official visa provider, that a genuine agent never asks for cryptocurrency or your passport, and that claims you can switch from a Visitor visa to a Student visa once in Australia are false. For work-abroad-style consultancies, the Department of Migrant Workers (DMW) publishes which recruiters are currently licensed.",
+      },
     ],
     sources: [
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
       "https://immi.homeaffairs.gov.au/news-media/archive/article?itemId=1196",
       "https://www.studyaustralia.gov.au/",
       "https://www.ahpra.gov.au/",
+      "https://immi.homeaffairs.gov.au/what-we-do/education-program/what-we-do/evidence-levels",
+      "https://www.homeaffairs.gov.au/research-and-stats/files/student-temporary-grad-program-report-dec-2025.pdf",
+      "https://thepienews.com/australia-eases-risk-ratings-amid-calls-to-scrap-system/",
+      "https://philippines.embassy.gov.au/mnla/Stay_safe_from_visa_scams.html",
+      "https://www.philstar.com/headlines/2025/12/20/2495462/online-illegal-recruitment-modus-rises-dmws-4th-full-year",
+      "https://dmw.gov.ph/archives/poea/air/whatisair.html",
     ],
-    lastVerified: "2026-08-30",
+    lastVerified: "2026-09-05",
   },
 
   thailand: {
