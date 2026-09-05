@@ -207,9 +207,12 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "Apply through the university's international portal or an authorised agent. Several universities, and most in Western Australia, only accept applications from Pakistani citizens through an approved agent. Check each university's how-to-apply page before you start.",
       "Get your documents attested early. HEC attests university degrees and transcripts; IBCC attests Matric and Intermediate certificates, and HEC will not attest a degree until the underlying school boards are IBCC-attested. HEC moved to an online e-attestation system in 2026, which is faster than the old in-person process but still takes planning.",
       "Deadlines can be earlier for Pakistani applicants at universities that apply higher-scrutiny country dates. Apply three to four months ahead. Most universities run February and July intakes and assess on a rolling basis.",
+      "Pakistan's own regulators have flagged real fraud in the study-abroad pipeline, separate from anything at the Australian end. In August 2026 the Higher Education Commission (HEC) publicly warned students against people posing as \"attestation agents\": HEC's degree-attestation process is entirely online and done directly by the applicant, so anyone offering to handle or speed it up for a fee is not an authorised HEC service. The Federal Investigation Agency (FIA) has separately prosecuted consultancies that used forged HEC letterhead to sell fake scholarships and university admissions, charging the operators under the Pakistan Penal Code for cheating and forgery. Before you pay anyone, check HEC's own website for attestation status rather than a middleman, and confirm any agent claiming Australian registration on the OMARA website.",
+      "The Australian High Commission in Islamabad runs a dedicated \"Visa Scams, Stay Safe\" page, with a fact sheet and FAQ in English and Urdu, warning that an agent who tells you to submit false or misleading information is breaking the law, and that the High Commission does not call applicants to request visa fees or personal financial details. Rely on the Department of Home Affairs website and ImmiAccount directly, not information passed through an agent or social media.",
     ],
     visaNote: [
-      "Pakistan is at student-visa Evidence Level 3, the highest tier. You need to provide, upfront, several months of genuine bank statements, a clear source-of-funds trail, and attested academic transcripts before a decision is made. Processing runs longer than for lower-risk countries.",
+      "Pakistan is at student-visa Evidence Level 3, the highest tier under Home Affairs' Simplified Student Visa Framework. Home Affairs calculates a country's level from a weighted index of visa cancellations, refusals, and overstay rates, and the rate of refusals for a fraud reason carries the single largest weight (40 percent) in that index; a score above 2.7 places a country at Level 3. Unlike India, Nepal, Bangladesh, and Bhutan, which were moved up to Level 3 in an out-of-cycle review on 8 January 2026, Pakistan was not part of that round. Trade reporting already had Pakistan at Level 3 as far back as October 2025, alongside Fiji, the Philippines, and Colombia, while India was briefly down at the lower Level 2 in the same period. Home Affairs does not publish a specific date or trigger for when Pakistan first reached Level 3, so treat its placement as longstanding rather than a recent change, and check the current level when you apply, since these are reviewed periodically.",
+      "Home Affairs does not publish a Pakistan-specific grant or refusal rate, so treat the percentages quoted on education-consultancy websites with caution; they typically mix lodged and decided applications from different, non-matched cohorts. What Home Affairs does publish is volume: in the 2025-26 program year to 31 December 2025, Pakistan was Australia's sixth largest source of student visa lodgements (6,226, up 48.8 percent on the same period the year before, 3.0 percent of the total) and the twelfth largest by visas granted (3,525, up 50.3 percent, 2.0 percent of the total).",
       "Applications commonly fail on funds that appear just before lodging, loans approved in principle rather than disbursed, money held by a distant relative rather than a parent, and a course that does not build on previous study. A genuine savings history and a documented sponsor relationship are what case officers look for.",
     ],
     credentials: [
@@ -245,14 +248,24 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
         q: "Can I get PR in Australia after studying from Pakistan?",
         a: "It is a common pathway, not automatic. After graduating, most students move to a Temporary Graduate visa (subclass 485), gain skilled work experience, and then apply for a points-tested visa. Your occupation and points decide whether it works.",
       },
+      {
+        q: "How do I know if a Pakistani education agent is legitimate?",
+        a: "HEC's degree-attestation process is done directly online by the applicant, and HEC has publicly warned against people posing as \"attestation agents\" and offering to handle it for a fee. Check that any admissions agent appears on your target university's own published list of authorised agents, and, if they operate in Australia, verify their Migration Agent Registration Number on the OMARA website. Read the Australian High Commission Islamabad's \"Visa Scams, Stay Safe\" page before you pay anyone: it warns that submitting false or misleading information through an agent is illegal, and that Australian government bodies do not call applicants to request visa fees.",
+      },
     ],
     sources: [
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
       "https://www.hec.gov.pk/english/services/students/DAS/Pages/default.aspx",
       "https://immi.homeaffairs.gov.au/news-media/archive/article?itemId=1196",
       "https://www.studyaustralia.gov.au/",
+      "https://immi.homeaffairs.gov.au/what-we-do/education-program/what-we-do/evidence-levels",
+      "https://www.homeaffairs.gov.au/research-and-stats/files/student-temporary-grad-program-report-dec-2025.pdf",
+      "https://thepienews.com/australia-eases-risk-ratings-amid-calls-to-scrap-system/",
+      "https://propakistani.pk/2026/08/28/hec-warns-students-against-fake-attestation-agents/",
+      "https://propakistani.pk/2026/07/25/fia-arrests-fake-hec-scholarship-agent-for-scamming-students/",
+      "https://pakistan.embassy.gov.au/ISLM/Visa_Scams.html",
     ],
-    lastVerified: "2026-08-29",
+    lastVerified: "2026-09-05",
   },
 
   china: {
