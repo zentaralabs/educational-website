@@ -19,6 +19,7 @@ export default async function SearchPage({
   const results = q.trim()
     ? await searchSite(q)
     : {
+        pages: [],
         universities: [],
         guides: [],
         programs: [],
@@ -30,6 +31,7 @@ export default async function SearchPage({
         cities: [],
       };
   const total =
+    results.pages.length +
     results.universities.length +
     results.guides.length +
     results.programs.length +
@@ -41,19 +43,45 @@ export default async function SearchPage({
     results.cities.length;
 
   return (
-    <main className="mx-auto w-full max-w-2xl px-6 pt-8 pb-16">
-      <h1 className="font-display text-3xl font-semibold text-ink text-balance">
-        Search
+    <main className="mx-auto w-full max-w-2xl px-6 pt-16 pb-16 text-center">
+      <h1 className="font-display text-4xl font-semibold text-ink text-balance sm:text-5xl">
+        Need help? We&rsquo;re here
       </h1>
+      <p className="mt-4 font-body text-lg text-slate text-balance">
+        Search Australian universities, programs, visas, scholarships, and
+        guides.
+      </p>
 
-      <div className="mt-6">
-        <SearchBar defaultValue={q} autoFocus />
+      <div className="mt-8">
+        <SearchBar defaultValue={q} autoFocus variant="pill" />
       </div>
 
+      <div className="text-left">
       {q.trim() && (
         <p className="mt-6 font-body text-sm text-slate">
           {total} result{total === 1 ? "" : "s"} for &ldquo;{q}&rdquo;
         </p>
+      )}
+
+      {results.pages.length > 0 && (
+        <section className="mt-8">
+          <h2 className="mb-3 font-body text-xs font-semibold tracking-wide text-slate uppercase">
+            Tools &amp; pages
+          </h2>
+          <ul className="flex flex-col gap-3">
+            {results.pages.map((p) => (
+              <li key={p.slug} className="border-b border-ink/10 pb-3">
+                <Link
+                  href={p.href}
+                  className="font-body text-base text-ink hover:underline"
+                >
+                  {p.name}
+                </Link>
+                <p className="mt-0.5 text-sm text-slate">{p.description}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
       )}
 
       {results.universities.length > 0 && (
@@ -260,6 +288,7 @@ export default async function SearchPage({
           directly.
         </p>
       )}
+      </div>
     </main>
   );
 }

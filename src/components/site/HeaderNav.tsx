@@ -43,8 +43,11 @@ const NAV: NavItem[] = [
   },
 ];
 
+// py-3 keeps tap targets close to the ~44-48px minimum recommended for
+// touch (20px line-height + 24px padding at text-sm, 24px + 24px at
+// sm:text-base) instead of the ~32px it was before.
 const linkClass =
-  "rounded-md px-3 py-1.5 font-body text-sm font-medium whitespace-nowrap text-ink/75 transition-colors duration-150 hover:text-ink sm:text-base";
+  "rounded-md px-3 py-3 font-body text-sm font-medium whitespace-nowrap text-ink/75 transition-colors duration-150 hover:text-ink sm:text-base";
 
 function isLink(item: NavItem): item is NavLink {
   return "href" in item;
@@ -103,7 +106,7 @@ export function HeaderNav() {
   return (
     <nav
       ref={navRef}
-      className="flex flex-wrap items-center gap-x-1 gap-y-1"
+      className="flex flex-wrap items-center gap-x-1 gap-y-1.5"
     >
       {NAV.map((item) => {
         if (isLink(item)) {
@@ -166,7 +169,7 @@ export function HeaderNav() {
                     key={child.href}
                     href={child.href}
                     onClick={close}
-                    className="block rounded-md px-3 py-2 transition-colors duration-150 hover:bg-ink/5"
+                    className="block rounded-md px-3 py-2.5 transition-colors duration-150 hover:bg-ink/5"
                   >
                     <span className="block font-body text-sm font-medium text-ink">
                       {child.label}
@@ -189,7 +192,7 @@ export function HeaderNav() {
         onClick={close}
         aria-label="Search"
         title="Search (⌘K)"
-        className="flex h-8 w-8 items-center justify-center rounded-md text-ink/75 transition-colors duration-150 hover:bg-ink/5 hover:text-ink"
+        className="flex h-11 w-11 items-center justify-center rounded-md text-ink/75 transition-colors duration-150 hover:bg-ink/5 hover:text-ink"
       >
         <SearchIcon className="h-[18px] w-[18px]" />
       </Link>

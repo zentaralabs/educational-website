@@ -2,8 +2,11 @@ import { createPublicClient } from "@/lib/supabase/public";
 import { listPublishedSubjects } from "@/lib/queries/public-subjects";
 import { ORIGIN_COUNTRIES, ORIGIN_COUNTRY_SLUGS } from "@/lib/origin-countries";
 import { CITY_COSTS } from "@/lib/cities";
+import { STATIC_SEARCH_PAGES } from "@/lib/site-search-pages";
 
 export type SearchResults = {
+  /** Static tools/hubs — calculators, the quiz, the deadline calendar, etc. */
+  pages: { slug: string; name: string; description: string; href: string }[];
   universities: { slug: string; name: string; city: string | null }[];
   guides: { slug: string; title: string; category: string }[];
   programs: {
@@ -25,6 +28,7 @@ export type SearchResults = {
 };
 
 const EMPTY: SearchResults = {
+  pages: [],
   universities: [],
   guides: [],
   programs: [],
@@ -215,6 +219,16 @@ export async function searchSite(query: string): Promise<SearchResults> {
   };
 
   return {
+    pages: rank(
+      STATIC_SEARCH_PAGES,
+      (p) => `${p.name} ${p.description} ${p.keywords}`,
+      8,
+    ).map((p) => ({
+      slug: p.slug,
+      name: p.name,
+      description: p.description,
+      href: p.href,
+    })),
     universities: rank(
       uniRows,
       (u) => `${u.name} ${u.city ?? ""} ${(u.popular_majors ?? []).join(" ")}`,

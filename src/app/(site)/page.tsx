@@ -108,8 +108,6 @@ function daysUntil(dateStr: string): number {
   return Math.round((d.getTime() - today.getTime()) / 86_400_000);
 }
 
-const eyebrowClass =
-  "font-utility text-[0.8rem] font-semibold tracking-wide text-slate uppercase";
 const sectionTitleClass = "font-display text-2xl font-semibold text-ink text-balance";
 const moreLinkClass =
   "font-body text-sm font-medium text-status-open underline underline-offset-2 whitespace-nowrap";
@@ -145,42 +143,33 @@ export default async function Home() {
     <main className="w-full">
       <JsonLd data={websiteJsonLd} />
 
-      <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8">
+      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
 
           {/* HERO */}
-          <section>
-            <div className="mx-auto min-w-0 max-w-2xl text-center">
-              <p
-                className={`animate-fade-up ${eyebrowClass}`}
-                style={{ animationDelay: "0ms" }}
-              >
-                Study &middot; Work &middot; Visa &middot; Policy
-              </p>
-
+          <section className="flex min-h-[40vh] flex-col justify-center sm:min-h-[48vh]">
+            <div className="mx-auto min-w-0 max-w-3xl text-center">
               {/* One H1. The title tag and schema carry the "Study in
                   Australia" entity phrase; the H1 leads with the promise. */}
               <h1
-                className="animate-fade-up mt-3 font-display text-[2rem] leading-[1.1] font-semibold text-ink text-balance sm:text-4xl lg:text-[2.7rem]"
-                style={{ animationDelay: "40ms" }}
+                className="animate-fade-up font-display text-[2rem] leading-[1.1] font-semibold text-ink text-balance sm:text-4xl lg:text-[2.7rem]"
+                style={{ animationDelay: "0ms" }}
               >
-                The <span className="italic text-status-open">facts</span> on
-                studying, working, and staying in Australia.
+                Need help? We&rsquo;re here
               </h1>
 
               <p
                 className="animate-fade-up mx-auto mt-4 max-w-xl font-body text-base text-ink/80 sm:text-lg"
                 style={{ animationDelay: "80ms" }}
               >
-                Application deadlines, tuition, visa subclasses, and the policy
-                changes that move them. Every figure traced to an official
-                source and stamped with the date it was last checked.
+                Search Australian universities, programs, visas,
+                scholarships, and guides.
               </p>
 
               <div
                 className="animate-fade-up"
                 style={{ animationDelay: "120ms" }}
               >
-                <SearchBar className="mx-auto mt-6 max-w-xl" />
+                <SearchBar className="mx-auto mt-6 max-w-2xl" variant="pill" />
                 <div className="mt-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
                   <StudentTypeToggle />
                   <span className="font-body text-sm text-slate">
@@ -228,8 +217,8 @@ export default async function Home() {
           </section>
 
           {/* POPULAR RIGHT NOW — quick jumps, sits under the search */}
-          <section className="scroll-reveal mt-10">
-            <div className="rounded-2xl border border-line bg-mist p-5 sm:p-6">
+          <section className="scroll-reveal mt-6">
+            <div className="rounded-2xl border border-line bg-mist p-6 sm:p-8">
               <div className="mb-2 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
                 <h2 className="font-utility text-[0.8rem] font-semibold tracking-wide text-slate uppercase">
                   Popular right now
@@ -255,7 +244,7 @@ export default async function Home() {
 
           {/* NEXT DEADLINES — the flagship data, always open */}
           {upcoming.length > 0 && (
-            <section className="scroll-reveal mt-14">
+            <section className="scroll-reveal mt-16">
               <div className="mb-4 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
                 <h2 className={sectionTitleClass}>Next application deadlines</h2>
                 <Link href="/deadlines" className={moreLinkClass}>
@@ -330,8 +319,8 @@ export default async function Home() {
           )}
 
           {/* START HERE */}
-          <section className="scroll-reveal mt-14">
-            <div className="rounded-2xl bg-mist p-5 sm:p-7">
+          <section className="scroll-reveal mt-16">
+            <div className="rounded-2xl bg-mist p-6 sm:p-8">
               <h2 className={sectionTitleClass}>Start here</h2>
               <ul className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
                 {PRIMARY_TASKS.map(({ label, href, desc, Icon }) => (
@@ -368,7 +357,7 @@ export default async function Home() {
 
           {/* EXPLORE UNIVERSITIES */}
           {featured.length > 0 && (
-            <section className="scroll-reveal mt-14">
+            <section className="scroll-reveal mt-16">
               <div className="mb-4 flex items-baseline justify-between gap-3">
                 <h2 className={sectionTitleClass}>Explore universities</h2>
                 <Link href="/compare/universities" className={moreLinkClass}>
@@ -407,7 +396,7 @@ export default async function Home() {
 
           {/* GUIDES + UPDATES */}
           {(recentGuides.length > 0 || recentPosts.length > 0) && (
-            <section className="scroll-reveal mt-14 grid gap-8 sm:grid-cols-2">
+            <section className="scroll-reveal mt-16 grid gap-8 sm:grid-cols-2">
               {recentGuides.length > 0 && (
                 <div className="min-w-0">
                   <div className="mb-4 flex items-baseline justify-between gap-3">

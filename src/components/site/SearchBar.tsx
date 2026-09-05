@@ -8,11 +8,16 @@ export function SearchBar({
   defaultValue = "",
   className = "mt-6",
   autoFocus = false,
+  variant = "outline",
 }: {
   defaultValue?: string;
   className?: string;
   /** Focus on mount — for the dedicated /search page, not the homepage hero. */
   autoFocus?: boolean;
+  /** "outline" is the default heavy-bordered box used site-wide. "pill" is a
+   * softer, fully-rounded box with a leading search icon, for the /search
+   * page's help-center-style hero. */
+  variant?: "outline" | "pill";
 }) {
   const router = useRouter();
   const [value, setValue] = useState(defaultValue);
@@ -46,8 +51,28 @@ export function SearchBar({
   return (
     <form
       onSubmit={handleSubmit}
-      className={`mx-auto flex w-full items-center gap-3 rounded-lg border-[1.5px] border-ink px-5 py-4 text-left text-slate transition-colors duration-200 focus-within:border-status-open ${className}`}
+      className={`mx-auto flex w-full items-center gap-3 text-left text-slate transition-colors duration-200 ${
+        variant === "pill"
+          ? "rounded-full border border-line bg-paper px-5 py-4 focus-within:border-status-open"
+          : "rounded-lg border-[1.5px] border-ink px-5 py-4 focus-within:border-status-open"
+      } ${className}`}
     >
+      {variant === "pill" && (
+        <svg
+          aria-hidden="true"
+          viewBox="0 0 20 20"
+          fill="none"
+          className="h-5 w-5 shrink-0 text-slate"
+        >
+          <circle cx="9" cy="9" r="6.5" stroke="currentColor" strokeWidth="1.6" />
+          <path
+            d="M18 18L14 14"
+            stroke="currentColor"
+            strokeWidth="1.6"
+            strokeLinecap="round"
+          />
+        </svg>
+      )}
       <div className="relative flex flex-1 items-center">
         {!value && !focused && (
           <div className="pointer-events-none absolute inset-0 flex items-center">
