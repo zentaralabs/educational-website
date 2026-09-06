@@ -1828,7 +1828,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Creative Arts at Adelaide University is a 3-year bachelor's degree. Through the Bachelor of Creative Arts, students can explore their creative passions and will develop a professional skillset that’s easily transferable across a range of careers within the creative industries. Select two major areas of focus aligned to their interests and career goals. Common core courses will broaden their knowledge of the contemporary arts and cultural sector and build their entrepreneurial skills, so students graduate ready to step into their career. Real-world experience is a key focus of this degree. Students gain hands-on experience collaborating with students across other creative disciplines to solve real-world challenges.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -1844,7 +1844,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/bachelor-of-creative-arts",
     "cricos_code": "115689F"
   },
   {
@@ -1960,7 +1960,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Dental Surgery at Adelaide University is a 5-year bachelor's degree. The Bachelor of Dental Surgery emphasises a holistic and preventive-based approach to oral health care. Integrate knowledge and understanding of relevant biological and medical sciences in managing patients. Students also develop high levels of professionalism, including the ability to effectively monitor their performance. Throughout their studies students get the chance to explore a dynamic curriculum which uses an integrated learning approach. Students learn relevant scientific information as students develop their professional and clinical skills. From first year, students undertake compulsory clinical placements in a range of clinic settings. These may include hospital-based, community, rural and interstate locations.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -1976,7 +1976,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/bachelor-of-dental-surgery",
     "cricos_code": "115693K"
   },
   {
@@ -3247,7 +3247,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Mathematics at Adelaide University is a 3-year bachelor's degree. The Bachelor of Mathematics provides students with a solid grounding in the theories, principles and technical skills essential to mathematical sciences. Preparing students for an exciting and unpredictable career interpreting numbers, shapes, patterns and relationships. Students build a deep knowledge of the abstract theories used in mathematics and statistical modelling. Students might even get the opportunity to define and interpret problems in the specialised Maths Clinic - where students develop appropriate solutions for real business problems. But it’s not all theory, students sharpen their technical and professional skills on real-world industry projects. Students may even decide to pursue further research with an additional honours year.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -3263,7 +3263,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/bachelor-of-mathematics",
     "cricos_code": "115728D"
   },
   {
@@ -3412,7 +3412,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Medical Studies at Adelaide University is a 3-year bachelor's degree. The Bachelor of Medical Studies provides foundational knowledge and skills needed to excel in health care. Students learn from outstanding clinicians in state-of-the-art facilities and develop a deep understanding of how the health care system works. Students also gain a valuable ‘consumer’ perspective, helping students understand how patients interact with health services and providers. During their studies students explore scenario-based problems, focussing on individual, community, Indigenous and global health issues. Students also gain valuable exposure to real-world clinical practice and develop safe and effective clinical skills in cutting-edge simulation facilities. This degree is the first three years of the Adelaide University's six-year integrated medicine program, and upon successful completion students gain direct entry into the Doctor of Medicine.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -3428,7 +3428,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/bachelor-of-medical-studies",
     "cricos_code": "115733G"
   },
   {
@@ -3511,7 +3511,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Music Theatre at Adelaide University is a 3-year bachelor's degree. Students become an industry-ready performer with a Bachelor of Music Theatre. Receive individualised training, with countless opportunities to perform and hone their craft across all areas of music theatre. Their degree will cover courses in music theatre performance, musicianship and production. Benefit from invaluable opportunities, including participating in a graduation musical, an industry showcase, and developing their music theatre portfolio. In their music theatre courses students polish their technical skills. Receive advanced training in ballet, jazz, tap, voice and acting. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -3527,7 +3527,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/bachelor-of-music-theatre",
     "cricos_code": "115737C"
   },
   {
@@ -3610,7 +3610,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Oral Health at Adelaide University is a 3-year bachelor's degree. The Bachelor of Oral Health is a three-year, evidence-based degree that sets students up for a rewarding career in oral health. Students learn about the anatomy and physiology of teeth, gums and oral tissues, and how they impact overall health. Students train in high-tech facilities, including the dental simulation clinic. Extensive clinical placements will provide real-world experience working with clients. Under expert guidance and supervision, students build the confidence and skills to excel in a people-centred career. Students also have the chance to give back to society, providing essential dental care to those in need via the dental outreach program. By graduation, students have the clinical and professional skills to launch their career in oral health therapy, hygiene and promotion.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -3626,7 +3626,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/bachelor-of-oral-health",
     "cricos_code": "115740H"
   },
   {
@@ -3643,7 +3643,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Outdoor and Environmental Leadership at Adelaide University is a 3-year bachelor's degree. The program is shaped by world-leading research in environmental sciences and management. This degree equips students with essential skills and knowledge across health and wellbeing, environmental leadership, sustainable living and addressing social injustice. Students build the strategic thinking, scientific literacy and cross-cultural competence to make a real difference. Students have the chance to lead outdoor programs and take part in self-guided adventure trips, putting their skills and knowledge into action in real-world settings. Students are prepared for a range of careers. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -3659,7 +3659,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/bachelor-of-outdoor-and-environmental-leadership",
     "cricos_code": "115741G"
   },
   {
@@ -3676,7 +3676,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Pharmaceutical Science at Adelaide University is a 3-year bachelor's degree. Play a key role in Australia’s healthcare industry and become an expert in global challenges. The Bachelor of Pharmaceutical Science is the only degree of its kind in South Australia. The course will equip students with essential skills and knowledge to work across a range of private and public sectors. Over three years, students gain transferrable skills that are relevant on a global scale. Students undertake a placement across diverse workplace settings aligned with their interests. Students learn from renowned researchers and leading academics, studying in state-of-the-art teaching facilities. As a pharmaceutical scientist, students graduate with a formidable set of skills that can be applied in a broad range of careers.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -3692,7 +3692,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/bachelor-of-pharmaceutical-science",
     "cricos_code": "115742F"
   },
   {
@@ -3742,7 +3742,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Philosophy Politics and Economics at Adelaide University is a 3-year bachelor's degree. Students analyse real-world problems and wrestle with complex questions. Students study theories from each area and learn how they apply in everyday situations. Debate morality, freedom and social justice. Students get a taste of their future career with an industry internship in their third year. This is a valuable opportunity to network, understand how their insights apply in real work environments, and potentially benefit from mentor opportunities. Students graduate with analytical, communication and presentation skills favoured by leaders. Their skillset will be in demand across government.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -3758,7 +3758,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/bachelor-of-philosophy-politics-and-economics",
     "cricos_code": "115745C"
   },
   {
@@ -4237,7 +4237,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Sustainability and Climate Change at Adelaide University is a 3-year bachelor's degree. Students learn about environmental and political issues shaping the world. Help develop adaptation strategies, and influence policy that will transform the way the university respond to climate change. Students choose from a range of interest areas including global politics, environmental management and sociology. These valuable experiences will build their personal and professional confidence in the workplace. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study. The course is offered at Adelaide University.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -4253,7 +4253,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/bachelor-of-sustainability-and-climate-change",
     "cricos_code": "115760D"
   },
   {
@@ -4336,7 +4336,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Veterinary Technology at Adelaide University is a 3-year bachelor's degree. The Bachelor of Veterinary Technology is a clinically focused degree and provides access to the world-class, $37 million veterinary health centre. Students build high-level expertise in the nursing care of animals of all kinds, from cats, dogs and horses to farm animals, wildlife and exotic pets. Students graduate with extensive real-world experience. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study. The course is offered at Adelaide University.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -4352,7 +4352,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/bachelor-of-veterinary-technology",
     "cricos_code": "115764M"
   },
   {
@@ -4369,7 +4369,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Visual Effects at Adelaide University is a 3-year bachelor's degree. The visual effects (VFX) industry is experiencing significant growth and transforming the global screen sector. The rising demand for visual content on popular streaming platforms drives the industry to seek out captivating and original creators and creations. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study. The course is offered at Adelaide University.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -4385,7 +4385,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/bachelor-of-visual-effects",
     "cricos_code": "115765K"
   },
   {
@@ -5029,7 +5029,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Doctor of Clinical Dentistry at Adelaide University is a 3-year professional doctoral degree. The Doctor of Clinical Dentistry is a combined clinical training and research program. In three years of full-time study, students gain expert clinical and research skills in their specific specialist discipline. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study. The course is offered at Adelaide University.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -5045,7 +5045,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/doctor-of-clinical-dentistry",
     "cricos_code": "115785F"
   },
   {
@@ -5062,7 +5062,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Doctor of Medicine at Adelaide University is a 3-year professional doctoral degree. Adelaide University’s medical program is an integrated six-year full-time program that prepares students to become a knowledgeable, empathetic and highly skilled medical practitioner. The program begins with the three-year Bachelor of Medical Studies, followed by the three-year Doctor of Medicine. To enter the masters-level Doctor of Medicine, students must first successfully complete the Bachelor of Medical Studies at Adelaide University. The Doctor of Medicine focuses on developing advanced clinical and research skills. Students experience diverse placements in primary care, hospitals and outreach clinics. Students have opportunities to broaden their horizons through rural, interstate and overseas placements. In their final year, students can specialise in an area of interest with a professional placement.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -5078,7 +5078,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/doctor-of-medicine",
     "cricos_code": "115787D"
   },
   {
@@ -5128,7 +5128,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Doctor of Veterinary Medicine at Adelaide University is a 3-year professional doctoral degree. The Doctor of Veterinary Medicine provides the necessary training and qualifications for registration as a veterinarian. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study. The course is offered at Adelaide University.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -5144,7 +5144,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/doctor-of-veterinary-medicine",
     "cricos_code": "115786E"
   },
   {
@@ -5161,7 +5161,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in 3D Animation at Adelaide University is a six-month graduate certificate. Adelaide University’s Graduate Certificate in 3D Animation will prepare students for a vibrant career in the global visual effects industry. Designed in partnership with award winning VFX company Rising Sun Pictures (RSP), and delivered on site in their Adelaide studio, students develop advanced skills in industry standard software like Maya and be taught by experienced 3D animation artists and supervisors. In this immersive qualification students learn the specialised techniques and knowledge essential to crafting photorealistic 3D animated sequences, and animate a range of props, vehicles, and digital doubles, as well real and mythical creatures, and develop the career management skills and professional practice standards needed to work in a VFX studio.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -5177,7 +5177,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/graduate-certificate-in-3d-animation",
     "cricos_code": "115789B"
   },
   {
@@ -5194,7 +5194,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Aboriginal Studies at Adelaide University is a six-month graduate certificate. The curriculum centres First Nations knowledges, perspectives and voices. It combines theory with practical experiences, guiding students through Aboriginal views on law, health, education and Aboriginal Nation building and governance. Students graduate better equipped to discuss matters important to Aboriginal Peoples and communities, contribute to community and workplace initiatives, and qualify for jobs requiring knowledge of Aboriginal cultures and histories. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -5210,7 +5210,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/graduate-certificate-in-aboriginal-studies",
     "cricos_code": "115790J"
   },
   {
@@ -5293,7 +5293,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Artificial Intelligence and Machine Learning at Adelaide University is a six-month graduate certificate. This innovative degree puts students at the forefront of the AI revolution. Students are equipped with the skills to innovate and lead in this rapidly evolving field. The graduate certificate shares its curriculum with the corresponding master's degree at Adelaide University, and completed units count as credit toward that degree. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study. The course is offered at Adelaide University.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -5309,7 +5309,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-artificial-intelligence-and-machine-learning",
     "cricos_code": "115792G"
   },
   {
@@ -5359,7 +5359,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Business Administration at Adelaide University is a six-month graduate certificate. Through a blend of theory and practice, students develop critical thinking, ethical decision-making and effective communication skills, preparing students for senior management and leadership positions. This postgraduate program is offered as part of a stackable suite in Business Administration, meaning students can easily transition from one qualification to the next. Students learn from industry professionals and experts in the field, and benefit from opportunities to bring their own experience to real-world case studies. As a graduate, emerge ready to take on managerial roles, drive organisational success, or even launch their own entrepreneurial pursuits.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -5375,7 +5375,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/graduate-certificate-in-business-administration",
     "cricos_code": "115794E"
   },
   {
@@ -5392,7 +5392,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Business Analytics at Adelaide University is a six-month graduate certificate. The course builds knowledge in a range of business disciplines, while developing advanced skills in analytics. The curriculum includes industry-related projects to sharpen their research and analytical skills. The graduate certificate shares its curriculum with the corresponding master's degree at Adelaide University, and completed units count as credit toward that degree. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study. The course is offered at Adelaide University.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -5408,7 +5408,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-business-analytics",
     "cricos_code": "117961A"
   },
   {
@@ -5425,7 +5425,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Commerce at Adelaide University is a six-month graduate certificate. The Graduate Certificate in Commerce is designed for recent graduates with a bachelor's degree aiming to specialise in commerce, or mid-career professionals wanting to sharpen their skillset and stay competitive in the dynamic business landscape. Students develop practical, industry-relevant skills in areas such as financial analysis, strategic management and business technology. Graduates emerge as knowledgeable and adaptable professional, ready for various industry demands and challenges. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -5441,7 +5441,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/graduate-certificate-in-commerce",
     "cricos_code": "115795D"
   },
   {
@@ -5458,7 +5458,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Compositing and Tracking at Adelaide University is a six-month graduate certificate. Designed in partnership with award winning VFX company Rising Sun Pictures, and delivered on site in their Adelaide studio, students develop advanced skills in industry standard software like Nuke, Maya, Silhouette and 3D Equalizer and be taught by experienced artists and supervisors. In this immersive qualification students develop industry standard skills in compositing, rotoscoping, paint, character matchmove and 3D tracking, and gain the career management skills and professional practice standards needed to work in a professional VFX studio. While learning the key aspects of various VFX departments, including Prep, Layout, and Compositing, students get the opportunity to plan, iterate and deliver a collaborative, team project to meet a production brief and deadline to industry standards.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -5474,7 +5474,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/graduate-certificate-in-compositing-and-tracking",
     "cricos_code": "115796C"
   },
   {
@@ -5491,7 +5491,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Construction Management at Adelaide University is a six-month graduate certificate. Influenced by latest industry developments, Adelaide University’s degree emphasises sustainability and modern construction techniques. The degree also has a strong focus on technological advancements and practices. With multidisciplinary courses and opportunities for industry placements and research, students gain strong critical thinking skills adaptable to a variety of roles across residential, commercial and infrastructure sectors. The graduate certificate shares its curriculum with the corresponding master's degree at Adelaide University, and completed units count as credit toward that degree. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -5507,7 +5507,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-construction-management",
     "cricos_code": "115797B"
   },
   {
@@ -5524,7 +5524,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Counselling and Psychotherapy at Adelaide University is a six-month graduate certificate. Their studies will cover topics across fundamental counselling skills, counselling and psychotherapy theory, ethics, attachment processes and qualitative research methods in health. By the end of their six months of study, students might choose to continue their studies with the graduate diploma or master program. During their studies, students compete two core courses and two elective courses. Their core courses will focus on topics including:. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -5540,7 +5540,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/graduate-certificate-in-counselling-and-psychotherapy",
     "cricos_code": "115798A"
   },
   {
@@ -5557,7 +5557,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Creature Effects at Adelaide University is a six-month graduate certificate. Designed in partnership with award winning VFX company Rising Sun Pictures (RSP), and delivered on site in their Adelaide studio, students develop advanced skills in industry standard software like Maya and be taught by experienced CFX artists and supervisors. In this immersive qualification students learn the specialised techniques and knowledge essential to crafting creature effects, alongside the career management skills and professional practice standards needed to work in a VFX studio. While learning the process of creating realistic creature and asset effects, students get the opportunity to plan, iterate and deliver a project to meet a production brief and deadline to industry standards.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -5573,7 +5573,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/graduate-certificate-in-creature-effects",
     "cricos_code": "115799M"
   },
   {
@@ -5590,7 +5590,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Curatorial and Museum Studies at Adelaide University is a six-month graduate certificate. Museums are vibrant spaces that preserve and showcase the collective history. They encourage visitors to explore the stories behind the most important artefacts. The program provides a unique opportunity to investigate the connection and community of museum practices. This certificate is part of the only specialist degree suite of its kind in South Australia. It is delivered in cooperation with the South Australian Museum and other leading cultural organisations. Students explore the dynamic global cultural and heritage sectors, including complex ethical issues in the field.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -5606,7 +5606,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/graduate-certificate-in-curatorial-and-museum-studies",
     "cricos_code": "115822F"
   },
   {
@@ -5689,7 +5689,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Data Science at Adelaide University is a six-month graduate certificate. Students also learn the skills needed for strategic leadership roles in data science. A hands-on industry project in their final year allows students to apply their skills in a work environment. Collaborating with industry professionals, students develop deep knowledge in real-world data science practices. Students emerge a sought-after data expert, ready to improve business models in a variety of sectors. The graduate certificate shares its curriculum with the corresponding master's degree at Adelaide University, and completed units count as credit toward that degree. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -5705,7 +5705,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-data-science",
     "cricos_code": "117963K"
   },
   {
@@ -5722,7 +5722,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Design at Adelaide University is a six-month graduate certificate. The curriculum is mostly studio-based, providing opportunities for collaboration and real-time feedback, along with access to the latest tools and technologies. Some courses are available online, giving students the flexibility to fit their study around their schedule. By exploring legal considerations, students are able to produce work that is ethically sound and legally protected. The project-based courses connect students with industry professionals, providing a platform to enhance their research skills and showcase their design expertise. The graduate certificate shares its curriculum with the corresponding master's degree at Adelaide University, and completed units count as credit toward that degree.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -5738,7 +5738,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-design",
     "cricos_code": "115801M"
   },
   {
@@ -5755,7 +5755,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Dynamic Effects and Lighting at Adelaide University is a six-month graduate certificate. Designed in partnership with award winning VFX company Rising Sun Pictures (RSP), and delivered on site in their Adelaide studio, students develop advanced skills in industry standard software like Houdini and be taught by experienced visual effects artists and supervisors. In this immersive qualification students learn the specialised techniques and knowledge essential to crafting dynamic effects sequences and photorealistic shots, alongside the career management skills and professional practice standards needed to work in a VFX studio. While learning the process of generating realistic effects and CG environments, students get the opportunity to plan, iterate and deliver a project to meet a production brief and deadline to industry standards.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -5771,7 +5771,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/graduate-certificate-in-dynamic-effects-and-lighting",
     "cricos_code": "115802K"
   },
   {
@@ -5788,7 +5788,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Economics and Resource Policy at Adelaide University is a six-month graduate certificate. Students study topics in global food and agricultural markets, principles of international trade and development and cost-benefit analysis. Advise on business strategy to optimise company performance within economic environments. Unravel the context behind major economic events such as recessions and inflation. Through their chosen courses, students develop specialised knowledge in fields that align with their career goals, including opening a pathway to a PhD. The graduate certificate shares its curriculum with the corresponding master's degree at Adelaide University, and completed units count as credit toward that degree.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -5804,7 +5804,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-economics-and-resource-policy",
     "cricos_code": "115803J"
   },
   {
@@ -5821,7 +5821,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Education at Adelaide University is a six-month graduate certificate. The Graduate Certificate in Education is for education professionals wanting to upskill for specialist and leadership roles in educational settings. It also prepares students for higher education teaching, or to transition into research. Designed to be flexible, students choose four courses aligned to their interests and career goals. Students can also specialise by selecting four courses from a key area of focus, there are ten to choose from. Students gain an understanding of how different structures, social factors, and cultural elements in educational environments affect how students learn. Students analyse trends, theories and concepts in contemporary education to develop ways to improve student learning.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -5837,7 +5837,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/graduate-certificate-in-education",
     "cricos_code": "115804H"
   },
   {
@@ -5887,7 +5887,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Environmental Policy and Management at Adelaide University is a six-month graduate certificate. Through practical experience and hands-on learning, students develop the skills to tackle real-world environmental challenges. Students graduate ready to pursue careers as an environmental policy officer, sustainability coordinator or conservation manager. Students are equipped to drive initiatives that promote renewable energy, reduce waste and preserve biodiversity, whether in government, industry or the not-for-profit sector. Environmental policies are crucial for protecting natural resources, promoting sustainable development and addressing environmental issues. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -5903,7 +5903,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/graduate-certificate-in-environmental-policy-and-management",
     "cricos_code": "115809C"
   },
   {
@@ -5920,7 +5920,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Film and Television at Adelaide University is a six-month graduate certificate. Students explore the intricacies of the Australian screen industry and develop expertise in screenwriting, financing, development and production management. Throughout their studies, students engage in practical projects that allow students to bring their creative concepts to life. This qualification also emphasises the business aspects of film and television, covering everything from budgeting to marketing strategies. By the end of their studies, students are well-equipped to produce captivating content across various genres, from thrilling dramas to insightful documentaries. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -5936,7 +5936,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/graduate-certificate-in-film-and-television",
     "cricos_code": "115810K"
   },
   {
@@ -5953,7 +5953,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Financial Planning at Adelaide University is a 0.6-year graduate certificate. By completing this program, students widen their career prospects and join an in-demand industry. Emerge a confident professional, ready to take the next step towards becoming a financial planner. Students might find work in financial institutions, investment banks, superannuation and insurance funds or financial advisory firms. The graduate certificate shares its curriculum with the corresponding master's degree at Adelaide University, and completed units count as credit toward that degree. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -5969,7 +5969,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-financial-planning",
     "cricos_code": "117891K"
   },
   {
@@ -6085,7 +6085,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Immersive Media Technologies at Adelaide University is a six-month graduate certificate. Students discover the different types of immersive media technology platforms. The degree prepares students for the immersive media field by providing a comprehensive curriculum that combines both creative and technical practices. Students build essential skills for success in the industry. Change the way the world delivers and consumes content. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study. The course is offered at Adelaide University.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -6101,7 +6101,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/graduate-certificate-in-immersive-media-technologies",
     "cricos_code": "115815E"
   },
   {
@@ -6283,7 +6283,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Marketing at Adelaide University is a 0.6-year graduate certificate. The principles students learn in their master’s degree will be applicable to a variety of roles. The graduate certificate shares its curriculum with the corresponding master's degree at Adelaide University, and completed units count as credit toward that degree. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study. The course is offered at Adelaide University.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -6299,7 +6299,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-marketing",
     "cricos_code": "117893H"
   },
   {
@@ -6316,7 +6316,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Mathematical Sciences at Adelaide University is a six-month graduate certificate. Students study core courses in advanced algebra and multivariable calculus, laying the groundwork for a deep understanding of mathematical concepts. These courses will provide students with the ability to analyse complex mathematical structures, solve equations and manipulate variables. With a strong foundation in mathematical sciences, students are well-prepared for a wide range of exciting career opportunities. From data science and actuarial science to engineering and meteorology, the possibilities are vast and the demand for highly skilled mathematicians is high. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -6332,7 +6332,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/graduate-certificate-in-mathematical-sciences",
     "cricos_code": "115820H"
   },
   {
@@ -6349,7 +6349,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Midwifery at Adelaide University is a six-month graduate certificate. Students develop advanced midwifery knowledge while building critical thinking, analysis, innovation, leadership, and research skills. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study. The course is offered at Adelaide University. Students learn from academics active in research and industry, with applied and industry-connected learning at Adelaide University, and graduate ready for professional practice or further study across relevant sectors.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -6365,7 +6365,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/graduate-certificate-in-midwifery",
     "cricos_code": "115821G"
   },
   {
@@ -6382,7 +6382,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Nursing at Adelaide University is a six-month graduate certificate. Adelaide University’s Graduate Certificate in Nursing is their opportunity to learn specialised skills and enhance their delivery in clinical practice. This highly customisable qualification reflects the diversity and needs of the modern nursing workforce. Or choose from over 40 different electives to customise a degree that meets the specific needs of their current and future roles. No matter their path, students are better prepared to meet challenges and be a leader in the healthcare system. This qualification is designed for working professionals. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -6398,7 +6398,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/graduate-certificate-in-nursing",
     "cricos_code": "115823E"
   },
   {
@@ -6415,7 +6415,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Project Management at Adelaide University is a six-month graduate certificate. From construction and healthcare to software development and marketing, project-based work models are fast becoming the norm in many industries. Examine effective approaches to project leadership and stakeholder management through interactive case studies and practical content. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study. The course is offered at Adelaide University.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -6431,7 +6431,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/graduate-certificate-in-project-management",
     "cricos_code": "115824D"
   },
   {
@@ -6448,7 +6448,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Public Health at Adelaide University is a six-month graduate certificate. Students are equipped to address a wide range of health issues, from infectious diseases to chronic conditions and work on local, national or global scales. Craft a customised study plan aligned to their passions. Or develop a critical understanding of the drivers of global health risks. Students are ready to take advantage of new and enhanced career opportunities. These can be in government agencies, healthcare organisations and even research institutions. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -6464,7 +6464,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/graduate-certificate-in-public-health",
     "cricos_code": "115825C"
   },
   {
@@ -6613,7 +6613,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Statistics at Adelaide University is a six-month graduate certificate. Statistical knowledge is essential across almost every industry that students, as a graduate, will enter. Students develop the advanced skills and knowledge desired by industry in the Graduate Certificate in Statistics. Critically analyse and solve advanced problems in mathematics and statistics. Whether students are from a biology, psychology or engineering background, the program will provide students the statistics specialisation to pursue different careers. Experiment with cutting-edge software and learn to use programming languages like R, building the skills to uncover hidden patterns. Revolutionise online shopping or tackle challenges in healthcare and environmental science. Use statistical models to make a meaningful impact and gain a competitive edge in their career.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -6629,7 +6629,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/graduate-certificate-in-statistics",
     "cricos_code": "115827A"
   },
   {
@@ -6646,7 +6646,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Strategic Communication at Adelaide University is a six-month graduate certificate. Craft messages that matter with course. The graduate certificate shares its curriculum with the corresponding master's degree at Adelaide University, and completed units count as credit toward that degree. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study. The course is offered at Adelaide University.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -6662,7 +6662,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-strategic-communication",
     "cricos_code": "115828M"
   },
   {
@@ -6679,7 +6679,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Urban and Regional Planning at Adelaide University is a six-month graduate certificate. Students gain insight into what it really means to design and develop a space. Students understand historical contexts, from the ancient world to the modern landscape. Students also become aware of the key considerations of an urban and regional planner, navigating policy, budget and ethics. Start exploring how big ideas can turn into big realities with this Adelaide University graduate certificate. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -6695,7 +6695,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/graduate-certificate-in-urban-and-regional-planning",
     "cricos_code": "115830F"
   },
   {
@@ -6712,7 +6712,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Wine and Food Business at Adelaide University is a six-month graduate certificate. From the local scene to the global stage, learn how to analyse product performance and make impactful business decisions. There are different ways to market. There are big, expensive campaigns and there are small, unmediated interactions with customers online. This program exposes students to a number of strategies, preparing students to implement those that fit their situation best. Students achieve the business awareness students need to identify trends as they emerge and to pounce on gaps in the market. Adelaide University offers access to world-class facilities, such as the Waite Research Institute, responsible for more than two thirds of Australia’s wine and grape research and extension capability.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -6728,7 +6728,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/graduate-certificate-in-wine-and-food-business",
     "cricos_code": "115831E"
   },
   {
@@ -6778,7 +6778,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Diploma in Accounting at Adelaide University is a 1-year graduate diploma. Students might be a mid-career professional seeking to upskill and advance their knowledge. Or maybe students are looking for a career change that will challenge students. Beyond their technical expertise, students also hone their critical thinking, communication and leadership skills, qualities that will set students apart in the competitive professional landscape. In their final year, students apply what students’ve learned in a real-world industry project, ensuring students are ready to step straight into their future career in auditing, tax, financial reporting and more. The graduate diploma shares its curriculum with the corresponding master's degree at Adelaide University and can articulate into that degree.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -6794,7 +6794,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-accounting",
     "cricos_code": "115834B"
   },
   {
@@ -6976,7 +6976,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Diploma in Business Administration at Adelaide University is a 1-year graduate diploma. Students create new solutions, lead innovative teams and deliver exceptional results in the context of disruptive change and global uncertainty. Adelaide University’s MBA degree comprises of seven core courses (including a capstone) and five electives. Core courses cover topics including finance, accounting, sustainability, leadership and marketing. Elective courses explore areas such as entrepreneurship, negotiation and behavioural economics. The graduate diploma shares its curriculum with the corresponding master's degree at Adelaide University and can articulate into that degree. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -6992,7 +6992,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-business-administration",
     "cricos_code": "115840D"
   },
   {
@@ -7009,7 +7009,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Diploma in Business Analytics at Adelaide University is a 1-year graduate diploma. The course builds knowledge in a range of business disciplines, while developing advanced skills in analytics. The curriculum includes industry-related projects to sharpen their research and analytical skills. The graduate diploma shares its curriculum with the corresponding master's degree at Adelaide University and can articulate into that degree. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study. The course is offered at Adelaide University.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -7025,7 +7025,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-business-analytics",
     "cricos_code": "115841C"
   },
   {
@@ -7042,7 +7042,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Diploma in Construction Management at Adelaide University is a 1-year graduate diploma. Influenced by latest industry developments, Adelaide University’s degree emphasises sustainability and modern construction techniques. The degree also has a strong focus on technological advancements and practices. With multidisciplinary courses and opportunities for industry placements and research, students gain strong critical thinking skills adaptable to a variety of roles across residential, commercial and infrastructure sectors. The graduate diploma shares its curriculum with the corresponding master's degree at Adelaide University and can articulate into that degree. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -7058,7 +7058,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-construction-management",
     "cricos_code": "115843A"
   },
   {
@@ -7075,7 +7075,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Diploma in Counselling and Psychotherapy at Adelaide University is a 1-year graduate diploma. Help people understand, manage and resolve issues impacting their life and wellbeing. The curriculum will develop their psychotherapy skills and deepen their knowledge of key theories, issues and ethical implications in counselling. In just one year of study, pursue a career as a counsellor or psychotherapist. Students are qualified to guide individuals through common life stressors working in healthcare settings, educational institutions, social work agencies, or in the corporate sector. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -7091,7 +7091,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/graduate-diploma-in-counselling-and-psychotherapy",
     "cricos_code": "115844M"
   },
   {
@@ -7207,7 +7207,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Diploma in Data Science at Adelaide University is a 1-year graduate diploma. Students also learn the skills needed for strategic leadership roles in data science. A hands-on industry project in their final year allows students to apply their skills in a work environment. Collaborating with industry professionals, students develop deep knowledge in real-world data science practices. Students emerge a sought-after data expert, ready to improve business models in a variety of sectors. The graduate diploma shares its curriculum with the corresponding master's degree at Adelaide University and can articulate into that degree. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -7223,7 +7223,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-data-science",
     "cricos_code": "117966G"
   },
   {
@@ -7240,7 +7240,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Diploma in Design at Adelaide University is a 1-year graduate diploma. In this diploma, students advance their design capabilities and develop key professional practice skills. Students learn to work effectively on interdisciplinary projects, write project proposals and present their ideas professionally. Students explore sustainability, ethics and legal considerations in design, setting their creative endeavours up for the best start. Students are able to receive real-time feedback and access the latest tools and technologies. Some courses are online, so students can fit study around their busy life. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -7256,7 +7256,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/graduate-diploma-in-design",
     "cricos_code": "115846J"
   },
   {
@@ -7405,7 +7405,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Diploma in Finance at Adelaide University is a 1-year graduate diploma. Students explore emerging trends in banking and finance, emphasising ethical, social, regulatory, economic, sustainability and global viewpoints. Additionally, students undertake independent research and apply professional judgment to tackle intricate banking and financial challenges. In two years of full-time study, students develop the skillset of a modern finance professional. During the initial year, students explore analytical methodologies essential for business operations, economic principles, accounting practices, and core financial concepts. The graduate diploma shares its curriculum with the corresponding master's degree at Adelaide University and can articulate into that degree.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -7421,7 +7421,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-finance",
     "cricos_code": "115852M"
   },
   {
@@ -7471,7 +7471,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Diploma in Financial Planning at Adelaide University is a 1-year graduate diploma. By completing this program, students widen their career prospects and join an in-demand industry. Emerge a confident professional, ready to take the next step towards becoming a financial planner. Students might find work in financial institutions, investment banks, superannuation and insurance funds or financial advisory firms. The graduate diploma shares its curriculum with the corresponding master's degree at Adelaide University and can articulate into that degree. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -7487,7 +7487,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-financial-planning",
     "cricos_code": "115854J"
   },
   {
@@ -7636,7 +7636,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Diploma in Human Resource Management at Adelaide University is a 1-year graduate diploma. Students learn how to attract, engage, and retain employees. Acquire an understanding of marketing principles, including employee engagement, company branding, and internal communications. As a human resources manager, students are equipped to shape company culture. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study. The course is offered at Adelaide University.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -7652,7 +7652,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/graduate-diploma-in-human-resource-management",
     "cricos_code": "115860M"
   },
   {
@@ -7735,7 +7735,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Diploma in International Business at Adelaide University is a 1-year graduate diploma. Acquire practical and analytical skills, examining international trade, global supply chains and cross-cultural management. Students also gain an understanding on how international companies adapt their strategies to changing economic conditions and cultural expectations. Their knowledge and skills will be applicable to a wide range of industries, particularly in roles involving global operations, cross-border transactions, international trade and multicultural environments. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -7751,7 +7751,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/graduate-diploma-in-international-business",
     "cricos_code": "115862J"
   },
   {
@@ -7900,7 +7900,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Diploma in Management at Adelaide University is a 1-year graduate diploma. The Graduate Diploma in Management is a one-year qualification that will teach students essential business knowledge and managerial skills to lead diverse organisations and make strategic decisions. Their qualification will prepare students to enter mid-level management positions across a range of businesses, organisations and industries. Over one-year of full-time study, complete specialised management courses and build essential business knowledge. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -7916,7 +7916,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/graduate-diploma-in-management",
     "cricos_code": "115867D"
   },
   {
@@ -7933,7 +7933,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Diploma in Marketing at Adelaide University is a 1-year graduate diploma. The Graduate Diploma in Marketing is a one-year degree designed to advance marketing skills. Students develop effective marketing strategies for diverse audiences. Students develop specialised marketing skills in strategy, market research and analysis, communication, consumer behaviour and contemporary trends. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study. The course is offered at Adelaide University.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -7949,7 +7949,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/graduate-diploma-in-marketing",
     "cricos_code": "115868C"
   },
   {
@@ -7999,7 +7999,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Diploma in Midwifery at Adelaide University is a 1-year graduate diploma. The course helps students advance their professional midwifery practice and knowledge through the Graduate Diploma in Midwifery at Adelaide University. Students learn to apply established theories to practice further their expert judgement and adaptability as a midwife. Students have the opportunity to tailor their learning to their professional goals with the flexibility to select from a range of electives across speciality areas such as pharmacology, critical care, perinatal mental health, and Aboriginal health. Students gain experience with innovative developments that will elevate their practice and build their confidence to lead the way in delivering enhanced care.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -8015,7 +8015,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/graduate-diploma-in-midwifery",
     "cricos_code": "115871H"
   },
   {
@@ -8098,7 +8098,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Diploma in Nursing at Adelaide University is a 1-year graduate diploma. Adelaide University’s Graduate Diploma in Nursing will help students meet the challenges in modern Australian healthcare. This graduate diploma gives students the flexibility to choose their own study pathway that best relates to their clinical practice. Designed to fit around their life and existing clinical practice, students can study both online and part-time. Students also engage in workshops with other registered nurses and industry leaders, allowing students to make valuable connections and broaden their networks. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -8114,7 +8114,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/graduate-diploma-in-nursing",
     "cricos_code": "115875D"
   },
   {
@@ -8131,7 +8131,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Diploma in Procurement and Supply Chain Management at Adelaide University is a 1-year graduate diploma. Supply chains keep the world moving, and experts who can lead them are in high demand. This graduate diploma introduces students to the key concepts that shape global procurement and logistics systems. Students study core topics like supply chain design, digital technologies, strategic procurement and operations management. Through real company case studies and academic expertise, students explore how to solve supply challenges in complex, cross-cultural environments. Students can use this one-year qualification to progress into the Master of Procurement and Supply Chain Management. Students build essential skills to boost their career and start shaping strategy in industries where reliability, efficiency and sustainability matter most.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -8147,7 +8147,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/graduate-diploma-in-procurement-and-supply-chain-management",
     "cricos_code": "115876C"
   },
   {
@@ -8164,7 +8164,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Diploma in Project Management at Adelaide University is a 1-year graduate diploma. In today’s business environment, projects are increasingly complex, requiring professionals who can manage risk, balance competing priorities, and deliver outcomes effectively. Students study key areas such as risk management, sustainability, and organisational innovation and transformation, while developing capabilities in leadership, decision-making, and applied research. The program offers flexibility to align with career goals, with options to explore elective courses, internships and industry-relevant projects. The skills students gain are highly sought after, opening pathways to diverse career opportunities and enabling students to contribute to a wide range of project environments.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -8180,7 +8180,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/graduate-diploma-in-project-management",
     "cricos_code": "115877B"
   },
   {
@@ -8197,7 +8197,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Diploma in Public Health at Adelaide University is a 1-year graduate diploma. Students study core courses that address a wide range of health issues on local, national and global scales. Demonstrate professional skills and responsibilities in the field of public health. Students are ready to take advantage of new and enhanced career opportunities. As a public health professional, students can work in a range of areas like community health or government agencies. Students might even shape public policy to control future disease outbreaks. As an Adelaide University graduate, students are equipped with the specialised knowledge for career success.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -8213,7 +8213,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/graduate-diploma-in-public-health",
     "cricos_code": "115878A"
   },
   {
@@ -8296,7 +8296,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Diploma in Statistics at Adelaide University is a 1-year graduate diploma. Students deepen their understanding of statistical methods in just one year of full-time study. Cover both theoretical principles and practical applications, enabling students to tackle real-world problems. Students develop the advanced skills and knowledge to work in a diverse range of industries. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study. The course is offered at Adelaide University.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -8312,7 +8312,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/graduate-diploma-in-statistics",
     "cricos_code": "115880G"
   },
   {
@@ -8329,7 +8329,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Diploma in Strategic Communication at Adelaide University is a 1-year graduate diploma. Craft messages that matter with course. The graduate diploma shares its curriculum with the corresponding master's degree at Adelaide University and can articulate into that degree. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study. The course is offered at Adelaide University.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -8345,7 +8345,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-strategic-communication",
     "cricos_code": "115881F"
   },
   {
@@ -8428,7 +8428,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Diploma in Urban and Regional Planning at Adelaide University is a 1-year graduate diploma. Urban and regional planning is a complex, interdisciplinary body of many moving parts. The master’s degree is designed to offer a broad, deep understanding for planning’s past and present, and to get students speculating about its future. Students study a range of topics as they concern the profession, including history, policy, finance, ethics, climate and society. Students develop their personal conduct in professional contexts. Students learn how to make a captivating proposal, how to judge a development project’s feasibility and how to help residents and developers reach a great outcome that balances competing interests. In their fieldwork, students inspect regenerated urban spaces and assess locations for potential development. The graduate diploma shares its curriculum with the corresponding master's degree at Adelaide University and can articulate into that degree.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -8444,7 +8444,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-urban-and-regional-planning",
     "cricos_code": "115884C"
   },
   {
@@ -8494,7 +8494,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Diploma in Viticulture and Oenology at Adelaide University is a 1-year graduate diploma. Students get loads of practical experience in the field, making the most of the state-of-the-art laboratories, vineyards and wineries. Students learn how grapevines grow and how to boost vineyard yield. Students study the full winemaking process, from grape composition to balancing taste and aroma. Students explore viticultural science, sensory studies and hands-on production techniques. Students study how grapevines grow, from when the buds first open to when the flowers and fruit develop. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -8510,7 +8510,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/graduate-diploma-in-viticulture-and-oenology",
     "cricos_code": "115886A"
   },
   {
@@ -8527,7 +8527,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Diploma in Wine and Food Business at Adelaide University is a 1-year graduate diploma. This program shows students many sides to the wine and food industries, from marketing to retail through to legal and scientific. Uncover tools and techniques for measuring product and business performance. Students explore the legal system, from international trade law to consumer protection. Students survey the science, from grape composition to the interactions between taste and aroma. Students even examine global distribution and other parts of the retail machine. It provides a well-rounded look into many aspects of these industries. Ultimately, it gives students the freedom to follow whichever career pathway speaks to students the loudest.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -8543,7 +8543,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/graduate-diploma-in-wine-and-food-business",
     "cricos_code": "115887M"
   },
   {
@@ -8626,7 +8626,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Aboriginal Studies at Adelaide University is a 2-year master's degree. The Master of Aboriginal Studies privileges First Nations knowledges, pedagogies and voices. It is designed for postgraduate students of any discipline with an interest in Aboriginal history, cultures, politics and education. Through a mix of theoretical and practical learning, students explore Aboriginal issues and worldviews in relation to health, law, history, education, the environment, policy and research. Students undertake a significant research project in an area of interest, from Indigenous agricultural practices to First Nations poetry, exploring relevant global, cultural, social and political themes. Students gain a deep appreciation of Aboriginal languages, research and knowledges, and how they can drive local solutions and global impact.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -8642,7 +8642,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-aboriginal-studies",
     "cricos_code": "115892C"
   },
   {
@@ -8692,7 +8692,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Accounting and Business Analytics at Adelaide University is a 2-year master's degree. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study. The course is offered at Adelaide University. Students learn from academics active in research and industry, with applied and industry-connected learning at Adelaide University, and graduate ready for professional practice or further study across relevant sectors.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -8708,7 +8708,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-accounting-and-business-analytics",
     "cricos_code": "115894A"
   },
   {
@@ -9187,7 +9187,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Construction Management at Adelaide University is a 2-year master's degree. The Master of Construction Management prepares students to navigate the constantly evolving landscape of the construction industry and to oversee projects from start to finish, ensuring they are completed on-time, within budget and to a high quality. Influenced by latest industry developments, Adelaide University’s degree emphasises sustainability and modern construction techniques. The degree also has a strong focus on technological advancements and practices. With multidisciplinary courses and opportunities for industry placements and research, students gain strong critical thinking skills adaptable to a variety of roles across residential, commercial and infrastructure sectors.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -9203,7 +9203,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-construction-management",
     "cricos_code": "115902F"
   },
   {
@@ -9220,7 +9220,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Counselling and Psychotherapy at Adelaide University is a 2-year master's degree. This degree supports students to become a clinically proficient counsellor with a strong foundation in ethical and evidence based clinical competencies. Students explore contemporary theories and therapeutic approaches, learning to take a holistic approach to emotional, mental and relational challenges. Students build practical skills through hands-on experiential learning, including simulated scenarios with actors representing clients. Find out how to guide conversations and facilitate self-exploration. Across the degree, students also gain unique insights into their own life and a deep understanding of their own personal growth. Adelaide University’s Master of Counselling and Psychotherapy will shape students into an ethically aware, research-informed and clinically effective counsellor.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -9236,7 +9236,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-counselling-and-psychotherapy",
     "cricos_code": "115903E"
   },
   {
@@ -9253,7 +9253,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Curatorial and Museum Studies at Adelaide University is a 2-year master's degree. Museums are dynamic and ever-changing cultural institutions. The cutting-edge program challenges existing museum theory and practice. The degree is delivered in partnership with key cultural institutions like the South Australian Museum and the History Trust of South Australia. These institutions can serve as truth-telling for First Nations people. Students are at the forefront of enriching international cultural diplomacy opportunities. Students learn how to respectfully discover social heritage and build skills in ethical collection and exhibition development. students are locally and globally connected with strong links to.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -9269,7 +9269,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-curatorial-and-museum-studies",
     "cricos_code": "115933K"
   },
   {
@@ -9352,7 +9352,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Design at Adelaide University is a 2-year master's degree. In Adelaide University’s Master of Design, students combine their technical design expertise with key professional practice skills. The curriculum is mostly studio-based, providing opportunities for collaboration and real-time feedback, along with access to the latest tools and technologies. Some courses are available online, giving students the flexibility to fit their study around their schedule. By exploring legal considerations, students are able to produce work that is ethically sound and legally protected. The project-based courses connect students with industry professionals, providing a platform to enhance their research skills and showcase their design expertise.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -9368,7 +9368,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-design",
     "cricos_code": "115905C"
   },
   {
@@ -9385,7 +9385,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Economics and Resource Policy at Adelaide University is a 2-year master's degree. Students study topics in global food and agricultural markets, principles of international trade and development and cost-benefit analysis. Advise on business strategy to optimise company performance within economic environments. Unravel the context behind major economic events such as recessions and inflation. Through their chosen courses, students develop specialised knowledge in fields that align with their career goals, including opening a pathway to a PhD. These features will ensure students graduate with relevant exper. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -9401,7 +9401,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-economics-and-resource-policy",
     "cricos_code": "115906B"
   },
   {
@@ -9451,7 +9451,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Education Studies at Adelaide University is a 2-year master's degree. The Master of Education is designed for professionals working in the education industry including school leaders, teachers, educational consultants and trainers wishing to pursue leadership opportunities within schools. It is also suitable as preparation for higher education teaching, or to transition into research. Reflect on and expand their leadership and management skills across diverse settings. Adelaide University is ranked #89 in the world for Education Studies ( Times Higher Education, 2026 ). In the Master of Education, students explore a range of leadership tactics and strategies. Investigate different approaches to enhancing community wellbeing at the systemic level. Unpack educational policies, and complete a major research project to advance their educational practice.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -9467,7 +9467,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-education",
     "cricos_code": "115908M"
   },
   {
@@ -9781,7 +9781,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Immersive Media Technologies at Adelaide University is a 2-year master's degree. Deeply practical, students put their learning into practice with hands-on projects and real-world learning throughout their studies. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study. The course is offered at Adelaide University.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -9797,7 +9797,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-immersive-media-technologies",
     "cricos_code": "115919H"
   },
   {
@@ -9847,7 +9847,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of International and Security Law at Adelaide University is a 2-year master's degree. The state of international security law globally is characterised by emerging threats and changing geopolitical dynamics. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study. The course is offered at Adelaide University.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -9863,7 +9863,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-international-and-security-law",
     "cricos_code": "115924M"
   },
   {
@@ -9946,7 +9946,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Landscape Architecture at Adelaide University is a 2-year master's degree. With the Master of Landscape Architecture, students can design landscape architecture projects that honour community health and wellbeing, while championing diversity and sustainability. Students grow their understanding of ecology and create planting plans for liveable spaces that work in harmony with the natural environment. Students examine issues and opportunities in both urban and regional contexts with an emphasis on understanding and respecting Aboriginal knowledge, culture and connection to land. Students graduate ready to make a real difference in the field. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -9962,7 +9962,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-landscape-architecture",
     "cricos_code": "115926J"
   },
   {
@@ -9979,7 +9979,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Laws at Adelaide University is a 1-year master's degree. Students develop deep discipline knowledge and intellectual breadth in the Master of Laws. Students have the knowledge to succeed, connect with others and build an international portfolio. Stand out in the competitive world of law. Lay the foundation for an international career by creating a global legal network. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study. The course is offered at Adelaide University.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -9995,7 +9995,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-laws",
     "cricos_code": "115927H"
   },
   {
@@ -10012,7 +10012,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Management at Adelaide University is a 2-year master's degree. The Master of Management is co-designed with industry experts to deliver a future-focused degree. Students study core business and specialised management courses to future-proof their career. With access to an industry placement, students develop their personal and professional skills. Their studies will immerse students in real-world challenges and experiences, connecting students to the network of industry and professional partners and giving students the practical skills to succeed. This degree is ideal for professionals looking to upskill, change careers or broaden their capacity into senior positions. Students gain a strong grounding in business and management, ready to lead across a variety of business settings. To successfully complete the Master of Management, students complete a range of core and management specialisation courses.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -10028,7 +10028,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-management",
     "cricos_code": "115928G"
   },
   {
@@ -10144,7 +10144,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Midwifery at Adelaide University is a 2-year master's degree. The Master of Midwifery at Adelaide University is designed to advance their professional midwifery practice and knowledge. Scaffolded learning will enable students to build critical thinking, analysis, innovation, leadership, and research skills. Students have the opportunity to tailor their studies to areas that interest students by selecting from a wide variety of electives. From second year students further focus their learning by selecting either the clinical or research stream. Their learning will culminate in demonstrated clinical application that addresses a specific issue or through producing an original research publication or thesis. Their learning will be enhanced through immersion in cutting-edge technologies and advancements within the midwifery field.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -10160,7 +10160,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-midwifery",
     "cricos_code": "115931A"
   },
   {
@@ -10177,7 +10177,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Music Performance and Pedagogy at Adelaide University is a 2-year master's degree. Students sharpen their musical skills, learn advanced techniques, and develop a strong stage presence. Students also practise their skills through delivering teaching through supervised music education projects. Maybe as a solo artist, an orchestra member, or a music teacher. Students not only perform but also inspire others and make a real difference in the music community. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study. The course is offered at Adelaide University.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -10193,7 +10193,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-music-performance-and-pedagogy",
     "cricos_code": "115934J"
   },
   {
@@ -10243,7 +10243,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Occupational Therapy Graduate Entry at Adelaide University is a 2-year master's degree. Adelaide University’s Master of Occupational Therapy is an intensive, in-demand program that prepares students to become a registered occupational therapist in two years. This degree takes a holistic approach to health, considering the physical, emotional and social aspects of wellbeing. Students explore the science of the body, developing expertise in human neuroanatomy, neurophysiology and pathology. Students identify and understand how the environment impacts occupational performance and learn to design unique interventions based on individual needs. Under the guidance of experienced occupational therapists and leading researchers, students discover ways to improve health across the lifespan, from childhood through to old age. With 1,000 hours of field placements in diverse settings, gain the expertise and understanding essential for success in this field.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -10259,7 +10259,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-occupational-therapy-graduate-entry",
     "cricos_code": "115938E"
   },
   {
@@ -10309,7 +10309,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Pharmacy at Adelaide University is a 1-year master's degree. Studying pharmacy offers a dynamic and rewarding path. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study. The course is offered at Adelaide University. Students learn from academics active in research and industry, with applied and industry-connected learning at Adelaide University, and graduate ready for professional practice or further study across relevant sectors.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -10325,7 +10325,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-pharmacy",
     "cricos_code": "117266B"
   },
   {
@@ -10375,7 +10375,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Physiotherapy Graduate Entry at Adelaide University is a 2-year master's degree. Students progress from their career in just two years with the intensive Master of Physiotherapy. The curriculum is contemporary and culturally informed, with hands-on learning aligned to industry needs. Students learn to assess, treat and prevent a range of health conditions, empowering people to lead healthy, engaged and fulfilling lives. Students graduate with a degree that enables students to apply for registration as a physiotherapist with the Physiotherapy Board of Australia, equipped to change lives. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -10391,7 +10391,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-physiotherapy-graduate-entry",
     "cricos_code": "115939D"
   },
   {
@@ -10408,7 +10408,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Procurement and Supply Chain Management at Adelaide University is a 2-year master's degree. Students make invaluable industry connections with experienced supply chain management professionals and industry executives. Critically review real company case studies and develop actionable, innovative, ethical and sustainable solutions to common challenges. Students also develop their knowledge of digital supply chains, including the digitalisation of manufacturing, warehousing, logistics and procurement, as well as determining system performance. Additionally, students explore how advances in AI and robotics can be harnessed to effectively manage and increase the competitiveness of service businesses within the context of supply chai. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -10424,7 +10424,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-procurement-and-supply-chain-management",
     "cricos_code": "115940M"
   },
   {
@@ -10804,7 +10804,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Statistics at Adelaide University is a 2-year master's degree. The Master of Statistics equips students with the expertise needed to excel in a data-driven world. Integrate theoretical principles with practical applications over the course of two years of full-time study. This program will teach students how to collaborate in diverse teams, through group work and a major statistical project in their final year. Students also dive into cutting-edge software, master programming languages like R, and develop the skills to uncover hidden patterns and insights. By mastering advanced statistical approaches, students transform raw information into strategic intelligence, enabling breakthrough discoveries and informed decision-making across industries.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -10820,7 +10820,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-statistics",
     "cricos_code": "115959M"
   },
   {
@@ -10837,7 +10837,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Strategic Communication at Adelaide University is a 2-year master's degree. Craft messages that matter with the Master of Strategic Communication. Through an immersive industry project or communication-related research project. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study. The course is offered at Adelaide University.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -10853,7 +10853,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-strategic-communication",
     "cricos_code": "115960G"
   },
   {
@@ -10903,7 +10903,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Technology Innovation and Entrepreneurship at Adelaide University is a 2-year master's degree. Students gain advanced skills in innovation management, commercialisation and entrepreneurial thinking. Evolve unique ideas into impactful ventures. This degree combines business insight and technological ability, preparing students to shift complex challenges into creative solutions. Graduates are ready to launch innovative startups, drive transformation in established companies or consult on the latest technological trends. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study. The course is offered at Adelaide University.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -10919,7 +10919,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-technology-innovation-and-entrepreneurship",
     "cricos_code": "115964C"
   },
   {
@@ -10936,7 +10936,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Tourism Events and Hospitality Management at Adelaide University is a 2-year master's degree. This degree explores professional challenges and opportunities across the tourism, events and hospitality industry. The program is broad and future-focused, tailored to boost the career prospects of working professionals and help newcomers enter the sector. Students build the contemporary management skills needed to lead operations and meet business goals. Students take courses on sustainable tourism, destination management, festival management and how to leave a lasting legacy with their events. Students collaborate with industry partners on real-world projects. When students graduate they are up to date on global trends, leadership strategies and market demands. Students are ready for high-impact careers as an event director, destination manager, hotel manager.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -10952,7 +10952,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-tourism-events-and-hospitality-management",
     "cricos_code": "115965B"
   },
   {
@@ -10969,7 +10969,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Urban and Regional Planning at Adelaide University is a 2-year master's degree. The master’s degree is designed to offer a broad, deep understanding for planning’s past and present, and to get students speculating about its future. Students study a range of topics as they concern the profession, including history, policy, finance, ethics, climate and society. Students develop their personal conduct in professional contexts. Students learn how to make a captivating proposal, how to judge a development project’s feasibility and how to help residents and developers reach a great outcome that balances competing interests. In their fieldwork, students inspect regenerated urban spaces and assess locations for potential development. Through rigorous research training and an original research project, students make their own contributions to the theories students are learning from.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -10985,7 +10985,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-urban-and-regional-planning",
     "cricos_code": "115966A"
   },
   {
@@ -11035,7 +11035,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Viticulture and Oenology at Adelaide University is a 2-year master's degree. The wine industry is currently adapting to multiple challenges, environmental, technological and consumer. Advocate and champion organic and biodynamic cultivation. Do all this and more with the Master of Viticulture and Oenology. The intensive two-year degree is renowned worldwide for its exceptional teaching standards. Or complete a research dissertation on a topic of choice. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study. The course is offered at Adelaide University.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -11051,7 +11051,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-viticulture-and-oenology",
     "cricos_code": "115968K"
   },
   {
@@ -11068,7 +11068,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Wine and Food Business at Adelaide University is a 2-year master's degree. Students explore topics like marketing, branding, global markets, tourism and legal aspects of the wine and food sectors. Students develop practical skills in market analysis, entrepreneurial thinking and project management. Participating in a study tour and industry networking events will bring students a real-world experience. By the end of the program, students have the knowledge to innovate and influence in areas such as marketing, retail management and export strategy. Students learn from academics active in research and industry, with applied and industry-connected learning, and graduate ready for professional practice or further study.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -11084,7 +11084,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.adelaide.edu.au/study/degrees/master-of-wine-and-food-business",
     "cricos_code": "115969J"
   },
   {
