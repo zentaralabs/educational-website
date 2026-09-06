@@ -144421,7 +144421,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Agriculture is a three-year degree covering the science, economics and technology of food, farming and sustainable land management. The first year builds a foundation in agricultural science, biology, natural environments and production and life sciences, with an introductory Agriculture Discovery Week at the Dookie campus. From second year students choose a major in agricultural economics, plant and soil science, or production animal science. Learning combines laboratory work, fieldwork and hands-on industry experience, and the common first year was designed with industry and employers. It is taught on campus at Parkville with March and July intakes, and honours is available. Graduates work in farm and agribusiness management, agronomy and crop science, animal production, agricultural policy, research, and agri-finance and consulting.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -144437,7 +144437,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://study.unimelb.edu.au/find/courses/undergraduate/bachelor-of-agriculture/",
     "cricos_code": "037228G"
   },
   {
@@ -144850,7 +144850,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Oral Health is a three-year degree taught on campus at Parkville with a March intake, in which students learn alongside dental students at the Melbourne Dental School using advanced clinical teaching facilities. It combines coursework with hands-on clinical experience and placements in metropolitan and rural clinics, taught by practising clinicians and academics. Graduates are eligible to register with the Australian Health Practitioner Regulation Agency and practise as an oral health therapist, with the combined scope of a dental hygienist and dental therapist, providing preventive care, periodontal treatment, and dental care for children and adolescents. Graduates work in private dental practice, public dental services, community and school dental programs, and rural and remote health, and can progress to further study in dentistry.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -144866,7 +144866,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://study.unimelb.edu.au/find/courses/undergraduate/bachelor-of-oral-health/",
     "cricos_code": "053176D"
   },
   {
@@ -145312,7 +145312,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Doctor of Medicine (MD) is the University of Melbourne's four-year graduate-entry medical degree, taken on campus at Parkville with a January intake. It combines biomedical and clinical science with early and sustained clinical placements through partnerships with leading hospitals and research institutes, and offers a choice of pathways and discovery subjects so students can pursue research or other interests. Students develop patient assessment and clinical reasoning, health advocacy, ethics, communication and leadership. The program is accredited by the Australian Medical Council, so graduates are eligible to apply for provisional registration with the Medical Board of Australia and enter an internship. Graduates go on to prevocational training and specialty training across hospital medicine, general practice, surgery, psychiatry, research and public health.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -145328,7 +145328,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://study.unimelb.edu.au/find/courses/graduate/doctor-of-medicine/",
     "cricos_code": "071304G"
   },
   {
@@ -149338,7 +149338,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Architecture is the University of Melbourne's professional degree for becoming a registered architect. Teaching is studio-based and modelled on real design practice, covering contemporary design, architectural history and theory, sustainable practice, new materials and advanced building technology. Students also build the skills to manage a practice and lead cross-disciplinary project teams, supported by industry connections and real-world projects. It runs on campus at Parkville with February and July intakes. Students who completed an architecture major in their undergraduate degree take the 200-point, two-year program; those from a non-architecture background take the 300-point, three-year program. The degree is accredited for the path to registration with the Architects Accreditation Council of Australia. Graduates work as architects, urban and design consultants, and in project and practice management.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -149354,7 +149354,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://study.unimelb.edu.au/find/courses/graduate/master-of-architecture/",
     "cricos_code": "061197K"
   },
   {
@@ -149635,7 +149635,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Biotechnology is a two-year degree that combines biological and medical science with the business skills needed to take technologies and therapeutics to market in health, agribusiness, food and related industries. Students study the full biotechnology product pipeline and can build specialist knowledge in areas such as genomics, then complete a year-long industry placement consulting on a real problem in fields like biomanufacturing or AgriPharma, or choose a research placement in a laboratory. It is taught on campus at Parkville in the Melbourne Biomedical Precinct with March and July intakes, giving access to researchers and industry partners. Graduates work in biomanufacturing, regulatory affairs, research and development, business development, consulting and technology transfer across the biotechnology and pharmaceutical sector.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -149651,7 +149651,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://study.unimelb.edu.au/find/courses/graduate/master-of-biotechnology/",
     "cricos_code": "072809G"
   },
   {
@@ -150619,13 +150619,13 @@
     "name": "Master of Education",
     "slug": "master-of-education",
     "status": "published",
-    "duration_years": "4.0",
+    "duration_years": "2.0",
     "tuition_international": "27800",
     "tuition_domestic": null,
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Education builds advanced knowledge of education theory and leadership for middle and senior roles, with a choice of ten specialisations, described as the broadest range of any Master of Education in Australia. Qualified teachers can fast-track the degree in twelve months, while students without a teaching qualification complete the full two-year program. Classes are offered in the evening and on weekends, with part-time and some online study available, and the course includes overseas study and research options. It is taught on campus at Parkville with March and July intakes. This is not a teacher-qualifying degree. Graduates move into curriculum and instructional leadership, education policy and research, program evaluation, and senior roles across schools, systems, and the tertiary and adult education sectors.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -150641,7 +150641,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://study.unimelb.edu.au/find/courses/graduate/master-of-education/",
     "cricos_code": "002127B"
   },
   {
@@ -151021,7 +151021,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Environment is a flexible two-year degree taught by experts from nine faculties across the University of Melbourne, letting students build a study plan across policy, science and business. After two core subjects, students follow one of twelve specialised streams, such as climate change, waste management, or conservation and restoration, or tailor their own plan, and complete a capstone that can be an overseas field subject, a major research project or an industry internship. It is taught on campus at Parkville with March and July intakes. Graduates work in environmental policy and regulation, sustainability strategy and consulting, conservation and land management, climate and carbon roles, and environmental analysis across government, business and non-government organisations.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -151037,7 +151037,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://study.unimelb.edu.au/find/courses/graduate/master-of-environment/",
     "cricos_code": "076197J"
   },
   {
@@ -151285,7 +151285,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Fine Arts is a graduate research degree at the Victorian College of the Arts, taken over two years full time on campus at Southbank with a March intake. Candidates undertake a substantial piece of original creative research under academic supervision, developing mastery in their field of practice and contributing to understandings of contemporary art and culture. The submission is a written thesis of around 30,000 to 40,000 words, or a combination of creative work and a written component equivalent to 40,000 words, where the written part is at least a quarter of the whole. Creative work can take the form of performance, exhibition, writing, design, film, video or new media. Graduates work as practising artists, researchers, educators and creative practitioners, and the degree is a pathway to a PhD.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -151301,7 +151301,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://study.unimelb.edu.au/find/courses/graduate/master-of-fine-arts/",
     "cricos_code": "075321G"
   },
   {
@@ -151516,7 +151516,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Global Media Communication examines how media structures and communication practices are changing across the world as digital platforms disrupt traditional media. Students develop skills in critical analysis, strategic thinking and audience research, and get hands-on training in media writing and audiovisual production for journalism, broadcasting, digital media and professional communications. An optional overseas exchange semester is available at partners such as McGill, Humboldt and Fudan. It is taught on campus at Parkville with March and July intakes over two years full time, with shorter options for applicants who hold relevant prior qualifications. Graduates work in digital and social media, strategic and corporate communications, journalism and broadcasting, public sector communications, media research and content production.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -151532,7 +151532,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://study.unimelb.edu.au/find/courses/graduate/master-of-global-media-communication/",
     "cricos_code": "045345C"
   },
   {
@@ -151813,7 +151813,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of International Business is a two-year degree at Melbourne Business School that develops specialist international management skills with complementary international relations knowledge and a focus on the Asia-Pacific. Students can take up to three electives from the Master of International Relations, study the policies governing world trade and investment, and gain hands-on experience with real companies. Overseas study options include exchange, intensive subjects abroad and exclusive dual degrees in Milan or Montreal for high-achieving students. It is taught on campus at Parkville with March and July intakes, and applicants with a business or commerce background can complete it in 1.5 years. Graduates work in international management, trade and investment, consulting, supply chain, and business development across multinational firms and government.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -151829,7 +151829,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://study.unimelb.edu.au/find/courses/graduate/master-of-international-business/",
     "cricos_code": "080608E"
   },
   {
@@ -151879,7 +151879,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of International Relations engages with international relations theory, international governance and law, international security, international political economy and international history, and how actors such as the United States, China, the European Union and the United Nations operate. Students can focus on the Asia-Pacific, Europe or the Middle East with regional specialists, study a language, take part in exchange, and apply their learning through an optional internship in international organisations, government, business, media or non-government organisations. It is taught on campus at Parkville with March and July intakes over two years full time, with shorter options for applicants who hold relevant prior qualifications. Graduates work in foreign affairs and diplomacy, international organisations, policy and research, risk analysis, journalism and the not-for-profit sector.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -151895,7 +151895,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://study.unimelb.edu.au/find/courses/graduate/master-of-international-relations/",
     "cricos_code": "068096C"
   },
   {
@@ -152044,7 +152044,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Laws (LLM) is the flagship degree of the Melbourne Law Masters program, available only to law graduates and taken over one year full time or two years part time on campus at Parkville, with multiple intakes through the year. Students choose from more than 170 subjects across around 26 specialist legal areas, from banking and finance law to human rights, intellectual property, tax, and energy and resources law, and can complete a minor thesis for those interested in independent research. Subjects are delivered flexibly through intensive on-campus teaching, online learning and seminars, taught by Melbourne Law School academics alongside more than 140 visiting experts each year. Graduates use the qualification to specialise and advance in legal practice, government, corporate advisory, the judiciary and academia.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -152060,7 +152060,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://study.unimelb.edu.au/find/courses/graduate/master-of-laws/",
     "cricos_code": "074996E"
   },
   {
@@ -152203,13 +152203,13 @@
     "name": "Master of Mechanical Engineering",
     "slug": "master-of-mechanical-engineering",
     "status": "published",
-    "duration_years": "3.0",
+    "duration_years": "2.0",
     "tuition_international": "73700",
     "tuition_domestic": null,
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Mechanical Engineering trains students to design and build machines and systems from small-scale devices to aircraft and spacecraft, covering mechanical design, thermodynamics, fluid mechanics, dynamics and materials. Applicants with a relevant undergraduate major complete it in two years; others take three years. Students can specialise in Aerospace, Business or Manufacturing, or study without a specialisation, and apply their skills through internships, industry projects and innovation challenges with industry mentors. It is taught on campus at Parkville with March and July intakes, with access to advanced laboratories and a heavy engineering workshop. The degree carries professional accreditation recognised internationally. Graduates work as mechanical, aerospace, manufacturing and design engineers across energy, transport, defence, robotics, biomedical devices and consulting.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -152225,7 +152225,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://study.unimelb.edu.au/find/courses/graduate/master-of-mechanical-engineering/",
     "cricos_code": "106108G"
   },
   {
