@@ -14527,13 +14527,13 @@
     "name": "Bachelor of Asia-Pacific Affairs",
     "slug": "bachelor-of-asia-pacific-affairs",
     "status": "published",
-    "duration_years": "2.0",
+    "duration_years": "4.0",
     "tuition_international": "53800",
     "tuition_domestic": null,
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Asia-Pacific Affairs is a four-year degree at ANU's Acton campus that gives students an in-depth exploration of Asia-Pacific regional affairs across four areas: politics and government; international relations and security; conflict and peacebuilding; and history and cultural identity. It helps students understand the transnational forces and contemporary challenges facing the region, and includes a cross-crediting arrangement with Ritsumeikan University in Japan allowing student mobility in both directions. Graduates work in foreign affairs, security and defence, development, trade and research with a regional focus.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -14549,7 +14549,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://programsandcourses.anu.edu.au/2026/program/BAPAF",
     "cricos_code": "096442B"
   },
   {
@@ -14566,7 +14566,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Asian Studies is a three-year degree at ANU's Acton campus that provides the language skills and cultural and historical expertise to lead Australia's engagement with Asia. Students combine language study, starting at beginner or higher levels, with discipline and area studies, drawing on the breadth of the ANU College of Asia and the Pacific. Graduates emerge with a nuanced understanding of the region and its national and subnational parts, and work in foreign affairs, trade, development, business, media and research with an Asia focus.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -14582,7 +14582,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://programsandcourses.anu.edu.au/2026/program/BASIA",
     "cricos_code": "082710B"
   },
   {
@@ -14599,7 +14599,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Biotechnology is a three-year degree at ANU's Acton campus about applying new technologies to agriculture, food and medicine production, and environmental problems across research, industry and the applied health sciences. Students learn the foundations of biology, including molecular and cellular biology, biotechnology and microbiology, alongside contemporary topics such as the societal and ethical issues of biotechnology and intellectual property. Graduates work in biotechnology and pharmaceutical research, laboratory science, agtech and industrial biotech, and technology commercialisation.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -14615,7 +14615,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://programsandcourses.anu.edu.au/2026/program/BBIOT",
     "cricos_code": "036660M"
   },
   {
@@ -14632,7 +14632,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Business Administration is a three-year degree at ANU's Acton campus that develops the research and practical skills to start a business, lead an organisation, and plan and manage complex projects, including negotiation, conflict resolution and managing across cultures in a global workplace. The degree is flexible, letting students build on their strengths and choose how much work-integrated learning, such as internships, to include. Graduates work in management, consulting, project management and entrepreneurship across sectors.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -14648,7 +14648,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://programsandcourses.anu.edu.au/2026/program/BBUSA",
     "cricos_code": "062745A"
   },
   {
@@ -14665,7 +14665,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Business Information Systems (Honours) is a one-year program at ANU's Acton campus that builds on the Bachelor of Business Information Systems, reflecting ANU's research strength in the field. Students complete advanced coursework in information systems and design and carry out an independent research project, developing advanced knowledge of research principles and methods. Graduates work as business and systems analysts, IT consultants and technology managers, and are prepared for a higher degree by research.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -14681,7 +14681,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://programsandcourses.anu.edu.au/2026/program/HBISY",
     "cricos_code": "119824E"
   },
   {
@@ -14698,7 +14698,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Classical Studies (Honours) is a one-year program at ANU's Acton campus that builds on the Bachelor of Classical Studies, giving high-level preparation for professional life or a higher degree by research. Students develop advanced knowledge of the research principles, methods and theoretical concepts of classical studies, in ancient history, ancient Greek or Latin, and design and complete a research project, typically a 20,000-word thesis. Graduates work in research and academia, heritage and museums, education, writing and the public service.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -14714,7 +14714,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://programsandcourses.anu.edu.au/2026/program/HCLAS",
     "cricos_code": "082707G"
   },
   {
@@ -14731,7 +14731,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Commerce (Honours) is a one-year program in the ANU College of Business and Economics, Acton campus, for students who have excelled in their undergraduate studies. It offers a challenging year of advanced study and independent research across accounting, finance, actuarial studies and related disciplines, developing research skills under the guidance of academic staff. Graduates move into research-oriented roles, advanced professional practice, or a higher degree by research.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -14747,7 +14747,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://programsandcourses.anu.edu.au/2026/program/HCOMM",
     "cricos_code": "002288G"
   },
   {
@@ -14962,7 +14962,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Engineering (Honours) in Software Engineering is a four-year degree at ANU's Acton campus about building effective software systems that address complex problems across transport, communications, finance, medicine, science and the arts. It is built on a multidisciplinary systems approach that covers technical practice, innovation and research as well as the socio-technical context, including uncertainty and risk, design, management, ethics and communication. It carries professional engineering accreditation. Graduates work as software engineers, architects and technical leads across technology, finance, government and research.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -14978,7 +14978,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://programsandcourses.anu.edu.au/2026/program/AENSE",
     "cricos_code": "108316E"
   },
   {
@@ -15061,7 +15061,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Environment and Sustainability (Honours) is a one-year program at ANU's Acton campus that builds on the Bachelor of Environment and Sustainability with an environment honours specialisation, reflecting ANU's leadership in the field. Students design and carry out an independent research project on a topic relevant to environment and sustainability, developing advanced knowledge of research principles and methods and skills valued by employers, including holistic thinking and evidence-based decision-making. Graduates work in environmental policy and management, sustainability and research, or continue to a research higher degree.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -15077,7 +15077,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://programsandcourses.anu.edu.au/2026/program/HENSU",
     "cricos_code": "082700D"
   },
   {
@@ -15160,7 +15160,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "Honours in Finance is a one-year program in the ANU Research School of Finance, Actuarial Studies and Applied Statistics, Acton campus, for students who have excelled in their undergraduate studies. Students undertake independent finance research with guidance from academic staff, alongside advanced coursework. Past graduates have been highly successful in professional practice, including roles in leading investment banks around the world. Graduates work in finance and research, or continue to a research higher degree.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -15176,7 +15176,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://programsandcourses.anu.edu.au/2026/program/HFINN",
     "cricos_code": "070007B"
   },
   {
@@ -15193,7 +15193,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Finance, Economics and Statistics (Honours) is an elite four-year honours degree at ANU's Acton campus for outstanding students seeking a quantitative program that equips them for graduate study in finance, economics or statistics and for prestigious government or industry employment. It combines courses from finance, economics and statistics with relevant mathematics. Graduates work as quantitative analysts, economists and researchers in central banks, regulators, investment firms, consulting and government.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -15209,7 +15209,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://programsandcourses.anu.edu.au/2026/program/AFEST",
     "cricos_code": "086222G"
   },
   {
@@ -15220,13 +15220,13 @@
     "name": "Bachelor of Genetics",
     "slug": "bachelor-of-genetics",
     "status": "published",
-    "duration_years": "3.0",
+    "duration_years": "1.0",
     "tuition_international": "57700",
     "tuition_domestic": null,
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Genetics (Honours) is a one-year program at ANU's Acton campus that lets students explore research across classical genetics, molecular genetics, population genetics and bioinformatics. It develops advanced knowledge of research principles, methods and theoretical concepts and a supervised research project that develops new understandings or solutions to complex problems, with honours specialisations available. Graduates work in genetics and genomics research, biotechnology, diagnostics and health, or continue to a research higher degree.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -15242,7 +15242,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://programsandcourses.anu.edu.au/2026/program/HGENE",
     "cricos_code": "064778J"
   },
   {
@@ -15325,7 +15325,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of International Business is a three-year degree at ANU's Acton campus for students who want responsible leadership roles in business and management working with people from around the world. Students learn how leaders negotiate, resolve conflict and manage across cultures in global business, study the business environment and how management and marketing work in Asia, Europe or the Middle East, and complement this with world-class language training. Graduates work in international management, trade and business development, consulting and marketing across multinational firms and government.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -15341,7 +15341,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://programsandcourses.anu.edu.au/2026/program/BINBS",
     "cricos_code": "047472B"
   },
   {
@@ -15424,7 +15424,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Languages is a three-year degree at ANU's Acton campus, which offers more languages than any other university in Australia. Students study two or more languages, starting at beginner or higher level, in combination with other areas of interest, learning the structural, grammatical and idiomatic components of each language and engaging critically with cultural, social and historical context, with opportunities for immersion. Graduates work in foreign affairs and trade, translation and interpreting, international business, education, and media with a language focus.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -15440,7 +15440,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://programsandcourses.anu.edu.au/2026/program/BLANG",
     "cricos_code": "073988B"
   },
   {
@@ -15556,7 +15556,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Medical Science is a three-year degree at ANU's Acton campus for students starting a career in medical research. Students study genetics, immunology, nutrition, physiology, microbiology, biochemistry and anatomy to understand how the human body works, learning directly from biomedical scientists and health professionals working on new cancer vaccines and treatments for autoimmune diseases. Graduates work in medical and health research, laboratory and diagnostic science, biotechnology and pharmaceuticals, or continue to postgraduate study in medicine or research.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -15572,7 +15572,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://programsandcourses.anu.edu.au/2026/program/BMEDS",
     "cricos_code": "036662J"
   },
   {
@@ -15655,7 +15655,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Pacific Studies is a three-year degree at ANU's Acton campus that develops a deep understanding of the diversity, history and contemporary issues of Oceania, preparing students for leading roles in Pacific policy and development. Students learn from the world's leading experts on the Pacific and join a community of scholars addressing challenges including climate change, with an interdisciplinary grounding to engage with diverse Pacific voices and approaches. Graduates work in Pacific-focused foreign affairs, development, government and research.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -15671,7 +15671,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://programsandcourses.anu.edu.au/2026/program/BPAST",
     "cricos_code": "075274J"
   },
   {
@@ -15754,7 +15754,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Philosophy, Neuroscience, and Psychology is a three-year degree at ANU's Acton campus that draws on the University's strengths in philosophy, neuroscience and psychology for an interdisciplinary exploration of the relationship between the mind and brain. Students examine the conceptual foundations of understanding the brain and mind, gain in-depth knowledge of the relationship between the brain and cognitive processes, and access world-class research. Graduates work in research, health and mental health, technology and policy, or continue to postgraduate study.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -15770,7 +15770,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://programsandcourses.anu.edu.au/2026/program/BPNP",
     "cricos_code": "114958J"
   },
   {
@@ -15853,7 +15853,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Politics, Philosophy and Economics is a three-year degree at ANU's Acton campus, a leader in all three fields, that gives students the moral, economic and political perspectives to make an impact. Students develop exceptional problem-solving skills and critical and conceptual thinking across the three disciplines. Graduates work in the public service and government, policy and research, diplomacy and international organisations, journalism, consulting and the not-for-profit sector.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -15869,7 +15869,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://programsandcourses.anu.edu.au/2026/program/BPPE",
     "cricos_code": "076183D"
   },
   {
@@ -16018,7 +16018,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Science (Psychology) (Honours) is a one-year program at ANU's Acton campus that builds on the Bachelor of Science (Psychology), which covers areas from group behaviour and perception to neural development, neuroscience and abnormal psychology. Honours develops advanced knowledge of research principles, methods and theoretical concepts and a supervised research project, preparing students for professional life or a higher degree by research. Completing the accredited sequence is the first stage toward registration as a psychologist.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -16034,7 +16034,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://programsandcourses.anu.edu.au/2026/program/HSPSY",
     "cricos_code": "047429E"
   },
   {
@@ -16117,7 +16117,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "Honours in Statistics is a one-year program in the ANU Research School of Finance, Actuarial Studies and Applied Statistics, Acton campus, for students who have excelled in their undergraduate studies. Students undertake independent statistical research with guidance from academic staff, alongside advanced coursework. Past graduates have been highly successful in professional practice, and a number have progressed to PhD study. Graduates work as statisticians and data scientists, or continue to a research higher degree.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -16133,7 +16133,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://programsandcourses.anu.edu.au/2026/program/HSTAT",
     "cricos_code": "070156M"
   },
   {
@@ -16183,7 +16183,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Diploma of Computing is a one-year program at ANU's Acton campus that provides foundational knowledge and skills in problem solving, programming and the mathematics used in computing. It suits students who want to build entry-level computing skills or a pathway into further computing study, and can be taken alongside or before a bachelor's degree. Graduates use it to enter IT support and development roles or to progress into a computing degree.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -16199,7 +16199,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://programsandcourses.anu.edu.au/2026/program/ECOMPU",
     "cricos_code": "084573A"
   },
   {
@@ -18553,13 +18553,13 @@
     "name": "Master of Anthropology",
     "slug": "master-of-anthropology",
     "status": "published",
-    "duration_years": "2.0",
+    "duration_years": "1.5",
     "tuition_international": "53800",
     "tuition_domestic": null,
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Anthropology (Advanced) is a 1.5-year postgraduate program at ANU's Acton campus centred on anthropology's ethnographic approach to understanding how people live their lives on their own terms. It equips students to examine global challenges such as climate change and xenophobia, and how government policies, technologies and services are incorporated into people's lives, with ethnographic skills and cross-cultural comparison. Graduates work in social research and policy, development and humanitarian organisations, user research, and cultural and community roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -18575,7 +18575,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://programsandcourses.anu.edu.au/2026/program/VANTP",
     "cricos_code": "082265G"
   },
   {
@@ -22123,7 +22123,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Science in Astronomy and Astrophysics is a two-year coursework program at ANU's Acton campus. Students tailor courses across astrophysical techniques and computing, planetary science, stellar astrophysics, galaxies and cosmology, many with research or hands-on components including the acquisition and analysis of telescope data and the development of theoretical models. It also builds transferable skills in project management, programming and problem solving. Graduates work in astronomy and space research, data science, instrumentation, education and industry roles that value quantitative analysis.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -22139,7 +22139,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://programsandcourses.anu.edu.au/2026/program/NSCAA",
     "cricos_code": "0101476"
   },
   {
@@ -22156,7 +22156,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Science in Earth Sciences is a two-year program at ANU's Acton campus, Australia's leading academic research institution for Earth sciences and consistently ranked in the world's top ten. Students study courses ranging from computational geosciences and analytical techniques to biogeochemistry, experimental petrology, geochemistry, geochronology, geophysics, and ocean and climate change, with cutting-edge experimental, analytical and computational training. Graduates work in geoscience, resources and energy, environmental consulting, government surveys and research.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -22172,7 +22172,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://programsandcourses.anu.edu.au/2026/program/NSCES",
     "cricos_code": "0101480"
   },
   {
@@ -22189,7 +22189,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Science in Materials Science is a two-year program at ANU's Acton campus that immerses students in the interdisciplinary field of materials science, investigating the fundamental properties of materials and their applications across technology, healthcare, engineering and environmental science. Students gain a rigorous grounding in core principles plus specialised knowledge targeting challenges such as renewable energy systems, advanced batteries, nanomaterials and sensors, and tissue engineering. Graduates work in materials research and development, advanced manufacturing, energy, electronics and biomedical industries.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -22205,7 +22205,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://programsandcourses.anu.edu.au/2026/program/NSCMC",
     "cricos_code": "102930J"
   },
   {
@@ -22255,7 +22255,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Science in Precision Instrumentation and Measurement is a two-year program at ANU's Acton campus drawing on three leading research schools: physics, Earth sciences, and astronomy and astrophysics. Students learn from ANU scientists who have developed instrumentation for projects including the Nobel Prize-winning discovery of gravitational waves and high-resolution ion microprobes, focusing on the design and development of advanced scientific instrumentation. Graduates work in instrumentation, metrology, research and development, and precision engineering across research, defence and industry.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -22271,7 +22271,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://programsandcourses.anu.edu.au/2026/program/NSCPI",
     "cricos_code": "099248B"
   },
   {
@@ -22288,7 +22288,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Science in Quantum Technology is a two-year program at ANU's Acton campus preparing students for the emerging commercial quantum industry in computing, metrology and communications. As quantum technologies mature and attract major government and industry investment, the program builds the technical skills to serve this rapidly evolving field, with demand also growing in government, defence, finance and professional services. Graduates work in quantum hardware and software development, research, and deep-tech industry and government roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -22304,7 +22304,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://programsandcourses.anu.edu.au/2026/program/NSCQT",
     "cricos_code": "099252F"
   },
   {
@@ -22321,7 +22321,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Science in Theoretical Physics is a two-year program at ANU's Acton campus that brings students to the cutting edge of research in an interactive training environment, taught by leading physicists. It covers areas from quantum field theory to general relativity, building on ANU's contributions to global collaborations such as the detection of gravitational waves. Graduates work in physics research, computational and data-intensive roles, and technical positions across research institutes, industry and government.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -22337,7 +22337,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://programsandcourses.anu.edu.au/2026/program/NSCTP",
     "cricos_code": "0101481"
   },
   {
@@ -22387,7 +22387,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Social Research Methods is a one-year postgraduate program at ANU's Centre for Social Policy Research, Acton campus, that gives students the practical skills to conduct, commission and evaluate research in the social sciences. Students extend their skills in advanced research methods and apply them to real-world policy and societal issues, understanding the political, demographic and economic forces shaping society, taught by active researchers. Graduates work in social and policy research, evaluation, data analysis and research management across government, non-government organisations and consulting.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -22403,7 +22403,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://programsandcourses.anu.edu.au/2026/program/MSRM",
     "cricos_code": "108327B"
   },
   {
@@ -22420,7 +22420,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Statistical Data Analysis is a one-year postgraduate program at ANU's Acton campus that provides rigorous training in core statistical application and theory. As disciplines from biology and economics to psychology, physics, archaeology and medicine rely on qualified statisticians to make sense of data, it prepares graduates to work as professional statisticians. Graduates work as statisticians and data analysts across research, government, finance, health and technology.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -22436,7 +22436,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://programsandcourses.anu.edu.au/2026/program/MSDA",
     "cricos_code": "111568C"
   },
   {
@@ -22453,7 +22453,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Statistics is a two-year postgraduate program at ANU's Acton campus that provides rigorous training in core statistical application and theory and lets students specialise in a wide range of areas. As disciplines from biology and economics to psychology, physics, archaeology and medicine rely on qualified statisticians, it prepares graduates for sought-after professional roles. Graduates work as statisticians, biostatisticians and data scientists across research, government, finance, health and technology.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -22469,7 +22469,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://programsandcourses.anu.edu.au/2026/program/MSTAT",
     "cricos_code": "082353G"
   },
   {
@@ -22486,7 +22486,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Strategic and Defence Studies is a 1.5-year postgraduate program at ANU's Acton campus, in Australia's policy capital where scholarly excellence and government practice intersect. This 72-unit award deepens theoretical knowledge and builds practical skills for roles in defence policy, diplomatic strategy, intelligence analysis, strategic planning and corporate defence and security consulting, with options to study associated disciplines or undertake an independent research project. Graduates work in defence, foreign affairs, intelligence and strategic consulting.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -22502,7 +22502,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://programsandcourses.anu.edu.au/2026/program/MSDES",
     "cricos_code": "119057F"
   },
   {
@@ -22552,7 +22552,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Strategy and Defence is a one-year postgraduate program at ANU's Acton campus, in Australia's policy capital where academic scholarship and government practice intersect. It bridges theory and application, preparing graduates for roles in defence policy, diplomatic strategy, intelligence analysis, strategic planning and corporate defence and security consulting. Graduates work in defence, foreign affairs, intelligence and strategic and security consulting.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -22568,7 +22568,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://programsandcourses.anu.edu.au/2026/program/MSDEF",
     "cricos_code": "119058E"
   },
   {
@@ -22579,13 +22579,13 @@
     "name": "Master of Studies",
     "slug": "master-of-studies",
     "status": "published",
-    "duration_years": "2.0",
+    "duration_years": "1.5",
     "tuition_international": "47300",
     "tuition_domestic": null,
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Studies is an exit qualification only at ANU's Acton campus, and is not available for direct admission. It provides a flexible early or alternative exit point for students enrolled in a single or double master's degree, or a Master (Advanced) degree, who do not proceed to the full award. It recognises the graduate-level coursework a student has already completed across one or more disciplines, so the study is not lost. Because it is awarded on exit rather than designed as a program in its own right, the specific course mix varies with the master's degree the student was enrolled in.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -22601,7 +22601,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://programsandcourses.anu.edu.au/2026/program/MSTD",
     "cricos_code": "082356D"
   },
   {
@@ -22612,13 +22612,13 @@
     "name": "Master of Technology Governance",
     "slug": "master-of-technology-governance",
     "status": "published",
-    "duration_years": "1.5",
+    "duration_years": "1.0",
     "tuition_international": "53600",
     "tuition_domestic": null,
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Technology Governance is a one-year postgraduate program at ANU's Acton campus for working professionals and recent graduates advancing careers in data governance, digital transformation and technological change. It builds skills transferable to legislative and regulatory affairs, policy design and analysis, industry, civil society and advocacy. Graduates work in digital transformation and regulation units in government, compliance and enforcement offices, and organisations working on cybersecurity, privacy, data protection and consumer safety.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -22634,7 +22634,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://programsandcourses.anu.edu.au/2026/program/MTGOV",
     "cricos_code": "111567D"
   },
   {
