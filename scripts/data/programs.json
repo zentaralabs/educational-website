@@ -200290,7 +200290,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Advanced Computer Science (Honours) at the University of Western Australia covers areas from mobile data and cloud computing to artificial intelligence and advanced software development, giving students the tools and techniques to embrace technological challenges and devise innovative solutions. Students can specialise in Artificial Intelligence, International Cybersecurity, Computing and Data Science, or Quantum Computing, gaining practical skills, knowledge and connections. Graduates forge careers developing new technologies and advanced programming to overcome challenges in business, science and society.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -200306,7 +200306,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/bachelor-of-advanced-computer-science",
     "cricos_code": "102867M"
   },
   {
@@ -200317,13 +200317,13 @@
     "name": "Bachelor of Agribusiness",
     "slug": "bachelor-of-agribusiness",
     "status": "published",
-    "duration_years": "2.8",
+    "duration_years": "3.0",
     "tuition_international": "56000",
     "tuition_domestic": null,
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Agribusiness at the University of Western Australia prepares students for employment in areas related to agriculture, including finance, marketing, policy formation, business management and rural development. Students learn the business and economics skills needed to assume managerial and leadership roles, taking 12 core units with the opportunity to take electives to pursue their interests. Graduates work in agribusiness management, agricultural finance and marketing, policy and rural development roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -200339,7 +200339,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/bachelor-of-agribusiness",
     "cricos_code": "107572H"
   },
   {
@@ -200350,13 +200350,13 @@
     "name": "Bachelor of Agricultural Science",
     "slug": "bachelor-of-agricultural-science",
     "status": "published",
-    "duration_years": "2.8",
+    "duration_years": "3.0",
     "tuition_international": "56300",
     "tuition_domestic": null,
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Agricultural Science at the University of Western Australia prepares students for the agricultural systems of the future, integrating the rapidly developing field of agricultural technology with key agricultural science subjects. Students develop skills in digital agriculture, agricultural economics, soil science, and crop and livestock production, learning to integrate agricultural systems with new digital technologies for improved farm efficiency and productivity. Graduates work in agronomy, agribusiness, research, consulting and government roles across the agricultural sector.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -200372,7 +200372,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/bachelor-of-agricultural-science",
     "cricos_code": "107574F"
   },
   {
@@ -200383,13 +200383,13 @@
     "name": "Bachelor of Art History and Curatorial Studies",
     "slug": "bachelor-of-art-history-and-curatorial-studies",
     "status": "published",
-    "duration_years": "2.9",
+    "duration_years": "3.0",
     "tuition_international": "43600",
     "tuition_domestic": null,
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Art History and Curatorial Studies at the University of Western Australia blends knowledge of art history with practical curatorial skills, cultivating transferable skills in visual and spatial analysis, critical thought, and oral and written communication. The major combines art historical knowledge with curatorial methods, and offers opportunities for foreign study, industry placements and object-based learning, activating art history through hands-on engagement with exhibitions and curatorial practice. Graduates work in arts management, museum and gallery curation, art criticism and analysis, and across the wider cultural sector.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -200405,7 +200405,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/bachelor-of-art-history-and-curatorial-studies",
     "cricos_code": "116871M"
   },
   {
@@ -200416,13 +200416,13 @@
     "name": "Bachelor of Art History and Curatorial Studies (Honours)",
     "slug": "bachelor-of-art-history-and-curatorial-studies-honours",
     "status": "published",
-    "duration_years": "2.9",
+    "duration_years": "3.0",
     "tuition_international": "14500",
     "tuition_domestic": null,
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Art History and Curatorial Studies (Honours) at the University of Western Australia blends art historical knowledge with practical curatorial skills, giving students the opportunity to work in arts management, museum and gallery curation, and art criticism and analysis. The degree offers opportunities for foreign study, industry placements and object-based learning, activating art history through hands-on experience and engagement with exhibitions and curatorial practice. The honours year adds an independent research project. Graduates work in galleries, museums, auction houses, arts organisations and as writers and critics, and are prepared for research higher degree study.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -200438,7 +200438,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/bachelor-of-art-history-and-curatorial-studies",
     "cricos_code": "117198J"
   },
   {
@@ -200515,13 +200515,13 @@
     "name": "Bachelor of Biological Science",
     "slug": "bachelor-of-biological-science",
     "status": "published",
-    "duration_years": "2.8",
+    "duration_years": "3.0",
     "tuition_international": "56300",
     "tuition_domestic": null,
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Biological Science at the University of Western Australia equips students with skills and knowledge valued by employers around the globe and enables them to understand the vulnerabilities and resilience of life on our planet. Students explore the growth, reproduction, adaptation and evolution of living organisms and discover how species and ecological communities can be managed, conserved and restored. Graduates work in conservation, ecological management, research and environmental roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -200537,7 +200537,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/bachelor-of-biological-science",
     "cricos_code": "107722K"
   },
   {
@@ -200554,7 +200554,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Biomedical Science at the University of Western Australia is a comprehensive undergraduate degree designed to meet growing global demand for graduates with expertise across a range of health science disciplines. Students specialise in one or two of the 10 majors available, or combine a biomedical science major with another from Arts, Commerce or Science, tailoring their studies to their career goals. It is a practical, flexible degree covering subjects from biochemistry to physiology. Graduates work in medical research, laboratory science and health roles, or progress to health professional degrees.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -200570,7 +200570,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/bachelor-of-biomedical-science",
     "cricos_code": "095001B"
   },
   {
@@ -200587,7 +200587,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Biomedicine (Specialised) at the University of Western Australia is a practical degree providing learning across a broad arena of health and medical disciplines, designed to articulate with UWA's health professional degrees. Multiple specialisations within the biomedical disciplines enable breadth and depth of learning, including Aboriginal Health, Human Biology, Genetics, Biochemistry, Physiology, Pharmacology, Microbiology and Pathology. Graduates progress to health professional study or to research and laboratory roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -200603,7 +200603,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/bachelor-of-biomedicine",
     "cricos_code": "112846M"
   },
   {
@@ -200680,13 +200680,13 @@
     "name": "Bachelor of Criminology and Criminal Justice",
     "slug": "bachelor-of-criminology-and-criminal-justice",
     "status": "published",
-    "duration_years": "2.8",
+    "duration_years": "3.0",
     "tuition_international": "46000",
     "tuition_domestic": null,
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Criminology and Criminal Justice at the University of Western Australia teaches students about the role criminology plays in understanding crime and how society deals with it, as well as effective criminal justice interventions. Students draw on knowledge and perspectives from criminology, law, psychology, history, anthropology, geography and forensic science, learning about contemporary explanations for crime and criminality, the structure of the criminal justice system, and transnational and international crime. Graduates work in policy, research, corrections, policing and community roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -200702,7 +200702,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/bachelor-of-criminology-and-criminal-justice",
     "cricos_code": "111633K"
   },
   {
@@ -200746,13 +200746,13 @@
     "name": "Bachelor of Earth Science",
     "slug": "bachelor-of-earth-science",
     "status": "published",
-    "duration_years": "2.8",
+    "duration_years": "3.0",
     "tuition_international": "56300",
     "tuition_domestic": null,
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Earth Sciences at the University of Western Australia is ideal for students curious about the complex system that comprises the solid Earth, its oceans and atmosphere, and the place of Earth in the solar system and beyond. Earth scientists have a key role in understanding environmental challenges and the sustainability of resources in a changing world, and the degree provides knowledge and skills highly valued by employers. Graduates work in resources, energy, environmental, geoscience and research roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -200768,7 +200768,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/bachelor-of-earth-sciences",
     "cricos_code": "107428E"
   },
   {
@@ -200884,7 +200884,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Environmental Design at the University of Western Australia is a broad study area that involves design and planning in relation to natural and constructed environments. Students choose from degree-specific majors and build a foundation for professional practice and further study in architecture, landscape architecture, urban and regional planning and related fields. Graduates progress to accredited master's degrees or to roles across the design, planning and built-environment sectors.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -200900,7 +200900,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/bachelor-of-environmental-design",
     "cricos_code": "102863D"
   },
   {
@@ -200911,13 +200911,13 @@
     "name": "Bachelor of Environmental Science",
     "slug": "bachelor-of-environmental-science",
     "status": "published",
-    "duration_years": "2.8",
+    "duration_years": "3.0",
     "tuition_international": "56300",
     "tuition_domestic": null,
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Environmental Science at the University of Western Australia teaches understanding, rational analysis and improvement of human impacts on the natural world, through critical review of current knowledge, systematic observation, experimentation, modelling and rigorous data analysis. Graduates have strong theoretical knowledge combined with practical and creative skills, equipping them to solve diverse and emerging environmental problems and communicate unbiased information to the wider community. Graduates work in environmental management, consulting, policy and research roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -200933,7 +200933,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/bachelor-of-environmental-science",
     "cricos_code": "107578B"
   },
   {
@@ -200950,7 +200950,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Geographical and Spatial Science at the University of Western Australia develops fundamental spatial science skills, knowledge and techniques to solve the world's biggest environmental issues. The course has a strong focus on understanding the environmental processes, including climate and hydrology, that interact with landscapes and people and drive economies, along with broader geography principles, demography and regional development. Graduates work in GIS and spatial analysis, environmental management, planning and research roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -200966,7 +200966,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/bachelor-of-geographical-and-spatial-science",
     "cricos_code": "114375K"
   },
   {
@@ -200983,7 +200983,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Hospitality Management at the University of Western Australia builds a foundation in business and hospitality management, combining core areas such as leadership, marketing, economics and global business practices with specialised hospitality studies. This integrated approach ensures students develop both the theoretical understanding and practical capability required in a service-driven industry. Graduates work in management roles across hotels, events, tourism, food and beverage and the wider hospitality sector.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -200999,7 +200999,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/bachelor-of-hospitality-management",
     "cricos_code": "120707M"
   },
   {
@@ -201016,7 +201016,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Human Rights at the University of Western Australia is a unique, interdisciplinary program that equips students with the knowledge and skills necessary to engage with real-world issues in human rights and related areas such as social justice. Students examine human rights ideas from legal, historical, political, practical and philosophical perspectives, as a complex set of global institutions has evolved around human rights alongside a flourishing field of academic inquiry. Graduates work in advocacy, government, international organisations, law and policy roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -201032,7 +201032,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/bachelor-of-human-rights",
     "cricos_code": "111640M"
   },
   {
@@ -201043,13 +201043,13 @@
     "name": "Bachelor of Human Sciences",
     "slug": "bachelor-of-human-sciences",
     "status": "published",
-    "duration_years": "2.8",
+    "duration_years": "3.0",
     "tuition_international": "56300",
     "tuition_domestic": null,
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Human Sciences at the University of Western Australia gives students an interdisciplinary understanding of human function and behaviour, including variation, and how humans adapt to challenging and disruptive change. The degree houses a suite of majors that examine the biology of being human in today's world, with an emphasis on how biology and behaviour are influenced by genetic, developmental, ecological and cultural factors. Students build skills in analytical thinking, critical thinking and complex problem-solving. Graduates work in health, research, policy and analytical roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -201065,7 +201065,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/bachelor-of-human-sciences",
     "cricos_code": "108367E"
   },
   {
@@ -201115,7 +201115,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of International Relations at the University of Western Australia is a professional and practice-oriented program that provides the conceptual knowledge and real-world experience required to tackle pressing global challenges, from pandemics and conflict to supply chain disruptions and climate-related emergencies. Students develop a rigorous understanding of international relations from political, legal, historical and sociological perspectives, with unique training focused on the Indo-Pacific and Indian Ocean regions. Graduates work in diplomacy, government, international organisations, NGOs and research.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -201131,7 +201131,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/bachelor-of-international-relations",
     "cricos_code": "115274G"
   },
   {
@@ -201175,13 +201175,13 @@
     "name": "Bachelor of Marine Science",
     "slug": "bachelor-of-marine-science",
     "status": "published",
-    "duration_years": "2.8",
+    "duration_years": "3.0",
     "tuition_international": "56300",
     "tuition_domestic": null,
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Marine Science at the University of Western Australia offers the full breadth of the marine science discipline, combining knowledge of marine life with a solid understanding of the physical environment across all levels of biological organisation. Students learn about the complex interactions in marine ecosystems and how to manage these systems in a changing world through lectures, laboratory exercises and field excursions, using UWA's nationally unique facilities. Graduates gain skills valued by employers worldwide and clear pathways into master's study, and work in marine research, conservation and management.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -201197,7 +201197,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/bachelor-of-marine-science",
     "cricos_code": "107723J"
   },
   {
@@ -201214,7 +201214,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Mathematics at the University of Western Australia provides high-achieving students with a solid foundation in the fundamental concepts and theories of mathematics. It covers core subjects like calculus, linear algebra and statistics while exploring advanced topics in complex systems, networks, abstract algebra, analysis, topology, probability theory and numerical methods. Students develop problem-solving skills and analytical reasoning, preparing them for careers as mathematicians, data scientists, statisticians and analysts, filling strong demand for graduates who can apply mathematical techniques to real-world problems.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -201230,7 +201230,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/bachelor-of-mathematics",
     "cricos_code": "114341J"
   },
   {
@@ -201241,13 +201241,13 @@
     "name": "Bachelor of Media and Communication",
     "slug": "bachelor-of-media-and-communication",
     "status": "published",
-    "duration_years": "2.9",
+    "duration_years": "3.0",
     "tuition_international": "43600",
     "tuition_domestic": null,
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Media and Communication at the University of Western Australia offers applied learning opportunities and skills for those interested in working directly in media and communication industries. Focused on the core techniques of ideation, engagement and impact, the interdisciplinary program spans media production, journalism, strategic communication and digital storytelling, developing versatile skills in media development and analysis. Graduates are ready to navigate the dynamic digital culture and work across media production, communication, journalism and content roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -201263,7 +201263,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/bachelor-of-media-and-communication",
     "cricos_code": "116870A"
   },
   {
@@ -201280,7 +201280,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Modern Languages at the University of Western Australia enables students to study two languages in depth, achieving high competency in reading, listening, speaking and writing while acquiring transferable skills such as communication, teamwork and problem-solving. Students choose from Chinese, French, German, Indonesian, Italian, Japanese, Korean and Spanish, all available to absolute beginners, and combining the degree with fields like engineering, science or business provides a competitive advantage. Graduates work in translation, international business, government, education and diplomacy.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -201296,7 +201296,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/bachelor-of-modern-languages",
     "cricos_code": "114371C"
   },
   {
@@ -201307,13 +201307,13 @@
     "name": "Bachelor of Molecular Sciences",
     "slug": "bachelor-of-molecular-sciences",
     "status": "published",
-    "duration_years": "2.8",
+    "duration_years": "3.0",
     "tuition_international": "56300",
     "tuition_domestic": null,
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Molecular Sciences at the University of Western Australia develops an understanding of life at the molecular level, including the complex functioning of cells, tissues and organisms. Training in cutting-edge technologies equips students with the tools to tackle challenges in the biological and health sciences, and the degree serves as an excellent stepping stone into careers in the biosciences. Graduates work in laboratory research, biotechnology, pharmaceuticals and health-related roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -201329,7 +201329,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/bachelor-of-molecular-sciences",
     "cricos_code": "107482K"
   },
   {
@@ -201346,7 +201346,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Music at the University of Western Australia allows students to work with world-class musicians to develop their skills as emerging artists, with specialisations for composers, performers and musicologists as well as those focused on creative music technology. This highly practical degree means students learn performance by performing, and make industry connections with leading players in Western Australia and internationally, including the West Australian Symphony Orchestra and West Australian Opera. Graduates pursue performance, composition, teaching and music technology careers.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -201362,7 +201362,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/bachelor-of-music",
     "cricos_code": "102864C"
   },
   {
@@ -201577,7 +201577,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Social and Environmental Sustainability at the University of Western Australia provides a unique blend of social sciences, humanities, environmental studies and policy for students passionate about creating a sustainable future. Students study the latest research and best practices in sustainability, hear from community and industry leaders, and gain hands-on experience tackling complex social and environmental challenges, with the option to take one of 10 interdisciplinary science minors. Graduates work in sustainability, environmental policy, community development and advocacy roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -201593,7 +201593,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/bachelor-of-social-and-environmental-sustainability",
     "cricos_code": "114460B"
   },
   {
@@ -201610,7 +201610,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Social Work (Honours) at the University of Western Australia develops students' skills and knowledge to bring about positive change and socially just outcomes in the wellbeing of individuals, organisations and communities, equipping them to advocate for and improve the lives of individuals, families and communities. Built in collaboration with industry, the degree includes supervised field education placements. Graduates work in child protection, health, mental health, community development and policy, and are eligible for membership of the Australian Association of Social Workers.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -201626,7 +201626,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/bachelor-of-social-work",
     "cricos_code": "114339C"
   },
   {
@@ -201637,13 +201637,13 @@
     "name": "Bachelor of Sport and Exercise Sciences",
     "slug": "bachelor-of-sport-and-exercise-sciences",
     "status": "published",
-    "duration_years": "2.8",
+    "duration_years": "3.0",
     "tuition_international": "52900",
     "tuition_domestic": null,
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Sport and Exercise Sciences at the University of Western Australia takes a multidisciplinary approach to examine humans' relationship with sport, exercise and physical activity, helping tackle major health challenges by understanding the effects of physical activity on human health and performance. Theory is combined with hands-on laboratory and practical work so students develop technical and communication skills, choosing from four degree-specific majors. Graduates work in exercise science, strength and conditioning, sports performance and health promotion, or progress to clinical exercise physiology.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -201659,7 +201659,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/bachelor-of-sport-and-exercise-sciences",
     "cricos_code": "108368D"
   },
   {
@@ -201973,7 +201973,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Doctor of Clinical Dentistry at the University of Western Australia is a three-year full-time specialist training program for qualified dentists. It is a degree by coursework that includes a supervised research project and report, with coursework covering biostatistics, research methodology, oral and maxillofacial radiography and radiology, and the practical aspects of specialist dentistry. The program combines didactic teaching, weekly seminars, journal clubs and clinics with a supervised research project, and offers interdisciplinary teaching and research opportunities. Graduates practise as registered dental specialists.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -201989,7 +201989,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/doctor-of-clinical-dentistry",
     "cricos_code": "068911K"
   },
   {
@@ -202006,7 +202006,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Doctor of Dental Medicine at the University of Western Australia is delivered by Western Australia's only tertiary dental school, which has trained dentists for more than 75 years. The course consists of 20 units within modularised streams covering comprehensive clinical care, developmental and behavioural sciences, diagnostic and surgical sciences, and restorative and rehabilitative sciences. Core modules cover fundamental dental and medical sciences, while clinical practice modules cover patient care, preventive and conservative dentistry, restorative dentistry, and child and adolescent dental health. Graduates are qualified to register and practise as dentists.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -202022,7 +202022,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/doctor-of-dental-medicine",
     "cricos_code": "089787B"
   },
   {
@@ -202072,7 +202072,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Doctor of Medicine at the University of Western Australia aims to produce graduates committed to the wellbeing of the patient, community and society as responsible, accountable, scholarly, capable and caring doctors. The course prepares graduates with the clinical and professional attributes required for successful internships and future training. In the first year students gain background knowledge in biomedical sciences, and in years two and three they undertake clinical attachments in wards and clinics. Graduates enter internship and prevocational training on the pathway to registration as a medical practitioner.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -202088,7 +202088,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/doctor-of-medicine",
     "cricos_code": "089788A"
   },
   {
@@ -202138,7 +202138,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Doctor of Optometry at the University of Western Australia is a three-year program that combines on-campus teaching and clinical placements. Students are trained in the early detection, diagnosis, treatment and management of eye diseases and the rehabilitation of conditions of the visual system. Course content and teaching are based on the competency standards for optometrists in Australia and New Zealand, covering professional responsibilities, communication, patient examination, diagnosis and management, and health information management. Graduates are qualified to register and practise as optometrists, detecting and managing eye conditions across the community.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -202154,7 +202154,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/doctor-of-optometry",
     "cricos_code": "0101919"
   },
   {
@@ -202171,7 +202171,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Doctor of Pharmacy at the University of Western Australia is accredited by the Australian Pharmacy Council and approved by the Pharmacy Board of Australia as a qualification leading to registration as a pharmacist in Australia. Delivered intensively over two years, the course integrates advanced pharmaceutical sciences with immersive practical training in community and hospital pharmacy, covering pharmacy practice, clinical pharmacy, pharmaceutics, medicinal chemistry, pharmacology, pharmacotherapy and health systems. It is designed to prepare graduates for dynamic roles in contemporary and emerging pharmacy practice.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -202187,7 +202187,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/doctor-of-pharmacy",
     "cricos_code": "051547J"
   },
   {
@@ -202369,7 +202369,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Doctor of Podiatric Medicine at the University of Western Australia is a three-year program for entry into professional practice as a podiatrist. It aims to produce graduates able to treat and educate their patients effectively and appropriately in a professional and responsible way, using teaching methods including lectures, tutorials, practical training and directed self-learning. Case-based and problem-based learning emphasise patient-focused practice, and clinical practice begins in second year and continues into third year. Graduates register and practise as podiatrists, diagnosing and treating conditions of the foot and ankle.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -202385,7 +202385,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/doctor-of-podiatric-medicine",
     "cricos_code": "075343A"
   },
   {
@@ -202468,7 +202468,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Business at the University of Western Australia covers the cornerstone areas of modern business, equipping participants with the skills to advance their careers and reach decision-making roles in their chosen industry or profession. The course consists of four units covering accounting, economic management, marketing and organisational behaviour, and can be studied full-time, part-time or online. It is designed for graduates of non-business disciplines and experienced professionals, and can serve as an entry pathway to the MBA. Graduates use it to move into management roles across sectors.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -202484,7 +202484,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/graduate-certificate-in-business",
     "cricos_code": "089264G"
   },
   {
@@ -202501,7 +202501,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Commerce at the University of Western Australia comprises four units in accounting, economics, management and marketing. It is a standalone qualification that can also serve as an entry point into the Master of Commerce, and is ideal for graduates who do not hold an undergraduate degree in business. A postgraduate qualification in commerce from the internationally accredited UWA Business School can boost employment opportunities globally. Graduates use it to build business knowledge and progress toward specialist and management roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -202517,7 +202517,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/graduate-certificate-in-commerce",
     "cricos_code": "089265F"
   },
   {
@@ -202534,7 +202534,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Finance at the University of Western Australia is designed to provide a practical grounding in financial affairs for careers in corporate banking and finance, stock-market trading, insurance and investment management. The course equips students to apply technical knowledge and skills to a variety of finance problems, such as capital investment decisions and investment analysis. It can be taken as a standalone qualification or as a pathway into further postgraduate finance study. Graduates work in banking, corporate finance, investment and analysis roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -202550,7 +202550,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/graduate-certificate-in-finance",
     "cricos_code": "097870G"
   },
   {
@@ -202567,7 +202567,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Forensic Anthropology at the University of Western Australia is designed to acquaint students with current developments in basic forensic sciences, particularly the medical and social sciences of direct relevance to forensic anthropology. Forensic anthropology has practical applications in forensic investigations as well as humanitarian efforts for the investigation of both living and deceased individuals. The course can be taken on its own or as a pathway into the Graduate Diploma and Master of Forensic Anthropology. Graduates work in forensic, investigative and humanitarian settings.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -202583,7 +202583,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/graduate-certificate-in-forensic-anthropology",
     "cricos_code": "093805D"
   },
   {
@@ -202600,7 +202600,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Health Professional Education at the University of Western Australia addresses fundamental issues in health professional education by fostering interdisciplinary discussion and collaboration while participants develop knowledge and skills as educators within their field. The course comprises three core units covering the principles of teaching and learning, assessment, evaluation and research methods in health professions education, plus one elective unit that lets students explore an area of educational interest in more detail. Graduates take on teaching, supervision and curriculum roles across the health professions.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -202616,7 +202616,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/graduate-certificate-in-health-professions-education",
     "cricos_code": "058206G"
   },
   {
@@ -202666,7 +202666,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in International Relations at the University of Western Australia is a professionally oriented postgraduate course studied over one semester full-time equivalent. It offers the opportunity to gain expertise in international relations with a particular focus on the dynamic Indo-Pacific and Indian Ocean regions, providing knowledge, skills and networks for a career in foreign affairs and diplomacy, government, international and non-governmental organisations, the media and education. The course offers credited internship options and engagement in professional networks.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -202682,7 +202682,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/graduate-certificate-in-international-relations",
     "cricos_code": "069309J"
   },
   {
@@ -202699,7 +202699,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Population Health Studies at the University of Western Australia provides a pathway for those who wish to enrol in a Master of Public Health but who do not have the required educational background. Students gain an introduction to the fundamental concepts of public health and learn how public health works to create healthier populations, covering epidemiology, biostatistics, qualitative research methods, health economics and health promotion, plus the biological, environmental, economic and social determinants of health. Graduates progress to further public health study or to entry-level roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -202715,7 +202715,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/graduate-certificate-in-population-health-studies",
     "cricos_code": "074756K"
   },
   {
@@ -202732,7 +202732,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Public Policy at the University of Western Australia gives students a multidisciplinary understanding of how governments work to create a better future. Students who study public policy work across all levels of government, the not-for-profit sector, consulting firms and international organisations, as social entrepreneurs, policy analysts, consultants to government or holders of public office. The course helps students understand, design and evaluate economic and public policies, and can articulate into the Master of Public Policy.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -202748,7 +202748,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/graduate-certificate-in-public-policy",
     "cricos_code": "095760G"
   },
   {
@@ -202765,7 +202765,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Rural and Remote Medicine at the University of Western Australia is a broad-based course for those wishing to pursue a career in teaching or research focused on rural and remote medicine, with Indigenous health a special focus. As rural and remote medicine is a generalist discipline, the range of relevant topics is wide, from large-scale epidemiological studies to educational, qualitative and clinical studies. The course can articulate into higher degrees. Graduates work in rural and remote clinical, teaching and research roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -202781,7 +202781,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/graduate-certificate-in-rural-and-remote-medicine",
     "cricos_code": "058921B"
   },
   {
@@ -202798,7 +202798,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Social Policy Practice at the University of Western Australia enables practising social workers to build on their knowledge of advanced social work theory, practice and research methods. The course is open to graduates with a bachelor degree, and students may proceed to the Graduate Diploma in Advanced Social Work on completion. Graduates apply advanced social policy knowledge in practice, management and advocacy roles across human services.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -202814,7 +202814,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/graduate-certificate-in-social-policy-practice",
     "cricos_code": "089964A"
   },
   {
@@ -202831,7 +202831,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Strategic Communication at the University of Western Australia gives students a preliminary overview of the skills, knowledge and capabilities required to participate in the contemporary communications environment across industry, government agencies and community organisations. Students gain practical skills and understanding relevant to a broad range of communications and media roles, and advance their capabilities for developing effective communication strategies and projects across digital and traditional formats. The course can articulate into the Graduate Diploma and Master of Strategic Communication.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -202847,7 +202847,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/graduate-certificate-in-strategic-communication",
     "cricos_code": "083874G"
   },
   {
@@ -202864,7 +202864,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Studies at the University of Western Australia allows students to create their own course, undertaking four postgraduate units of optional breadth from across all faculties before deciding whether to articulate into the Master of Studies. In consultation with a course adviser, students complete 24 points of breadth from units available across the University. The course suits students who want a flexible, self-directed postgraduate qualification tailored to their academic, professional or personal goals.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -202880,7 +202880,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/graduate-certificate-in-studies",
     "cricos_code": "089507D"
   },
   {
@@ -202897,7 +202897,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Translation Studies at the University of Western Australia provides foundational knowledge about translation theory and practice and develops students' skills in translating between English and a chosen language: Arabic, Chinese, French, German, Indonesian, Italian, Japanese, Korean, Portuguese or Spanish. Lecturers are both academics and professional translators, so teaching is enriched with theoretical and practical experience. The course can articulate into the Master of Translation Studies. Graduates pursue bilingual and multilingual careers across sectors.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -202913,7 +202913,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/graduate-certificate-in-translation-studies",
     "cricos_code": "089965M"
   },
   {
@@ -202924,13 +202924,13 @@
     "name": "Graduate Certificate in Urban Design",
     "slug": "graduate-certificate-in-urban-design",
     "status": "published",
-    "duration_years": "0.5",
+    "duration_years": "1.0",
     "tuition_international": "47700",
     "tuition_domestic": null,
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Urban Design at the University of Western Australia, delivered by the Australian Urban Design Research Centre, provides a preliminary overview of the urban design discipline and an introduction to its core principles, theories and practices. Students develop techniques of urban analysis and design propositions oriented to the traditions, aims and means of urban design. The course serves as a top-up qualification for professional practitioners and graduates of related fields, or an introduction for graduates from unrelated fields, and can articulate into the Graduate Diploma and Master of Urban Design.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -202946,7 +202946,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/graduate-certificate-in-urban-design",
     "cricos_code": "058209D"
   },
   {
@@ -202963,7 +202963,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Diploma in Advanced Social Work at the University of Western Australia involves two compulsory units and a choice from a range of other advanced social work units, depending on availability. The course is open to social work graduates with a minimum of two years' experience as a professional social worker. Areas available for study include family-based practice, community and statutory practice, gender and cultural issues, disability, and management. Graduates advance into senior practice, supervision and management roles across human services.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -202979,7 +202979,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/graduate-diploma-in-advanced-social-work",
     "cricos_code": "024808F"
   },
   {
@@ -202996,7 +202996,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Diploma in Building Information Modelling at the University of Western Australia is designed by construction professionals for the next generation of professionals, and is beneficial to anyone working in engineering, construction, quantity surveying, architecture, project management or associated industries. The course extends practice into powerful and valuable applications of digitally based, data-rich building information models, helping students create innovative solutions for technological, economic and built futures. Graduates apply BIM skills to major infrastructure and building projects.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -203012,7 +203012,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/graduate-diploma-in-building-information-modelling",
     "cricos_code": "102292A"
   },
   {
@@ -203029,7 +203029,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Diploma in Clinical Psychology at the University of Western Australia is a bridging course for practitioners who have completed a master's degree or equivalent in clinical neuropsychology and are qualified with the Psychology Board of Australia, allowing them to upskill in clinical psychology. On completion, graduates are eligible for endorsement as a clinical psychologist with the Psychology Board of Australia and AHPRA. It is usually taken as a two-year part-time course, which suits practitioners who are working while they study.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -203045,7 +203045,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/graduate-diploma-in-clinical-psychology",
     "cricos_code": "083847K"
   },
   {
@@ -203095,7 +203095,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Diploma in Forensic Anthropology at the University of Western Australia acquaints students with current developments in basic forensic sciences, particularly the medical and social sciences of direct relevance to forensic anthropology, and enables students to undertake advanced studies in the field. Forensic anthropology has practical applications in forensic investigations as well as humanitarian efforts for the investigation of both living and deceased individuals. Graduates work in forensic, investigative and humanitarian settings, or progress to the Master of Forensic Anthropology.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -203111,7 +203111,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/graduate-diploma-in-forensic-anthropology",
     "cricos_code": "093806C"
   },
   {
@@ -203128,7 +203128,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Diploma in Health Professions Education at the University of Western Australia addresses fundamental issues in health professional education by fostering interdisciplinary discussion and collaboration while participants develop knowledge and skills as educators within their field. The course comprises core units in the principles of teaching and learning, assessment, evaluation and research methods, plus elective units that allow students to explore an area of educational interest in further detail. Graduates take on teaching, supervision and curriculum leadership roles across the health professions.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -203144,7 +203144,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/graduate-diploma-in-health-professions-education",
     "cricos_code": "058207F"
   },
   {
@@ -203161,7 +203161,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Diploma in Infectious Diseases at the University of Western Australia is aimed at science-based and medical professionals intending to work in hospital diagnostic or research laboratories, medical clinics, government health departments and international agencies. Units in the course have a practical emphasis enhanced by classes in the adjacent PathWest laboratories. Graduates apply their knowledge to the diagnosis, prevention and management of infectious diseases across laboratory, clinical and public health settings.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -203177,7 +203177,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/graduate-diploma-in-infectious-diseases",
     "cricos_code": "058926G"
   },
   {
@@ -203194,7 +203194,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Diploma in International Relations at the University of Western Australia is a professionally oriented postgraduate course studied over two semesters full-time equivalent. It offers the opportunity to gain expertise in international relations with a particular focus on the dynamic Indo-Pacific and Indian Ocean regions, and prepares students for a career in foreign affairs and diplomacy, government, international and non-governmental organisations, the media and education. The course offers credited internship options and engagement in professional networks.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -203210,7 +203210,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/graduate-diploma-in-international-relations",
     "cricos_code": "069310E"
   },
   {
@@ -203227,7 +203227,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Diploma in Law at the University of Western Australia is designed to equip practising lawyers and law graduates with an advanced understanding of the law to meet the challenges of the dynamic workplace. Students learn from world-class teaching staff and study alongside the next generation of leaders in legal practice, government, business and the not-for-profit sector. The course consists of four postgraduate option units chosen from an extensive list. Graduates deepen their specialist legal knowledge and advance their careers.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -203243,7 +203243,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/graduate-diploma-in-law",
     "cricos_code": "026880D"
   },
   {
@@ -203260,7 +203260,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Diploma in Natural Resources Law at the University of Western Australia is ideal for those looking to expand their knowledge of the mining, energy and natural resources sector or to move into this highly regulated industry. The course is available for law and non-law graduates, and depending on qualifications it may articulate into the Master of Resources and International Commercial Law or the Master of Mining and Energy Law. Graduates work in legal, compliance, policy and advisory roles across the resources sector.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -203276,7 +203276,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/graduate-diploma-in-natural-resources-law",
     "cricos_code": "095412E"
   },
   {
@@ -203326,7 +203326,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Diploma in Strategic Communication at the University of Western Australia enables students to develop the skills, knowledge and capabilities required to participate in the contemporary communications environment in industry, government agencies and community organisations. The course is tailored to advance creative and organisational capability, developing practical skills relevant to communication strategy and managing communication projects across digital and traditional media formats. It can articulate into the Master of Strategic Communication. Graduates work across communication, media and campaign roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -203342,7 +203342,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/graduate-diploma-in-strategic-communication",
     "cricos_code": "083876E"
   },
   {
@@ -203359,7 +203359,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Diploma in Urban Design at the University of Western Australia is delivered by the Australian Urban Design Research Centre and provides a focused year of urban design history, theory, implementation strategy and studio-based learning. Building on the Graduate Certificate, students gain experience as individual designers and in interdisciplinary groups working on the complex nature of urban issues, and gain preliminary experience in conducting independent research. The course can be taken on its own or as a stepping stone into the Master of Urban Design.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -203375,7 +203375,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/graduate-diploma-in-urban-design",
     "cricos_code": "058210M"
   },
   {
@@ -203458,7 +203458,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Advanced Social Work (Research) at the University of Western Australia is a course of supervised independent research assessed on the basis of a thesis. It allows experienced social workers to hone their professional skills with a high-level research degree, developing advanced research capability in an area of social work theory, practice or policy. Graduates move into research, senior practice, policy and academic roles across the human services sector.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -203474,7 +203474,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-advanced-social-work",
     "cricos_code": "003324M"
   },
   {
@@ -203491,7 +203491,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Agricultural Economics at the University of Western Australia focuses on analysis of production, consumption and trade issues in the global food, fibre and energy sectors. There are two entry points: a fast-track program for graduates with a background in economics or agricultural economics, and a comprehensive program that rapidly develops skills for those changing careers. Graduates leave with the technical skills to make leading contributions in policy development and economic analysis, and to drive business profitability, and are well positioned to advance their careers.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -203507,7 +203507,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-agricultural-economics",
     "cricos_code": "089266E"
   },
   {
@@ -203524,7 +203524,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Agricultural Science at the University of Western Australia prepares students for the rapidly evolving field of agricultural science as global demands for food and fibre increase and agricultural systems face environmental, social and economic pressures. Students develop an understanding of the complex factors that shape agricultural systems along with the knowledge and skills needed to maintain or increase production levels sustainably. Graduates work in research, agribusiness, consulting, government and industry roles across the agricultural sector.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -203540,7 +203540,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-agricultural-science",
     "cricos_code": "074945E"
   },
   {
@@ -203557,7 +203557,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Applied Finance at the University of Western Australia covers a wide range of applied finance topics leading to careers in corporate banking and finance, stock-market trading, insurance, investment management and other areas of applied finance. It is a practical course designed for graduates already working in the finance sector as well as those with a non-finance background who wish to move into finance. Delivered by the UWA Business School, it is a path to a global finance career.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -203573,7 +203573,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-applied-finance",
     "cricos_code": "083270B"
   },
   {
@@ -203590,7 +203590,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Applied Human Performance Science at the University of Western Australia aims to improve the knowledge, understanding and practical skills of practitioners working, or intending to work, in the human performance industry. While vocationally focused courses in human high performance are often dedicated to professional sport, peak performance is also critical for productivity, safety and effectiveness in domains such as occupational health and safety, mining, defence and the performing arts. The course expands on knowledge and practice in high-performance settings. Graduates work as performance scientists and consultants across sport and industry.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -203606,7 +203606,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-applied-human-performance-science",
     "cricos_code": "108371J"
   },
   {
@@ -203623,7 +203623,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Architecture at the University of Western Australia provides an education in the conceptualisation, design, construction and representation of buildings and other structures of a range of types and scales. Students develop the ability to integrate information drawn from a range of subject areas and acquire advanced knowledge and skills in technology, structures and professional practice, applied through design studio work. The degree prepares students for careers in the creative and diverse world of architectural practice and toward professional registration as an architect.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -203639,7 +203639,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-architecture",
     "cricos_code": "058203K"
   },
   {
@@ -203656,7 +203656,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Bioinformatics at the University of Western Australia develops the computational and data analysis skills needed to manage and interpret the flood of new information being discovered in biology and medicine. Bioinformatics applies and develops methods from computer science to solve challenges in molecular biology and medicine, and as data and technology advance in genetics, genomics and phenotypic data, people with these skills are increasingly in demand. Graduates work in research, biotechnology, health and data science roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -203672,7 +203672,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-bioinformatics",
     "cricos_code": "103500A"
   },
   {
@@ -203689,7 +203689,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Biological Science at the University of Western Australia takes advantage of Western Australia's status as a terrestrial biodiversity hot-spot, offering exceptional opportunities to study unique plants and animals that have evolved in the region's wetlands, forests and deserts. Students gain advanced understanding and practical skills in ecology, evolution, genetics, species identification, reproduction and behaviour, and can apply their knowledge to conserving species and habitats through field and laboratory projects supported by world-class researchers. Graduates work in conservation, environmental management and research.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -203705,7 +203705,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-biological-science",
     "cricos_code": "074948B"
   },
   {
@@ -203722,7 +203722,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Biomedical Science at the University of Western Australia emphasises cutting-edge research and its translation to healthy living and to the clinical diagnosis and treatment of disease. Students advance their knowledge through coursework or research, with the discipline increasingly embracing human genetics, epigenetics and genomics to understand how gene-environment interactions define the human phenotype in normal and diseased states. The program places strong emphasis on developing research literacy. Graduates work in medical research, laboratory science and health-related roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -203738,7 +203738,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-biomedical-science",
     "cricos_code": "083856J"
   },
   {
@@ -203755,7 +203755,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Biotechnology at the University of Western Australia offers a thorough grounding in state-of-the-art biotechnology combined with training in enterprise, commercialisation and intellectual property protection. Students develop the theory of genetics and molecular biology alongside skills training in practical techniques such as genomics, proteomics, metabolomics, recombinant DNA methods and bioinformatics. Biotechnology gives rise to new food, fibre and biochemical production routes and strategies for environmental protection. Graduates work in biotechnology, pharmaceutical, agricultural and research roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -203771,7 +203771,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-biotechnology",
     "cricos_code": "083859F"
   },
   {
@@ -203788,7 +203788,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Building Information Modelling at the University of Western Australia is designed by construction professionals for the next generation of professionals, and is beneficial to anyone working in engineering, construction, quantity surveying, architecture, project management or associated industries. The course extends practice into powerful and valuable applications of digitally based, data-rich building information models, developing the potential to create innovative solutions for technological, economic and built futures. Graduates apply BIM skills to major infrastructure and building projects in Western Australia and beyond.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -203804,7 +203804,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-building-information-modelling",
     "cricos_code": "094494F"
   },
   {
@@ -203887,7 +203887,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Business Information and Logistics Management at the University of Western Australia blends studies in information systems, management science and decision support systems. Students develop and expand skills to manage IT infrastructure projects, determine enterprise systems requirements, analyse organisational data for business intelligence, lead information systems strategies, manage supply chains and apply emerging technologies across the enterprise. Graduates work in business analysis, IT management, supply chain and logistics roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -203903,7 +203903,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-business-information-and-logistics-management",
     "cricos_code": "088240A"
   },
   {
@@ -203920,7 +203920,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Business Psychology at the University of Western Australia teaches students to apply psychological theories and principles to workplace settings to improve performance and make workplaces better, safer, healthier and happier. The course is open to applicants with a bachelor's degree in any discipline, with particular relevance for those already in the workplace looking to take the next step in their career. It is not a pathway to registration as a psychologist. Graduates work in human resources, organisational development, consulting and people analytics roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -203936,7 +203936,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-business-psychology",
     "cricos_code": "093572E"
   },
   {
@@ -203953,7 +203953,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Clinical Audiology at the University of Western Australia covers the clinical science of preventing, assessing and rehabilitating hearing loss and associated communication disorders. The course provides students with extensive supervised clinical placements in a variety of workplace settings, and graduates are eligible for full membership of Audiology Australia. Employment prospects for UWA audiology graduates are strong both within Australia and overseas. Graduates work as audiologists across hospitals, private practice and community hearing services.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -203969,7 +203969,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-clinical-audiology",
     "cricos_code": "033772E"
   },
   {
@@ -203986,7 +203986,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Clinical Exercise Physiology at the University of Western Australia provides a holistic understanding of the use of exercise as a modality in the treatment of musculoskeletal, cardiovascular, metabolic and other chronic and complex conditions. Students develop knowledge and skills in preparation for work in the allied health industry, with supervised clinical experience. Graduates work as accredited exercise physiologists in hospitals, private practice, rehabilitation and chronic disease management.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -204002,7 +204002,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-clinical-exercise-physiology",
     "cricos_code": "089267D"
   },
   {
@@ -204085,7 +204085,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Curatorial Studies in Fine Arts at the University of Western Australia is run in collaboration with UWA museums and various external Western Australian public galleries, providing students with direct experience in curatorial research and exhibition presentation. Students prepare either a fully researched proposal for a major exhibition and a publishable professional catalogue, or a substantial dissertation on an aspect of curatorial practice. Graduates work in curatorial, collections and exhibitions roles across museums and galleries.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -204101,7 +204101,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-curatorial-studies-in-fine-arts",
     "cricos_code": "077500K"
   },
   {
@@ -204217,7 +204217,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Education at the University of Western Australia is designed for professionals in education who wish to expand their expertise and career possibilities. It introduces students to educational theory as well as national and international educational practices, and gives them the opportunity to connect these considerations with their own experiences. Through disciplined dialogue and the sharing of ideas, students broaden their knowledge and improve their practice. Graduates advance into leadership, curriculum, policy and specialist roles across the education sector.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -204233,7 +204233,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-education",
     "cricos_code": "003029G"
   },
   {
@@ -204250,7 +204250,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Energy Geoscience at the University of Western Australia develops skills in geological and geophysical data analysis and the integration of datasets related to sedimentary basin analysis and energy geoscience. Emphasis is placed on the development of practical skills underpinned by conceptual knowledge, and the application of both to problems related to basin history and petroleum exploration through coursework and a research project. Graduates work in energy, resources, geoscience and consulting roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -204266,7 +204266,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-energy-geoscience",
     "cricos_code": "093309J"
   },
   {
@@ -204283,7 +204283,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Environmental Science at the University of Western Australia is highly interdisciplinary, providing a rigorous understanding of environmental processes alongside studies in environmental policy and management approaches. Throughout the course students gain important skills in data analysis and interpretation, laboratory and field methods, and GIS and remote sensing, and draw on UWA's long history of multidisciplinary research into diverse environmental systems. Graduates work in environmental management, consulting, policy and research roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -204299,7 +204299,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-environmental-science",
     "cricos_code": "074951G"
   },
   {
@@ -204349,7 +204349,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Fine Arts at the University of Western Australia consists of a combination of thesis and creative work, and assumes a high level of both theoretical and practical expertise in fine arts. Under the guidance of a supervisor, students pursue an advanced program of supervised research and arts practice culminating in a substantial creative body of work and an accompanying thesis. Graduates pursue practice, exhibition, teaching and research careers across the visual and creative arts.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -204365,7 +204365,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-fine-arts",
     "cricos_code": "013801D"
   },
   {
@@ -204382,7 +204382,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Forensic Anthropology at the University of Western Australia enables students to undertake advanced studies in forensic anthropology while developing an in-depth knowledge of the human skeleton. Students gain a practical understanding of the scientist's role within the Australian legal system and explore various anthropological techniques using traditional and digital modalities. Graduates work in forensic investigation, disaster victim identification, humanitarian and research roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -204398,7 +204398,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-forensic-anthropology",
     "cricos_code": "066158K"
   },
   {
@@ -204415,7 +204415,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Geoscience at the University of Western Australia develops students' abilities to gather and interpret geological information for a wide range of applications. Geoscience is the study of our dynamic planet, aiming to understand the origin and evolution of Earth, its ancient environments and climates, natural hazards, and the formation of resources including petroleum, mineral deposits and groundwater. Knowledge of past and present earth processes is fundamental to addressing environmental and resource challenges. Graduates work in resources, energy, environmental and geoscience roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -204431,7 +204431,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-geoscience",
     "cricos_code": "074954D"
   },
   {
@@ -204514,7 +204514,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Human Resources and Employment Relations at the University of Western Australia explores how effective people management contributes to organisational effectiveness, asking how organisations find, keep, motivate and assess employees. The course examines the organisation of work, management of employees, role of unions, development of cooperation and negotiation, and how conflict can emerge and be managed, with a focus on developing critical problem-solving tools for real-world solutions. Graduates work in human resources, industrial relations and people management roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -204530,7 +204530,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-human-resources-and-employment-relations",
     "cricos_code": "083269F"
   },
   {
@@ -204547,7 +204547,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Hydrogeology at the University of Western Australia develops an understanding of the distribution and flow of groundwater beneath Earth's surface and its interaction with the atmosphere, biosphere and Earth's crust through chemical, physical and biological processes. Groundwater is vital to the sustainability of society, especially in Australia, and the course covers groundwater flow systems and the impacts of human activity and environmental change on groundwater systems. It suits both recent graduates and professionals in industry. Graduates work in water resources, environmental and resources roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -204563,7 +204563,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-hydrogeology",
     "cricos_code": "074963C"
   },
   {
@@ -204580,7 +204580,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Industrial and Organisational Psychology at the University of Western Australia is a two-year full-time psychology course that includes nine coursework units, a research project and 1000 hours of practical placement spread over three different settings. Industrial and organisational psychology applies psychological knowledge and skills to workplaces with the aim of improving organisational effectiveness and the quality of working life. Graduates work toward registration as psychologists and practise in organisational, consulting and research roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -204596,7 +204596,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-industrial-and-organisational-psychology",
     "cricos_code": "077549D"
   },
   {
@@ -204613,7 +204613,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Infectious Diseases at the University of Western Australia provides the knowledge and skills to accurately identify pathogens and develop policies for the prevention and immunity of infectious diseases. With infectious diseases on the rise, there is growing demand for research into their management. The course is aimed at science-based and medical professionals intending to work in laboratory, clinical, government health and international agency settings. Graduates work in diagnostic, research, public health and policy roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -204629,7 +204629,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-infectious-diseases",
     "cricos_code": "058929E"
   },
   {
@@ -204679,7 +204679,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of International Development at the University of Western Australia provides a rigorous and critical introduction to understanding processes of managed and unmanaged change in societies in the Global South. The course is highly multidisciplinary, covering development policy and practice, the intellectual history of development, and internal debates within the field, with units ranging from development economics to environmental sciences, food and agriculture, governance, public health, and law and policy. Graduates work with aid agencies, NGOs, government and international organisations.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -204695,7 +204695,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-international-development",
     "cricos_code": "083850D"
   },
   {
@@ -204712,7 +204712,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of International Law at the University of Western Australia helps students advance their knowledge of international law and open up career opportunities in government, non-government and private institutions where international law is relevant. Taught by a team of international experts with backgrounds in practice, the course develops a sound understanding of the theory and practice of international law and how international institutions work. It is available to law and non-law graduates. Graduates work in legal, policy, diplomacy and advisory roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -204728,7 +204728,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-international-law",
     "cricos_code": "083868E"
   },
   {
@@ -204745,7 +204745,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of International Relations at the University of Western Australia is a professionally oriented postgraduate course studied over three or four semesters full-time equivalent. It offers deep expertise in international relations with a particular focus on the dynamic Indo-Pacific and Indian Ocean regions, and provides the knowledge, skills and networks for a career in foreign affairs and diplomacy, government, international and non-governmental organisations, the media and education. Graduates work across diplomacy, government, international organisations and research.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -204761,7 +204761,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-international-relations",
     "cricos_code": "069311D"
   },
   {
@@ -204778,7 +204778,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Landscape Architecture at the University of Western Australia provides an education in the design, management and resilience of natural and built landscapes for the benefit of communities and to improve the quality of the environment. Students gain the knowledge and skills to respond to complex issues such as climate change and biodiversity loss by applying systems thinking and creative practice to develop long-term, multi-scale solutions. Graduates work in landscape architecture practice, urban design, and environmental planning toward professional registration.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -204794,7 +204794,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-landscape-architecture",
     "cricos_code": "084739F"
   },
   {
@@ -204811,7 +204811,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Law, Policy and Government at the University of Western Australia is available to law and non-law graduates seeking an advanced understanding of socio-legal theory, policy development and the skills required to work in or with government. Combining theory and practically oriented units, the course suits those building a career in the public sector as legal practitioners, or in private industry where it intersects with government approval, regulation and compliance. Graduates work in policy, regulatory, governance and legal roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -204827,7 +204827,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-law-policy-and-government",
     "cricos_code": "083871K"
   },
   {
@@ -204844,7 +204844,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Laws at the University of Western Australia is designed to equip practising lawyers and law graduates with an advanced understanding of the law to meet the challenges of the dynamic workplace. Students learn from world-class teaching staff, including current and former lawyers and former judges, and study alongside the next generation of leaders in legal practice, government, business and the not-for-profit sector. Graduates deepen their specialist expertise and advance their legal careers.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -204860,7 +204860,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-laws",
     "cricos_code": "003308M"
   },
   {
@@ -204910,7 +204910,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Management at the University of Western Australia is ideal for graduates seeking further business expertise and to boost their employment opportunities around the world. World-class academics and leading industry partners ensure students are exposed to the latest theory and practice, alongside extracurricular activities from career fairs and networking events to student groups, professional development workshops and guest lectures from senior executives. Graduates move into management and leadership roles across sectors.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -204926,7 +204926,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-management",
     "cricos_code": "116873J"
   },
   {
@@ -204943,7 +204943,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Marine Biology at the University of Western Australia is designed to prepare students for a meaningful marine biology career in industry or as a researcher, addressing an unmet need in Western Australia to generate graduates who can contribute to marine and coastal science and management. The course focuses on both the quantitative elements of marine biology and processes in marine environments, and the application and translation of marine science into industry practice and management. Graduates work in marine research, conservation, consulting and management.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -204959,7 +204959,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-marine-biology",
     "cricos_code": "107725G"
   },
   {
@@ -204976,7 +204976,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Marketing at the University of Western Australia focuses on making and keeping customers by finding, communicating and sustaining the competitive advantage that makes a company successful. Topics covered include advertising, company strategy, competitive analysis and value creation, and students have the opportunity to undertake projects for real organisations, having previously worked with companies including Coles, Google, Microsoft and Rio Tinto. Graduates work in marketing strategy, brand, analytics and communication roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -204992,7 +204992,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-marketing",
     "cricos_code": "083273K"
   },
   {
@@ -205003,13 +205003,13 @@
     "name": "Master of Medical Physics (coursework and dissertation)",
     "slug": "master-of-medical-physics-coursework-and-dissertation",
     "status": "published",
-    "duration_years": "2.1",
+    "duration_years": "2.0",
     "tuition_international": "51500",
     "tuition_domestic": null,
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Medical Physics at the University of Western Australia develops the knowledge and skills to combine physics principles with engineering methods and techniques in the clinical environment and in research, for the prevention, diagnosis and treatment of human diseases. The course is designed to meet the requirements of international students. Graduates work as medical physicists in hospitals, radiation oncology, diagnostic imaging and research, on the pathway to clinical certification.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -205025,7 +205025,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-medical-physics",
     "cricos_code": "111847G"
   },
   {
@@ -205042,7 +205042,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Mining and Energy Law at the University of Western Australia is designed to give legal and non-legal professionals the expertise to pursue careers in the mining and energy industries. Subject areas include the exploration and production of minerals and petroleum in Australia, native title, concepts of sustainability and social licence to operate, and broader policy objectives, alongside the technical knowledge of how petroleum is produced and how iron ore is mined. Graduates work in legal, compliance, policy and advisory roles across the resources sector.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -205058,7 +205058,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-mining-and-energy-law",
     "cricos_code": "091153G"
   },
   {
@@ -205075,7 +205075,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Music at the University of Western Australia extends existing skills in music, both as a professional-level degree and as a platform for doctoral study. It can be taken in composition, performance or musicology and consists of a combination of thesis and creative work, with all candidates producing independent research under the guidance of a supervisor. Graduates pursue performance, composition, research and teaching careers across the music and creative arts sector.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -205091,7 +205091,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-music",
     "cricos_code": "083361K"
   },
   {
@@ -205108,7 +205108,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Ocean Leadership at the University of Western Australia provides graduates from any field with ocean-related leadership skills and expertise across marine science, engineering, law, resource economics and environmental management. This enables graduates to strategically address human challenges in ocean systems and implement solutions for the future of coasts and seas, working in multidisciplinary contexts to lead and contribute to effective teams. The highly interactive program suits professionals and recent graduates alike.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -205124,7 +205124,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-ocean-leadership",
     "cricos_code": "096270F"
   },
   {
@@ -205141,7 +205141,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Oceanography at the University of Western Australia develops a sound understanding of dynamic marine and coastal systems and the skills to tackle ocean challenges. The oceans provide food, act as a conduit for global trade, provide renewable energy and drive coastal economies, and graduates are in demand who can support sustainable ocean use, mitigate climate change impacts and drive the Blue Economy. Western Australia's location on the Indian Ocean rim provides an excellent living laboratory. Graduates work in oceanography, coastal engineering, environmental and research roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -205157,7 +205157,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-oceanography",
     "cricos_code": "107555J"
   },
   {
@@ -205174,7 +205174,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Offshore and Coastal Engineering at the University of Western Australia prepares graduates from engineering backgrounds with the knowledge and practical skills to lead innovation in offshore and coastal engineering. The course integrates disciplinary knowledge across the whole water column, from oceanography and hydrodynamics to structural and geotechnical engineering and data science, to analyse and design ocean engineering solutions for ocean energy infrastructure, aquaculture, shipping and coastal development. Graduates work across the offshore, marine and coastal engineering sectors.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -205190,7 +205190,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-offshore-and-coastal-engineering",
     "cricos_code": "110776C"
   },
   {
@@ -205207,7 +205207,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Ore Deposit Geology at the University of Western Australia provides a high-quality, advanced education in the geology and evaluation of ore deposits, designed for geologists with different levels of professional experience. Building on UWA's international reputation in economic geology and strong collaboration with the minerals industry, the course focuses on the formation, exploration and evaluation of ore deposits, including data integration and modelling approaches. Graduates work in mineral exploration, mining geology and resource evaluation.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -205223,7 +205223,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-ore-deposit-geology",
     "cricos_code": "104799B"
   },
   {
@@ -205240,7 +205240,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Pathology at the University of Western Australia initially focuses on a student-designed research project proposal, after which students implement the project, carrying out, evaluating and presenting a discrete body of applied research relevant to pathology. Students present their findings to a forum of scientific peers or at scientific meetings. The course comprises a 36-point research project and 12 points of supporting research coursework. Graduates work in laboratory research, diagnostic pathology and academic roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -205256,7 +205256,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-pathology",
     "cricos_code": "096403J"
   },
   {
@@ -205372,7 +205372,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Physics at the University of Western Australia develops a combination of high-level research, analytical and problem-solving skills that are highly valued by industry and government employers. The course can be undertaken in specialisations including Astronomy and Astrophysics or Computational Physics, covering areas such as astro-statistics, galactic dynamics, plasma astrophysics, high-energy astrophysics, numerical methods and high-performance computing. Graduates work in research, data science, defence, and technical and analytical roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -205388,7 +205388,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-physics",
     "cricos_code": "087902J"
   },
   {
@@ -205438,7 +205438,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Professional Engineering at the University of Western Australia is for students who have completed undergraduate studies in engineering and want to become a professionally accredited engineer. Students specialise in one of nine engineering disciplines and undertake advanced engineering technical units, professional units, design and research projects, and a 12-week professional practicum. Graduates practise as professional engineers or pursue further research, and find employment across a wide range of engineering sectors.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -205454,7 +205454,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-professional-engineering",
     "cricos_code": "081025J"
   },
   {
@@ -205537,7 +205537,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Public Policy at the University of Western Australia gives students a multidisciplinary understanding of the role of government in economic activity and public administration and governance, focusing on how government interacts with the economy, law and society. Topics include economic growth and stability, taxation, infrastructure, regulation, health, defence, education, comparative law, theories of justice and punishment, public international law and social security. The course integrates theory and practice, with a choice of specialisations. Graduates work in policy, government and advisory roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -205553,7 +205553,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-public-policy",
     "cricos_code": "093562G"
   },
   {
@@ -205570,7 +205570,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Renewable and Future Energy at the University of Western Australia responds to the energy industry's transition by providing engineering professionals with relevant renewable energy skills for a growing market. The course draws on research expertise in both traditional and renewable energy and strong connections with local industry partners, and takes advantage of the growing role of renewables in remote and small communities of Western Australia. Renewable energy expertise cuts across many disciplines. Graduates work in renewable energy engineering, project development and consulting.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -205586,7 +205586,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-renewable-and-future-energy",
     "cricos_code": "0100266"
   },
   {
@@ -205603,7 +205603,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Resources and International Commercial Law at the University of Western Australia gives students specialised legal knowledge for a career in the highly regulated mining, energy and natural resources sector. Students learn about a wide range of legal considerations across the sector as well as the technical knowledge behind it, such as how petroleum is produced and how iron ore is mined, gaining a comprehensive and multifaceted understanding of the industry. The course is available for law and non-law graduates. Graduates work in legal, compliance and commercial roles across resources and energy.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -205619,7 +205619,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-resources-and-international-commercial-law",
     "cricos_code": "047155D"
   },
   {
@@ -205636,7 +205636,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Rural and Remote Medicine at the University of Western Australia allows students to tackle the questions important to those who live in the bush, questions best explored in a local context, with Indigenous health a special focus. As rural and remote medicine is a generalist discipline, the range of research topics is wide, from large-scale epidemiological studies to educational, qualitative and clinical studies. Graduates work in rural and remote clinical practice, teaching and research.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -205652,7 +205652,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-rural-and-remote-medicine",
     "cricos_code": "058925J"
   },
   {
@@ -205669,7 +205669,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Science (Thesis and Coursework) at the University of Western Australia is a research degree with students selecting one discipline area from Agriculture and Environment, Biological Sciences, Earth Sciences, Human Sciences, Molecular Sciences or Psychological Science. Students gain advanced knowledge in their chosen area through independent research and coursework units that include a literature review and proposal unit and an advanced coursework unit, working with internationally recognised researchers. Graduates progress to doctoral study or to research and technical roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -205685,7 +205685,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-science",
     "cricos_code": "058945E"
   },
   {
@@ -205702,7 +205702,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Science Communication at the University of Western Australia teaches the principles of effective science communication and the practical skills needed to communicate with audiences ranging from children to scientists. Students develop strategies that address the communication needs of groups such as government organisations, museums, science centres and research centres, and gain experience in new media, written, oral and visual presentations, science performance and working with industry experts. Graduates work in science communication, media, outreach and engagement roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -205718,7 +205718,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-science-communication",
     "cricos_code": "061841J"
   },
   {
@@ -205735,7 +205735,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Social Work at the University of Western Australia prepares beginning social work practitioners for employment in local, state and international human services agencies. Led by qualified, experienced and research-active experts with strong ties to the profession and community services, the course benefits from research-led teaching based on up-to-date data, allowing students to apply the most relevant theory to practice. Social work has been taught at UWA since 1965. Graduates work in child protection, health, mental health, community development and policy.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -205751,7 +205751,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-social-work",
     "cricos_code": "065091K"
   },
   {
@@ -205768,7 +205768,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Strategic Communication at the University of Western Australia develops expertise and highly sought-after skills in designing and managing communication strategies, projects and campaigns across a range of media platforms and professional contexts. As digital media grows in importance, organisations of all sizes need communication experts. The course advances students' capacity to succeed in a range of media and communication roles and to provide effective strategy and leadership for industry, government and community. Graduates work in communication, public relations and campaign roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -205784,7 +205784,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-strategic-communication",
     "cricos_code": "083878C"
   },
   {
@@ -205795,13 +205795,13 @@
     "name": "Master of Studies",
     "slug": "master-of-studies",
     "status": "published",
-    "duration_years": "2.0",
+    "duration_years": "1.5",
     "tuition_international": "48400",
     "tuition_domestic": null,
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Studies at the University of Western Australia lets students create their own course, selecting a unique combination of postgraduate units from different schools and faculties across the University to achieve their academic, professional or personal goals. Many of the world's major problems and areas of cutting-edge research are multidisciplinary, and this course enables students to draw on a broad range of postgraduate units, subject to their previous study. Graduates gain a flexible, tailored qualification aligned to their career direction.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -205817,7 +205817,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-studies",
     "cricos_code": "089501K"
   },
   {
@@ -205834,7 +205834,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Taxation Law at the University of Western Australia is an advanced program designed to give tax professionals the expertise necessary to specialise in the complex and varied field of taxation law. Tax law impacts the outcomes of all business and work activities, and students develop an advanced understanding of the technicalities of tax law across a range of specialist areas. Graduates work as tax specialists in law and accounting firms, corporations and government.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -205850,7 +205850,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-taxation-law",
     "cricos_code": "088236G"
   },
   {
@@ -205900,7 +205900,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Teaching (Secondary) at the University of Western Australia is a teacher preparation program for university graduates who seek to begin a rewarding career in secondary education. The course ensures students have an in-depth knowledge of the theory and the practical skills required for secondary teaching, combining subject-area expertise with supervised professional placements. Graduates are qualified to register and teach in secondary schools in their subject areas.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -205916,7 +205916,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-teaching-secondary",
     "cricos_code": "095238C"
   },
   {
@@ -205933,7 +205933,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Translation Studies at the University of Western Australia provides world-class specialised translation training between English and one of ten Asian and European languages, at the home to the largest selection of language study options in Western Australia. The course is accredited by the National Accreditation Authority for Translators and Interpreters, and is taught by practitioners and translation researchers to help students develop a competitive edge in an increasingly globalised job market. Graduates work as translators across government, business and the language services industry.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -205949,7 +205949,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-translation-studies",
     "cricos_code": "079540G"
   },
   {
@@ -205966,7 +205966,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Urban Design at the University of Western Australia, delivered by the Australian Urban Design Research Centre, prepares students to participate at all levels of the urban design profession. Students develop an in-depth understanding of urban design theories and issues, techniques of urban analysis, and skills for the design and development of cities and urban places, through a first year of focused studies in history, theory, implementation strategy and studio-based learning and a second year of advanced work. Graduates work in urban design, planning and city-shaping roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -205982,7 +205982,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uwa.edu.au/study/courses/master-of-urban-design",
     "cricos_code": "074757J"
   },
   {
