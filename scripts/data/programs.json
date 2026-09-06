@@ -1855,13 +1855,13 @@
     "name": "Bachelor of Criminology (Honours)",
     "slug": "bachelor-of-criminology-honours",
     "status": "published",
-    "duration_years": "1.0",
+    "duration_years": "4.0",
     "tuition_international": "41300",
     "tuition_domestic": null,
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Criminology (Honours) at Adelaide University builds on the Bachelor of Criminology, in which students learn how crime is shaped by social, psychological and economic factors and how criminologists collect and analyse data to understand where, when and why crimes occur and develop crime prevention strategies. The honours year adds advanced coursework and an independent research project. Graduates work in crime analysis and research, policy development, community advocacy, crime prevention, corrections and youth justice, and are prepared for a research higher degree.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -1877,7 +1877,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-criminology",
     "cricos_code": "117911M"
   },
   {
@@ -1894,7 +1894,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Criminology and Criminal Justice at Adelaide University is a three-year degree that prepares students to contribute to debate on criminal behaviour and societal responses to it. Students explore the complex causes and nature of crime and its impact on communities, learning how crime is shaped by social, psychological and economic factors, how criminologists collect and analyse data to understand where and why crimes occur, and how to develop crime prevention strategies. Graduates work in crime analysis and research, policy development, community advocacy, crime prevention, corrections, victim support and youth justice.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -1910,7 +1910,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-criminology-and-criminal-justice",
     "cricos_code": "115690B"
   },
   {
@@ -3016,7 +3016,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Journalism at Adelaide University is a three-year degree that develops expertise in telling impactful stories across multiple media platforms. Students build skills in news gathering, writing and multimedia production, learn to record and edit audio and video content, write for online audiences, and create immersive journalism using the latest technologies, alongside media law and ethics and a long-form journalism project. Hands-on experience is a cornerstone, with real-world projects such as producing a news segment. Graduates work as journalists, reporters, producers and editors across print, broadcast, online and multimedia news, and in communication-focused roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -3032,7 +3032,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-journalism",
     "cricos_code": "115723J"
   },
   {
@@ -3313,7 +3313,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Media and Communication at Adelaide University is a flexible three-year degree that teaches students to create impactful media and communications content for any career context. Students understand the issues, trends and technologies shaping how we interact, and learn to produce well-informed and targeted media and communication strategies for a range of organisations, audiences and platforms, using words, images and sound to tell powerful stories. Graduates work in public relations, social media, design, immersive media, film, gaming and entertainment, and communication roles across industries.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -3329,7 +3329,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-media-and-communication",
     "cricos_code": "115730K"
   },
   {
@@ -3445,7 +3445,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Midwifery at Adelaide University is a three-year degree that equips students for a career in maternity care, emphasising women's and family-centred care. Students develop the skills to meet the social, emotional, physical and cultural needs of women and their families through pregnancy, birth and the postnatal period, with supervised clinical practice. International students study primarily on campus with a February start. The degree leads to registration as a midwife. Graduates work as midwives in hospitals, birth centres, community and continuity-of-care models, and rural and remote health.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -3461,7 +3461,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-midwifery",
     "cricos_code": "115734F"
   },
   {
@@ -3940,7 +3940,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Public Health at Adelaide University is a three-year degree that gives students the skills to shape healthier futures using an information-driven, people-first approach. Students explore the social, cultural, commercial and environmental factors that influence wellbeing, use research techniques and practice-based skills to investigate current health issues, and learn to assess evidence critically and develop and deliver health policy and promotion initiatives. Graduates work in health promotion, epidemiology and surveillance, policy and program roles across government, non-government organisations and research.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -3956,7 +3956,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-public-health",
     "cricos_code": "115750F"
   },
   {
@@ -4105,7 +4105,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Social Work at Adelaide University is a four-year degree that prepares students to support individuals, families and communities to address life challenges, enhance wellbeing and bring about social change. Social workers can work in private practice or as part of an interprofessional team across clinical, community and organisational settings, and the degree blends intellectual challenge with practical placements. International students study primarily on campus. Graduates work in child protection and family services, health and hospital social work, mental health, community development, and policy and advocacy.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -4121,7 +4121,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-social-work",
     "cricos_code": "115756M"
   },
   {
@@ -4402,7 +4402,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Viticulture and Oenology at Adelaide University is a four-year degree that teaches best-practice techniques for growing wine grapes and making wine, taught at the Waite Campus where a large share of Australia's wine research takes place. Students learn hands-on, from growing grapes in the on-campus vineyard to making wine in the commercial-scale campus winery, within one of the largest agricultural and viticultural teaching and research precincts in the Southern Hemisphere. Graduates work as winemakers and viticulturists, managing vineyards, developing new technologies and focusing on sustainable winemaking.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -4418,7 +4418,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-viticulture-and-oenology",
     "cricos_code": "115766J"
   },
   {
@@ -5326,7 +5326,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Business at Adelaide University is a half-year postgraduate program that gives students essential skills in management, finance and marketing to boost their career. It provides a grounding in core business knowledge and can serve as a pathway into further postgraduate business study such as the MBA. Graduates use it to move into or advance toward management and business roles across industries and sectors.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -5342,7 +5342,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://adelaide.edu.au/study/degrees/graduate-certificate-in-business",
     "cricos_code": "115793F"
   },
   {
