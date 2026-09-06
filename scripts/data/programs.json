@@ -108418,7 +108418,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Communication at QUT is taught at Australia's number one ranked university for communication and media studies. Students master digital trends, audience analysis, media and data analytics through six core units, then specialise with a first major from Journalism, Media and Communication Industries, Promotional Communication, or Screen Industries. Real-world learning involves industry expert teachers, real client briefs and the world-leading Digital Media Research Centre. Graduates work across news organisations, advertising agencies, government and leading global brands.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -108434,7 +108434,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.qut.edu.au/courses/bachelor-of-communication",
     "cricos_code": "096577J"
   },
   {
@@ -108748,7 +108748,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Games and Interactive Environments at QUT covers both the technical and creative aspects of game development, with three majors: Animation, Game Design, and Software Technologies. Students create immersive digital experiences through real-world projects guided by industry experts, joining a community with strong links to Queensland's video games industry, home to studios behind titles such as Fruit Ninja and TY the Tasmanian Tiger. Graduates work in game design, animation, special effects, mobile entertainment development and the broader software industry.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -108764,7 +108764,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.qut.edu.au/courses/bachelor-of-games-and-interactive-environments",
     "cricos_code": "092648J"
   },
   {
@@ -108880,7 +108880,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "Journalism at QUT is offered as a major within the Bachelor of Communication, taught at a school QUT ranks first in Australia and among the world's best for media and communication studies, with alumni including Leigh Sales and Peter Greste. Students explore the evolving media landscape from traditional newsrooms to digital platforms, develop practical skills in writing, reporting and multimedia production across print, broadcast and online, and engage in real-world learning through internships, newsroom simulations and live media projects. Graduates work as journalists, reporters, editors and producers, and in communication roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -108896,7 +108896,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.qut.edu.au/courses/bachelor-of-journalism",
     "cricos_code": "040293F"
   },
   {
@@ -108913,7 +108913,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Justice at QUT draws on criminology, policing, policy, governance, intelligence, investigations, sociology, law, psychology and ethics, with three majors: Criminology and Violence Prevention, Investigations and Intelligence, and Policy, Politics and Social Reform. Students build real-world experience through industry projects and justice work placements, including options in First Nations justice sectors. Graduates work in criminology, violence prevention, advocacy, government, law enforcement and policing, corrections, and intelligence and security roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -108929,7 +108929,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.qut.edu.au/courses/bachelor-of-justice",
     "cricos_code": "006117E"
   },
   {
@@ -109045,7 +109045,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "Media and communication at QUT is offered through the Bachelor of Communication with a Media and Communication Industries major, taught at Australia's number one ranked university for communication and media studies. Students master digital trends, audience analysis, media and data analytics, then specialise with in-demand skills, with real-world learning through industry expert teachers, real client briefs and the world-leading Digital Media Research Centre. Graduates work across media, entertainment, digital content, communications and creative industries.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -109061,7 +109061,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.qut.edu.au/courses/bachelor-of-media-and-communication",
     "cricos_code": "064644A"
   },
   {
@@ -109507,7 +109507,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Bachelor of Social Work at QUT prepares students to promote social justice and facilitate progressive change with individuals, families, groups and communities. Core units cover trauma and addictions, mental health, mediation, gender and diversity, community development, Indigenous rights and perspectives, child protection, youth and family practice, disability, social policy and climate action, with 1,000 hours of supervised professional placement. Graduates receive international recognition and are eligible for Australian Association of Social Workers membership, working in child protection, health, mental health, community development and policy.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -109523,7 +109523,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.qut.edu.au/courses/bachelor-of-social-work",
     "cricos_code": "063034B"
   },
   {
@@ -111184,13 +111184,13 @@
     "name": "Master of Architecture",
     "slug": "master-of-architecture",
     "status": "published",
-    "duration_years": "1.0",
+    "duration_years": "2.0",
     "tuition_international": "90500",
     "tuition_domestic": null,
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Architecture at QUT is a two-year degree that builds on undergraduate study to provide advanced understanding of architectural design and research, with a focus on people-focused, climate-responsive design for sub-tropical conditions. Students work in architectural practice while honing their skills in the classroom, learning from internationally recognised experts, and prepare to sit registration exams to become an architect. Graduates work in architectural practice, urban design, and the wider built environment.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -111206,7 +111206,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.qut.edu.au/courses/master-of-architecture",
     "cricos_code": "056390G"
   },
   {
@@ -111223,7 +111223,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Artificial Intelligence at QUT develops specialised AI knowledge to respond to industry demand, building confidence with AI and machine learning models, methods, processes and software applications. Students apply advanced critical thinking and creative problem-solving to complex AI and ML problems, with a choice of project or research stream and a significant industry project or research experience. QUT ranks in the top 13 in Australia for data science and artificial intelligence, and the degree has a strong focus on ethical and responsible AI. Graduates work as AI and machine learning engineers, data scientists, and AI strategy and governance specialists.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -111239,7 +111239,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.qut.edu.au/courses/master-of-artificial-intelligence",
     "cricos_code": "117578H"
   },
   {
@@ -111289,7 +111289,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Business at QUT is taught at a business school in the global top 1 percent, one of only three Australian business schools with triple international accreditation. Students choose a major from Financial Analytics and Technology, Global Business, Human Resource Management, Management, Innovation and Analytics, or Marketing Strategy, with a curriculum that prioritises hands-on learning, real industry projects and work-integrated learning. Graduates work in specialist and leadership roles across finance, human resources, management, marketing and analytics.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -111305,7 +111305,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.qut.edu.au/courses/master-of-business",
     "cricos_code": "085448J"
   },
   {
@@ -111421,7 +111421,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Counselling at QUT is designed for professionals from a variety of settings who want to develop advanced knowledge and skills in counselling and professional supervision. It takes an applied, transformational and experiential focus, with an emphasis on solution-focused and narrative therapies, family therapy, group work and supervision, and students work with real clients under supervision at QUT Health Clinics. The course is accredited by the Australian Counselling Association. Graduates work as counsellors and clinical supervisors across health, community, education and private practice settings.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -111437,7 +111437,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.qut.edu.au/courses/master-of-counselling",
     "cricos_code": "096589E"
   },
   {
@@ -112147,7 +112147,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Master of Project Management at QUT is a transdisciplinary qualification accredited by the Australian Institute of Project Management and aligned with the Project Management Body of Knowledge. Students engage with industry practitioners and academics who are experts in their field, and the curriculum uses real-life case studies and scenarios. Professionals use it to advance their career, change sectors or improve their employability. Graduates work as project and program managers across construction, engineering, IT, infrastructure, health, events and government.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -112163,7 +112163,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.qut.edu.au/courses/master-of-project-management",
     "cricos_code": "084927B"
   },
   {
