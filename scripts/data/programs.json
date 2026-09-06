@@ -191545,7 +191545,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Executive Master of Business Administration is a postgraduate program at the UTS Business School designed to develop strategic, innovative and future-focused executive leaders. With flexible delivery, students can tailor the duration and content of the degree, and the program blends classroom experience, work-integrated learning and industry collaboration. Graduates move into senior executive and general management roles across the private, public and not-for-profit sectors, in areas such as strategy, operations, transformation and organisational leadership.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -191561,7 +191561,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uts.edu.au/courses/executive-master-of-business-administration",
     "cricos_code": "104623D"
   },
   {
@@ -191578,7 +191578,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Executive Master of Data Science and Innovation is a postgraduate program at the UTS TD School that combines technical data science skills in programming, machine learning and data visualisation with the strategic thinking, communication, collaboration and creative problem-solving that data leaders need. It is designed for experienced professionals moving into senior data roles. Graduates work as data science leaders, analytics managers, and innovation and strategy roles that turn data into organisational value.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -191594,7 +191594,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uts.edu.au/courses/executive-master-of-data-science-and-innovation",
     "cricos_code": "109317G"
   },
   {
@@ -191611,7 +191611,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Animation and Visualisation is a postgraduate program offered through the UTS Animal Logic Academy, developed in partnership with Netflix Animation Studios (formerly Animal Logic). It develops creative practice, conceptual skills and technical dexterity in 3D animation pre-production, with learning in a custom-built digital production studio modelled on real production structure and mentorship from industry practitioners. It can be a pathway into the Master of Animation and Visualisation. Graduates work in 3D animation, previsualisation and visual effects for film, television and games.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -191627,7 +191627,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uts.edu.au/courses/graduate-certificate-in-animation-and-visualisation",
     "cricos_code": "092412G"
   },
   {
@@ -191710,7 +191710,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Australian Law is a postgraduate program at UTS designed for qualified lawyers from common law jurisdictions outside Australia who want to practise in New South Wales. The program of study consists of the core subjects assessed as required by the Legal Profession Admission Board, spanning areas such as ethics, property, constitutional and administrative law, giving students a critical understanding of Australian law. Graduates use it as a pathway toward admission to practise law in NSW.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -191726,7 +191726,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uts.edu.au/courses/graduate-certificate-in-australian-law",
     "cricos_code": "064381G"
   },
   {
@@ -191743,7 +191743,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Business Administration is a postgraduate program at the UTS Business School for early-career professionals and people strengthening their business acumen across industries and sectors. It develops the business and management capabilities expected of future leaders, with each subject independently approved by an industry board, and students build professional networks alongside like-minded peers. It can be a pathway into the MBA. Graduates use it to move into or advance toward management roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -191759,7 +191759,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uts.edu.au/courses/graduate-certificate-in-business-administration",
     "cricos_code": "018156K"
   },
   {
@@ -191776,7 +191776,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Business Analytics is a postgraduate program at the UTS Business School for professionals with backgrounds in business or IT who want business-specific data analytics skills. Students build capabilities in analytics, governance and regulation, and database design and management, and apply their learning to real challenges in a practical studio subject. It can be a pathway into the Master of Business Analytics. Graduates work as business and data analysts, insights specialists and analytics consultants.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -191792,7 +191792,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uts.edu.au/courses/graduate-certificate-in-business-analytics",
     "cricos_code": "0100400"
   },
   {
@@ -191842,7 +191842,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Data Science and Innovation is a transdisciplinary postgraduate program at the UTS TD School that pairs technical data science skills, including programming, machine learning and data visualisation, with strategic thinking, communication, collaboration and creative problem-solving. It can be a pathway into the Master of Data Science and Innovation. Graduates work as data analysts and data science practitioners who bridge technical and organisational work.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -191858,7 +191858,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uts.edu.au/courses/graduate-certificate-in-data-science-and-innovation",
     "cricos_code": "084266A"
   },
   {
@@ -191941,7 +191941,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Engineering is a postgraduate program at the UTS Faculty of Engineering and Information Technology for professional engineers who want to extend their knowledge and update their skills in line with recent advances. On completion, students can articulate into a relevant masters program with credit for the subjects completed. Graduates return to industry as engineers with deeper and more current technical skills across biomedical, civil and environmental, electrical and electronic, and mechanical and mechatronic engineering.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -191957,7 +191957,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uts.edu.au/courses/graduate-certificate-in-engineering",
     "cricos_code": "081083K"
   },
   {
@@ -191974,7 +191974,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Engineering Management is a postgraduate program at the UTS Faculty of Engineering and Information Technology that gives practising engineers management knowledge beyond their first degree, updating skills in engineering, technology and business practice. It follows an integrated approach to professional practice through a choice of professional engineering subjects and an elective. Graduates move toward engineering management and technical leadership roles across industry and government.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -191990,7 +191990,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uts.edu.au/courses/graduate-certificate-in-engineering-management",
     "cricos_code": "081085G"
   },
   {
@@ -192073,7 +192073,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Finance is a postgraduate program at the UTS Business School, a pathway to a career in banking and finance in Sydney, Australia's financial capital. Designed with leading financial institutions, it builds an up-to-date toolkit across banking, corporate finance and financial technologies, with teaching from industry experts. It can be a pathway into the Master of Finance. Graduates work in banking, corporate finance, investment and advisory roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -192089,7 +192089,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uts.edu.au/courses/graduate-certificate-in-finance",
     "cricos_code": "020212M"
   },
   {
@@ -192271,7 +192271,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Information Technology is a half-year full-time postgraduate program at the UTS Faculty of Engineering and Information Technology for people with an IT or related degree who want to upskill or study an area not covered in their previous studies. Students undertake a specialised sequence of subjects to update their knowledge in an essential area of IT. Graduates use it for career development in software, data, security and systems roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -192287,7 +192287,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uts.edu.au/courses/graduate-certificate-in-information-technology",
     "cricos_code": "084251G"
   },
   {
@@ -192370,7 +192370,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Laws is a flexible, customisable postgraduate program at UTS designed for law graduates who want to build specialist legal skills in their area of professional practice, along with theoretical and practical research capabilities. Students learn from law professionals, expert academics and visiting lecturers. It can be a pathway into the Master of Laws. Graduates use it to specialise and advance in legal practice, government and corporate roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -192386,7 +192386,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uts.edu.au/courses/graduate-certificate-in-laws",
     "cricos_code": "095711E"
   },
   {
@@ -192436,7 +192436,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Marketing is a postgraduate program at the UTS Business School that builds contemporary marketing capabilities in areas such as digital marketing, customer experience, omnichannel marketing, and strategy and leadership, taught by an experienced teaching team. It suits established professionals and career changers, and can be a pathway into the Master of Marketing. Graduates work in marketing, brand, digital and customer roles across industries.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -192452,7 +192452,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uts.edu.au/courses/graduate-certificate-in-marketing",
     "cricos_code": "098049F"
   },
   {
@@ -192568,7 +192568,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Planning is a postgraduate program at UTS for people with a degree in another discipline or work experience in related professions who want to move into urban planning. It provides the foundational knowledge of the role urban planners play in shaping urban environments and a direct pathway into the UTS Master of Planning. Graduates use it to enter or accelerate a career in statutory and strategic planning.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -192584,7 +192584,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uts.edu.au/courses/graduate-certificate-in-planning",
     "cricos_code": "096458E"
   },
   {
@@ -192601,7 +192601,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Professional Accounting is a four-subject introductory postgraduate program at the UTS Business School that provides a general understanding of accounting and related areas of business, with foundational knowledge in accounting, finance, economics and law. It is designed to bridge the gap between practical experience and the academic credentials needed for higher-level study such as the Master of Professional Accounting. Graduates use it to move into accounting roles or further study.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -192617,7 +192617,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uts.edu.au/courses/graduate-certificate-in-professional-accounting",
     "cricos_code": "061284M"
   },
   {
@@ -192667,7 +192667,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Project Management is a postgraduate program at UTS that gives students industry-ready competencies in project management, combining innovation, problem-solving and advanced skills to develop agile, influential project leaders. It suits experienced professionals seeking a formal qualification and people beginning a project management career, and can be a pathway into the Master of Project Management. Graduates work as project coordinators and managers across construction, IT, engineering, events, finance and government.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -192683,7 +192683,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uts.edu.au/courses/graduate-certificate-in-project-management",
     "cricos_code": "088437K"
   },
   {
@@ -192700,7 +192700,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Property Development is a half-year full-time postgraduate program at UTS that builds the foundational knowledge needed for a career in the property sector and offers a pathway to further study for people with professional experience in property who lack an appropriate undergraduate qualification. Students learn from expert staff and examine real projects. Graduates work in property development, project coordination and property analysis roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -192716,7 +192716,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uts.edu.au/courses/graduate-certificate-in-property-development",
     "cricos_code": "096459D"
   },
   {
@@ -192766,7 +192766,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Science is a four-subject postgraduate program at the UTS Faculty of Science that draws on the curriculum of the Master of Science, giving students professional and discipline-specific expertise without the commitment of a longer degree. It suits people entering postgraduate science, seeking professional development in an existing science career, or wanting an alternative entry pathway into the masters. Graduates use it to advance or shift within scientific and technical careers.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -192782,7 +192782,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uts.edu.au/courses/graduate-certificate-in-science",
     "cricos_code": "071910G"
   },
   {
@@ -192898,7 +192898,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in Strategic Supply Chain Management is a postgraduate program at the UTS Business School that introduces business operations and supply chain management for people wanting experience in the area. It builds a preliminary set of skills to manage inter- and intra-organisational resources and supply chain functions, and is a pathway into the Master of Strategic Supply Chain Management. Graduates work in procurement, logistics, operations and supply chain roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -192914,7 +192914,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uts.edu.au/courses/graduate-certificate-in-strategic-supply-chain-management",
     "cricos_code": "055277E"
   },
   {
@@ -192931,7 +192931,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Certificate in TESOL is an initial teaching qualification at UTS for career changers who want to teach English as an additional language. It prepares students to teach English to adults in the Australian adult education sector, to teach English as an additional language or dialect to primary and secondary students, or to teach international students, and also serves qualified school teachers wanting a specialisation. Graduates work as English language teachers in Australia and overseas.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -192947,7 +192947,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uts.edu.au/courses/graduate-certificate-in-tesol",
     "cricos_code": "088014M"
   },
   {
@@ -193096,7 +193096,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Diploma in Artificial Intelligence is a postgraduate program at the UTS Faculty of Engineering and Information Technology that broadens knowledge and skills in AI, preparing students for careers in data analytics and as AI and machine learning engineers. Learning is practical and hands-on, using current technologies to develop algorithms across AI fields. It can be a pathway into the Master of Artificial Intelligence. Graduates work in AI and machine learning engineering, data analytics and related technical roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -193112,7 +193112,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uts.edu.au/courses/graduate-diploma-in-artificial-intelligence",
     "cricos_code": "108844C"
   },
   {
@@ -193228,7 +193228,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Diploma in Construction Management is a postgraduate program at UTS for people who want the skills to lead Australia's growing construction industry. Students develop the capabilities expected of senior construction professionals, learning from industry experts about risk management, project management, communication and technology. Graduates work as construction and project managers, contract administrators and development managers across the built environment.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -193244,7 +193244,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uts.edu.au/courses/graduate-diploma-in-construction-management",
     "cricos_code": "098505J"
   },
   {
@@ -193261,7 +193261,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Diploma in Data Science and Innovation is a postgraduate program at the UTS TD School that combines technical data science skills, including programming, machine learning and data visualisation, with strategic thinking, communication, collaboration and creative problem-solving. It can be a pathway into the Master of Data Science and Innovation. Graduates work as data analysts and data science practitioners across government, research and industry.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -193277,7 +193277,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uts.edu.au/courses/graduate-diploma-in-data-science-and-innovation",
     "cricos_code": "084267M"
   },
   {
@@ -193426,7 +193426,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Diploma in Event Management is a postgraduate program at the UTS Business School that provides a broad overview of the events industry and develops the skills to play a significant role in planning and delivering public, corporate and other events. Industry experts contribute to course and assessment design and subject delivery. Graduates work in event planning and production, venue and conference management, and experiential marketing.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -193442,7 +193442,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uts.edu.au/courses/graduate-diploma-in-event-management",
     "cricos_code": "046112A"
   },
   {
@@ -193459,7 +193459,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Diploma in Finance is a postgraduate program at the UTS Business School for executives in financial institutions, corporations and consultancies who want to bolster their finance expertise. It focuses on finance principles and practical financial decision-making, taught through interactive seminars, case studies and real-world problems. Graduates apply finance knowledge in corporate finance, investment, risk and advisory roles. It can articulate into the Master of Finance for students who continue their study.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -193475,7 +193475,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uts.edu.au/courses/graduate-diploma-in-finance",
     "cricos_code": "020210B"
   },
   {
@@ -193657,7 +193657,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Diploma in Human Resource Management is a postgraduate program at the UTS Business School that develops expertise across human resource management, employment relations and other management practices. It is designed for professionals with some experience in an area related to HRM and employment relations. Graduates work in human resources, people and culture, and employment relations roles. It can be a pathway into the Master of Human Resource Management for students who continue their study.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -193673,7 +193673,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uts.edu.au/courses/graduate-diploma-in-human-resource-management",
     "cricos_code": "055276F"
   },
   {
@@ -193822,7 +193822,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Diploma in Management is a postgraduate program at the UTS Business School that extends understanding of the complexity and uncertainty of management contexts, building on the Graduate Certificate in Management with greater breadth and depth. Its flexible structure lets students select subjects tailored to their professional needs. Graduates move into management and leadership roles across sectors. It can be a pathway into the Master of Management for students who continue their study.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -193838,7 +193838,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uts.edu.au/courses/graduate-diploma-in-management",
     "cricos_code": "009678C"
   },
   {
@@ -193855,7 +193855,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Diploma in Marketing is a postgraduate program at the UTS Business School that provides a thorough understanding of marketing principles, customer motivations and marketing management. Drawing on the research expertise of the marketing faculty, students learn to analyse markets and formulate strategies connected to industry practice, in Australia and internationally. Graduates work in marketing, brand, digital and market research roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -193871,7 +193871,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uts.edu.au/courses/graduate-diploma-in-marketing",
     "cricos_code": "098048G"
   },
   {
@@ -194053,7 +194053,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Diploma in Property Development is a postgraduate program at UTS that gives a comprehensive education in all aspects of property development, covering the entire development process and the political, financial, legal and physical systems behind successful property assets, with hands-on skills. Graduates work in property development, feasibility and project management roles, with networking opportunities across the sector. It can articulate into the Master of Property Development for students who continue their study.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -194069,7 +194069,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uts.edu.au/courses/graduate-diploma-in-property-development",
     "cricos_code": "066575D"
   },
   {
@@ -194185,7 +194185,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Diploma in Social Impact and Not-for-Profit Management is a postgraduate program at the UTS Business School that provides a broad overview of the not-for-profit and social enterprise sector and the skills needed to manage organisations with a social purpose. It is industry-relevant with flexible study modes. Graduates work in leadership and management roles in community services, arts and culture, advocacy, philanthropy and social enterprise.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -194201,7 +194201,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uts.edu.au/courses/graduate-diploma-in-social-impact-and-not-for-profit-management",
     "cricos_code": "032341C"
   },
   {
@@ -194251,7 +194251,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Diploma in Sport Management is a postgraduate program at the UTS Business School that provides a broad overview of the sport industry and develops critical, interpretive and problem-solving skills relevant to the sector. It is developed and delivered with industry experts, combining sport management concepts with hands-on practice. Graduates work in sport administration, events, marketing and operations roles.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -194267,7 +194267,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uts.edu.au/courses/graduate-diploma-in-sport-management",
     "cricos_code": "014223C"
   },
   {
@@ -194284,7 +194284,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Diploma in Strategic Communication is a postgraduate program at UTS for people who want to inform stakeholders, promote products and services, and maintain organisational reputation and public trust through communication. It provides advanced academic and practical grounding in strategic communication for business, government, health promotion and community and social issues. Graduates work in corporate and government communications, public relations and issues management.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -194300,7 +194300,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uts.edu.au/courses/graduate-diploma-in-strategic-communication",
     "cricos_code": "098388J"
   },
   {
@@ -194350,7 +194350,7 @@
     "tuition_domestic_is_csp": null,
     "currency": "AUD",
     "application_url": null,
-    "description": null,
+    "description": "The Graduate Diploma in Teaching is a postgraduate program at the UTS Faculty of Design and Society for people who want advanced scholarly and practical knowledge to teach English language and literacy to children, post-secondary learners or adults, whether as a career changer or a qualified teacher. Teaching is by experienced practitioners with industry connections and active research. Graduates work as English language, literacy and numeracy educators.",
     "curriculum": null,
     "admission_requirements": null,
     "english_requirements": null,
@@ -194366,7 +194366,7 @@
     "pte_speaking": null,
     "intake_dates": null,
     "last_verified_at": "2026-09-04T18:15:00.000Z",
-    "source_url": null,
+    "source_url": "https://www.uts.edu.au/courses/graduate-diploma-in-teaching",
     "cricos_code": "118290E"
   },
   {
