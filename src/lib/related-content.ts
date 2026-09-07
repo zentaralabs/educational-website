@@ -35,6 +35,8 @@ const GUIDE_LABEL: Record<string, string> = {
   "check-australian-university-student-visa-priority": "Check a university's visa priority",
   "choosing-a-regional-area-to-study-in-australia": "Studying in regional Australia",
   "commonwealth-supported-places-explained": "Commonwealth Supported Places (CSP)",
+  "cost-of-studying-in-australia-from-india": "Cost of studying from India",
+  "cost-of-studying-in-australia-from-nepal": "Cost of studying from Nepal",
   "cricos-and-course-accreditation-explained": "CRICOS and AQF explained",
   "documents-checklist-for-an-australian-student-visa": "Student visa documents checklist",
   "february-vs-july-intake-in-australia": "February or July intake",
@@ -148,6 +150,10 @@ const REGIONAL_UNIS: RelatedLink = {
 const AFFORDABLE_UNIS: RelatedLink = {
   href: "/best/affordable-australian-universities-for-international-students",
   label: "Most affordable universities",
+};
+const MELB_SYD: RelatedLink = {
+  href: "/compare/melbourne-vs-sydney-for-international-students",
+  label: "Melbourne or Sydney for international students",
 };
 const applyFrom = (country: string, name: string): RelatedLink => ({
   href: `/international/${country}/how-to-apply`,
@@ -270,15 +276,32 @@ const GUIDE_RELATED: Record<string, RelatedLink[]> = {
     g("real-cost-of-studying-in-australia"),
     g("proving-funds-for-an-australian-student-visa"),
     g("moving-money-to-australia-for-the-student-visa"),
+    MELB_SYD,
     v("student-500"),
     COST_CALC,
   ],
   "real-cost-of-studying-in-australia": [
     g("proving-funds-for-an-australian-student-visa"),
     g("australia-student-visa-cost"),
-    g("working-while-you-study-in-australia"),
+    g("cost-of-studying-in-australia-from-nepal"),
+    g("cost-of-studying-in-australia-from-india"),
     COST_CALC,
-    COST_OF_LIVING,
+    AFFORDABLE_UNIS,
+  ],
+  "cost-of-studying-in-australia-from-nepal": [
+    g("real-cost-of-studying-in-australia"),
+    g("proving-funds-for-an-australian-student-visa"),
+    g("moving-money-to-australia-for-the-student-visa"),
+    g("cost-of-studying-in-australia-from-india"),
+    { href: "/international/nepal", label: "Studying in Australia from Nepal" },
+    AFFORDABLE_UNIS,
+  ],
+  "cost-of-studying-in-australia-from-india": [
+    g("real-cost-of-studying-in-australia"),
+    g("proving-funds-for-an-australian-student-visa"),
+    g("applying-to-australian-universities-without-an-agent"),
+    g("cost-of-studying-in-australia-from-nepal"),
+    { href: "/international/india", label: "Studying in Australia from India" },
     AFFORDABLE_UNIS,
   ],
   "cricos-and-course-accreditation-explained": [
@@ -378,6 +401,7 @@ const GUIDE_RELATED: Record<string, RelatedLink[]> = {
     g("study-to-permanent-residence-pathway-australia"),
     g("real-cost-of-studying-in-australia"),
     g("february-vs-july-intake-in-australia"),
+    MELB_SYD,
     v("student-500"),
     COUNTRY_HUB,
   ],

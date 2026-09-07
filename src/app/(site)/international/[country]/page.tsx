@@ -80,8 +80,19 @@ export default async function OriginCountryPage({
     faqJsonLd(c.faq),
   ];
 
+  const costGuideByCountry: Record<string, { href: string; label: string }> = {
+    nepal: {
+      href: "/guides/cost-of-studying-in-australia-from-nepal",
+      label: "The cost of studying in Australia from Nepal",
+    },
+    india: {
+      href: "/guides/cost-of-studying-in-australia-from-india",
+      label: "The cost of studying in Australia from India",
+    },
+  };
   const related = [
     { href: "/universities", label: "Browse all Australian universities" },
+    ...(costGuideByCountry[country] ? [costGuideByCountry[country]] : []),
     { href: "/deadlines/february-2027-intake", label: "February 2027 intake deadlines" },
     { href: "/visas/student-500", label: "Student visa (subclass 500) explained" },
     { href: "/best/affordable-australian-universities-for-international-students", label: "Most affordable universities" },
