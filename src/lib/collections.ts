@@ -205,8 +205,8 @@ export const COLLECTIONS: Collection[] = [
     methodology:
       "We took each university's lowest published international tuition (university-wide or its cheapest individual program), added our city-specific living-cost estimate and about AUD 4,000 in setup costs, then sorted low to high. Specialist and pathway-only providers are included where they grant degrees. Always confirm the fee for your specific course.",
     relatedGuide: {
-      href: "/guides/real-cost-of-studying-in-australia",
-      label: "The real cost of studying in Australia as an international student",
+      href: "/guides/cheapest-australian-university-tuition-vs-total-cost",
+      label: "Why the cheapest tuition is rarely the cheapest degree",
     },
     build: (unis) =>
       unis
