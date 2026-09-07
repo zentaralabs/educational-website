@@ -9,10 +9,11 @@ import { ProgramSidebar } from "@/components/site/ProgramSidebar";
 import { OutboundLink } from "@/components/site/OutboundLink";
 import { ArrowUpRightIcon, BookIcon, PassportIcon } from "@/components/site/icons";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
-import { SITE_YEAR } from "@/lib/site-config";
+import { SITE_URL, SITE_YEAR } from "@/lib/site-config";
 import {
   getProgramOccupations,
   getPublishedProgramBySlug,
+  getRelatedProgramsBySubject,
   isProgramIndexable,
   resolveProgramSlugById,
 } from "@/lib/queries/public-programs";
@@ -89,7 +90,7 @@ export async function generateMetadata({
     `Fees & Entry ${SITE_YEAR}`,
     `${SITE_YEAR}`,
   ]);
-  const description = `${program.name} at ${program.university!.name} for international students: tuition fees, entry requirements, English test score, duration${program.subject?.name ? `, and how it fits the ${program.subject.name} field` : ""}.`;
+  const description = `${program.name} at ${program.university!.name}${program.university!.city ? ` in ${program.university!.city}` : ""}${program.subject?.name ? `, a ${program.subject.name} degree` : ""} for international students: tuition fees, entry requirements, English score and duration.`;
 
   return pageMetadata({
     title,
@@ -116,6 +117,13 @@ export default async function ProgramDetailPage({
   if (!program) notFound();
 
   const occupations = await getProgramOccupations(program.id);
+  const relatedPrograms = program.subject
+    ? await getRelatedProgramsBySubject(
+        program.subject.slug,
+        program.id,
+        program.degree_level_id,
+      )
+    : [];
 
   const university = program.university!;
   const curriculumTerms = program.curriculum
@@ -138,15 +146,72 @@ export default async function ProgramDetailPage({
       (program.pte_overall ?? university.pte_overall),
   );
 
+  const intlTuition = program.tuition_international ?? university.tuition_international;
+  // `city` is stored as "Locality, REGION" (e.g. "Perth, WA"); split for the
+  // PostalAddress. Messy multi-campus values fall through as the locality.
+  const [addrLocality, ...addrRegionParts] = (university.city ?? "").split(",");
+  const addrRegion = addrRegionParts.join(",").trim();
+  const credentialByLevel: Record<string, string> = {
+    Graduate: "Postgraduate degree",
+    Undergraduate: "Undergraduate degree",
+    PhD: "Doctoral degree",
+    "Foundation/Pathway": "Foundation program",
+  };
+  const isoDuration =
+    program.duration_years == null
+      ? undefined
+      : Number.isInteger(program.duration_years)
+        ? `P${program.duration_years}Y`
+        : `P${Math.round(program.duration_years * 12)}M`;
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "EducationalOccupationalProgram",
     name: program.name,
+    url: `${SITE_URL}/universities/${university.slug}/programs/${program.slug}`,
+    ...(hasDescription
+      ? { description: program.description!.trim().split("\n\n")[0].replace(/\s+/g, " ") }
+      : {}),
     provider: {
       "@type": "CollegeOrUniversity",
       name: university.name,
+      url: `${SITE_URL}/universities/${university.slug}`,
+      ...(university.city || university.country?.name
+        ? {
+            address: {
+              "@type": "PostalAddress",
+              ...(addrLocality ? { addressLocality: addrLocality.trim() } : {}),
+              ...(addrRegion ? { addressRegion: addrRegion } : {}),
+              ...(university.country?.name ? { addressCountry: university.country.name } : {}),
+            },
+          }
+        : {}),
     },
-    educationalProgramMode: program.degree_level?.name ?? undefined,
+    ...(university.country?.name ? { areaServed: university.country.name } : {}),
+    ...(program.degree_level?.name
+      ? {
+          educationalCredentialAwarded:
+            credentialByLevel[program.degree_level.name] ?? program.degree_level.name,
+        }
+      : {}),
+    ...(isoDuration ? { timeToComplete: isoDuration } : {}),
+    ...(occupations.length
+      ? {
+          occupationalCategory: occupations
+            .map((o) => o.occupation && `${o.occupation.anzsco_code} ${o.occupation.name}`)
+            .filter(Boolean),
+        }
+      : {}),
+    ...(intlTuition
+      ? {
+          offers: {
+            "@type": "Offer",
+            category: "International tuition",
+            price: intlTuition,
+            priceCurrency: program.currency ?? university.currency ?? "AUD",
+          },
+        }
+      : {}),
   };
 
   const breadcrumbs = [
@@ -163,9 +228,18 @@ export default async function ProgramDetailPage({
       <Breadcrumbs items={breadcrumbs} />
 
       <div className="mt-4 rounded-2xl bg-gradient-to-br from-ink/[0.04] via-ink/[0.02] to-transparent p-6 sm:p-8">
-        <p className="flex items-center gap-2 font-utility text-xs font-semibold tracking-wide text-status-open uppercase">
+        <p className="flex flex-wrap items-center gap-2 font-utility text-xs font-semibold tracking-wide text-status-open uppercase">
           <span className="inline-block h-1.5 w-1.5 rounded-full bg-status-open" />
-          {[program.degree_level?.name, program.subject?.name].filter(Boolean).join(" · ")}
+          {program.degree_level?.name && <span>{program.degree_level.name}</span>}
+          {program.degree_level?.name && program.subject?.name && <span aria-hidden="true">·</span>}
+          {program.subject?.name && (
+            <Link
+              href={`/study/${program.subject.slug}`}
+              className="underline decoration-status-open/40 underline-offset-2 hover:decoration-status-open"
+            >
+              {program.subject.name}
+            </Link>
+          )}
         </p>
         <div className="mt-2 flex flex-wrap items-start justify-between gap-4">
           <div>
@@ -423,6 +497,40 @@ export default async function ProgramDetailPage({
             englishRequirements={program.english_requirements}
             hasStructuredEnglishScore={hasStructuredEnglishScore}
           />
+        </ProfileSection>
+      )}
+
+      {relatedPrograms.length > 0 && program.subject && (
+        <ProfileSection title={`More ${program.subject.name} programs`}>
+          <div className="flex flex-col gap-2">
+            {relatedPrograms.map((rp) => (
+              <Link
+                key={`${rp.university?.slug}/${rp.slug}`}
+                href={`/universities/${rp.university?.slug}/programs/${rp.slug}`}
+                className="group flex items-center justify-between gap-4 rounded-md border border-ink/10 bg-paper py-3 pr-3 pl-3 text-sm transition-colors duration-150 hover:border-status-open/60 hover:bg-ink/[0.015]"
+                style={{ borderLeftWidth: 3, borderLeftColor: "var(--color-status-open)" }}
+              >
+                <div className="min-w-0">
+                  <p className="truncate text-ink">{rp.name}</p>
+                  <p className="mt-0.5 truncate font-utility text-xs text-slate">
+                    {[rp.university?.name, rp.degree_level?.name].filter(Boolean).join(" · ")}
+                  </p>
+                </div>
+                <span
+                  aria-hidden="true"
+                  className="flex-shrink-0 text-slate transition-transform duration-150 group-hover:translate-x-0.5 group-hover:text-status-open"
+                >
+                  →
+                </span>
+              </Link>
+            ))}
+          </div>
+          <Link
+            href={`/study/${program.subject.slug}`}
+            className="mt-3 inline-block font-body text-sm text-slate underline underline-offset-2 hover:text-ink"
+          >
+            All {program.subject.name} programs in {university.country?.name ?? "Australia"} →
+          </Link>
         </ProfileSection>
       )}
 
