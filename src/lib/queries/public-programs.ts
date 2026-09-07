@@ -49,7 +49,7 @@ export type PublicProgramRow = {
   source_url: string | null;
   cricos_code: string | null;
   degree_level: { name: string } | null;
-  subject: { name: string } | null;
+  subject: { slug: string; name: string } | null;
 };
 
 export async function getPublishedProgramsForUniversity(
@@ -59,7 +59,7 @@ export async function getPublishedProgramsForUniversity(
   const { data, error } = await supabase
     .from("programs")
     .select(
-      "id, slug, name, duration_years, tuition_international, tuition_domestic, tuition_domestic_is_csp, currency, application_url, admission_requirements, english_requirements, ielts_overall, ielts_listening, ielts_reading, ielts_writing, ielts_speaking, pte_overall, pte_listening, pte_reading, pte_writing, pte_speaking, last_verified_at, source_url, cricos_code, degree_level:degree_levels(name), subject:subjects(name)",
+      "id, slug, name, duration_years, tuition_international, tuition_domestic, tuition_domestic_is_csp, currency, application_url, admission_requirements, english_requirements, ielts_overall, ielts_listening, ielts_reading, ielts_writing, ielts_speaking, pte_overall, pte_listening, pte_reading, pte_writing, pte_speaking, last_verified_at, source_url, cricos_code, degree_level:degree_levels(name), subject:subjects(slug, name)",
     )
     .eq("university_id", universityId)
     .eq("status", "published")
@@ -89,6 +89,7 @@ export type ProgramOccupation = {
 export type PublicProgramDetail = PublicProgramRow & {
   description: string | null;
   curriculum: string | null;
+  degree_level_id: number | null;
   university: {
     id: string;
     slug: string;
@@ -115,8 +116,8 @@ export type PublicProgramDetail = PublicProgramRow & {
   } | null;
 };
 
-const PROGRAM_DETAIL_SELECT = `id, slug, name, description, curriculum, duration_years, tuition_international, tuition_domestic, tuition_domestic_is_csp, currency, application_url, admission_requirements, english_requirements, ielts_overall, ielts_listening, ielts_reading, ielts_writing, ielts_speaking, pte_overall, pte_listening, pte_reading, pte_writing, pte_speaking, last_verified_at, source_url, cricos_code,
-      degree_level:degree_levels(name), subject:subjects(name),
+const PROGRAM_DETAIL_SELECT = `id, slug, name, description, curriculum, degree_level_id, duration_years, tuition_international, tuition_domestic, tuition_domestic_is_csp, currency, application_url, admission_requirements, english_requirements, ielts_overall, ielts_listening, ielts_reading, ielts_writing, ielts_speaking, pte_overall, pte_listening, pte_reading, pte_writing, pte_speaking, last_verified_at, source_url, cricos_code,
+      degree_level:degree_levels(name), subject:subjects(slug, name),
       university:universities!inner(id, slug, name, status, city, apply_url, application_fee, tuition_international, tuition_domestic, tuition_domestic_is_csp, currency, ielts_overall, ielts_listening, ielts_reading, ielts_writing, ielts_speaking, pte_overall, pte_listening, pte_reading, pte_writing, pte_speaking, country:countries!inner(code, name, is_launched))`;
 
 /**
@@ -163,6 +164,45 @@ export async function getProgramOccupations(programId: string): Promise<ProgramO
 
   if (error) throw error;
   return (data ?? []) as unknown as ProgramOccupation[];
+}
+
+export type RelatedProgram = {
+  slug: string;
+  name: string;
+  degree_level: { name: string } | null;
+  university: { slug: string; name: string } | null;
+};
+
+/**
+ * Other published programs in the same subject, for the "Related programs"
+ * block on a program page — gives every program page outbound internal links
+ * to its subject siblings, not just up to its university. Excludes the
+ * current program; capped so the block stays scannable.
+ */
+export async function getRelatedProgramsBySubject(
+  subjectSlug: string,
+  excludeProgramId: string,
+  degreeLevelId: number | null,
+  limit = 6,
+): Promise<RelatedProgram[]> {
+  const supabase = createPublicClient([`related-programs:${subjectSlug}`]);
+  const query = supabase
+    .from("programs")
+    .select(
+      "slug, name, degree_level:degree_levels(name), subject:subjects!inner(slug), university:universities!inner(slug, name, status, country:countries!inner(is_launched))",
+    )
+    .eq("subject.slug", subjectSlug)
+    .eq("status", "published")
+    .eq("university.status", "published")
+    .eq("university.country.is_launched", true)
+    .neq("id", excludeProgramId)
+    // Prefer siblings at the same study level (other master's, other
+    // bachelor's) — a far more useful cross-link than an alphabetical mix.
+    .eq("degree_level_id", degreeLevelId ?? -1);
+  const { data, error } = await query.order("name").limit(limit);
+
+  if (error) throw error;
+  return (data ?? []) as unknown as RelatedProgram[];
 }
 
 /**
