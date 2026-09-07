@@ -11,6 +11,7 @@ import { ArrowUpRightIcon, BookIcon, PassportIcon } from "@/components/site/icon
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import { SITE_URL, SITE_YEAR } from "@/lib/site-config";
 import {
+  getArchivedProgramBySlug,
   getProgramOccupations,
   getPublishedProgramBySlug,
   getRelatedProgramsBySubject,
@@ -83,7 +84,21 @@ export async function generateMetadata({
   const { slug, programSlug } = await params;
   if (UUID_RE.test(programSlug)) return {};
   const program = await loadProgram(slug, programSlug);
-  if (!program) return {};
+  if (!program) {
+    const archived = await getArchivedProgramBySlug(slug, programSlug);
+    if (archived?.university) {
+      return pageMetadata({
+        title: composeTitle(`${archived.name}, ${archived.university.name}`, [
+          "No longer offered",
+        ]),
+        description: `${archived.name} at ${archived.university.name} is no longer listed by the university. See related ${archived.subject?.name ?? "programs"} still open to international students.`,
+        path: `/universities/${slug}/programs/${archived.slug}`,
+        type: "website",
+        robots: { index: false, follow: true },
+      });
+    }
+    return {};
+  }
 
   const title = composeTitle(`${program.name}, ${program.university!.name}`, [
     `Fees & Entry Requirements ${SITE_YEAR}`,
@@ -114,7 +129,11 @@ export default async function ProgramDetailPage({
   const { slug, programSlug } = await params;
   await redirectIfLegacyId(slug, programSlug);
   const program = await loadProgram(slug, programSlug);
-  if (!program) notFound();
+  if (!program) {
+    const archived = await getArchivedProgramBySlug(slug, programSlug);
+    if (archived?.university) return <DiscontinuedProgram archived={archived} />;
+    notFound();
+  }
 
   const occupations = await getProgramOccupations(program.id);
   const relatedPrograms = program.subject
@@ -530,6 +549,131 @@ export default async function ProgramDetailPage({
             className="mt-3 inline-block font-body text-sm text-slate underline underline-offset-2 hover:text-ink"
           >
             All {program.subject.name} programs in {university.country?.name ?? "Australia"} →
+          </Link>
+        </ProfileSection>
+      )}
+
+      <WhyTrust className="mt-8" />
+
+      <Link
+        href={`/universities/${university.slug}`}
+        className="mt-6 inline-block font-body text-sm text-slate underline underline-offset-2 hover:text-ink"
+      >
+        ← Back to {university.name}
+      </Link>
+    </main>
+  );
+}
+
+/**
+ * "No longer offered" page shown when a URL points at an archived program.
+ * Deliberately plain: a clear notice that the course is gone, then the same
+ * same-subject alternatives block a live program page carries, so a visitor
+ * who came for this exact course still has somewhere to go. Rendered with
+ * `noindex, follow` (set in generateMetadata).
+ */
+async function DiscontinuedProgram({
+  archived,
+}: {
+  archived: NonNullable<Awaited<ReturnType<typeof getArchivedProgramBySlug>>>;
+}) {
+  const university = archived.university!;
+  const relatedPrograms = archived.subject
+    ? await getRelatedProgramsBySubject(
+        archived.subject.slug,
+        // no id to exclude — pass a sentinel the `neq` can't match
+        "00000000-0000-0000-0000-000000000000",
+        archived.degree_level_id,
+      )
+    : [];
+
+  const breadcrumbs = [
+    { label: "Home", href: "/" },
+    { label: university.name, href: `/universities/${university.slug}` },
+    { label: archived.name },
+  ];
+
+  return (
+    <main className="mx-auto w-full max-w-3xl px-6 pt-8 pb-16">
+      <JsonLd data={breadcrumbJsonLd(breadcrumbs)} />
+      <Breadcrumbs items={breadcrumbs} />
+
+      <div className="mt-4 rounded-2xl border border-line bg-mist p-6 sm:p-8">
+        <p className="font-utility text-xs font-semibold tracking-wide text-slate uppercase">
+          {[archived.degree_level?.name, archived.subject?.name].filter(Boolean).join(" · ")}
+        </p>
+        <h1 className="mt-2 font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
+          {archived.name}
+        </h1>
+        <p className="mt-4 font-body text-base leading-7 text-ink">
+          {university.name} no longer lists this course. It may have been discontinued or
+          renamed since it was last on the{" "}
+          <span className="text-slate">
+            Commonwealth Register of Institutions and Courses for Overseas Students (CRICOS
+            {archived.cricos_code ? ` ${archived.cricos_code}` : ""})
+          </span>
+          .
+        </p>
+        {archived.discontinued_note && (
+          <p className="mt-3 font-body text-base leading-7 text-ink">{archived.discontinued_note}</p>
+        )}
+        <p className="mt-3 font-body text-sm text-slate">
+          For courses currently open to international students, see{" "}
+          {university.apply_url ? (
+            <OutboundLink
+              event="apply_click"
+              eventParams={{ university: university.name, program: archived.name, location: "discontinued_note" }}
+              href={university.apply_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-2 hover:text-ink"
+            >
+              {university.name}
+            </OutboundLink>
+          ) : (
+            university.name
+          )}{" "}
+          directly, or the{" "}
+          <Link
+            href={`/universities/${university.slug}`}
+            className="underline underline-offset-2 hover:text-ink"
+          >
+            {university.name} overview
+          </Link>
+          .
+        </p>
+      </div>
+
+      {relatedPrograms.length > 0 && archived.subject && (
+        <ProfileSection title={`Current ${archived.subject.name} programs`}>
+          <div className="flex flex-col gap-2">
+            {relatedPrograms.map((rp) => (
+              <Link
+                key={`${rp.university?.slug}/${rp.slug}`}
+                href={`/universities/${rp.university?.slug}/programs/${rp.slug}`}
+                className="group flex items-center justify-between gap-4 rounded-md border border-ink/10 bg-paper py-3 pr-3 pl-3 text-sm transition-colors duration-150 hover:border-status-open/60 hover:bg-ink/[0.015]"
+                style={{ borderLeftWidth: 3, borderLeftColor: "var(--color-status-open)" }}
+              >
+                <div className="min-w-0">
+                  <p className="truncate text-ink">{rp.name}</p>
+                  <p className="mt-0.5 truncate font-utility text-xs text-slate">
+                    {[rp.university?.name, rp.degree_level?.name].filter(Boolean).join(" · ")}
+                  </p>
+                </div>
+                <span
+                  aria-hidden="true"
+                  className="flex-shrink-0 text-slate transition-transform duration-150 group-hover:translate-x-0.5 group-hover:text-status-open"
+                >
+                  →
+                </span>
+              </Link>
+            ))}
+          </div>
+          <Link
+            href={`/study/${archived.subject.slug}`}
+            className="mt-3 inline-block font-body text-sm text-slate underline underline-offset-2 hover:text-ink"
+          >
+            All {archived.subject.name} programs in Australia →
           </Link>
         </ProfileSection>
       )}
