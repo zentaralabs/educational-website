@@ -1,26 +1,42 @@
 import { createPublicClient } from "@/lib/supabase/public";
 
 /**
+ * Minimum "About this program" word count for a description-only program page
+ * to be indexed. Rolled down in bands (see migration 0032 and its successors)
+ * as GSC confirms the newly-indexed pages rank without dragging site quality:
+ * 100 (original) -> 85 (band 1) -> 70 (band 2) -> 60 (band 3). Keep this in
+ * sync with the `content_indexable` generated column's threshold.
+ */
+export const PROGRAM_INDEX_MIN_WORDS = 85;
+
+/**
  * Whether a program page carries enough of its own content to be worth
- * indexing (and listing in the sitemap). Program pages are otherwise a thin
- * data template over an AI-imported dataset, so we only index the ones that
- * have real sourced prose: either a parsed `curriculum` (the fully-enriched
- * set) or an "About this program" description of at least 100 words. That
- * covers every real sourced degree card from the 2026-08 description pass
- * (a check of the 100-109 word band found it is almost all demand-tier
- * degrees). The genuinely short templated long-tail cards below 100 words
- * (grad cert/diploma one-liners, short honours years, short pathway cards)
- * stay noindex and out of the sitemap, still live for users and internal
- * links, until a later verification wave.
- * See PROJECT_STATUS.md "Description pass" / "Program pages".
+ * indexing (and listing in the sitemap). A page qualifies when it has a
+ * parsed `curriculum`, OR a real sourced description of at least
+ * `PROGRAM_INDEX_MIN_WORDS` words AND a filled facts table (fees plus a
+ * duration or English score) — that combination is a genuinely useful
+ * landing page for a `[program] at [university]` query even at ~70-90 words
+ * of prose. Rows with no description, or a description on an otherwise-empty
+ * shell, stay noindex (still live for users and internal links).
+ * Mirrored in SQL by the `content_indexable` generated column (migration
+ * 0023, re-cut by 0032). See PROJECT_STATUS.md "Program pages".
  */
 export function isProgramIndexable(program: {
   description?: string | null;
   curriculum?: string | null;
+  duration_years?: number | null;
+  tuition_international?: number | null;
+  tuition_domestic?: number | null;
+  ielts_overall?: number | null;
 }): boolean {
   if (program.curriculum && program.curriculum.trim()) return true;
   const words = (program.description ?? "").trim().split(/\s+/).filter(Boolean);
-  return words.length >= 100;
+  if (words.length < PROGRAM_INDEX_MIN_WORDS) return false;
+  const hasFees =
+    program.tuition_international != null || program.tuition_domestic != null;
+  const hasStructure =
+    program.duration_years != null || program.ielts_overall != null;
+  return hasFees && hasStructure;
 }
 
 export type PublicProgramRow = {
