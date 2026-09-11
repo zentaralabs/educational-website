@@ -161,6 +161,50 @@ export async function getPublishedProgramBySlug(
   return data as unknown as PublicProgramDetail;
 }
 
+export type DiscontinuedProgram = {
+  slug: string;
+  name: string;
+  cricos_code: string | null;
+  discontinued_note: string | null;
+  updated_at: string | null;
+  degree_level_id: number | null;
+  degree_level: { name: string } | null;
+  subject: { slug: string; name: string } | null;
+  university: { slug: string; name: string; city: string | null; apply_url: string | null } | null;
+};
+
+/**
+ * An archived (no-longer-offered) program at a launched university, looked up
+ * by slug + parent university slug. The program detail route falls back to
+ * this when there's no published match, and renders a "no longer offered"
+ * page (with same-subject alternatives) instead of a 404 — a dead end for a
+ * visitor who came looking for exactly this course helps nobody. Archived
+ * rows are already excluded from every `status = 'published'` list, count
+ * and the sitemap, so the only way to reach one is a direct URL.
+ */
+export async function getArchivedProgramBySlug(
+  universitySlug: string,
+  programSlug: string,
+): Promise<DiscontinuedProgram | null> {
+  const supabase = createPublicClient(["programs:list", `program:${programSlug}`]);
+  const { data, error } = await supabase
+    .from("programs")
+    .select(
+      `slug, name, cricos_code, discontinued_note, updated_at, degree_level_id,
+       degree_level:degree_levels(name), subject:subjects(slug, name),
+       university:universities!inner(slug, name, city, apply_url, status, country:countries!inner(is_launched))`,
+    )
+    .eq("slug", programSlug)
+    .eq("university.slug", universitySlug)
+    .eq("status", "archived")
+    .eq("university.status", "published")
+    .eq("university.country.is_launched", true)
+    .maybeSingle();
+
+  if (error) throw error;
+  return (data as unknown as DiscontinuedProgram) ?? null;
+}
+
 /**
  * Career/PR-pathway occupations linked to a program (migration 0030). Only
  * published occupations are returned — `program_occupations` itself has no
