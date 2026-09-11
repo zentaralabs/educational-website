@@ -1136,7 +1136,7 @@
     "currency": "AUD",
     "application_url": "https://student-adelaideuni.studylink.com",
     "description": "This is Adelaide University's Bachelor of Business with a Marketing major. The degree structure is the same across all Bachelor of Business majors: a common core, a business program core (accounting, management, business analytics, marketing principles), a 48-unit major, a work-integrated learning block, and electives, over three years.\n\nThe Marketing major's 48 units cover consumer behaviour, marketing analytics, advertising, market research and customer insights, branding, distribution, marketing planning, and service design. Work-integrated learning is taken as an Integrated Marketing course or an internship. It suits students aiming at brand management, market research, digital marketing, or advertising roles.",
-    "curriculum": null,
+    "curriculum": "Year 1, Semester 1 — Accounting for Decision Makers (6 units); Management, Organisations and Leadership (6 units); Business Law (6 units); Marketing Principles (6 units).\nYear 1, Semester 2 — Principles of Economics (6 units); Consumer Behaviour (6 units); Common core.\nYear 2, Semester 1 — Emerging Technologies, Data and Business Analytics (6 units); Negotiation, Conflict Management and Resolution (6 units); Marketing Analytics (6 units); Market Research and Customer Insights (6 units).\nYear 2, Semester 2 — Advertising (6 units); Distribution and Route to Market (6 units); Common core.\nYear 3, Semester 1 — Strategic Management (6 units); Branding (6 units); Marketing Planning (6 units).\nYear 3, Semester 2 — Service Design and Marketing (6 units); Integrated Marketing (6 units).",
     "admission_requirements": "Guaranteed entry ATAR 70 (or equivalent secondary qualification); no prerequisite subjects; IELTS 6.5 overall with 6.0 in each band for international applicants.",
     "english_requirements": "IELTS Overall 6.5, no band below 6.0 (or equivalent PTE/TOEFL)",
     "ielts_overall": "6.5",
@@ -1150,7 +1150,7 @@
     "pte_writing": null,
     "pte_speaking": null,
     "intake_dates": "February, July",
-    "last_verified_at": "2026-08-23T18:15:00.000Z",
+    "last_verified_at": "2026-09-10T18:15:00.000Z",
     "source_url": "https://www.adelaide.edu.au/study/degrees/bachelor-of-business-marketing/",
     "cricos_code": null
   },
@@ -1169,7 +1169,7 @@
     "currency": "AUD",
     "application_url": "https://student-adelaideuni.studylink.com",
     "description": "Adelaide University's Bachelor of Business, marketing and communication major, is a three-year degree (144 units). Built on the shared business core, the 48-unit major pairs marketing fundamentals, consumer behaviour and marketing analytics with communication content: public relations, media, campaign messaging and stakeholder engagement.\n\nWork-integrated learning is part of the degree, with February and July intakes at the city campus and an ATAR of about 70 for entry. It suits students who want to work where marketing and corporate or public relations meet, in roles such as communications coordinator, campaign manager or brand and PR assistant.",
-    "curriculum": null,
+    "curriculum": "Year 1, Semester 1 — Accounting for Decision Makers (6 units); Business Law (6 units); Management, Organisations and Leadership (6 units); Principles of Economics (6 units).\nYear 1, Semester 2 — Marketing Principles (6 units); Major; Common core.\nYear 2, Semester 1 — Emerging Technologies, Data and Business Analytics (6 units); Negotiation, Conflict Management and Resolution (6 units); Major; Major.\nYear 2, Semester 2 — Major; WIL/ Profession (6 units); Common core.\nYear 3, Semester 1 — Strategic Management (6 units); Major; Major; Major.\nYear 3, Semester 2 — Major; WIL / Profession (6 units); Common core.",
     "admission_requirements": "Guaranteed entry ATAR 70 (or equivalent secondary qualification); no prerequisite subjects; IELTS 6.5 overall with 6.0 in each band for international applicants.",
     "english_requirements": "IELTS Overall 6.5, no band below 6.0 (or equivalent PTE/TOEFL)",
     "ielts_overall": "6.5",
@@ -1183,9 +1183,9 @@
     "pte_writing": null,
     "pte_speaking": null,
     "intake_dates": "February, July",
-    "last_verified_at": "2026-08-23T18:15:00.000Z",
+    "last_verified_at": "2026-09-10T18:15:00.000Z",
     "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-business/",
-    "cricos_code": null
+    "cricos_code": "115681C"
   },
   {
     "university_slug": "adelaide-university",
@@ -1202,7 +1202,7 @@
     "currency": "AUD",
     "application_url": "https://student-adelaideuni.studylink.com",
     "description": "Adelaide University's Bachelor of Business, marketing and design major, is a three-year degree (144 units). It combines the marketing sequence, consumer behaviour, branding and analytics, with design thinking and visual communication, so graduates can both plan a campaign and shape how it looks and feels.\n\nThe degree keeps the shared business core, includes work-integrated learning, and runs February and July intakes at the city campus with an ATAR of about 70 for entry. It suits students interested in brand design, content and creative direction within a marketing team, rather than a pure graphic design degree.",
-    "curriculum": null,
+    "curriculum": "Year 1, Semester 1 — Accounting for Decision Makers (6 units); Business Law (6 units); Management, Organisations and Leadership (6 units); Principles of Economics (6 units).\nYear 1, Semester 2 — Marketing Principles (6 units); Major; Common core.\nYear 2, Semester 1 — Emerging Technologies, Data and Business Analytics (6 units); Negotiation, Conflict Management and Resolution (6 units); Major; Major.\nYear 2, Semester 2 — Major; WIL/ Profession (6 units); Common core.\nYear 3, Semester 1 — Strategic Management (6 units); Major; Major; Major.\nYear 3, Semester 2 — Major; WIL / Profession (6 units); Common core.",
     "admission_requirements": "Guaranteed entry ATAR 70 (or equivalent secondary qualification); no prerequisite subjects; IELTS 6.5 overall with 6.0 in each band for international applicants.",
     "english_requirements": "IELTS Overall 6.5, no band below 6.0 (or equivalent PTE/TOEFL)",
     "ielts_overall": "6.5",
@@ -1216,9 +1216,9 @@
     "pte_writing": null,
     "pte_speaking": null,
     "intake_dates": "February, July",
-    "last_verified_at": "2026-08-23T18:15:00.000Z",
+    "last_verified_at": "2026-09-10T18:15:00.000Z",
     "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-business/",
-    "cricos_code": null
+    "cricos_code": "115681C"
   },
   {
     "university_slug": "adelaide-university",
@@ -1235,7 +1235,7 @@
     "currency": "AUD",
     "application_url": "https://student-adelaideuni.studylink.com",
     "description": "The procurement and supply chain management major of Adelaide University's Bachelor of Business: a three-year degree (144 units) with a shared business core and a 48-unit major covering sourcing and supplier management, logistics, inventory and distribution, contract management and the analytics used to run a supply chain.\n\nWork-integrated learning is part of the degree, with February and July intakes at the city campus and an ATAR of about 70 for entry. It suits students aiming at procurement, logistics, operations or supply chain analyst roles, a function that has drawn much more attention since recent global supply disruptions.",
-    "curriculum": null,
+    "curriculum": "Year 1, Semester 1 — Accounting for Decision Makers (6 units); Business Law (6 units); Management, Organisations and Leadership (6 units); Principles of Economics (6 units).\nYear 1, Semester 2 — Marketing Principles (6 units); Major; Common core.\nYear 2, Semester 1 — Emerging Technologies, Data and Business Analytics (6 units); Negotiation, Conflict Management and Resolution (6 units); Major; Major.\nYear 2, Semester 2 — Major; WIL/ Profession (6 units); Common core.\nYear 3, Semester 1 — Strategic Management (6 units); Major; Major; Major.\nYear 3, Semester 2 — Major; WIL / Profession (6 units); Common core.",
     "admission_requirements": "Guaranteed entry ATAR 70 (or equivalent secondary qualification); no prerequisite subjects; IELTS 6.5 overall with 6.0 in each band for international applicants.",
     "english_requirements": "IELTS Overall 6.5, no band below 6.0 (or equivalent PTE/TOEFL)",
     "ielts_overall": "6.5",
@@ -1249,9 +1249,9 @@
     "pte_writing": null,
     "pte_speaking": null,
     "intake_dates": "February, July",
-    "last_verified_at": "2026-08-23T18:15:00.000Z",
+    "last_verified_at": "2026-09-10T18:15:00.000Z",
     "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-business/",
-    "cricos_code": null
+    "cricos_code": "115681C"
   },
   {
     "university_slug": "adelaide-university",
@@ -1268,7 +1268,7 @@
     "currency": "AUD",
     "application_url": "https://student-adelaideuni.studylink.com",
     "description": "Adelaide University's Bachelor of Business with a Project Management major runs on the standard three-year Bachelor of Business structure (common core, business program core, 48-unit major, work-integrated learning, electives).\n\nThe major's 48 units cover foundations of project management, scheduling and cost management, project management methodologies, systems thinking, project risk management, infrastructure and sustainability, and a project management research study. Work-integrated learning is a 12-unit Project Management Professional Practice course in third year. The major is accredited by the Project Management Institute's Global Accreditation Center, which is useful for students planning to pursue PMI certification.",
-    "curriculum": null,
+    "curriculum": "Year 1, Semester 1 — Management, Organisations and Leadership (6 units); Principles of Economics (6 units); Foundations of Project Management (6 units); Common core.\nYear 1, Semester 2 — Accounting for Decision Makers (6 units); Business Law (6 units); Marketing Principles (6 units); Scheduling and Cost Management (6 units).\nYear 2, Semester 1 — Project Management Methodologies and Concepts (6 units); Project Risk Management (6 units); Infrastructure and Sustainability (6 units); Project Logistics and Supply Chains (6 units).\nYear 2, Semester 2 — Emerging Technologies, Data and Business Analytics (6 units); Systems Thinking and Projects (6 units); Industry Based Applications (6 units); Common core.\nYear 3, Semester 1 — Project Management Professional Practice (12 units); PM Research Methods (6 units); Common core.\nYear 3, Semester 2 — Project Management Research Study (12 units); Project Procurement and Resourcing (6 units).",
     "admission_requirements": "Guaranteed entry ATAR 70 (or equivalent secondary qualification); no prerequisite subjects; IELTS 6.5 overall with 6.0 in each band for international applicants.",
     "english_requirements": "IELTS Overall 6.5, no band below 6.0 (or equivalent PTE/TOEFL)",
     "ielts_overall": "6.5",
@@ -1282,9 +1282,9 @@
     "pte_writing": null,
     "pte_speaking": null,
     "intake_dates": "February, July",
-    "last_verified_at": "2026-08-23T18:15:00.000Z",
+    "last_verified_at": "2026-09-10T18:15:00.000Z",
     "source_url": "https://www.adelaide.edu.au/study/degrees/bachelor-of-business-project-management/",
-    "cricos_code": null
+    "cricos_code": "115681C"
   },
   {
     "university_slug": "adelaide-university",
@@ -1301,7 +1301,7 @@
     "currency": "AUD",
     "application_url": "https://student-adelaideuni.studylink.com",
     "description": "Adelaide University's Bachelor of Business, real estate major, is a three-year degree (144 units). Alongside the shared business core it covers property valuation, property investment and finance, development, agency practice and the law and regulation of real estate.\n\nWork-integrated learning is built in, with February and July intakes at the city campus and an ATAR of about 70 for entry. It is aligned to the licensing and professional pathways in the property industry and suits students aiming at valuation, agency, property management, development or property investment roles.",
-    "curriculum": null,
+    "curriculum": "Year 1, Semester 1 — Accounting for Decision Makers (6 units); Business Law (6 units); Management, Organisations and Leadership (6 units); Principles of Economics (6 units).\nYear 1, Semester 2 — Marketing Principles (6 units); Major; Common core.\nYear 2, Semester 1 — Emerging Technologies, Data and Business Analytics (6 units); Negotiation, Conflict Management and Resolution (6 units); Major; Major.\nYear 2, Semester 2 — Major; WIL/ Profession (6 units); Common core.\nYear 3, Semester 1 — Strategic Management (6 units); Major; Major; Major.\nYear 3, Semester 2 — Major; WIL / Profession (6 units); Common core.",
     "admission_requirements": "Guaranteed entry ATAR 70 (or equivalent secondary qualification); no prerequisite subjects; IELTS 6.5 overall with 6.0 in each band for international applicants.",
     "english_requirements": "IELTS Overall 6.5, no band below 6.0 (or equivalent PTE/TOEFL)",
     "ielts_overall": "6.5",
@@ -1315,9 +1315,9 @@
     "pte_writing": null,
     "pte_speaking": null,
     "intake_dates": "February, July",
-    "last_verified_at": "2026-08-23T18:15:00.000Z",
+    "last_verified_at": "2026-09-10T18:15:00.000Z",
     "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-business/",
-    "cricos_code": null
+    "cricos_code": "115681C"
   },
   {
     "university_slug": "adelaide-university",
@@ -1334,7 +1334,7 @@
     "currency": "AUD",
     "application_url": "https://student-adelaideuni.studylink.com",
     "description": "Adelaide University's Bachelor of Business, sport management major, is a three-year degree (144 units). The 48-unit major applies the shared business core, marketing, finance, management and law, to the sport industry: club and facility administration, sport marketing and sponsorship, event delivery and the governance of sporting bodies.\n\nWork-integrated learning is part of the degree, with February and July intakes at the city campus and an ATAR of about 70 for entry. It suits students who want a business career specifically in professional or community sport, events or sporting administration.",
-    "curriculum": null,
+    "curriculum": "Year 1, Semester 1 — Accounting for Decision Makers (6 units); Business Law (6 units); Management, Organisations and Leadership (6 units); Principles of Economics (6 units).\nYear 1, Semester 2 — Marketing Principles (6 units); Major; Common core.\nYear 2, Semester 1 — Emerging Technologies, Data and Business Analytics (6 units); Negotiation, Conflict Management and Resolution (6 units); Major; Major.\nYear 2, Semester 2 — Major; WIL/ Profession (6 units); Common core.\nYear 3, Semester 1 — Strategic Management (6 units); Major; Major; Major.\nYear 3, Semester 2 — Major; WIL / Profession (6 units); Common core.",
     "admission_requirements": "Guaranteed entry ATAR 70 (or equivalent secondary qualification); no prerequisite subjects; IELTS 6.5 overall with 6.0 in each band for international applicants.",
     "english_requirements": "IELTS Overall 6.5, no band below 6.0 (or equivalent PTE/TOEFL)",
     "ielts_overall": "6.5",
@@ -1348,9 +1348,9 @@
     "pte_writing": null,
     "pte_speaking": null,
     "intake_dates": "February, July",
-    "last_verified_at": "2026-08-23T18:15:00.000Z",
+    "last_verified_at": "2026-09-10T18:15:00.000Z",
     "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-business/",
-    "cricos_code": null
+    "cricos_code": "115681C"
   },
   {
     "university_slug": "adelaide-university",
@@ -1367,7 +1367,7 @@
     "currency": "AUD",
     "application_url": "https://student-adelaideuni.studylink.com",
     "description": "Adelaide University's Bachelor of Business, tourism, events and hospitality management major, is a three-year degree (144 units). The 48-unit major applies the shared business core to visitor industries: destination and tourism management, event planning and delivery, hospitality operations, and the marketing of experiences.\n\nWork-integrated learning is part of the degree, with February and July intakes at the city campus and an ATAR of about 70 for entry. It suits students who want a management career in tourism bodies, event companies, hotels, venues or festivals rather than a general business role.",
-    "curriculum": null,
+    "curriculum": "Year 1, Semester 1 — Accounting for Decision Makers (6 units); Business Law (6 units); Management, Organisations and Leadership (6 units); Principles of Economics (6 units).\nYear 1, Semester 2 — Marketing Principles (6 units); Major; Common core.\nYear 2, Semester 1 — Emerging Technologies, Data and Business Analytics (6 units); Negotiation, Conflict Management and Resolution (6 units); Major; Major.\nYear 2, Semester 2 — Major; WIL/ Profession (6 units); Common core.\nYear 3, Semester 1 — Strategic Management (6 units); Major; Major; Major.\nYear 3, Semester 2 — Major; WIL / Profession (6 units); Common core.",
     "admission_requirements": "Guaranteed entry ATAR 70 (or equivalent secondary qualification); no prerequisite subjects; IELTS 6.5 overall with 6.0 in each band for international applicants.",
     "english_requirements": "IELTS Overall 6.5, no band below 6.0 (or equivalent PTE/TOEFL)",
     "ielts_overall": "6.5",
@@ -1381,9 +1381,9 @@
     "pte_writing": null,
     "pte_speaking": null,
     "intake_dates": "February, July",
-    "last_verified_at": "2026-08-23T18:15:00.000Z",
+    "last_verified_at": "2026-09-10T18:15:00.000Z",
     "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-business/",
-    "cricos_code": null
+    "cricos_code": "115681C"
   },
   {
     "university_slug": "adelaide-university",
@@ -1499,7 +1499,7 @@
     "currency": "AUD",
     "application_url": "https://student-adelaideuni.studylink.com",
     "description": "The banking and finance major of Adelaide University's Bachelor of Commerce: a three-year degree (144 units) with a 66-unit commerce core, then major courses in options, futures and risk management, portfolio theory, business valuation, and regulation and ethics in finance, with electives in fintech, international banking and treasury.\n\nIt is built around the pathway to the Chartered Financial Analyst credential, and includes more than 300 hours of work-integrated learning across years two and three through a business practicum and business clinic. Entry is an ATAR of about 75. It suits students aiming at investment, corporate finance, risk or banking roles.",
-    "curriculum": null,
+    "curriculum": "Year 1, Semester 1 — Accounting for Decision Makers (6 units); Business Finance (6 units); Principles of Economics (6 units); Common core.\nYear 1, Semester 2 — Management, Organisations and Leadership (6 units); Data Analytics (6 units); Business Valuation (6 units); Program electives.\nYear 2, Semester 1 — Business Law (6 units); Predictive and Visual Analytics for Managers and Consultants (6 units); Foundations of Business Analytics (6 units); Common core.\nYear 2, Semester 2 — Options, Futures and Risk Management (6 units); Major selective courses; Business Practicum (6 units); Program electives.\nYear 3, Semester 1 — Corporate Regulations and Ethics in Finance (6 units); Major selective courses; Major selective courses; Common core.\nYear 3, Semester 2 — Business Applications for Artificial Intelligence (6 units).",
     "admission_requirements": "Guaranteed entry ATAR 75 (or equivalent secondary qualification); no prerequisite subjects; IELTS 6.5 overall with 6.0 in each band for international applicants.",
     "english_requirements": "IELTS Overall 6.5, no band below 6.0 (or equivalent PTE/TOEFL)",
     "ielts_overall": "6.5",
@@ -1513,9 +1513,9 @@
     "pte_writing": null,
     "pte_speaking": null,
     "intake_dates": "February, July",
-    "last_verified_at": "2026-08-23T18:15:00.000Z",
+    "last_verified_at": "2026-09-10T18:15:00.000Z",
     "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-commerce-banking-and-finance/",
-    "cricos_code": null
+    "cricos_code": "115684M"
   },
   {
     "university_slug": "adelaide-university",
@@ -1532,7 +1532,7 @@
     "currency": "AUD",
     "application_url": "https://student-adelaideuni.studylink.com",
     "description": "Adelaide University's Bachelor of Commerce, business analytics major, is a three-year degree (144 units). On top of the commerce core in accounting, finance, economics and management, the major covers foundations of business analytics, predictive and visual analytics, business applications of artificial intelligence, and chatbot design and prompt engineering, using industry-standard tools.\n\nTwo work-integrated learning courses, a business practicum in year two and a business clinic in year three, are built into the degree. Entry is an ATAR of about 80. It suits students who want to work in analytics, business intelligence or data-informed consulting across finance, marketing, health, tech and government.",
-    "curriculum": null,
+    "curriculum": "Year 1, Semester 1 — Accounting for Decision Makers (6 units); Business Finance (6 units); Principles of Economics (6 units); Common core.\nYear 1, Semester 2 — Data Analytics (6 units); Management, Organisations and Leadership (6 units); Foundations of Business Analytics (6 units).\nYear 2, Semester 1 — Business Law (6 units); Predictive and Visual Analytics for Managers and Consultants (6 units); Accounting Systems and Analytics (6 units); Common core.\nYear 2, Semester 2 — Operations and Customer Analytics (6 units); Chatbot Design and Prompt Engineering (6 units); Business Practicum (6 units).\nYear 3, Semester 1 — Minds and Machines (6 units); Business Simulation and Decision Analysis (6 units); Business Analytics in Practice (6 units); Common core.",
     "admission_requirements": "Guaranteed entry ATAR 80 (or equivalent secondary qualification); no prerequisite subjects; IELTS 6.5 overall with 6.0 in each band for international applicants.",
     "english_requirements": "IELTS Overall 6.5, no band below 6.0 (or equivalent PTE/TOEFL)",
     "ielts_overall": "6.5",
@@ -1546,9 +1546,9 @@
     "pte_writing": null,
     "pte_speaking": null,
     "intake_dates": "February, July",
-    "last_verified_at": "2026-08-23T18:15:00.000Z",
+    "last_verified_at": "2026-09-10T18:15:00.000Z",
     "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-commerce-business-analytics/",
-    "cricos_code": null
+    "cricos_code": "115684M"
   },
   {
     "university_slug": "adelaide-university",
@@ -1579,9 +1579,9 @@
     "pte_writing": null,
     "pte_speaking": null,
     "intake_dates": "February, July",
-    "last_verified_at": "2026-08-23T18:15:00.000Z",
+    "last_verified_at": "2026-09-10T18:15:00.000Z",
     "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-commerce-financial-planning-and-property/",
-    "cricos_code": null
+    "cricos_code": "115684M"
   },
   {
     "university_slug": "adelaide-university",
@@ -1598,7 +1598,7 @@
     "currency": "AUD",
     "application_url": "https://student-adelaideuni.studylink.com",
     "description": "The property major of Adelaide University's Bachelor of Commerce (three years, 144 units): a 66-unit commerce core plus property courses in property economics, property investment, property development, and statutory and advanced valuations.\n\nAdelaide University is working with the Australian Property Institute on program accreditation, so the valuer registration pathway is not yet finalised. Two work-integrated learning courses, a business practicum and a business clinic, run in years two and three. Entry is an ATAR of about 80. It suits students aiming at commercial property development, investment analysis, asset management or valuation.",
-    "curriculum": null,
+    "curriculum": "Year 1, Semester 1 — Accounting for Decision Makers (6 units); Business Finance (6 units); Principles of Economics (6 units); Common core.\nYear 1, Semester 2 — Management, Organisations and Leadership (6 units); Data Analytics (6 units); Discovering Opportunities in Property (6 units).\nYear 2, Semester 1 — Business Law (6 units); Predictive and Visual Analytics for Managers and Consultants (6 units); Property Economics (6 units); Common core.\nYear 2, Semester 2 — Business Practicum (6 units); Property and Real Estate Law (6 units); Property Asset Management (6 units).\nYear 3, Semester 1 — Property Investment (6 units); Property Development (6 units); Statutory and Advanced Valuations (6 units); Common core.",
     "admission_requirements": "Guaranteed entry ATAR 80 (or equivalent secondary qualification); no prerequisite subjects; IELTS 6.5 overall with 6.0 in each band for international applicants.",
     "english_requirements": "IELTS Overall 6.5, no band below 6.0 (or equivalent PTE/TOEFL)",
     "ielts_overall": "6.5",
@@ -1612,9 +1612,9 @@
     "pte_writing": null,
     "pte_speaking": null,
     "intake_dates": "February, July",
-    "last_verified_at": "2026-08-23T18:15:00.000Z",
+    "last_verified_at": "2026-09-10T18:15:00.000Z",
     "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-commerce-property/",
-    "cricos_code": null
+    "cricos_code": "115684M"
   },
   {
     "university_slug": "adelaide-university",
@@ -1829,21 +1829,21 @@
     "currency": "AUD",
     "application_url": null,
     "description": "Adelaide University's Bachelor of Creative Arts is a three-year undergraduate degree in Adelaide. Students choose two major areas across the creative industries and build a portfolio through collaborative projects with students from other creative disciplines. Core courses cover the contemporary arts and cultural sector and the business and entrepreneurial side of creative work. Graduates move into production, design, arts management and freelance creative practice.",
-    "curriculum": null,
-    "admission_requirements": null,
-    "english_requirements": null,
-    "ielts_overall": null,
-    "ielts_listening": null,
-    "ielts_reading": null,
-    "ielts_writing": null,
-    "ielts_speaking": null,
+    "curriculum": "Year 1, Semester 1 — Major; Second Major.\nYear 1, Semester 2 — Major; Second Major; Common core.\nYear 2, Semester 1 — Major; Major; Second Major; Second Major.\nYear 2, Semester 2 — Creative Solutions: Reimagining Projects (6 units); Major; Second Major; Common core.\nYear 3, Semester 1 — Major; Major; Second Major; Second Major.\nYear 3, Semester 2 — Major; Second Major; Common core.",
+    "admission_requirements": "Completion of a secondary education qualification equivalent to the South Australian Certificate of Education (SACE), with a minimum ATAR of approximately 70 (or equivalent via VET Certificate IV+ or prior higher education study).",
+    "english_requirements": "IELTS Academic Overall 6.5, with no band below 6.0.",
+    "ielts_overall": "6.5",
+    "ielts_listening": "6.0",
+    "ielts_reading": "6.0",
+    "ielts_writing": "6.0",
+    "ielts_speaking": "6.0",
     "pte_overall": null,
     "pte_listening": null,
     "pte_reading": null,
     "pte_writing": null,
     "pte_speaking": null,
     "intake_dates": null,
-    "last_verified_at": "2026-09-04T18:15:00.000Z",
+    "last_verified_at": "2026-09-10T18:15:00.000Z",
     "source_url": "https://www.adelaide.edu.au/study/degrees/bachelor-of-creative-arts",
     "cricos_code": "115689F"
   },
