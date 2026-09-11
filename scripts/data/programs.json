@@ -19806,7 +19806,7 @@
     "id": "13db7d11-753e-4b67-9ce1-af4938fc7a80",
     "name": "Master of Engineering",
     "slug": "master-of-engineering",
-    "status": "published",
+    "status": "archived",
     "duration_years": "2.0",
     "tuition_international": "56900",
     "tuition_domestic": null,
@@ -19828,7 +19828,7 @@
     "pte_writing": null,
     "pte_speaking": null,
     "intake_dates": null,
-    "last_verified_at": "2026-09-04T18:15:00.000Z",
+    "last_verified_at": "2026-09-10T18:15:00.000Z",
     "source_url": "https://eng.anu.edu.au/study/master/",
     "cricos_code": "077326G"
   },
