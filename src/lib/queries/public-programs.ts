@@ -319,6 +319,12 @@ export async function listPublishedProgramsForSitemap(): Promise<SitemapProgramR
       .eq("content_indexable", true)
       .eq("university.status", "published")
       .eq("university.country.is_launched", true)
+      // Without an explicit order, PostgREST doesn't guarantee stable row
+      // order across separate paginated requests; a row updated between two
+      // .range() calls can shift pages and get emitted twice (seen live: a
+      // duplicate Wollongong Master of Public Health <loc>). id is unique and
+      // immutable, so it can't itself cause pages to shift.
+      .order("id")
       .range(from, from + pageSize - 1);
 
     // A transient error mid-pagination returns the rows gathered so far rather
