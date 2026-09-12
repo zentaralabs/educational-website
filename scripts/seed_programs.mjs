@@ -30,10 +30,14 @@ const env = Object.fromEntries(
 const COMMIT = process.argv.includes("--commit");
 const programs = JSON.parse(fs.readFileSync("scripts/data/programs.json", "utf8"));
 
+// Note: `curriculum` is deliberately excluded — some universities' curriculum
+// text uses " — " as a structural delimiter between a term label and its
+// course list (see parseCurriculumLine in the program detail page), so a
+// blanket em-dash ban here would corrupt real data. See memory note
+// em-dash-rule.md.
 const NO_EM_DASH_FIELDS = [
   "name",
   "description",
-  "curriculum",
   "admission_requirements",
   "english_requirements",
   "discontinued_note",
