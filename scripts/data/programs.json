@@ -24112,7 +24112,7 @@
     "id": "5c695d30-92b5-4963-ace6-834fa4546ef3",
     "name": "Associate Degree of Business",
     "slug": "associate-degree-of-business",
-    "status": "published",
+    "status": "archived",
     "duration_years": "1.4",
     "tuition_international": "72300",
     "tuition_domestic": null,
@@ -24137,7 +24137,7 @@
     "last_verified_at": "2026-09-04T18:15:00.000Z",
     "source_url": null,
     "cricos_code": "0100507",
-    "discontinued_note": null
+    "discontinued_note": "No longer offered. Verified via Bond's own site search: exact-phrase search for \"Associate Degree of Business\" returns no matching program page. No successor program identified."
   },
   {
     "university_slug": "bond-university",
@@ -24146,7 +24146,7 @@
     "id": "014c4e94-89d6-479b-8f47-0ac8961999d6",
     "name": "Associate Degree of Health Sciences",
     "slug": "associate-degree-of-health-sciences",
-    "status": "published",
+    "status": "archived",
     "duration_years": "1.4",
     "tuition_international": "72300",
     "tuition_domestic": null,
@@ -24171,7 +24171,7 @@
     "last_verified_at": "2026-09-04T18:15:00.000Z",
     "source_url": null,
     "cricos_code": "073995C",
-    "discontinued_note": null
+    "discontinued_note": "No longer offered. Verified via Bond's own site search: exact-phrase search for \"Associate Degree of Health Sciences\" returns zero results site-wide. No successor program identified."
   },
   {
     "university_slug": "bond-university",
@@ -24180,7 +24180,7 @@
     "id": "26d505af-5f73-4da5-ae65-07f54142260d",
     "name": "Associate Degree of Medical Studies",
     "slug": "associate-degree-of-medical-studies",
-    "status": "published",
+    "status": "archived",
     "duration_years": "1.4",
     "tuition_international": "97100",
     "tuition_domestic": null,
@@ -24205,7 +24205,7 @@
     "last_verified_at": "2026-09-04T18:15:00.000Z",
     "source_url": null,
     "cricos_code": "0100361",
-    "discontinued_note": null
+    "discontinued_note": "No longer offered. Verified via Bond's own site search: exact-phrase search for \"Associate Degree of Medical Studies\" returns zero results site-wide. No successor program identified."
   },
   {
     "university_slug": "bond-university",
@@ -26220,7 +26220,7 @@
     "id": "8952c96d-c23e-4a41-9f35-58025e5bb6a5",
     "name": "Bachelor of Medical Science",
     "slug": "bachelor-of-medical-science",
-    "status": "published",
+    "status": "archived",
     "duration_years": "2.1",
     "tuition_international": "97100",
     "tuition_domestic": null,
@@ -26245,7 +26245,7 @@
     "last_verified_at": "2026-09-04T18:15:00.000Z",
     "source_url": null,
     "cricos_code": "0100360",
-    "discontinued_note": null
+    "discontinued_note": "Superseded by the Bachelor of Medical Studies, the undergraduate award within Bond's current Medical Program (Bachelor of Medical Studies + Doctor of Medicine, program codes CC-60026/CC-63048). Bond's own site search for \"Bachelor of Medical Science\" returns only the current combined Medical Program page, with no distinct \"Bachelor of Medical Science\" program found."
   },
   {
     "university_slug": "bond-university",
@@ -26696,7 +26696,7 @@
     "id": "8c7d12b0-90ff-43d9-b326-947676fcb19b",
     "name": "Diploma in Business Studies",
     "slug": "diploma-in-business-studies",
-    "status": "published",
+    "status": "archived",
     "duration_years": "0.7",
     "tuition_international": "72300",
     "tuition_domestic": null,
@@ -26721,7 +26721,7 @@
     "last_verified_at": "2026-09-04T18:15:00.000Z",
     "source_url": null,
     "cricos_code": "0100506",
-    "discontinued_note": null
+    "discontinued_note": "No longer offered. Verified via Bond's own site search (bond.edu.au/search-results) and program sitemap: no matching program page under any slug, and exact-phrase search returns no relevant result. No successor program identified."
   },
   {
     "university_slug": "bond-university",
@@ -26934,7 +26934,7 @@
     "id": "956c2ae3-fc6a-4ec6-b9df-d0d277a4356e",
     "name": "Diploma of University Studies",
     "slug": "diploma-of-university-studies",
-    "status": "published",
+    "status": "archived",
     "duration_years": "0.7",
     "tuition_international": "72300",
     "tuition_domestic": null,
@@ -26959,7 +26959,7 @@
     "last_verified_at": "2026-09-04T18:15:00.000Z",
     "source_url": null,
     "cricos_code": "105063A",
-    "discontinued_note": null
+    "discontinued_note": "No longer offered. Verified via Bond's own site search: exact-phrase search for \"Diploma of University Studies\" returns only one unrelated result (Master of Architecture), no matching program page. No successor program identified."
   },
   {
     "university_slug": "bond-university",
@@ -27308,7 +27308,7 @@
     "id": "63e261ed-9e83-44a3-8902-c3af8d014463",
     "name": "Graduate Certificate in City Planning",
     "slug": "graduate-certificate-in-city-planning",
-    "status": "published",
+    "status": "archived",
     "duration_years": "0.3",
     "tuition_international": null,
     "tuition_domestic": null,
@@ -27333,7 +27333,7 @@
     "last_verified_at": "2026-09-04T18:15:00.000Z",
     "source_url": null,
     "cricos_code": "0101286",
-    "discontinued_note": null
+    "discontinued_note": "No longer offered. Bond's Construction, Property, and Planning study area currently comprises Property, Valuation and Architecture awards only; site-wide search for \"City Planning\" returns no matching program page (a 2022 news article referencing a graduating 'Master of City Planning' student is the only site reference, confirming the award family existed but is not in the current catalogue). No successor program identified."
   },
   {
     "university_slug": "bond-university",
@@ -27648,7 +27648,7 @@
     "id": "be63dc13-7f9f-4e88-a68c-71963d0a42d9",
     "name": "Graduate Certificate in Occupation and Health",
     "slug": "graduate-certificate-in-occupation-and-health",
-    "status": "published",
+    "status": "archived",
     "duration_years": "0.3",
     "tuition_international": null,
     "tuition_domestic": null,
@@ -27673,7 +27673,7 @@
     "last_verified_at": "2026-09-04T18:15:00.000Z",
     "source_url": null,
     "cricos_code": "106641H",
-    "discontinued_note": null
+    "discontinued_note": "Not offered as a standalone award. Bond's current offering in this area is the Graduate Diploma in Occupation and Health; Bond's own site search for \"Graduate Certificate in Occupation and Health\" returns zero results, consistent with this being a nested/exit award of the Graduate Diploma rather than a separately marketed program."
   },
   {
     "university_slug": "bond-university",
@@ -27954,7 +27954,7 @@
     "id": "bf36344e-be1c-431a-96bb-69b15ce35527",
     "name": "Graduate Diploma in City Planning",
     "slug": "graduate-diploma-in-city-planning",
-    "status": "published",
+    "status": "archived",
     "duration_years": "0.7",
     "tuition_international": "78600",
     "tuition_domestic": null,
@@ -27979,7 +27979,7 @@
     "last_verified_at": "2026-09-04T18:15:00.000Z",
     "source_url": null,
     "cricos_code": "0101287",
-    "discontinued_note": null
+    "discontinued_note": "No longer offered. Same evidence as the Graduate Certificate and Master in City Planning: Bond's Construction, Property, and Planning study area no longer includes a City Planning award family, and site-wide search for \"City Planning\" returns no matching program page. No successor program identified."
   },
   {
     "university_slug": "bond-university",
@@ -29008,7 +29008,7 @@
     "id": "320a4b9d-d731-4bbb-8de4-f9fdd387cdbb",
     "name": "Master of City Planning",
     "slug": "master-of-city-planning",
-    "status": "published",
+    "status": "archived",
     "duration_years": "1.4",
     "tuition_international": "56300",
     "tuition_domestic": null,
@@ -29033,7 +29033,7 @@
     "last_verified_at": "2026-09-04T18:15:00.000Z",
     "source_url": null,
     "cricos_code": "0101288",
-    "discontinued_note": null
+    "discontinued_note": "No longer offered. Bond's Construction, Property, and Planning study area currently comprises Property, Valuation and Architecture awards only; site-wide search for \"Master of City Planning\"/\"City Planning\" returns no matching program page (a 2022 news article referencing a graduating student is the only site reference). No successor program identified."
   },
   {
     "university_slug": "bond-university",
