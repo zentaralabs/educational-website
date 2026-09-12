@@ -59,6 +59,7 @@ const UPSERT_FIELDS = [
   "last_verified_at",
   "source_url",
   "cricos_code",
+  "discontinued_note",
 ];
 
 // Validate before touching the DB. Em dashes and missing keys are fatal; a
