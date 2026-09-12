@@ -30,7 +30,14 @@ const env = Object.fromEntries(
 const COMMIT = process.argv.includes("--commit");
 const programs = JSON.parse(fs.readFileSync("scripts/data/programs.json", "utf8"));
 
-const NO_EM_DASH_FIELDS = ["name", "description", "admission_requirements", "english_requirements"];
+const NO_EM_DASH_FIELDS = [
+  "name",
+  "description",
+  "curriculum",
+  "admission_requirements",
+  "english_requirements",
+  "discontinued_note",
+];
 const UPSERT_FIELDS = [
   "name",
   "slug",
@@ -59,6 +66,7 @@ const UPSERT_FIELDS = [
   "last_verified_at",
   "source_url",
   "cricos_code",
+  "discontinued_note",
 ];
 
 // Validate before touching the DB. Em dashes and missing keys are fatal; a
@@ -69,8 +77,8 @@ const errors = [];
 let emptyPublished = 0;
 for (const p of programs) {
   for (const f of NO_EM_DASH_FIELDS) {
-    if (typeof p[f] === "string" && p[f].includes("—")) {
-      errors.push(`${p.name}: em dash in "${f}"`);
+    if (typeof p[f] === "string" && (p[f].includes("—") || p[f].includes("–"))) {
+      errors.push(`${p.name}: em/en dash in "${f}"`);
     }
   }
   if (p.status === "published" && !p.description?.trim()) emptyPublished += 1;
