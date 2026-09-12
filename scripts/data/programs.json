@@ -116920,8 +116920,8 @@
     "pte_writing": null,
     "pte_speaking": null,
     "intake_dates": "February",
-    "last_verified_at": "2026-08-22T18:15:00.000Z",
-    "source_url": "https://www.rmit.edu.au/study-with-us/levels-of-study/undergraduate-study/bachelor-degrees/bachelor-of-architectural-design-bp297",
+    "last_verified_at": "2026-09-11T18:15:00.000Z",
+    "source_url": "https://www.rmit.edu.au/study-with-us/levels-of-study/undergraduate-study/bachelor-degrees/bachelor-of-architectural-design-bp250",
     "cricos_code": "060830J",
     "discontinued_note": null
   },
@@ -117442,7 +117442,7 @@
     "id": "3e04b17d-cacd-42eb-9285-372eef7ad3fb",
     "name": "Bachelor of Design (Communication Design)",
     "slug": "bachelor-of-design-communication-design",
-    "status": "published",
+    "status": "archived",
     "duration_years": "3.0",
     "tuition_international": "41280",
     "tuition_domestic": "4700",
@@ -117464,10 +117464,10 @@
     "pte_writing": null,
     "pte_speaking": null,
     "intake_dates": "February",
-    "last_verified_at": "2026-08-22T18:15:00.000Z",
+    "last_verified_at": "2026-09-11T18:15:00.000Z",
     "source_url": "https://www.rmit.edu.au/study-with-us/levels-of-study/undergraduate-study/bachelor-degrees/bachelor-of-design-communication-design-bp286",
     "cricos_code": "012348F",
-    "discontinued_note": null
+    "discontinued_note": "RMIT no longer offers a standalone Bachelor of Design (Communication Design). Communication design is now taught at postgraduate level only, via the Master of Communication Design; the closest current undergraduate design major is Bachelor of Design (Animation and Interactive Media)."
   },
   {
     "university_slug": "rmit-university",
@@ -117578,7 +117578,7 @@
     "id": "ca8d9f0d-a3eb-48ff-96d9-e74ddd81a247",
     "name": "Bachelor of Engineering (Honours) (Civil Engineering)",
     "slug": "bachelor-of-engineering-honours-civil-engineering",
-    "status": "published",
+    "status": "archived",
     "duration_years": "4.0",
     "tuition_international": "45120",
     "tuition_domestic": "9700",
@@ -117600,10 +117600,10 @@
     "pte_writing": null,
     "pte_speaking": null,
     "intake_dates": "February",
-    "last_verified_at": "2026-08-22T18:15:00.000Z",
+    "last_verified_at": "2026-09-11T18:15:00.000Z",
     "source_url": "https://www.rmit.edu.au/study-with-us/levels-of-study/undergraduate-study/honours-degrees/bachelor-of-engineering-honours-civil-engineering-bh072",
     "cricos_code": "0100714",
-    "discontinued_note": null
+    "discontinued_note": "RMIT restructured its civil engineering honours major; the current equivalent is Bachelor of Engineering (Civil and Infrastructure) (Honours), confirmed live on rmit.edu.au. This exact program name is no longer offered."
   },
   {
     "university_slug": "rmit-university",
@@ -118314,8 +118314,8 @@
     "pte_writing": null,
     "pte_speaking": null,
     "intake_dates": "February, July",
-    "last_verified_at": "2026-08-22T18:15:00.000Z",
-    "source_url": "https://www.rmit.edu.au/study-with-us/levels-of-study/undergraduate-study/bachelor-degrees/bachelor-of-laws-bp297",
+    "last_verified_at": "2026-09-11T18:15:00.000Z",
+    "source_url": "https://www.rmit.edu.au/study-with-us/levels-of-study/undergraduate-study/bachelor-degrees/bachelor-of-laws-bp335",
     "cricos_code": "103210M",
     "discontinued_note": null
   },
@@ -122292,8 +122292,8 @@
     "pte_writing": null,
     "pte_speaking": null,
     "intake_dates": "February, July",
-    "last_verified_at": "2026-08-22T18:15:00.000Z",
-    "source_url": "https://www.rmit.edu.au/study-with-us/levels-of-study/postgraduate-study/masters-by-coursework/master-of-business-administration-mc267",
+    "last_verified_at": "2026-09-11T18:15:00.000Z",
+    "source_url": "https://www.rmit.edu.au/study-with-us/levels-of-study/postgraduate-study/masters-by-coursework/master-of-business-administration-mc199",
     "cricos_code": "077514D",
     "discontinued_note": null
   },
