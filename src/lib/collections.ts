@@ -211,7 +211,7 @@ function businessSchoolsCollection(): Collection {
       },
     ],
     table: {
-      columns: ["University", "MBA program", "Total tuition", "Duration", "Accreditation", "Typical entry bar", "Intakes"],
+      columns: ["University", "MBA program", "Tuition (per year)", "Duration", "Accreditation", "Typical entry bar", "Intakes"],
       rows: [
         {
           cells: [
@@ -302,7 +302,7 @@ function businessSchoolsCollection(): Collection {
           ],
         },
       ],
-      note: "Total published tuition for the MBA, checked against each school's own program page in September 2026. Fees change; confirm the current figure before applying. AIB is a TEQSA-registered private higher education provider, not a university, and does not hold AACSB, EQUIS, or AMBA accreditation.",
+      note: "Annual tuition for the MBA (multiply by duration for the full program cost), checked against each school's own program page in September 2026. Fees change; confirm the current figure before applying. AIB is a TEQSA-registered private higher education provider, not a university, and does not hold AACSB, EQUIS, or AMBA accreditation.",
     },
     sectionsAfterList: [
       {
@@ -333,7 +333,7 @@ function businessSchoolsCollection(): Collection {
       },
       {
         q: "How much does an MBA cost in Australia for international students?",
-        a: "Total published tuition on this list runs from about AUD 34,000 at the Australian Institute of Business to AUD 68,000 at UNSW Sydney, for programs lasting roughly 16 months to two years. Fees are reviewed annually, so confirm the current figure with the school before applying.",
+        a: "Annual tuition on this list runs from about AUD 34,000 at the Australian Institute of Business to AUD 68,000 at UNSW Sydney, for programs lasting roughly 16 months to two years, so the full program costs more than the annual figure. Fees are reviewed annually, so confirm the current figure with the school before applying.",
       },
       {
         q: "Can I get PR in Australia after an MBA?",
