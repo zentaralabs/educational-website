@@ -44,6 +44,44 @@ type ProgRow = {
   university: { slug: string } | null;
 };
 
+/**
+ * Fetches every published program for the "cheapest program per university"
+ * calc below, excluding diploma/pathway rows (see memory:
+ * data-quality-findings-2026-09-13, Finding 1 — a diploma/pathway program
+ * was winning "cheapest" comparisons against real degrees) and paginating
+ * past PostgREST's 1000-row cap (Finding 2 — there are 7,113+ published
+ * programs, well over the cap). Two layers on the diploma exclusion: the
+ * `degree_level` tag, plus a name-prefix check for the ~471 diploma/
+ * certificate programs still mistagged "Undergraduate" (doesn't match
+ * "Graduate Certificate", a genuine postgraduate credential).
+ */
+async function fetchProgramTuitionRows(
+  supabase: ReturnType<typeof createPublicClient>,
+): Promise<ProgRow[]> {
+  const pageSize = 1000;
+  const rows: ProgRow[] = [];
+  for (let from = 0; ; from += pageSize) {
+    const { data, error } = await supabase
+      .from("programs")
+      .select(
+        "tuition_international, intake_dates, university:universities!inner(slug, status, country:countries!inner(is_launched)), degree_level:degree_levels!inner(name)",
+      )
+      .eq("status", "published")
+      .eq("university.status", "published")
+      .eq("university.country.is_launched", true)
+      .neq("degree_level.name", "Foundation/Pathway")
+      .not("name", "ilike", "diploma%")
+      .not("name", "ilike", "certificate%")
+      .not("name", "ilike", "advanced diploma%")
+      .order("id")
+      .range(from, from + pageSize - 1);
+    if (error) throw error;
+    rows.push(...((data ?? []) as unknown as ProgRow[]));
+    if (!data || data.length < pageSize) break;
+  }
+  return rows;
+}
+
 type SchRow = {
   university: { slug: string; status: string } | null;
   scholarship: {
@@ -82,7 +120,7 @@ export async function listCollectionUniversities(): Promise<CollectionUniversity
     "scholarships:list",
   ]);
 
-  const [unis, progs, schols] = await Promise.all([
+  const [unis, progRows, schols] = await Promise.all([
     supabase
       .from("universities")
       .select(
@@ -90,14 +128,7 @@ export async function listCollectionUniversities(): Promise<CollectionUniversity
       )
       .eq("status", "published")
       .eq("country.is_launched", true),
-    supabase
-      .from("programs")
-      .select(
-        "tuition_international, intake_dates, university:universities!inner(slug, status, country:countries!inner(is_launched))",
-      )
-      .eq("status", "published")
-      .eq("university.status", "published")
-      .eq("university.country.is_launched", true),
+    fetchProgramTuitionRows(supabase),
     supabase
       .from("scholarship_universities")
       .select(
@@ -106,11 +137,9 @@ export async function listCollectionUniversities(): Promise<CollectionUniversity
   ]);
 
   if (unis.error) throw unis.error;
-  if (progs.error) throw progs.error;
   if (schols.error) throw schols.error;
 
   const uniRows = (unis.data ?? []) as unknown as UniRow[];
-  const progRows = (progs.data ?? []) as unknown as ProgRow[];
   const schRows = (schols.data ?? []) as unknown as SchRow[];
 
   const progsBySlug = new Map<string, ProgRow[]>();
