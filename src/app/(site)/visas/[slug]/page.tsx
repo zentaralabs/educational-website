@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
+import { FieldNotes } from "@/components/site/FieldNotes";
 import { GuideContent } from "@/components/site/GuideContent";
 import { LastVerified } from "@/components/site/LastVerified";
 import { ArrowUpRightIcon, CheckBadgeIcon } from "@/components/site/icons";
@@ -16,7 +17,7 @@ import {
 } from "@/components/site/visa-blocks";
 import { faqJsonLd, visaFaq } from "@/lib/faq";
 import { RELATED_LIMIT, visaRelated } from "@/lib/related-content";
-import { SITE_YEAR } from "@/lib/site-config";
+import { SITE_URL, SITE_YEAR } from "@/lib/site-config";
 import { extractFaqItems } from "@/lib/extract-faq";
 import { authorInitials } from "@/lib/format";
 import {
@@ -97,7 +98,15 @@ export default async function VisaPage({
     { label: `Subclass ${visa.code}` },
   ];
 
-  const jsonLdBlocks: Record<string, unknown>[] = [breadcrumbJsonLd(breadcrumbs)];
+  const webPageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: visa.name,
+    url: `${SITE_URL}/visas/${slug}`,
+    dateModified: visa.last_verified_at ?? undefined,
+  };
+
+  const jsonLdBlocks: Record<string, unknown>[] = [webPageJsonLd, breadcrumbJsonLd(breadcrumbs)];
   if (faqItems.length > 0) {
     jsonLdBlocks.push(faqJsonLd(faqItems));
   }
@@ -134,7 +143,14 @@ export default async function VisaPage({
             <p className="font-body text-sm text-slate">
               By <span className="font-medium text-ink">{visa.author.name}</span>
               {visa.author.credentials && `, ${visa.author.credentials}`}
-              {visa.reviewed_by && <>, reviewed by {visa.reviewed_by.name}</>}
+              {visa.reviewed_by ? (
+                <>, reviewed by {visa.reviewed_by.name}</>
+              ) : (
+                <>
+                  {" "}
+                  &middot; not yet reviewed by a registered migration agent
+                </>
+              )}
             </p>
           </div>
         )}
@@ -198,6 +214,14 @@ export default async function VisaPage({
         }
         return <div className="mt-10 max-w-2xl">{eligibilityBlock}</div>;
       })()}
+
+      {visa.field_notes && (
+        <div className="max-w-2xl">
+          <FieldNotes date={visa.field_notes_observed_at}>
+            <GuideContent content={visa.field_notes} />
+          </FieldNotes>
+        </div>
+      )}
 
       {visa.pr_pathway && (
         <section className="mt-10 max-w-2xl">
@@ -297,10 +321,23 @@ export default async function VisaPage({
         <LastVerified date={visa.last_verified_at} sources={visa.source_urls} />
       </div>
 
+      <p className="mt-4 font-body text-sm text-slate">
+        Been through the {visa.name.toLowerCase()} yourself?{" "}
+        <Link
+          href={`/share-your-experience?page=${encodeURIComponent(`/visas/${slug}`)}&label=${encodeURIComponent(`${visa.name} (subclass ${visa.code})`)}`}
+          className="font-medium text-status-open underline underline-offset-2"
+        >
+          Share what actually happened
+        </Link>{" "}
+        — it helps the next applicant more than another summary of the rules.
+      </p>
+
       <p className="mt-6 font-body text-xs text-slate">
-        This is general information, not immigration advice. Visa criteria change
+        This is general information, not immigration advice, and Where To
+        Apply is not a registered migration agent. Visa criteria change
         often, so always confirm the current rules on the Department of Home
-        Affairs website or with a registered migration agent before you apply.
+        Affairs website or with a registered migration agent (check their
+        MARN on the OMARA website) before you apply.
       </p>
 
       <div className="mt-8 border-t border-ink/10 pt-6">

@@ -231,6 +231,7 @@ export default async function UniversityProfilePage({
       addressCountry: university.country?.code,
     },
     foundingDate: university.founded_year ? String(university.founded_year) : undefined,
+    dateModified: deadlineVerifiedAt ?? undefined,
   };
 
   const breadcrumbs = [

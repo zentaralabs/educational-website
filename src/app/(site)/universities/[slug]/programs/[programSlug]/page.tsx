@@ -19,7 +19,17 @@ import {
   resolveProgramSlugById,
 } from "@/lib/queries/public-programs";
 import { JsonLd } from "@/lib/json-ld";
-import { composeTitle, pageMetadata } from "@/lib/page-metadata";
+import { TITLE_MAX, composeTitle, pageMetadata } from "@/lib/page-metadata";
+
+/**
+ * `name, University Name` when it fits the title budget; drops the
+ * university suffix entirely (rather than truncating it mid-word) when the
+ * program name alone already eats most or all of the budget.
+ */
+function programTitleCore(name: string, universityName: string): string {
+  const withUniversity = `${name}, ${universityName}`;
+  return withUniversity.length <= TITLE_MAX ? withUniversity : name;
+}
 
 const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
@@ -88,7 +98,7 @@ export async function generateMetadata({
     const archived = await getArchivedProgramBySlug(slug, programSlug);
     if (archived?.university) {
       return pageMetadata({
-        title: composeTitle(`${archived.name}, ${archived.university.name}`, [
+        title: composeTitle(programTitleCore(archived.name, archived.university.name), [
           "No longer offered",
         ]),
         description: `${archived.name} at ${archived.university.name} is no longer listed by the university. See related ${archived.subject?.name ?? "programs"} still open to international students.`,
@@ -100,7 +110,7 @@ export async function generateMetadata({
     return {};
   }
 
-  const title = composeTitle(`${program.name}, ${program.university!.name}`, [
+  const title = composeTitle(programTitleCore(program.name, program.university!.name), [
     `Fees & Entry Requirements ${SITE_YEAR}`,
     `Fees & Entry ${SITE_YEAR}`,
     `${SITE_YEAR}`,
@@ -188,6 +198,7 @@ export default async function ProgramDetailPage({
     "@type": "EducationalOccupationalProgram",
     name: program.name,
     url: `${SITE_URL}/universities/${university.slug}/programs/${program.slug}`,
+    dateModified: program.last_verified_at ?? undefined,
     ...(hasDescription
       ? { description: program.description!.trim().split("\n\n")[0].replace(/\s+/g, " ") }
       : {}),

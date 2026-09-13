@@ -31,7 +31,7 @@ import {
   listPublishedUniversityOptions,
   type ComparisonUniversityRow,
 } from "@/lib/queries/public-universities";
-import { SITE_YEAR } from "@/lib/site-config";
+import { SITE_URL, SITE_YEAR } from "@/lib/site-config";
 import { JsonLd } from "@/lib/json-ld";
 import { composeTitle, pageMetadata } from "@/lib/page-metadata";
 
@@ -490,8 +490,18 @@ export default async function ComparisonPage({
     { label: guide.title },
   ];
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: guide.title,
+    url: `${SITE_URL}/compare/${slug}`,
+    dateModified: guide.last_verified_at ?? guide.updated_at ?? guide.created_at ?? undefined,
+    datePublished: guide.created_at ?? undefined,
+  };
+
   return (
     <main className="mx-auto w-full max-w-5xl px-6 pt-8 pb-16">
+      <JsonLd data={jsonLd} />
       <JsonLd data={breadcrumbJsonLd(breadcrumbs)} />
 
       <div className="mx-auto max-w-3xl">
