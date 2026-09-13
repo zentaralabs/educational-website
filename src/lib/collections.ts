@@ -363,6 +363,135 @@ function businessSchoolsCollection(): Collection {
   };
 }
 
+/**
+ * Curated cheapest-first list of real Bachelor of Nursing (or equivalent
+ * degree-title) programs, one per university, sourced from
+ * `scripts/data/programs.json` in September 2026. Deliberately excludes
+ * every Diploma/Advanced Diploma of Nursing, even ones cheaper than any
+ * bachelor's here: a diploma is an Enrolled Nurse credential, not the
+ * Registered Nurse degree this page is about, and blending the two is the
+ * exact mistake this page exists to avoid (see the sibling
+ * `/study/nursing-and-health-sciences` page's own comparison table, which
+ * already filters the same way after the Finding 1 fix in commit 0880c88).
+ */
+const CHEAPEST_NURSING: {
+  slug: string;
+  name: string;
+  city: string;
+  program: string;
+  tuition: number;
+  duration: string;
+  intakes: string;
+}[] = [
+  { slug: "federation-university-australia", name: "Federation University Australia", city: "Ballarat, VIC", program: "Bachelor of Nursing", tuition: 29000, duration: "3 years", intakes: "Feb, Jul" },
+  { slug: "university-of-the-sunshine-coast", name: "University of the Sunshine Coast", city: "Sunshine Coast, QLD", program: "Bachelor of Nursing Science", tuition: 29000, duration: "3 years", intakes: "Feb, Jul" },
+  { slug: "university-of-notre-dame-australia", name: "University of Notre Dame Australia", city: "Fremantle, WA", program: "Bachelor of Nursing", tuition: 29304, duration: "3 years", intakes: "Feb, Jul" },
+  { slug: "avondale-university", name: "Avondale University", city: "Cooranbong, NSW", program: "Bachelor of Nursing", tuition: 30000, duration: "3 years", intakes: "Feb, Jul" },
+  { slug: "cquniversity-australia", name: "CQUniversity Australia", city: "Rockhampton, QLD", program: "Bachelor of Nursing", tuition: 30500, duration: "3 years", intakes: "Feb, Jul" },
+  { slug: "university-of-canberra", name: "University of Canberra", city: "Canberra, ACT", program: "Bachelor of Nursing", tuition: 30500, duration: "3 years", intakes: "Feb, Jul" },
+  { slug: "victoria-university", name: "Victoria University", city: "Melbourne, VIC", program: "Bachelor of Nursing", tuition: 30500, duration: "3 years", intakes: "Feb, Jul" },
+  { slug: "murdoch-university", name: "Murdoch University", city: "Perth, WA", program: "Bachelor of Nursing", tuition: 31000, duration: "3 years", intakes: "Feb, Jul" },
+  { slug: "charles-darwin-university", name: "Charles Darwin University", city: "Darwin, NT", program: "Bachelor of Nursing", tuition: 32000, duration: "3 years", intakes: "Feb, Jul" },
+  { slug: "university-of-new-england", name: "University of New England", city: "Armidale, NSW", program: "Bachelor of Nursing", tuition: 32000, duration: "3 years", intakes: "Feb, Jul" },
+  { slug: "southern-cross-university", name: "Southern Cross University", city: "Lismore, NSW", program: "Bachelor of Nursing", tuition: 32320, duration: "3 years", intakes: "Feb, Jul" },
+  { slug: "university-of-newcastle", name: "University of Newcastle", city: "Newcastle, NSW", program: "Bachelor of Nursing", tuition: 32500, duration: "3 years", intakes: "Feb, Jul" },
+  { slug: "australian-catholic-university", name: "Australian Catholic University", city: "Sydney, NSW", program: "Bachelor of Nursing", tuition: 33000, duration: "3 years", intakes: "Feb, Jul" },
+  { slug: "edith-cowan-university", name: "Edith Cowan University", city: "Perth, WA", program: "Bachelor of Science (Nursing)", tuition: 33000, duration: "3 years", intakes: "Feb, Jul" },
+  { slug: "torrens-university-australia", name: "Torrens University Australia", city: "Adelaide, SA", program: "Bachelor of Nursing", tuition: 33600, duration: "3 years", intakes: "Feb, Jul, Oct" },
+];
+
+/** Hand-authored "cheapest nursing courses" collection. See CHEAPEST_NURSING for sourcing notes. */
+function cheapestNursingCollection(): Collection {
+  const byUniSlug = new Map(CHEAPEST_NURSING.map((n, i) => [n.slug, i]));
+  return {
+    slug: "cheapest-nursing-courses-in-australia-for-international-students",
+    title: "The cheapest nursing courses in Australia for international students",
+    metaTitle: "Cheapest Nursing Courses in Australia",
+    shortTitle: "Cheapest nursing courses",
+    category: "subject",
+    metaDescription:
+      "Compare the real cost of Bachelor of Nursing degrees in Australia for international students: verified tuition, NMBA English requirements, and the PR pathway.",
+    intro: [
+      "This list ranks real Bachelor of Nursing degrees only, the qualification that leads to registration as a Registered Nurse in Australia. Every figure is checked against the university's own published fee schedule, and nothing here is a diploma or pathway program dressed up as a nursing degree.",
+      "That distinction matters more here than on most cost comparisons. A Diploma of Nursing can look cheaper on paper, but it leads to a different, more limited credential (Enrolled Nurse), not the Registered Nurse outcome most international students studying nursing in Australia are actually after.",
+    ],
+    sectionsBeforeList: [
+      {
+        heading: "Diploma of Nursing vs. Bachelor of Nursing, what you're actually comparing",
+        body: [
+          "A Diploma of Nursing, usually delivered by a TAFE or private college, qualifies you to register as an Enrolled Nurse (EN) with the Nursing and Midwifery Board of Australia (NMBA). It typically costs less and takes around two years. A Bachelor of Nursing qualifies you to register as a Registered Nurse (RN), the credential with the broader scope of practice, the higher pay ceiling, and the occupation that actually sits on Australia's skilled occupation lists. It takes three years and costs more.",
+          "Both are legitimate, regulated pathways, and an EN-to-RN bridging option exists if you start with the diploma. But they are not interchangeable for planning purposes, and a ranking that mixes diploma and bachelor's tuition without saying so, as this site's own nursing subject page did before a September 2026 fix, ends up recommending the wrong thing to someone who wants to become a Registered Nurse. This page ranks Bachelor of Nursing degrees only.",
+        ],
+      },
+    ],
+    table: {
+      columns: ["University", "Program", "Tuition (per year)", "Duration", "Intakes"],
+      rows: CHEAPEST_NURSING.map((n) => ({
+        cells: [n.name, n.program, formatCurrency(n.tuition, "AUD"), n.duration, n.intakes],
+      })),
+      note: "Annual tuition for the Bachelor of Nursing (or equivalently titled degree), checked against each university's own program page in September 2026. Multiply by duration for the full program cost, and confirm the current fee before applying.",
+    },
+    sectionsAfterList: [
+      {
+        heading: "NMBA English requirements",
+        body: [
+          "Nursing has a higher English bar than almost any other field, set by the Nursing and Midwifery Board of Australia (NMBA): IELTS Academic 7.0 in listening, reading, and speaking, and at least 6.5 in writing, or the OET or PTE Academic equivalent. This applies at registration, and universities enforce it at admission, so it is not a score you can make up with a strong academic record elsewhere. Results from two test sittings within six months can be combined.",
+        ],
+      },
+      {
+        heading: "Nursing and the permanent residency pathway",
+        body: [
+          "Registered Nurse is one of the more dependable occupations for skilled migration. Registered Nurse (Medical) and the other RN specialisations sit on Australia's Medium and Long-term Strategic Skills List, supporting the 189, 190, and 491 visas, and are nominated by essentially every state and territory. Clinical placement hours built into every Bachelor of Nursing program count toward NMBA registration, and the 485 graduate visa gives time to register and gain paid experience before applying for a skilled visa.",
+        ],
+      },
+      {
+        heading: "Entry requirements beyond English",
+        body: [
+          "Universities generally ask for a completed senior secondary qualification (or a recognised foundation year) that meets their minimum, on top of the NMBA English bands above. Every program includes mandatory clinical placements, which come with their own checks: a national police check, an immunisation and vaccination record meeting the placement provider's requirements, and sometimes a Working with Children check, arranged through the university once you're enrolled.",
+        ],
+      },
+    ],
+    methodology:
+      "Filtered this site's program dataset to degrees named Bachelor of Nursing or an equivalent literal title (Bachelor of Nursing Science, Bachelor of Science (Nursing)) at degree-granting universities, excluding every Diploma, Advanced Diploma, and Foundation/Pathway program regardless of price. Where a university offers more than one such program, the cheapest is shown. Ranked by annual international tuition, cheapest first. It is not a ranking of nursing school quality; check ANMAC accreditation and clinical placement locations for the specific program.",
+    relatedGuide: {
+      href: "/guides/study-to-permanent-residence-pathway-australia",
+      label: "The study-to-PR pathway",
+    },
+    faq: [
+      {
+        q: "Is a Diploma of Nursing cheaper than a Bachelor of Nursing?",
+        a: "Usually yes, but it leads to a different outcome. A diploma registers you as an Enrolled Nurse; a Bachelor of Nursing registers you as a Registered Nurse, the qualification with the broader scope of practice and the one that sits on the skilled occupation lists. Compare them on outcome, not just price.",
+      },
+      {
+        q: "What IELTS score do I need to study nursing in Australia?",
+        a: "The Nursing and Midwifery Board of Australia requires IELTS Academic 7.0 in listening, reading, and speaking, and at least 6.5 in writing, or an equivalent OET or PTE Academic score. Universities apply this at admission, not just at registration.",
+      },
+      {
+        q: "Can I work as a nurse in Australia after an overseas nursing diploma or degree?",
+        a: "You go through the NMBA's assessment of your overseas qualification, which may require a bridging program before you can register. Many international students instead complete a full Bachelor of Nursing in Australia to register directly, without that extra assessment step.",
+      },
+      {
+        q: "Is nursing a good pathway to permanent residence in Australia?",
+        a: "Yes, one of the more dependable ones. Registered Nurse is nominated by essentially every state and territory, and the 485 graduate visa gives time to register with the NMBA and build paid experience before applying for a skilled visa.",
+      },
+    ],
+    build: (unis) =>
+      unis
+        .filter((u) => byUniSlug.has(u.slug))
+        .sort((a, b) => (byUniSlug.get(a.slug) ?? 99) - (byUniSlug.get(b.slug) ?? 99))
+        .map((u) => {
+          const curated = CHEAPEST_NURSING[byUniSlug.get(u.slug) ?? 0];
+          return {
+            slug: u.slug,
+            name: u.name,
+            city: u.city,
+            headline: `${formatCurrency(curated.tuition, "AUD")}/year`,
+            note: `${curated.program}, ${curated.duration}. Intakes: ${curated.intakes}.`,
+          };
+        }),
+  };
+}
+
 /** Builds a "cheapest universities in <city>" collection. */
 function cityCollection(opts: {
   city: string;
@@ -686,6 +815,7 @@ export const COLLECTIONS: Collection[] = [
   cityCollection({ city: "Canberra", match: /canberra/i, slug: "cheapest-universities-in-canberra-for-international-students" }),
   ...SUBJECT_BEST_PAGES.map(subjectBestCollection),
   businessSchoolsCollection(),
+  cheapestNursingCollection(),
 ];
 
 export function getCollection(slug: string): Collection | undefined {
