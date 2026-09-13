@@ -214,6 +214,10 @@ export default async function Home() {
             </div>
           </section>
 
+          {/* Reserves space for the fixed cookie banner so it doesn't sit
+              on top of the section below on first visit. */}
+          <div aria-hidden="true" style={{ height: "var(--cookie-banner-h)" }} />
+
           {/* POPULAR RIGHT NOW — quick jumps, sits under the search */}
           <section className="scroll-reveal mt-6">
             <div className="rounded-2xl border border-line bg-mist p-6 sm:p-8">
