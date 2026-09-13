@@ -717,6 +717,86 @@ const SCHOLARSHIP_DEPTH_2026_09_13 = {
   },
 };
 
+// 2026-09-13: four DB rows were flagged during the depth-research pass as
+// pointing at a scholarship that no longer exists under that name/URL, not
+// just thin on content. Live-browser-verified (not just automated fetch)
+// against each university's own current scholarships site:
+//   - rmit-international-excellence-scholarship: RMIT's external_url 404s.
+//     RMIT no longer runs one "International Excellence Scholarship" — it
+//     now runs several distinctly named awards. Retargeted at the Future
+//     Leaders Scholarship (the best fit for this site's Nepal/India/
+//     Bangladesh audience, and one of RMIT's most widely awarded: 3,750 of
+//     RMIT's 4,616 international scholarships in 2025).
+//   - uq-international-scholarship: external_url 404s. Retargeted at the
+//     real "UQ International Excellence Scholarship" page. Also fixes
+//     separate_application, which was wrong (true) — the real scholarship
+//     is automatic, no separate form.
+//   - la-trobe-university-excellence-scholarship: external_url 404s. No
+//     scholarship exists under this exact name; La Trobe's real broad
+//     merit award for international students is the "La Trobe High
+//     Achiever Scholarship" (verified open, current 2026/2027 intakes).
+//   - curtin-international-scholarships: external_url loads but there is
+//     no scholarship called "Curtin International Scholarships" on it —
+//     Curtin's real broad merit award is the "Curtin Global Merit
+//     Scholarship". external_url points at Curtin's evergreen scholarships
+//     hub rather than a single round's page (Curtin scholarships run in
+//     dated rounds and this one's most recent round has closed).
+// Slugs are kept unchanged to avoid breaking any existing inbound link to
+// these URLs — only the name/amount/eligibility/description/URLs/
+// separate_application fields change.
+const SCHOLARSHIP_CORRECTIONS_2026_09_13 = {
+  "rmit-international-excellence-scholarship": {
+    name: "RMIT Future Leaders Scholarship",
+    amount: "20% tuition fee reduction for the duration of the program",
+    study_level: "Any",
+    separate_application: false,
+    eligibility:
+      "Citizens of India, Sri Lanka, Bangladesh, Bhutan, Nepal, or Pakistan applying to an eligible Bachelor or Master by coursework program at RMIT's Melbourne campus.",
+    description:
+      "RMIT's dedicated scholarship for students from South Asia, cutting tuition by 20% for the full length of an eligible bachelor's or coursework master's degree, as shown in your offer letter.\n\nThere is no separate application. You are automatically considered based on your admission application alone. It is one of RMIT's most widely awarded scholarships, in 2025 RMIT gave out 3,750 Future Leaders Scholarships, out of 4,616 international scholarships awarded that year in total.",
+    external_url:
+      "https://www.rmit.edu.au/study-with-us/international-students/apply-to-rmit-international-students/fees-and-scholarships/scholarships/future-leaders-scholarship",
+    source_url:
+      "https://www.rmit.edu.au/study-with-us/international-students/apply-to-rmit-international-students/fees-and-scholarships/scholarships/future-leaders-scholarship",
+  },
+  "uq-international-scholarship": {
+    name: "UQ International Excellence Scholarship",
+    amount: "25% tuition fee reduction per year for the duration of the program",
+    study_level: "Any",
+    separate_application: false,
+    eligibility:
+      "International students who have applied to study full time at UQ in an eligible undergraduate or postgraduate coursework program, assessed automatically on academic merit.",
+    description:
+      "UQ's main entry scholarship for international students, reducing tuition by 25% every year for the whole length of an eligible undergraduate or postgraduate coursework program.\n\nThere is no separate application. Every eligible applicant is automatically assessed when they apply to study, and the reduction is applied to each semester's tuition before the fees due date. UQ separately runs a Faculty International Scholarship and other named awards, so check which one your own offer letter actually references.",
+    external_url: "https://scholarships.uq.edu.au/scholarship/uq-international-excellence-scholarship",
+    source_url: "https://scholarships.uq.edu.au/scholarship/uq-international-excellence-scholarship",
+  },
+  "la-trobe-university-excellence-scholarship": {
+    name: "La Trobe High Achiever Scholarship",
+    amount: "Up to 25% tuition fee reduction for the duration of the course",
+    study_level: "Any",
+    separate_application: false,
+    eligibility:
+      "International students, other than Australian or New Zealand citizens, who are new commencing students for a 2026 or 2027 intake in an eligible undergraduate or postgraduate coursework program, full fee paying and not holding a humanitarian or other permanent visa.",
+    description:
+      "La Trobe's main merit scholarship for international students, offering up to 25% off tuition for the whole length of an eligible undergraduate or postgraduate coursework degree, applied as an upfront discount from your first semester (second semester at the Sydney campus).\n\nThere is no separate application. High-achieving applicants to an eligible course are automatically considered. It currently only covers students starting in a 2026 or 2027 intake, so confirm it still applies before assuming it covers a later start date.",
+    external_url: "https://www.latrobe.edu.au/study/scholarships/other/la-trobe-high-achiever-scholarship",
+    source_url: "https://www.latrobe.edu.au/study/scholarships/other/la-trobe-high-achiever-scholarship",
+  },
+  "curtin-international-scholarships": {
+    name: "Curtin Global Merit Scholarship",
+    amount: "20% tuition fee reduction for the duration of the course",
+    study_level: "Any",
+    separate_application: false,
+    eligibility:
+      "International, fee paying, non sponsored students of any nationality except Australian, enrolled in an eligible Curtin undergraduate degree (four years or less) or postgraduate coursework degree (two years or less) at a Western Australian campus, who meet the required Course Weighted Average.",
+    description:
+      "Curtin's broad merit scholarship for international students, cutting tuition by 20% for the whole length of an eligible undergraduate or postgraduate coursework degree at Curtin's Western Australian campuses.\n\nThere is no separate application. Every eligible applicant is automatically assessed against the required Course Weighted Average when they apply to study, and recipients must keep a Good Standing academic status each study period to continue receiving it. Applications run in specific rounds rather than year round, so confirm the current round's dates on Curtin's own scholarships page before counting on it.",
+    external_url: "https://scholarships.curtin.edu.au/",
+    source_url: "https://scholarships.curtin.edu.au/Scholarship/?id=7547",
+  },
+};
+
 const SCHOLARSHIP_DEPTH_ADELAIDE_2026_09_13 = {
   "adelaide-merit-scholarship": {
     description: "A 15% tuition reduction applied automatically for the length of an eligible degree, for international students with solid academic records. It is the most widely awarded of Adelaide's automatic entry scholarships.\n\nAdelaide counts as a regional area for skilled migration, so this fee saving pairs with extra points toward the 491 and 190 visas, and living costs in Adelaide are well below Sydney or Melbourne. At 15 percent, it is the broadest of Adelaide University's automatic entry scholarships, sitting below the 25 percent Emerging Leaders Award and the 50 percent Academic Excellence Scholarship.",
@@ -826,6 +906,19 @@ try {
       [...cols.map((c) => patch[c]), FIXES_VERIFIED_ON, slug],
     );
     console.log("fix", slug, patch);
+  }
+
+  const CORRECTIONS_VERIFIED_ON = "2026-09-13";
+  for (const [slug, patch] of Object.entries(SCHOLARSHIP_CORRECTIONS_2026_09_13)) {
+    if (/—/.test(patch.description + patch.eligibility + patch.name)) throw new Error(`em dash in ${slug}`);
+    const cols = Object.keys(patch);
+    const setClause = cols.map((c, i) => `${c} = $${i + 1}`).join(", ");
+    await client.query(
+      `update scholarships set ${setClause}, last_verified_at = $${cols.length + 1}, updated_at = now()
+       where slug = $${cols.length + 2}`,
+      [...cols.map((c) => patch[c]), CORRECTIONS_VERIFIED_ON, slug],
+    );
+    console.log("correction", slug, "->", patch.name);
   }
 
   const DEPTH_VERIFIED_ON = "2026-09-13";
