@@ -148,12 +148,25 @@ async function fillProgramFallbacks(
   const supabase = createPublicClient(["programs:list"]);
   const { data, error } = await supabase
     .from("programs")
-    .select("university_id, tuition_international, tuition_domestic, ielts_overall, pte_overall, english_requirements")
+    .select(
+      "university_id, tuition_international, tuition_domestic, ielts_overall, pte_overall, english_requirements, degree_level:degree_levels!inner(name)",
+    )
     .in(
       "university_id",
       needsFallback.map((r) => r.id),
     )
-    .eq("status", "published");
+    .eq("status", "published")
+    // Excludes diploma/pathway rows from the tuition-fallback minimum — see
+    // memory: data-quality-findings-2026-09-13, Finding 1. Without this, a
+    // university's headline tuition figure could be silently backfilled from
+    // a diploma program's price rather than a real degree's. Two layers: the
+    // `degree_level` tag, plus a name-prefix check for the ~471 diploma/
+    // certificate programs still mistagged "Undergraduate" (doesn't match
+    // "Graduate Certificate", a genuine postgraduate credential).
+    .neq("degree_level.name", "Foundation/Pathway")
+    .not("name", "ilike", "diploma%")
+    .not("name", "ilike", "certificate%")
+    .not("name", "ilike", "advanced diploma%");
   if (error) throw error;
 
   const byUni = new Map<
