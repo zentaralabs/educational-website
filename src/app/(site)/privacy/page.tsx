@@ -3,7 +3,7 @@ import { pageMetadata } from "@/lib/page-metadata";
 
 export const metadata = pageMetadata({
   title: "Privacy Policy",
-  description: "How Where To Apply collects, uses, and protects visitor data.",
+  description: "How this site collects, uses, and protects visitor data.",
   path: "/privacy",
   type: "website",
 });

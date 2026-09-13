@@ -3,7 +3,7 @@ import { pageMetadata } from "@/lib/page-metadata";
 
 export const metadata = pageMetadata({
   title: "Terms of Service",
-  description: "The terms governing use of the Where To Apply website.",
+  description: "The terms governing use of this website.",
   path: "/terms",
   type: "website",
 });
