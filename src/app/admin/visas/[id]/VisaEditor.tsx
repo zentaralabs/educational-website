@@ -42,6 +42,8 @@ export function VisaEditor({ visa }: { visa: VisaSubclassDetailRow }) {
     eligibility: visa.eligibility ?? "",
     conditions: visa.conditions ?? "",
     content: visa.content ?? "",
+    field_notes: visa.field_notes ?? "",
+    field_notes_observed_at: visa.field_notes_observed_at ?? "",
     source_urls: (visa.source_urls ?? []).join("\n"),
   });
   const [status, setStatus] = useState<ContentStatus>(visa.status);
@@ -54,7 +56,7 @@ export function VisaEditor({ visa }: { visa: VisaSubclassDetailRow }) {
   }
 
   async function save(targetStatus: ContentStatus, kind: "draft" | "publish") {
-    if (/—/.test(f.summary + f.content + f.eligibility + f.conditions + f.pr_pathway)) {
+    if (/—/.test(f.summary + f.content + f.eligibility + f.conditions + f.pr_pathway + f.field_notes)) {
       setErrorMsg("Remove em dashes before saving (house style).");
       return;
     }
@@ -85,6 +87,8 @@ export function VisaEditor({ visa }: { visa: VisaSubclassDetailRow }) {
         eligibility: f.eligibility || null,
         conditions: f.conditions || null,
         content: f.content || null,
+        field_notes: f.field_notes || null,
+        field_notes_observed_at: f.field_notes_observed_at || null,
         source_urls: f.source_urls
           ? f.source_urls.split("\n").map((s) => s.trim()).filter(Boolean)
           : null,
@@ -252,6 +256,14 @@ export function VisaEditor({ visa }: { visa: VisaSubclassDetailRow }) {
         <label>
           <span className={labelCls}>Visa conditions (markdown)</span>
           <textarea value={f.conditions} onChange={(e) => set("conditions", e.target.value)} rows={6} className={areaCls} />
+        </label>
+        <label>
+          <span className={labelCls}>Field notes — first-hand &ldquo;what we found&rdquo; (markdown, from approved experience_submissions or verified editor observation)</span>
+          <textarea value={f.field_notes} onChange={(e) => set("field_notes", e.target.value)} rows={6} className={areaCls} />
+        </label>
+        <label>
+          <span className={labelCls}>Field notes observed date</span>
+          <input type="date" value={f.field_notes_observed_at} onChange={(e) => set("field_notes_observed_at", e.target.value)} className={`${inputCls} font-utility`} />
         </label>
         <label>
           <span className={labelCls}>Source URLs (one per line)</span>

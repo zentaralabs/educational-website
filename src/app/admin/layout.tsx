@@ -13,6 +13,7 @@ const NAV = [
   { label: "Visas", href: "/admin/visas" },
   { label: "Authors", href: "/admin/authors" },
   { label: "Review queue", href: "/admin/review-queue" },
+  { label: "Experience submissions", href: "/admin/experience-submissions" },
   { label: "Settings", href: "/admin/settings" },
 ];
 
