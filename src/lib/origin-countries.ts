@@ -33,6 +33,36 @@ export type OriginCountry = {
   credentials: string[];
   /** Fields most chosen by students from this country. */
   popularFields: string[];
+  /**
+   * Optional: twinning/pathway programs that let a student start part of the
+   * degree in their home country and finish in Australia. Only worth
+   * including where this is a genuinely common pattern for that market
+   * (e.g. Malaysia's Monash/Curtin/Swinburne branch campuses), not a
+   * generic paragraph repeated across every country page.
+   */
+  pathways?: string[];
+  /**
+   * Optional: a table mapping this country's school-leaving/matriculation
+   * qualifications to typical Australian bachelor's entry requirements.
+   * Rendered inside the "Your qualifications and English" section.
+   */
+  qualificationTable?: {
+    columns: string[];
+    rows: (string | null)[][];
+    note?: string;
+  };
+  /**
+   * Optional: named, verifiable scholarships commonly used by students from
+   * this country (government-to-government, national scholarship bodies, or
+   * this site's own tracked scholarships with a real cohort from here).
+   * Only name a program that can be verified as currently active; link to
+   * `/scholarships/[slug]` where it exists on this site, otherwise to the
+   * official scholarship body.
+   */
+  scholarships?: {
+    intro: string;
+    items: { name: string; href: string }[];
+  };
   faq: { q: string; a: string }[];
   /** Official pages the facts were checked against. */
   sources: string[];
@@ -858,6 +888,33 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "A three-year or four-year Malaysian bachelor's degree is accepted for direct entry to Australian master's programs. Universities publish Malaysia-specific entry tables mapping your CGPA to their requirement.",
       "Many Malaysian applicants are exempt from an English test based on their prior study in English. Confirm the exemption with the university and check whether the student visa also accepts it.",
     ],
+    qualificationTable: {
+      columns: ["Malaysian qualification", "Typical Australian bachelor's entry"],
+      rows: [
+        ["STPM", "CGPA around 2.7 to 3.0+ for most universities; the Group of Eight generally wants the higher end."],
+        ["A-Levels", "Roughly BBB to ABB, depending on the university and course."],
+        ["UEC (Unified Examination Certificate)", "Average of your best 5 subjects, graded 1 (A1) to 6 (C): around grade 3 to 4 for the Group of Eight, 4 to 5 elsewhere. Widely accepted in Australia even though Malaysian public universities don't recognise it."],
+        ["AUSMAT or SAM", "Direct entry on the university's usual ATAR-equivalent cutoff. These are Australian curricula taught in Malaysia, so they convert the most directly."],
+        ["Foundation program (local or university-run)", "Direct entry on completing the program at the required grade, usually set by the partner university."],
+        ["SPM only", "Not sufficient on its own. You'll need STPM, A-Levels, a foundation year, or a recognised matriculation first."],
+      ],
+      note: "Indicative bands, not a guarantee. Every university sets its own cutoff by course, and the specific numbers move year to year, so check the university's own Malaysia-specific entry table before you apply.",
+    },
+    pathways: [
+      "A genuine number of Malaysian students start their Australian degree without leaving Malaysia. Monash University, Curtin University, and Swinburne University of Technology all run full branch campuses in Malaysia (Monash Malaysia in Bandar Sunway, Curtin Malaysia in Miri, Sarawak, and Swinburne Sarawak in Kuching), teaching the same degrees, marked to the same standard, as their Australian campuses. You can complete the whole degree in Malaysia, transfer to the Australian campus partway through, or move between the two more than once, and the qualification carries the same university name either way.",
+      "Separately, twinning arrangements at Malaysian colleges let you start a degree locally and transfer the credit into an Australian university partway through, commonly structured as 1+2 (one year in Malaysia, two in Australia), 2+1, or a full 3+0 where the whole degree is delivered in Malaysia under an Australian university's curriculum and awarded by that university. These are a separate, older model from the branch campuses above and are run by local private colleges in partnership with a specific Australian university, so the credit transfer terms and the exact university are set in advance by that partnership, not something you arrange yourself after enrolling.",
+      "Either route is usually cheaper for the years spent in Malaysia, since local tuition and living costs are lower than moving to Australia immediately. It's worth checking against a straight Australian entry, though: the timeline can run longer once you add a foundation or transfer year, and not every Australian university has a Malaysia partner in your specific field.",
+    ],
+    scholarships: {
+      intro:
+        "Several government and industry-linked scholarships from Malaysia specifically fund study in Australia, alongside general international scholarships from Australian universities themselves (see the scholarships hub). Confirm each program's current intake, eligible fields, and service-bond terms directly with the funding body before applying.",
+      items: [
+        { name: "JPA (Public Service Department) Overseas Scholarship", href: "https://esilav2.jpa.gov.my/" },
+        { name: "PETRONAS Education Sponsorship Programme (PESP)", href: "https://educationsponsorship.petronas.com.my/" },
+        { name: "Yayasan Khazanah Global Scholarship", href: "https://www.khazanah.com.my/yayasan-khazanah/global-scholarship/" },
+        { name: "MACC Scholarship (Malaysian Australian Alumni Council)", href: "https://www.emaac.org/" },
+      ],
+    },
     popularFields: [
       "Business, accounting, and actuarial science",
       "Engineering",
@@ -872,11 +929,19 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       },
       {
         q: "Can I start a degree in Malaysia and finish in Australia?",
-        a: "Yes. Twinning and 2+1 or 3+0 programs are common, and Monash, Curtin, and Swinburne run campuses in Malaysia offering the same degrees. You can also transfer credit from a Malaysian diploma or foundation program into an Australian bachelor's.",
+        a: "Yes. Monash, Curtin, and Swinburne run full branch campuses in Malaysia where you can complete part or all of the degree before transferring, and separate twinning arrangements at local colleges (1+2, 2+1, or 3+0) let you transfer credit from a partnership program into the Australian university that runs it.",
+      },
+      {
+        q: "Can I transfer credit from a Malaysian diploma to an Australian university?",
+        a: "Often, yes, if the diploma is from a recognised institution and relevant to the degree you're applying for. Twinning-partnership diplomas transfer on pre-agreed terms; a standalone diploma is assessed case by case, and the credit given varies by university and course, so confirm it with the specific university before enrolling.",
       },
       {
         q: "Is a Malaysian bachelor's degree accepted in Australia?",
         a: "Yes, for direct entry to Australian master's programs. Universities publish Malaysia-specific entry tables mapping your CGPA to their requirement. Both three-year and four-year degrees are generally accepted.",
+      },
+      {
+        q: "What STPM or UEC result do I need for an Australian bachelor's degree?",
+        a: "As a rough guide, a STPM CGPA around 2.7 to 3.0 or higher, or a UEC average (best 5 subjects) around grade 3 to 4, gets you into most universities, with the Group of Eight wanting the higher end of that range. UEC is widely accepted by Australian universities even though it isn't recognised by Malaysian public universities. Exact cutoffs are set per course, so check the university's own entry table.",
       },
       {
         q: "How much does it cost to study in Australia from Malaysia?",
@@ -890,8 +955,10 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     sources: [
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
       "https://www.studyaustralia.gov.au/",
+      "https://study.anu.edu.au/apply/international-applications/indicative-entry-requirement/malaysian-independent-chinese",
+      "https://www.emaac.org/",
     ],
-    lastVerified: "2026-08-30",
+    lastVerified: "2026-09-13",
   },
 
   bhutan: {
