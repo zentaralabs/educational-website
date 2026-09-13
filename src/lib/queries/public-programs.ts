@@ -292,7 +292,12 @@ export async function resolveProgramSlugById(
 
 export type SitemapProgramRow = {
   slug: string;
-  updated_at: string | null;
+  // `last_verified_at`, not the row's generic `updated_at` — the latter
+  // bumps on any write to the row (including unrelated admin/back-office
+  // edits), so it drifts from what the page actually tells a reader ("Last
+  // verified {date}") and from `dateModified` in the page's own JSON-LD.
+  // Sitemap <lastmod> should describe the same fact those two already do.
+  last_verified_at: string | null;
   university: { slug: string; status: string } | null;
 };
 
@@ -313,7 +318,7 @@ export async function listPublishedProgramsForSitemap(): Promise<SitemapProgramR
     const { data, error } = await supabase
       .from("programs")
       .select(
-        "slug, updated_at, university:universities!inner(slug, status, country:countries!inner(is_launched))",
+        "slug, last_verified_at, university:universities!inner(slug, status, country:countries!inner(is_launched))",
       )
       .eq("status", "published")
       .eq("content_indexable", true)

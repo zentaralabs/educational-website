@@ -45,7 +45,7 @@ export async function GET() {
     .filter((p) => p.university?.slug && p.university.status === "published")
     .map((p) => {
       const loc = `${SITE_URL}/universities/${p.university!.slug}/programs/${p.slug}`;
-      const lastmod = p.updated_at ? new Date(p.updated_at).toISOString() : null;
+      const lastmod = p.last_verified_at ? new Date(p.last_verified_at).toISOString() : null;
       return [
         "  <url>",
         `    <loc>${xmlEscape(loc)}</loc>`,

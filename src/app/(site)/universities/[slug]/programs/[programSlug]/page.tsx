@@ -51,6 +51,20 @@ async function redirectIfLegacyId(slug: string, programParam: string) {
 
 export const revalidate = 3600;
 
+// No paths returned: this template has ~4,100 programs, too many to
+// prerender at build time without materially slowing every deploy. Defining
+// the function at all (even returning none) is what matters — it opts this
+// route into static-with-fallback rendering instead of the fully dynamic,
+// uncached rendering it silently had with no generateStaticParams at all
+// (verified via `next build`'s route summary: this template printed as
+// `ƒ Dynamic` with no cache TTL columns, unlike every sibling `[slug]`
+// template, which prints `● SSG`). The first request per program now
+// renders once and is served from the `revalidate = 3600` cache after that,
+// same as every other content template on the site.
+export async function generateStaticParams() {
+  return [];
+}
+
 type CurriculumItem = { code: string | null; text: string; electiveCount: string | null };
 type CurriculumTerm = { label: string | null; units: string | null; items: CurriculumItem[] };
 

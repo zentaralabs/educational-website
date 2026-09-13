@@ -7,7 +7,7 @@ import { WhyTrust } from "@/components/site/WhyTrust";
 import { ArrowUpRightIcon } from "@/components/site/icons";
 import { VisasBrowser } from "@/components/site/VisasBrowser";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
-import { faqJsonLd, type FaqItem } from "@/lib/faq";
+import { faqJsonLd, terminated, type FaqItem } from "@/lib/faq";
 import { itemListJsonLd } from "@/lib/itemlist-jsonld";
 import { listPublishedVisas, type PublicVisaListRow } from "@/lib/queries/public-visas";
 import { VISA_CATEGORY_LABELS, VISA_CATEGORY_ORDER } from "@/lib/visa-categories";
@@ -49,7 +49,7 @@ function hubFaq(student500: PublicVisaListRow | null): FaqItem[] {
     {
       q: "How much does the Australian student visa cost?",
       a: student500?.base_application_charge
-        ? `The base application charge for the subclass 500 student visa is ${student500.base_application_charge}. Charges are re-indexed on 1 July each year, and family members included in the application pay extra. See the subclass 500 page for the current figure and its source.`
+        ? `Base application charge for the subclass 500 student visa: ${terminated(student500.base_application_charge)} Charges are re-indexed on 1 July each year, and family members included in the application pay extra. See the subclass 500 page for the current figure and its source.`
         : "See the subclass 500 page for the current base application charge; it is re-indexed on 1 July each year.",
     },
     {
