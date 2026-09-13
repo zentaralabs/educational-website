@@ -18,6 +18,15 @@ import { composeTitle, pageMetadata } from "@/lib/page-metadata";
 
 export const revalidate = 3600;
 
+// Popular occupations (e.g. Registered Nurse, Software Engineer) can have
+// hundreds of matching programs across dozens of universities, while niche
+// ones have a handful — an unpaginated page swung from ~650 to ~6,100 words
+// purely on table row count. Capping universities per page keeps every
+// occupation page in a consistent, genuinely readable range and gives the
+// long tail of universities real, crawlable `?page=N` URLs instead of an
+// ever-growing single page.
+const UNIVERSITIES_PER_PAGE = 15;
+
 export async function generateStaticParams() {
   const slugs = await listPublishedOccupationSlugs();
   return slugs.map((slug) => ({ slug }));
@@ -30,27 +39,53 @@ async function loadOccupation(slug: string) {
   return { occupation, programs };
 }
 
+function groupByUniversity(programs: Awaited<ReturnType<typeof getProgramsForOccupation>>) {
+  return Array.from(
+    programs.reduce((map, p) => {
+      const existing = map.get(p.university.slug);
+      if (existing) existing.push(p);
+      else map.set(p.university.slug, [p]);
+      return map;
+    }, new Map<string, typeof programs>()),
+  )
+    .map(([universitySlug, rows]) => ({
+      universitySlug,
+      university: rows[0].university,
+      programs: rows.sort((a, b) => a.program.name.localeCompare(b.program.name)),
+    }))
+    .sort((a, b) => a.university.name.localeCompare(b.university.name));
+}
+
 export async function generateMetadata({
   params,
+  searchParams,
 }: {
   params: Promise<{ slug: string }>;
+  searchParams: Promise<{ page?: string }>;
 }) {
   const { slug } = await params;
+  const { page } = await searchParams;
   const data = await loadOccupation(slug);
   if (!data) return {};
   const { occupation, programs } = data;
+
+  const totalPages = Math.max(1, Math.ceil(groupByUniversity(programs).length / UNIVERSITIES_PER_PAGE));
+  const pageNum = Math.min(totalPages, Math.max(1, Number(page) || 1));
 
   const title = composeTitle(occupation.name, [
     `ANZSCO ${occupation.anzsco_code}: Visa & Degree Pathways ${SITE_YEAR}`,
     `Visa & Degree Pathways ${SITE_YEAR}`,
     `${SITE_YEAR}`,
   ]);
-  const description = `${occupation.name} (ANZSCO ${occupation.anzsco_code}): skilled occupation list status, visa pathway, and ${programs.length} real Australian degree${programs.length === 1 ? "" : "s"} that lead to it.`;
+  const description =
+    pageNum === 1
+      ? `${occupation.name} (ANZSCO ${occupation.anzsco_code}): skilled occupation list status, visa pathway, and ${programs.length} real Australian degree${programs.length === 1 ? "" : "s"} that lead to it.`
+      : `${occupation.name} (ANZSCO ${occupation.anzsco_code}): more Australian universities offering a degree pathway into this occupation. Page ${pageNum} of ${totalPages}.`;
 
   return pageMetadata({
     title,
     description,
-    path: `/occupations/${slug}`,
+    path: pageNum === 1 ? `/occupations/${slug}` : `/occupations/${slug}?page=${pageNum}`,
     type: "article",
     // Thin without the reverse lookup — index only occupations that actually
     // resolve to at least one real published program. See the "SEO/keyword
@@ -71,10 +106,13 @@ function listBadges(occupation: { mltssl: boolean; stsol: boolean; rol: boolean;
 
 export default async function OccupationDetailPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ slug: string }>;
+  searchParams: Promise<{ page?: string }>;
 }) {
   const { slug } = await params;
+  const { page } = await searchParams;
   const data = await loadOccupation(slug);
   if (!data) notFound();
   const { occupation, programs } = data;
@@ -82,20 +120,13 @@ export default async function OccupationDetailPage({
   const lists = listBadges(occupation);
   const pointsTested = occupation.mltssl || occupation.stsol || occupation.rol;
 
-  const universities = Array.from(
-    programs.reduce((map, p) => {
-      const existing = map.get(p.university.slug);
-      if (existing) existing.push(p);
-      else map.set(p.university.slug, [p]);
-      return map;
-    }, new Map<string, typeof programs>()),
-  )
-    .map(([universitySlug, rows]) => ({
-      universitySlug,
-      university: rows[0].university,
-      programs: rows.sort((a, b) => a.program.name.localeCompare(b.program.name)),
-    }))
-    .sort((a, b) => a.university.name.localeCompare(b.university.name));
+  const allUniversities = groupByUniversity(programs);
+  const totalPages = Math.max(1, Math.ceil(allUniversities.length / UNIVERSITIES_PER_PAGE));
+  const pageNum = Math.min(totalPages, Math.max(1, Number(page) || 1));
+  const universities = allUniversities.slice(
+    (pageNum - 1) * UNIVERSITIES_PER_PAGE,
+    pageNum * UNIVERSITIES_PER_PAGE,
+  );
 
   const breadcrumbs = [
     { label: "Home", href: "/" },
@@ -109,6 +140,7 @@ export default async function OccupationDetailPage({
     name: occupation.name,
     occupationalCategory: occupation.anzsco_code,
     description: occupation.summary ?? occupation.visa_pathway_note ?? undefined,
+    dateModified: occupation.last_verified_at ?? undefined,
   };
 
   return (
@@ -171,14 +203,15 @@ export default async function OccupationDetailPage({
       {universities.length > 0 && (
         <section className="mt-10 border-t border-ink/10 pt-8">
           <SectionHeading>
-            {programs.length} degree{programs.length === 1 ? "" : "s"} at {universities.length} universit
-            {universities.length === 1 ? "y" : "ies"} that lead here
+            {programs.length} degree{programs.length === 1 ? "" : "s"} at {allUniversities.length} universit
+            {allUniversities.length === 1 ? "y" : "ies"} that lead here
           </SectionHeading>
           <p className="mb-4 flex items-center gap-2 font-body text-sm text-slate">
             <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-status-open/10 text-status-open">
               <PassportIcon className="h-3.5 w-3.5" />
             </span>
             Real published degree programs whose graduates typically pursue {occupation.name}
+            {totalPages > 1 && ` — page ${pageNum} of ${totalPages}, alphabetically`}
           </p>
           <div className="flex flex-col gap-3">
             {universities.map(({ universitySlug, university, programs: rows }) => (
@@ -213,6 +246,34 @@ export default async function OccupationDetailPage({
               </div>
             ))}
           </div>
+
+          {totalPages > 1 && (
+            <nav className="mt-5 flex items-center justify-between gap-3 font-body text-sm">
+              {pageNum > 1 ? (
+                <Link
+                  href={pageNum - 1 === 1 ? `/occupations/${slug}` : `/occupations/${slug}?page=${pageNum - 1}`}
+                  className="text-status-open underline underline-offset-2"
+                >
+                  ← Previous universities
+                </Link>
+              ) : (
+                <span />
+              )}
+              <span className="text-slate">
+                Page {pageNum} of {totalPages}
+              </span>
+              {pageNum < totalPages ? (
+                <Link
+                  href={`/occupations/${slug}?page=${pageNum + 1}`}
+                  className="text-status-open underline underline-offset-2"
+                >
+                  More universities →
+                </Link>
+              ) : (
+                <span />
+              )}
+            </nav>
+          )}
         </section>
       )}
 

@@ -17,6 +17,7 @@ import {
 import { SCHOLARSHIP_SCOPE_LABELS } from "@/lib/scholarship-scopes";
 import { JsonLd } from "@/lib/json-ld";
 import { composeTitle, pageMetadata } from "@/lib/page-metadata";
+import { SITE_URL } from "@/lib/site-config";
 
 export const revalidate = 3600;
 
@@ -68,6 +69,14 @@ export default async function ScholarshipPage({
 
   const faqItems = scholarshipFaq(s);
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: s.name,
+    url: `${SITE_URL}/scholarships/${slug}`,
+    dateModified: s.last_verified_at ?? undefined,
+  };
+
   // All 46 published scholarships currently have deadline_date = null (see
   // memory: data-quality-findings-2026-09-13, Finding 3). For the ~30 that
   // require no separate application, the real "deadline" is whichever
@@ -83,6 +92,7 @@ export default async function ScholarshipPage({
 
   return (
     <main className="mx-auto w-full max-w-4xl px-6 pt-8 pb-16">
+      <JsonLd data={jsonLd} />
       <JsonLd data={breadcrumbJsonLd(breadcrumbs)} />
       {faqItems.length > 0 && (
         <JsonLd data={faqJsonLd(faqItems)} />
