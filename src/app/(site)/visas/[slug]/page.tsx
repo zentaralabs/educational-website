@@ -143,12 +143,12 @@ export default async function VisaPage({
             <p className="font-body text-sm text-slate">
               By <span className="font-medium text-ink">{visa.author.name}</span>
               {visa.author.credentials && `, ${visa.author.credentials}`}
-              {visa.reviewed_by ? (
-                <>, reviewed by {visa.reviewed_by.name}</>
-              ) : (
+              {visa.reviewed_by && (
                 <>
                   {" "}
-                  &middot; not yet reviewed by a registered migration agent
+                  &middot; Reviewed by {visa.reviewed_by.name}
+                  {visa.reviewed_by.credentials &&
+                    `, ${visa.reviewed_by.credentials}`}
                 </>
               )}
             </p>
