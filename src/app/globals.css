@@ -6,6 +6,9 @@
  * colors/fonts ad hoc.
  */
 :root {
+  /* Set by CookieConsentBanner while it's visible, so pages can reserve
+     space and avoid the fixed bar covering above-the-fold content. */
+  --cookie-banner-h: 0px;
   --color-paper: #ffffff;
   --color-ink: #16233f;
   /* Darkened from #46587a (2026-09-04): the lighter slate read as washed-out
