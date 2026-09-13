@@ -13,6 +13,21 @@ export type CollectionEntry = {
   note: string;
 };
 
+/** A short editorial section rendered between the intro/table and the ranked list, or after it. */
+export type CollectionSection = {
+  heading: string;
+  body: string[];
+};
+
+/** An at-a-glance comparison table, rendered above the ranked list. */
+export type CollectionTable = {
+  columns: string[];
+  /** One row per entry; cell order matches `columns`. Use null for "not published". */
+  rows: { cells: (string | null)[] }[];
+  /** Shown under the table, e.g. a "last verified" stamp. */
+  note?: string;
+};
+
 export type Collection = {
   slug: string;
   /** On-page H1. Free to be long and explanatory. */
@@ -30,8 +45,16 @@ export type Collection = {
   metaDescription: string;
   /** Editorial intro, one or two paragraphs. */
   intro: string[];
+  /** Optional editorial sections rendered after the intro, before the comparison table/list. */
+  sectionsBeforeList?: CollectionSection[];
+  /** Optional at-a-glance comparison table, rendered after `sectionsBeforeList` and before the ranked list. */
+  table?: CollectionTable;
+  /** Optional editorial sections rendered after the ranked list, before "How this list was built". */
+  sectionsAfterList?: CollectionSection[];
   /** How the list was built. */
   methodology: string;
+  /** Optional FAQ, rendered after methodology. Adds FAQPage JSON-LD. */
+  faq?: { q: string; a: string }[];
   /**
    * The guide (or other non-list page) that explains the concept behind this
    * shortlist. Rendered as a callout on the collection page so the "understand
@@ -148,6 +171,194 @@ function subjectBestCollection(subjectSlug: string): Collection {
                 ? "Group of Eight"
                 : "",
           note: why.get(u.slug) ?? `A recognised choice for ${name}.`,
+        })),
+  };
+}
+
+/**
+ * Hand-authored (not factory-built) "best business schools" collection.
+ * Business is the single biggest impression cluster in GSC for this site
+ * (see memory/gsc-analysis-2026-09-07.md), so this page carries a comparison
+ * table plus PR-pathway and entry-requirement sections the generic
+ * subjectBestCollection template doesn't support. MBA program figures below
+ * (tuition, duration, admission, accreditation) were checked against each
+ * university's published MBA page and `scripts/data/programs.json` in
+ * September 2026; re-verify before reusing these numbers in another context.
+ */
+function businessSchoolsCollection(): Collection {
+  const curated = SUBJECT_CONTENT.business?.strongAt ?? [];
+  const order = new Map(curated.map((c, i) => [c.slug, i]));
+  const why = new Map(curated.map((c) => [c.slug, c.why]));
+  return {
+    slug: "best-australian-universities-for-business",
+    title: "The best business schools in Australia for international students",
+    metaTitle: "Best Business Schools in Australia",
+    shortTitle: "Best for business",
+    category: "subject",
+    metaDescription:
+      "Compare Australia's top business schools by tuition, entry requirements, accreditation, and application intakes, with the PR pathway for business graduates.",
+    intro: [
+      LEAD["best-australian-universities-for-business"],
+      "There is no official ranking of Australian business schools, and league-table position is a weaker signal than accreditation from AACSB, EQUIS, or AMBA, the three bodies that actually audit a business school's teaching quality and research output. This shortlist is the schools with a genuine reputation in business and management, with a note on what sets each apart. For every university that teaches business, plus the cheapest programs, see the business and management subject page.",
+    ],
+    sectionsBeforeList: [
+      {
+        heading: "MBA or business degree, which are you looking for?",
+        body: [
+          "An MBA and a general business master's are not the same product. The MBA is built for people already in management: most programs want two or more years of work experience, cost the most on this list, and lean on cohort networking and a case-study teaching style. A Master of Management, Master of Business Analytics, or specialist master's in finance, marketing, or accounting is more accessible, usually accepts a bachelor's in any discipline with no work experience required, and suits a career changer or a recent graduate.",
+          "Both sit under \"business and management\" in search results, but they lead to different outcomes and different price tags, so the first decision is which one you're actually after.",
+        ],
+      },
+    ],
+    table: {
+      columns: ["University", "MBA program", "Tuition (per year)", "Duration", "Accreditation", "Typical entry bar", "Intakes"],
+      rows: [
+        {
+          cells: [
+            "University of Melbourne",
+            "MBA (Melbourne Business School)",
+            formatCurrency(56250, "AUD"),
+            "2 years",
+            "AACSB, EQUIS",
+            "2–3 yrs work experience; GMAT/GRE optional",
+            "Feb, Jul",
+          ],
+        },
+        {
+          cells: [
+            "UNSW Sydney",
+            "MBA (AGSM)",
+            formatCurrency(68000, "AUD"),
+            "1.5 years",
+            "AACSB, EQUIS",
+            "2 yrs work experience (or 6 yrs without a degree); GMAT/GRE preferred",
+            "Feb, Jul",
+          ],
+        },
+        {
+          cells: [
+            "University of Sydney",
+            "MBA (Leadership and Enterprise)",
+            formatCurrency(60700, "AUD"),
+            "1.5 years",
+            "AACSB, EQUIS, AMBA",
+            "3 yrs work experience, GPA 65+, interview; GMAT 600+ if below the academic bar",
+            "Contact the school",
+          ],
+        },
+        {
+          cells: [
+            "Monash University",
+            "MBA",
+            formatCurrency(62000, "AUD"),
+            "1.5 years",
+            "AACSB, EQUIS, AMBA",
+            "Credit average (60%+) plus 3 yrs relevant work experience",
+            "Feb, Jul",
+          ],
+        },
+        {
+          cells: [
+            "Queensland University of Technology",
+            "MBA (Digital MBA)",
+            formatCurrency(44000, "AUD"),
+            "2 years",
+            "AACSB, EQUIS, AMBA",
+            "Bachelor's degree plus 3 yrs professional work experience",
+            "Feb, Jul",
+          ],
+        },
+        {
+          cells: [
+            "Bond University",
+            "MBA",
+            formatCurrency(50900, "AUD"),
+            "~16 months",
+            "AACSB, EQUIS",
+            "Bachelor's degree; work experience recommended, not always required",
+            "Jan, May, Sep",
+          ],
+        },
+        {
+          cells: [
+            "University of Technology Sydney",
+            "MBA",
+            formatCurrency(49990, "AUD"),
+            "2 years",
+            "AACSB, EQUIS",
+            "Bachelor's with GPA 5.25/7, or a graduate-certificate pathway",
+            "Feb, Jul",
+          ],
+        },
+        {
+          cells: [
+            "Australian Institute of Business",
+            "MBA (specialisations from AUD 34,000)",
+            formatCurrency(34000, "AUD"),
+            "2 years",
+            "TEQSA-registered (not AACSB/EQUIS/AMBA)",
+            "Bachelor's in any discipline, or significant management experience",
+            "Feb, Jul, Oct",
+          ],
+        },
+      ],
+      note: "Annual tuition for the MBA (multiply by duration for the full program cost), checked against each school's own program page in September 2026. Fees change; confirm the current figure before applying. AIB is a TEQSA-registered private higher education provider, not a university, and does not hold AACSB, EQUIS, or AMBA accreditation.",
+    },
+    sectionsAfterList: [
+      {
+        heading: "Career outcomes and the PR pathway",
+        body: [
+          "A business degree's value for permanent residence depends entirely on which occupation you're aiming at, not which school you attended. General management and marketing roles are hard to nominate for on Australia's skilled occupation lists. Accounting is the exception: Accountant (General), Management Accountant, and Taxation Accountant all sit on the Medium and Long-term Strategic Skills List and the Core Skills Occupation List, which supports the 189, 190, 491, and employer-sponsored 482 and 186 visas, with a skills assessment from CPA Australia, CA ANZ, or the IPA.",
+          "That makes an accredited Master of Professional Accounting, not the MBA, the more reliable migration route through a business faculty. If PR is the goal, check that the specific program carries the professional accreditation needed for the skills assessment before enrolling, and treat the MBA as a career and networking investment rather than a migration strategy.",
+        ],
+      },
+      {
+        heading: "Entry requirements at a glance",
+        body: [
+          "English requirements cluster around IELTS Academic 6.5 overall for most business master's, rising to 7.0 for the University of Sydney's MBA. GMAT is rarely mandatory: only the University of Sydney and Australian National University lean on it as a fallback when the academic record or work experience falls short, and most schools will admit on your degree and CV alone.",
+          "Work experience is the real filter for an MBA specifically. UNSW, Monash, and QUT all expect two to three years in a professional role, Bond and UTS are more flexible about it, and the Australian Institute of Business will admit on a bachelor's degree in any discipline with no work experience at all, which is part of why it's the cheapest option here.",
+        ],
+      },
+    ],
+    methodology:
+      "Schools are the ones with a genuine reputation in business and management: research output, industry links, and accreditation, not league-table position. MBA tuition, duration, admission criteria, and intakes are the published figures for each school's flagship MBA, checked against the university's own program page and this site's program dataset in September 2026. It is not a ranking, and a strong specialist master's at a lower-ranked university can suit you better than a famous name.",
+    relatedGuide: {
+      href: "/guides/which-australian-courses-lead-to-permanent-residence",
+      label: "Which Australian courses actually lead to permanent residence",
+    },
+    faq: [
+      {
+        q: "Do I need work experience for an MBA in Australia?",
+        a: "Most MBA programs want at least two to three years of professional work experience, and some (like UNSW and Sydney) will admit on six or more years without a completed degree. The Australian Institute of Business is the exception on this list: it accepts a bachelor's degree in any discipline with no work experience required.",
+      },
+      {
+        q: "How much does an MBA cost in Australia for international students?",
+        a: "Annual tuition on this list runs from about AUD 34,000 at the Australian Institute of Business to AUD 68,000 at UNSW Sydney, for programs lasting roughly 16 months to two years, so the full program costs more than the annual figure. Fees are reviewed annually, so confirm the current figure with the school before applying.",
+      },
+      {
+        q: "Can I get PR in Australia after an MBA?",
+        a: "It's a weaker path than it looks. General management roles are hard to nominate for on the skilled occupation lists. An accredited Master of Professional Accounting has a much clearer route, through CPA Australia, CA ANZ, or IPA skills assessment, because accounting occupations sit on both the MLTSSL and CSOL.",
+      },
+      {
+        q: "Which Australian business schools hold triple accreditation?",
+        a: "The University of Sydney, Monash University, and Queensland University of Technology all hold the AACSB, EQUIS, and AMBA \"triple crown,\" a mark held by roughly 1 percent of business schools worldwide. Melbourne, UNSW, Bond, and UTS hold AACSB and EQUIS but not AMBA.",
+      },
+    ],
+    build: (unis) =>
+      unis
+        .filter((u) => order.has(u.slug))
+        .sort((a, b) => (order.get(a.slug) ?? 99) - (order.get(b.slug) ?? 99))
+        .map((u) => ({
+          slug: u.slug,
+          name: u.name,
+          city: u.city,
+          headline:
+            u.firstYearBudget != null
+              ? `${formatCurrency(u.firstYearBudget, "AUD")} first-year budget`
+              : GO8_SLUGS.has(u.slug)
+                ? "Group of Eight"
+                : "",
+          note: why.get(u.slug) ?? "A recognised choice for business and management.",
         })),
   };
 }
@@ -474,6 +685,7 @@ export const COLLECTIONS: Collection[] = [
   cityCollection({ city: "Adelaide", match: /adelaide/i, slug: "cheapest-universities-in-adelaide-for-international-students" }),
   cityCollection({ city: "Canberra", match: /canberra/i, slug: "cheapest-universities-in-canberra-for-international-students" }),
   ...SUBJECT_BEST_PAGES.map(subjectBestCollection),
+  businessSchoolsCollection(),
 ];
 
 export function getCollection(slug: string): Collection | undefined {
