@@ -4,7 +4,7 @@ import { pageMetadata } from "@/lib/page-metadata";
 export const metadata = pageMetadata({
   title: "Disclaimer",
   description:
-    "Where To Apply provides informational content only, not official admissions, financial, or legal advice.",
+    "This site provides informational content only, not official admissions, financial, or legal advice.",
   path: "/disclaimer",
   type: "website",
 });

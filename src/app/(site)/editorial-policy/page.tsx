@@ -4,7 +4,7 @@ import { pageMetadata } from "@/lib/page-metadata";
 export const metadata = pageMetadata({
   title: "Editorial Policy",
   description:
-    "How Where To Apply sources facts, verifies them, handles corrections, uses AI assistance, and keeps advertising separate from editorial.",
+    "How this site sources facts, verifies them, handles corrections, uses AI assistance, and keeps advertising separate from editorial.",
   path: "/editorial-policy",
   type: "website",
 });

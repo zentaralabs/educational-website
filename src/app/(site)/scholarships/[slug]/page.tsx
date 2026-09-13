@@ -41,9 +41,14 @@ export async function generateMetadata({
     "Value & Eligibility",
     "Eligibility",
   ]);
-  const description =
-    `${s.name}${s.amount ? ` (${s.amount})` : ""} for international students in Australia: who is eligible, what it covers, whether you need a separate application, and how to apply. ` +
-    (s.description ?? "");
+  // The real per-scholarship description leads so it survives
+  // clampDescription's budget — previously the generic boilerplate came
+  // first and ate the whole budget, so the actual description text (what
+  // makes this page different from any other scholarship's) never
+  // appeared in the visible meta description at all.
+  const description = s.description
+    ? s.description
+    : `${s.name}${s.amount ? ` (${s.amount})` : ""} for international students in Australia: who is eligible, what it covers, whether you need a separate application, and how to apply.`;
   return pageMetadata({
     title,
     description,
