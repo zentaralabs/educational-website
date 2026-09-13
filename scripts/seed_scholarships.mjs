@@ -27,29 +27,25 @@ const NATIONAL = [
     amount: "Full tuition, airfares, and living allowance",
     study_level: "Any",
     separate_application: true,
-    deadline_date: null,
+    // Real, verified: 29 of 31 participating countries (incl. Nepal,
+    // Bangladesh) close 30 Apr 2026 1400 AEST for 2027-commencing study;
+    // Palau alone runs later (30 Jun 2026). Confirmed 2026-09-13 against
+    // dfat.gov.au's own opening-and-closing-dates page.
+    deadline_date: "2026-04-30",
     eligibility:
       "Citizens of participating developing countries in Asia, the Pacific, Africa, and the Middle East, applying from their home country. Applicants are assessed on development impact potential as much as academic merit, and must return home for at least two years after finishing.",
     description:
       "Australia Awards are the Australian Government's flagship development scholarships, funded through the foreign aid program. They cover the full cost of study: tuition, return airfares, a contribution to living expenses, an establishment allowance, and Overseas Student Health Cover.\n\nThey are aimed at people from partner countries who will return to contribute to their country's development, so the selection process weighs your professional background and development goals heavily. Fields of study are usually tied to your country's agreed priority areas. Applications open annually through the Australia Awards portal, with country-specific closing dates.",
     external_url: "https://www.dfat.gov.au/people-to-people/australia-awards",
-    source_url: "https://www.dfat.gov.au/people-to-people/australia-awards/australia-awards-scholarships",
+    source_url: "https://www.dfat.gov.au/people-to-people/australia-awards/australia-awards-scholarships-opening-and-closing-dates",
   },
-  {
-    name: "Destination Australia Scholarships",
-    slug: "destination-australia-scholarships",
-    scope: "national",
-    amount: "Up to AUD 15,000 per year",
-    study_level: "Any",
-    separate_application: true,
-    deadline_date: null,
-    eligibility:
-      "Domestic and international students starting a new full-time course (Certificate IV to PhD, one to four years) at an approved provider located in regional Australia. You must live and study in the regional area.",
-    description:
-      "Destination Australia is a Commonwealth program that funds regional education providers to offer scholarships of up to AUD 15,000 a year to students who study and live in regional Australia. Over a thousand are offered nationally each year, paid in instalments across the year.\n\nUnlike most national scholarships it is open to both domestic and international students. You do not apply to the government directly. Instead you apply to the participating regional university or campus, which selects recipients against its own criteria and timeline. It stacks well with studying regionally for the skilled-migration points that come with it.",
-    external_url: "https://www.education.gov.au/destination-australia",
-    source_url: "https://www.education.gov.au/destination-australia",
-  },
+  // Destination Australia Scholarships removed 2026-09-13: confirmed via
+  // education.gov.au that the program stopped funding new rounds from
+  // 1 July 2024 (2024-25 Budget decision). Existing recipients are still
+  // supported, but no new applicants are being accepted, so it no longer
+  // belongs in the public catalog. The published DB row was archived by a
+  // one-off migration rather than left for this array to manage — see
+  // memory: scholarship-deadline-research-2026-09-13.
   {
     name: "Research Training Program (RTP) Scholarship",
     slug: "research-training-program-rtp-scholarship",
@@ -57,6 +53,9 @@ const NATIONAL = [
     amount: "Tuition offset plus a stipend around AUD 37,000 per year (2026)",
     study_level: "Research",
     separate_application: true,
+    // Verified 2026-09-13: genuinely no single national date. Each
+    // university's graduate research school sets its own RTP timeline,
+    // usually tied to that university's own admission cycle.
     deadline_date: null,
     eligibility:
       "Domestic and international students enrolled in an accredited research doctorate (PhD) or research masters at an Australian university. Highly competitive, allocated on research record and proposal strength.",
@@ -124,6 +123,14 @@ const UNI = [
     "The University of Sydney's headline international award, lifted to AUD 60,000 for 2026. It is applied as a tuition reduction across the degree.\n\nThere is no form to complete. Hold an unconditional offer by a round deadline and you are automatically considered on merit. Some students, particularly from India, can hold it alongside a country-specific Sydney scholarship, effectively stacking the support.",
     "https://www.sydney.edu.au/scholarships/e/vice-chancellor-international-scholarships-scheme.html",
   ],
+  // FLAGGED 2026-09-13: this row is an umbrella covering several distinct
+  // UQ scholarships. Confirmed UQ's automatic-entry awards (International
+  // Excellence, International High Achievers, Faculty International) need
+  // no application, but the Global Leaders scholarship this row also
+  // describes varies by country — automatic for some (e.g. India), a
+  // separate form for others (e.g. Europe). The `true`/prose below is
+  // wrong for the automatic half and needs splitting into per-scholarship
+  // rows to fix properly, not a one-line patch.
   [
     "UQ International Scholarship",
     "uq-international-scholarship",
@@ -267,6 +274,13 @@ const UNI = [
     "The TIS gives international students a 25% tuition reduction for the length of an eligible degree, automatically. UTAS is the only university in Tasmania, with world-class marine and Antarctic science, and the whole state is classified regional for skilled migration.\n\nThat combination of an automatic fee cut, low living costs in Hobart and Launceston, and strong visa incentives makes Tasmania one of the more cost-effective study destinations in the country.",
     "https://www.utas.edu.au/scholarships",
   ],
+  // FLAGGED 2026-09-13: like the UQ row above, this is an umbrella entry.
+  // Western Sydney's own page says its general "International Scholarships"
+  // are automatically assessed with every coursework application, but this
+  // row's prose also folds in a "small number of full Vice-Chancellor's
+  // scholarships" that may be a separate, more selective, application-based
+  // award — not confirmed either way. Needs splitting into per-scholarship
+  // rows before the separate_application flag can be trusted.
   [
     "Western Sydney University International Scholarship",
     "western-sydney-university-international-scholarship",
@@ -476,6 +490,16 @@ const UNI = [
     "A dedicated University of Sydney program for Indian students. Each year it offers two full-tuition undergraduate scholarships for up to four years, ten first-year awards of AUD 20,000, and sixteen first-year awards of AUD 10,000.\n\nIt needs a separate application and is competitive because the numbers are fixed. Sydney's broader international scholarships, some assessed automatically without an application, can usually be held alongside a country scholarship, so most Indian applicants are considered for more than one form of support.",
     "https://www.sydney.edu.au/scholarships/e/sydney-scholars-india-scholarship-program.html",
   ],
+  // FLAGGED 2026-09-13, not yet acted on: this scholarship's own dedicated
+  // page (the source_url below) now redirects to Deakin's generic
+  // international-scholarships hub, and it isn't listed among the hub's
+  // current featured scholarships (Vice-Chancellor's International,
+  // International Scholarship for Excellence, 20% Merit, College
+  // Foundation Pathways, Southeast Asia Priority Bursary). This may mean
+  // the program has quietly ended (the PR coverage found for it covers a
+  // single "2026" cohort of 6 students) or that it's just between
+  // announced rounds — not confident enough either way to archive it
+  // without a closer check. Needs verification before the next re-seed.
   [
     "Deakin Vice-Chancellor's Meritorious Scholarship for India",
     "deakin-vice-chancellors-meritorious-scholarship-india",
@@ -521,6 +545,56 @@ const ADELAIDE_UPDATES = {
     separate_application: false,
     description:
       "A 10% tuition reduction for international students applying through one of Adelaide University's approved partner institutions or agents in their home country. Confirmed through the partner rather than a direct application.",
+  },
+};
+
+// 2026-09-13 scholarship-deadline research pass (see memory:
+// scholarship-deadline-research-2026-09-13). Two kinds of fix, both
+// confirmed against each university's own official page:
+//   1. Real, current deadline_date for scholarships that genuinely have one
+//      (they had been left null pending this research).
+//   2. separate_application corrected from true to false, plus a rewritten
+//      description: three scholarships were seeded as requiring a separate
+//      application (each with prose saying "you apply separately"), but
+//      each university's own dedicated page for that exact scholarship
+//      says applicants are automatically assessed when they apply to
+//      study — no form, no separate deadline. Left as `true` these would
+//      have looked eligible for a deadline that was never coming; as
+//      `false` they now get the "tied to your program's application
+//      deadline" treatment already shipped for the other ~30 automatic
+//      scholarships.
+//   UQ International Scholarship and Western Sydney University
+//   International Scholarship were NOT included here even though their
+//   prose has the same "separate application" claim: both DB rows are
+//   umbrella entries covering several distinct real scholarships (UQ:
+//   Excellence/High Achievers/Faculty, all automatic, plus the more
+//   selective Global Leaders awards, which vary by country and can be
+//   automatic or separate-application; Western Sydney: broad grants plus
+//   a distinct competitive Vice-Chancellor's award) — flipping one boolean
+//   would misrepresent whichever half of the umbrella it doesn't match, so
+//   these need a proper split into per-scholarship rows before fixing,
+//   not a one-line patch. Flagged inline at their UNI tuples instead.
+const SCHOLARSHIP_FIXES = {
+  "charles-sturt-vice-chancellor-international-excellence-scholarship": {
+    deadline_date: "2026-06-30",
+  },
+  "sydney-scholars-india-scholarship-program": {
+    deadline_date: "2026-05-24",
+  },
+  "monash-international-merit-scholarship": {
+    separate_application: false,
+    description:
+      "Monash's broad merit award for international students, paid at AUD 15,000 a year for each full year of study until you reach the credit points your degree requires. It is one of the more widely available flagship scholarships because it is not capped at a handful of recipients.\n\nNo application is required. If you receive an unconditional undergraduate course offer from Monash, you are automatically considered. It cannot usually be combined with other Monash scholarships, so check which award you are better off taking.",
+  },
+  "qut-international-merit-scholarship": {
+    separate_application: false,
+    description:
+      "QUT offers international merit scholarships from a 25% tuition reduction up to, in a few faculty-specific cases, the full amount. Most build industry placements into the degree, so the practical value goes beyond the fee saving.\n\nYou do not need to apply. QUT assesses your qualifications when you apply to study and lets you know if you meet the criteria, with the scholarship offer arriving alongside your admission offer. Brisbane's living costs are lower than Sydney's or Melbourne's while still being a state capital.",
+  },
+  "uts-international-undergraduate-academic-excellence-scholarship": {
+    separate_application: false,
+    description:
+      "UTS gives a tuition reduction of a quarter to a half for the full length of an eligible undergraduate degree to international students with high entry grades. A matching scheme covers postgraduate coursework.\n\nNo separate application is needed: you are automatically assessed for this scholarship when you apply to study at UTS, unless a specific scholarship says otherwise. UTS is in central Sydney with strong industry-placement programs, which helps offset living costs through part-time and internship work.",
   },
 };
 
@@ -607,6 +681,29 @@ try {
     );
     console.log("adelaide", slug);
   }
+
+  const FIXES_VERIFIED_ON = "2026-09-13";
+  for (const [slug, patch] of Object.entries(SCHOLARSHIP_FIXES)) {
+    const cols = Object.keys(patch);
+    const setClause = cols.map((c, i) => `${c} = $${i + 1}`).join(", ");
+    await client.query(
+      `update scholarships set ${setClause}, last_verified_at = $${cols.length + 1}, updated_at = now()
+       where slug = $${cols.length + 2}`,
+      [...cols.map((c) => patch[c]), FIXES_VERIFIED_ON, slug],
+    );
+    console.log("fix", slug, patch);
+  }
+
+  // Destination Australia stopped accepting new applicants from 1 July 2024
+  // (see the removed NATIONAL entry above) — archive the existing row so it
+  // drops off the public /scholarships listing and its own page 404s
+  // instead of implying it's still open.
+  const { rowCount: archivedCount } = await client.query(
+    `update scholarships set status = 'archived', last_verified_at = $1, updated_at = now()
+     where slug = 'destination-australia-scholarships' and status = 'published'`,
+    [FIXES_VERIFIED_ON],
+  );
+  console.log("archived destination-australia-scholarships:", archivedCount);
 
   const { rows: bad } = await client.query(
     "select slug from scholarships where status='published' and (name like '%—%' or description like '%—%' or eligibility like '%—%')",

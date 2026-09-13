@@ -88,10 +88,9 @@ export default async function ScholarshipsIndexPage({
           &ldquo;scholarship&rdquo; for international students are partial tuition
           reductions, often 10 to 50 percent off the course fee, decided on your
           academic record at the offer stage. The awards that also cover living
-          costs, mainly Australia Awards, the Research Training Program for
-          research degrees, and the regional Destination Australia scheme, are
-          far fewer, far more competitive, and run on their own timelines rather
-          than through your admission application.
+          costs, mainly Australia Awards and the Research Training Program for
+          research degrees, are far fewer, far more competitive, and run on
+          their own timelines rather than through your admission application.
         </p>
         <p>
           Use the &ldquo;separate application&rdquo; and &ldquo;automatic on

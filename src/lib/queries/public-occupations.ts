@@ -107,6 +107,12 @@ async function listOccupationSlugsWithPrograms(): Promise<string[]> {
       .eq("program.status", "published")
       .eq("program.university.status", "published")
       .eq("program.university.country.is_launched", true)
+      // id is unique and immutable, so it can't shift rows between pages —
+      // without it PostgREST doesn't guarantee stable order across separate
+      // .range() calls, and a shifted row can be skipped entirely (same
+      // failure class fixed for the programs sitemap query, see commit
+      // 3487a82).
+      .order("id")
       .range(from, from + pageSize - 1);
 
     if (error) throw error;
@@ -133,37 +139,54 @@ export type OccupationProgram = {
   };
 };
 
+type ProgramOccupationRow = {
+  relevance: "primary" | "related";
+  program: {
+    slug: string;
+    name: string;
+    degree_level: { name: string } | null;
+    university: { slug: string; name: string; city: string | null };
+  };
+};
+
 /**
  * The reverse lookup that makes an occupation page worth indexing: every
  * published program at a published, launched-country university that leads
  * to this occupation. This is the one thing a migration-agent SOL page can't
  * copy without our program database (see memory: occupation-pathway-feature).
+ *
+ * Paginated past PostgREST's 1000-row cap — six accountant-family
+ * occupations each have 1,149 linked programs, so this was silently
+ * dropping ~149 real programs per page before pagination was added (see
+ * memory: data-quality-findings-2026-09-13, Finding 2).
  */
 export async function getProgramsForOccupation(
   occupationSlug: string,
 ): Promise<OccupationProgram[]> {
   const supabase = createPublicClient([`occupation-programs:${occupationSlug}`]);
-  const { data, error } = await supabase
-    .from("program_occupations")
-    .select(
-      "relevance, program:programs!inner(slug, name, status, degree_level:degree_levels(name), university:universities!inner(slug, name, city, status, country:countries!inner(is_launched))), occupation:occupations!inner(slug, status)",
-    )
-    .eq("occupation.slug", occupationSlug)
-    .eq("occupation.status", "published")
-    .eq("program.status", "published")
-    .eq("program.university.status", "published")
-    .eq("program.university.country.is_launched", true);
+  const pageSize = 1000;
+  const rows: ProgramOccupationRow[] = [];
 
-  if (error) throw error;
-  return ((data ?? []) as unknown as Array<{
-    relevance: "primary" | "related";
-    program: {
-      slug: string;
-      name: string;
-      degree_level: { name: string } | null;
-      university: { slug: string; name: string; city: string | null };
-    };
-  }>).map((row) => ({
+  for (let from = 0; ; from += pageSize) {
+    const { data, error } = await supabase
+      .from("program_occupations")
+      .select(
+        "relevance, program:programs!inner(slug, name, status, degree_level:degree_levels(name), university:universities!inner(slug, name, city, status, country:countries!inner(is_launched))), occupation:occupations!inner(slug, status)",
+      )
+      .eq("occupation.slug", occupationSlug)
+      .eq("occupation.status", "published")
+      .eq("program.status", "published")
+      .eq("program.university.status", "published")
+      .eq("program.university.country.is_launched", true)
+      .order("id")
+      .range(from, from + pageSize - 1);
+
+    if (error) throw error;
+    rows.push(...((data ?? []) as unknown as ProgramOccupationRow[]));
+    if (!data || data.length < pageSize) break;
+  }
+
+  return rows.map((row) => ({
     relevance: row.relevance,
     program: {
       slug: row.program.slug,
