@@ -108,7 +108,10 @@ export async function SiteFooter() {
         </div>
       </div>
 
-      <div className="border-t border-line px-6 py-4">
+      <div
+        className="border-t border-line px-6 py-4"
+        style={{ paddingBottom: "calc(1rem + var(--cookie-banner-h))" }}
+      >
         <p className="mx-auto max-w-6xl font-utility text-xs text-slate">
           © {new Date().getFullYear()} Where To Apply. Not affiliated with any
           university. Information is independently researched and verified; see
