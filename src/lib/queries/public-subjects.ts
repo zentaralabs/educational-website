@@ -30,22 +30,51 @@ type ProgRow = {
 
 const PROG_SELECT =
   "id, slug, name, tuition_international, currency, duration_years, ielts_overall, " +
-  "degree_level:degree_levels(name), " +
+  "degree_level:degree_levels!inner(name), " +
   "subject:subjects!inner(id, slug, name), " +
   "university:universities!inner(slug, name, city, status, ielts_overall, country:countries!inner(is_launched))";
+
+/**
+ * Excludes diploma/pathway programs so they never win a "cheapest"
+ * comparison against real degrees (see memory:
+ * data-quality-findings-2026-09-13, Finding 1). Two layers: the
+ * `degree_level` tag catches correctly-classified rows, and the name-prefix
+ * check catches the ~471 diploma/certificate programs still mistagged
+ * "Undergraduate" (confirmed live: a Box Hill Institute "Diploma of
+ * Nursing" outranking every real Bachelor of Nursing). Doesn't match
+ * "Graduate Certificate" — that's a genuine postgraduate credential, not a
+ * vocational one, and doesn't start with "certificate".
+ */
+async function fetchProgramPages(
+  supabase: ReturnType<typeof createPublicClient>,
+  scopeSlug?: string,
+): Promise<ProgRow[]> {
+  const pageSize = 1000;
+  const rows: ProgRow[] = [];
+  for (let from = 0; ; from += pageSize) {
+    let query = supabase
+      .from("programs")
+      .select(PROG_SELECT)
+      .eq("status", "published")
+      .eq("university.status", "published")
+      .eq("university.country.is_launched", true)
+      .neq("degree_level.name", "Foundation/Pathway")
+      .not("name", "ilike", "diploma%")
+      .not("name", "ilike", "certificate%")
+      .not("name", "ilike", "advanced diploma%");
+    if (scopeSlug) query = query.eq("subject.slug", scopeSlug);
+    const { data, error } = await query.order("id").range(from, from + pageSize - 1);
+    if (error) throw error;
+    rows.push(...((data ?? []) as unknown as ProgRow[]));
+    if (!data || data.length < pageSize) break;
+  }
+  return rows;
+}
 
 /** All subjects that have at least one published program in a launched country. */
 export async function listPublishedSubjects(): Promise<SubjectSummary[]> {
   const supabase = createPublicClient(["programs:list"]);
-  const { data, error } = await supabase
-    .from("programs")
-    .select(PROG_SELECT)
-    .eq("status", "published")
-    .eq("university.status", "published")
-    .eq("university.country.is_launched", true);
-  if (error) throw error;
-
-  const rows = (data ?? []) as unknown as ProgRow[];
+  const rows = await fetchProgramPages(supabase);
   const bySubject = new Map<
     string,
     { name: string; unis: Set<string>; fees: number[]; count: number }
@@ -107,16 +136,7 @@ export type SubjectDetail = {
 
 export async function getSubjectBySlug(slug: string): Promise<SubjectDetail | null> {
   const supabase = createPublicClient([`subject:${slug}`, "programs:list"]);
-  const { data, error } = await supabase
-    .from("programs")
-    .select(PROG_SELECT)
-    .eq("status", "published")
-    .eq("university.status", "published")
-    .eq("university.country.is_launched", true)
-    .eq("subject.slug", slug);
-  if (error) throw error;
-
-  const rows = (data ?? []) as unknown as ProgRow[];
+  const rows = await fetchProgramPages(supabase, slug);
   if (rows.length === 0) return null;
 
   const programs: SubjectProgram[] = rows

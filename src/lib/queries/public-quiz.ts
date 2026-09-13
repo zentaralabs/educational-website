@@ -48,24 +48,35 @@ export async function listQuizOptions() {
   };
 }
 
-/** University slugs that teach a given subject at a published program. */
+/**
+ * University slugs that teach a given subject at a published program.
+ * Paginated past PostgREST's 1000-row cap — `business` alone has 1,141
+ * published programs (see memory: data-quality-findings-2026-09-13,
+ * Finding 2).
+ */
 async function universitySlugsForSubject(subjectSlug: string): Promise<Set<string>> {
   const supabase = createPublicClient(["programs:list"]);
-  const { data, error } = await supabase
-    .from("programs")
-    .select(
-      "university:universities!inner(slug, status, country:countries!inner(is_launched)), subject:subjects!inner(slug)",
-    )
-    .eq("status", "published")
-    .eq("subject.slug", subjectSlug)
-    .eq("university.status", "published")
-    .eq("university.country.is_launched", true);
-  if (error) throw error;
-  return new Set(
-    ((data ?? []) as unknown as { university: { slug: string } | null }[])
-      .map((r) => r.university?.slug)
-      .filter((s): s is string => Boolean(s)),
-  );
+  const pageSize = 1000;
+  const slugs = new Set<string>();
+  for (let from = 0; ; from += pageSize) {
+    const { data, error } = await supabase
+      .from("programs")
+      .select(
+        "university:universities!inner(slug, status, country:countries!inner(is_launched)), subject:subjects!inner(slug)",
+      )
+      .eq("status", "published")
+      .eq("subject.slug", subjectSlug)
+      .eq("university.status", "published")
+      .eq("university.country.is_launched", true)
+      .order("id")
+      .range(from, from + pageSize - 1);
+    if (error) throw error;
+    for (const r of (data ?? []) as unknown as { university: { slug: string } | null }[]) {
+      if (r.university?.slug) slugs.add(r.university.slug);
+    }
+    if (!data || data.length < pageSize) break;
+  }
+  return slugs;
 }
 
 /** University slugs offering a given degree level. */
