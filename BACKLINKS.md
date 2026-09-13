@@ -172,6 +172,27 @@ international students, run by Australian institutions, and study-abroad
 advising offices in Nepal and India. Only pitch where the page already links to
 free third-party planning tools.
 
+### Tier E — Australian .edu / .gov authority links (added 2026-09-13)
+
+The gap this closes: `sameAs` only points to LinkedIn/F6S/IndieHackers, and
+nothing authoritative links *in*. A `.edu.au` or `.gov.au` link is worth more
+per-link than anything in Tiers A–D for E-E-A-T purposes specifically, even at
+low volume, because it's the kind of citation only a real institution gives.
+
+Two sub-targets, both slower and lower-hit-rate than Tier A/B — treat this as
+a standing background task, not a sprint:
+
+| Target type | Examples | Angle |
+|---|---|---|
+| **University international-office "helpful resources" / FAQ pages** | Search `site:[uni].edu.au "helpful links" OR "useful resources" international students` per university already in the build-out rotation ([[university-buildout-status]]) | Only pitch pages that **already link out** to third-party tools (a fee estimator, a visa-cost calculator, an accommodation guide) — same rule as Tier D. Offer the specific free tool that fits their page: the [WAM calculator](https://www.wheretoapply.xyz/wam-calculator), the visa points calculator, or the deadline table for their own institution. Pitching "link to my whole site" gets ignored; pitching "here's a free calculator your page is missing" gets a reply. |
+| **State study-promotion bodies** (semi-government, often literally on a `.gov.au` or state-authority domain) | Study NSW, Study Melbourne, StudyAdelaide, Study Perth, Study Queensland, Study Tasmania | These run blogs/resource hubs aimed at prospective international students and already link third-party tools and guides. Same offer as above, state-specific angle (e.g. Adelaide selectivity + cost data for StudyAdelaide). |
+
+Drafted email: D6 below. **Roman identifies which university/state body to
+approach first** (existing relationships or the university's own build-out
+just finished are the natural starting point — Newcastle, Deakin, QUT,
+Tasmania are recently done, see [[university-buildout-status]]) — same
+co-drive split as Tier A/B: Claude drafts, Roman sends under his own name.
+
 ---
 
 ## Drafted emails
@@ -301,6 +322,29 @@ on purpose: a long pitch reads as marketing.
 > Roman Lama
 > https://www.wheretoapply.xyz
 
+### D6 — university international office / state study body, tool offer *(Tier E)*
+
+> **Subject:** Free [tool name] for [university/body]'s international student resources page
+>
+> Hi [name],
+>
+> Your [page name] page links out to a few planning tools for prospective
+> international students. I maintain one you may not have seen:
+>
+> [one line naming the specific fit — e.g. "A WAM calculator (the GPA-equivalent
+> Australian unis use for entry), free, no signup: https://www.wheretoapply.xyz/wam-calculator"
+> or "Current application deadlines and tuition for [university], checked
+> against your own admissions page: https://www.wheretoapply.xyz/universities/[slug]"]
+>
+> I'm independent — no ads on that page, no agent commission, not affiliated
+> with any university. Every figure carries a source and a last-checked date.
+>
+> If it's useful to students on that page, a link would help. If not, no
+> problem — happy to keep it updated regardless.
+>
+> Roman Lama
+> https://www.wheretoapply.xyz
+
 ---
 
 ## Rules for this track
@@ -335,6 +379,7 @@ on purpose: a long pitch reads as marketing.
 | Qwoted — first inventory sweep | ⚠️ 2026-09-03: searched the live board. **No fit worth a credit.** Every visa request is US H-1B / J-1, UK settled status, or visa-on-arrival; the single "study abroad" request (Credible) is about US student loans. Pitching an Australia-inbound expert into those wastes credits and gets rejected. 7 credits still unspent — correct outcome. Re-check weekly; the board turns over fast. | 2026-09-03 | none |
 | Tier 2 re-check | ⚠️ 2026-09-03: **MicroLaunch now paid** (redirects to /premium), **Startup Stash submit page 404s**, **Peerlist 403s bots**. Uneed and Fazier are live but need an account to finish. Also a fit problem: these are SaaS/tool launch boards and this is an education reference site, so relevant traffic is ~zero. Deprioritised below Track 3. | 2026-09-03 | none |
 | Track 3 — topical outreach | 🆕 2026-09-03: built. 8 vetted targets across Nepali newsrooms, tech media and education portals, plus 5 drafted emails. **Roman to send.** Start with Nepali Times (`editors@nepalitimes.com`, Editor Sonia Awale) using draft D1. | 2026-09-03 | pending |
+| Tier E — university/.gov authority links | 🆕 2026-09-13: built (draft D6). No specific university/state body targets identified yet — **Roman to pick first target** (a recently-completed build-out university, e.g. Newcastle/Deakin/QUT/Tasmania, is the natural start) and confirm their resources page already links third-party tools before Claude drafts the specific pitch. | 2026-09-13 | pending |
 
 Check earned links later in **GSC → Links → External links**, and referral
 traffic in **GA4 → Reports → Acquisition → Traffic acquisition**.
