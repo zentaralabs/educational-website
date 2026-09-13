@@ -797,6 +797,65 @@ const SCHOLARSHIP_CORRECTIONS_2026_09_13 = {
   },
 };
 
+// 2026-09-13: field-level corrections surfaced by the depth-research pass
+// but not auto-applied at the time (amounts/deadlines/eligibility, not just
+// missing prose) — resolved after live-browser/primary-source verification
+// of each one specifically. Two (Wollongong, CQU) turned out to be the same
+// "row points at a scholarship that no longer matches reality" problem as
+// the RMIT/UQ/La Trobe/Curtin fixes above, just less obviously broken since
+// their `external_url` still loads.
+const SCHOLARSHIP_FIELD_FIXES_2026_09_13 = {
+  "murdoch-university-international-scholarships": {
+    deadline_date: "2026-09-30",
+    eligibility:
+      "New international students from eligible countries commencing one of ten named degrees, including Bachelor of Business, Bachelor of Engineering Honours, Bachelor of Psychology, Bachelor of Data Analytics, and Bachelor of Agricultural Science, plus several Master's programs, at Murdoch University's Perth campuses in 2026. Assessed automatically at admission with no separate application.",
+  },
+  "uwa-global-excellence-scholarship": {
+    amount: "10% to 20% tuition, based on ATAR or WAM band",
+    eligibility:
+      "Commencing international students in most coursework degrees. Undergraduates need an ATAR of 85 for 10% or 90 for 20%; postgraduates need a WAM of 65 for 10% or 75 for 20%. Assessed automatically once final transcripts are submitted, cannot be held with any other UWA tuition reduction.",
+  },
+  // Both the eligibility text already on this row and Adelaide's own page
+  // say this scholarship requires a separate application form;
+  // separate_application was wrongly set to false — a genuine existing
+  // bug, not a staleness question.
+  "adelaide-academic-excellence-scholarship": {
+    separate_application: true,
+  },
+  "uts-international-undergraduate-academic-excellence-scholarship": {
+    amount: "30% tuition for the course duration",
+    eligibility:
+      "Commencing international undergraduate students with a strong academic record entering an eligible UTS bachelor degree, assessed automatically with no separate application. A separate, higher 50% scholarship is reserved specifically for IB or GCE A Level applicants; a parallel postgraduate version also exists.",
+  },
+  "wollongong-vice-chancellors-international-scholarship": {
+    name: "University of Wollongong University Excellence Scholarship",
+    amount: "30% tuition for the course duration",
+    eligibility:
+      "Commencing international students in eligible undergraduate degrees with a Weighted Average Mark of 75 or equivalent, assessed automatically. Excludes Medicine and Surgery, Nursing, Nutrition and Exercise Science, Social Work, and Psychology degrees.",
+    external_url: "https://www.uow.edu.au/study/scholarships/international/",
+    source_url: "https://www.uow.edu.au/study/scholarships/international/",
+    description:
+      "UOW's main international award reduces tuition by 30% for the full degree, applied automatically to eligible applicants with a Weighted Average Mark of 75 or equivalent. It excludes Medicine and Surgery, Nursing, the Nutrition and Exercise Science streams, Social Work, and Psychology degrees.\n\nWollongong is an hour south of Sydney on the coast, with much lower living costs and strong engineering and computing programs linked to local industry.\n\nSeparately, UOW's Vice-Chancellor's Leadership Scholarship covers 100 percent of tuition for the full undergraduate degree, with a 50 percent version specifically for Indian and Pakistani applicants, for students who want to check whether they qualify for the more selective award instead.",
+  },
+  "ecu-international-excellence-scholarship": {
+    eligibility:
+      "Citizens of India or Pakistan (the 2026 round's eligible countries) who receive an offer to start a bachelor or master by coursework degree at Edith Cowan University in semester one or two of 2026, studying onshore at ECU's Joondalup, Mount Lawley, South West, or City campuses, and can show strong academic results. Assessed automatically by the admissions office, with no essay or interview. Places are limited.",
+  },
+  "research-training-program-rtp-scholarship": {
+    amount: "Government-set stipend of AUD 34,315 to 53,608 a year (2026), rate set by each university, plus a tuition offset",
+    description:
+      "The RTP is how the Australian Government funds most higher-degree research students. Universities receive a block grant and award it as some combination of three things: a full tuition-fee offset, a living stipend, and allowances for relocation, thesis costs, or health cover.\n\nThe government sets a base full-time stipend rate of about AUD 34,315 a year for 2026, up to a maximum of AUD 53,608, and each university sets its own rate within that range rather than paying one national figure, for example QUT pays 37,010 and ANU pays 39,069. International and domestic students compete in the same pool. The stipend runs for up to three years for a PhD, the fee offset up to four. You apply through your chosen university's graduate research school, not the government, usually alongside or just after your admission application.\n\nPlaces are allocated by each university's own selection panels, which rank applicants on prior academic results and research potential rather than through one national competition, so exact thresholds vary by faculty and institution. The government sets how many funded international places are released each year, and that number rose to 4,200 in 2026 from 3,950 in 2025, alongside a separate domestic allocation. Because funding arrives as a block grant, universities also differ in panel composition, top-up amounts and whether an interview or written proposal review is used, so applicants should confirm the process with their specific graduate research school.",
+  },
+  "cquniversity-international-student-scholarship": {
+    name: "CQUniversity International Merit Scholarship",
+    amount: "15% to 25% tuition reduction, available until Term 3 2026",
+    eligibility:
+      "New international undergraduate or postgraduate coursework students commencing an eligible course at any CQUniversity campus, assessed automatically on prior academic results or English proficiency. Available only until Term 3 2026.",
+    description:
+      "CQUniversity's tiered International Merit Scholarship cuts tuition by 15, 20, or 25 percent depending on your prior academic record, assessed automatically with no separate form.\n\nCQUniversity is one of Australia's largest regional universities, with campuses across Queensland and in several other states, most of them classified regional for skilled migration.\n\nCQUniversity confirms this scholarship, along with its similarly structured Southeast Asia Excellence Scholarship, will no longer be offered after Term 3 2026. The university says recipients will instead benefit from reduced tuition fees in 2027, but has not yet published what that replacement looks like, so confirm the current offer on CQUniversity's own scholarship page before counting on this exact structure.",
+  },
+};
+
 const SCHOLARSHIP_DEPTH_ADELAIDE_2026_09_13 = {
   "adelaide-merit-scholarship": {
     description: "A 15% tuition reduction applied automatically for the length of an eligible degree, for international students with solid academic records. It is the most widely awarded of Adelaide's automatic entry scholarships.\n\nAdelaide counts as a regional area for skilled migration, so this fee saving pairs with extra points toward the 491 and 190 visas, and living costs in Adelaide are well below Sydney or Melbourne. At 15 percent, it is the broadest of Adelaide University's automatic entry scholarships, sitting below the 25 percent Emerging Leaders Award and the 50 percent Academic Excellence Scholarship.",
@@ -946,6 +1005,23 @@ try {
       [patch.description, DEPTH_VERIFIED_ON, slug],
     );
     console.log("depth-adelaide", slug);
+  }
+
+  // Runs last on purpose: two of these (Wollongong, CQU) replace a
+  // description the earlier SCHOLARSHIP_DEPTH_2026_09_13 pass already
+  // wrote to, and this version needs to win.
+  const FIELD_FIXES_VERIFIED_ON = "2026-09-13";
+  for (const [slug, patch] of Object.entries(SCHOLARSHIP_FIELD_FIXES_2026_09_13)) {
+    const toCheck = [patch.description, patch.eligibility, patch.name].filter(Boolean).join(" ");
+    if (/—/.test(toCheck)) throw new Error(`em dash in ${slug}`);
+    const cols = Object.keys(patch);
+    const setClause = cols.map((c, i) => `${c} = $${i + 1}`).join(", ");
+    await client.query(
+      `update scholarships set ${setClause}, last_verified_at = $${cols.length + 1}, updated_at = now()
+       where slug = $${cols.length + 2}`,
+      [...cols.map((c) => patch[c]), FIELD_FIXES_VERIFIED_ON, slug],
+    );
+    console.log("field-fix", slug, Object.keys(patch));
   }
 
   // Destination Australia stopped accepting new applicants from 1 July 2024
