@@ -247,24 +247,29 @@ export default async function OriginCountryPage({
             <p>{c.scholarships.intro}</p>
           </div>
           <ul className="mt-4 flex flex-col gap-2">
-            {c.scholarships.items.map((s) => (
-              <li key={s.name}>
-                <a
-                  href={s.href}
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  className="flex items-center justify-between gap-3 rounded-xl border border-line bg-mist px-4 py-3 font-body text-sm font-medium text-ink transition-colors duration-150 hover:border-status-open/40 hover:text-status-open"
-                >
-                  {s.name}
-                  <span aria-hidden="true" className="text-slate">
-                    &rarr;
-                  </span>
-                </a>
-              </li>
-            ))}
+            {c.scholarships.items.map((s) => {
+              const internal = s.href.startsWith("/");
+              const linkProps = internal
+                ? { href: s.href }
+                : { href: s.href, target: "_blank", rel: "noopener noreferrer nofollow" };
+              const LinkComponent = internal ? Link : "a";
+              return (
+                <li key={s.name}>
+                  <LinkComponent
+                    {...linkProps}
+                    className="flex items-center justify-between gap-3 rounded-xl border border-line bg-mist px-4 py-3 font-body text-sm font-medium text-ink transition-colors duration-150 hover:border-status-open/40 hover:text-status-open"
+                  >
+                    {s.name}
+                    <span aria-hidden="true" className="text-slate">
+                      &rarr;
+                    </span>
+                  </LinkComponent>
+                </li>
+              );
+            })}
           </ul>
           <p className="mt-3 font-body text-xs text-slate">
-            External, official pages. See also the{" "}
+            Official pages, on this site or the funding body&rsquo;s own. See also the{" "}
             <Link
               href="/scholarships"
               className="font-medium text-status-open underline underline-offset-2"
