@@ -147,7 +147,7 @@ export default async function Home() {
 
           {/* HERO */}
           <section className="flex min-h-[40vh] flex-col justify-center sm:min-h-[48vh]">
-            <div className="mx-auto min-w-0 max-w-3xl text-center">
+            <div className="mx-auto w-full min-w-0 max-w-3xl text-center">
               <h1
                 className="animate-fade-up font-display text-[2rem] leading-[1.1] font-semibold text-ink text-balance sm:text-4xl lg:text-[2.7rem]"
                 style={{ animationDelay: "0ms" }}
