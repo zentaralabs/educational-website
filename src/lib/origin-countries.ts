@@ -98,6 +98,15 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "How your percentage converts to an Australian grade depends on which university or board awarded your degree. Universities publish India-specific entry tables. A 60 percent aggregate is a common minimum, with 65 to 75 percent for competitive courses.",
       "For English, you can use IELTS, PTE, or TOEFL, and many universities also accept a medium-of-instruction letter confirming your degree was taught and assessed in English. The university sets its own score. The student visa has its own English rule, and whether an English-taught degree is enough for the visa depends on your circumstances, so confirm both separately.",
     ],
+    scholarships: {
+      intro:
+        "India is one of the eight eligible countries under Australia Awards Scholarships, funding full-time postgraduate study in Australia. On top of that, a couple of Australian universities run India-specific scholarships worth knowing about: Sydney's dedicated India program, and a Deakin scholarship named specifically for Indian applicants. This runs alongside the wider general international scholarships every Australian university offers (see the scholarships hub).",
+      items: [
+        { name: "Australia Awards Scholarships (India)", href: "/scholarships/australia-awards-scholarships" },
+        { name: "Sydney Scholars India Scholarship Program", href: "/scholarships/sydney-scholars-india-scholarship-program" },
+        { name: "Deakin Vice-Chancellor's Meritorious Scholarship for India", href: "/scholarships/deakin-vice-chancellors-meritorious-scholarship-india" },
+      ],
+    },
     popularFields: [
       "Information technology and computer science",
       "Engineering",
@@ -145,8 +154,9 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "https://india.highcommission.gov.au/ndli/scam-safe.html",
       "https://www.abc.net.au/news/2024-09-17/indian-students-duped-by-australian-visa-fraud/104309404",
       "https://monitor.icef.com/2026/04/australia-student-visa-refusal-rates-reach-record-high-amid-weakening-demand-from-china/",
+      "https://australiaawardssouthasiamongolia.org/scholarships/",
     ],
-    lastVerified: "2026-09-05",
+    lastVerified: "2026-09-13",
   },
 
   nepal: {
@@ -176,6 +186,13 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "You may need an equivalence or verification of your qualifications. Universities publish Nepal-specific entry tables; confirm the aggregate percentage or GPA your course wants.",
       "English is usually shown with IELTS or PTE. Some universities accept English-medium study, but the student visa has its own English rule, so confirm what the university and the visa each require.",
     ],
+    scholarships: {
+      intro:
+        "Nepal is one of the eight eligible countries under Australia Awards Scholarships, funding full-time postgraduate study in Australia, with 19 scholars from Nepal starting in the 2026 intake. This runs alongside the general international scholarships offered directly by Australian universities (see the scholarships hub).",
+      items: [
+        { name: "Australia Awards Scholarships (Nepal)", href: "/scholarships/australia-awards-scholarships" },
+      ],
+    },
     popularFields: [
       "Nursing and health",
       "Information technology",
@@ -219,8 +236,9 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "https://nepal.embassy.gov.au/kmdu/Stay_safe_from_visa_scams.html",
       "https://kathmandupost.com/national/2026/05/16/arrests-device-seizures-in-crackdown-on-consultancies-over-shady-student-migration-process",
       "https://english.onlinekhabar.com/over-4100-education-consultancies-operating-without-registration-across-nepal.html",
+      "https://australiaawardssouthasiamongolia.org/scholarships/",
     ],
-    lastVerified: "2026-09-05",
+    lastVerified: "2026-09-13",
   },
 
   pakistan: {
@@ -250,6 +268,13 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "Universities publish Pakistan-specific entry tables. Confirm the percentage or CGPA your course requires and whether it counts your degree as three or four years of study.",
       "Many Pakistani applicants study in English medium. Universities may accept that for admission, but the student visa has a separate English rule, so confirm both. IELTS and PTE are the usual tests.",
     ],
+    scholarships: {
+      intro:
+        "Pakistan is one of the eight eligible countries under Australia Awards Scholarships, funding full-time postgraduate study in Australia. This runs alongside the general international scholarships offered directly by Australian universities (see the scholarships hub).",
+      items: [
+        { name: "Australia Awards Scholarships (Pakistan)", href: "/scholarships/australia-awards-scholarships" },
+      ],
+    },
     popularFields: [
       "Information technology and computer science",
       "Engineering",
@@ -293,8 +318,9 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "https://propakistani.pk/2026/08/28/hec-warns-students-against-fake-attestation-agents/",
       "https://propakistani.pk/2026/07/25/fia-arrests-fake-hec-scholarship-agent-for-scamming-students/",
       "https://pakistan.embassy.gov.au/ISLM/Visa_Scams.html",
+      "https://australiaawardssouthasiamongolia.org/scholarships/",
     ],
-    lastVerified: "2026-09-05",
+    lastVerified: "2026-09-13",
   },
 
   china: {
@@ -326,6 +352,13 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "A four-year Chinese bachelor's degree maps directly to Australian master's entry. Universities publish China-specific entry tables keyed to the tier of your university (985, 211, or other), so the average you need can differ by institution.",
       "English is shown with IELTS, PTE, or TOEFL. Medium-of-instruction letters are rarely accepted from Chinese institutions, so plan to sit a test. The university sets its score and the visa has its own rule.",
     ],
+    scholarships: {
+      intro:
+        "China is not an Australia Awards partner country, so Chinese students funding study in Australia through a Chinese government scheme mostly go through the China Scholarship Council (CSC), an agency under the Ministry of Education. CSC's scholarships are largely PhD and research-level, either allocated to top Chinese universities that nominate their own candidates or run as a joint program directly between CSC and an Australian university. Several Group of Eight universities, including Melbourne, Sydney, and ANU, run their own named joint CSC scholarship. This runs alongside the general international scholarships Australian universities offer directly (see the scholarships hub).",
+      items: [
+        { name: "China Scholarship Council (CSC) joint scholarship programs", href: "https://www.csc.edu.cn/" },
+      ],
+    },
     popularFields: [
       "Business, accounting, and finance",
       "Information technology and computer science",
@@ -376,8 +409,9 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "https://www.accc.gov.au/media-release/national-anti-scam-centre-warns-of-spike-in-scams-threatening-chinese-students",
       "https://www.scamwatch.gov.au/types-of-scams/threat-scams/chinese-authority-scams",
       "https://www.teqsa.gov.au/guides-resources/resources/sector-updates-and-alerts/sector-alert-commercial-academic-cheating-service-activities-campus",
+      "https://www.csc.edu.cn/",
     ],
-    lastVerified: "2026-09-05",
+    lastVerified: "2026-09-13",
   },
 
   vietnam: {
