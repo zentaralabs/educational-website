@@ -7,6 +7,7 @@ import { faqJsonLd, type FaqItem } from "@/lib/faq";
 import { listPublishedInvitationRounds } from "@/lib/queries/public-visas";
 import { JsonLd } from "@/lib/json-ld";
 import { pageMetadata } from "@/lib/page-metadata";
+import { SITE_URL } from "@/lib/site-config";
 
 export const revalidate = 3600;
 
@@ -111,8 +112,17 @@ export default async function InvitationRoundsPage() {
     },
   ].filter((x): x is FaqItem => x !== null);
 
+  const webPageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: "SkillSelect invitation rounds",
+    url: `${SITE_URL}/visas/invitation-rounds`,
+    dateModified: latestVerified ?? undefined,
+  };
+
   return (
     <main className="mx-auto w-full max-w-3xl px-6 pt-8 pb-16">
+      <JsonLd data={webPageJsonLd} />
       <JsonLd data={breadcrumbJsonLd(breadcrumbs)} />
       <JsonLd data={faqJsonLd(faq)} />
       <Breadcrumbs items={breadcrumbs} />
@@ -289,6 +299,15 @@ export default async function InvitationRoundsPage() {
       <div className="mt-10 flex flex-wrap items-center gap-2">
         <LastVerified date={latestVerified} sources={sources} />
       </div>
+
+      <p className="mt-6 font-body text-xs text-slate">
+        This is general information, not immigration advice, and Where To
+        Apply is not a registered migration agent. Points cut-offs and round
+        timing are historical and estimated data, not a guarantee for any
+        future round — always confirm current SkillSelect rules on the
+        Department of Home Affairs website or with a registered migration
+        agent (check their MARN on the OMARA website) before you apply.
+      </p>
     </main>
   );
 }

@@ -16,7 +16,7 @@ import {
   type VisaStream,
 } from "@/components/site/visa-blocks";
 import { faqJsonLd, visaFaq } from "@/lib/faq";
-import { RELATED_LIMIT, visaRelated } from "@/lib/related-content";
+import { RELATED_LIMIT, guidesLinkingToVisa, visaRelated } from "@/lib/related-content";
 import { SITE_URL, SITE_YEAR } from "@/lib/site-config";
 import { extractFaqItems } from "@/lib/extract-faq";
 import { authorInitials } from "@/lib/format";
@@ -314,6 +314,12 @@ export default async function VisaPage({
         className="mt-12 border-t border-ink/10 pt-6"
         heading="Related guides and visas"
         items={visaRelated(slug).slice(0, RELATED_LIMIT)}
+      />
+
+      <RelatedLinks
+        className="mt-8"
+        heading="More guides that cover this visa"
+        items={guidesLinkingToVisa(slug)}
       />
 
       <div className="mt-10 flex items-center gap-2 rounded-xl bg-status-open/5 px-4 py-3">

@@ -135,6 +135,10 @@ const COUNTRY_HUB: RelatedLink = {
   href: "/international",
   label: "Applying from your country",
 };
+const UPDATES: RelatedLink = {
+  href: "/updates",
+  label: "All policy updates",
+};
 const DEADLINES: RelatedLink = {
   href: "/deadlines",
   label: "Application deadline calendar",
@@ -632,6 +636,7 @@ const BLOG_RELATED: Record<string, RelatedLink[]> = {
     g("australia-student-visa-cost"),
     g("proving-funds-for-an-australian-student-visa"),
     g("real-cost-of-studying-in-australia"),
+    UPDATES,
   ],
   "adelaide-university-merger-what-it-means": [
     { href: "/universities/adelaide-university", label: "Adelaide University profile" },
@@ -650,6 +655,7 @@ const BLOG_RELATED: Record<string, RelatedLink[]> = {
     g("genuine-student-requirement-how-to-write-your-statement"),
     v("student-500"),
     FEB_INTAKE,
+    UPDATES,
   ],
   "student-visa-refusal-rate-20-year-high-2026": [
     g("what-to-do-if-your-student-visa-is-refused"),
@@ -705,4 +711,32 @@ export function visaRelated(slug: string): RelatedLink[] {
 
 export function blogRelated(slug: string): RelatedLink[] {
   return BLOG_RELATED[slug] ?? [];
+}
+
+/**
+ * Every guide that links up to `/visas/{visaSlug}` (i.e. every entry in
+ * GUIDE_RELATED containing `v(visaSlug)`), reversed into links back down to
+ * those guides. A page like student-500 gets linked from ~14-20 guides but
+ * can only reciprocate 6 total related links (visas + tools share that cap
+ * with guides) — this renders the rest in a second, longer block instead of
+ * leaving the relationship one-directional. Guides already present in the
+ * curated `visaRelated(visaSlug)` list are excluded so the two blocks don't
+ * repeat the same link twice on one page.
+ */
+export function guidesLinkingToVisa(visaSlug: string): RelatedLink[] {
+  const alreadyShown = new Set(visaRelated(visaSlug).map((l) => l.href));
+  const guideSlugs = Object.entries(GUIDE_RELATED)
+    .filter(([, links]) => links.some((l) => l.href === `/visas/${visaSlug}`))
+    .map(([guideSlug]) => guideSlug)
+    .filter((guideSlug) => !alreadyShown.has(`/guides/${guideSlug}`));
+
+  const INBOUND_SOFT_CAP = 16;
+  if (guideSlugs.length > INBOUND_SOFT_CAP) {
+    console.warn(
+      `[related-content] ${guideSlugs.length} guides link to /visas/${visaSlug}, ` +
+        `above the ${INBOUND_SOFT_CAP} soft cap for the "More guides" block — consider ` +
+        "splitting this visa's inbound guides by topic instead of one long list.",
+    );
+  }
+  return guideSlugs.map(g);
 }

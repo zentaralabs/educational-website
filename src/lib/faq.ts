@@ -3,6 +3,21 @@ import { formatCurrency } from "@/lib/format";
 
 export type FaqItem = { q: string; a: string };
 
+/**
+ * Some sourced fields (visa base_application_charge, processing_time) are
+ * stored as full, independent sentences of their own — e.g. "From AUD 2,500
+ * for the main applicant..., the Visa Pricing Estimator shows the exact
+ * concession amount." Splicing one of those into `is ${value}.` produces two
+ * bugs at once: a capitalized fragment sitting mid-sentence after "is", and a
+ * doubled period when the value already ends with one. Introducing the value
+ * with a colon (which can grammatically take a full capitalized sentence)
+ * and normalizing its terminal punctuation with this helper fixes both.
+ */
+export function terminated(s: string): string {
+  const trimmed = s.trim();
+  return /[.!?]$/.test(trimmed) ? trimmed : `${trimmed}.`;
+}
+
 /** schema.org FAQPage block for a set of FAQ items. */
 export function faqJsonLd(items: FaqItem[]) {
   return {
@@ -139,13 +154,13 @@ export function visaFaq(v: VisaFaqInput): FaqItem[] {
   if (v.base_application_charge) {
     items.push({
       q: `How much does the subclass ${v.code} visa cost?`,
-      a: `The base application charge for the ${label} is ${v.base_application_charge}. Family members you include each pay an additional charge, and there are separate costs for health checks, police certificates, and skills assessments.`,
+      a: `Base application charge for the ${label}: ${terminated(v.base_application_charge)} Family members you include each pay an additional charge, and there are separate costs for health checks, police certificates, and skills assessments.`,
     });
   }
   if (v.processing_time) {
     items.push({
       q: `How long does the subclass ${v.code} visa take to process?`,
-      a: `The ${label} is generally processed in ${v.processing_time}. Times vary with your occupation, how complete your application is, and demand at the time.`,
+      a: `Typical processing time for the ${label}: ${terminated(v.processing_time)} Times vary with your occupation, how complete your application is, and demand at the time.`,
     });
   }
   items.push({
