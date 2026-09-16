@@ -66,30 +66,107 @@ export async function generateStaticParams() {
 }
 
 type CurriculumItem = { code: string | null; text: string; electiveCount: string | null };
-type CurriculumTerm = { label: string | null; units: string | null; items: CurriculumItem[] };
+type CurriculumTerm = {
+  label: string | null;
+  units: string | null;
+  items: CurriculumItem[];
+  /** Set instead of `items` when a line has no reliable per-unit delimiter
+   *  at all (raw scraped prose) — rendered as a paragraph, not a bullet. */
+  freeformText: string | null;
+};
 
-/** Parses one "Label — CODE1 Name; CODE2 Name; 2 electives (24 units)." curriculum line. */
+/** Splits `str` on `delimiter`, ignoring delimiters that fall inside "(...)" —
+ *  so "Name (A, B), Other" splits into ["Name (A, B)", "Other"], not three. */
+function splitOutsideParens(str: string, delimiter: string): string[] {
+  const parts: string[] = [];
+  let depth = 0;
+  let current = "";
+  for (const ch of str) {
+    if (ch === "(") depth++;
+    else if (ch === ")") depth = Math.max(0, depth - 1);
+    if (ch === delimiter && depth === 0) {
+      parts.push(current);
+      current = "";
+    } else {
+      current += ch;
+    }
+  }
+  parts.push(current);
+  return parts;
+}
+
+/**
+ * Parses one curriculum line. The primary shape is
+ * "Label — CODE1 Name; CODE2 Name; 2 electives (24 units)." from the
+ * build-out import scripts, but several per-university scrapers (e.g.
+ * Canberra's accordion scraper) instead write
+ * "Label: Name (CODE), Name (CODE), ..." — comma-separated with a trailing
+ * parenthesized code per unit, and no semicolons at all. Handle both, and
+ * fall back to a plain paragraph for scrapers that wrote raw unstructured
+ * text with neither delimiter (e.g. Curtin).
+ */
 function parseCurriculumLine(line: string): CurriculumTerm {
   const separatorIndex = line.indexOf(" — ");
-  const label = separatorIndex === -1 ? null : line.slice(0, separatorIndex);
+  let label = separatorIndex === -1 ? null : line.slice(0, separatorIndex).trim();
   let body = separatorIndex === -1 ? line : line.slice(separatorIndex + 3);
 
   const unitsMatch = body.match(/\((\d+)\s*units?\)\.?\s*$/i);
   const units = unitsMatch ? `${unitsMatch[1]} units` : null;
   if (unitsMatch) body = body.slice(0, unitsMatch.index).trim();
 
-  const items = body
-    .split(";")
+  const hasSemicolons = body.includes(";");
+
+  // "Label: Name (CODE), Name (CODE), ..." — only kick in when there's no
+  // " — " label and no ";" items already, so well-formed lines are untouched.
+  if (label === null && !hasSemicolons) {
+    const colonIndex = body.indexOf(":");
+    if (colonIndex !== -1 && colonIndex < 60) {
+      const candidateLabel = body.slice(0, colonIndex).trim();
+      const candidateBody = body.slice(colonIndex + 1).trim();
+      if (candidateLabel && /\([^()]*\d[^()]*\)\s*,/.test(candidateBody)) {
+        label = candidateLabel;
+        body = candidateBody;
+      }
+    }
+  }
+
+  const rawItems = hasSemicolons
+    ? splitOutsideParens(body, ";")
+    : splitOutsideParens(body, ",");
+
+  const items = rawItems
     .map((s) => s.trim().replace(/\.$/, ""))
     .filter(Boolean)
     .map((segment): CurriculumItem => {
-      const codeMatch = segment.match(/^([A-Z]{2,6}\d{3,4})\s+(.+)$/);
+      // A stray inline "Section Label: " prefix (no digits in it) sometimes
+      // survives the split when a scraper joined multiple labeled groups
+      // into one comma list without separating them — strip it so the code
+      // match below still fires on the actual unit code that follows.
+      const inlineLabelMatch = segment.match(/^([A-Za-z][A-Za-z &]{2,30}):\s*/);
+      if (inlineLabelMatch && !/\d/.test(inlineLabelMatch[1])) {
+        segment = segment.slice(inlineLabelMatch[0].length);
+      }
+      const codeMatch = segment.match(/^([A-Z]{2,6}\d{1,4}(?:-\d{1,4})?)\s+(.+)$/);
       if (codeMatch) return { code: codeMatch[1], text: codeMatch[2], electiveCount: null };
       const electiveMatch = segment.match(/^(\d+)\s+electives?$/i);
       if (electiveMatch) return { code: null, text: "Elective", electiveCount: electiveMatch[1] };
+      // "Name (CODE)" — trailing parenthetical only counts as a code badge
+      // when it contains a digit, so "(elective)"-style asides stay as text.
+      const trailingCodeMatch = segment.match(/^(.+?)\s*\(([^()]{2,12})\)$/);
+      if (trailingCodeMatch && /\d/.test(trailingCodeMatch[2])) {
+        return { code: trailingCodeMatch[2], text: trailingCodeMatch[1].trim(), electiveCount: null };
+      }
       return { code: null, text: segment, electiveCount: null };
     });
-  return { label, units, items };
+
+  // No delimiter structure was found at all: one long blob with no code and
+  // no comma/semicolon split. Render it as prose instead of a single
+  // misleadingly bulleted item.
+  if (items.length === 1 && items[0].code === null && items[0].text.length > 220) {
+    return { label, units, items: [], freeformText: items[0].text };
+  }
+
+  return { label, units, items, freeformText: null };
 }
 
 async function loadProgram(slug: string, programSlug: string) {
@@ -431,28 +508,40 @@ export default async function ProgramDetailPage({
                     )}
                   </div>
                 )}
-                <ul className={term.label || term.units ? "mt-2 flex flex-col gap-1.5" : "flex flex-col gap-1.5"}>
-                  {term.items.map((item, j) => (
-                    <li key={j} className="flex items-center gap-2 font-body text-sm text-ink">
-                      {item.code ? (
-                        <span className="flex-shrink-0 rounded-full bg-ink/[0.05] px-2 py-0.5 font-utility text-[10px] text-slate">
-                          {item.code}
-                        </span>
-                      ) : (
-                        <span
-                          aria-hidden="true"
-                          className="inline-block h-1 w-1 flex-shrink-0 rounded-full bg-status-open/50"
-                        />
-                      )}
-                      <span>{item.text}</span>
-                      {item.electiveCount && (
-                        <span className="ml-auto flex-shrink-0 rounded-full bg-status-open/10 px-2 py-0.5 font-utility text-[10px] text-status-open">
-                          {item.electiveCount} elective{item.electiveCount === "1" ? "" : "s"}
-                        </span>
-                      )}
-                    </li>
-                  ))}
-                </ul>
+                {term.freeformText ? (
+                  <p
+                    className={
+                      term.label || term.units
+                        ? "mt-2 font-body text-sm leading-relaxed text-ink"
+                        : "font-body text-sm leading-relaxed text-ink"
+                    }
+                  >
+                    {term.freeformText}
+                  </p>
+                ) : (
+                  <ul className={term.label || term.units ? "mt-2 flex flex-col gap-1.5" : "flex flex-col gap-1.5"}>
+                    {term.items.map((item, j) => (
+                      <li key={j} className="flex items-center gap-2 font-body text-sm text-ink">
+                        {item.code ? (
+                          <span className="flex-shrink-0 rounded-full bg-ink/[0.05] px-2 py-0.5 font-utility text-[10px] text-slate">
+                            {item.code}
+                          </span>
+                        ) : (
+                          <span
+                            aria-hidden="true"
+                            className="inline-block h-1 w-1 flex-shrink-0 rounded-full bg-status-open/50"
+                          />
+                        )}
+                        <span>{item.text}</span>
+                        {item.electiveCount && (
+                          <span className="ml-auto flex-shrink-0 rounded-full bg-status-open/10 px-2 py-0.5 font-utility text-[10px] text-status-open">
+                            {item.electiveCount} elective{item.electiveCount === "1" ? "" : "s"}
+                          </span>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
             ))}
           </div>
