@@ -21,6 +21,7 @@ const NAV: NavItem[] = [
       { label: "Cost of living", href: "/cost-of-living", hint: "Monthly budgets by city" },
       { label: "Cost calculator", href: "/cost-calculator", hint: "Full cost of your degree" },
       { label: "WAM calculator", href: "/wam-calculator", hint: "Weighted Average Mark from your subject marks" },
+      { label: "IELTS to PTE converter", href: "/ielts-pte-calculator", hint: "Convert your English test score" },
       { label: "By country", href: "/international", hint: "Applying from India, Nepal, China and more" },
     ],
   },

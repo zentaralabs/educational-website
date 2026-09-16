@@ -36,6 +36,13 @@ export const STATIC_SEARCH_PAGES: StaticSearchPage[] = [
     keywords: "weighted average mark gpa grade",
   },
   {
+    slug: "ielts-pte-calculator",
+    name: "IELTS to PTE converter",
+    description: "Convert your English test score using Pearson's official table",
+    href: "/ielts-pte-calculator",
+    keywords: "ielts pte toefl english test score convert equivalent cefr",
+  },
+  {
     slug: "quiz",
     name: "Course match quiz",
     description: "2-minute quiz to find a course match, not a lead-gen form",
