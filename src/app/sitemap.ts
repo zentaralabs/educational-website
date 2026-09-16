@@ -36,7 +36,7 @@ import { listPublishedOccupationSlugsForSitemap } from "@/lib/queries/public-occ
  * cities.ts, subjects.ts, origin-countries.ts, comparisons.ts, this file)
  * meaningfully change. DB-backed routes use their row's real updated_at.
  */
-const CONFIG_LAST_MODIFIED = new Date("2026-09-03T00:00:00Z");
+const CONFIG_LAST_MODIFIED = new Date("2026-09-16T00:00:00Z");
 
 // 6 hours. Longer than a page's 1h so cold regenerations (the only time a
 // slow or failing origin can reach a crawler) are rarer; short enough that
@@ -75,6 +75,8 @@ const STATIC_ROUTES: Array<{ path: string; priority: number; changeFrequency: Me
   { path: "/international", priority: 0.7, changeFrequency: "monthly" },
   { path: "/deadlines", priority: 0.9, changeFrequency: "daily" },
   { path: "/cost-calculator", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/wam-calculator", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/ielts-pte-calculator", priority: 0.8, changeFrequency: "monthly" },
   { path: "/guides", priority: 0.8, changeFrequency: "weekly" },
   { path: "/compare", priority: 0.7, changeFrequency: "weekly" },
   { path: "/compare/universities", priority: 0.6, changeFrequency: "weekly" },

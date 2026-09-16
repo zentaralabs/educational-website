@@ -10,6 +10,7 @@ const EXPLORE = [
   { label: "Cost of living", href: "/cost-of-living" },
   { label: "Cost calculator", href: "/cost-calculator" },
   { label: "WAM calculator", href: "/wam-calculator" },
+  { label: "IELTS to PTE converter", href: "/ielts-pte-calculator" },
   { label: "Scholarships", href: "/scholarships" },
   { label: "Best universities (shortlists)", href: "/best" },
   { label: "Compare universities", href: "/compare" },
