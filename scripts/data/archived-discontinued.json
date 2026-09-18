@@ -150,6 +150,12 @@
       "name": "Master of Professional Communication",
       "reason": "ECU course page redirects to page-archived (crsArchived=L44), confirmed discontinued",
       "archived_at": "2026-09-18T07:54:14.590Z"
+    },
+    {
+      "id": "5c5ffd3e-a5f5-4ec8-b7a0-cfc6524c80eb",
+      "name": "Bachelor of Business",
+      "reason": "ECU course page redirects to page-archived (crsArchived=G95), explicitly replaced by Bachelor of Commerce (W23), confirmed discontinued",
+      "archived_at": "2026-09-18T12:33:09.269Z"
     }
   ]
 }
