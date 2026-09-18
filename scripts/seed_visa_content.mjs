@@ -1716,7 +1716,7 @@ No. Your priority is locked in on the day you lodge. Later changes to the provid
     tags: ["visas", "australia", "student-visa", "skilled-migration"],
     excerpt:
       'Home Affairs Minister Tony Burke announced sweeping visa changes on 17 September 2026, including a family ban for most student visas that will hit Nepal and India hardest, a course-progression crackdown, a visitor visa "no further stay" condition, Working Holiday ballots, and equal points for construction trades.',
-    content: `Home Affairs Minister Tony Burke used a National Press Club address on 17 September 2026 to announce the biggest overhaul of Australia's temporary visa system in years. The changes are aimed at cutting net overseas migration from about 292,100 (the year to March 2026) to a budgeted 245,000 this financial year and 225,000 the year after. They will be made through regulation, not new legislation, which means several of them can take effect quickly once the paperwork is finalised.
+    content: `Home Affairs Minister Tony Burke used a National Press Club address on 17 September 2026 to announce the biggest overhaul of Australia's temporary visa system in years. The changes are aimed at cutting net overseas migration from about 292,100 (the year to March 2026) to a budgeted 245,000 this financial year and 225,000 the year after. They will be made through regulation and changes to visa conditions rather than new legislation.
 
 For students from Nepal and India, the single biggest change is this: most international students and graduates will no longer be able to bring a partner or children to Australia on their visa.
 
@@ -1724,13 +1724,13 @@ For students from Nepal and India, the single biggest change is this: most inter
 
 Under the new rule, most student (subclass 500) and Temporary Graduate (subclass 485) visa holders will no longer be able to add a partner or child as a secondary applicant. Burke confirmed exemptions for PhD candidates, citizens of Pacific and ASEAN nations, and government-sponsored students. Everyone else applying for a new student or graduate visa will need to leave family behind for the length of the course.
 
-Families who are already in Australia attached to a student visa will not be separated. "Anyone who already has their family attached to a visa and is already here, we're not going to be breaking up families onshore," Burke said. The change applies to new applications going forward, and no start date has been published yet, so it could take effect at short notice.
+Families who are already in Australia attached to a student visa will not be separated. "Anyone who already has their family attached to a visa and is already here, we're not going to be breaking up families onshore," Burke said.
 
 The numbers explain why this policy exists and who it affects. Australia granted 337,427 student visas in the last financial year, and 45,991 of them (about 1 in 7) went to secondary applicants, mostly partners and children. Home Affairs figures cited in the announcement show South Asian countries, including Nepal, India, Bangladesh, Bhutan and Sri Lanka, accounted for more than 70% of those dependant visas. This is not a policy that lands evenly. It lands on exactly the applicant pool this site's readers are in.
 
 Shilpi Jaiswal, a Nepali student currently studying in Sydney, told the ABC she had been planning to bring her parents to visit for three months. "After hearing those things, we are very scared to apply for the visa," she said.
 
-If you are applying for a student visa from Nepal or India and were planning to bring a spouse or child, the practical takeaway is to lodge before this rule commences if that is genuinely your situation, and to budget your study plan assuming you will not be able to add family later. Check the current [student visa 500](/visas/student-500) page for the latest eligibility detail, and see our [cost of studying in Australia from Nepal](/guides/cost-of-studying-in-australia-from-nepal) and [from India](/guides/cost-of-studying-in-australia-from-india) guides for what a single-applicant budget looks like without a partner's income or a second person's living costs.
+If you are applying for a student visa from Nepal or India and were planning to bring a spouse or child, budget your study plan around going alone rather than assuming you can add family later. Check the current [student visa 500](/visas/student-500) page for the latest eligibility detail, and see our [cost of studying in Australia from Nepal](/guides/cost-of-studying-in-australia-from-nepal) and [from India](/guides/cost-of-studying-in-australia-from-india) guides for what a single-applicant budget looks like without a partner's income or a second person's living costs.
 
 ## No more sideways or downward course changes
 
@@ -1759,17 +1759,13 @@ Completing the regional work no longer guarantees a second or third year; it onl
 
 ## Skilled migration: construction trades get equal points recognition
 
-On the skilled side, Burke flagged a redesign of the points test so that housing construction trade qualifications carry the same recognition as a university degree. No implementation date has been confirmed; a fuller points test rewrite is expected in 2027. Burke also confirmed Ministerial Direction 119, which sets processing priority for skilled visas, will be changed again to give faster processing to construction, healthcare, agriculture, fisheries and teaching occupations, after the earlier version of MD 119 pushed offshore skilled applications to the back of the queue and blew out processing times to over a year in some cases. Read our explainer on [how MD 119 changed skilled visa priority](/blog/ministerial-direction-119-skilled-visa-priorities) and [how the points test currently works](/guides/how-the-australian-points-test-works) for context on what this redesign is changing.
-
-## What is confirmed and what is not
-
-Everything above was announced by the minister at the National Press Club and is being pursued through regulation and changes to visa conditions, which do not need parliament's approval. That is different from being finalised. As of this article, no commencement dates have been published for the student family restriction, the course progression rule, or the points test redesign for construction trades. The Working Holiday Maker ballot caps and the visitor visa condition were also announced without confirmed start dates. We will update this article and our visa subclass pages as Home Affairs publishes commencement dates.
+On the skilled side, Burke flagged a redesign of the points test so that housing construction trade qualifications carry the same recognition as a university degree, part of a broader points test rewrite. Burke also confirmed Ministerial Direction 119, which sets processing priority for skilled visas, will be updated again to give faster processing to construction, healthcare, education, law enforcement, defence, resources, agriculture, aquaculture and fishing, after the earlier version of MD 119 pushed offshore skilled applications to the back of the queue and blew out processing times to over a year in some cases. Read our explainer on [how MD 119 changed skilled visa priority](/blog/ministerial-direction-119-skilled-visa-priorities) and [how the points test currently works](/guides/how-the-australian-points-test-works) for context on what this redesign is changing.
 
 ## Frequently asked questions
 
 ## Can I still bring my spouse on a student visa to Australia?
 
-Under the newly announced rule, most new student (subclass 500) and graduate (subclass 485) visa applicants will not be able to add a partner or child as a secondary applicant. Exceptions apply for PhD students, Pacific and ASEAN nationals, and government-sponsored students. If your family is already in Australia on your visa, they will not be separated. No commencement date has been published yet.
+Under the newly announced rule, most new student (subclass 500) and graduate (subclass 485) visa applicants will not be able to add a partner or child as a secondary applicant. Exceptions apply for PhD students, Pacific and ASEAN nationals, and government-sponsored students. If your family is already in Australia on your visa, they will not be separated.
 
 ## Will this affect students already studying in Australia with family here?
 
