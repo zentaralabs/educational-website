@@ -146,10 +146,17 @@ function parseCurriculumLine(line: string): CurriculumTerm {
       if (inlineLabelMatch && !/\d/.test(inlineLabelMatch[1])) {
         segment = segment.slice(inlineLabelMatch[0].length);
       }
-      const codeMatch = segment.match(/^([A-Z]{2,6}\d{1,4}(?:-\d{1,4})?)\s+(.+)$/);
-      if (codeMatch) return { code: codeMatch[1], text: codeMatch[2], electiveCount: null };
+      // Checked before the code pattern below since a bare "2 electives"
+      // would otherwise match a purely-numeric code too.
       const electiveMatch = segment.match(/^(\d+)\s+electives?$/i);
       if (electiveMatch) return { code: null, text: "Elective", electiveCount: electiveMatch[1] };
+      // Letter-prefixed ("ACCT11-100") or purely-numeric (UTS: "15312",
+      // Canberra-style before that data was switched to trailing-code) codes.
+      // No leading zero: a real course code never starts with 0, which also
+      // keeps this from misfiring on a thousands-separated number split by
+      // the comma fallback (e.g. "80,000 words" -> "000 words").
+      const codeMatch = segment.match(/^([A-Z]{2,6}\d{1,4}(?:-\d{1,4})?|[1-9]\d{2,5})\s+(.+)$/);
+      if (codeMatch) return { code: codeMatch[1], text: codeMatch[2], electiveCount: null };
       // "Name (CODE)" — trailing parenthetical only counts as a code badge
       // when it contains a digit, so "(elective)"-style asides stay as text.
       const trailingCodeMatch = segment.match(/^(.+?)\s*\(([^()]{2,12})\)$/);
