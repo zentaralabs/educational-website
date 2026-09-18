@@ -46,7 +46,6 @@ export async function generateMetadata({
   const { university } = data;
   const title = composeTitle(`${university.name} Deadlines ${INTAKE_YEAR}`, [
     "International Students",
-    "International",
   ]);
   const description = `When to apply to ${university.name} as an international student for the ${INTAKE_YEAR} intakes: closing dates by degree level, how the intakes work, and how early to lodge for a student visa.`;
   return pageMetadata({
