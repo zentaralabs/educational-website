@@ -656,24 +656,48 @@ const BLOG_RELATED: Record<string, RelatedLink[]> = {
     v("student-500"),
     FEB_INTAKE,
     UPDATES,
+    {
+      href: "/blog/australia-migration-overhaul-september-2026-student-family-ban",
+      label: "September 2026 migration overhaul explained",
+    },
   ],
   "student-visa-refusal-rate-20-year-high-2026": [
     g("what-to-do-if-your-student-visa-is-refused"),
     g("genuine-student-requirement-how-to-write-your-statement"),
     g("proving-funds-for-an-australian-student-visa"),
     v("student-500"),
+    {
+      href: "/blog/australia-migration-overhaul-september-2026-student-family-ban",
+      label: "September 2026 migration overhaul explained",
+    },
   ],
   "ministerial-direction-119-skilled-visa-priorities": [
     g("how-the-australian-points-test-works"),
     g("study-to-permanent-residence-pathway-australia"),
     v("skills-in-demand-482"),
     ROUNDS,
+    {
+      href: "/blog/australia-migration-overhaul-september-2026-student-family-ban",
+      label: "September 2026 migration overhaul explained",
+    },
   ],
   "why-65-points-wont-get-you-a-skilled-visa-2026": [
     g("how-the-australian-points-test-works"),
     CALCULATOR,
     ROUNDS,
     v("skilled-independent-189"),
+    {
+      href: "/blog/australia-migration-overhaul-september-2026-student-family-ban",
+      label: "September 2026 migration overhaul explained",
+    },
+  ],
+  "australia-migration-overhaul-september-2026-student-family-ban": [
+    v("student-500"),
+    g("cost-of-studying-in-australia-from-nepal"),
+    g("cost-of-studying-in-australia-from-india"),
+    v("visitor-visa-600"),
+    { href: "/blog/ministerial-direction-119-skilled-visa-priorities", label: "How Ministerial Direction 119 changed skilled visa priority" },
+    UPDATES,
   ],
 };
 
