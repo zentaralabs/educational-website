@@ -324,6 +324,30 @@
       "name": "Master of Speech and Language Therapy",
       "reason": "Renamed to Master of Speech Pathology, which already exists as its own published row in our DB sourced from the same live CDU course page; kept as a single row to avoid duplicate content",
       "archived_at": "2026-09-18T02:49:10.972Z"
+    },
+    {
+      "id": "831657e7-0e8d-4067-a5b4-b1453333f89d",
+      "name": "Master of Teaching",
+      "reason": "Confirmed bare/umbrella name with no live course page: checked CDU's course-list API across both 2026 and 2027, and both international and domestic higher_education slices (99-187 rows each); in every slice only 4 named specialisations exist (Master of Teaching Birth to Five Years, Early Childhood, Primary, Secondary), never a standalone Master of Teaching page, in either year",
+      "archived_at": "2026-09-18T03:10:35.036Z"
+    },
+    {
+      "id": "12bb5b69-f040-4c4b-a343-9fc8782d0d56",
+      "name": "Bachelor of Health Honours",
+      "reason": "Confirmed present in CDU's domestic course catalogue (Bachelor of Health Science Honours, in the 187-row domestic sector=higher_education&year=2026 API listing with no student_type filter) but absent from the international course catalogue (student_type=International&sector=higher_education&year=2026, 119 rows) - not offered to international students for the 2026 intake",
+      "archived_at": "2026-09-18T03:10:35.188Z"
+    },
+    {
+      "id": "e6d098ba-952f-4138-bee4-9e640699a5a5",
+      "name": "Master of Psychology (Clinical)",
+      "reason": "Confirmed present in CDU's domestic course catalogue (Master of Psychology (Clinical), in the 187-row domestic sector=higher_education&year=2026 API listing with no student_type filter) but absent from the international course catalogue (student_type=International&sector=higher_education&year=2026, 119 rows) - not offered to international students for the 2026 intake",
+      "archived_at": "2026-09-18T03:10:35.337Z"
+    },
+    {
+      "id": "fa8dd4b6-18c9-4335-95da-eb9e842e69ba",
+      "name": "Graduate Certificate of Maternal Critical Care",
+      "reason": "Confirmed present in CDU's domestic course catalogue (Graduate Certificate of Maternal Critical Care, in the 187-row domestic sector=higher_education&year=2026 API listing with no student_type filter) but absent from the international course catalogue (student_type=International&sector=higher_education&year=2026, 119 rows) - not offered to international students for the 2026 intake",
+      "archived_at": "2026-09-18T03:10:35.485Z"
     }
   ]
 }
