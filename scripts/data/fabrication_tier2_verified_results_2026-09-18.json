@@ -1,0 +1,1032 @@
+[
+  {
+    "id": "a018e0a3-ad23-4ee3-b697-b0113515b289",
+    "name": "Bachelor of Engineering (Civil) (Honours)",
+    "uni": "Adelaide University",
+    "verdict": "corrected",
+    "real_admission_requirements": "SACE (or equivalent) completion with an ATAR of approximately 80, with SACE Stage 2 Mathematical Methods (or equivalent) as a prerequisite.",
+    "real_english_requirements": "IELTS Overall 6.5, with 6.0 minimum in each band (or equivalent).",
+    "notes": "Live page (adelaide.edu.au/study/degrees/bachelor-of-engineering-civil-honours/), 'Show full entry requirements' panel, lists ATAR 80 for domestic SACE entry, not 85 as in DB. Prerequisite is Mathematical Methods (not just 'recommended Physics' as DB implies). English requirement text matches DB exactly (IELTS 6.5 overall, 6.0 each band)."
+  },
+  {
+    "id": "3792bf56-030b-49c0-9df9-4512b1c040d8",
+    "name": "Bachelor of Oral Health",
+    "uni": "Adelaide University",
+    "verdict": "confirmed",
+    "real_admission_requirements": "Completion of a secondary education qualification equivalent to the South Australian Certificate of Education (SACE), with an adjusted ATAR equivalent selection rank of 70.00 or higher.",
+    "real_english_requirements": "IELTS Academic Overall 7.0, with no band below 7.0.",
+    "notes": "Live page confirms ATAR/selection rank 70.00 and IELTS overall 7.0 with 7.0 in each band, matching DB values closely."
+  },
+  {
+    "id": "5ed4a7d9-6e95-48c2-a1f7-c6266be3d402",
+    "name": "Bachelor of Laboratory Medicine (Honours)",
+    "uni": "Adelaide University",
+    "verdict": "confirmed",
+    "real_admission_requirements": "Completion of a secondary education qualification equivalent to SACE, with a minimum ATAR of approximately 80.",
+    "real_english_requirements": "IELTS Overall 6.5, with no band below 6.5.",
+    "notes": "Live page's international admissions table lists ATAR 80 for Australia and IELTS 6.5 overall/6.5 each band, matching DB."
+  },
+  {
+    "id": "cacd9196-4390-49e7-b93c-6f65556fff83",
+    "name": "Bachelor of Commerce: Accounting",
+    "uni": "Adelaide University",
+    "verdict": "corrected",
+    "real_admission_requirements": "SACE (or equivalent) completion with an ATAR of approximately 80.",
+    "real_english_requirements": "IELTS Overall 6.5, with 6.0 minimum in each band (or equivalent).",
+    "notes": "DB source_url (adelaide.edu.au/study/degrees/bachelor-of-commerce/) is a dead link (404) \u2014 there is no generic 'Bachelor of Commerce' page; Adelaide publishes one page per major. The real per-program page is adelaide.edu.au/study/degrees/bachelor-of-commerce-accounting/. ATAR (80) matches DB, but the real English requirement is IELTS Overall 6.5 (DB says 6.0) with 6.0 minimum in each band."
+  },
+  {
+    "id": "d5ae8617-6f7c-4212-ab2b-d56488235d37",
+    "name": "Bachelor of Speech Pathology (Honours)",
+    "uni": "Adelaide University",
+    "verdict": "confirmed",
+    "real_admission_requirements": "Completion of a secondary education qualification equivalent to SACE, with a minimum ATAR of approximately 90.",
+    "real_english_requirements": "IELTS Academic Overall 8.0, with no band below 8.0.",
+    "notes": "Live page's international admissions table lists ATAR 90 for Australia and IELTS overall 8/8.0 each band, matching DB."
+  },
+  {
+    "id": "f1f929e9-d794-43cc-bbd9-c5c44ff2489b",
+    "name": "Bachelor of Computer Science",
+    "uni": "Adelaide University",
+    "verdict": "corrected",
+    "real_admission_requirements": "SACE (or equivalent) completion with an ATAR of approximately 75.",
+    "real_english_requirements": "IELTS Overall 6.5, with 6.0 minimum in each band (or equivalent).",
+    "notes": "Live page lists ATAR 75 for domestic SACE entry (DB said 80) and IELTS Overall 6.5 (DB said 6.0), with 6.0 minimum per band unchanged."
+  },
+  {
+    "id": "38b4b587-0eba-4f92-9c5e-463448ea5f23",
+    "name": "Bachelor of Midwifery",
+    "uni": "Adelaide University",
+    "verdict": "confirmed",
+    "real_admission_requirements": "Completion of a secondary education qualification equivalent to SACE, with a minimum ATAR of approximately 95 (this degree is only available to international students in the international-student view of the page).",
+    "real_english_requirements": "IELTS Overall 7.0, with no band below 7.0.",
+    "notes": "Live page's ATAR table shows 95 for Australia and IELTS overall 7/7.0 each band, matching DB."
+  },
+  {
+    "id": "947b45a5-ff46-4cc7-8a85-fc2825e0546f",
+    "name": "Bachelor of Nursing",
+    "uni": "Adelaide University",
+    "verdict": "corrected",
+    "real_admission_requirements": "SACE (or equivalent) completion with an ATAR of approximately 70; current National Police Certificate and immunisation compliance required prior to placement.",
+    "real_english_requirements": "IELTS Overall 7.0, with a minimum of 7.0 in each band (registration/AHPRA English requirement).",
+    "notes": "Live page shows minimum ATAR 70 for Australia (DB said 80). English requirement text (7.0 overall, 7.0 each band) matches DB exactly; the National Police Certificate/immunisation detail also matches Adelaide's standard nursing placement requirement language."
+  },
+  {
+    "id": "934dd4a5-bba5-426f-b4e6-a40a20d52dfd",
+    "name": "Bachelor of Podiatry (Honours)",
+    "uni": "Adelaide University",
+    "verdict": "confirmed",
+    "real_admission_requirements": "Completion of a secondary education qualification equivalent to SACE, with a minimum ATAR of approximately 85.",
+    "real_english_requirements": "IELTS Overall 7.0, with no band below 7.0.",
+    "notes": "Live page's international admissions table lists ATAR 85 for Australia and IELTS overall 7/7.0 each band, matching DB."
+  },
+  {
+    "id": "fe68a5ed-9163-4ec7-9c15-060dfca90d05",
+    "name": "Bachelor of Social Work",
+    "uni": "Adelaide University",
+    "verdict": "confirmed",
+    "real_admission_requirements": "Completion of a secondary education qualification equivalent to SACE, with a minimum ATAR of approximately 75.",
+    "real_english_requirements": "IELTS Overall 7.0, with no band below 7.0.",
+    "notes": "Live page shows minimum ATAR 75 for Australia and IELTS overall 7/7.0 each band, matching DB."
+  },
+  {
+    "id": "22fed6e9-9f1b-4370-b765-cceab847cffe",
+    "name": "Bachelor of Forensic Science / Master of Forensic Science",
+    "uni": "Murdoch University",
+    "verdict": "corrected",
+    "real_admission_requirements": "ATAR of approximately 90 (selection rank) for entry into this accelerated Bachelor/Master combined pathway; WACE Chemistry is a common recommended subject for forensic/biomedical science entry at Murdoch.",
+    "real_english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
+    "notes": "DB source_url was the generic murdoch.edu.au/study/courses listing page (the same known bad-URL pattern flagged for other fabricated rows). The real per-program page is murdoch.edu.au/course/undergraduate/b1425, which states 'ATAR: 90' as the minimum selection rank for this accelerated combined degree, not 70-75 as in DB. Standard Murdoch undergraduate English requirement (6.0/60/50) applies; no elevated requirement found for this course."
+  },
+  {
+    "id": "c4c954af-bb16-4caa-acf0-1c4f52cdbfdd",
+    "name": "Bachelor of Food Science and Nutrition / Master of Food Science",
+    "uni": "Murdoch University",
+    "verdict": "corrected",
+    "real_admission_requirements": "ATAR of approximately 90 (selection rank) for entry into this accelerated Bachelor/Master combined pathway.",
+    "real_english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
+    "notes": "DB source_url was the generic /study/courses listing page. Real per-program page murdoch.edu.au/course/undergraduate/b1427 states ATAR 90 for this accelerated combined degree (the standalone Bachelor of Food Science and Nutrition alone, b1389, is ATAR 70) \u2014 DB's 65-70 range doesn't match either the standalone or the combined program's real figures. Standard Murdoch English requirement applies."
+  },
+  {
+    "id": "6cfeccc2-250a-4167-b083-bd9326ec137c",
+    "name": "Bachelor of Biomedical Science / Master of Infectious Disease Surveillance and Control",
+    "uni": "Murdoch University",
+    "verdict": "corrected",
+    "real_admission_requirements": "ATAR of approximately 90 (selection rank) for entry into this accelerated Bachelor/Master combined pathway.",
+    "real_english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
+    "notes": "DB source_url was the generic /study/courses listing page. Real per-program page murdoch.edu.au/course/undergraduate/b1426 states ATAR 90 for this accelerated combined degree, not 75-80 as in DB. Standard Murdoch English requirement applies (no elevated requirement found for this course)."
+  },
+  {
+    "id": "2116ca10-5fae-4454-bc77-3b671448a295",
+    "name": "Bachelor of Applied Social Care",
+    "uni": "Murdoch University",
+    "verdict": "corrected",
+    "real_admission_requirements": "ATAR of approximately 70 (selection rank); satisfactory National Police Certificate required prior to placement.",
+    "real_english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
+    "notes": "This row already had the correct real per-program URL (murdoch.edu.au/course/undergraduate/b1424). The live page states 'ATAR: 70', not the 60-65 range in DB. Page does not publish a course-specific IELTS/TOEFL/PTE table (it lists domestic-only English pathways: English ATAR scaled mark 50+, STAT Written English 140+); Murdoch's published standard undergraduate baseline (6.0/60/50) is used here as no elevated requirement was found for this course."
+  },
+  {
+    "id": "e1027cc2-39f9-4d89-b43e-2b1425760782",
+    "name": "Bachelor of Nursing",
+    "uni": "Murdoch University",
+    "verdict": "confirmed",
+    "real_admission_requirements": "ATAR of approximately 65-70 (or equivalent); satisfactory National Police Certificate and immunisation compliance required prior to clinical placement.",
+    "real_english_requirements": "IELTS overall 7.0 (no band below 6.5; specifically Reading 7.0, Writing 6.5, Speaking 7.0, Listening 7.0), or equivalent (TOEFL iBT 94 overall), reflecting registration-body English requirements for nursing.",
+    "notes": "Real per-program page is murdoch.edu.au/course/undergraduate/b1417 (ATAR 70, matching the top of DB's 65-70 range), not the generic /study/courses URL in DB. Murdoch's official elevated Nursing English table (via the English-proficiency-tests page) is IELTS 7.0 overall / 7.0-7.0-6.5-7.0 per band, TOEFL iBT 94, PTE 66 overall \u2014 DB's IELTS (7.0, no band below 6.5) and TOEFL (94) match exactly; DB's PTE figure of 65 is off by one point from the real 66, a trivial discrepancy. Overall this row is genuinely accurate, just needs the source_url updated to the per-program page."
+  },
+  {
+    "id": "cfee6be6-4f02-4e4e-ac3d-fac0c8c6f767",
+    "name": "Bachelor of Science / Doctor of Veterinary Medicine",
+    "uni": "Murdoch University",
+    "verdict": "corrected",
+    "real_admission_requirements": "Minimum selection rank of approximately 94 (or equivalent), highly competitive limited-entry program; all applicants must complete the Casper online situational judgement assessment, and secondary-school applicants are shortlisted by a weighted formula (ATAR/rank 70%, Casper 30%) before proceeding to further selection.",
+    "real_english_requirements": "IELTS overall 7.0, with no band below 7.0, or equivalent (TOEFL iBT 94 overall); PTE score not published on the course page.",
+    "notes": "Real per-program page murdoch.edu.au/course/undergraduate/b1402 plus the admission-info/veterinary-science page confirm the admission_requirements text almost verbatim (ATAR 90+/highly competitive/aptitude assessment and interview are all real) -- that field is essentially confirmed. However DB's english_requirements (IELTS 6.5/no band below 6.0, TOEFL 79, PTE 58) are actually Murdoch's LAW school figures, not Veterinary Medicine's; the real elevated Vet English requirement (via Murdoch's English-proficiency-tests page) is IELTS 7.0 overall/7.0 every band, TOEFL iBT 94. This looks like a mismatched-figure error rather than pure fabrication, but the english_requirements value is wrong and needs correction."
+  },
+  {
+    "id": "4d017ad7-ea16-4078-ae5e-46e4d83fde08",
+    "name": "Bachelor of Agricultural Science / Bachelor of Business",
+    "uni": "Murdoch University",
+    "verdict": "corrected",
+    "real_admission_requirements": "ATAR of approximately 70 (selection rank); completion of WACE or equivalent secondary qualification.",
+    "real_english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
+    "notes": "Real per-program page murdoch.edu.au/course/undergraduate/b1393 states ATAR 70, above DB's stated 60-65 range. Standard Murdoch English requirement confirmed."
+  },
+  {
+    "id": "c40e5bfa-af81-4623-b743-7e70df8f7259",
+    "name": "Bachelor of Engineering Honours",
+    "uni": "Murdoch University",
+    "verdict": "confirmed",
+    "real_admission_requirements": "ATAR of approximately 75-80 (or equivalent; real page states a selection rank of 80).",
+    "real_english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
+    "notes": "Real per-program page murdoch.edu.au/course/honours/h1287 states 'Selection rank of 80', matching the top of DB's 75-80 range. The page does not explicitly recommend WACE Mathematics Methods/Chemistry/Physics (DB's added detail is unconfirmed but plausible and not contradicted). Needs source_url updated to the per-program page (DB had the generic /study/courses listing)."
+  },
+  {
+    "id": "66d84a67-9503-4c33-b180-681aab000537",
+    "name": "Bachelor of Data Analytics",
+    "uni": "Murdoch University",
+    "verdict": "confirmed",
+    "real_admission_requirements": "ATAR of approximately 65-70 (or equivalent; real page states ATAR 70).",
+    "real_english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
+    "notes": "Real per-program page murdoch.edu.au/course/undergraduate/b1420 states ATAR 70, matching the top of DB's range. Needs source_url updated to the per-program page (DB had the generic /study/courses listing)."
+  },
+  {
+    "id": "a94d8653-405b-47a9-84e9-4b3f0d37efba",
+    "name": "Bachelor of Science",
+    "uni": "University of Newcastle",
+    "verdict": "corrected",
+    "real_admission_requirements": "Completion of Year 12 (or equivalent); Selection Rank of 67.00 for domestic entry at the Newcastle campus (65.00 at Central Coast); broad choice of 10 science majors including biology, chemistry, physics and environmental science.",
+    "real_english_requirements": "IELTS 6.0 overall, no band below 6.0",
+    "notes": "Live page embeds a uon_degree_data JSON object with UON.Degree.IELTS.OverallMinimum=6.0 and SectionMinimum=6.0 - the DB's '6.5 overall' is wrong, real minimum is 6.0/6.0. Admission: page shows a precise 'Selection rank 67.00' (domestic, Newcastle campus) rather than the vague '65-75' range; 67 does fall inside that range so the ballpark wasn't fabricated, but the real page gives an exact figure."
+  },
+  {
+    "id": "3b18d6cf-57bb-47e4-9959-61dbd5bd392e",
+    "name": "Bachelor of Mechanical Engineering (Honours)",
+    "uni": "University of Newcastle",
+    "verdict": "corrected",
+    "real_admission_requirements": "Completion of Year 12 (or equivalent); Selection Rank of 77.00 for domestic entry at the Newcastle campus.",
+    "real_english_requirements": "IELTS 6.0 overall, no band below 6.0",
+    "notes": "uon_degree_data JSON on the live page gives IELTS.OverallMinimum=6.0 / SectionMinimum=6.0, not 6.5/6.0 as in the DB. Page shows 'Selection rank 77.00' which sits inside the claimed 75-85 range, so replaced the vague range with the real published figure."
+  },
+  {
+    "id": "e6a937a4-e436-4317-88b7-52472d9adb6d",
+    "name": "Bachelor of Medical Science and Doctor of Medicine (Joint Medical Program)",
+    "uni": "University of Newcastle",
+    "verdict": "confirmed",
+    "real_admission_requirements": "ATAR approximately 90+, UCAT ANZ score, and interview; delivered jointly with University of New England.",
+    "real_english_requirements": "IELTS 7.0 overall, no band below 7.0",
+    "notes": "Page's uon_degree_data JSON gives IELTS.OverallMinimum=7.0 / SectionMinimum=7.0, exactly matching the DB text. The page itself shows 'Selection rank: N/A' for this program (JMP uses ATAR + UCAT + interview rather than a single selection-rank number), so the specific '90+' figure isn't printed on this URL, but nothing on the page contradicts it and the joint-program/UCAT/interview description matches what UON publishes elsewhere about JMP entry."
+  },
+  {
+    "id": "eee70d28-61e0-4046-89c9-c69245ce3f4c",
+    "name": "Bachelor of Civil Engineering (Honours)",
+    "uni": "University of Newcastle",
+    "verdict": "corrected",
+    "real_admission_requirements": "Completion of Year 12 (or equivalent); Selection Rank of 77.00 for domestic entry at the Newcastle campus.",
+    "real_english_requirements": "IELTS 6.0 overall, no band below 6.0",
+    "notes": "uon_degree_data JSON shows IELTS.OverallMinimum=6.0 / SectionMinimum=6.0, not 6.5/6.0. Selection rank 77.00 (shown on page) is inside the claimed 75-85 band."
+  },
+  {
+    "id": "bb1a2d0a-efc3-4a09-887f-701c2334823d",
+    "name": "Bachelor of Psychological Science",
+    "uni": "University of Newcastle",
+    "verdict": "corrected",
+    "real_admission_requirements": "Completion of Year 12 (or equivalent); Selection Rank of 67.00 for domestic entry at the Newcastle campus.",
+    "real_english_requirements": "IELTS 7.0 overall, no band below 7.0",
+    "notes": "Selection rank shown on live page is 67.00, below the claimed 70-80 range. uon_degree_data JSON gives IELTS.OverallMinimum=7.0 / SectionMinimum=7.0 - actually stricter than the DB's claimed 6.5/6.0 (likely reflecting UON's own accreditation-driven English bar for psychology)."
+  },
+  {
+    "id": "be195be4-234b-412e-a575-07afa9c80193",
+    "name": "Bachelor of Arts / Bachelor of Laws (Honours)",
+    "uni": "University of Newcastle",
+    "verdict": "corrected",
+    "real_admission_requirements": "Completion of Year 12 (or equivalent); Selection Rank of 87.00 for domestic entry at the Newcastle City campus; combined Arts/Law degree.",
+    "real_english_requirements": "IELTS 7.0 overall, no band below 6.0",
+    "notes": "Selection rank 87.00 on the live page sits inside the claimed 85-90 range (fine). uon_degree_data JSON gives IELTS.OverallMinimum=7.0 (not 6.5) with SectionMinimum=6.0, so the overall figure was understated."
+  },
+  {
+    "id": "7fc9a306-818b-46e6-837e-01a683f1e084",
+    "name": "Bachelor of Business",
+    "uni": "University of Newcastle",
+    "verdict": "corrected",
+    "real_admission_requirements": "Completion of Year 12 (or equivalent); Selection Rank of 63.00 for domestic entry at the Newcastle City campus. This is UON's new (2025+) Bachelor of Business: choose up to two majors from six business-related majors (accounting, business analytics, business economics, finance, managing people & organisations, marketing), or pair one Business major with a Bachelor of Commerce major.",
+    "real_english_requirements": "IELTS 6.0 overall, no band below 6.0",
+    "notes": "Live page states this is 'a new Bachelor of Business for students commencing from 2025 onwards' with a restructured major list - the DB's major list (accounting/finance/marketing/management/HR/international business as majors within Business) reflects the pre-2025 structure. Selection rank shown is 63.00, just under the claimed 65-75 band. uon_degree_data JSON gives IELTS 6.0/6.0, not 6.5/6.0."
+  },
+  {
+    "id": "6f43423f-2fc7-4eb2-9b38-44fa9778f7c6",
+    "name": "Bachelor of Nursing",
+    "uni": "University of Newcastle",
+    "verdict": "confirmed",
+    "real_admission_requirements": "Completion of Year 12 (or equivalent); Selection Rank of 70.00 for domestic entry at the Newcastle campus; adjustment factors and portfolio pathways available.",
+    "real_english_requirements": "IELTS 7.0 overall, no band below 7.0",
+    "notes": "Selection rank 70.00 shown on live page matches the claimed 65-75 range well. uon_degree_data JSON gives IELTS.OverallMinimum=7.0 / SectionMinimum=7.0, an exact match to the DB text."
+  },
+  {
+    "id": "c9f2611c-3d69-4a38-b3c0-3afc9621c76d",
+    "name": "Bachelor of Nursing",
+    "uni": "University of New England",
+    "verdict": "corrected",
+    "real_admission_requirements": "Completion of Year 12 with a Guaranteed ATAR of 65.00 (Rule A) or equivalent (higher education, VET study, work experience, or unrestricted Enrolled Nurse registration with NMBA); satisfactory National Police Check and immunisation requirements for clinical placement.",
+    "real_english_requirements": "IELTS 7.0 overall, no band below 7.0 (NMBA registration standard)",
+    "notes": "UNE course page (domestic view) shows 'Guaranteed ATAR: 65.00', not ~70 as in the DB. English requirement confirmed via UNE policy register annex ('English Language Requirements Higher than the University Minimum'), which lists nursing programs requiring IELTS Academic overall 7.0 with minimum 7.0 across bands - matches the DB text exactly."
+  },
+  {
+    "id": "ce141ad0-6c3b-4498-837f-77fb29a2c1fb",
+    "name": "Bachelor of Arts",
+    "uni": "University of New England",
+    "verdict": "corrected",
+    "real_admission_requirements": "Completion of Year 12 with a Guaranteed ATAR of 65.00 (Rule A) or equivalent; broad entry requirements including higher education, VET study, or a UNE Diploma/Advanced Diploma in Arts.",
+    "real_english_requirements": "IELTS 6.0 overall, no band below 5.5",
+    "notes": "UNE course page shows 'Guaranteed ATAR: 65.00', not ~60. UNE's standard (non-elevated) international English requirement, published on its own English language requirements page, is 'IELTS academic overall score of at least 6.0, with no sub-band less than 5.5' - no elevated annex was found for a generic BA, so the DB's 'no band below 6.0' overstates the sub-band floor."
+  },
+  {
+    "id": "780e75d1-6c97-4cff-ba7a-e7473279050a",
+    "name": "Bachelor of Laws",
+    "uni": "University of New England",
+    "verdict": "corrected",
+    "real_admission_requirements": "Completion of Year 12 with a Guaranteed ATAR of 80.00 (Rule A) or equivalent (higher education, VET study, or relevant professional work experience); competitive entry.",
+    "real_english_requirements": "IELTS 6.0 overall, no band below 5.5 (standard UNE minimum; no course-specific elevated English annex was found for this LLB)",
+    "notes": "UNE course page shows 'Guaranteed ATAR: 80.00', not ~75. Searched UNE's policy register for a Law-specific elevated English annex (as exists for Nursing/Education/Medicine) and found none, so the DB's 6.5/6.0 figure looks like an unsupported guess against UNE's standard 6.0/5.5 minimum."
+  },
+  {
+    "id": "4e609dfc-0cc1-4e1d-884d-fc43321a984b",
+    "name": "Bachelor of Science",
+    "uni": "University of New England",
+    "verdict": "corrected",
+    "real_admission_requirements": "Completion of Year 12 with a Guaranteed ATAR of 65.00 (Rule A) or equivalent.",
+    "real_english_requirements": "IELTS 6.0 overall, no band below 5.5",
+    "notes": "ATAR of 65.00 shown on the live page matches the DB's claim exactly - confirmed. However, UNE's standard English minimum is 6.0 overall with no sub-band below 5.5 (not 6.0), so the English figure needed correcting."
+  },
+  {
+    "id": "d186c0de-9d43-4f37-b91b-bb2d2512fa92",
+    "name": "Bachelor of Psychological Science",
+    "uni": "University of New England",
+    "verdict": "corrected",
+    "real_admission_requirements": "Completion of Year 12 with a Guaranteed ATAR of 70.00 (Rule A) or equivalent.",
+    "real_english_requirements": "IELTS 6.0 overall, no band below 5.5 (no course-specific elevated English annex found for this UNE degree, unlike Newcastle's own Psychological Science program which does carry a higher bar)",
+    "notes": "ATAR of 70.00 on the live page matches the DB exactly. No UNE policy annex elevating English requirements for Psychological Science was found (contrast with Newcastle, which does require 7.0/7.0 for its own psych degree) - so UNE's standard 6.0/5.5 applies rather than the claimed 6.5/6.0."
+  },
+  {
+    "id": "f539b8e8-441f-4bbf-9c62-b5b65d2b340a",
+    "name": "Master of Data Science",
+    "uni": "University of New England",
+    "verdict": "corrected",
+    "real_admission_requirements": "Entry is based on a bachelor's degree, graduate certificate, graduate diploma, or bachelor with honours qualification (or overseas equivalent) - open to graduates of any discipline, though those without a relevant background complete additional core units.",
+    "real_english_requirements": "IELTS 6.0 overall, no band below 5.5 (UNE's general international minimum; no Data-Science-specific elevated annex was found)",
+    "notes": "Good news: the live UNE course page confirms the admission text's own caveat was actually correct - entry genuinely is open to 'a bachelor... (or overseas equivalent)' with no discipline restriction, so this no longer needs to be hedged as an unverified default. The English figure could not be confirmed as course-specific; UNE's general minimum (6.0/5.5) is the best-documented real figure, differing from the DB's guessed 6.5/6.0."
+  },
+  {
+    "id": "1b091d13-adce-4481-9f00-3c62455b6ff4",
+    "name": "Bachelor of Education (Early Childhood and Primary)",
+    "uni": "University of New England",
+    "verdict": "corrected",
+    "real_admission_requirements": "IMPORTANT: the live UNE course page states 'This course is currently not available to international students.' For domestic students, the Guaranteed ATAR is 77.10 (Rule A) or equivalent; satisfactory Working with Children Check required prior to placement.",
+    "real_english_requirements": "Not applicable while the course is closed to international admission; UNE's teaching-degree annex elsewhere requires IELTS 7.0 overall, no band below 7.0, for initial teacher education programs that do accept international students.",
+    "notes": "Major finding: UNE's own course page explicitly says this degree is not currently open to international students, which undercuts the entire premise of publishing international admission/English requirements for it on an international-student-facing site. Domestic Guaranteed ATAR is 77.10, well above the DB's claimed ~65. Recommend flagging this row to Roman for a scoping decision (null the row vs. keep as a domestic-only reference) rather than just swapping in a corrected figure."
+  },
+  {
+    "id": "76bfef92-286e-44bc-bda2-5eb93a371656",
+    "name": "Bachelor of Agriculture",
+    "uni": "University of New England",
+    "verdict": "corrected",
+    "real_admission_requirements": "Completion of Year 12 with a Guaranteed ATAR of 70.00 (Rule A) or equivalent; no prerequisite subjects required.",
+    "real_english_requirements": "IELTS 6.0 overall, no band below 5.5",
+    "notes": "Live page shows 'Guaranteed ATAR: 70.00', not ~65. UNE's standard English minimum (6.0/5.5) applies; no elevated annex found for Agriculture, so the claimed 'no band below 6.0' overstates the sub-band floor."
+  },
+  {
+    "id": "1e917c0f-f04a-4418-8b97-a7a2535bb570",
+    "name": "Bachelor of Laws",
+    "uni": "University of Tasmania",
+    "verdict": "confirmed",
+    "real_admission_requirements": "Completion of Australian Year 12 (or equivalent); in 2026 the lowest ATAR to receive an offer into this course was 80.9.",
+    "real_english_requirements": "IELTS Academic overall 6.5, no individual band below 6.0 (or PTE Academic 58, no score below 50)",
+    "notes": "Live UTAS course page (L3C) states the 2026 lowest-ATAR offer was 80.9, matching the DB's 'approximately 80'. English requirement text on the page is an exact match to the DB value."
+  },
+  {
+    "id": "a315bf2a-7dab-4eb9-8c4f-eaf7c505fd2b",
+    "name": "Bachelor of Business",
+    "uni": "University of Tasmania",
+    "verdict": "corrected",
+    "real_admission_requirements": "Completion of Australian Year 12 (or equivalent); in 2026 the lowest ATAR to receive an offer into this course was 50.25.",
+    "real_english_requirements": "IELTS Academic overall 6.0, no individual band below 5.5 (or PTE Academic 50, no score below 42)",
+    "notes": "Live UTAS course page (B3A) shows a 2026 lowest-ATAR offer of just 50.25, far below the DB's claimed 'approximately 65'. English sub-band is 5.5, not 6.0 as claimed."
+  },
+  {
+    "id": "adc3f93f-d542-4a46-964c-3a93a7a1bee4",
+    "name": "Bachelor of Psychological Science",
+    "uni": "University of Tasmania",
+    "verdict": "corrected",
+    "real_admission_requirements": "Completion of Australian Year 12 (or equivalent); minimum ATAR for this course is 65, and in 2026 the lowest ATAR to receive an offer was 65.8.",
+    "real_english_requirements": "IELTS Academic overall 6.5, no individual band below 6.0 (or PTE Academic 58, no score below 50)",
+    "notes": "Live UTAS course page (53F) gives a minimum ATAR of 65 (claimed ~70 was too high) and an English requirement of 6.5 overall (claimed 6.0 overall was too low - real bar is stricter, not looser)."
+  },
+  {
+    "id": "e1e0c2a1-f907-4cc4-aad6-5e5e96629420",
+    "name": "Bachelor of Education (Primary)",
+    "uni": "University of Tasmania",
+    "verdict": "corrected",
+    "real_admission_requirements": "Completion of Australian Year 12 (or equivalent) with satisfactory results in English; in 2026 the lowest ATAR to receive an offer into this course was 65.4.",
+    "real_english_requirements": "IELTS Academic overall 7.5, with Writing and Reading no band below 7.0 and Listening and Speaking no band below 8.0 (PTE not accepted for this course) - Australian teacher registration requirement",
+    "notes": "ATAR figure (65.4 lowest offer) matches the DB's 'approximately 65' well - confirmed. But the real per-skill English breakdown is stricter than stated: Listening and Speaking each require a minimum of 8.0, not a flat 'no band below 7.0' as the DB text implies."
+  },
+  {
+    "id": "b7fdd8cc-8aab-447f-97aa-986293ec5498",
+    "name": "Bachelor of Marine and Antarctic Science",
+    "uni": "University of Tasmania",
+    "verdict": "corrected",
+    "real_admission_requirements": "Completion of Australian Year 12 (or equivalent); this course has a Guaranteed ATAR of 65, and in 2026 the lowest ATAR to receive an offer was 65.4. Some majors (Marine Biology; Oceans, Ice and Climate) carry Year 12 science/maths prerequisites.",
+    "real_english_requirements": "IELTS Academic overall 6.0, no individual band below 5.5 (or PTE Academic 50, no score below 42)",
+    "notes": "Live UTAS course page (P3L) shows a Guaranteed ATAR of 65 (claimed ~70 was too high) and an English sub-band floor of 5.5, not 6.0 as claimed."
+  },
+  {
+    "id": "caefabf4-794c-425e-9bce-1c72f7220478",
+    "name": "Bachelor of Nursing",
+    "uni": "University of Tasmania",
+    "verdict": "corrected",
+    "real_admission_requirements": "Completion of Australian Year 12 (or equivalent); minimum ATAR for this course is 60. In 2026 the lowest ATAR to receive an offer varied by campus: 67.30 (Cradle Coast), 66.90 (Hobart), 61.25 (Launceston), 60.15 (Sydney).",
+    "real_english_requirements": "IELTS Academic overall 7.0, with a minimum of 7.0 in each of listening, reading and speaking, and a minimum of 6.5 in writing (NMBA English language skills registration standard, 2025)",
+    "notes": "The claimed 'approximately 65' ATAR sits within the real campus-by-campus range (60.15-67.30), so it's a reasonable representative figure - admission is close enough to confirm. English requirement is very close to the DB text but the real NMBA standard allows writing to be 0.5 lower (6.5) than the other three components (7.0), which the DB's flat 'no band below 7.0' misses."
+  },
+  {
+    "id": "693a704a-aeea-4ad3-a76c-98ecfbcd0309",
+    "name": "Master of Information Technology and Systems",
+    "uni": "University of Tasmania",
+    "verdict": "confirmed",
+    "real_admission_requirements": "Entry is based on a Bachelor's degree in an ICT-related area (12-unit, 1.5-2 year fast-track), OR a Bachelor's degree in ANY discipline (16-unit, 2-year pathway that adds foundational ICT units) - genuinely open to any-discipline graduates as the DB text stated.",
+    "real_english_requirements": "IELTS Academic 6.5, no individual band below 6.0",
+    "notes": "Verified via UTAS's own official course page (K7I: utas.edu.au/courses/sci-eng/courses/k7i-master-of-information-technology-and-systems), which is a stronger source than the mastersportal.com aggregator link in the DB's source_url. Both admission (any-discipline bachelor accepted) and English (6.5/6.0) are an exact match to the DB text - the 'not program-specific verified' hedge can be removed."
+  },
+  {
+    "id": "4cec0ce3-67a5-419f-897d-db65119751bc",
+    "name": "Bachelor of Medical Science and Doctor of Medicine",
+    "uni": "University of Tasmania",
+    "verdict": "corrected",
+    "real_admission_requirements": "Completion of Year 12 with an ATAR (including any rural adjustment) of at least 95, plus a valid UCAT ANZ score used as a secondary ranking method. The University of Tasmania does NOT conduct interviews for this program - selection is by ATAR + UCAT ANZ only (domestic pathway); graduate-entry applicants are instead assessed on GPA + GAMSAT.",
+    "real_english_requirements": "IELTS Academic overall 7.0, target no band below 7.0",
+    "notes": "Live UTAS course page (H3X) explicitly states 'The University of Tasmania does not conduct interviews during selection for the Medicine Program' - the DB's claim of an interview is factually wrong for this specific program (interviews are used by some other Australian med schools' JMPs, e.g. Newcastle/UNE, but not UTAS). Real minimum ATAR is 95, not the vaguer '90+'. English requirement (7.0/7.0) matches the DB text (cross-checked via theuniguide.com aggregator quoting UTAS's own figures)."
+  },
+  {
+    "id": "c1a1462f-1f8a-4eac-81b0-ce2bcb20c5a5",
+    "name": "Bachelor of Laws (Honours)",
+    "uni": "University of Queensland",
+    "verdict": "corrected",
+    "real_admission_requirements": "UQ's published 'recent entry scores' for Semester 1, 2027 domestic admission: lowest adjusted ATAR 97.5, median (unadjusted) 97.7.",
+    "real_english_requirements": "IELTS overall 7.0 (listening 6.0, reading 6.0, writing 7.0, speaking 7.0); TOEFL iBT overall 100 (listening 19, reading 19, writing 27, speaking 23); PTE Academic overall 72 (all sub-bands 60-72). OET not accepted.",
+    "notes": "DB's English text ('no band below 7.0') overstates the real requirement \u2014 listening and reading may be as low as 6.0. DB's ATAR 'approximately 95+' understates the real recent cutoff (lowest adjusted 97.5). Extensively attempted UQ's interactive entry-score selector (Choices.js-based widget under Entry Requirements > International): confirmed the widget architecture, successfully set year=2026 (verified via URL query param update), but the dependent term/country/qualification dropdowns never populated with real options after repeated waits/retries, likely due to the widget requiring a full user-driven click sequence rather than programmatic value-setting. Fell back to the program page's own published, per-program 'recent entry scores' static table, which is real current data, not a fabrication."
+  },
+  {
+    "id": "5148e324-bd3c-409c-bfed-cde5f0c71516",
+    "name": "Bachelor of Science",
+    "uni": "University of Queensland",
+    "verdict": "unverifiable",
+    "notes": "Source URL (bachelor-science-2354) 404s. Program code 2354 has been reassigned to an unrelated program (Bachelor of Science (Honours) - Gatton). Searched UQ's program finder, Google, and Bing for a current plain 'Bachelor of Science' (St Lucia) page with no success \u2014 UQ appears to have restructured its general science offerings (e.g., toward 'Bachelor of Advanced Science (Honours)'). Could not confirm a current live program page for this exact row; nulling rather than guessing."
+  },
+  {
+    "id": "75e78722-a641-4469-8915-835a80e3efb8",
+    "name": "Bachelor of Engineering (Honours)",
+    "uni": "University of Queensland",
+    "verdict": "corrected",
+    "real_admission_requirements": "UQ's published 'recent entry scores' for Semester 1, 2027 domestic admission: lowest (unadjusted) ATAR 79.45, median (adjusted) 94.1, highest 99.95.",
+    "real_english_requirements": "IELTS overall 6.5 (reading 6.0, writing 6.0, speaking 6.0, listening 6.0); TOEFL iBT overall 87; PTE Academic overall 64 (60 in all sub-bands). OET not accepted.",
+    "notes": "English requirement text matches DB exactly (confirmed). Admission: DB's single figure 'approximately 85+' doesn't reflect the real, wide published range (79.45-99.95); replaced with real recent published stats. Interactive selector attempted per the general UQ approach described in row c1a1462f's notes; did not yield a single personalized number, so used the program's own real static entry-score table instead."
+  },
+  {
+    "id": "5de8d043-1ae6-4b9b-8f8e-31120e0b77dc",
+    "name": "Bachelor of Psychological Science (Honours)",
+    "uni": "University of Queensland",
+    "verdict": "confirmed",
+    "real_admission_requirements": "UQ's published guaranteed-minimum ATAR threshold for this program is 89 (Semester 1, 2026 lowest adjusted offer was also 89; median adjusted 93.6).",
+    "real_english_requirements": "IELTS overall 6.5 (reading 6.0, writing 6.0, speaking 6.0, listening 6.0); TOEFL iBT overall 87; PTE Academic overall 64 (60 in all sub-bands).",
+    "notes": "DB's ATAR 'approximately 88+' closely matches the real, explicitly published guaranteed-minimum ATAR of 89. English requirement matches DB exactly. Close enough to confirm rather than correct."
+  },
+  {
+    "id": "fe78a875-59a3-4b91-bf67-3fc93dde3d81",
+    "name": "Bachelor of Agricultural Science",
+    "uni": "University of Queensland",
+    "verdict": "corrected",
+    "real_admission_requirements": "UQ's published minimum entry threshold is ATAR 72 (IB equivalent 26.75). Semester 1, 2027 recent range: lowest (unadjusted) 71.45, median 82.1, highest 95.8.",
+    "real_english_requirements": "IELTS overall 6.5 (reading 6.0, writing 6.0, speaking 6.0, listening 6.0); TOEFL iBT overall 87; PTE Academic overall 64 (60 in all sub-bands).",
+    "notes": "DB's source_url (\u2026-2358) is dead \u2014 UQ reassigned this program to \u2026-2583, which was used to verify current data. DB's 'approximately 78+' overstates the real published minimum threshold of 72. English requirement matches DB exactly."
+  },
+  {
+    "id": "1381e2f5-a897-42f1-8efd-c36e70b12754",
+    "name": "Bachelor of Veterinary Science (Honours)",
+    "uni": "University of Queensland",
+    "verdict": "corrected",
+    "real_admission_requirements": "UQ's published guaranteed-minimum threshold ('the lowest adjusted ATAR/tertiary study selection rank we'll consider') is 94. Recent Semester 1, 2027 range: lowest (unadjusted) 94.55, lowest (adjusted) 98.2, highest 99.95.",
+    "real_english_requirements": "IELTS overall 7.0, all sub-bands (reading, writing, speaking, listening) minimum 7.0; TOEFL iBT overall 100; PTE Academic overall 72, all sub-bands minimum 72. BE and OET not accepted.",
+    "notes": "English requirement matches DB exactly (confirmed for that field). Admission: DB's 'approximately 99+' is close to the real competitive adjusted cutoff (98.2) but UQ's own guaranteed-minimum published threshold is meaningfully lower (94); recorded both figures as the real data."
+  },
+  {
+    "id": "4d3c8a68-4256-412b-9dc9-fc9b7c9991f3",
+    "name": "Bachelor of Commerce",
+    "uni": "University of Queensland",
+    "verdict": "corrected",
+    "real_admission_requirements": "UQ's published recent domestic entry stats (Semester 1, 2027): lowest adjusted ATAR 82.25, median 91.8. The program page notes that international applicants are assessed on English proficiency rather than a separate ATAR figure.",
+    "real_english_requirements": "IELTS overall 6.5 (reading 6.0, writing 6.0, speaking 6.0, listening 6.0); TOEFL iBT overall 87; PTE Academic overall 64 (60 in all sub-bands).",
+    "notes": "English requirement matches DB exactly (confirmed for that field). Admission: DB's 'approximately 85+' sits within the real recent range (82.25-91.8), but framing differs \u2014 real page indicates ATAR is a domestic-only concept for this program; corrected with accurate real figures."
+  },
+  {
+    "id": "302bc1a0-c6a9-4ae8-8a3c-f65fc63fa706",
+    "name": "Bachelor of Design",
+    "uni": "University of Western Australia",
+    "verdict": "unverifiable",
+    "notes": "Source URL (uwa.edu.au/study/courses/bachelor-of-design) 404s. Checked UWA's live 'Architecture and Design' study-area listing directly \u2014 no 'Bachelor of Design' appears among current offerings (only Architecture Extended Major, Bachelor of Environmental Design, Master of Architecture), suggesting the degree has been discontinued or renamed. Multiple search strategies (UWA course search, Google, handbook code guess) found no current live program page. Nulling rather than guessing."
+  },
+  {
+    "id": "82d8afa8-f034-4d41-bfe5-a01f38d3888c",
+    "name": "Bachelor of Arts",
+    "uni": "University of Western Australia",
+    "verdict": "corrected",
+    "real_admission_requirements": "UWA's published minimum ATAR for this course is 70. Recent offer data: median rank 88.15, lowest rank 68.75, highest rank 99.70.",
+    "real_english_requirements": "IELTS Academic overall 6.5, no band below 6.0 (or PTE Academic overall 64, no band below 60; or TOEFL iBT overall 82).",
+    "notes": "DB's 'approximately 80+' overstates the real published minimum ATAR (70); actual recent offers ranged much wider (68.75-99.70, median 88.15). English requirement matches DB and UWA's general undergraduate standard exactly."
+  },
+  {
+    "id": "6fe7b710-9b54-48a6-a02c-c37467dd2730",
+    "name": "Bachelor of Commerce",
+    "uni": "University of Western Australia",
+    "verdict": "corrected",
+    "real_admission_requirements": "UWA's published minimum ATAR for this course is 80.",
+    "real_english_requirements": "IELTS Academic overall 6.5, no band below 6.0 (or equivalent).",
+    "notes": "DB states '85+'; the real published minimum is 80 \u2014 close but corrected to the exact figure. English requirement confirmed as matching UWA's standard undergraduate requirement."
+  },
+  {
+    "id": "2f2ad33e-2915-438d-8847-b142f89a7d9f",
+    "name": "Bachelor of Science (Marine Science)",
+    "uni": "University of Western Australia",
+    "verdict": "corrected",
+    "real_admission_requirements": "Completion of Year 12 (WACE or equivalent); minimum ATAR of 70 for entry to the general Bachelor of Science (Marine Biology and Marine and Coastal Processes are majors within this degree, not a separate 'Bachelor of Marine Science'); prerequisites vary by major per UWA's prerequisites and recommended subjects list.",
+    "real_english_requirements": "IELTS Academic overall 6.5, no band below 6.0 (or equivalent).",
+    "notes": "DB's program name and '85+' figure appear to conflate the general Bachelor of Science (real minimum ATAR 70, source_url points here) with UWA's separate, more selective 'Bachelor of Marine Science' degree (BP023 \u2014 real stats: highest 90.90, median 84.20, lowest 72.85). Corrected using the page the source_url actually points to. English requirement unchanged/confirmed."
+  },
+  {
+    "id": "3c476cf9-0522-40f4-9394-d5a331b8ec4a",
+    "name": "Bachelor of Science (Agriculture)",
+    "uni": "University of Western Australia",
+    "verdict": "corrected",
+    "real_admission_requirements": "Completion of Year 12 (WACE or equivalent); minimum ATAR of 70 (general Bachelor of Science entry threshold \u2014 Agriculture is a major within the BSc, distinct from UWA's separate standalone 'Bachelor of Agricultural Science' degree, which has a materially higher real entry profile: highest 94.90, median 87.05, lowest 80.10).",
+    "real_english_requirements": "IELTS Academic overall 6.5, no band below 6.0 (or equivalent).",
+    "notes": "DB's '75-80' likely conflates the general BSc (real minimum ATAR 70, matching the source_url page) with the separate, more selective 'Bachelor of Agricultural Science' degree. Corrected to the real minimum for the page actually linked."
+  },
+  {
+    "id": "b5cde2d4-03da-4689-a030-feefacd5578d",
+    "name": "Master of Information Technology",
+    "uni": "University of Western Australia",
+    "verdict": "corrected",
+    "real_admission_requirements": "A bachelor's degree or equivalent qualification (as recognised by UWA), with the equivalent of a UWA weighted average mark of at least 65%, plus completion of Mathematics Methods ATAR (or equivalent) as a prerequisite.",
+    "real_english_requirements": "IELTS Academic overall 6.5, no band below 6.0; TOEFL PBT 570 (TWE \u22654.5) or TOEFL iBT 82 (writing 22, speaking 20, listening 20, reading 18); PTE Academic overall 64, minimum 64 in Reading and Writing; Cambridge CPE grade C or CAE grade B.",
+    "notes": "DB explicitly flagged this row as an unverified generic default ('not program-specific verified'). Found genuine program-specific admission and English criteria directly on UWA's own course/handbook page \u2014 replacing the generic filler with real, program-specific text."
+  },
+  {
+    "id": "f0d26789-d217-4e6c-94a5-bb965761ee72",
+    "name": "Bachelor of Engineering (Honours)",
+    "uni": "University of Western Australia",
+    "verdict": "corrected",
+    "real_admission_requirements": "Minimum ATAR 80 for the single Bachelor of Engineering (Honours) degree (dual-degree combinations require higher ATARs of 88-98), with prerequisite Mathematics Methods ATAR (scaled score of at least 50) plus one of Chemistry ATAR, Physics ATAR, or Mathematics Specialist ATAR (scaled score of at least 50).",
+    "real_english_requirements": "IELTS Academic overall 6.5, no band below 6.0 (or equivalent).",
+    "notes": "DB's '90+' significantly overstates the real minimum ATAR of 80 for the standalone (non-dual) degree. English requirement confirmed unchanged."
+  },
+  {
+    "id": "cb6ae21c-a212-4859-8a2e-c744eae334a6",
+    "name": "Bachelor of Information Technology",
+    "uni": "University of Southern Queensland",
+    "verdict": "corrected",
+    "real_admission_requirements": "Lowest adjusted ATAR to which UniSQ made an offer in Trimester 1, 2025: 58.90 (meeting this score does not guarantee admission).",
+    "real_english_requirements": "IELTS Academic overall 6.0, minimum 5.5 in each of listening, reading, writing and speaking (alternative English tests also accepted).",
+    "notes": "DB's ATAR range (60-65) is reasonably close to the real recent cutoff (58.90). English requirement corrected: DB claims 'no band below 6.0' but the real published standard allows individual bands as low as 5.5."
+  },
+  {
+    "id": "f94fc8bf-a7bb-44a0-bd7e-49b7c9e81e44",
+    "name": "Bachelor of Psychology (Honours)",
+    "uni": "University of Southern Queensland",
+    "verdict": "corrected",
+    "real_admission_requirements": "Minimum ATAR of 68.25 (or equivalent qualification) per UniSQ's handbook; entry into the honours component is additionally competitive, based on GPA in earlier years.",
+    "real_english_requirements": null,
+    "notes": "Admission ATAR (68.25) closely matches DB's stated 65-70 range. English requirement genuinely could not be verified: the handbook only cites an 'English Language Proficiency Category 2' requirement without stating the actual IELTS/PTE/TOEFL thresholds, and the linked UniSQ policy document (14707PL) returned a 'document cannot be displayed / may have been repealed' error on both the old and new policy domains. Left english field null/unverifiable rather than assuming DB's specific 6.5/6.0 figures are correct."
+  },
+  {
+    "id": "1345f0c9-5c8a-415b-945f-b6f98aa78ab8",
+    "name": "Master of Data Science",
+    "uni": "University of Southern Queensland",
+    "verdict": "corrected",
+    "real_admission_requirements": "Completion of an Australian university 3-year bachelor's degree (or equivalent) in any discipline, OR a minimum of 5 years' professional work experience equivalent to an AQF Level 7 (bachelor) qualification.",
+    "real_english_requirements": "IELTS Academic overall 6.0, minimum 5.5 in each of listening, reading, writing and speaking (alternative English tests also accepted).",
+    "notes": "DB explicitly flagged this row as an unverified generic default. Real page gives a specific admission pathway (bachelor's degree OR 5 years' relevant experience). English requirement corrected: real minimum is 6.0/5.5, not DB's stated 6.5/6.0."
+  },
+  {
+    "id": "228779dd-ce1c-4f98-aee7-4acbad98cd52",
+    "name": "Bachelor of Engineering (Honours)",
+    "uni": "University of Southern Queensland",
+    "verdict": "corrected",
+    "real_admission_requirements": "Lowest adjusted ATAR to which UniSQ made an offer in Trimester 1, 2025: 69.50 (no guarantee of admission at this score). Assumed knowledge: English (Units 3&4, C) and Mathematical Methods (Units 3&4, C); Physics is recommended but not required; a Preparatory year is available for students who don't meet prerequisites.",
+    "real_english_requirements": "IELTS Academic overall 6.0, minimum 5.5 in each of listening, reading, writing and speaking (alternative English tests also accepted).",
+    "notes": "Admission ATAR (69.50) closely matches DB's stated 70-75 range. English requirement corrected: real minimum is 6.0/5.5, not DB's 6.5/6.0."
+  },
+  {
+    "id": "6e5f253b-9dac-4fac-864e-49da37e82d3e",
+    "name": "Bachelor of Business",
+    "uni": "University of Southern Queensland",
+    "verdict": "corrected",
+    "real_admission_requirements": "Lowest adjusted ATAR to which UniSQ made an offer: 60.00 (no guarantee of admission at this score). Assumed knowledge: English (Units 3&4, C) and General Mathematics (Units 3&4, C).",
+    "real_english_requirements": "IELTS Academic overall 6.0, minimum 5.5 in each of listening, reading, writing and speaking (alternative English tests also accepted).",
+    "notes": "Admission ATAR matches DB exactly (60) \u2014 confirmed for that field. English requirement corrected: real minimum band is 5.5, not 'no band below 6.0' as DB states."
+  },
+  {
+    "id": "198f7d73-35df-4f53-a901-d317d92479ab",
+    "name": "Bachelor of Education (Primary)",
+    "uni": "University of Southern Queensland",
+    "verdict": "corrected",
+    "real_admission_requirements": "Lowest adjusted ATAR to which UniSQ made an offer: 66.00. Assumed knowledge: English (Units 3&4, C) and General/Mathematical/Specialist Mathematics (Units 3&4, C). Satisfactory completion of LANTITE is required prior to final-year professional experience placement.",
+    "real_english_requirements": "IELTS Academic overall 7.5, minimum 7.0 in writing and reading, minimum 8.0 in speaking and listening (alternative English tests also accepted).",
+    "notes": "Admission ATAR (66.00) is a bit above DB's stated 60-65 range \u2014 corrected to the real figure. English requirement corrected: the real requirement has different, higher per-skill minimums (speaking/listening 8.0, writing/reading 7.0) than DB's flat '7.0 overall, no band below 7.0'; the LANTITE detail in DB was accurate and retained."
+  },
+  {
+    "id": "3ee8cac0-0572-488f-a26b-38d5b52fbff8",
+    "name": "Bachelor of Nursing",
+    "uni": "University of Canberra",
+    "verdict": "confirmed",
+    "real_admission_requirements": "Selection rank of 65 (ATAR plus adjustment factors, the minimum that led to admission in the previous year); satisfactory National Police Certificate and immunisation compliance required prior to clinical placement.",
+    "real_english_requirements": "IELTS Academic overall 7.0, with minimum 7.0 in listening, reading and speaking and minimum 6.5 in writing; or equivalent OET grade B (min B in listening/reading/speaking, min C+ writing), TOEFL iBT 94, or PTE Academic 66 overall (min 66 listening/reading/speaking, min 56 writing).",
+    "notes": "Live course page (canberra.edu.au/course/364JA/2/2026) confirms selection rank 65, which falls within the DB's stated 65-70 range. English figures are very close: DB's TOEFL 94 matches exactly; PTE differs by 1 point (DB 65 vs page's 66) and the 'no band below 6.5' framing is a slight simplification of the real per-skill minimums, but overall the DB text is a fair paraphrase of the real published requirement, so counted as confirmed rather than corrected."
+  },
+  {
+    "id": "2627e8c5-b479-432d-9bbd-11bdd5224d83",
+    "name": "Bachelor of Software Engineering",
+    "uni": "University of Canberra",
+    "verdict": "corrected",
+    "real_admission_requirements": "Selection rank of approximately 60 (ATAR plus adjustment factors, the minimum that led to admission in the previous year); no ATAR range of 70-75 is published for this course. Entry is also available via other Australian qualifications, work experience, or overseas qualifications, with senior secondary Mathematics recommended but not mandated.",
+    "real_english_requirements": "IELTS Academic overall 6.0, with no band below 6.0, or equivalent (per UC's published English equivalency table for this band: TOEFL iBT approximately 67, PTE Academic 50 -- not TOEFL 60 as previously recorded).",
+    "notes": "Live course page (canberra.edu.au/course/560AA/8/2026) states selection rank 60, not 70-75. IELTS figure (6.0, no band below 6.0) matches DB, but DB's TOEFL 60 does not match UC's own published equivalency table for IELTS 6.0 (TOEFL 67); PTE 50 was correct."
+  },
+  {
+    "id": "4107cafc-bbac-4eb0-8a3f-448858f2717b",
+    "name": "Bachelor of Secondary Education",
+    "uni": "University of Canberra",
+    "verdict": "corrected",
+    "real_admission_requirements": "Selection rank of approximately 60 (ATAR plus adjustment factors); satisfactory National Police Certificate / Working with Vulnerable People Check required prior to professional placement; a written statement addressing suitability for teaching is also required. UC does not offer a single generic 'Bachelor of Secondary Education' course code -- this admission bar applies consistently across its Secondary Education specialisations (e.g. Arts 347JA, Science 348JA, Health & Physical Education 330JA).",
+    "real_english_requirements": "IELTS Academic overall 7.5, with speaking and listening no lower than 8.0 and all other bands no lower than 7.0, reflecting AITSL teacher-registration requirements -- not the generic 6.0/no-band-below-6.0 figure previously recorded, which is far below UC's actual teaching-program bar.",
+    "notes": "DB source_url is a generic overview page with no specific course code; UC actually offers this as several separately-coded specialisations (347JA Arts, 348JA Science, 330JA HPE), all sharing the same ATAR (60) and same elevated teaching English bar (7.5/8.0/8.0/7.0), verified directly on canberra.edu.au/course/347JA/2/2026 and the overview page. DB's admission range (65-70) and English figures (6.0 std tier) were both wrong -- the English figure in particular was a serious understatement of the real registration-body requirement."
+  },
+  {
+    "id": "4e86fe40-2ad5-4ba8-a7fd-f17403f4641a",
+    "name": "Bachelor of Physiotherapy",
+    "uni": "University of Canberra",
+    "verdict": "corrected",
+    "real_admission_requirements": "Selection rank of 85 (ATAR plus adjustment factors, indicative and competitive); highly competitive limited-entry program with clinical placement compliance (National Police Certificate, immunisation).",
+    "real_english_requirements": "IELTS Academic overall 7.0, with no band score below 7.0 (equivalent TOEFL/PTE scores are not published on the course page itself).",
+    "notes": "Live course page (canberra.edu.au/course/202JA/7/2026) confirms selection rank 85, matching the DB range. However the English requirement is stricter than recorded: the page states no band below 7.0, not 'no band below 6.5' as the DB had it -- this is a real, meaningful discrepancy for a clinical/registration-linked program."
+  },
+  {
+    "id": "39992747-9cee-47fd-bf8e-befec66bb7e7",
+    "name": "Bachelor of Primary Education",
+    "uni": "University of Canberra",
+    "verdict": "corrected",
+    "real_admission_requirements": "Selection rank of approximately 60 (ATAR plus adjustment factors); satisfactory National Police Certificate / Working with Vulnerable People Check required prior to professional placement; a written statement addressing suitability for teaching is also required.",
+    "real_english_requirements": "IELTS Academic overall 7.5, with speaking and listening no lower than 8.0 and all other bands no lower than 7.0, reflecting AITSL teacher-registration requirements.",
+    "notes": "Live course page (canberra.edu.au/course/321JA/5/2026) states selection rank 60, not the 65-70 previously recorded. The English requirement structure was also wrong: DB said a flat 'no band below 7.0' with TOEFL 102/PTE 69, but the real page requires speaking AND listening at 8.0 specifically, with only the remaining bands at 7.0 -- a materially different (and higher) bar for speaking/listening."
+  },
+  {
+    "id": "3032fd95-4163-43c9-b7d5-7a6a6400fd5b",
+    "name": "Bachelor of Commerce",
+    "uni": "University of Melbourne",
+    "verdict": "confirmed",
+    "real_admission_requirements": "Completion of Year 12 (or equivalent); lowest selection rank for 2026 entry was 92.00 (guide only, changes annually), within the DB's stated 90-95 range; prerequisite VCE Units 3/4 Mathematical Methods (study score 25+) or Specialist Mathematics (25+), plus English (25+) or EAL (30+).",
+    "real_english_requirements": "IELTS Academic overall 6.5, with writing no lower than 6.0 (all other bands also 6.0 minimum); or PTE Academic 58 overall (Level 1 English tier, which also covers Arts, Science and Design at this university).",
+    "notes": "Verified via study.unimelb.edu.au entry-requirements page (lowest selection rank 92.00) and the university's official undergraduate English-language-requirements table (Level 1 tier: IELTS 6.5/writing 6.0, PTE 58) -- both match the DB record closely."
+  },
+  {
+    "id": "39c7cfc1-78ef-48ea-9841-020b2e284832",
+    "name": "Bachelor of Science",
+    "uni": "University of Melbourne",
+    "verdict": "confirmed",
+    "real_admission_requirements": "Completion of Year 12 (or equivalent); lowest selection rank for 2026 entry was 91.00 (guide only), within the DB's stated 85-93 range; prerequisite VCE Units 3/4 Mathematical Methods (or both Mathematical Methods and Specialist Mathematics), plus a lab science (Biology/Chemistry/Physics) or Specialist Mathematics, plus English/EAL.",
+    "real_english_requirements": "IELTS Academic overall 6.5, with writing no lower than 6.0; or PTE Academic 58 overall (Level 1 English tier).",
+    "notes": "Verified via study.unimelb.edu.au entry-requirements page (lowest selection rank 91.00) and the university's official English-language-requirements table. Matches the DB record."
+  },
+  {
+    "id": "3e2c8a5c-ee22-461b-a2e3-d53808774f81",
+    "name": "Bachelor of Arts",
+    "uni": "University of Melbourne",
+    "verdict": "confirmed",
+    "real_admission_requirements": "Completion of Year 12 (or equivalent); lowest selection rank for 2026 entry was 85.00 (guide only), within the DB's stated 80-90 range; no subject prerequisites beyond the standard English/EAL requirement.",
+    "real_english_requirements": "IELTS Academic overall 6.5, with writing no lower than 6.0; or PTE Academic 58 overall (Level 1 English tier).",
+    "notes": "Verified via study.unimelb.edu.au entry-requirements page (lowest selection rank 85.00) and the official English-language-requirements table. Matches the DB record."
+  },
+  {
+    "id": "cd516ab9-5bcb-48c3-80fc-d14a68b4c8fa",
+    "name": "Bachelor of Biomedicine",
+    "uni": "University of Melbourne",
+    "verdict": "corrected",
+    "real_admission_requirements": "Completion of Year 12 (or equivalent); lowest selection rank for 2026 entry was 90.00, slightly below the DB's stated 92-97 range; a common pathway toward Medicine/Dentistry postgraduate entry; prerequisite VCE Units 3/4 Chemistry and Mathematical Methods recommended.",
+    "real_english_requirements": "IELTS Academic overall 6.5, with writing no lower than 6.0; or PTE Academic 58 overall -- Biomedicine sits in the same standard Level 1 English tier as Arts, Commerce, Science and Design, not the elevated 7.0/65 tier previously recorded (that tier is reserved for programs like Oral Health).",
+    "notes": "Verified via study.unimelb.edu.au entry-requirements page (lowest selection rank 90.00, not 92-97) and, critically, the university's official undergraduate English-language-requirements table, which explicitly groups Bachelor of Biomedicine into the same Level 1 tier (IELTS 6.5/PTE 58) as Arts/Commerce/Science/Design -- the DB's IELTS 7.0/PTE 65 figures for this course were a real, meaningful error."
+  },
+  {
+    "id": "fe63cbb5-9096-4a17-899c-c2067c6e1b96",
+    "name": "Bachelor of Design",
+    "uni": "University of Melbourne",
+    "verdict": "confirmed",
+    "real_admission_requirements": "Completion of Year 12 (or equivalent); lowest selection rank for 2026 entry was 85.00 (guide only), within the DB's stated 80-88 range; pathway toward Master of Architecture, Landscape Architecture, Urban Planning or Construction Management.",
+    "real_english_requirements": "IELTS Academic overall 6.5, with writing no lower than 6.0; or PTE Academic 58 overall (Level 1 English tier).",
+    "notes": "Verified via study.unimelb.edu.au entry-requirements page (lowest selection rank 85.00) and the official English-language-requirements table. Matches the DB record."
+  },
+  {
+    "id": "470999f7-4188-43eb-bee6-d7afdd15e04d",
+    "name": "Master of Technology (Enterprise Systems and Business Analytics)",
+    "uni": "Federation University Australia",
+    "verdict": "unverifiable",
+    "notes": "DB source_url (shiksha.com aggregator) is not an official page. The course code DCG9.EB does exist (confirmed via search of federation.edu.au's own PDF course guide and a Brisbane postgrad accordion listing), but every federation.edu.au / study.federation.edu.au URL variant tried for its dedicated course page returned a live 404 in both WebFetch and the browser. Could not locate a genuine, currently-published entry-requirements page for this specific course after multiple search and direct-navigation attempts. Recommend nulling admission/English fields rather than guessing."
+  },
+  {
+    "id": "06077501-4fb2-4b41-a0b5-904d8096815a",
+    "name": "Master of Nursing",
+    "uni": "Federation University Australia",
+    "verdict": "unverifiable",
+    "notes": "DB source_url (federation.edu.au/courses/master-of-nursing) returns a live 404. Searched for the course code (DNN9) and tried federation.edu.au/courses/DNN9-Master-of-Nursing, study.federation.edu.au/course/DNN9, coursefinder.federation.edu.au/course/DNN9, and federation.edu.au/locate/course/DNN9 -- all 404 or redirected to unrelated content. Federation's current nursing postgrad study-area listing shows no 'Master of Nursing' program at all (only a related 'Master of Health (Advanced Nursing)' DHN9.NR, a different course). This program appears to be discontinued or renamed; no genuine current page found. Recommend nulling rather than substituting the different DHN9.NR course's figures."
+  },
+  {
+    "id": "d1c2208e-5f2c-4da2-95c1-d3211e6d43d7",
+    "name": "Master of Business Administration",
+    "uni": "Federation University Australia",
+    "verdict": "unverifiable",
+    "notes": "DB source_url (federation.edu.au/courses/master-of-business-administration) returns a live 404. Searched federation.edu.au site search, business study-area listing, and multiple query variants -- only found the university's 'Master of Business Administration (International Business)' variant (delivered via Melbourne Institute of Technology partnership) and third-party aggregator mirrors, not a live, generic Federation-hosted MBA entry-requirements page matching this DB row's plain title. Given the ambiguity over which live program this row actually corresponds to, marking unverifiable rather than guessing which variant's figures apply."
+  },
+  {
+    "id": "d0b2264a-e89a-4174-a3df-aaad0520c9d6",
+    "name": "Bachelor of Nursing",
+    "uni": "Federation University Australia",
+    "verdict": "corrected",
+    "real_admission_requirements": "Guaranteed ATAR of 60.00 for 2026 entry; lowest adjusted ATAR that received an offer last year was 50.80 (not guaranteed, changes annually); VCE Units 3/4 study score of at least 25 in any English; plus health/immunisation checks and a police check required for clinical placement.",
+    "real_english_requirements": "IELTS Academic overall 7.0, with minimum 7 in listening, reading and speaking and minimum 6.5 in writing, or equivalent (per NMBA registration-body English requirements for nursing).",
+    "notes": "Verified on the live federation.edu.au course page for Bachelor of Nursing (DNN5), which was reachable and gave a specific published ATAR (60/50.80) that the DB's vague 'approximate, typical bar' language lacked. The English requirement structure differs slightly from the DB's 'no band below 7.0' framing: the real requirement allows writing as low as 6.5, not a flat 7.0 floor."
+  },
+  {
+    "id": "f13b645d-3862-4d7a-baa6-b92fbf3cb710",
+    "name": "Bachelor of Engineering (Honours)",
+    "uni": "Federation University Australia",
+    "verdict": "corrected",
+    "real_admission_requirements": "Guaranteed ATAR of 60.00 for 2026 entry; lowest adjusted ATAR that received an offer last year was approximately 60.75 (not guaranteed, changes annually) -- well below the 70-85 previously recorded; VCE Units 3/4 study score of at least 20 in any English and at least 20 in one of Mathematical Methods, Specialist Mathematics or General Mathematics. Federation does not offer a single generic 'Bachelor of Engineering (Honours)' course code -- it is delivered as separate specialisations (Civil, Electrical & Information, Mechanical, Mining), each individually coded but sharing this same admission bar.",
+    "real_english_requirements": "IELTS Academic overall 6.0, with no band below 6.0, or equivalent -- not 6.5/no band below 6.0 as previously recorded.",
+    "notes": "Verified on the live federation.edu.au Bachelor of Engineering (Civil) (Honours) course page as a representative sample of the specialisation-coded courses (DEN8.CIV); all four engineering streams (Civil/Electrical/Mechanical/Mining) share this same guaranteed-ATAR and English structure per Federation's published entry-requirements format. DB's admission range (70-85) was well above the real published figures, and the English IELTS overall figure was slightly overstated (6.5 vs actual 6.0)."
+  },
+  {
+    "id": "23f482ae-ebb2-48e4-8b1f-005bdcb3ef4f",
+    "name": "Bachelor of Commerce",
+    "uni": "University of Notre Dame Australia",
+    "verdict": "corrected",
+    "real_admission_requirements": "Notre Dame does not publish a fixed ATAR cut-off for this program (no ATAR range of 65-75 exists on the university's site); admission is holistic, based on the University's Minimum University Admission Requirements plus non-academic factors such as leadership, work, church/community involvement, aspirations and interests. Alternative entry is available via the Notre Dame Tertiary Pathway Program (TPP) or an equivalent tertiary preparation program.",
+    "real_english_requirements": "IELTS Academic overall 6.0, with no individual band score lower than 6.0, or equivalent (PTE Academic 50, TOEFL iBT 73) -- the standard undergraduate coursework tier; Commerce is not one of Notre Dame's listed English-requirement exceptions (Law, Physiotherapy, Nursing, Teaching, Medicine).",
+    "notes": "Confirmed via Notre Dame's official English-language-proficiency-requirements page, which lists Commerce under the standard 'all undergraduate coursework programs' tier (IELTS 6.0), not the 6.5 the DB had recorded. Multiple official Notre Dame course pages describe admission in purely holistic terms with no published ATAR figure, which strongly suggests the DB's '65-75' ATAR range was invented rather than sourced from a real page (Notre Dame's source_url was also a generic find-a-course page, not a program-specific one)."
+  },
+  {
+    "id": "9e8fa82b-da37-431c-b834-07dadb276d13",
+    "name": "Bachelor of Education (Primary)",
+    "uni": "University of Notre Dame Australia",
+    "verdict": "corrected",
+    "real_admission_requirements": "Notre Dame does not publish a fixed ATAR cut-off for this program (current program name is Bachelor of Primary Education, No. 3587); admission is based on the University's Minimum University Admission Requirements plus non-academic holistic factors, and typically a personal statement/interview assessing suitability for teaching.",
+    "real_english_requirements": "IELTS Academic average band score of 7.5 across all four skills, with no score below 7.0 in any skill and a score of no less than 8.0 in both speaking AND listening (AITSL registration standard for Accredited Teacher programs, which explicitly covers Bachelor of Primary Education) -- not a flat 7.0 overall/no band below 7.0 as previously recorded.",
+    "notes": "Confirmed via Notre Dame's official English-language-proficiency-requirements page, School of Education section, which explicitly lists 'Bachelor of Primary Education - 3587' under the AITSL-aligned 7.5/8.0-speaking-and-listening tier -- materially higher and structurally different from the DB's flat 7.0 figure. No published ATAR figure was found for this program; the 65-75 range appears invented."
+  },
+  {
+    "id": "266d4e34-08b5-4a60-b2c6-012c32dfccf3",
+    "name": "Bachelor of Laws",
+    "uni": "University of Notre Dame Australia",
+    "verdict": "corrected",
+    "real_admission_requirements": "Notre Dame does not publish a fixed ATAR cut-off for the Bachelor of Laws; per the University's own program page, there are 'no further specific requirements' beyond the general Minimum University Admission Requirements, though a graduate-entry pathway is available for those already holding a bachelor's degree in any discipline (3-year accelerated program).",
+    "real_english_requirements": "IELTS Academic overall 7.5, with writing no lower than 7.5 and no other band lower than 7.0, or equivalent (PTE Academic 76 overall with writing no lower than 76 and no other band below 68; TOEFL iBT 105) -- School of Law's own elevated English tier, well above the DB's recorded 6.5/no band below 6.0.",
+    "notes": "Confirmed via Notre Dame's official English-language-proficiency-requirements page, School of Law section, which sets a distinctly higher bar than the university-wide standard tier. The DB's English figure (6.5) was a serious understatement -- real Law entry requires 7.5 overall with a 7.5 writing floor. No published ATAR figure exists for this program; the 80-85 range appears invented."
+  },
+  {
+    "id": "a2ac0549-36ab-464d-8d56-1d143952f53f",
+    "name": "Bachelor of Physiotherapy",
+    "uni": "University of Notre Dame Australia",
+    "verdict": "corrected",
+    "real_admission_requirements": "No published ATAR figure was found for this program (desirable but not mandatory subjects are ATAR Biology, Mathematics Applications and Physical Education Studies); admission is competitive and holistic, and Tertiary Preparation Programs / VET qualifications are explicitly not accepted as pathways into this course.",
+    "real_english_requirements": "IELTS Academic overall 7.0, with no individual band score lower than 7.0, or equivalent (OET grade B in all sections; PTE Academic 65 with no band below 65; TOEFL iBT 94) -- School of Health Sciences tier, which is one of Notre Dame's explicit exceptions to the standard English requirement.",
+    "notes": "Confirmed via Notre Dame's official English-language-proficiency-requirements page, School of Health Sciences section, which lists Bachelor of Physiotherapy under a 7.0-overall/no-band-below-7.0 tier -- the DB's 'no band below 6.5' framing understated the real floor (all bands, not just the average, must reach 7.0). No specific ATAR (e.g. 85-90) could be verified on any live Notre Dame page; that figure could not be confirmed as real."
+  },
+  {
+    "id": "2365b858-7337-4e3a-b7d4-6f5af392f8a7",
+    "name": "Master of Business Administration",
+    "uni": "University of Notre Dame Australia",
+    "verdict": "corrected",
+    "real_admission_requirements": "A bachelor's degree from a recognised Australian or overseas university, plus a minimum of five years' relevant experience in managerial, supervisory or leadership roles; or a graduate diploma in a business discipline. Applicants without a bachelor's degree may still be considered where they have sufficient management/supervisory background, and Recognition of Prior Learning may be granted to applicants with no formal tertiary qualifications but at least 10 years' industry experience.",
+    "real_english_requirements": "IELTS Academic overall 6.5, with no other individual band score lower than 6.0, or equivalent (PTE Academic 58, TOEFL iBT 84) -- the standard postgraduate coursework tier, which the DB's recorded figure already matched.",
+    "notes": "Verified via Notre Dame's own MBA program page and English-language-proficiency page. The DB's English figure (6.5/no band below 6.0) was already accurate. However, the admission text was too vague/generic ('professional experience considered favourably') and omitted the real hard requirement of five years' managerial/supervisory/leadership experience (or a graduate diploma) that Notre Dame's own page specifies -- marked corrected to add that specificity, though the source_url (mbanews.com.au, a third-party aggregator) was not itself an official Notre Dame page."
+  },
+  {
+    "id": "32f42c7a-c0ff-4982-91a3-28dc8bf9e61c",
+    "name": "Doctor of Medicine",
+    "uni": "Flinders University",
+    "verdict": "corrected",
+    "real_admission_requirements": "Completed bachelor's degree (or near completion) with a GPA of 5.00 or higher, a valid GAMSAT score with a minimum of 50 in each section (taken within the last four years), and an interview; final ranking combines GAMSAT, degree GPA and interview performance.",
+    "real_english_requirements": "IELTS (Academic) overall score of 7.0 with a minimum of 7.0 in each of Listening, Reading, Writing and Speaking (or equivalent PTE/TOEFL under Flinders' Schedule 1 English requirements) \u2014 the standard health/clinical-program bar, not the generic postgrad bar.",
+    "notes": "Confirmed live at flinders.edu.au/study/courses/postgraduate-doctor-medicine: admission criteria (GPA 5.00, GAMSAT \u226550/section, interview) matched the DB text closely. But the English requirement was wrong \u2014 DB said IELTS 6.5/6.0, while Flinders' international MD entry (via the linked English-language-requirements schedule and MD international application guide) requires IELTS 7.0 overall with all bands at 7.0, consistent with Flinders' clinical/health-program tier (same tier as Nursing and Education below)."
+  },
+  {
+    "id": "65d31a0b-1845-41e6-8592-03cde91d6e32",
+    "name": "Bachelor of Nursing",
+    "uni": "Flinders University",
+    "verdict": "corrected",
+    "real_admission_requirements": "Guaranteed-entry ATAR of 70 (or equivalent via STAT 150, a GPA of 4.5 from prior higher-education study, or a Certificate IV or above from TAFE/VET); before clinical placements, students must also complete National Criminal and Relevant History Screenings, immunisation requirements and Basic Emergency Life Support training.",
+    "real_english_requirements": "IELTS (Academic) overall 7.0 with Writing at least 6.5 and Listening/Reading/Speaking at least 7.0 (or equivalent Pearson 63, TOEFL iBT, Cambridge, or OET for Nursing) \u2014 must be met before commencing study, not just for admission.",
+    "notes": "Found on flinders.edu.au/study/courses/bachelor-nursing-preregistration (the DB's generic /bachelor-of-nursing source_url doesn't specify pre-registration vs graduate-entry, but pre-registration is the standard undergraduate program matching the DB's Year-12-based description). DB's admission text omitted the actual ATAR figure (70) and DB's English text overstated the Writing band (said 'no band below 7.0'; the real bar allows Writing as low as 6.5)."
+  },
+  {
+    "id": "2c91be5b-53c2-437b-b1e0-a17b4b7b06ff",
+    "name": "Bachelor of Education (Primary)",
+    "uni": "Flinders University",
+    "verdict": "corrected",
+    "real_admission_requirements": "Guaranteed-entry ATAR of 75 (or equivalent via STAT 165, a GPA of 5.0, or an Advanced Diploma or above from TAFE/VET); all initial-teacher-education students must also pass the national Literacy and Numeracy Test for Initial Teacher Education (LANTITE) to graduate.",
+    "real_english_requirements": "IELTS (Academic) overall 7.0 with 7.0 in every band (Listening, Reading, Writing, Speaking), or Pearson (PTE) overall 65 \u2014 Flinders' teaching-degree bar, higher than the generic undergraduate bar.",
+    "notes": "Confirmed at flinders.edu.au/study/courses/bachelor-education-primary. DB's ATAR range (65-75) bracketed the real guaranteed-entry ATAR (75) but wasn't precise, and DB's English figure (6.5/6.0) was well below the real teaching-degree requirement (7.0 overall, all bands 7.0)."
+  },
+  {
+    "id": "f7a61f4c-77d0-40f4-b3a7-74ec09c7271c",
+    "name": "Bachelor of Nursing Science",
+    "uni": "University of the Sunshine Coast",
+    "verdict": "confirmed",
+    "real_admission_requirements": "Completion of Year 12 (or equivalent) via QTAC selection rank, with English, General/Maths Methods/Specialist Maths and at least one science subject recommended (not required) as prior study; National Police Check and immunisation/vaccination requirements apply before clinical placements; graduate entry available for applicants with a relevant bachelor's degree completed within the last 10 years.",
+    "real_english_requirements": "IELTS (Academic) overall 7.0 with no band below 7.0, or equivalent \u2014 required for AHPRA registration as a nurse.",
+    "notes": "Verified on unisc.edu.au's live Bachelor of Nursing Science page: Year-12/QTAC entry, recommended (not mandatory) prerequisite subjects, and the AHPRA-driven IELTS 7.0/7.0 bar all matched the DB text exactly. The specific ATAR figure ('approximately 65') could not be pinned to an exact digit \u2014 UniSC's page renders current-year thresholds via an interactive/JS widget not visible to static fetches, and QTAC's course-listing pages for this program returned 404s \u2014 but the qualitative admission and English text is real and program-specific, not fabricated boilerplate."
+  },
+  {
+    "id": "c9751452-ae58-493f-b2d2-14e9d2e8333e",
+    "name": "Bachelor of Sport and Exercise Science",
+    "uni": "University of the Sunshine Coast",
+    "verdict": "corrected",
+    "real_admission_requirements": "Completion of Year 12 (or equivalent) with a minimum entry threshold of ATAR/Selection Rank 50 (Sunshine Coast and Moreton Bay campuses); English, General Maths/Maths Methods/Specialist Maths, Biology and one additional science subject (Chemistry preferred) are recommended but not required.",
+    "real_english_requirements": "UniSC's standard undergraduate English requirement applies for admission, but graduates seeking ESSA (Exercise & Sport Science Australia) accreditation need the higher ESSA bar: IELTS (Academic) overall 7.0 with 7.0 in every band, TOEFL iBT 98 (Listening 24/Reading 24/Speaking 23/Writing 27), or PTE Academic overall 65 with 65 in each skill.",
+    "notes": "Verified on unisc.edu.au's live Bachelor of Sport and Exercise Science page, which explicitly states the minimum entry threshold is ATAR/Rank 50 \u2014 notably lower than the DB's 'approximately 60'. The DB's English figure (6.0 overall, no band below 6.0) is roughly UniSC's generic minimum, but the page's real emphasis is the much higher ESSA professional-accreditation bar, which the DB text didn't mention at all."
+  },
+  {
+    "id": "874bb2c8-207f-4473-bb8c-59e90f2d3534",
+    "name": "Master of Information and Communications Technology",
+    "uni": "University of the Sunshine Coast",
+    "verdict": "confirmed",
+    "real_admission_requirements": "Completion of a recognised bachelor's degree from a recognised higher-education institution (or equivalent), or successful completion of a Graduate Certificate in ICT or Graduate Certificate in Cyber Security; applicants with a Bachelor of ICT may qualify for up to 48 units of block credit.",
+    "real_english_requirements": "IELTS (Academic) overall 6.5 with no band below 6.0 \u2014 UniSC's standard postgraduate coursework bar (confirmed against comparable non-clinical UniSC postgraduate programs; nursing/clinical postgrad programs sit higher at 7.0).",
+    "notes": "The program's real page (unisc.edu.au/study/courses-and-programs/postgraduate-degrees/master-of-information-and-communications-technology) confirmed the bachelor's-degree admission text almost verbatim. The DB's source_url pointed to a general international fees page rather than the program page, so this was flagged unverified, but the actual program page exists and matches; English figure matches UniSC's standard (non-clinical) postgraduate IELTS bar, though the specific program page itself doesn't restate the number (it links out to the general English-requirements page)."
+  },
+  {
+    "id": "1f855e50-f506-45c4-8460-a9c9ed706306",
+    "name": "Master of Public Health",
+    "uni": "Griffith University",
+    "verdict": "confirmed",
+    "real_admission_requirements": "A recognised bachelor's degree (or higher) in a related field (e.g. Public Health, Allied Health, Medicine, Nursing, Psychology, Biomedical Health, Social Science), or a related Graduate Certificate/Graduate Diploma/Bachelor Honours degree.",
+    "real_english_requirements": "IELTS (Academic) overall 6.5.",
+    "notes": "The DB's source_url (griffith.edu.au/study/degrees/master-of-public-health, no degree code) 404s \u2014 the live program is at master-of-public-health-5263. Confirmed there (both domestic and international views): bachelor's-degree admission and IELTS 6.5 both match the DB text closely."
+  },
+  {
+    "id": "0846dfd9-46b7-40ab-94ab-2c4f8dfd623f",
+    "name": "Master of Information Technology",
+    "uni": "Griffith University",
+    "verdict": "confirmed",
+    "real_admission_requirements": "A recognised bachelor's degree (or higher) in any discipline, plus relevant work experience.",
+    "real_english_requirements": "IELTS (Academic) overall 6.5.",
+    "notes": "Confirmed on Griffith's live program page (griffith.edu.au/study/degrees/master-of-information-technology-5612), which lists entry requirements as 'IELTS (Academic) 6.5' + 'A recognised Bachelor degree (or higher)' + 'Relevant work experience'. Matches the DB text (DB omitted the work-experience preference but the bachelor's-degree/IELTS figures are correct)."
+  },
+  {
+    "id": "8350041f-8149-4a0f-86f1-27639066ed7b",
+    "name": "Bachelor of Engineering (Honours) in Software Engineering",
+    "uni": "University of Technology Sydney",
+    "verdict": "confirmed",
+    "real_admission_requirements": "Completion of Australian Year 12 (or equivalent) with a lowest selection rank of 84.5 (UTS: C09066); HSC Mathematics Extension 1, Physics and English Standard required, English Advanced recommended, and sound programming fundamentals recommended for the Software major.",
+    "real_english_requirements": "IELTS (Academic) overall 6.5, no band below 6.0 (or equivalent) \u2014 UTS's standard undergraduate international-entry bar.",
+    "notes": "Confirmed via uts.edu.au/courses/bachelor-of-engineering-honours-software, which lists 'Lowest selection rank 84.5'. DB's 'approximately 85-90' is close (rounds to the real 84.5) and the English figure matches UTS's standard published bar for undergraduate engineering."
+  },
+  {
+    "id": "11e673f2-e67e-4208-8c9e-bc145402ba54",
+    "name": "Bachelor of Communication (Honours)",
+    "uni": "University of Technology Sydney",
+    "verdict": "unverifiable",
+    "notes": "The DB's source_url (uts.edu.au/courses/bachelor-of-communication-honours) now resolves to UTS's 'Course not found' page. UTS has been suspending/discontinuing dozens of courses since 2025 as part of an announced academic restructure, and Communication is one of the affected areas; UTS's current live Communication offerings are all named 'Bachelor of Communication in [Major]' (e.g. Journalism, Media Business, Digital and Social Media, Public Relations and Advertising, Social and Political Sciences) with no standalone unnamed-major 'Bachelor of Communication (Honours)' page currently live. Since I can't confirm which specific major (if any) this DB row was meant to represent, or whether the program still exists under this name, admission/English figures should be nulled rather than guessed \u2014 this is a genuinely owed/stale row, not a simple typo fix."
+  },
+  {
+    "id": "c2e98bc9-488d-498a-a776-64bc7791a218",
+    "name": "Master of Education",
+    "uni": "Avondale University",
+    "verdict": "corrected",
+    "real_admission_requirements": "An Australian four-year Bachelor's degree in Education, a Bachelor's degree followed by a Diploma of Education, a Bachelor of Teaching, an Australian Graduate Certificate in Educational Studies, an Australian Master of Teaching, or an equivalent overseas qualification; applicants must also submit a resume/written summary showing at least two years of relevant work experience.",
+    "real_english_requirements": "IELTS overall 7.5 with no sub-band below 7.0 (or a recognised alternative under Avondale's Admission Policy, e.g. a prior qualification taught and assessed in English within the last two years in an approved English-speaking country).",
+    "notes": "Confirmed on the DB's own source_url (avondale.edu.au/courses/postgraduate/course-work/master-of-education). Admission text was broadly right but vague ('or relevant teaching experience' actually understates it \u2014 a qualifying degree AND 2 years' experience evidence are both required). The English figure was significantly wrong: DB said IELTS 6.5/6.0, but Avondale's real published bar for this course is IELTS 7.5 overall with no sub-band below 7.0 \u2014 much higher, consistent with it being a teaching/education postgraduate qualification."
+  },
+  {
+    "id": "ad6098ea-10b1-476d-b460-d4f7dcb2e502",
+    "name": "Master of Information Technology",
+    "uni": "Macquarie University",
+    "verdict": "confirmed",
+    "real_admission_requirements": "A bachelor's degree from a recognised institution, considered equivalent to an Australian bachelor's degree (AQF Level 7), in any discipline.",
+    "real_english_requirements": "IELTS (or IELTS equivalent) overall 6.5, with a minimum of 6.0 in each band.",
+    "notes": "The DB's source_url is an IDP listing rather than Macquarie's own site, so it was flagged unverified; but Macquarie's own official entry-requirements pages (mq.edu.au/study/admissions-and-entry/apply/international/international-academic-requirements and .../english-language-requirements) confirm exactly the DB's figures: bachelor's degree, any discipline, IELTS 6.5 overall / 6.0 per band."
+  },
+  {
+    "id": "65622bd6-8377-4621-be17-c626c8676c41",
+    "name": "Master of Theology",
+    "uni": "University of Divinity",
+    "verdict": "corrected",
+    "real_admission_requirements": "A Bachelor of Theology, Bachelor of Ministry, or Master of Divinity specifically (a Graduate Certificate or Graduate Diploma alone is explicitly insufficient); or enrolment in a BTheol/BMin at University of Divinity with at least 378 points completed, provided it is finished within 12 months of admission to the Master of Theology. Probationary admission is not available.",
+    "real_english_requirements": "English language proficiency is required per University of Divinity's Admissions Policy (Section 6), which applies to all coursework and HDR applicants, but the specific IELTS/TOEFL/PTE minimum scores are set out only in that policy document (not published on the course page itself), so a specific number cannot be confirmed from public program pages.",
+    "notes": "Confirmed on divinity.edu.au/courses/master-of-theology: the DB's 'bachelor's degree in theology or a related field' was too loose \u2014 the real requirement is specifically a Bachelor of Theology/Ministry or Master of Divinity (a generic 'related field' degree or a Grad Cert/Grad Dip does not qualify). Could not find a published program-specific IELTS number (only a reference to an internal Admissions Policy document); DB's 'IELTS 6.5 overall' figure is unverified and should probably be nulled rather than kept, even though the admission-criteria correction above is solid."
+  },
+  {
+    "id": "d8158c74-f3c4-4d9e-9430-cdd2b6e78da6",
+    "name": "Bachelor of Commerce (Applied)",
+    "uni": "Box Hill Institute",
+    "verdict": "confirmed",
+    "real_admission_requirements": "International students must have completed Australian Year 12 or an international equivalent with a pass; domestic recent-secondary-education applicants need VCE (or equivalent) with a study score of at least 20 in English units 3 & 4; alternative pathways exist via VET diploma, prior higher-education study, or relevant work/life experience, all assessed individually with an interview.",
+    "real_english_requirements": "IELTS (Academic) overall 6.0, no band below 5.5 (or approved equivalent).",
+    "notes": "Confirmed at the DB's own source_url (boxhill.edu.au/courses/bachelor-of-commerce-applied-bcom2-ihe/ \u2014 the international version of the course page). DB's admission and English text were both essentially correct; the only gap was the DB's English text omitting the 'no band below 5.5' detail, which is minor enough to still count as confirmed."
+  },
+  {
+    "id": "bc0a6b95-8e32-4661-aba8-e271c5a85bbb",
+    "name": "Master of Information Technology",
+    "uni": "Melbourne Institute of Technology",
+    "verdict": "unverifiable",
+    "notes": "MIT (Melbourne Institute of Technology) does not currently appear to offer a program literally named 'Master of Information Technology.' Its live IT/tech postgraduate offerings are Master of Networking, Master of ICT Research, Master of Technology (Software Engineering), Master of Business Analytics, and Master of Data Analytics \u2014 confirmed via MIT's own English-language-requirements page (mit.edu.au/study-with-us/institute-entry-requirement/english-language-requirements), which lists exact IELTS/TOEFL/PTE tables per named program and has no 'Master of Information Technology' row. The DB's source_url (a general tuition-fees page) doesn't name this program either. Rather than guess which real MIT program this was meant to represent, this should be nulled as owed."
+  },
+  {
+    "id": "3a6b2636-fd44-446e-a2e7-fd7482b6bd35",
+    "name": "Master of Business Administration",
+    "uni": "Holmes Institute",
+    "verdict": "corrected",
+    "real_admission_requirements": "An Australian bachelor's degree (or equivalent); or an Australian Graduate Diploma; or an Australian Graduate Certificate (or equivalent) plus a minimum of two years' demonstrable relevant industry experience; or an Advanced Diploma/Associate Degree (or equivalent) plus a minimum of five years' demonstrable relevant industry experience.",
+    "real_english_requirements": "IELTS overall 6.0 with no band below 5.5 (or equivalent \u2014 e.g. completed Year 12 in English at an Australian high school, or a prior Australian qualification passed at \u226550%).",
+    "notes": "The DB's source_url was a third-party aggregator (pickmyuni.com), not Holmes's own site; Holmes's real MBA page (holmes.edu.au/pages/schools-and-faculties/higher-education/courses/master-of-business-administration) gives a lower English bar than the DB stated: IELTS 6.0/5.5, not 6.5. (Note: Holmes's separate 'MBA (Professional)' variant requires IELTS 6.0 with no band below 6.0 \u2014 slightly different \u2014 but the plain 'Master of Business Administration' matching this row's name uses 6.0/5.5.) Admission text (degree-or-experience ladder) matches the DB's general description and is now stated precisely."
+  },
+  {
+    "id": "e2169714-5023-4dc2-a6e0-e112cf77905f",
+    "name": "Master of Business Administration",
+    "uni": "Australian Catholic University",
+    "verdict": "corrected",
+    "real_admission_requirements": "Equivalent of an Australian bachelor's degree in any discipline (a related-discipline degree may receive up to four units credit), or a Graduate Certificate in a related discipline. No minimum GPA or prior work experience is specified as an admission requirement.",
+    "real_english_requirements": "IELTS Academic 6.5 overall, no band below 6.0 (per ACU's English Language Proficiency requirements for international postgraduate applicants).",
+    "notes": "Verified against ACU's own 2026 Handbook page (acu.edu.au/handbook/handbook-2026/course/master-of-business-administration): real requirement is bachelor's degree any discipline OR grad cert, no work-experience requirement at all. DB's claim of 'typically with some professional work experience preferred' is not supported by ACU's published text -- fabricated addition. English figure (IELTS 6.5/no band <6.0) is corroborated by topuniversities.com scrape of ACU's own admissions page, so kept as-is."
+  },
+  {
+    "id": "62621c93-f0db-453a-abca-487ce62f0c2c",
+    "name": "Bachelor of Philosophy, Neuroscience, and Psychology",
+    "uni": "Australian National University",
+    "verdict": "confirmed",
+    "real_admission_requirements": "Selection rank of 97 guarantees admission (minimum unadjusted rank of 82 to be considered); an equivalent International Baccalaureate score is also accepted. Standard ANU program-specific requirements and English proficiency also apply.",
+    "real_english_requirements": "IELTS Academic overall 6.5, with no band below 6.0.",
+    "notes": "Visited programsandcourses.anu.edu.au/program/BPNP directly -- the live page shows 'SELECTION RANK 97' and guaranteed-entry rank of 97, exactly matching the DB's 'ATAR: 97'. This row's boilerplate text is ANU's own real program-specific admissions copy (verbatim), not fabricated."
+  },
+  {
+    "id": "4a6b9cb5-46ee-4ddd-83f6-559667a77d91",
+    "name": "Master of Information Technology",
+    "uni": "Melbourne Polytechnic",
+    "verdict": "confirmed",
+    "real_admission_requirements": "Minimum of a Bachelor's degree (AQF Level 7) in any area of study from a recognised institution.",
+    "real_english_requirements": "IELTS Academic 6.5 overall, with a minimum of 6.0 in each band (Melbourne Polytechnic's published Master's-level international English requirement).",
+    "notes": "Confirmed against melbournepolytechnic.edu.au course page ('Minimum of a Bachelor's degree in any area of study') and the official International Entry Requirements page's English table (Master's: IELTS 6.5 overall, min 6.0 per band). DB text matches closely."
+  },
+  {
+    "id": "6ce98a0d-6012-4b0c-8b40-18c5697052ef",
+    "name": "Master of Fine Arts (Directing)",
+    "uni": "National Institute of Dramatic Art (NIDA)",
+    "verdict": "corrected",
+    "real_admission_requirements": "A recognised Bachelor's degree (or equivalent), plus a successful audition or interview -- NIDA international applicants for all Master of Fine Arts courses must attend an audition or interview in Australia (a video interview may be available for non-Acting courses).",
+    "real_english_requirements": "IELTS Academic 7.0 overall, with no band score less than 6.0 (NIDA's published international English requirement for undergraduate and graduate courses).",
+    "notes": "NIDA's Admissions Policy PDFs (nida.edu.au/wp-content/uploads/Admissions-Policy...) and multiple NIDA course pages consistently state IELTS 7.0 (no band <6.0) for international students, not 6.5 as the DB claims -- corrected. Admission text (bachelor's + audition/interview) is accurate and confirmed via nida.edu.au/study/students/international-students/."
+  },
+  {
+    "id": "353ab41a-4536-454b-9610-27242405ad52",
+    "name": "Master of Business Administration",
+    "uni": "Kaplan Business School",
+    "verdict": "corrected",
+    "real_admission_requirements": "An Australian Bachelor Degree (or AQF Level 7 equivalent) in any discipline; alternatively, an Advanced Diploma or Associate Degree (AQF Level 6 equivalent) plus a minimum of two years' relevant industry experience.",
+    "real_english_requirements": "IELTS Academic overall 6.0, with not less than 6.0 in Speaking and Writing and 5.5 in Listening and Reading (KBS's published Bachelor/Postgraduate English entry requirement).",
+    "notes": "Verified via kbs.edu.au/admissions/entry-requirements/international-entry-requirements (Master: bachelor's degree OR AQF6 + 2 yrs experience) and kbs.edu.au/admissions/entry-requirements/english-entry-requirements. Real English bar for Bachelor/Postgraduate is IELTS 6.0 overall, not 6.5 as the DB states -- corrected. Admission requirement text was reasonably close and not fabricated."
+  },
+  {
+    "id": "46baaad9-6853-4288-a153-7e0660c3f61a",
+    "name": "Master of Information Technology",
+    "uni": "CQUniversity Australia",
+    "verdict": "corrected",
+    "real_admission_requirements": "A completed Bachelor's degree in any discipline from an Australian university or college, or equivalent (or a completed CQUniversity Graduate Diploma of Information Technology/Information Systems, or equivalent).",
+    "real_english_requirements": "IELTS Academic overall 6.0 (no band below 6.0), or equivalent (e.g. PTE Academic 54, TOEFL iBT 75) -- CQUniversity's standard postgraduate coursework English requirement.",
+    "notes": "Confirmed admission text via multiple aggregator scrapes of CQU's own course data (goingto.university, aruksworld.com) consistent with 'bachelor degree in any discipline'. English requirement figure widely reported (studyin.com.bd, gotouniversity) as IELTS 6.0, not 6.5 as DB states -- corrected. CQU's own English Requirements page confirms a standard bar with course-specific variations."
+  },
+  {
+    "id": "bfc1a6c7-dc3d-4ec3-9234-7e866bc84b64",
+    "name": "Bachelor of Nursing",
+    "uni": "TAFE Queensland",
+    "verdict": "confirmed",
+    "real_admission_requirements": "Academic Requirements: Successful completion of Year 12 (or equivalent); non-school-leavers need relevant work experience or a qualification indicating likely success. Post-admission requirements include immunisations/vaccinations, CPR/First Aid, Working with Children Check and other placement compliance checks.",
+    "real_english_requirements": "IELTS Academic 7.0 overall (TAFE Queensland notes nursing's English requirement is higher than the standard TAFE bar due to Nursing and Midwifery Board of Australia (NMBA) professional accreditation requirements).",
+    "notes": "Verified directly on tafeqld.edu.au/course/19/19195/bachelor-of-nursing. Page confirms Year 12 completion as academic entry, immunisation/health checks as post-admission requirements, and explicitly flags a higher English bar for accreditation reasons consistent with IELTS 7.0. DB text matches closely, no fabrication signal."
+  },
+  {
+    "id": "e61ee3b7-df31-45a2-886d-9fe906a3fa51",
+    "name": "Bachelor of Information Technology (Cyber & Network Security)",
+    "uni": "TAFE NSW",
+    "verdict": "confirmed",
+    "real_admission_requirements": "Academic Requirements: Year 12 or equivalent, plus a pass in Year 12 Mathematics or equivalent. Additional requirement: questionnaire, statement of purpose (300-400 words), and an online interview.",
+    "real_english_requirements": "Academic IELTS 6.5 with no band score lower than 6.0, or equivalent.",
+    "notes": "Verified directly on the live course page (tafensw.edu.au/international/courses/bachelor-of-information-technology-cyber-and-network-security--HE20624) via its Entry Requirements accordion. English figure matches DB exactly. Admission text in DB omits the Year 12 Maths prerequisite and interview/SOP requirement but is not fabricated -- just slightly incomplete."
+  },
+  {
+    "id": "109c63d4-89d7-4741-a0fa-4272ec92b9b9",
+    "name": "Master of Business Administration",
+    "uni": "Torrens University Australia",
+    "verdict": "confirmed",
+    "real_admission_requirements": "Undergraduate or postgraduate degree from any Australian university or equivalent; OR, for applicants without formal qualifications, five years' work experience (of which three years must be managerial).",
+    "real_english_requirements": "IELTS Academic 6.5 overall (Torrens' published postgraduate/MBA international English requirement).",
+    "notes": "Verified via torrens.edu.au/courses/business/master-of-business-administration-mba admission criteria section, plus multiple third-party confirmations (ielts.international) of IELTS 6.5 for Torrens postgraduate entry. DB text reasonably matches; no fabrication."
+  },
+  {
+    "id": "0aa8573a-e4c8-4653-a56c-a03bda3bb5a9",
+    "name": "Master of Information Technology",
+    "uni": "Southern Cross University",
+    "verdict": "confirmed",
+    "real_admission_requirements": "Qualification equivalent to an Australian Bachelor degree (postgraduate entry); applicants without a degree but with substantial relevant work experience may also be considered for admission to a Masters.",
+    "real_english_requirements": "IELTS Academic 6.5 overall, no band below 6.0 (SCU's general postgraduate coursework tier; Master of Information Technology is not listed among SCU's named English-requirement exceptions, which include the differently-scored Master of Computing at 6.5 overall with no per-band floor).",
+    "notes": "Verified via scu.edu.au admission-requirements and english-language-requirements pages. Admission text matches SCU's general postgraduate rule closely. English figure is the standard tier and not contradicted by SCU's course-specific variations table, so treated as accurate rather than fabricated."
+  },
+  {
+    "id": "c06407ab-c724-4d66-aaa7-421f3aa5c07b",
+    "name": "Master of Materials Technology",
+    "uni": "UNSW Sydney",
+    "verdict": "confirmed",
+    "real_admission_requirements": "Same as DB text -- verbatim match to UNSW's own Handbook entry requirement (WAM 65 in a cognate discipline, or WAM 50-65 plus ~5 years' relevant professional experience, or an Honours degree, or a Graduate Certificate/Diploma in Materials Science with WAM 65).",
+    "real_english_requirements": "IELTS Academic overall 6.5 (minimum 6.0 in each band); PTE Academic 64 overall; UNSW also accepts TOEFL iBT, Cambridge C1 Advanced/C2 Proficiency, and its own UNSW College pathway programs.",
+    "notes": "DB's admission text is an exact match to UNSW's Handbook page (handbook.unsw.edu.au/postgraduate/programs/2024/8717), confirmed via search snippet showing identical wording. This is real, program-specific, currently-published UNSW text, not fabricated."
+  },
+  {
+    "id": "6961fce0-3fed-4c6c-8e79-35a9b24b6b63",
+    "name": "Master of Business Administration",
+    "uni": "Australian Institute of Business",
+    "verdict": "confirmed",
+    "real_admission_requirements": "Bachelor's degree (AQF Level 7) or equivalent in any discipline (or an AQF Level 8 qualification, or AIB's own Graduate Certificate in Management); applicants must also have at least 3 years of relevant work experience (mandatory, not merely preferred).",
+    "real_english_requirements": "IELTS Academic 6.5 or better with no individual band lower than 6.0 (or equivalent TOEFL/PTE/Cambridge score).",
+    "notes": "Verified on aib.edu.au/courses/online-mba/mba-entry-requirements/. English figure is an exact match. Admission text is close, though AIB's real policy makes the 3-years'-experience a mandatory criterion rather than merely 'preferred' as the DB phrases it -- a minor softening, not a fabrication, so left as confirmed."
+  },
+  {
+    "id": "8a22f798-fb1a-46c1-ad8b-0144c2b5714b",
+    "name": "Master of Music",
+    "uni": "Australian Institute of Music",
+    "verdict": "corrected",
+    "real_admission_requirements": "A recognised Bachelor's degree plus relevant professional experience in the music industry (or, without a bachelor's degree, admission may be offered on the basis of extensive professional experience). Applicants must also attend an interview or live audition and submit a portfolio of two contrasting pieces (digital or live) in their area of interest.",
+    "real_english_requirements": "IELTS Academic 6.5 overall, with no band below 6.0 (AIM's published postgraduate/Master's English requirement).",
+    "notes": "Verified on aim.edu.au/how-to-apply/international/entry-requirements-aim/. Admission text (bachelor's + audition/portfolio) matches DB closely. However DB's English figure of IELTS 6.0 is AIM's undergraduate bar, not postgraduate -- the real Master's requirement is 6.5 overall/6.0 per band, also independently confirmed via the British Council's IELTS org listing for AIM. Corrected."
+  },
+  {
+    "id": "accd1e2b-152c-4e76-9614-e2da68cb1399",
+    "name": "Master of International Business",
+    "uni": "International College of Management, Sydney",
+    "verdict": "confirmed",
+    "real_admission_requirements": "Bachelor's degree from an Australian institution or overseas equivalent (typically with a minimum GPA benchmark), consistent with ICMS's general Master's-level academic entry criteria.",
+    "real_english_requirements": "IELTS Academic 6.5 overall, no band below 6.0 (ICMS's published English Language Proficiency Requirement for Master's courses, which explicitly lists Master of International Business).",
+    "notes": "Verified on icms.edu.au postgraduate-requirements page: the Master's-course English proficiency table (which explicitly includes Master of International Business among the listed programs) shows IELTS 6.5 overall/6.0 per band, matching DB exactly. Academic requirement generalized from the closely-related MBA criteria shown on the same page (bachelor's degree with GPA 3.0/5, or equivalent pathways)."
+  },
+  {
+    "id": "85c4f4f8-a1ec-4846-aa0d-10fdf1661e10",
+    "name": "Master of International Hospitality Entrepreneurship",
+    "uni": "William Angliss Institute",
+    "verdict": "corrected",
+    "real_admission_requirements": "Successful completion of a Bachelor's degree equivalent to AQF Level 7 in a related field (Hospitality, Tourism, Culinary Arts or Hotel Management) -- not an 'any discipline' bachelor's degree as the DB states.",
+    "real_english_requirements": "IELTS Academic 6.5 overall (or equivalent), per William Angliss Institute's published postgraduate English requirement.",
+    "notes": "Multiple independent aggregator confirmations (IDP, studiesinaustralia.com, dokonnect.com) of the exact requirement wording: 'Successful completion of a Bachelor Degree equivalent to AQF level 7 in a related field (Hospitality, Tourism, Culinary or Hotel Management)'. The DB's 'any discipline' framing contradicts this specific real requirement -- corrected. English figure (IELTS 6.5) is independently confirmed and unchanged."
+  },
+  {
+    "id": "280ee747-d1a6-4c40-846d-c70fe79605b0",
+    "name": "Master of Applied Information Technology",
+    "uni": "Victoria University",
+    "verdict": "corrected",
+    "real_admission_requirements": "A Bachelor's degree in Information Technology or a closely related/cognate field -- VU's own course page states the program is 'designed to provide advanced training for students with an IT degree', and third-party sources confirm it is for applicants who already hold an IT-related degree, not any discipline.",
+    "real_english_requirements": "IELTS Academic 6.5 overall, no band below 6.0 (VU's standard Master's-level international English requirement).",
+    "notes": "vu.edu.au course page explicitly frames the course as being 'for students with an IT degree', and an independent source (edvia.ai) states it is 'designed for students who already hold an IT-related degree'. This contradicts the DB's hedge of 'relevant OR any discipline' -- the real requirement is specifically IT/cognate. English figure is VU's standard published Masters bar and is not contradicted by anything found, so left unchanged."
+  },
+  {
+    "id": "2809fa4b-ab76-493d-87d0-43d71d4a8f4d",
+    "name": "Master of Professional Information Technology",
+    "uni": "Charles Sturt University",
+    "verdict": "confirmed",
+    "real_admission_requirements": "A completed Bachelor's degree or higher from a recognised Australian tertiary institution (or equivalent), in any discipline. Applicants without an equivalent tertiary qualification can enter via the Graduate Diploma in Professional Information Technology pathway.",
+    "real_english_requirements": "Standard Charles Sturt University English Language Proficiency (ELP) requirements apply for this course, consistent with CSU's typical published postgraduate coursework bar of IELTS Academic 6.5 overall, no band below 6.0.",
+    "notes": "Verified directly on study.csu.edu.au/international/courses/master-professional-information-technology via its Academic entry requirements and Language requirements tabs. Admission text matches DB closely (bachelor's degree, any discipline, no cognate restriction). English tab only says 'standard ELP requirements apply' without a course-specific override, consistent with DB's stated figure."
+  }
+]

@@ -1,0 +1,954 @@
+[
+  {
+    "id": "17bb3518-3bcb-4c71-b4c2-63205f170144",
+    "uni": "Flinders University",
+    "name": "Bachelor of Engineering (Honours)",
+    "admission_requirements": "Completion of Year 12 (Australian Senior Secondary Certificate) or equivalent, ATAR approx. 70-85 for competitive entry (approximate, typical bar)",
+    "english_requirements": "IELTS 6.5 overall, no band below 6.0 (approximate, typical bar)",
+    "source_url": "https://www.flinders.edu.au/study/courses/bachelor-of-engineering-honours"
+  },
+  {
+    "id": "f7421760-88e5-4c15-9932-1ca19f2ca110",
+    "uni": "Flinders University",
+    "name": "Bachelor of Laws (Honours)",
+    "admission_requirements": "Completion of Year 12 (Australian Senior Secondary Certificate) or equivalent, ATAR approx. 70-85 for competitive entry (approximate, typical bar)",
+    "english_requirements": "IELTS 6.5 overall, no band below 6.0 (approximate, typical bar)",
+    "source_url": "https://www.flinders.edu.au/study/courses/bachelor-of-laws-honours"
+  },
+  {
+    "id": "06b8866a-189c-48f3-8bd9-e46b9cc910d3",
+    "uni": "Flinders University",
+    "name": "Bachelor of Psychology (Honours)",
+    "admission_requirements": "Completion of Year 12 (Australian Senior Secondary Certificate) or equivalent, ATAR approx. 70-85 for competitive entry (approximate, typical bar)",
+    "english_requirements": "IELTS 6.5 overall, no band below 6.0 (approximate, typical bar)",
+    "source_url": "https://www.flinders.edu.au/study/courses/bachelor-of-psychology-honours"
+  },
+  {
+    "id": "4d2be030-04e9-47b5-9ccb-a05da6f457b2",
+    "uni": "Flinders University",
+    "name": "Master of Social Work",
+    "admission_requirements": "Relevant bachelor's degree (or equivalent); some programs consider work experience in lieu (approximate, typical bar)",
+    "english_requirements": "IELTS 6.5 overall, no band below 6.0 (approximate, typical bar)",
+    "source_url": "https://www.flinders.edu.au/study/courses/master-of-social-work"
+  },
+  {
+    "id": "b4459753-0bae-4db0-8f3a-fca34e375732",
+    "uni": "Flinders University",
+    "name": "Master of Business Administration",
+    "admission_requirements": "Relevant bachelor's degree (or equivalent); some programs consider work experience in lieu (approximate, typical bar)",
+    "english_requirements": "IELTS 6.5 overall, no band below 6.0 (approximate, typical bar)",
+    "source_url": "https://www.flinders.edu.au/study/courses/master-of-business-administration"
+  },
+  {
+    "id": "ccdce6b3-88aa-4380-ab71-83ce1a8e08ec",
+    "uni": "Flinders University",
+    "name": "Bachelor of Science (Marine Biology)",
+    "admission_requirements": "Completion of Year 12 (Australian Senior Secondary Certificate) or equivalent, ATAR approx. 65-75 (approximate, typical bar)",
+    "english_requirements": "IELTS 6.0 overall, no band below 6.0 (approximate, typical bar)",
+    "source_url": "https://www.flinders.edu.au/study/courses/bachelor-of-science-marine-biology"
+  },
+  {
+    "id": "427f3da9-b0af-48dc-a294-b75fd1754df5",
+    "uni": "Flinders University",
+    "name": "Bachelor of Health Sciences",
+    "admission_requirements": "Completion of Year 12 (Australian Senior Secondary Certificate) or equivalent, ATAR approx. 65-75 (approximate, typical bar)",
+    "english_requirements": "IELTS 6.0 overall, no band below 6.0 (approximate, typical bar)",
+    "source_url": "https://www.flinders.edu.au/study/courses/bachelor-of-health-sciences"
+  },
+  {
+    "id": "13fb5285-c465-434b-8e3b-69cbf5a0419d",
+    "uni": "Flinders University",
+    "name": "Bachelor of Archaeology",
+    "admission_requirements": "Completion of Year 12 (Australian Senior Secondary Certificate) or equivalent, ATAR approx. 65-75 (approximate, typical bar)",
+    "english_requirements": "IELTS 6.0 overall, no band below 6.0 (approximate, typical bar)",
+    "source_url": "https://www.flinders.edu.au/study/courses/bachelor-of-archaeology"
+  },
+  {
+    "id": "6c73157a-8244-45db-9ee6-7bbea216cdb4",
+    "uni": "Murdoch University",
+    "name": "Bachelor of Psychology",
+    "admission_requirements": "ATAR of approximately 70-75 (or equivalent); completion of WACE or equivalent secondary qualification.",
+    "english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
+    "source_url": "https://www.murdoch.edu.au/study/courses"
+  },
+  {
+    "id": "e074dcf1-9457-4f1d-af83-f08f01a49067",
+    "uni": "Murdoch University",
+    "name": "Bachelor of Psychology / Bachelor of Criminology",
+    "admission_requirements": "ATAR of approximately 70-75 (or equivalent); completion of WACE or equivalent secondary qualification.",
+    "english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
+    "source_url": "https://www.murdoch.edu.au/study/courses"
+  },
+  {
+    "id": "7ee6dfa4-5dba-4c2d-be29-c1807202d7f9",
+    "uni": "Murdoch University",
+    "name": "Bachelor of Laws / Bachelor of Science",
+    "admission_requirements": "ATAR of approximately 80+ (or equivalent); completion of WACE or equivalent secondary qualification.",
+    "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
+    "source_url": "https://www.murdoch.edu.au/study/courses"
+  },
+  {
+    "id": "1e3b8938-1092-4510-b979-06210ed3b52b",
+    "uni": "Murdoch University",
+    "name": "Bachelor of Laws / Bachelor of Forensic Science",
+    "admission_requirements": "ATAR of approximately 80+ (or equivalent); completion of WACE or equivalent secondary qualification.",
+    "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
+    "source_url": "https://www.murdoch.edu.au/study/courses"
+  },
+  {
+    "id": "29b40417-32e9-4c0d-a799-b6b96f19b31f",
+    "uni": "Murdoch University",
+    "name": "Bachelor of Laws / Bachelor of Psychology",
+    "admission_requirements": "ATAR of approximately 80+ (or equivalent); completion of WACE or equivalent secondary qualification.",
+    "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
+    "source_url": "https://www.murdoch.edu.au/study/courses"
+  },
+  {
+    "id": "ee895e73-a756-43d2-9ab2-72ea3b1df5e9",
+    "uni": "Murdoch University",
+    "name": "Bachelor of Laws / Bachelor of Communication",
+    "admission_requirements": "ATAR of approximately 80+ (or equivalent); completion of WACE or equivalent secondary qualification.",
+    "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
+    "source_url": "https://www.murdoch.edu.au/study/courses"
+  },
+  {
+    "id": "91ce7a67-060c-4263-84e3-cd37aa69825d",
+    "uni": "Murdoch University",
+    "name": "Bachelor of Laws / Bachelor of Global Security",
+    "admission_requirements": "ATAR of approximately 80+ (or equivalent); completion of WACE or equivalent secondary qualification.",
+    "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
+    "source_url": "https://www.murdoch.edu.au/study/courses"
+  },
+  {
+    "id": "56b6c012-93fd-48b9-b3d5-7791fbffc83c",
+    "uni": "Murdoch University",
+    "name": "Bachelor of Laws / Bachelor of Information Technology",
+    "admission_requirements": "ATAR of approximately 80+ (or equivalent); completion of WACE or equivalent secondary qualification.",
+    "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
+    "source_url": "https://www.murdoch.edu.au/study/courses"
+  },
+  {
+    "id": "35546adf-4f36-4e32-b6a3-446fe0d4ac2b",
+    "uni": "Murdoch University",
+    "name": "Bachelor of Laws / Bachelor of Biomedical Science",
+    "admission_requirements": "ATAR of approximately 80+ (or equivalent); completion of WACE or equivalent secondary qualification.",
+    "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
+    "source_url": "https://www.murdoch.edu.au/study/courses"
+  },
+  {
+    "id": "5b4d8b33-3b8b-4bb7-b098-fb6cea765808",
+    "uni": "Murdoch University",
+    "name": "Bachelor of Laws / Bachelor of Arts",
+    "admission_requirements": "ATAR of approximately 80+ (or equivalent); completion of WACE or equivalent secondary qualification.",
+    "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
+    "source_url": "https://www.murdoch.edu.au/study/courses"
+  },
+  {
+    "id": "746c9de8-f584-456e-b83a-a468d4105c1c",
+    "uni": "Murdoch University",
+    "name": "Bachelor of Laws / Bachelor of Criminology",
+    "admission_requirements": "ATAR of approximately 80+ (or equivalent); completion of WACE or equivalent secondary qualification.",
+    "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
+    "source_url": "https://www.murdoch.edu.au/study/courses"
+  },
+  {
+    "id": "16369ce0-0f96-491a-a4d2-abfd809730d3",
+    "uni": "Murdoch University",
+    "name": "Bachelor of Laws",
+    "admission_requirements": "ATAR of approximately 80+ (or equivalent); completion of WACE or equivalent secondary qualification.",
+    "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
+    "source_url": "https://www.murdoch.edu.au/study/courses"
+  },
+  {
+    "id": "a5078544-09f6-49d9-87fb-f04a2d8c6346",
+    "uni": "Murdoch University",
+    "name": "Bachelor of Laws / Bachelor of Business",
+    "admission_requirements": "ATAR of approximately 80+ (or equivalent); completion of WACE or equivalent secondary qualification.",
+    "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
+    "source_url": "https://www.murdoch.edu.au/study/courses"
+  },
+  {
+    "id": "7881e7aa-af20-422b-85c3-c3a783d00e13",
+    "uni": "Murdoch University",
+    "name": "Bachelor of Laws Honours / Bachelor of Global Security",
+    "admission_requirements": "Completion of the corresponding pass degree (or equivalent) with a minimum GPA of approximately 5.5/7.0, or direct entry with an ATAR of approximately 80+ for high-achieving Year 12 entrants.",
+    "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
+    "source_url": "https://www.murdoch.edu.au/study/courses"
+  },
+  {
+    "id": "056a7c1a-4b4b-4007-b512-576ff9aaa59a",
+    "uni": "Murdoch University",
+    "name": "Bachelor of Laws Honours / Bachelor of Psychology",
+    "admission_requirements": "Completion of the corresponding pass degree (or equivalent) with a minimum GPA of approximately 5.5/7.0, or direct entry with an ATAR of approximately 80+ for high-achieving Year 12 entrants.",
+    "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
+    "source_url": "https://www.murdoch.edu.au/study/courses"
+  },
+  {
+    "id": "a7e4e123-6799-49b0-821d-3e1b4681b81e",
+    "uni": "Murdoch University",
+    "name": "Bachelor of Laws Honours / Bachelor of Criminology",
+    "admission_requirements": "Completion of the corresponding pass degree (or equivalent) with a minimum GPA of approximately 5.5/7.0, or direct entry with an ATAR of approximately 80+ for high-achieving Year 12 entrants.",
+    "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
+    "source_url": "https://www.murdoch.edu.au/study/courses"
+  },
+  {
+    "id": "150cc661-5dfd-417a-889f-8a997b726e4e",
+    "uni": "Murdoch University",
+    "name": "Bachelor of Laws Honours / Bachelor of Communication",
+    "admission_requirements": "Completion of the corresponding pass degree (or equivalent) with a minimum GPA of approximately 5.5/7.0, or direct entry with an ATAR of approximately 80+ for high-achieving Year 12 entrants.",
+    "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
+    "source_url": "https://www.murdoch.edu.au/study/courses"
+  },
+  {
+    "id": "68851b35-5866-4b96-9a8d-89a2e3eb7d67",
+    "uni": "Murdoch University",
+    "name": "Bachelor of Sport and Exercise Science / Master of Clinical Exercise Physiology",
+    "admission_requirements": "ATAR of approximately 65-70 (or equivalent); completion of WACE or equivalent secondary qualification.",
+    "english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
+    "source_url": "https://www.murdoch.edu.au/study/courses"
+  },
+  {
+    "id": "8220c3eb-5f78-45f4-a486-dd9973500bb1",
+    "uni": "Murdoch University",
+    "name": "Bachelor of Sport and Exercise Science / Master of High Performance Sport",
+    "admission_requirements": "ATAR of approximately 65-70 (or equivalent); completion of WACE or equivalent secondary qualification.",
+    "english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
+    "source_url": "https://www.murdoch.edu.au/study/courses"
+  },
+  {
+    "id": "fa3622c9-10d8-46d5-ab54-156aecffedaf",
+    "uni": "Murdoch University",
+    "name": "Bachelor of Criminology / Bachelor of Science",
+    "admission_requirements": "ATAR of approximately 65-70 (or equivalent); completion of WACE or equivalent secondary qualification.",
+    "english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
+    "source_url": "https://www.murdoch.edu.au/study/courses"
+  },
+  {
+    "id": "effcb74d-f0a0-4357-ad99-d7b194deccc1",
+    "uni": "Murdoch University",
+    "name": "Bachelor of Business / Bachelor of Entrepreneurship and Innovation",
+    "admission_requirements": "ATAR of approximately 65-70 (or equivalent); completion of WACE or equivalent secondary qualification.",
+    "english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
+    "source_url": "https://www.murdoch.edu.au/study/courses"
+  },
+  {
+    "id": "b1a6914d-832b-418a-b086-96258aa9efec",
+    "uni": "Murdoch University",
+    "name": "Bachelor of Sport and Exercise Science / Bachelor of Business",
+    "admission_requirements": "ATAR of approximately 65-70 (or equivalent); completion of WACE or equivalent secondary qualification.",
+    "english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
+    "source_url": "https://www.murdoch.edu.au/study/courses"
+  },
+  {
+    "id": "6d915f4e-3e75-4039-8a8d-ca21dff07e84",
+    "uni": "Murdoch University",
+    "name": "Bachelor of Criminology / Bachelor of Global Security",
+    "admission_requirements": "ATAR of approximately 65-70 (or equivalent); completion of WACE or equivalent secondary qualification.",
+    "english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
+    "source_url": "https://www.murdoch.edu.au/study/courses"
+  },
+  {
+    "id": "ddaa99cb-f992-4d3f-ae18-225d353190b7",
+    "uni": "Murdoch University",
+    "name": "Bachelor of Science",
+    "admission_requirements": "ATAR of approximately 65-70 (or equivalent); completion of WACE or equivalent secondary qualification.",
+    "english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
+    "source_url": "https://www.murdoch.edu.au/study/courses"
+  },
+  {
+    "id": "b441f14e-9ce7-4e89-87aa-32e984149c6e",
+    "uni": "Murdoch University",
+    "name": "Bachelor of Business",
+    "admission_requirements": "ATAR of approximately 65-70 (or equivalent); completion of WACE or equivalent secondary qualification.",
+    "english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
+    "source_url": "https://www.murdoch.edu.au/study/courses"
+  },
+  {
+    "id": "18299d2d-e181-4154-b412-14d14a3c8e02",
+    "uni": "Murdoch University",
+    "name": "Bachelor of Health Science / Master of Clinical Chiropractic",
+    "admission_requirements": "ATAR of approximately 65-70 (or equivalent); completion of WACE or equivalent secondary qualification.",
+    "english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
+    "source_url": "https://www.murdoch.edu.au/study/courses"
+  },
+  {
+    "id": "d8fd4a14-3867-4067-8934-c63cf07c589a",
+    "uni": "Murdoch University",
+    "name": "Bachelor of Criminology / Bachelor of Forensic Science",
+    "admission_requirements": "ATAR of approximately 65-70 (or equivalent); completion of WACE or equivalent secondary qualification.",
+    "english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
+    "source_url": "https://www.murdoch.edu.au/study/courses"
+  },
+  {
+    "id": "8d7f2c33-9930-4d4c-9e88-5191f2bf1c6f",
+    "uni": "Murdoch University",
+    "name": "Bachelor of Communication / Bachelor of Creative Media",
+    "admission_requirements": "ATAR of approximately 65-70 (or equivalent); completion of WACE or equivalent secondary qualification.",
+    "english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
+    "source_url": "https://www.murdoch.edu.au/study/courses"
+  },
+  {
+    "id": "4cea1dd5-6e60-4804-bdcd-6fe648a0a18c",
+    "uni": "Murdoch University",
+    "name": "Bachelor of Criminology / Bachelor of Communication",
+    "admission_requirements": "ATAR of approximately 65-70 (or equivalent); completion of WACE or equivalent secondary qualification.",
+    "english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
+    "source_url": "https://www.murdoch.edu.au/study/courses"
+  },
+  {
+    "id": "d1e0f7af-d985-49cd-9a88-5a10a82d814f",
+    "uni": "Murdoch University",
+    "name": "Bachelor of Sport and Exercise Science / Bachelor of Psychology",
+    "admission_requirements": "ATAR of approximately 65-70 (or equivalent); completion of WACE or equivalent secondary qualification.",
+    "english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
+    "source_url": "https://www.murdoch.edu.au/study/courses"
+  },
+  {
+    "id": "2c2f271b-231b-47b5-851a-945a90a1da56",
+    "uni": "Murdoch University",
+    "name": "Bachelor of Information Technology",
+    "admission_requirements": "ATAR of approximately 65-70 (or equivalent); completion of WACE or equivalent secondary qualification.",
+    "english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
+    "source_url": "https://www.murdoch.edu.au/study/courses"
+  },
+  {
+    "id": "0796d0b3-88a8-40ba-a615-2175c4a0c6f1",
+    "uni": "International College of Management, Sydney",
+    "name": "Bachelor of Event Management",
+    "admission_requirements": "Completion of Year 12 (Australian Senior Secondary Certificate) or equivalent, ATAR approx. 65-75 (approximate, typical bar)",
+    "english_requirements": "IELTS 6.0 overall, no band below 6.0 (approximate, typical bar)",
+    "source_url": "https://www.icms.edu.au/"
+  },
+  {
+    "id": "7d4a45f6-a15b-4dcc-881a-82f486ae2c84",
+    "uni": "International College of Management, Sydney",
+    "name": "Bachelor of International Tourism and Hospitality Management",
+    "admission_requirements": "Completion of Year 12 (Australian Senior Secondary Certificate) or equivalent, ATAR approx. 65-75 (approximate, typical bar)",
+    "english_requirements": "IELTS 6.0 overall, no band below 6.0 (approximate, typical bar)",
+    "source_url": "https://www.icms.edu.au/"
+  },
+  {
+    "id": "0b0f5c0b-472e-427c-8b84-cf6eedc984e1",
+    "uni": "International College of Management, Sydney",
+    "name": "Bachelor of Business (Accounting)",
+    "admission_requirements": "Completion of Year 12 (Australian Senior Secondary Certificate) or equivalent, ATAR approx. 65-75 (approximate, typical bar)",
+    "english_requirements": "IELTS 6.0 overall, no band below 6.0 (approximate, typical bar)",
+    "source_url": "https://www.icms.edu.au/"
+  },
+  {
+    "id": "0507514a-717f-44a8-a045-8d5967ffb053",
+    "uni": "International College of Management, Sydney",
+    "name": "Bachelor of Business (Property)",
+    "admission_requirements": "Completion of Year 12 (Australian Senior Secondary Certificate) or equivalent, ATAR approx. 65-75 (approximate, typical bar)",
+    "english_requirements": "IELTS 6.0 overall, no band below 6.0 (approximate, typical bar)",
+    "source_url": "https://www.icms.edu.au/"
+  },
+  {
+    "id": "09751537-de55-4eb2-8d86-0d42022d133b",
+    "uni": "International College of Management, Sydney",
+    "name": "Bachelor of Fashion and Global Brand Management",
+    "admission_requirements": "Completion of Year 12 (Australian Senior Secondary Certificate) or equivalent, ATAR approx. 65-75 (approximate, typical bar)",
+    "english_requirements": "IELTS 6.0 overall, no band below 6.0 (approximate, typical bar)",
+    "source_url": "https://www.icms.edu.au/"
+  },
+  {
+    "id": "ea9f613e-8f42-4ead-a698-831511e58712",
+    "uni": "International College of Management, Sydney",
+    "name": "Bachelor of Business (Marketing)",
+    "admission_requirements": "Completion of Year 12 (Australian Senior Secondary Certificate) or equivalent, ATAR approx. 65-75 (approximate, typical bar)",
+    "english_requirements": "IELTS 6.0 overall, no band below 6.0 (approximate, typical bar)",
+    "source_url": "https://www.icms.edu.au/"
+  },
+  {
+    "id": "c57797be-7ede-46b6-b397-9470f73be22d",
+    "uni": "International College of Management, Sydney",
+    "name": "Bachelor of International Hotel and Resort Management",
+    "admission_requirements": "Completion of Year 12 (Australian Senior Secondary Certificate) or equivalent, ATAR approx. 65-75 (approximate, typical bar)",
+    "english_requirements": "IELTS 6.0 overall, no band below 6.0 (approximate, typical bar)",
+    "source_url": "https://www.icms.edu.au/"
+  },
+  {
+    "id": "f7a8afac-00bb-4c32-acce-edc012bb8f32",
+    "uni": "International College of Management, Sydney",
+    "name": "Bachelor of Business (Sports Management)",
+    "admission_requirements": "Completion of Year 12 (Australian Senior Secondary Certificate) or equivalent, ATAR approx. 65-75 (approximate, typical bar)",
+    "english_requirements": "IELTS 6.0 overall, no band below 6.0 (approximate, typical bar)",
+    "source_url": "https://www.icms.edu.au/"
+  },
+  {
+    "id": "e483f35b-5fc0-42d9-97a1-f30f1fcc3a65",
+    "uni": "International College of Management, Sydney",
+    "name": "Master of Event Management",
+    "admission_requirements": "Relevant bachelor's degree (or equivalent); some programs consider work experience in lieu (approximate, typical bar)",
+    "english_requirements": "IELTS 6.5 overall, no band below 6.0 (approximate, typical bar)",
+    "source_url": "https://www.icms.edu.au/"
+  },
+  {
+    "id": "7904a854-e9b7-4ffb-8b5e-6cd966967425",
+    "uni": "International College of Management, Sydney",
+    "name": "Master of Business Administration",
+    "admission_requirements": "Relevant bachelor's degree (or equivalent); some programs consider work experience in lieu (approximate, typical bar)",
+    "english_requirements": "IELTS 6.5 overall, no band below 6.0 (approximate, typical bar)",
+    "source_url": "https://www.icms.edu.au/"
+  },
+  {
+    "id": "7bb92d1e-446b-4ac2-a02e-47abd904fdb2",
+    "uni": "Holmes Institute",
+    "name": "Graduate Diploma of Business",
+    "admission_requirements": "Relevant bachelor's degree (or equivalent); some programs consider work experience in lieu (approximate, typical bar)",
+    "english_requirements": "IELTS 6.5 overall, no band below 6.0 (approximate, typical bar)",
+    "source_url": "https://www.holmes.edu.au/"
+  },
+  {
+    "id": "70b93527-d01f-4ff0-87be-833df9d618c3",
+    "uni": "Holmes Institute",
+    "name": "Master of Business Administration (Professional)",
+    "admission_requirements": "Relevant bachelor's degree (or equivalent); some programs consider work experience in lieu (approximate, typical bar)",
+    "english_requirements": "IELTS 6.5 overall, no band below 6.0 (approximate, typical bar)",
+    "source_url": "https://www.holmes.edu.au/"
+  },
+  {
+    "id": "38cd532c-0bd2-4bbc-a937-1f9cb386c701",
+    "uni": "Holmes Institute",
+    "name": "Master of Professional Accounting",
+    "admission_requirements": "Relevant bachelor's degree (or equivalent); some programs consider work experience in lieu (approximate, typical bar)",
+    "english_requirements": "IELTS 6.5 overall, no band below 6.0 (approximate, typical bar)",
+    "source_url": "https://www.holmes.edu.au/"
+  },
+  {
+    "id": "89a1762b-0b9b-498a-93f4-cbba34e19dbc",
+    "uni": "Holmes Institute",
+    "name": "Bachelor of Fashion Business",
+    "admission_requirements": "Completion of Year 12 (Australian Senior Secondary Certificate) or equivalent, ATAR approx. 65-75 (approximate, typical bar)",
+    "english_requirements": "IELTS 6.0 overall, no band below 6.0 (approximate, typical bar)",
+    "source_url": "https://www.holmes.edu.au/"
+  },
+  {
+    "id": "283eb7d9-5887-44a7-beec-10e220c8e240",
+    "uni": "Holmes Institute",
+    "name": "Bachelor of Information Systems",
+    "admission_requirements": "Completion of Year 12 (Australian Senior Secondary Certificate) or equivalent, ATAR approx. 65-75 (approximate, typical bar)",
+    "english_requirements": "IELTS 6.0 overall, no band below 6.0 (approximate, typical bar)",
+    "source_url": "https://www.holmes.edu.au/"
+  },
+  {
+    "id": "0461adc7-afe1-4d07-8245-8121bd245411",
+    "uni": "Holmes Institute",
+    "name": "Bachelor of Business",
+    "admission_requirements": "Completion of Year 12 (Australian Senior Secondary Certificate) or equivalent, ATAR approx. 65-75 (approximate, typical bar)",
+    "english_requirements": "IELTS 6.0 overall, no band below 6.0 (approximate, typical bar)",
+    "source_url": "https://www.holmes.edu.au/"
+  },
+  {
+    "id": "6bfa11fe-01ad-4f27-8310-6ab45ce8597f",
+    "uni": "Holmes Institute",
+    "name": "Bachelor of Professional Accounting",
+    "admission_requirements": "Completion of Year 12 (Australian Senior Secondary Certificate) or equivalent, ATAR approx. 65-75 (approximate, typical bar)",
+    "english_requirements": "IELTS 6.0 overall, no band below 6.0 (approximate, typical bar)",
+    "source_url": "https://www.holmes.edu.au/"
+  },
+  {
+    "id": "04d44b18-6068-486d-afc5-f87f1dd28766",
+    "uni": "University of Canberra",
+    "name": "Bachelor of Business",
+    "admission_requirements": "ATAR of approximately 65-70 (or equivalent); completion of a recognised secondary qualification.",
+    "english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
+    "source_url": "https://www.canberra.edu.au/course/MGB109/1/2026"
+  },
+  {
+    "id": "671ef8a9-db83-4416-a0de-967ac29bfcba",
+    "uni": "University of Canberra",
+    "name": "Bachelor of Sport and Exercise Science",
+    "admission_requirements": "ATAR of approximately 65-70 (or equivalent); completion of a recognised secondary qualification.",
+    "english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
+    "source_url": "https://www.canberra.edu.au/course/274JA/6/2026"
+  },
+  {
+    "id": "4dd095ae-b6bc-4b66-ba6d-b36459a6feb1",
+    "uni": "University of Canberra",
+    "name": "Bachelor of Creative Industries",
+    "admission_requirements": "ATAR of approximately 65-70 (or equivalent); completion of a recognised secondary qualification.",
+    "english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
+    "source_url": "https://www.canberra.edu.au/future-students/study-at-uc/about-our-courses/creative-industries"
+  },
+  {
+    "id": "32c97e56-5b56-4328-aa9b-6026a34eec1b",
+    "uni": "University of Canberra",
+    "name": "Bachelor of Government",
+    "admission_requirements": "ATAR of approximately 65-70 (or equivalent); completion of a recognised secondary qualification.",
+    "english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
+    "source_url": "https://www.canberra.edu.au/course/SCB401/1/2026"
+  },
+  {
+    "id": "f24eb416-85e8-400d-bc67-b66626c5a3eb",
+    "uni": "University of Canberra",
+    "name": "Bachelor of Information Technology",
+    "admission_requirements": "ATAR of approximately 65-70 (or equivalent); completion of a recognised secondary qualification.",
+    "english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
+    "source_url": "https://www.canberra.edu.au/course/322AA/9/2026"
+  },
+  {
+    "id": "6988099f-0d81-41a9-be84-b6a02f18c132",
+    "uni": "University of Canberra",
+    "name": "Bachelor of the Built Environment",
+    "admission_requirements": "ATAR of approximately 65-70 (or equivalent); completion of a recognised secondary qualification.",
+    "english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
+    "source_url": "https://www.canberra.edu.au/future-students/study-at-uc/study-areas/built-environment"
+  },
+  {
+    "id": "6218c208-c0a9-431a-a765-c5386aacc15f",
+    "uni": "Adelaide University",
+    "name": "Bachelor of Mathematics",
+    "admission_requirements": "Completion of a secondary education qualification equivalent to the South Australian Certificate of Education (SACE), with a minimum ATAR of approximately 80 (or equivalent via VET Certificate IV+ or prior higher education study).",
+    "english_requirements": "IELTS Academic Overall 6.5, with no band below 6.0.",
+    "source_url": "https://www.adelaide.edu.au/study/degrees/bachelor-of-mathematics"
+  },
+  {
+    "id": "7053881d-27d6-49c5-b03f-e718d1a2f2f1",
+    "uni": "Adelaide University",
+    "name": "Associate Degree in Mathematical Studies",
+    "admission_requirements": "Completion of a secondary education qualification equivalent to the South Australian Certificate of Education (SACE), with a minimum ATAR of approximately 80 (or equivalent via VET Certificate IV+ or prior higher education study).",
+    "english_requirements": "IELTS Academic Overall 6.5, with no band below 6.0.",
+    "source_url": "https://www.adelaide.edu.au/study/degrees/bachelor-of-mathematics"
+  },
+  {
+    "id": "3fe69f9d-81c1-40aa-98eb-738615c907a0",
+    "uni": "Adelaide University",
+    "name": "Bachelor of Software Engineering (Honours)",
+    "admission_requirements": "Completion of a secondary education qualification equivalent to the South Australian Certificate of Education (SACE), with a minimum ATAR of approximately 80 (or equivalent via VET Certificate IV+ or prior higher education study).",
+    "english_requirements": "IELTS Academic Overall 6.5, with no band below 6.0.",
+    "source_url": "https://www.adelaide.edu.au/study/degrees/bachelor-of-software-engineering-honours"
+  },
+  {
+    "id": "22d4c0ec-3d11-4783-bfd1-26dc30b79279",
+    "uni": "Adelaide University",
+    "name": "Associate Degree in Arts Studies",
+    "admission_requirements": "SACE (or equivalent) completion with an ATAR of approximately 70.",
+    "english_requirements": "IELTS Overall 6.0, with 6.0 minimum in each band.",
+    "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-arts/"
+  },
+  {
+    "id": "78008dc5-ba59-44c9-92f2-8af77fb5abca",
+    "uni": "Adelaide University",
+    "name": "Bachelor of Arts",
+    "admission_requirements": "SACE (or equivalent) completion with an ATAR of approximately 70.",
+    "english_requirements": "IELTS Overall 6.0, with 6.0 minimum in each band.",
+    "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-arts/"
+  },
+  {
+    "id": "efaf0de3-2f76-414f-8442-eb031a6775ab",
+    "uni": "Adelaide University",
+    "name": "Diploma in Arts Studies",
+    "admission_requirements": "SACE (or equivalent) completion with an ATAR of approximately 70.",
+    "english_requirements": "IELTS Overall 6.0, with 6.0 minimum in each band.",
+    "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-arts/"
+  },
+  {
+    "id": "79aee418-882b-4be6-a3b8-ba5d08c3b42b",
+    "uni": "Adelaide University",
+    "name": "Bachelor of Psychology",
+    "admission_requirements": "SACE (or equivalent) completion with an ATAR of approximately 85.",
+    "english_requirements": "IELTS Overall 6.5, with 6.0 minimum in each band.",
+    "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-psychology/"
+  },
+  {
+    "id": "f6d49cb7-bfbe-469f-b247-0ffa54edb1e9",
+    "uni": "Adelaide University",
+    "name": "Diploma in Psychology Studies",
+    "admission_requirements": "SACE (or equivalent) completion with an ATAR of approximately 85.",
+    "english_requirements": "IELTS Overall 6.5, with 6.0 minimum in each band.",
+    "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-psychology/"
+  },
+  {
+    "id": "e598b2bd-5ae5-4c5b-a6c8-a5e87d00034d",
+    "uni": "Adelaide University",
+    "name": "Associate degree in Psychology Studies",
+    "admission_requirements": "SACE (or equivalent) completion with an ATAR of approximately 85.",
+    "english_requirements": "IELTS Overall 6.5, with 6.0 minimum in each band.",
+    "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-psychology/"
+  },
+  {
+    "id": "d717f967-022b-4bb3-aebe-6fa9b65a4390",
+    "uni": "Adelaide University",
+    "name": "Bachelor of Biotechnology (Honours)",
+    "admission_requirements": "Completion of a secondary education qualification equivalent to the South Australian Certificate of Education (SACE), with a minimum ATAR of approximately 85 (or equivalent via VET Certificate IV+ or prior higher education study).",
+    "english_requirements": "IELTS Academic Overall 6.5, with no band below 6.0.",
+    "source_url": null
+  },
+  {
+    "id": "d158fcd9-a02d-4ccb-b79e-b38c3802039b",
+    "uni": "Adelaide University",
+    "name": "Bachelor of Pharmacy (Honours)",
+    "admission_requirements": "Completion of a secondary education qualification equivalent to the South Australian Certificate of Education (SACE), with a minimum ATAR of approximately 85 (or equivalent via VET Certificate IV+ or prior higher education study).",
+    "english_requirements": "IELTS Academic Overall 6.5, with no band below 6.0.",
+    "source_url": "https://www.adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours"
+  },
+  {
+    "id": "fae9579b-a09f-45ec-ae54-14ffb818e8ad",
+    "uni": "Adelaide University",
+    "name": "Associate Degree in Media Studies",
+    "admission_requirements": "Completion of a secondary education qualification equivalent to the South Australian Certificate of Education (SACE), with a minimum ATAR of approximately 70 (or equivalent via VET Certificate IV+ or prior higher education study).",
+    "english_requirements": "IELTS Academic Overall 6.5, with no band below 6.0.",
+    "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-media-and-communication"
+  },
+  {
+    "id": "95cfd487-3223-426c-ba43-aebb8c0171f8",
+    "uni": "Adelaide University",
+    "name": "Bachelor of Philosophy, Politics and Economics",
+    "admission_requirements": "Completion of a secondary education qualification equivalent to the South Australian Certificate of Education (SACE), with a minimum ATAR of approximately 70 (or equivalent via VET Certificate IV+ or prior higher education study).",
+    "english_requirements": "IELTS Academic Overall 6.5, with no band below 6.0.",
+    "source_url": "https://www.adelaide.edu.au/study/degrees/bachelor-of-philosophy-politics-and-economics"
+  },
+  {
+    "id": "dfd83ece-e376-49a7-95e8-dad28126c152",
+    "uni": "Adelaide University",
+    "name": "Diploma in Creative Arts Studies",
+    "admission_requirements": "Completion of a secondary education qualification equivalent to the South Australian Certificate of Education (SACE), with a minimum ATAR of approximately 70 (or equivalent via VET Certificate IV+ or prior higher education study).",
+    "english_requirements": "IELTS Academic Overall 6.5, with no band below 6.0.",
+    "source_url": "https://www.adelaide.edu.au/study/degrees/bachelor-of-creative-arts"
+  },
+  {
+    "id": "4691cc1d-f01e-4a9d-9b9f-6d9bc0f34780",
+    "uni": "Adelaide University",
+    "name": "Bachelor of Media and Communication",
+    "admission_requirements": "Completion of a secondary education qualification equivalent to the South Australian Certificate of Education (SACE), with a minimum ATAR of approximately 70 (or equivalent via VET Certificate IV+ or prior higher education study).",
+    "english_requirements": "IELTS Academic Overall 6.5, with no band below 6.0.",
+    "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-media-and-communication"
+  },
+  {
+    "id": "0b546c26-4130-4dc4-9002-c6638a7bdb30",
+    "uni": "Adelaide University",
+    "name": "Bachelor of Journalism",
+    "admission_requirements": "Completion of a secondary education qualification equivalent to the South Australian Certificate of Education (SACE), with a minimum ATAR of approximately 70 (or equivalent via VET Certificate IV+ or prior higher education study).",
+    "english_requirements": "IELTS Academic Overall 6.5, with no band below 6.0.",
+    "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-journalism"
+  },
+  {
+    "id": "446e5c6a-f29d-4fab-975a-f17cd50223f8",
+    "uni": "Adelaide University",
+    "name": "Bachelor of Visual Effects",
+    "admission_requirements": "Completion of a secondary education qualification equivalent to the South Australian Certificate of Education (SACE), with a minimum ATAR of approximately 70 (or equivalent via VET Certificate IV+ or prior higher education study).",
+    "english_requirements": "IELTS Academic Overall 6.5, with no band below 6.0.",
+    "source_url": "https://www.adelaide.edu.au/study/degrees/bachelor-of-visual-effects"
+  },
+  {
+    "id": "73120d63-4b8c-43f5-88d0-146d523c621b",
+    "uni": "Adelaide University",
+    "name": "Associate Degree in Creative Arts Studies",
+    "admission_requirements": "Completion of a secondary education qualification equivalent to the South Australian Certificate of Education (SACE), with a minimum ATAR of approximately 70 (or equivalent via VET Certificate IV+ or prior higher education study).",
+    "english_requirements": "IELTS Academic Overall 6.5, with no band below 6.0.",
+    "source_url": "https://www.adelaide.edu.au/study/degrees/bachelor-of-creative-arts"
+  },
+  {
+    "id": "0e35d391-f9e3-4964-9452-a93a37ecf9c3",
+    "uni": "Adelaide University",
+    "name": "Bachelor of Creative Arts",
+    "admission_requirements": "Completion of a secondary education qualification equivalent to the South Australian Certificate of Education (SACE), with a minimum ATAR of approximately 70 (or equivalent via VET Certificate IV+ or prior higher education study).",
+    "english_requirements": "IELTS Academic Overall 6.5, with no band below 6.0.",
+    "source_url": "https://www.adelaide.edu.au/study/degrees/bachelor-of-creative-arts"
+  },
+  {
+    "id": "fad477aa-2b35-49a9-8f4a-56eeda52508b",
+    "uni": "Adelaide University",
+    "name": "Bachelor of Music Theatre",
+    "admission_requirements": "Completion of a secondary education qualification equivalent to the South Australian Certificate of Education (SACE), with a minimum ATAR of approximately 70 (or equivalent via VET Certificate IV+ or prior higher education study).",
+    "english_requirements": "IELTS Academic Overall 6.5, with no band below 6.0.",
+    "source_url": "https://www.adelaide.edu.au/study/degrees/bachelor-of-music-theatre"
+  },
+  {
+    "id": "b56422e2-72ca-42ab-802a-9e354a684b65",
+    "uni": "Adelaide University",
+    "name": "Diploma in Media Studies",
+    "admission_requirements": "Completion of a secondary education qualification equivalent to the South Australian Certificate of Education (SACE), with a minimum ATAR of approximately 70 (or equivalent via VET Certificate IV+ or prior higher education study).",
+    "english_requirements": "IELTS Academic Overall 6.5, with no band below 6.0.",
+    "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-media-and-communication"
+  },
+  {
+    "id": "0198ccc9-12a4-458c-927c-4cbff6d5f79b",
+    "uni": "Adelaide University",
+    "name": "Bachelor of Outdoor and Environmental Leadership",
+    "admission_requirements": "Completion of a secondary education qualification equivalent to the South Australian Certificate of Education (SACE), with a minimum ATAR of approximately 70 (or equivalent via VET Certificate IV+ or prior higher education study).",
+    "english_requirements": "IELTS Academic Overall 6.5, with no band below 6.0.",
+    "source_url": "https://www.adelaide.edu.au/study/degrees/bachelor-of-outdoor-and-environmental-leadership"
+  },
+  {
+    "id": "3f4b5d01-ef85-41df-ad83-06cb8066c95f",
+    "uni": "Adelaide University",
+    "name": "Associate Degree in Legal Studies",
+    "admission_requirements": "SACE (or equivalent) completion with an ATAR of approximately 90.",
+    "english_requirements": "IELTS Overall 6.5, with 6.0 minimum in each band.",
+    "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-laws/"
+  },
+  {
+    "id": "752d194a-96c1-4631-aeb0-ec650918641d",
+    "uni": "Adelaide University",
+    "name": "Bachelor of Laws",
+    "admission_requirements": "SACE (or equivalent) completion with an ATAR of approximately 90.",
+    "english_requirements": "IELTS Overall 6.5, with 6.0 minimum in each band.",
+    "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-laws/"
+  },
+  {
+    "id": "1b723f0a-59ce-4d1c-8fdc-839f38d00001",
+    "uni": "Adelaide University",
+    "name": "Bachelor of Information Technology",
+    "admission_requirements": "SACE (or equivalent) completion with an ATAR of approximately 75.",
+    "english_requirements": "IELTS Overall 6.0, with 6.0 minimum in each band.",
+    "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-information-technology/"
+  },
+  {
+    "id": "e6063936-dda8-41ff-99d8-8bf13ab20d31",
+    "uni": "Adelaide University",
+    "name": "Diploma in Information Technology",
+    "admission_requirements": "SACE (or equivalent) completion with an ATAR of approximately 75.",
+    "english_requirements": "IELTS Overall 6.0, with 6.0 minimum in each band.",
+    "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-information-technology/"
+  },
+  {
+    "id": "61e89b37-ccec-4f33-866f-63dc9c119053",
+    "uni": "Adelaide University",
+    "name": "Associate Degree in Information Technology",
+    "admission_requirements": "SACE (or equivalent) completion with an ATAR of approximately 75.",
+    "english_requirements": "IELTS Overall 6.0, with 6.0 minimum in each band.",
+    "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-information-technology/"
+  },
+  {
+    "id": "b8d1cbe6-c14c-4939-92a1-cb71528bba8b",
+    "uni": "Adelaide University",
+    "name": "Bachelor of Occupational Therapy (Honours)",
+    "admission_requirements": "Completion of a secondary education qualification equivalent to the South Australian Certificate of Education (SACE), with a minimum ATAR of approximately 90 (or equivalent via VET Certificate IV+ or prior higher education study).",
+    "english_requirements": "IELTS Academic Overall 7.0, with no band below 7.0.",
+    "source_url": "https://www.adelaide.edu.au/study/degrees/bachelor-of-occupational-therapy-honours"
+  },
+  {
+    "id": "6cc47ab9-1fd2-4a4b-927c-d235dc71c61e",
+    "uni": "Adelaide University",
+    "name": "Bachelor of Dental Surgery",
+    "admission_requirements": "Completion of a secondary education qualification equivalent to the South Australian Certificate of Education (SACE), with a minimum ATAR of approximately 90 (or equivalent via VET Certificate IV+ or prior higher education study).",
+    "english_requirements": "IELTS Academic Overall 7.0, with no band below 7.0.",
+    "source_url": "https://www.adelaide.edu.au/study/degrees/bachelor-of-dental-surgery"
+  },
+  {
+    "id": "a03d6b77-2e1d-4506-8cfb-da7e6a3ec7c8",
+    "uni": "Adelaide University",
+    "name": "Bachelor of Physiotherapy (Honours)",
+    "admission_requirements": "Completion of a secondary education qualification equivalent to the South Australian Certificate of Education (SACE), with a minimum ATAR of approximately 90 (or equivalent via VET Certificate IV+ or prior higher education study).",
+    "english_requirements": "IELTS Academic Overall 7.0, with no band below 7.0.",
+    "source_url": "https://www.adelaide.edu.au/study/degrees/bachelor-of-physiotherapy-honours"
+  },
+  {
+    "id": "7f87d986-f55d-4353-8326-4247a3d2b155",
+    "uni": "Adelaide University",
+    "name": "Bachelor of Medical Studies",
+    "admission_requirements": "Completion of a secondary education qualification equivalent to the South Australian Certificate of Education (SACE), with a minimum ATAR of approximately 90 (or equivalent via VET Certificate IV+ or prior higher education study).",
+    "english_requirements": "IELTS Academic Overall 7.0, with no band below 7.0.",
+    "source_url": "https://www.adelaide.edu.au/study/degrees/bachelor-of-medical-studies"
+  },
+  {
+    "id": "90bb11bb-daba-4d66-b619-80e654f20ba1",
+    "uni": "Adelaide University",
+    "name": "Bachelor of Sustainability and Climate Change",
+    "admission_requirements": "Completion of a secondary education qualification equivalent to the South Australian Certificate of Education (SACE), with a minimum ATAR of approximately 75 (or equivalent via VET Certificate IV+ or prior higher education study).",
+    "english_requirements": "IELTS Academic Overall 6.5, with no band below 6.0.",
+    "source_url": "https://www.adelaide.edu.au/study/degrees/bachelor-of-sustainability-and-climate-change"
+  },
+  {
+    "id": "a4c3b906-e80f-4b79-9dde-8cc166eaf9a4",
+    "uni": "Adelaide University",
+    "name": "Bachelor of Public Health",
+    "admission_requirements": "Completion of a secondary education qualification equivalent to the South Australian Certificate of Education (SACE), with a minimum ATAR of approximately 75 (or equivalent via VET Certificate IV+ or prior higher education study).",
+    "english_requirements": "IELTS Academic Overall 6.5, with no band below 6.0.",
+    "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-public-health"
+  },
+  {
+    "id": "701d4cd3-6400-46d8-98e9-239fb9363ae0",
+    "uni": "Adelaide University",
+    "name": "Bachelor of Veterinary Technology",
+    "admission_requirements": "Completion of a secondary education qualification equivalent to the South Australian Certificate of Education (SACE), with a minimum ATAR of approximately 75 (or equivalent via VET Certificate IV+ or prior higher education study).",
+    "english_requirements": "IELTS Academic Overall 6.5, with no band below 6.0.",
+    "source_url": "https://www.adelaide.edu.au/study/degrees/bachelor-of-veterinary-technology"
+  },
+  {
+    "id": "566df3a2-1d0c-403c-a66c-8d8810eb1b90",
+    "uni": "Adelaide University",
+    "name": "Associate Degree in Cyber Security",
+    "admission_requirements": "Completion of a secondary education qualification equivalent to the South Australian Certificate of Education (SACE), with a minimum ATAR of approximately 75 (or equivalent via VET Certificate IV+ or prior higher education study).",
+    "english_requirements": "IELTS Academic Overall 6.5, with no band below 6.0.",
+    "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-cyber-security/"
+  },
+  {
+    "id": "2ecb7dfa-6ea4-46ad-9bfa-58316965a3e6",
+    "uni": "Adelaide University",
+    "name": "Bachelor of Criminology and Criminal Justice",
+    "admission_requirements": "Completion of a secondary education qualification equivalent to the South Australian Certificate of Education (SACE), with a minimum ATAR of approximately 75 (or equivalent via VET Certificate IV+ or prior higher education study).",
+    "english_requirements": "IELTS Academic Overall 6.5, with no band below 6.0.",
+    "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-criminology-and-criminal-justice"
+  },
+  {
+    "id": "40874128-c586-4de9-ba97-d991cc80d07b",
+    "uni": "Adelaide University",
+    "name": "Bachelor of Cyber Security",
+    "admission_requirements": "Completion of a secondary education qualification equivalent to the South Australian Certificate of Education (SACE), with a minimum ATAR of approximately 75 (or equivalent via VET Certificate IV+ or prior higher education study).",
+    "english_requirements": "IELTS Academic Overall 6.5, with no band below 6.0.",
+    "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-cyber-security/"
+  },
+  {
+    "id": "35a4f102-2729-48ed-81be-13b473ed094d",
+    "uni": "Adelaide University",
+    "name": "Bachelor of Pharmaceutical Science",
+    "admission_requirements": "Completion of a secondary education qualification equivalent to the South Australian Certificate of Education (SACE), with a minimum ATAR of approximately 75 (or equivalent via VET Certificate IV+ or prior higher education study).",
+    "english_requirements": "IELTS Academic Overall 6.5, with no band below 6.0.",
+    "source_url": "https://www.adelaide.edu.au/study/degrees/bachelor-of-pharmaceutical-science"
+  },
+  {
+    "id": "d51b2b83-65dc-4f7c-92b4-de74ad65c74c",
+    "uni": "Adelaide University",
+    "name": "Bachelor of Viticulture and Oenology",
+    "admission_requirements": "Completion of a secondary education qualification equivalent to the South Australian Certificate of Education (SACE), with a minimum ATAR of approximately 75 (or equivalent via VET Certificate IV+ or prior higher education study).",
+    "english_requirements": "IELTS Academic Overall 6.5, with no band below 6.0.",
+    "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-viticulture-and-oenology"
+  },
+  {
+    "id": "9485e16e-9964-4aa1-9573-f3934bdc48ed",
+    "uni": "Federation University Australia",
+    "name": "Bachelor of Psychological Science",
+    "admission_requirements": "Completion of Year 12 (Australian Senior Secondary Certificate) or equivalent, ATAR approx. 65-75 (approximate, typical bar)",
+    "english_requirements": "IELTS 6.0 overall, no band below 6.0 (approximate, typical bar)",
+    "source_url": "https://federation.edu.au/courses/bachelor-of-psychological-science"
+  },
+  {
+    "id": "3187e104-519e-43fd-9ab4-14d7d2ec1520",
+    "uni": "Federation University Australia",
+    "name": "Bachelor of Arts",
+    "admission_requirements": "Completion of Year 12 (Australian Senior Secondary Certificate) or equivalent, ATAR approx. 65-75 (approximate, typical bar)",
+    "english_requirements": "IELTS 6.0 overall, no band below 6.0 (approximate, typical bar)",
+    "source_url": "https://federation.edu.au/courses/bachelor-of-arts"
+  },
+  {
+    "id": "dbca27cd-48a5-4f88-bb02-aa3ee218def2",
+    "uni": "Federation University Australia",
+    "name": "Bachelor of Business",
+    "admission_requirements": "Completion of Year 12 (Australian Senior Secondary Certificate) or equivalent, ATAR approx. 65-75 (approximate, typical bar)",
+    "english_requirements": "IELTS 6.0 overall, no band below 6.0 (approximate, typical bar)",
+    "source_url": "https://federation.edu.au/courses/bachelor-of-business"
+  },
+  {
+    "id": "404ba5fc-7b75-4938-93c9-ea037ba1fdde",
+    "uni": "Federation University Australia",
+    "name": "Bachelor of Information Technology",
+    "admission_requirements": "Completion of Year 12 (Australian Senior Secondary Certificate) or equivalent, ATAR approx. 65-75 (approximate, typical bar)",
+    "english_requirements": "IELTS 6.0 overall, no band below 6.0 (approximate, typical bar)",
+    "source_url": "https://federation.edu.au/courses/bachelor-of-information-technology"
+  },
+  {
+    "id": "49085e6f-7e64-4656-93a1-03b1ed0ab867",
+    "uni": "Federation University Australia",
+    "name": "Bachelor of Social Work",
+    "admission_requirements": "Completion of Year 12 (Australian Senior Secondary Certificate) or equivalent, ATAR approx. 65-75 (approximate, typical bar)",
+    "english_requirements": "IELTS 6.5 overall, no band below 6.0 (approximate, typical bar)",
+    "source_url": "https://federation.edu.au/courses/bachelor-of-social-work"
+  },
+  {
+    "id": "f47d2c66-5675-4c41-9fc6-533d354aac5a",
+    "uni": "Federation University Australia",
+    "name": "Bachelor of Education (Primary)",
+    "admission_requirements": "Completion of Year 12 (Australian Senior Secondary Certificate) or equivalent, ATAR approx. 65-75 (approximate, typical bar)",
+    "english_requirements": "IELTS 6.5 overall, no band below 6.0 (approximate, typical bar)",
+    "source_url": "https://federation.edu.au/courses/bachelor-of-education-primary"
+  },
+  {
+    "id": "5937bf1c-c1d7-4e1e-8906-0650e6ad38d3",
+    "uni": "Kaplan Business School",
+    "name": "Bachelor of Business",
+    "admission_requirements": "Completion of Year 12 (Australian Senior Secondary Certificate) or equivalent, ATAR approx. 65-75 (approximate, typical bar)",
+    "english_requirements": "IELTS 6.0 overall, no band below 6.0 (approximate, typical bar)",
+    "source_url": "https://www.kbs.edu.au/courses"
+  },
+  {
+    "id": "28a307f3-a135-4c51-80bb-08b036724196",
+    "uni": "Kaplan Business School",
+    "name": "Bachelor of Business (Management)",
+    "admission_requirements": "Completion of Year 12 (Australian Senior Secondary Certificate) or equivalent, ATAR approx. 65-75 (approximate, typical bar)",
+    "english_requirements": "IELTS 6.0 overall, no band below 6.0 (approximate, typical bar)",
+    "source_url": "https://www.kbs.edu.au/courses"
+  },
+  {
+    "id": "ded35d11-7e4f-4e77-82a1-dce409eab5e0",
+    "uni": "Kaplan Business School",
+    "name": "Bachelor of Business (Marketing)",
+    "admission_requirements": "Completion of Year 12 (Australian Senior Secondary Certificate) or equivalent, ATAR approx. 65-75 (approximate, typical bar)",
+    "english_requirements": "IELTS 6.0 overall, no band below 6.0 (approximate, typical bar)",
+    "source_url": "https://www.kbs.edu.au/courses"
+  },
+  {
+    "id": "0eaa6a48-0b9b-408f-886d-e0b6a8774c1a",
+    "uni": "Kaplan Business School",
+    "name": "Bachelor of Business (Accounting)",
+    "admission_requirements": "Completion of Year 12 (Australian Senior Secondary Certificate) or equivalent, ATAR approx. 65-75 (approximate, typical bar)",
+    "english_requirements": "IELTS 6.0 overall, no band below 6.0 (approximate, typical bar)",
+    "source_url": "https://www.kbs.edu.au/courses"
+  },
+  {
+    "id": "96f9b87f-8046-4c40-b137-3f259e90ff66",
+    "uni": "Kaplan Business School",
+    "name": "Bachelor of Business (Hospitality and Tourism Management)",
+    "admission_requirements": "Completion of Year 12 (Australian Senior Secondary Certificate) or equivalent, ATAR approx. 65-75 (approximate, typical bar)",
+    "english_requirements": "IELTS 6.0 overall, no band below 6.0 (approximate, typical bar)",
+    "source_url": "https://www.kbs.edu.au/courses"
+  },
+  {
+    "id": "3fe9f7ba-47f5-474e-b421-4c8c8e439d84",
+    "uni": "Kaplan Business School",
+    "name": "Master of Business Analytics (Information Technology)",
+    "admission_requirements": "Relevant bachelor's degree (or equivalent); some programs consider work experience in lieu (approximate, typical bar)",
+    "english_requirements": "IELTS 6.5 overall, no band below 6.0 (approximate, typical bar)",
+    "source_url": "https://www.kbs.edu.au/courses"
+  },
+  {
+    "id": "030cad81-11b0-41b7-ba12-fcf27f3047e7",
+    "uni": "Kaplan Business School",
+    "name": "MBA (Health Services Management)",
+    "admission_requirements": "Relevant bachelor's degree (or equivalent); some programs consider work experience in lieu (approximate, typical bar)",
+    "english_requirements": "IELTS 6.5 overall, no band below 6.0 (approximate, typical bar)",
+    "source_url": "https://www.kbs.edu.au/courses"
+  },
+  {
+    "id": "b2ef6b82-7025-4436-843c-8d6290cdd93a",
+    "uni": "Kaplan Business School",
+    "name": "Graduate Diploma of Business Administration",
+    "admission_requirements": "Relevant bachelor's degree (or equivalent); some programs consider work experience in lieu (approximate, typical bar)",
+    "english_requirements": "IELTS 6.5 overall, no band below 6.0 (approximate, typical bar)",
+    "source_url": "https://www.kbs.edu.au/courses"
+  },
+  {
+    "id": "9422fe73-57c4-4b5f-ab1e-41aa55c3c54d",
+    "uni": "Kaplan Business School",
+    "name": "MBA (Project Management)",
+    "admission_requirements": "Relevant bachelor's degree (or equivalent); some programs consider work experience in lieu (approximate, typical bar)",
+    "english_requirements": "IELTS 6.5 overall, no band below 6.0 (approximate, typical bar)",
+    "source_url": "https://www.kbs.edu.au/courses"
+  },
+  {
+    "id": "349254c9-7747-4c6e-a55b-fa7fe2fa41bb",
+    "uni": "Kaplan Business School",
+    "name": "Master of Accounting",
+    "admission_requirements": "Relevant bachelor's degree (or equivalent); some programs consider work experience in lieu (approximate, typical bar)",
+    "english_requirements": "IELTS 6.5 overall, no band below 6.0 (approximate, typical bar)",
+    "source_url": "https://www.kbs.edu.au/courses"
+  },
+  {
+    "id": "0cc34b6a-53bd-4d3a-b0bf-f8f527a03448",
+    "uni": "University of Notre Dame Australia",
+    "name": "Bachelor of Philosophy",
+    "admission_requirements": "Completion of Year 12 with an ATAR of approximately 65-70 or equivalent",
+    "english_requirements": "IELTS 6.5 overall, no band below 6.0",
+    "source_url": "https://www.notredame.edu.au/study/find-a-course"
+  },
+  {
+    "id": "490fdd8c-f072-45b5-b1d8-f4ae488e410f",
+    "uni": "University of Notre Dame Australia",
+    "name": "Bachelor of Arts",
+    "admission_requirements": "Completion of Year 12 with an ATAR of approximately 65-70 or equivalent",
+    "english_requirements": "IELTS 6.5 overall, no band below 6.0",
+    "source_url": "https://www.notredame.edu.au/about-us/faculties-and-schools/school-of-arts-and-sciences/sydney/our-programs"
+  }
+]
