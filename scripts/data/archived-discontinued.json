@@ -438,6 +438,54 @@
       "name": "Bachelor of Business",
       "reason": "ECU course page redirects to page-archived (crsArchived=G95), explicitly replaced by Bachelor of Commerce (W23), confirmed discontinued",
       "archived_at": "2026-09-18T12:33:09.269Z"
+    },
+    {
+      "id": "74adf92c-6ce7-43d8-bb0f-5fa008da6886",
+      "name": "Master of Philosophy",
+      "reason": "Master of Philosophy: zero occurrences anywhere in unisc.edu.au sitemap history (all handbook editions back to semester-1-2009), zero marketing page, zero results on UniSC's own full-text site search (webapi/sitesearch), and absent from the Higher Degree by Research programs page which lists all current HDR titles (Doctor of Philosophy, Master of Arts, Master of Science, Master of Business by Research, etc). UniSC does not offer a generic MPhil award under this name.",
+      "archived_at": "2026-09-19T04:46:49.027Z"
+    },
+    {
+      "id": "cc4a456c-7b63-4277-af4b-cca87e237fd7",
+      "name": "Master of Robotics and Automation Engineering",
+      "reason": "Master of Robotics and Automation Engineering: no marketing page, no handbook entry in any current or historical study-period-2026 catalogue, and UniSC live site search (webapi/sitesearch/GetSearchResults) returns no genuine program match (top hits score under 0.12, all unrelated engineering double-degree pages). The current Master of Engineering (Professional) page lists only Civil, Renewable Energy and Mechanical specialisations, no Robotics/Automation option.",
+      "archived_at": "2026-09-19T04:46:49.197Z"
+    },
+    {
+      "id": "052b3d95-f3cb-46c5-be54-4fc9c4b711ad",
+      "name": "Master of Counselling",
+      "reason": "Master of Counselling: present in every UniSC student handbook edition from semester-1-2012 through semester-2-2025, then absent from both current handbooks (student-handbook-study-period-1-2026 and study-period-2-2026). Clean year-over-year cutoff is strong evidence of discontinuation after 2025; no replacement program was found.",
+      "archived_at": "2026-09-19T04:46:49.369Z"
+    },
+    {
+      "id": "845ffb2e-f5eb-4176-b147-d0ad44aaf6e3",
+      "name": "Master of International Development",
+      "reason": "Master of International Development: present in handbooks through semester-2-2024, absent from semester-1/2-2025 and both 2026 handbooks. No current marketing page or handbook entry; only a historical Work Integrated Learning blog post (Australian Centre for Pacific Islands Research) references past students in this program.",
+      "archived_at": "2026-09-19T04:46:49.533Z"
+    },
+    {
+      "id": "62a2dfdd-875f-473d-8065-066450b2d91f",
+      "name": "Bachelor of International Studies",
+      "reason": "Bachelor of International Studies: last appeared in UniSC's own handbook in semester-2-2011, absent from every edition since (14+ years). Today, International Studies exists only as a major within the Bachelor of Arts (unisc.edu.au/study/courses-and-programs/majors-and-minors/international-studies), not as a standalone degree.",
+      "archived_at": "2026-09-19T04:46:49.693Z"
+    },
+    {
+      "id": "00f7235d-e796-4f7b-9c90-a112ddb0aab5",
+      "name": "Bachelor of Social Science (Psychology)",
+      "reason": "Bachelor of Social Science (Psychology): last appeared in UniSC's handbook in semester-2-2011, absent from every edition since. UniSC's current equivalent psychology undergraduate degree is the Bachelor of Behavioural Science (Psychology), a separate published row already Bond-standard.",
+      "archived_at": "2026-09-19T04:46:49.849Z"
+    },
+    {
+      "id": "a314c2e3-ed64-4c3d-87f3-38b5b91ff523",
+      "name": "Associate Degree in Science",
+      "reason": "Associate Degree in Science: last appeared in UniSC's handbook in semester-2-2011, absent from every edition since (14+ years), no current marketing page, and zero meaningful results on UniSC's own site search.",
+      "archived_at": "2026-09-19T04:46:50.009Z"
+    },
+    {
+      "id": "70e4895d-2fe3-4993-89bd-81ac11d0abc7",
+      "name": "Undergraduate Certificate in General Studies",
+      "reason": "Undergraduate Certificate in General Studies: never appears in any UniSC handbook edition (2009-2026) or marketing page under this exact name; only the Diploma in General Studies is a real, current UniSC award.",
+      "archived_at": "2026-09-19T04:46:50.199Z"
     }
   ]
 }
