@@ -17,6 +17,7 @@ import {
 import { SCHOLARSHIP_SCOPE_LABELS } from "@/lib/scholarship-scopes";
 import { JsonLd } from "@/lib/json-ld";
 import { composeTitle, pageMetadata } from "@/lib/page-metadata";
+import { SITE_URL } from "@/lib/site-config";
 
 export const revalidate = 3600;
 
@@ -40,9 +41,14 @@ export async function generateMetadata({
     "Value & Eligibility",
     "Eligibility",
   ]);
-  const description =
-    `${s.name}${s.amount ? ` (${s.amount})` : ""} for international students in Australia: who is eligible, what it covers, whether you need a separate application, and how to apply. ` +
-    (s.description ?? "");
+  // The real per-scholarship description leads so it survives
+  // clampDescription's budget — previously the generic boilerplate came
+  // first and ate the whole budget, so the actual description text (what
+  // makes this page different from any other scholarship's) never
+  // appeared in the visible meta description at all.
+  const description = s.description
+    ? s.description
+    : `${s.name}${s.amount ? ` (${s.amount})` : ""} for international students in Australia: who is eligible, what it covers, whether you need a separate application, and how to apply.`;
   return pageMetadata({
     title,
     description,
@@ -68,8 +74,30 @@ export default async function ScholarshipPage({
 
   const faqItems = scholarshipFaq(s);
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: s.name,
+    url: `${SITE_URL}/scholarships/${slug}`,
+    dateModified: s.last_verified_at ?? undefined,
+  };
+
+  // All 46 published scholarships currently have deadline_date = null (see
+  // memory: data-quality-findings-2026-09-13, Finding 3). For the ~30 that
+  // require no separate application, the real "deadline" is whichever
+  // university/degree-level admission deadline the student is applying
+  // under — forcing a single date into this field would misrepresent
+  // scholarships that span multiple universities or degree levels, so this
+  // links out to the real deadline instead of showing a fabricated date.
+  const tiedToProgramDeadline = !s.deadline_date && s.separate_application === false;
+  const deadlineLinkHref =
+    s.universities.length === 1
+      ? `/universities/${s.universities[0].slug}/deadlines`
+      : "/deadlines";
+
   return (
     <main className="mx-auto w-full max-w-4xl px-6 pt-8 pb-16">
+      <JsonLd data={jsonLd} />
       <JsonLd data={breadcrumbJsonLd(breadcrumbs)} />
       {faqItems.length > 0 && (
         <JsonLd data={faqJsonLd(faqItems)} />
@@ -113,7 +141,9 @@ export default async function ScholarshipPage({
                   month: "long",
                   year: "numeric",
                 })
-              : null
+              : tiedToProgramDeadline
+                ? "Your program's application deadline"
+                : null
           }
         />
         <Fact
@@ -121,6 +151,20 @@ export default async function ScholarshipPage({
           value={s.country?.name ?? (s.universities.length ? "Australia" : null)}
         />
       </FactGrid>
+
+      {tiedToProgramDeadline && (
+        <p className="mt-3 font-body text-sm text-slate">
+          This scholarship is automatic on admission, so it doesn&apos;t have its
+          own deadline — apply by your program&apos;s own application deadline.{" "}
+          <Link
+            href={deadlineLinkHref}
+            className="text-ink underline underline-offset-2 hover:no-underline"
+          >
+            Check the deadline
+          </Link>
+          .
+        </p>
+      )}
 
       {s.eligibility && (
         <section className="mt-10 max-w-2xl">

@@ -3,7 +3,7 @@ import { pageMetadata } from "@/lib/page-metadata";
 
 export const metadata = pageMetadata({
   title: "Contact",
-  description: "How to reach Where To Apply with corrections, questions, or feedback.",
+  description: "How to reach us with corrections, questions, or feedback.",
   path: "/contact",
   type: "website",
 });

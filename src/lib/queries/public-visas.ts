@@ -53,7 +53,7 @@ export async function listPublishedVisaSlugsForSitemap(): Promise<
 
 export type PublicVisaRow = Database["public"]["Tables"]["visa_subclasses"]["Row"] & {
   author: { name: string; bio: string | null; credentials: string | null } | null;
-  reviewed_by: { name: string } | null;
+  reviewed_by: { name: string; credentials: string | null } | null;
 };
 
 export async function getPublishedVisa(slug: string): Promise<PublicVisaRow | null> {
@@ -61,7 +61,7 @@ export async function getPublishedVisa(slug: string): Promise<PublicVisaRow | nu
   const { data, error } = await supabase
     .from("visa_subclasses")
     .select(
-      "*, author:authors!author_id(name, bio, credentials), reviewed_by:authors!reviewed_by_id(name)",
+      "*, author:authors!author_id(name, bio, credentials), reviewed_by:authors!reviewed_by_id(name, credentials)",
     )
     .eq("slug", slug)
     .eq("status", "published")

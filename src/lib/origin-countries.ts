@@ -33,6 +33,36 @@ export type OriginCountry = {
   credentials: string[];
   /** Fields most chosen by students from this country. */
   popularFields: string[];
+  /**
+   * Optional: twinning/pathway programs that let a student start part of the
+   * degree in their home country and finish in Australia. Only worth
+   * including where this is a genuinely common pattern for that market
+   * (e.g. Malaysia's Monash/Curtin/Swinburne branch campuses), not a
+   * generic paragraph repeated across every country page.
+   */
+  pathways?: string[];
+  /**
+   * Optional: a table mapping this country's school-leaving/matriculation
+   * qualifications to typical Australian bachelor's entry requirements.
+   * Rendered inside the "Your qualifications and English" section.
+   */
+  qualificationTable?: {
+    columns: string[];
+    rows: (string | null)[][];
+    note?: string;
+  };
+  /**
+   * Optional: named, verifiable scholarships commonly used by students from
+   * this country (government-to-government, national scholarship bodies, or
+   * this site's own tracked scholarships with a real cohort from here).
+   * Only name a program that can be verified as currently active; link to
+   * `/scholarships/[slug]` where it exists on this site, otherwise to the
+   * official scholarship body.
+   */
+  scholarships?: {
+    intro: string;
+    items: { name: string; href: string }[];
+  };
   faq: { q: string; a: string }[];
   /** Official pages the facts were checked against. */
   sources: string[];
@@ -68,6 +98,15 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "How your percentage converts to an Australian grade depends on which university or board awarded your degree. Universities publish India-specific entry tables. A 60 percent aggregate is a common minimum, with 65 to 75 percent for competitive courses.",
       "For English, you can use IELTS, PTE, or TOEFL, and many universities also accept a medium-of-instruction letter confirming your degree was taught and assessed in English. The university sets its own score. The student visa has its own English rule, and whether an English-taught degree is enough for the visa depends on your circumstances, so confirm both separately.",
     ],
+    scholarships: {
+      intro:
+        "India is one of the eight eligible countries under Australia Awards Scholarships, funding full-time postgraduate study in Australia. On top of that, a couple of Australian universities run India-specific scholarships worth knowing about: Sydney's dedicated India program, and a Deakin scholarship named specifically for Indian applicants. This runs alongside the wider general international scholarships every Australian university offers (see the scholarships hub).",
+      items: [
+        { name: "Australia Awards Scholarships (India)", href: "/scholarships/australia-awards-scholarships" },
+        { name: "Sydney Scholars India Scholarship Program", href: "/scholarships/sydney-scholars-india-scholarship-program" },
+        { name: "Deakin Vice-Chancellor's Meritorious Scholarship for India", href: "/scholarships/deakin-vice-chancellors-meritorious-scholarship-india" },
+      ],
+    },
     popularFields: [
       "Information technology and computer science",
       "Engineering",
@@ -115,8 +154,9 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "https://india.highcommission.gov.au/ndli/scam-safe.html",
       "https://www.abc.net.au/news/2024-09-17/indian-students-duped-by-australian-visa-fraud/104309404",
       "https://monitor.icef.com/2026/04/australia-student-visa-refusal-rates-reach-record-high-amid-weakening-demand-from-china/",
+      "https://australiaawardssouthasiamongolia.org/scholarships/",
     ],
-    lastVerified: "2026-09-05",
+    lastVerified: "2026-09-13",
   },
 
   nepal: {
@@ -146,6 +186,13 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "You may need an equivalence or verification of your qualifications. Universities publish Nepal-specific entry tables; confirm the aggregate percentage or GPA your course wants.",
       "English is usually shown with IELTS or PTE. Some universities accept English-medium study, but the student visa has its own English rule, so confirm what the university and the visa each require.",
     ],
+    scholarships: {
+      intro:
+        "Nepal is one of the eight eligible countries under Australia Awards Scholarships, funding full-time postgraduate study in Australia, with 19 scholars from Nepal starting in the 2026 intake. This runs alongside the general international scholarships offered directly by Australian universities (see the scholarships hub).",
+      items: [
+        { name: "Australia Awards Scholarships (Nepal)", href: "/scholarships/australia-awards-scholarships" },
+      ],
+    },
     popularFields: [
       "Nursing and health",
       "Information technology",
@@ -189,8 +236,9 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "https://nepal.embassy.gov.au/kmdu/Stay_safe_from_visa_scams.html",
       "https://kathmandupost.com/national/2026/05/16/arrests-device-seizures-in-crackdown-on-consultancies-over-shady-student-migration-process",
       "https://english.onlinekhabar.com/over-4100-education-consultancies-operating-without-registration-across-nepal.html",
+      "https://australiaawardssouthasiamongolia.org/scholarships/",
     ],
-    lastVerified: "2026-09-05",
+    lastVerified: "2026-09-13",
   },
 
   pakistan: {
@@ -220,6 +268,13 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "Universities publish Pakistan-specific entry tables. Confirm the percentage or CGPA your course requires and whether it counts your degree as three or four years of study.",
       "Many Pakistani applicants study in English medium. Universities may accept that for admission, but the student visa has a separate English rule, so confirm both. IELTS and PTE are the usual tests.",
     ],
+    scholarships: {
+      intro:
+        "Pakistan is one of the eight eligible countries under Australia Awards Scholarships, funding full-time postgraduate study in Australia. This runs alongside the general international scholarships offered directly by Australian universities (see the scholarships hub).",
+      items: [
+        { name: "Australia Awards Scholarships (Pakistan)", href: "/scholarships/australia-awards-scholarships" },
+      ],
+    },
     popularFields: [
       "Information technology and computer science",
       "Engineering",
@@ -263,8 +318,9 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "https://propakistani.pk/2026/08/28/hec-warns-students-against-fake-attestation-agents/",
       "https://propakistani.pk/2026/07/25/fia-arrests-fake-hec-scholarship-agent-for-scamming-students/",
       "https://pakistan.embassy.gov.au/ISLM/Visa_Scams.html",
+      "https://australiaawardssouthasiamongolia.org/scholarships/",
     ],
-    lastVerified: "2026-09-05",
+    lastVerified: "2026-09-13",
   },
 
   china: {
@@ -296,6 +352,13 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "A four-year Chinese bachelor's degree maps directly to Australian master's entry. Universities publish China-specific entry tables keyed to the tier of your university (985, 211, or other), so the average you need can differ by institution.",
       "English is shown with IELTS, PTE, or TOEFL. Medium-of-instruction letters are rarely accepted from Chinese institutions, so plan to sit a test. The university sets its score and the visa has its own rule.",
     ],
+    scholarships: {
+      intro:
+        "China is not an Australia Awards partner country, so Chinese students funding study in Australia through a Chinese government scheme mostly go through the China Scholarship Council (CSC), an agency under the Ministry of Education. CSC's scholarships are largely PhD and research-level, either allocated to top Chinese universities that nominate their own candidates or run as a joint program directly between CSC and an Australian university. Several Group of Eight universities, including Melbourne, Sydney, and ANU, run their own named joint CSC scholarship. This runs alongside the general international scholarships Australian universities offer directly (see the scholarships hub).",
+      items: [
+        { name: "China Scholarship Council (CSC) joint scholarship programs", href: "https://www.csc.edu.cn/" },
+      ],
+    },
     popularFields: [
       "Business, accounting, and finance",
       "Information technology and computer science",
@@ -346,8 +409,9 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "https://www.accc.gov.au/media-release/national-anti-scam-centre-warns-of-spike-in-scams-threatening-chinese-students",
       "https://www.scamwatch.gov.au/types-of-scams/threat-scams/chinese-authority-scams",
       "https://www.teqsa.gov.au/guides-resources/resources/sector-updates-and-alerts/sector-alert-commercial-academic-cheating-service-activities-campus",
+      "https://www.csc.edu.cn/",
     ],
-    lastVerified: "2026-09-05",
+    lastVerified: "2026-09-13",
   },
 
   vietnam: {
@@ -376,6 +440,13 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "Universities publish Vietnam-specific entry tables. Confirm the GPA on the 10-point scale that your course requires.",
       "English is shown with IELTS, PTE, or TOEFL. Most universities want 6.5 overall for a master's, and the visa has a lower floor. Confirm both.",
     ],
+    scholarships: {
+      intro:
+        "Vietnam has a long-running Australia Awards Scholarships intake, and from 2026 the program is topped up by the Mekong-Australia Partnership (MAP) stream, adding Master's places in fields like water security, climate action, and economic resilience. This runs separately from the general international scholarships Australian universities offer directly (see the scholarships hub).",
+      items: [
+        { name: "Australia Awards Scholarships", href: "/scholarships/australia-awards-scholarships" },
+      ],
+    },
     popularFields: [
       "Business, accounting, and finance",
       "Information technology",
@@ -417,8 +488,9 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "https://hcmc.vietnam.embassy.gov.au/hchi/HomeAffairs14Nov25.html",
       "https://vietnam.embassy.gov.au/hnoi/MR251114.html",
       "https://www.trade.gov/market-intelligence/vietnam-education-agents",
+      "https://www.dfat.gov.au/people-to-people/australia-awards/mekong-australia-partnership",
     ],
-    lastVerified: "2026-09-05",
+    lastVerified: "2026-09-13",
   },
 
   bangladesh: {
@@ -448,6 +520,13 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "Universities publish Bangladesh-specific entry tables. Confirm the CGPA or division your course requires and how it counts the length of your degree.",
       "Many Bangladeshi applicants study in English medium. Universities may accept that for admission, but the student visa has its own English rule, so confirm both. IELTS and PTE are the usual tests.",
     ],
+    scholarships: {
+      intro:
+        "Bangladesh is one of the eight eligible countries under Australia Awards Scholarships, funding full-time postgraduate study in Australia. This runs alongside the general international scholarships offered directly by Australian universities (see the scholarships hub).",
+      items: [
+        { name: "Australia Awards Scholarships (Bangladesh)", href: "https://australiaawardsbangladesh.org/" },
+      ],
+    },
     popularFields: [
       "Information technology and computer science",
       "Engineering",
@@ -492,8 +571,9 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "https://www.tbsnews.net/bangladesh/crime/overseas-education-scam-just-thought-consultancy-owner-arrested-while-trying-leave",
       "https://www.tbsnews.net/features/pursuit/why-bangladesh-must-regulate-its-education-consultancy-sector-1509841",
       "https://www.bssnews.net/news/333986",
+      "https://australiaawardsbangladesh.org/",
     ],
-    lastVerified: "2026-09-05",
+    lastVerified: "2026-09-13",
   },
 
   "sri-lanka": {
@@ -521,6 +601,13 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "Universities publish Sri Lanka-specific entry tables. Confirm the grades or GPA your course requires and whether it counts your degree as three or four years.",
       "Many Sri Lankan applicants have studied in English. Universities may accept that for admission, but the student visa has its own English rule, so confirm both. IELTS and PTE are the usual tests.",
     ],
+    scholarships: {
+      intro:
+        "Sri Lanka is one of the eight eligible countries under Australia Awards Scholarships, funding full-time postgraduate study in Australia. This runs alongside the general international scholarships offered directly by Australian universities (see the scholarships hub).",
+      items: [
+        { name: "Australia Awards Scholarships (Sri Lanka)", href: "https://australiaawardssouthasiamongolia.org/scholarships/" },
+      ],
+    },
     popularFields: [
       "Information technology and computer science",
       "Business, accounting, and finance",
@@ -557,8 +644,9 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "https://www.homeaffairs.gov.au/research-and-stats/files/student-temporary-grad-program-report-dec-2025.pdf",
       "https://www.dailymirror.lk/breaking-news/Rejection-of-Sri-Lankan-student-visa-applications-to-Australia-surge-to-38/108-339491",
       "https://island.lk/undial-and-hawala-is-the-risk-worth-taking/",
+      "https://australiaawardssouthasiamongolia.org/scholarships/",
     ],
-    lastVerified: "2026-09-05",
+    lastVerified: "2026-09-13",
   },
 
   indonesia: {
@@ -587,6 +675,13 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "Universities publish Indonesia-specific entry tables. Confirm the IPK on the 4-point scale that your course requires.",
       "English is shown with IELTS, PTE, or TOEFL. Most universities want 6.5 overall for a master's, and the student visa has its own lower floor. Confirm both.",
     ],
+    scholarships: {
+      intro:
+        "Australia Awards Scholarships have run in Indonesia since 1953, one of the program's longest-standing intakes, funding a Master's or PhD in Australia. Indonesia's own government scholarship agency, LPDP, co-funds a joint LPDP-Australia Awards track for Indonesian applicants. This runs alongside the general international scholarships offered directly by Australian universities (see the scholarships hub).",
+      items: [
+        { name: "Australia Awards Scholarships (Indonesia)", href: "https://www.australiaawardsindonesia.org/" },
+      ],
+    },
     popularFields: [
       "Business, management, and accounting",
       "Engineering",
@@ -627,8 +722,9 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "https://www.homeaffairs.gov.au/research-and-stats/files/student-temporary-grad-program-report-dec-2025.pdf",
       "https://indonesia.embassy.gov.au/jakt/Visa_scams.html",
       "https://www.abc.net.au/indonesian/2025-11-26/pengajuan-sduwhv-di-indonesia-diramaikan-calo-dan-penipu/106051552",
+      "https://www.australiaawardsindonesia.org/",
     ],
-    lastVerified: "2026-09-05",
+    lastVerified: "2026-09-13",
   },
 
   philippines: {
@@ -658,6 +754,13 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "Universities publish Philippines-specific entry tables. Confirm the GPA or weighted average your course requires and how it reads your grading scale.",
       "Most Philippine degrees are taught in English, and many universities accept that for admission. The student visa has its own English rule, and health courses set a higher bar, so confirm both. IELTS and PTE are the usual tests.",
     ],
+    scholarships: {
+      intro:
+        "Australia Awards Philippines funds Master's or PhD study in Australia through two routes: an Open Category for Filipino leaders from the public and private sector, and a Targeted Category for staff nominated by Australia's key partner agencies. This runs alongside the general international scholarships offered directly by Australian universities (see the scholarships hub).",
+      items: [
+        { name: "Australia Awards Philippines", href: "https://www.australiaawardsphilippines.org/scholarships" },
+      ],
+    },
     popularFields: [
       "Nursing and health sciences",
       "Information technology",
@@ -701,8 +804,9 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "https://philippines.embassy.gov.au/mnla/Stay_safe_from_visa_scams.html",
       "https://www.philstar.com/headlines/2025/12/20/2495462/online-illegal-recruitment-modus-rises-dmws-4th-full-year",
       "https://dmw.gov.ph/archives/poea/air/whatisair.html",
+      "https://www.australiaawardsphilippines.org/scholarships",
     ],
-    lastVerified: "2026-09-05",
+    lastVerified: "2026-09-13",
   },
 
   thailand: {
@@ -731,6 +835,13 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "Universities publish Thailand-specific entry tables. Confirm the GPA on the 4-point scale that your course requires.",
       "English is shown with IELTS, PTE, or TOEFL. Most universities want 6.5 overall for a master's, and the student visa has its own lower floor. Confirm both.",
     ],
+    scholarships: {
+      intro:
+        "From 2026, Thailand is one of the countries funded under the Australian Government's Mekong-Australia Partnership (MAP) stream of the Australia Awards program, offering ten Master's scholarships a year in fields such as water security, climate action, and economic resilience. This runs alongside general international scholarships offered directly by Australian universities (see the scholarships hub).",
+      items: [
+        { name: "Australia Awards Mekong-Australia Partnership (Thailand)", href: "https://thailand.embassy.gov.au/bkok/Australia_Awards_in_Thailand.html" },
+      ],
+    },
     popularFields: [
       "Hospitality, tourism, and events",
       "Business and management",
@@ -770,8 +881,9 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "https://immi.homeaffairs.gov.au/what-we-do/education-program/what-we-do/evidence-levels",
       "https://www.homeaffairs.gov.au/research-and-stats/files/student-temporary-grad-program-report-dec-2025.pdf",
       "https://thailand.embassy.gov.au/bkok/PR2025_visa_fraud.html",
+      "https://thailand.embassy.gov.au/bkok/Australia_Awards_in_Thailand.html",
     ],
-    lastVerified: "2026-09-05",
+    lastVerified: "2026-09-13",
   },
 
   cambodia: {
@@ -798,6 +910,13 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "Ask each university how it reads your qualification and what GPA or grade average your course requires.",
       "English is shown with IELTS, PTE, or TOEFL. Most universities want 6.5 overall for a master's, and the student visa has its own lower floor. Confirm both.",
     ],
+    scholarships: {
+      intro:
+        "Australia Awards Scholarships have long included Cambodia, and from 2026 the country is also funded under the Mekong-Australia Partnership (MAP) stream, adding Master's places in fields like water security, climate action, and economic resilience alongside the existing program. This runs separately from the general international scholarships offered directly by Australian universities (see the scholarships hub).",
+      items: [
+        { name: "Australia Awards Scholarships (Cambodia)", href: "https://www.australiaawardscambodia.org/scholarships/" },
+      ],
+    },
     popularFields: [
       "Development studies and public policy",
       "Business and management",
@@ -830,8 +949,9 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     sources: [
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
       "https://www.studyaustralia.gov.au/",
+      "https://www.australiaawardscambodia.org/scholarships/",
     ],
-    lastVerified: "2026-08-30",
+    lastVerified: "2026-09-13",
   },
 
   malaysia: {
@@ -858,6 +978,33 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "A three-year or four-year Malaysian bachelor's degree is accepted for direct entry to Australian master's programs. Universities publish Malaysia-specific entry tables mapping your CGPA to their requirement.",
       "Many Malaysian applicants are exempt from an English test based on their prior study in English. Confirm the exemption with the university and check whether the student visa also accepts it.",
     ],
+    qualificationTable: {
+      columns: ["Malaysian qualification", "Typical Australian bachelor's entry"],
+      rows: [
+        ["STPM", "CGPA around 2.7 to 3.0+ for most universities; the Group of Eight generally wants the higher end."],
+        ["A-Levels", "Roughly BBB to ABB, depending on the university and course."],
+        ["UEC (Unified Examination Certificate)", "Average of your best 5 subjects, graded 1 (A1) to 6 (C): around grade 3 to 4 for the Group of Eight, 4 to 5 elsewhere. Widely accepted in Australia even though Malaysian public universities don't recognise it."],
+        ["AUSMAT or SAM", "Direct entry on the university's usual ATAR-equivalent cutoff. These are Australian curricula taught in Malaysia, so they convert the most directly."],
+        ["Foundation program (local or university-run)", "Direct entry on completing the program at the required grade, usually set by the partner university."],
+        ["SPM only", "Not sufficient on its own. You'll need STPM, A-Levels, a foundation year, or a recognised matriculation first."],
+      ],
+      note: "Indicative bands, not a guarantee. Every university sets its own cutoff by course, and the specific numbers move year to year, so check the university's own Malaysia-specific entry table before you apply.",
+    },
+    pathways: [
+      "A genuine number of Malaysian students start their Australian degree without leaving Malaysia. Monash University, Curtin University, and Swinburne University of Technology all run full branch campuses in Malaysia (Monash Malaysia in Bandar Sunway, Curtin Malaysia in Miri, Sarawak, and Swinburne Sarawak in Kuching), teaching the same degrees, marked to the same standard, as their Australian campuses. You can complete the whole degree in Malaysia, transfer to the Australian campus partway through, or move between the two more than once, and the qualification carries the same university name either way.",
+      "Separately, twinning arrangements at Malaysian colleges let you start a degree locally and transfer the credit into an Australian university partway through, commonly structured as 1+2 (one year in Malaysia, two in Australia), 2+1, or a full 3+0 where the whole degree is delivered in Malaysia under an Australian university's curriculum and awarded by that university. These are a separate, older model from the branch campuses above and are run by local private colleges in partnership with a specific Australian university, so the credit transfer terms and the exact university are set in advance by that partnership, not something you arrange yourself after enrolling.",
+      "Either route is usually cheaper for the years spent in Malaysia, since local tuition and living costs are lower than moving to Australia immediately. It's worth checking against a straight Australian entry, though: the timeline can run longer once you add a foundation or transfer year, and not every Australian university has a Malaysia partner in your specific field.",
+    ],
+    scholarships: {
+      intro:
+        "Several government and industry-linked scholarships from Malaysia specifically fund study in Australia, alongside general international scholarships from Australian universities themselves (see the scholarships hub). Confirm each program's current intake, eligible fields, and service-bond terms directly with the funding body before applying.",
+      items: [
+        { name: "JPA (Public Service Department) Overseas Scholarship", href: "https://esilav2.jpa.gov.my/" },
+        { name: "PETRONAS Education Sponsorship Programme (PESP)", href: "https://educationsponsorship.petronas.com.my/" },
+        { name: "Yayasan Khazanah Global Scholarship", href: "https://www.khazanah.com.my/yayasan-khazanah/global-scholarship/" },
+        { name: "MACC Scholarship (Malaysian Australian Alumni Council)", href: "https://www.emaac.org/" },
+      ],
+    },
     popularFields: [
       "Business, accounting, and actuarial science",
       "Engineering",
@@ -872,11 +1019,19 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       },
       {
         q: "Can I start a degree in Malaysia and finish in Australia?",
-        a: "Yes. Twinning and 2+1 or 3+0 programs are common, and Monash, Curtin, and Swinburne run campuses in Malaysia offering the same degrees. You can also transfer credit from a Malaysian diploma or foundation program into an Australian bachelor's.",
+        a: "Yes. Monash, Curtin, and Swinburne run full branch campuses in Malaysia where you can complete part or all of the degree before transferring, and separate twinning arrangements at local colleges (1+2, 2+1, or 3+0) let you transfer credit from a partnership program into the Australian university that runs it.",
+      },
+      {
+        q: "Can I transfer credit from a Malaysian diploma to an Australian university?",
+        a: "Often, yes, if the diploma is from a recognised institution and relevant to the degree you're applying for. Twinning-partnership diplomas transfer on pre-agreed terms; a standalone diploma is assessed case by case, and the credit given varies by university and course, so confirm it with the specific university before enrolling.",
       },
       {
         q: "Is a Malaysian bachelor's degree accepted in Australia?",
         a: "Yes, for direct entry to Australian master's programs. Universities publish Malaysia-specific entry tables mapping your CGPA to their requirement. Both three-year and four-year degrees are generally accepted.",
+      },
+      {
+        q: "What STPM or UEC result do I need for an Australian bachelor's degree?",
+        a: "As a rough guide, a STPM CGPA around 2.7 to 3.0 or higher, or a UEC average (best 5 subjects) around grade 3 to 4, gets you into most universities, with the Group of Eight wanting the higher end of that range. UEC is widely accepted by Australian universities even though it isn't recognised by Malaysian public universities. Exact cutoffs are set per course, so check the university's own entry table.",
       },
       {
         q: "How much does it cost to study in Australia from Malaysia?",
@@ -890,8 +1045,10 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     sources: [
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
       "https://www.studyaustralia.gov.au/",
+      "https://study.anu.edu.au/apply/international-applications/indicative-entry-requirement/malaysian-independent-chinese",
+      "https://www.emaac.org/",
     ],
-    lastVerified: "2026-08-30",
+    lastVerified: "2026-09-13",
   },
 
   bhutan: {
@@ -918,6 +1075,13 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "Ask each university how it reads your qualification and what grade average your course requires.",
       "English is the medium of instruction in Bhutan. Universities may waive an English test on that basis, but the student visa has its own English rule, so confirm both.",
     ],
+    scholarships: {
+      intro:
+        "Australia Awards Scholarships run a dedicated Bhutan intake, part of the wider Australia Awards South Asia and Mongolia program, funding full-time postgraduate study in Australia in priority fields for Bhutan such as mining and production, special education, statistics, and tourism and hospitality management. This is separate from the general international scholarships Australian universities offer directly (see the scholarships hub).",
+      items: [
+        { name: "Australia Awards Scholarships (Bhutan)", href: "https://australiaawardsbhutan.org/" },
+      ],
+    },
     popularFields: [
       "Nursing and health sciences",
       "Information technology",
@@ -950,8 +1114,9 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     sources: [
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
       "https://www.studyaustralia.gov.au/",
+      "https://australiaawardsbhutan.org/",
     ],
-    lastVerified: "2026-08-30",
+    lastVerified: "2026-09-13",
   },
 
   myanmar: {
@@ -978,6 +1143,13 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "Ask each university how it reads your qualification and whether it counts your degree as three or four years.",
       "English is shown with IELTS, PTE, or TOEFL. Most universities want 6.5 overall for a master's, and the student visa has its own lower floor. Confirm both.",
     ],
+    scholarships: {
+      intro:
+        "Australia Awards Scholarships fund Myanmar citizens for full-time postgraduate study in Australia, and from 2026 that program is topped up by the Mekong-Australia Partnership (MAP) stream with additional Master's places in fields like public health, governance, and economic development. Because the scholarship pays tuition and living costs directly, it also sidesteps the fund-transfer difficulty described above. This runs separately from the general international scholarships Australian universities offer directly (see the scholarships hub).",
+      items: [
+        { name: "Australia Awards Scholarships (Myanmar)", href: "https://australiaawardsmyanmar.org/scholarships/" },
+      ],
+    },
     popularFields: [
       "Information technology",
       "Business and management",
@@ -1010,8 +1182,9 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     sources: [
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
       "https://www.studyaustralia.gov.au/",
+      "https://australiaawardsmyanmar.org/scholarships/",
     ],
-    lastVerified: "2026-08-30",
+    lastVerified: "2026-09-13",
   },
 
   mongolia: {
@@ -1038,6 +1211,13 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "Universities assess Mongolian qualifications individually. Confirm the GPA your course requires and how it reads your grading scale.",
       "English is shown with IELTS, PTE, or TOEFL. Most universities want 6.5 overall for a master's, and the student visa has its own lower floor. Confirm both.",
     ],
+    scholarships: {
+      intro:
+        "Mongolia is one of the eight eligible countries under Australia Awards Scholarships, part of the same South Asia and Mongolia program as Bangladesh, Bhutan, India, Nepal, and Pakistan, funding full-time postgraduate study in Australia. More than 500 Mongolians have studied in Australia through this program since the 1990s. This runs alongside the general international scholarships offered directly by Australian universities (see the scholarships hub).",
+      items: [
+        { name: "Australia Awards Scholarships (Mongolia)", href: "https://www.australiaawardsmongolia.org/scholarships/" },
+      ],
+    },
     popularFields: [
       "Mining, geology, and resources engineering",
       "Business and management",
@@ -1070,8 +1250,9 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     sources: [
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
       "https://www.studyaustralia.gov.au/",
+      "https://www.australiaawardsmongolia.org/scholarships/",
     ],
-    lastVerified: "2026-08-30",
+    lastVerified: "2026-09-13",
   },
 
   colombia: {
@@ -1098,6 +1279,13 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "A Colombian professional degree (titulo profesional), usually four to five years, is accepted for direct entry to Australian master's programs. Universities publish entry tables mapping your average to their requirement.",
       "English is shown with IELTS, PTE, or TOEFL. Degree courses want around 6.5 overall for a master's; English and vocational courses accept lower. The student visa has its own floor.",
     ],
+    scholarships: {
+      intro:
+        "Colombia is not an Australia Awards partner country, which is a scholarship program reserved for the Indo-Pacific, Africa, and the Middle East. The main government-backed route for Colombians funding postgraduate study abroad is ICETEX, the national student finance agency, which offers an education credit line, not a free scholarship, covering up to USD 25,000 in tuition and USD 12,500 in living costs, repaid after your studies finish. Australia is specifically named as an eligible destination. This runs alongside the general international scholarships offered directly by Australian universities (see the scholarships hub).",
+      items: [
+        { name: "ICETEX postgraduate credit for study abroad", href: "https://web.icetex.gov.co/creditos/tu-eliges/posgrado-pais-o-exterior" },
+      ],
+    },
     popularFields: [
       "English language study (ELICOS)",
       "Business and management",
@@ -1130,8 +1318,9 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     sources: [
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
       "https://www.studyaustralia.gov.au/",
+      "https://web.icetex.gov.co/creditos/tu-eliges/posgrado-pais-o-exterior",
     ],
-    lastVerified: "2026-08-30",
+    lastVerified: "2026-09-13",
   },
 
   brazil: {
@@ -1158,6 +1347,13 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "A Brazilian bacharelado, usually four to five years, is accepted for direct entry to Australian master's programs. Universities publish entry tables mapping your GPA, on a 10-point or 4-point scale, to their requirement.",
       "English is shown with IELTS, PTE, or TOEFL. Degree courses want around 6.5 overall for a master's; English and vocational courses accept lower. The student visa has its own floor.",
     ],
+    scholarships: {
+      intro:
+        "Brazil is not an Australia Awards partner country, which is a scholarship program reserved for the Indo-Pacific, Africa, and the Middle East. The closest Brazilian government route is CAPES's Doutorado Sanduíche no Exterior (PDSE), which funds a 4 to 9 month research placement abroad, including at Australian universities, for students already enrolled in a Brazilian doctoral program; it is not a standalone Australian degree scholarship. This runs alongside the general international scholarships offered directly by Australian universities (see the scholarships hub).",
+      items: [
+        { name: "CAPES Doutorado Sanduíche no Exterior (PDSE)", href: "https://www.gov.br/capes/pt-br/acesso-a-informacao/acoes-e-programas/bolsas/bolsas-e-auxilios-internacionais/encontre-aqui/paises/multinacional/programa-de-doutorado-sanduiche-no-exterior-pdse" },
+      ],
+    },
     popularFields: [
       "English language study (ELICOS)",
       "Business and management",
@@ -1190,8 +1386,9 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     sources: [
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
       "https://www.studyaustralia.gov.au/",
+      "https://www.gov.br/capes/pt-br/acesso-a-informacao/acoes-e-programas/bolsas/bolsas-e-auxilios-internacionais/encontre-aqui/paises/multinacional/programa-de-doutorado-sanduiche-no-exterior-pdse",
     ],
-    lastVerified: "2026-08-30",
+    lastVerified: "2026-09-13",
   },
 
   kenya: {
@@ -1218,6 +1415,13 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "Universities publish Kenya-specific entry tables. Confirm the class of degree or GPA your course requires.",
       "English is the medium of instruction in Kenya, and many universities waive an English test on that basis. The student visa has its own English rule, so confirm both.",
     ],
+    scholarships: {
+      intro:
+        "Kenya is one of the eligible countries under Australia Awards Africa, which funds fully-costed Master's study in Australia for suitably qualified Africans, prioritising fields including agriculture and food security, climate change, and governance. This is separate from the general international scholarships Australian universities offer directly (see the scholarships hub).",
+      items: [
+        { name: "Australia Awards Africa Scholarships", href: "https://australiaawardsafrica.org/" },
+      ],
+    },
     popularFields: [
       "Public health and health sciences",
       "Information technology",
@@ -1250,8 +1454,9 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     sources: [
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
       "https://www.studyaustralia.gov.au/",
+      "https://australiaawardsafrica.org/",
     ],
-    lastVerified: "2026-08-30",
+    lastVerified: "2026-09-13",
   },
 
   nigeria: {
@@ -1278,6 +1483,13 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "A Nigerian bachelor's degree, usually four to five years, is accepted for direct entry to Australian master's programs. Universities publish Nigeria-specific entry tables mapping your CGPA on the 5-point scale and class of degree to their requirement. The one-year NYSC is not required for admission.",
       "English is the medium of instruction in Nigeria, and many universities waive an English test on that basis. The student visa has its own English rule, so confirm both.",
     ],
+    scholarships: {
+      intro:
+        "Nigeria is one of the eligible countries under Australia Awards Africa, which funds fully-costed Master's study in Australia for suitably qualified Africans, prioritising fields including agriculture and food security, mining and energy, and governance. This is separate from the general international scholarships Australian universities offer directly (see the scholarships hub).",
+      items: [
+        { name: "Australia Awards Africa Scholarships", href: "https://australiaawardsafrica.org/" },
+      ],
+    },
     popularFields: [
       "Information technology and computer science",
       "Public health",
@@ -1310,8 +1522,9 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     sources: [
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
       "https://www.studyaustralia.gov.au/",
+      "https://australiaawardsafrica.org/",
     ],
-    lastVerified: "2026-08-30",
+    lastVerified: "2026-09-13",
   },
 
   "south-korea": {
@@ -1338,6 +1551,13 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "A four-year Korean bachelor's degree maps directly to Australian master's entry. Universities publish Korea-specific entry tables keyed to your GPA on the 4.5 or 4.3 scale, so the average you need can differ by institution and course.",
       "English is shown with IELTS, PTE, or TOEFL. Medium-of-instruction letters are rarely accepted from Korean institutions, so plan to sit a test. The university sets its own score and the student visa has its own lower rule. Confirm both.",
     ],
+    scholarships: {
+      intro:
+        "South Korea is not an Australia Awards partner country, since that program is reserved for developing nations. Korean students instead fund overseas study mainly through the National Institute for International Education's outbound Global Korea Scholarship (GKS) track, one of the seven GKS programs and the two specifically for Korean nationals studying abroad, alongside the general international scholarships offered directly by Australian universities (see the scholarships hub).",
+      items: [
+        { name: "Global Korea Scholarship (GKS), outbound track for Korean students", href: "https://www.mofa.go.kr/eng/wpge/m_5719/contents.do" },
+      ],
+    },
     popularFields: [
       "Business, management, and marketing",
       "Information technology",
@@ -1370,8 +1590,9 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     sources: [
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
       "https://www.studyaustralia.gov.au/",
+      "https://www.mofa.go.kr/eng/wpge/m_5719/contents.do",
     ],
-    lastVerified: "2026-09-03",
+    lastVerified: "2026-09-13",
   },
 
   japan: {
@@ -1398,6 +1619,13 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "A four-year Japanese bachelor's degree maps directly to Australian master's entry. Universities assess your GPA on the awarding institution's scale; a B average is a common minimum, higher for competitive courses.",
       "English is shown with IELTS, PTE, or TOEFL. Medium-of-instruction letters are rarely accepted from Japanese institutions, so plan to sit a test. The university sets its own score and the student visa has its own lower rule. Confirm both.",
     ],
+    scholarships: {
+      intro:
+        "Japan is not an Australia Awards partner country. The main government-backed route for Japanese students funding overseas study is the Tobitate (Leap for Tomorrow) Young Ambassador Program, a public-private JASSO initiative that has sent thousands of Japanese students abroad since 2014, though Australia sits in a lower stipend tier than some destinations under that program. This runs alongside the general international scholarships Australian universities offer directly (see the scholarships hub).",
+      items: [
+        { name: "Tobitate! (Leap for Tomorrow) Young Ambassador Program, JASSO", href: "https://www.jasso.go.jp/en/ryugaku/scholarship_j/index.html" },
+      ],
+    },
     popularFields: [
       "English language and TESOL",
       "Business and management",
@@ -1430,8 +1658,9 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     sources: [
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
       "https://www.studyaustralia.gov.au/",
+      "https://www.jasso.go.jp/en/ryugaku/scholarship_j/index.html",
     ],
-    lastVerified: "2026-09-03",
+    lastVerified: "2026-09-13",
   },
 
   taiwan: {
@@ -1458,6 +1687,13 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "A four-year Taiwanese bachelor's degree maps directly to Australian master's entry. Universities assess your GPA on the awarding institution's scale, with a common minimum around 70 to 75 percent, higher for competitive courses.",
       "English is shown with IELTS, PTE, or TOEFL. Medium-of-instruction letters are rarely accepted from Taiwanese institutions, so plan to sit a test. The university sets its own score and the student visa has its own lower rule. Confirm both.",
     ],
+    scholarships: {
+      intro:
+        "Taiwan is not an Australia Awards partner country. Taiwanese students funding overseas study mainly go through the Ministry of Education's Study Abroad Programme, which since 2005 has sent close to 60,000 students abroad through sub-schemes including the MOE Feiyang Scholarship, where universities and colleges nominate exceptional students for a semester to a full year overseas. This runs alongside the general international scholarships Australian universities offer directly (see the scholarships hub).",
+      items: [
+        { name: "MOE Feiyang Scholarship (Study Abroad Programme)", href: "https://english.moe.gov.tw/" },
+      ],
+    },
     popularFields: [
       "Business, accounting, and finance",
       "Information technology",
@@ -1490,8 +1726,9 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     sources: [
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
       "https://www.studyaustralia.gov.au/",
+      "https://english.moe.gov.tw/",
     ],
-    lastVerified: "2026-09-03",
+    lastVerified: "2026-09-13",
   },
 
   "hong-kong": {
@@ -1518,6 +1755,14 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
       "A Hong Kong bachelor's degree, now usually four years, maps directly to Australian master's entry. Universities publish Hong Kong-specific entry tables keyed to your classification or GPA, so the mark you need can differ by institution and course.",
       "English is shown with the Hong Kong Diploma English paper, which many universities accept at Level 4 or above in place of a test, or with IELTS, PTE, or TOEFL. A medium-of-instruction letter is often accepted for degrees taught in English. The student visa has its own English rule, so confirm both.",
     ],
+    scholarships: {
+      intro:
+        "Hong Kong is not an Australia Awards partner. The HKSAR Government Scholarship Fund covers the main outbound routes: the Sir Edward Youde Memorial Overseas Scholarships fund outstanding students for a full undergraduate degree abroad, and the Hong Kong Scholarship for Excellence Scheme (HKSES) supports study at selected world-renowned universities outside Hong Kong. This runs alongside the general international scholarships Australian universities offer directly (see the scholarships hub).",
+      items: [
+        { name: "Sir Edward Youde Memorial Overseas Scholarships", href: "https://www.wfsfaa.gov.hk/sfo/seymf/en/whatwedo/scholarships_overseas.htm" },
+        { name: "Hong Kong Scholarship for Excellence Scheme (HKSES)", href: "https://hkses.edb.gov.hk/" },
+      ],
+    },
     popularFields: [
       "Business, accounting, and finance",
       "Law",
@@ -1550,8 +1795,9 @@ export const ORIGIN_COUNTRIES: Record<string, OriginCountry> = {
     sources: [
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
       "https://www.studyaustralia.gov.au/",
+      "https://www.wfsfaa.gov.hk/sfo/seymf/en/whatwedo/scholarships_overseas.htm",
     ],
-    lastVerified: "2026-09-03",
+    lastVerified: "2026-09-13",
   },
 };
 

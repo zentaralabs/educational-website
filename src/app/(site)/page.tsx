@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { EmailSignupForm } from "@/components/site/EmailSignupForm";
 import { PostCard } from "@/components/site/PostCard";
 import { ScrollCue } from "@/components/site/ScrollCue";
 import { SearchBar } from "@/components/site/SearchBar";
@@ -147,14 +148,12 @@ export default async function Home() {
 
           {/* HERO */}
           <section className="flex min-h-[40vh] flex-col justify-center sm:min-h-[48vh]">
-            <div className="mx-auto min-w-0 max-w-3xl text-center">
-              {/* One H1. The title tag and schema carry the "Study in
-                  Australia" entity phrase; the H1 leads with the promise. */}
+            <div className="mx-auto w-full min-w-0 max-w-3xl text-center">
               <h1
                 className="animate-fade-up font-display text-[2rem] leading-[1.1] font-semibold text-ink text-balance sm:text-4xl lg:text-[2.7rem]"
                 style={{ animationDelay: "0ms" }}
               >
-                Need help? We&rsquo;re here
+                Study in Australia, sorted
               </h1>
 
               <p
@@ -315,6 +314,14 @@ export default async function Home() {
                 Firm closing dates a university publishes. Each row links to
                 that university&rsquo;s page and the source it came from.
               </p>
+
+              <div className="mt-4 rounded-2xl border border-line bg-mist p-5 sm:p-6">
+                <p className="mb-3 font-body text-sm font-medium text-ink">
+                  Want to know when a deadline or visa rule changes? Leave
+                  your email &mdash; no spam, unsubscribe anytime.
+                </p>
+                <EmailSignupForm source="homepage-deadlines" />
+              </div>
             </section>
           )}
 

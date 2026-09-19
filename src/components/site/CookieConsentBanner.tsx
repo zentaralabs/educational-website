@@ -1,6 +1,6 @@
 "use client";
 
-import { useSyncExternalStore } from "react";
+import { useEffect, useRef, useSyncExternalStore } from "react";
 import Link from "next/link";
 import { cookieConsentStore, setStoredConsent } from "@/lib/cookie-consent";
 
@@ -27,10 +27,37 @@ export function CookieConsentBanner() {
     cookieConsentStore.getServerSnapshot,
   );
 
+  const ref = useRef<HTMLDivElement>(null);
+
+  // Publish this bar's height as a CSS var so pages can reserve space for it
+  // instead of letting it float over above-the-fold content until dismissed.
+  useEffect(() => {
+    if (consent !== null) {
+      document.documentElement.style.setProperty("--cookie-banner-h", "0px");
+      return;
+    }
+    const el = ref.current;
+    if (!el) return;
+    const update = () =>
+      document.documentElement.style.setProperty(
+        "--cookie-banner-h",
+        `${el.offsetHeight}px`,
+      );
+    update();
+    const observer = new ResizeObserver(update);
+    observer.observe(el);
+    window.addEventListener("resize", update);
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("resize", update);
+    };
+  }, [consent]);
+
   if (consent !== null) return null;
 
   return (
     <div
+      ref={ref}
       role="region"
       aria-label="Cookie consent"
       className="fixed inset-x-0 bottom-0 z-50 border-t border-ink/10 bg-paper px-6 py-4 shadow-[0_-4px_16px_rgba(27,42,74,0.08)]"

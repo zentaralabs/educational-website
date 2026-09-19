@@ -15,6 +15,9 @@ export type PolicyUpdateCategory =
   | "university-sector"
   | "other";
 
+/** experience_submissions.status — see supabase/migrations/0035_add_experience_submissions.sql. */
+export type ExperienceSubmissionStatus = "pending" | "approved" | "rejected";
+
 export type ContentStatus =
   | "draft"
   | "needs_review"
@@ -528,6 +531,9 @@ export interface Database {
           eligibility: string | null;
           conditions: string | null;
           content: string | null;
+          /** See 0036_add_visa_field_notes.sql. First-hand "what we found" content. */
+          field_notes: string | null;
+          field_notes_observed_at: string | null;
           status: ContentStatus;
           author_id: string | null;
           reviewed_by_id: string | null;
@@ -563,6 +569,8 @@ export interface Database {
           eligibility?: string | null;
           conditions?: string | null;
           content?: string | null;
+          field_notes?: string | null;
+          field_notes_observed_at?: string | null;
           status?: ContentStatus;
           author_id?: string | null;
           reviewed_by_id?: string | null;
@@ -653,6 +661,51 @@ export interface Database {
       university_redirects: Table<
         { old_slug: string; new_slug: string; created_at: string },
         { old_slug: string; new_slug: string }
+      >;
+      experience_submissions: Table<
+        {
+          id: string;
+          page_path: string;
+          page_label: string | null;
+          is_anonymous: boolean;
+          contributor_name: string | null;
+          contact_email: string | null;
+          portal_step: string | null;
+          surprised_notes: string;
+          timeline_notes: string | null;
+          consent: boolean;
+          status: ExperienceSubmissionStatus;
+          admin_notes: string | null;
+          created_at: string;
+          updated_at: string;
+        },
+        {
+          id?: string;
+          page_path: string;
+          page_label?: string | null;
+          is_anonymous?: boolean;
+          contributor_name?: string | null;
+          contact_email?: string | null;
+          portal_step?: string | null;
+          surprised_notes: string;
+          timeline_notes?: string | null;
+          consent: boolean;
+          status?: ExperienceSubmissionStatus;
+          admin_notes?: string | null;
+        }
+      >;
+      email_subscribers: Table<
+        {
+          id: string;
+          email: string;
+          source: string;
+          created_at: string;
+        },
+        {
+          id?: string;
+          email: string;
+          source?: string;
+        }
       >;
       activity_log: Table<
         {

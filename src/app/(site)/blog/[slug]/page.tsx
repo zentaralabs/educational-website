@@ -13,8 +13,9 @@ import { faqJsonLd } from "@/lib/faq";
 import { RELATED_LIMIT, blogRelated } from "@/lib/related-content";
 import {
   getPublishedBlogPost,
-  listRecentBlogPosts,
+  listAllPublishedBlogPostsForSearch,
   listRecentBlogPostSlugs,
+  rotatedOtherBlogPosts,
 } from "@/lib/queries/public-blog-posts";
 import { readingMinutesFromWords } from "@/lib/reading";
 import { SITE_NAME, SITE_URL } from "@/lib/site-config";
@@ -65,7 +66,13 @@ export default async function BlogPostPage({
 
   const faqItems = extractFaqItems(post.content).map((f) => ({ q: f.question, a: f.answer }));
   const toc = extractToc(post.content);
-  const more = await listRecentBlogPosts(4, post.slug);
+  const related = blogRelated(post.slug).slice(0, RELATED_LIMIT);
+  const allPosts = await listAllPublishedBlogPostsForSearch();
+  const excludeFromMore = new Set([
+    post.slug,
+    ...related.map((l) => l.href.replace("/blog/", "")),
+  ]);
+  const more = rotatedOtherBlogPosts(allPosts, excludeFromMore, post.slug);
 
   const breadcrumbs = [
     { label: "Home", href: "/" },
@@ -143,7 +150,7 @@ export default async function BlogPostPage({
             <RelatedLinks
               className="mt-12 border-t border-line pt-8"
               heading="Related reading"
-              items={blogRelated(post.slug).slice(0, RELATED_LIMIT)}
+              items={related}
             />
 
             {more.length > 0 && (

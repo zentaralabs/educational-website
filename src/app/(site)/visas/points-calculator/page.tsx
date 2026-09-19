@@ -106,7 +106,16 @@ export default function PointsCalculatorPage() {
         </div>
       </section>
 
-      <div className="mt-10 border-t border-line pt-6">
+      <p className="mt-10 font-body text-xs text-slate">
+        This is general information, not immigration advice, and Where To
+        Apply is not a registered migration agent. This calculator estimates
+        points from published rules; it is not the Department of Home
+        Affairs&rsquo; own tool and does not check your occupation or skills
+        assessment — always confirm your score with a registered migration
+        agent (check their MARN on the OMARA website) before you rely on it.
+      </p>
+
+      <div className="mt-6 border-t border-line pt-6">
         <Link
           href="/visas"
           className="font-body text-sm text-slate underline underline-offset-2 hover:text-ink"

@@ -82,6 +82,51 @@ export default async function CollectionPage({
         ))}
       </div>
 
+      {collection.sectionsBeforeList?.map((s) => (
+        <section key={s.heading} className="mt-8">
+          <h2 className="font-display text-xl font-semibold text-ink">{s.heading}</h2>
+          <div className="mt-3 flex flex-col gap-3">
+            {s.body.map((p) => (
+              <p key={p.slice(0, 24)} className="font-body text-base leading-relaxed text-ink">
+                {p}
+              </p>
+            ))}
+          </div>
+        </section>
+      ))}
+
+      {collection.table && (
+        <div className="mt-8 overflow-x-auto rounded-2xl border border-line">
+          <table className="w-full border-collapse text-left font-body text-sm">
+            <thead>
+              <tr className="bg-mist">
+                {collection.table.columns.map((c) => (
+                  <th key={c} className="whitespace-nowrap px-4 py-2.5 font-utility text-xs font-semibold tracking-wide text-slate uppercase">
+                    {c}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {collection.table.rows.map((r, i) => (
+                <tr key={i} className="border-t border-line">
+                  {r.cells.map((cell, j) => (
+                    <td key={j} className="whitespace-nowrap px-4 py-2.5 text-ink">
+                      {cell ?? "—"}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          {collection.table.note && (
+            <p className="border-t border-line bg-mist px-4 py-2.5 font-body text-xs text-slate">
+              {collection.table.note}
+            </p>
+          )}
+        </div>
+      )}
+
       {entries.length === 0 ? (
         <p className="mt-8 font-body text-base text-slate">
           Nothing in the dataset currently matches these criteria.
@@ -113,12 +158,50 @@ export default async function CollectionPage({
         </ol>
       )}
 
+      {collection.sectionsAfterList?.map((s) => (
+        <section key={s.heading} className="mt-10">
+          <h2 className="font-display text-xl font-semibold text-ink">{s.heading}</h2>
+          <div className="mt-3 flex flex-col gap-3">
+            {s.body.map((p) => (
+              <p key={p.slice(0, 24)} className="font-body text-base leading-relaxed text-ink">
+                {p}
+              </p>
+            ))}
+          </div>
+        </section>
+      ))}
+
       <div className="mt-10 rounded-2xl border border-line bg-mist p-5">
         <h2 className="font-body text-[0.8rem] font-semibold tracking-wide text-slate uppercase">
           How this list was built
         </h2>
         <p className="mt-2 font-body text-sm text-slate">{collection.methodology}</p>
       </div>
+
+      {collection.faq && collection.faq.length > 0 && (
+        <div className="mt-10">
+          <JsonLd
+            data={{
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: collection.faq.map((f) => ({
+                "@type": "Question",
+                name: f.q,
+                acceptedAnswer: { "@type": "Answer", text: f.a },
+              })),
+            }}
+          />
+          <h2 className="font-display text-xl font-semibold text-ink">Frequently asked questions</h2>
+          <div className="mt-4 flex flex-col gap-4">
+            {collection.faq.map((f) => (
+              <div key={f.q}>
+                <p className="font-body text-base font-semibold text-ink">{f.q}</p>
+                <p className="mt-1 font-body text-sm leading-relaxed text-slate">{f.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
 
       {collection.relatedGuide && (
         <Link

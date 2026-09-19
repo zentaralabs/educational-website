@@ -59,10 +59,14 @@ export function composeTitle(
   let title = core.trim();
 
   if (title.length > TITLE_MAX) {
-    // Clip on a word boundary rather than mid-word.
+    // Clip on a word boundary rather than mid-word. Below the 0.6 threshold
+    // there's no word break late enough to preserve much of the budget, so
+    // a hard character cut is the better trade-off there — but even then,
+    // never leave a dangling comma/colon/dash from slicing mid-punctuation.
     const clipped = title.slice(0, TITLE_MAX - 1);
     const lastSpace = clipped.lastIndexOf(" ");
-    return (lastSpace > TITLE_MAX * 0.6 ? clipped.slice(0, lastSpace) : clipped).trimEnd();
+    const bounded = lastSpace > TITLE_MAX * 0.6 ? clipped.slice(0, lastSpace) : clipped;
+    return bounded.trimEnd().replace(/[,:;\-–—]+$/, "").trimEnd();
   }
 
   let joiner = ": "; // first fragment reads as a subtitle, later ones as qualifiers

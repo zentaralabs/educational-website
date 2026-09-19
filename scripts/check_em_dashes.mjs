@@ -1,11 +1,17 @@
 import pg from "pg";
 import fs from "fs";
 
-// Read-only sweep for em dashes (U+2014) in published, user-facing DB content.
-// House style is zero em dashes in anything that renders on the public site
-// (they read as AI-generated). The seed scripts guard content they write, but
-// rows edited afterwards through the admin panel are not re-checked. This
-// script only SELECTs; fix any hits in the admin editor.
+// Read-only sweep for em dashes (U+2014) and en dashes used as a
+// sentence-separator (U+2013) in published, user-facing DB content. House
+// style is zero em/en dashes in anything that renders on the public site
+// (they read as AI-generated); a genuine numeric/date range ("2024-2026")
+// is fine but this script can't tell the difference from a raw LIKE scan,
+// so review each hit before fixing. The seed scripts guard content they
+// write (see NO_EM_DASH_FIELDS in seed_programs.mjs, which also checks en
+// dashes), but rows edited afterwards through the admin panel are not
+// re-checked, and this script previously only checked em dashes, which is
+// why it can under-report relative to seed_programs.mjs's gate. This
+// script only SELECTs; fix any hits in the admin editor or via a script.
 //
 //   node scripts/check_em_dashes.mjs
 
@@ -57,7 +63,13 @@ const TARGETS = [
     // `curriculum` is deliberately excluded: parseCurriculumLine() in
     // programs/[programId]/page.tsx uses " — " as a field delimiter that is
     // split out and never rendered, so an em dash there is expected.
-    cols: ["name", "description", "admission_requirements", "english_requirements"],
+    cols: [
+      "name",
+      "description",
+      "admission_requirements",
+      "english_requirements",
+      "discontinued_note",
+    ],
   },
 ];
 
@@ -80,11 +92,11 @@ try {
     const scan = cols.filter((c) => have.has(c));
     if (scan.length === 0) continue;
 
-    const where = scan.map((c) => `${c} like '%—%'`).join(" or ");
+    const where = scan.map((c) => `(${c} like '%—%' or ${c} like '%–%')`).join(" or ");
     const statusFilter = have.has("status") ? "status = 'published' and" : "";
     const { rows } = await client.query(
       `select ${id} as ident, ${scan
-        .map((c) => `(${c} like '%—%') as "${c}"`)
+        .map((c) => `(${c} like '%—%' or ${c} like '%–%') as "${c}"`)
         .join(", ")}
        from ${table}
        where ${statusFilter} (${where})
@@ -101,7 +113,9 @@ try {
     }
   }
 
-  console.log(total === 0 ? "\nClean: no em dashes in published content." : `\n${total} row(s) to fix.`);
+  console.log(
+    total === 0 ? "\nClean: no em/en dashes in published content." : `\n${total} row(s) to fix.`,
+  );
 } catch (e) {
   console.error("ERR", e.message);
   process.exit(1);

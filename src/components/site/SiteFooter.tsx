@@ -10,6 +10,7 @@ const EXPLORE = [
   { label: "Cost of living", href: "/cost-of-living" },
   { label: "Cost calculator", href: "/cost-calculator" },
   { label: "WAM calculator", href: "/wam-calculator" },
+  { label: "IELTS to PTE converter", href: "/ielts-pte-calculator" },
   { label: "Scholarships", href: "/scholarships" },
   { label: "Best universities (shortlists)", href: "/best" },
   { label: "Compare universities", href: "/compare" },
@@ -108,7 +109,10 @@ export async function SiteFooter() {
         </div>
       </div>
 
-      <div className="border-t border-line px-6 py-4">
+      <div
+        className="border-t border-line px-6 py-4"
+        style={{ paddingBottom: "calc(1rem + var(--cookie-banner-h))" }}
+      >
         <p className="mx-auto max-w-6xl font-utility text-xs text-slate">
           © {new Date().getFullYear()} Where To Apply. Not affiliated with any
           university. Information is independently researched and verified; see

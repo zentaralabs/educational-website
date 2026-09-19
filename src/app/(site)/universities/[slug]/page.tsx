@@ -84,9 +84,14 @@ export async function generateMetadata({
     `Fees & Entry Requirements ${SITE_YEAR}`,
     `Fees & Entry ${SITE_YEAR}`,
   ]);
+  // distinctive_summary leads so the real, per-university content survives
+  // clampDescription's 155-char budget — it alone often exceeds that, which
+  // is fine, since the generic tail below just repeats words already in the
+  // title ("Fees, Entry & Deadlines") and previously became the *entire*
+  // visible description once distinctive_summary got clipped off the end.
   const description =
-    `${university.name} for international students${university.city ? ` in ${university.city.split(",")[0]}` : ""}: tuition fees, entry requirements, application deadlines, and scholarships. ` +
-    (university.distinctive_summary ?? "Independently researched and dated.");
+    (university.distinctive_summary ? `${university.distinctive_summary} ` : "") +
+    `${university.name} for international students${university.city ? ` in ${university.city.split(",")[0]}` : ""}: tuition fees, entry requirements, application deadlines, and scholarships.`;
   const url = `/universities/${slug}`;
 
   return pageMetadata({
@@ -231,6 +236,7 @@ export default async function UniversityProfilePage({
       addressCountry: university.country?.code,
     },
     foundingDate: university.founded_year ? String(university.founded_year) : undefined,
+    dateModified: deadlineVerifiedAt ?? undefined,
   };
 
   const breadcrumbs = [

@@ -39,10 +39,13 @@ export const SUBJECT_BEST_PAGES = [
   "computer-science",
   "information-technology",
   "data-science",
-  "business",
   "nursing-and-health-sciences",
   "engineering",
 ];
+// "business" is deliberately excluded: it has its own hand-authored
+// collection (with a comparison table, PR-pathway and entry-requirements
+// sections, and FAQ) in `collections.ts` instead of the generic
+// subjectBestCollection template.
 
 /**
  * Editorial copy for the /study/[slug] subject landing pages, keyed by the
@@ -178,6 +181,8 @@ export const SUBJECT_CONTENT: Record<string, SubjectContent> = {
       { slug: "monash-university", why: "Very large business faculty with accredited accounting pathways and overseas campuses." },
       { slug: "bond-university", why: "Small classes and an accelerated calendar; MBA in about a year." },
       { slug: "queensland-university-of-technology", why: "Practical business degrees with real-world projects, in lower-cost Brisbane." },
+      { slug: "university-of-technology-sydney", why: "AACSB and EQUIS accredited business school with a flexible, industry-facing MBA." },
+      { slug: "australian-institute-of-business", why: "The lowest-cost MBA on this list, TEQSA-registered rather than university-accredited; a genuine budget option, not a prestige pick." },
     ],
     faq: [
       {

@@ -57,6 +57,42 @@ export async function listPublishedBlogPosts(
   };
 }
 
+/**
+ * Cheap, deterministic string hash for `rotatedOtherBlogPosts` — no crypto
+ * needed, just something stable and roughly evenly distributed.
+ */
+function hashString(s: string): number {
+  let h = 0;
+  for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) | 0;
+  return h;
+}
+
+/**
+ * Picks `limit` posts for the "More from the blog" footer, seeded by the
+ * current post's slug so the same post always shows the same picks (stable
+ * across requests, no client/server hydration mismatch) while different
+ * posts show different picks. Plain `listRecentBlogPosts` always returned
+ * the same newest-N regardless of which post you were reading — with only
+ * a dozen-odd posts total, that meant 4 posts absorbed every "more from the
+ * blog" link sitewide and the rest were never reachable from here. This
+ * draws from every published post instead, excluding the current one and
+ * anything already linked from the curated `blogRelated` block above it on
+ * the same page, so the two blocks don't repeat a link.
+ */
+export function rotatedOtherBlogPosts<T extends { slug: string }>(
+  posts: T[],
+  excludeSlugs: Set<string>,
+  seed: string,
+  limit = 4,
+): T[] {
+  return posts
+    .filter((p) => !excludeSlugs.has(p.slug))
+    .map((p) => ({ p, key: hashString(seed + p.slug) }))
+    .sort((a, b) => a.key - b.key)
+    .slice(0, limit)
+    .map(({ p }) => p);
+}
+
 /** A few recent posts for the "more from the blog" footer on article pages. */
 export async function listRecentBlogPosts(
   limit = 4,

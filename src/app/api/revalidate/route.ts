@@ -101,7 +101,15 @@ export async function POST(req: NextRequest) {
   const slug = record?.slug as string | undefined;
   if (slug) tags.push(`${entityTagPrefix}:${slug}`);
 
-  for (const tag of tags) revalidateTag(tag, "max");
+  // { expire: 0 }, not "max": this route is called by an external system
+  // (a Supabase DB webhook, or a manual admin call) that needs the change
+  // live immediately, not Next's default stale-while-revalidate semantics —
+  // "max" marks the tag stale but only refetches on a page's *next* visit,
+  // so a just-published edit can still show old content for one visit (or
+  // longer, if that visit never reaches the origin to trigger the refetch).
+  // See node_modules/next/dist/docs/.../revalidateTag.md's "Good to know"
+  // on webhooks needing immediate expiration.
+  for (const tag of tags) revalidateTag(tag, { expire: 0 });
 
   // Tell IndexNow (Bing/Yandex/etc.) the affected URL changed, so
   // time-sensitive pages — the SkillSelect invitation-round tracker above

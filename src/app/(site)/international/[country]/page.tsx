@@ -191,6 +191,16 @@ export default async function OriginCountryPage({
         )}
       </ProfileSection>
 
+      {c.pathways && c.pathways.length > 0 && (
+        <ProfileSection narrow title="Pathway and twinning programs">
+          <div className="flex flex-col gap-3 font-body text-base leading-relaxed text-ink">
+            {c.pathways.map((p) => (
+              <p key={p.slice(0, 24)}>{p}</p>
+            ))}
+          </div>
+        </ProfileSection>
+      )}
+
       <ProfileSection narrow title="What it costs">
         <div className="flex flex-col gap-3 font-body text-base leading-relaxed text-ink">
           {localBudget && (
@@ -231,12 +241,86 @@ export default async function OriginCountryPage({
         </div>
       </ProfileSection>
 
-      <ProfileSection narrow title="Your qualifications and English">
-        <div className="flex flex-col gap-3 font-body text-base leading-relaxed text-ink">
+      {c.scholarships && c.scholarships.items.length > 0 && (
+        <ProfileSection narrow title={`Scholarships for ${c.demonym} students`}>
+          <div className="flex flex-col gap-3 font-body text-base leading-relaxed text-ink">
+            <p>{c.scholarships.intro}</p>
+          </div>
+          <ul className="mt-4 flex flex-col gap-2">
+            {c.scholarships.items.map((s) => {
+              const internal = s.href.startsWith("/");
+              const linkProps = internal
+                ? { href: s.href }
+                : { href: s.href, target: "_blank", rel: "noopener noreferrer nofollow" };
+              const LinkComponent = internal ? Link : "a";
+              return (
+                <li key={s.name}>
+                  <LinkComponent
+                    {...linkProps}
+                    className="flex items-center justify-between gap-3 rounded-xl border border-line bg-mist px-4 py-3 font-body text-sm font-medium text-ink transition-colors duration-150 hover:border-status-open/40 hover:text-status-open"
+                  >
+                    {s.name}
+                    <span aria-hidden="true" className="text-slate">
+                      &rarr;
+                    </span>
+                  </LinkComponent>
+                </li>
+              );
+            })}
+          </ul>
+          <p className="mt-3 font-body text-xs text-slate">
+            Official pages, on this site or the funding body&rsquo;s own. See also the{" "}
+            <Link
+              href="/scholarships"
+              className="font-medium text-status-open underline underline-offset-2"
+            >
+              scholarships hub
+            </Link>{" "}
+            for scholarships offered directly by Australian universities.
+          </p>
+        </ProfileSection>
+      )}
+
+      <ProfileSection title="Your qualifications and English">
+        <div className="max-w-2xl flex flex-col gap-3 font-body text-base leading-relaxed text-ink">
           {c.credentials.map((p) => (
             <p key={p.slice(0, 24)}>{p}</p>
           ))}
         </div>
+        {c.qualificationTable && (
+          <div className="mt-5">
+            <div className="overflow-x-auto rounded-xl border border-line">
+              <table className="w-full border-collapse text-left font-body text-sm">
+                <thead>
+                  <tr className="bg-mist">
+                    {c.qualificationTable.columns.map((col) => (
+                      <th
+                        key={col}
+                        className="whitespace-nowrap px-4 py-2.5 font-utility text-xs font-semibold tracking-wide text-slate uppercase"
+                      >
+                        {col}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {c.qualificationTable.rows.map((row, i) => (
+                    <tr key={i} className="border-t border-line align-top">
+                      {row.map((cell, j) => (
+                        <td key={j} className="px-4 py-2.5 text-ink">
+                          {cell ?? "—"}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            {c.qualificationTable.note && (
+              <p className="mt-2 font-body text-xs text-slate">{c.qualificationTable.note}</p>
+            )}
+          </div>
+        )}
       </ProfileSection>
 
       <ProfileSection narrow title="The student visa">

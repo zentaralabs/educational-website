@@ -19,7 +19,18 @@ import {
   resolveProgramSlugById,
 } from "@/lib/queries/public-programs";
 import { JsonLd } from "@/lib/json-ld";
-import { composeTitle, pageMetadata } from "@/lib/page-metadata";
+import { TITLE_MAX, composeTitle, pageMetadata } from "@/lib/page-metadata";
+import { parseCurriculum } from "@/lib/curriculum-parser";
+
+/**
+ * `name, University Name` when it fits the title budget; drops the
+ * university suffix entirely (rather than truncating it mid-word) when the
+ * program name alone already eats most or all of the budget.
+ */
+function programTitleCore(name: string, universityName: string): string {
+  const withUniversity = `${name}, ${universityName}`;
+  return withUniversity.length <= TITLE_MAX ? withUniversity : name;
+}
 
 const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
@@ -41,31 +52,18 @@ async function redirectIfLegacyId(slug: string, programParam: string) {
 
 export const revalidate = 3600;
 
-type CurriculumItem = { code: string | null; text: string; electiveCount: string | null };
-type CurriculumTerm = { label: string | null; units: string | null; items: CurriculumItem[] };
-
-/** Parses one "Label — CODE1 Name; CODE2 Name; 2 electives (24 units)." curriculum line. */
-function parseCurriculumLine(line: string): CurriculumTerm {
-  const separatorIndex = line.indexOf(" — ");
-  const label = separatorIndex === -1 ? null : line.slice(0, separatorIndex);
-  let body = separatorIndex === -1 ? line : line.slice(separatorIndex + 3);
-
-  const unitsMatch = body.match(/\((\d+)\s*units?\)\.?\s*$/i);
-  const units = unitsMatch ? `${unitsMatch[1]} units` : null;
-  if (unitsMatch) body = body.slice(0, unitsMatch.index).trim();
-
-  const items = body
-    .split(";")
-    .map((s) => s.trim().replace(/\.$/, ""))
-    .filter(Boolean)
-    .map((segment): CurriculumItem => {
-      const codeMatch = segment.match(/^([A-Z]{2,6}\d{3,4})\s+(.+)$/);
-      if (codeMatch) return { code: codeMatch[1], text: codeMatch[2], electiveCount: null };
-      const electiveMatch = segment.match(/^(\d+)\s+electives?$/i);
-      if (electiveMatch) return { code: null, text: "Elective", electiveCount: electiveMatch[1] };
-      return { code: null, text: segment, electiveCount: null };
-    });
-  return { label, units, items };
+// No paths returned: this template has ~4,100 programs, too many to
+// prerender at build time without materially slowing every deploy. Defining
+// the function at all (even returning none) is what matters — it opts this
+// route into static-with-fallback rendering instead of the fully dynamic,
+// uncached rendering it silently had with no generateStaticParams at all
+// (verified via `next build`'s route summary: this template printed as
+// `ƒ Dynamic` with no cache TTL columns, unlike every sibling `[slug]`
+// template, which prints `● SSG`). The first request per program now
+// renders once and is served from the `revalidate = 3600` cache after that,
+// same as every other content template on the site.
+export async function generateStaticParams() {
+  return [];
 }
 
 async function loadProgram(slug: string, programSlug: string) {
@@ -88,7 +86,7 @@ export async function generateMetadata({
     const archived = await getArchivedProgramBySlug(slug, programSlug);
     if (archived?.university) {
       return pageMetadata({
-        title: composeTitle(`${archived.name}, ${archived.university.name}`, [
+        title: composeTitle(programTitleCore(archived.name, archived.university.name), [
           "No longer offered",
         ]),
         description: `${archived.name} at ${archived.university.name} is no longer listed by the university. See related ${archived.subject?.name ?? "programs"} still open to international students.`,
@@ -100,7 +98,7 @@ export async function generateMetadata({
     return {};
   }
 
-  const title = composeTitle(`${program.name}, ${program.university!.name}`, [
+  const title = composeTitle(programTitleCore(program.name, program.university!.name), [
     `Fees & Entry Requirements ${SITE_YEAR}`,
     `Fees & Entry ${SITE_YEAR}`,
     `${SITE_YEAR}`,
@@ -145,11 +143,7 @@ export default async function ProgramDetailPage({
     : [];
 
   const university = program.university!;
-  const curriculumTerms = program.curriculum
-    ?.split("\n")
-    .map((line) => line.trim())
-    .filter(Boolean)
-    .map(parseCurriculumLine);
+  const curriculumTerms = parseCurriculum(program.curriculum);
 
   const hasDescription = Boolean(program.description?.trim());
 
@@ -188,6 +182,7 @@ export default async function ProgramDetailPage({
     "@type": "EducationalOccupationalProgram",
     name: program.name,
     url: `${SITE_URL}/universities/${university.slug}/programs/${program.slug}`,
+    dateModified: program.last_verified_at ?? undefined,
     ...(hasDescription
       ? { description: program.description!.trim().split("\n\n")[0].replace(/\s+/g, " ") }
       : {}),
@@ -406,28 +401,40 @@ export default async function ProgramDetailPage({
                     )}
                   </div>
                 )}
-                <ul className={term.label || term.units ? "mt-2 flex flex-col gap-1.5" : "flex flex-col gap-1.5"}>
-                  {term.items.map((item, j) => (
-                    <li key={j} className="flex items-center gap-2 font-body text-sm text-ink">
-                      {item.code ? (
-                        <span className="flex-shrink-0 rounded-full bg-ink/[0.05] px-2 py-0.5 font-utility text-[10px] text-slate">
-                          {item.code}
-                        </span>
-                      ) : (
-                        <span
-                          aria-hidden="true"
-                          className="inline-block h-1 w-1 flex-shrink-0 rounded-full bg-status-open/50"
-                        />
-                      )}
-                      <span>{item.text}</span>
-                      {item.electiveCount && (
-                        <span className="ml-auto flex-shrink-0 rounded-full bg-status-open/10 px-2 py-0.5 font-utility text-[10px] text-status-open">
-                          {item.electiveCount} elective{item.electiveCount === "1" ? "" : "s"}
-                        </span>
-                      )}
-                    </li>
-                  ))}
-                </ul>
+                {term.freeformText ? (
+                  <p
+                    className={
+                      term.label || term.units
+                        ? "mt-2 font-body text-sm leading-relaxed text-ink"
+                        : "font-body text-sm leading-relaxed text-ink"
+                    }
+                  >
+                    {term.freeformText}
+                  </p>
+                ) : (
+                  <ul className={term.label || term.units ? "mt-2 flex flex-col gap-1.5" : "flex flex-col gap-1.5"}>
+                    {term.items.map((item, j) => (
+                      <li key={j} className="flex items-center gap-2 font-body text-sm text-ink">
+                        {item.code ? (
+                          <span className="flex-shrink-0 rounded-full bg-ink/[0.05] px-2 py-0.5 font-utility text-[10px] text-slate">
+                            {item.code}
+                          </span>
+                        ) : (
+                          <span
+                            aria-hidden="true"
+                            className="inline-block h-1 w-1 flex-shrink-0 rounded-full bg-status-open/50"
+                          />
+                        )}
+                        <span>{item.text}</span>
+                        {item.electiveCount && (
+                          <span className="ml-auto flex-shrink-0 rounded-full bg-status-open/10 px-2 py-0.5 font-utility text-[10px] text-status-open">
+                            {item.electiveCount} elective{item.electiveCount === "1" ? "" : "s"}
+                          </span>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
             ))}
           </div>

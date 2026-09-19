@@ -254,7 +254,16 @@ export default async function UpdatesPage() {
           >
             invitation rounds tracker
           </Link>
-          .
+          . For the fuller story behind an individual entry — not just what
+          changed but what it means for applicants — check the{" "}
+          <Link
+            href="/blog"
+            className="font-medium text-status-open underline underline-offset-2"
+          >
+            blog
+          </Link>{" "}
+          for a matching analysis, linked from this page as &ldquo;Read our
+          analysis&rdquo; where one exists.
         </p>
       </div>
 

@@ -18,7 +18,7 @@ const AUTHOR_ID = "6e1c0e5b-ed26-497c-a09c-e9539c6761e8";
 // `authorId` to override the default. The upsert never updates author_id on
 // conflict, so an existing row keeps whoever it was first inserted with.
 const EDITORIAL_AUTHOR_ID = "f1b35489-4b7c-4b60-bc5e-a65b35f22a54";
-const TODAY = "2026-09-03";
+const TODAY = "2026-09-18";
 const SITE_URL = (env.NEXT_PUBLIC_SITE_URL ?? "https://www.wheretoapply.xyz").replace(/\/$/, "");
 const INDEXNOW_KEY = "b1d94f7a2c8e4056a3f61e0d5c927b8f";
 
@@ -1706,6 +1706,86 @@ No. Your priority is locked in on the day you lodge. Later changes to the provid
     sources: [
       "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-processing-times/visa-processing-priorities/student-visa",
       "https://www.education.gov.au/managed-system-international-education/resources/visa-prioritisation-status",
+    ],
+  },
+  {
+    slug: "australia-migration-overhaul-september-2026-student-family-ban",
+    title:
+      "Australia bars most international students from bringing family: the September 2026 migration overhaul explained",
+    published_at: "2026-09-18",
+    tags: ["visas", "australia", "student-visa", "skilled-migration"],
+    excerpt:
+      'Home Affairs Minister Tony Burke announced sweeping visa changes on 17 September 2026, including a family ban for most student visas that will hit Nepal and India hardest, a course-progression crackdown, a visitor visa "no further stay" condition, Working Holiday ballots, and equal points for construction trades.',
+    content: `Home Affairs Minister Tony Burke used a National Press Club address on 17 September 2026 to announce the biggest overhaul of Australia's temporary visa system in years. The changes are aimed at cutting net overseas migration from about 292,100 (the year to March 2026) to a budgeted 245,000 this financial year and 225,000 the year after. They will be made through regulation and changes to visa conditions rather than new legislation.
+
+For students from Nepal and India, the single biggest change is this: most international students and graduates will no longer be able to bring a partner or children to Australia on their visa.
+
+## Family members: the change that will hit Nepal and India hardest
+
+Under the new rule, most student (subclass 500) and Temporary Graduate (subclass 485) visa holders will no longer be able to add a partner or child as a secondary applicant. Burke confirmed exemptions for PhD candidates, citizens of Pacific and ASEAN nations, and government-sponsored students. Everyone else applying for a new student or graduate visa will need to leave family behind for the length of the course.
+
+Families who are already in Australia attached to a student visa will not be separated. "Anyone who already has their family attached to a visa and is already here, we're not going to be breaking up families onshore," Burke said.
+
+The numbers explain why this policy exists and who it affects. Australia granted 337,427 student visas in the last financial year, and 45,991 of them (about 1 in 7) went to secondary applicants, mostly partners and children. Home Affairs figures cited in the announcement show South Asian countries, including Nepal, India, Bangladesh, Bhutan and Sri Lanka, accounted for more than 70% of those dependant visas. This is not a policy that lands evenly. It lands on exactly the applicant pool this site's readers are in.
+
+Shilpi Jaiswal, a Nepali student currently studying in Sydney, told the ABC she had been planning to bring her parents to visit for three months. "After hearing those things, we are very scared to apply for the visa," she said.
+
+If you are applying for a student visa from Nepal or India and were planning to bring a spouse or child, budget your study plan around going alone rather than assuming you can add family later. Check the current [student visa 500](/visas/student-500) page for the latest eligibility detail, and see our [cost of studying in Australia from Nepal](/guides/cost-of-studying-in-australia-from-nepal) and [from India](/guides/cost-of-studying-in-australia-from-india) guides for what a single-applicant budget looks like without a partner's income or a second person's living costs.
+
+## No more sideways or downward course changes
+
+Burke also announced a crackdown on what he called "visa hopping": students bouncing between courses and providers to extend their stay without a genuine study or migration purpose. Two changes follow from this.
+
+First, a student who wants to transfer to a different course or provider now generally needs to lodge a new student visa application, rather than simply switching enrolment.
+
+Second, when a student progresses to a new course, it must be at a higher qualification level than the one their current visa was granted for. Burke's own example: a bachelor's degree graduate can apply to study a master's. A student cannot move down to a cheaper certificate or diploma course and expect to keep progressing their visa on that basis. "To hop around, up and down, to different institutions, and claim that what is actually just seeking a migration outcome as part of Australia's export of international education will come to an end as a model," Burke said.
+
+For anyone building a study plan around Australia, this reinforces something worth planning for from day one: pick your course level with your end pathway in mind, because you will not be able to use a downgrade to buy time later. Our [study to permanent residence pathway](/guides/study-to-permanent-residence-pathway-australia) guide walks through how course choice interacts with PR eligibility.
+
+## Visitor visas get a "no further stay" condition
+
+Visitor visas (subclass 600) will generally carry a No Further Stay condition going forward. This does not shorten the length of a visit, but it blocks most onshore applications for another visa while the person is in Australia on that visitor visa. Burke said the goal is to stop people arriving as visitors, then applying onshore for a different visa and riding a bridging visa while that application is assessed. This mainly affects the tourist-to-student or tourist-to-partner-visa route some families have used; check the [visitor visa 600](/visas/visitor-visa-600) page before assuming you can switch status once you land.
+
+## Working Holiday Maker: ballots for year two and year three
+
+The Working Holiday Maker program (subclass 417 and subclass 462, commonly called the backpacker visa) is being reshaped around a ballot for extended stays:
+
+| Stay | Places | Requirement to enter ballot |
+|---|---|---|
+| Second year | 45,000 (down from ~57,000 last year) | 88 days of regional work |
+| Third year | 5,000 (down from ~31,000 last year) | 6 months of regional work |
+
+Completing the regional work no longer guarantees a second or third year; it only qualifies an applicant to enter the ballot. UK passport holders are exempt from the regional work requirement under the Australia-UK free trade agreement, and the government says it will keep processing UK applications more slowly given the scheme has grown from about 17,000 to nearly 80,000 UK participants since the pandemic. This is a smaller story for our readers than the student changes, but see our [work and holiday visa 462](/visas/work-holiday-462) page if it's relevant to your plans.
+
+## Skilled migration: construction trades get equal points recognition
+
+On the skilled side, Burke flagged a redesign of the points test so that housing construction trade qualifications carry the same recognition as a university degree, part of a broader points test rewrite. Burke also confirmed Ministerial Direction 119, which sets processing priority for skilled visas, will be updated again to give faster processing to construction, healthcare, education, law enforcement, defence, resources, agriculture, aquaculture and fishing, after the earlier version of MD 119 pushed offshore skilled applications to the back of the queue and blew out processing times to over a year in some cases. Read our explainer on [how MD 119 changed skilled visa priority](/blog/ministerial-direction-119-skilled-visa-priorities) and [how the points test currently works](/guides/how-the-australian-points-test-works) for context on what this redesign is changing.
+
+## Frequently asked questions
+
+## Can I still bring my spouse on a student visa to Australia?
+
+Under the newly announced rule, most new student (subclass 500) and graduate (subclass 485) visa applicants will not be able to add a partner or child as a secondary applicant. Exceptions apply for PhD students, Pacific and ASEAN nationals, and government-sponsored students. If your family is already in Australia on your visa, they will not be separated.
+
+## Will this affect students already studying in Australia with family here?
+
+No. The government confirmed existing families already attached to a visa and in Australia will not be broken up. The restriction applies to new applications going forward.
+
+## Can I switch to a cheaper course to extend my student visa?
+
+Not under the new rule. Course changes must now move to a higher qualification level than your current visa was granted for, and changing course or provider generally requires a new visa application rather than a simple enrolment switch.
+
+## Does the visitor visa change stop me visiting Australia?
+
+No, it does not shorten your visit. The No Further Stay condition stops you applying for most other visas while in Australia on that visitor visa. You would need to leave and apply from outside Australia instead.
+
+## Is the second-year Working Holiday visa still available?
+
+Yes, but places are capped at 45,000 through a ballot, and completing 88 days of regional work only qualifies you to enter the ballot, not to be guaranteed a place.`,
+    sources: [
+      "https://www.abc.net.au/news/2026-09-17/labor-immigration-crackdown-students-backpackers-overstay-visa/107164354",
+      "https://www.abc.net.au/news/2026-09-17/universities-students-respond-to-move-to-bar-student-families/107163192",
+      "https://www.abc.net.au/news/2026-09-17/labor-to-unveil-delayed-migration-overhaul/107161834",
     ],
   },
 ];

@@ -6,7 +6,7 @@ import { pageMetadata } from "@/lib/page-metadata";
 export const metadata = pageMetadata({
   title: "About Where To Apply",
   description:
-    "Why Where To Apply exists, how content is fact-checked, and who writes it.",
+    "Why this site exists, how content is fact-checked, and who writes it.",
   path: "/about",
   type: "website",
 });

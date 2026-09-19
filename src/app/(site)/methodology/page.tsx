@@ -11,7 +11,7 @@ export const revalidate = 3600;
 export const metadata = pageMetadata({
   title: "Methodology & Data Sources",
   description:
-    "How Where To Apply builds and maintains its dataset of Australian university deadlines, tuition, English requirements, scholarships, and visa facts: sources, update cadence, coverage, and how to cite it.",
+    "How this site builds and maintains its dataset of Australian university deadlines, tuition, English requirements, scholarships, and visa facts: sources, update cadence, coverage, and how to cite it.",
   path: "/methodology",
   type: "website",
 });
