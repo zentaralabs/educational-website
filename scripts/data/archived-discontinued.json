@@ -102,6 +102,78 @@
       "name": "Bachelor of Education - Primary",
       "reason": "Duplicate of e1e0c2a1-f907-4cc4-aad6-5e5e96629420, both source_urls (old arts-soc faculty path and current cale faculty path) redirect to the identical live UTAS course page (43B Bachelor of Education Primary); kept row has fuller content (curriculum, admission_requirements, english_requirements, application_url) and a more standard slug",
       "archived_at": "2026-09-18T03:17:38.442Z"
+    },
+    {
+      "id": "a65b8047-e729-4507-9f39-c0166c464d43",
+      "name": "Bachelor of Arts Honours",
+      "reason": "ECU course page redirects to page-archived (crsArchived=C34), confirmed discontinued",
+      "archived_at": "2026-09-18T07:54:13.052Z"
+    },
+    {
+      "id": "e8899c85-adbb-43f9-b797-a75734c58cf4",
+      "name": "Bachelor of Media and Communication",
+      "reason": "ECU course page redirects to page-archived (crsArchived=W63), confirmed discontinued",
+      "archived_at": "2026-09-18T07:54:13.218Z"
+    },
+    {
+      "id": "1d6c8d80-c7bf-49a7-afcb-b80d22e11faa",
+      "name": "Bachelor of Social Science",
+      "reason": "ECU course page redirects to page-archived (crsArchived=C58), confirmed discontinued",
+      "archived_at": "2026-09-18T07:54:13.371Z"
+    },
+    {
+      "id": "3a25f734-e77d-4b42-a170-d03cf2e51d31",
+      "name": "Graduate Certificate of Counselling and Psychotherapy",
+      "reason": "ECU course page redirects to page-archived (crsArchived=J53), confirmed discontinued",
+      "archived_at": "2026-09-18T07:54:13.523Z"
+    },
+    {
+      "id": "825d4dc9-287b-49fc-b3ce-bcf4e683224b",
+      "name": "Graduate Diploma of Business Analytics",
+      "reason": "ECU course page redirects to page-archived (crsArchived=T57), confirmed discontinued",
+      "archived_at": "2026-09-18T07:54:13.670Z"
+    },
+    {
+      "id": "2c5064ed-da9a-4684-be6c-f50e0810236f",
+      "name": "Graduate Diploma of Counselling and Psychotherapy",
+      "reason": "ECU course page redirects to page-archived (crsArchived=J54), confirmed discontinued",
+      "archived_at": "2026-09-18T07:54:13.817Z"
+    },
+    {
+      "id": "7e8af932-e1c3-4e4e-814c-b19b41ddec24",
+      "name": "Graduate Diploma of Cyber Security",
+      "reason": "ECU course page redirects to page-archived (crsArchived=L51), confirmed discontinued",
+      "archived_at": "2026-09-18T07:54:13.970Z"
+    },
+    {
+      "id": "20baa7e0-92a6-40e9-b866-8ce0aca1f7d8",
+      "name": "Graduate Diploma of Supply Chain and Logistics Management",
+      "reason": "ECU course page redirects to page-archived (crsArchived=I82), confirmed discontinued",
+      "archived_at": "2026-09-18T07:54:14.116Z"
+    },
+    {
+      "id": "407ed935-aae6-4303-afe8-b727d587296d",
+      "name": "Master of Bioinformatics",
+      "reason": "ECU course page redirects to page-archived (crsArchived=I77), confirmed discontinued",
+      "archived_at": "2026-09-18T07:54:14.272Z"
+    },
+    {
+      "id": "58dbc816-d1f6-49b2-806e-b6bf8d3f6249",
+      "name": "Master of Counselling and Psychotherapy",
+      "reason": "ECU course page redirects to page-archived (crsArchived=L67), confirmed discontinued",
+      "archived_at": "2026-09-18T07:54:14.428Z"
+    },
+    {
+      "id": "f8e9e524-2a00-46a4-80da-c45c4c1f1a24",
+      "name": "Master of Professional Communication",
+      "reason": "ECU course page redirects to page-archived (crsArchived=L44), confirmed discontinued",
+      "archived_at": "2026-09-18T07:54:14.590Z"
+    },
+    {
+      "id": "5c5ffd3e-a5f5-4ec8-b7a0-cfc6524c80eb",
+      "name": "Bachelor of Business",
+      "reason": "ECU course page redirects to page-archived (crsArchived=G95), explicitly replaced by Bachelor of Commerce (W23), confirmed discontinued",
+      "archived_at": "2026-09-18T12:33:09.269Z"
     }
   ]
 }

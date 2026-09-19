@@ -1,0 +1,930 @@
+[
+  {
+    "id": "a94d8653-405b-47a9-84e9-4b3f0d37efba",
+    "uni": "University of Newcastle",
+    "name": "Bachelor of Science",
+    "admission_requirements": "Completion of Year 12 / ATAR approximately 65-75, broad choice of science majors",
+    "english_requirements": "IELTS 6.5 overall, no band below 6.0",
+    "source_url": "https://www.newcastle.edu.au/degrees/bachelor-of-science"
+  },
+  {
+    "id": "c2e98bc9-488d-498a-a776-64bc7791a218",
+    "uni": "Avondale University",
+    "name": "Master of Education",
+    "admission_requirements": "Bachelor's degree in education or a related field, or relevant teaching experience (approximate default, not program-specific verified).",
+    "english_requirements": "IELTS Academic 6.5 overall, no band below 6.0 (typical postgrad bar used as approximate default, not program-verified).",
+    "source_url": "https://www.avondale.edu.au/courses/postgraduate/course-work/master-of-education/"
+  },
+  {
+    "id": "3ee8cac0-0572-488f-a26b-38d5b52fbff8",
+    "uni": "University of Canberra",
+    "name": "Bachelor of Nursing",
+    "admission_requirements": "ATAR of approximately 65-70 (or equivalent); satisfactory National Police Certificate and immunisation compliance required prior to clinical placement.",
+    "english_requirements": "IELTS overall 7.0 (no band below 6.5), or equivalent (TOEFL iBT 94, PTE 65), reflecting registration-body English requirements for nursing.",
+    "source_url": "https://www.canberra.edu.au/course/364JA/2/2026"
+  },
+  {
+    "id": "2627e8c5-b479-432d-9bbd-11bdd5224d83",
+    "uni": "University of Canberra",
+    "name": "Bachelor of Software Engineering",
+    "admission_requirements": "ATAR of approximately 70-75 (or equivalent); Mathematics at a senior secondary level recommended.",
+    "english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
+    "source_url": "https://www.canberra.edu.au/course/560AA/8/2026"
+  },
+  {
+    "id": "ad6098ea-10b1-476d-b460-d4f7dcb2e502",
+    "uni": "Macquarie University",
+    "name": "Master of Information Technology",
+    "admission_requirements": "Bachelor's degree in a relevant or any discipline (typical Australian postgrad IT/CS entry bar used as approximate default, not program-specific verified).",
+    "english_requirements": "IELTS Academic 6.5 overall, no band below 6.0 (typical postgrad bar used as approximate default, not program-verified).",
+    "source_url": "https://www.idp.com/universities-and-colleges/macquarie-university/master-of-information-technology/PRG-AU-00061992/"
+  },
+  {
+    "id": "65622bd6-8377-4621-be17-c626c8676c41",
+    "uni": "University of Divinity",
+    "name": "Master of Theology",
+    "admission_requirements": "Bachelor's degree in theology or a related field (approximate, typical bar)",
+    "english_requirements": "IELTS 6.5 overall (typical bar for postgrad at private AU providers, approximate)",
+    "source_url": "https://divinity.edu.au/courses/master-of-theology/"
+  },
+  {
+    "id": "3032fd95-4163-43c9-b7d5-7a6a6400fd5b",
+    "uni": "University of Melbourne",
+    "name": "Bachelor of Commerce",
+    "admission_requirements": "Completion of Year 12 (or equivalent); ATAR of approximately 90-95 typically competitive, plus prerequisite Units 3/4 Mathematics (Any).",
+    "english_requirements": "IELTS Academic overall 6.5 (writing 6.0); PTE Academic 58. The University of Melbourne also accepts its Melbourne University English Language Testing Service and pathway programs.",
+    "source_url": "https://study.unimelb.edu.au/find/courses/undergraduate/bachelor-of-commerce/"
+  },
+  {
+    "id": "39c7cfc1-78ef-48ea-9841-020b2e284832",
+    "uni": "University of Melbourne",
+    "name": "Bachelor of Science",
+    "admission_requirements": "Completion of Year 12 (or equivalent); ATAR of approximately 85-93 typically competitive, plus prerequisite Units 3/4 Mathematical Methods.",
+    "english_requirements": "IELTS Academic overall 6.5 (writing 6.0); PTE Academic 58. The University of Melbourne also accepts its Melbourne University English Language Testing Service and pathway programs.",
+    "source_url": "https://study.unimelb.edu.au/find/courses/undergraduate/bachelor-of-science/"
+  },
+  {
+    "id": "470999f7-4188-43eb-bee6-d7afdd15e04d",
+    "uni": "Federation University Australia",
+    "name": "Master of Technology (Enterprise Systems and Business Analytics)",
+    "admission_requirements": "Bachelor's degree (any discipline, AU or equivalent overseas), approximate default, not program-specific verified.",
+    "english_requirements": "IELTS 6.0 overall (per aggregator cross-check; approximate, not directly page-verified).",
+    "source_url": "https://www.shiksha.com/studyabroad/australia/universities/federation-university-brisbane-campus/master-of-technology-enterprise-systems-and-business-analytics"
+  },
+  {
+    "id": "d8158c74-f3c4-4d9e-9430-cdd2b6e78da6",
+    "uni": "Box Hill Institute",
+    "name": "Bachelor of Commerce (Applied)",
+    "admission_requirements": "Completion of Year 12 (Australian Senior Secondary Certificate) or equivalent (approximate, typical bar)",
+    "english_requirements": "IELTS 6.0 overall (Box Hill's own published bachelor-entry bar)",
+    "source_url": "https://www.boxhill.edu.au/courses/bachelor-of-commerce-applied-bcom2-ihe/"
+  },
+  {
+    "id": "22fed6e9-9f1b-4370-b765-cceab847cffe",
+    "uni": "Murdoch University",
+    "name": "Bachelor of Forensic Science / Master of Forensic Science",
+    "admission_requirements": "ATAR of approximately 70-75 (or equivalent); completion of WACE Chemistry recommended.",
+    "english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
+    "source_url": "https://www.murdoch.edu.au/study/courses"
+  },
+  {
+    "id": "c9f2611c-3d69-4a38-b3c0-3afc9621c76d",
+    "uni": "University of New England",
+    "name": "Bachelor of Nursing",
+    "admission_requirements": "Completion of Year 12 with an ATAR of approximately 70 or equivalent; satisfactory National Police Check and immunisation requirements for clinical placement",
+    "english_requirements": "IELTS 7.0 overall, no band below 7.0 (NMBA registration standard)",
+    "source_url": "https://www.une.edu.au/study/courses/bachelor-of-nursing"
+  },
+  {
+    "id": "ce141ad0-6c3b-4498-837f-77fb29a2c1fb",
+    "uni": "University of New England",
+    "name": "Bachelor of Arts",
+    "admission_requirements": "Completion of Year 12 with an ATAR of approximately 60 or equivalent; broad entry requirements",
+    "english_requirements": "IELTS 6.0 overall, no band below 6.0",
+    "source_url": "https://www.une.edu.au/study/courses/bachelor-of-arts"
+  },
+  {
+    "id": "32f42c7a-c0ff-4982-91a3-28dc8bf9e61c",
+    "uni": "Flinders University",
+    "name": "Doctor of Medicine",
+    "admission_requirements": "Completed bachelor's degree, GAMSAT score, and interview (approximate, typical bar for graduate-entry medicine)",
+    "english_requirements": "IELTS 6.5 overall, no band below 6.0 (approximate, typical bar)",
+    "source_url": "https://www.flinders.edu.au/study/courses/doctor-of-medicine"
+  },
+  {
+    "id": "3b18d6cf-57bb-47e4-9959-61dbd5bd392e",
+    "uni": "University of Newcastle",
+    "name": "Bachelor of Mechanical Engineering (Honours)",
+    "admission_requirements": "Completion of Year 12 / ATAR approximately 75-85, Mathematics Advanced strongly recommended",
+    "english_requirements": "IELTS 6.5 overall, no band below 6.0",
+    "source_url": "https://www.newcastle.edu.au/degrees/bachelor-of-mechanical-engineering-honours"
+  },
+  {
+    "id": "cb6ae21c-a212-4859-8a2e-c744eae334a6",
+    "uni": "University of Southern Queensland",
+    "name": "Bachelor of Information Technology",
+    "admission_requirements": "Completion of Year 12 or equivalent, ATAR of approximately 60-65 or equivalent; no specific prerequisite subjects, though Mathematics is recommended.",
+    "english_requirements": "IELTS Academic 6.0 overall, no band below 6.0, or equivalent.",
+    "source_url": "https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-information-technology"
+  },
+  {
+    "id": "23f482ae-ebb2-48e4-8b1f-005bdcb3ef4f",
+    "uni": "University of Notre Dame Australia",
+    "name": "Bachelor of Commerce",
+    "admission_requirements": "Completion of Year 12 with an ATAR of approximately 65-75 or equivalent",
+    "english_requirements": "IELTS 6.5 overall, no band below 6.0",
+    "source_url": "https://www.notredame.edu.au/study/find-a-course"
+  },
+  {
+    "id": "780e75d1-6c97-4cff-ba7a-e7473279050a",
+    "uni": "University of New England",
+    "name": "Bachelor of Laws",
+    "admission_requirements": "Completion of Year 12 with an ATAR of approximately 75 or equivalent; competitive entry",
+    "english_requirements": "IELTS 6.5 overall, no band below 6.0",
+    "source_url": "https://www.une.edu.au/study/courses/bachelor-of-laws-4-years"
+  },
+  {
+    "id": "c1a1462f-1f8a-4eac-81b0-ce2bcb20c5a5",
+    "uni": "University of Queensland",
+    "name": "Bachelor of Laws (Honours)",
+    "admission_requirements": "Completion of Year 12 with ATAR of approximately 95+",
+    "english_requirements": "IELTS 7.0 overall, no band below 7.0",
+    "source_url": "https://study.uq.edu.au/study-options/programs/bachelor-laws-honours-2471"
+  },
+  {
+    "id": "5148e324-bd3c-409c-bfed-cde5f0c71516",
+    "uni": "University of Queensland",
+    "name": "Bachelor of Science",
+    "admission_requirements": "Completion of Year 12 with ATAR of approximately 80+, prerequisite Mathematical Methods",
+    "english_requirements": "IELTS 6.5 overall, no band below 6.0",
+    "source_url": "https://study.uq.edu.au/study-options/programs/bachelor-science-2354"
+  },
+  {
+    "id": "4e609dfc-0cc1-4e1d-884d-fc43321a984b",
+    "uni": "University of New England",
+    "name": "Bachelor of Science",
+    "admission_requirements": "Completion of Year 12 with an ATAR of approximately 65 or equivalent",
+    "english_requirements": "IELTS 6.0 overall, no band below 6.0",
+    "source_url": "https://www.une.edu.au/study/courses/bachelor-of-science"
+  },
+  {
+    "id": "9e8fa82b-da37-431c-b834-07dadb276d13",
+    "uni": "University of Notre Dame Australia",
+    "name": "Bachelor of Education (Primary)",
+    "admission_requirements": "Completion of Year 12 with an ATAR of approximately 65-75 or equivalent; interview and personal statement often required for teaching entry",
+    "english_requirements": "IELTS 7.0 overall, no band below 7.0 (professional teacher registration requirement)",
+    "source_url": "https://www.notredame.edu.au/study/find-a-course"
+  },
+  {
+    "id": "266d4e34-08b5-4a60-b2c6-012c32dfccf3",
+    "uni": "University of Notre Dame Australia",
+    "name": "Bachelor of Laws",
+    "admission_requirements": "Completion of Year 12 with an ATAR of approximately 80-85 or equivalent, or mature-age entry with relevant experience",
+    "english_requirements": "IELTS 6.5 overall, no band below 6.0",
+    "source_url": "https://www.notredame.edu.au/study/find-a-course"
+  },
+  {
+    "id": "06077501-4fb2-4b41-a0b5-904d8096815a",
+    "uni": "Federation University Australia",
+    "name": "Master of Nursing",
+    "admission_requirements": "Relevant bachelor's degree (or equivalent); some programs consider work experience in lieu (approximate, typical bar)",
+    "english_requirements": "IELTS 7.0 overall, no band below 7.0 (typical registration-body bar for nursing/health programs, approximate)",
+    "source_url": "https://federation.edu.au/courses/master-of-nursing"
+  },
+  {
+    "id": "a2ac0549-36ab-464d-8d56-1d143952f53f",
+    "uni": "University of Notre Dame Australia",
+    "name": "Bachelor of Physiotherapy",
+    "admission_requirements": "Indicative ATAR of approximately 85-90 or equivalent; interview and/or portfolio may be required due to clinical placements",
+    "english_requirements": "IELTS 7.0 overall, no band below 6.5",
+    "source_url": "https://www.notredame.edu.au/study/find-a-course"
+  },
+  {
+    "id": "bc0a6b95-8e32-4661-aba8-e271c5a85bbb",
+    "uni": "Melbourne Institute of Technology",
+    "name": "Master of Information Technology",
+    "admission_requirements": "Bachelor's degree (any discipline) typically required (approximate, typical bar, not program-page-verified)",
+    "english_requirements": "IELTS 6.5 overall (typical bar for postgrad at private AU providers, approximate)",
+    "source_url": "https://www.mit.edu.au/study-with-us/tuition-fees"
+  },
+  {
+    "id": "2365b858-7337-4e3a-b7d4-6f5af392f8a7",
+    "uni": "University of Notre Dame Australia",
+    "name": "Master of Business Administration",
+    "admission_requirements": "Bachelor's degree (any discipline), professional experience considered favourably (typical MBA entry bar, approximate default, not program-specific verified).",
+    "english_requirements": "IELTS Academic 6.5 overall, no band below 6.0 (typical postgrad bar used as approximate default, not program-verified).",
+    "source_url": "https://www.mbanews.com.au/course/unda-mba/"
+  },
+  {
+    "id": "75e78722-a641-4469-8915-835a80e3efb8",
+    "uni": "University of Queensland",
+    "name": "Bachelor of Engineering (Honours)",
+    "admission_requirements": "Completion of Year 12 with ATAR of approximately 85+, prerequisite Mathematical Methods and Chemistry or Physics",
+    "english_requirements": "IELTS 6.5 overall, no band below 6.0",
+    "source_url": "https://study.uq.edu.au/study-options/programs/bachelor-engineering-honours-2455"
+  },
+  {
+    "id": "3a6b2636-fd44-446e-a2e7-fd7482b6bd35",
+    "uni": "Holmes Institute",
+    "name": "Master of Business Administration",
+    "admission_requirements": "Bachelor's degree (any discipline) typically required; relevant work experience preferred (approximate, typical bar, not program-page-verified)",
+    "english_requirements": "IELTS 6.5 overall (typical bar for postgrad at private AU providers, approximate)",
+    "source_url": "https://www.pickmyuni.com/university/holmes-institute-main-10914/fees"
+  },
+  {
+    "id": "e2169714-5023-4dc2-a6e0-e112cf77905f",
+    "uni": "Australian Catholic University",
+    "name": "Master of Business Administration",
+    "admission_requirements": "Bachelor's degree (any discipline) typically with some professional work experience preferred (typical MBA entry bar, approximate default, not program-specific verified).",
+    "english_requirements": "IELTS Academic 6.5 overall, no band below 6.0 (typical postgrad bar used as approximate default, not program-verified).",
+    "source_url": "https://www.topuniversities.com/universities/australian-catholic-university/mba/master-business-administration"
+  },
+  {
+    "id": "62621c93-f0db-453a-abca-487ce62f0c2c",
+    "uni": "Australian National University",
+    "name": "Bachelor of Philosophy, Neuroscience, and Psychology",
+    "admission_requirements": "At a minimum, all applicants must meet program-specific academic/non-academic requirements, and English language requirements. Admission to most ANU programs is on a competitive basis. Therefore, meeting all admission requirements does not guarantee entry into the program.\nThe University reserves the right to alter or discontinue its programs and change admission requirements as needed.\nDomestic applicants\nBefore applying for a program, you should review the general information about\ndomestic undergraduate admission\nto ANU programs and how to apply, and the program-specific information below.\nApplicants with\nrecent secondary education\nare assessed on:\ncompletion of the Australian Senior Secondary Certificate of Education (AQF) or equivalent, and the minimum\nSelection Rank\n(from their academic qualifications, plus any\nadjustment factors\n) requirement for this program; and\nEnglish language proficiency; and\nany program-specific requirements listed below.\nApplicants with\nhigher education study\nare assessed on:\nprevious higher education studies; or secondary education results if completed less than one full-time equivalent year (1.0 FTE) of higher education; or the result from a tertiary preparation program; and\nEnglish language proficiency; and\nany program-specific requirements listed below.\nApplicants with\nvocational education and training (VET) study\nare assessed on:\npreviously completed VET qualifications at\nAQF\nlevel 5 or higher (i.e. a Diploma or above); or secondary education results if the VET qualification is not completed; and\nEnglish language proficiency; and\nany program-specific requirements listed below.\nApplicants with\nwork and life experience\nare assessed on:\nsecondary education if the Australian Senior Secondary Certificate of Education (AQF) or equivalent was completed; or the\nWork and Life Experience Based entry scheme\n; and\nEnglish language proficiency; and\nany program-specific requirements listed below.\nInternational applicants\nApplicants who complete a recognised secondary/senior secondary/post-secondary/tertiary sequence of study will be assessed on the basis of an equivalent selection rank that is calculated upon application. A list of commonly observed international qualifications and corresponding admission requirements can be found\n. Applicants must also meet any program specific requirements that are listed below.\nDiversity factors & English language proficiency\nAs Australia's national university, ANU is a global representative of Australian research and education. ANU endeavours to recruit and maintain a diverse and deliberate student cohort representative not only of Australia, but the world. In order to achieve these outcomes, competitive ranking of applicants may be adjusted to ensure access to ANU is a reality for brilliant students from countries across the globe. If required, competitive ranking may further be confirmed on the basis of demonstrating higher-level English language proficiency.\nFurther information is available for\nEnglish Language Requirements for Admission\nProgram-specific Requirements\nAdmission to the Bachelor of Philosophy, Neuroscience, and Psychology also involves an assessment of suitability based on the Bachelor of Philosophy, Neuroscience, and Psychology Supplementary Form. Submission of this form by the deadline is compulsory for all applicants. There are approximately 50 places available in each intake of the Bachelor of Philosophy, Neuroscience, and Psychology.\nFor program-specific requirements for\ndomestic and international applicants,\nincluding the deadline to submit the supplementary form, please click\n.\nATAR:\n97\nInternational Baccalaureate:\n41",
+    "english_requirements": "IELTS Academic Overall 6.5, with no band below 6.0.",
+    "source_url": "https://programsandcourses.anu.edu.au/program/BPNP"
+  },
+  {
+    "id": "d186c0de-9d43-4f37-b91b-bb2d2512fa92",
+    "uni": "University of New England",
+    "name": "Bachelor of Psychological Science",
+    "admission_requirements": "Completion of Year 12 with an ATAR of approximately 70 or equivalent",
+    "english_requirements": "IELTS 6.5 overall, no band below 6.0",
+    "source_url": "https://www.une.edu.au/study/courses/bachelor-of-psychological-science"
+  },
+  {
+    "id": "f539b8e8-441f-4bbf-9c62-b5b65d2b340a",
+    "uni": "University of New England",
+    "name": "Master of Data Science",
+    "admission_requirements": "Bachelor's degree in a relevant or any discipline (typical Australian postgrad IT/CS entry bar used as approximate default, not program-specific verified).",
+    "english_requirements": "IELTS Academic 6.5 overall, no band below 6.0 (typical postgrad bar used as approximate default, not program-verified).",
+    "source_url": "https://www.une.edu.au/study/courses/master-of-data-science"
+  },
+  {
+    "id": "e6a937a4-e436-4317-88b7-52472d9adb6d",
+    "uni": "University of Newcastle",
+    "name": "Bachelor of Medical Science and Doctor of Medicine (Joint Medical Program)",
+    "admission_requirements": "ATAR approximately 90+, UCAT score, and interview; delivered jointly with University of New England",
+    "english_requirements": "IELTS 7.0 overall, no band below 7.0",
+    "source_url": "https://www.newcastle.edu.au/degrees/bachelor-of-medical-science-doctor-of-medicine-joint-medical-program"
+  },
+  {
+    "id": "4107cafc-bbac-4eb0-8a3f-448858f2717b",
+    "uni": "University of Canberra",
+    "name": "Bachelor of Secondary Education",
+    "admission_requirements": "ATAR of approximately 65-70 (or equivalent); satisfactory National Police Certificate required prior to professional placement.",
+    "english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
+    "source_url": "https://www.canberra.edu.au/future-students/study-at-uc/about-our-courses/bachelor-of-education"
+  },
+  {
+    "id": "5de8d043-1ae6-4b9b-8f8e-31120e0b77dc",
+    "uni": "University of Queensland",
+    "name": "Bachelor of Psychological Science (Honours)",
+    "admission_requirements": "Completion of Year 12 with ATAR of approximately 88+",
+    "english_requirements": "IELTS 6.5 overall, no band below 6.0",
+    "source_url": "https://study.uq.edu.au/study-options/programs/bachelor-psychological-science-honours-2379"
+  },
+  {
+    "id": "f94fc8bf-a7bb-44a0-bd7e-49b7c9e81e44",
+    "uni": "University of Southern Queensland",
+    "name": "Bachelor of Psychology (Honours)",
+    "admission_requirements": "Completion of Year 12 or equivalent, ATAR of approximately 65-70 or equivalent; competitive entry into the honours component based on GPA in earlier years.",
+    "english_requirements": "IELTS Academic 6.5 overall, no band below 6.0, or equivalent.",
+    "source_url": "https://www.unisq.edu.au/handbook/2023/health-community/BPSH.html"
+  },
+  {
+    "id": "1345f0c9-5c8a-415b-945f-b6f98aa78ab8",
+    "uni": "University of Southern Queensland",
+    "name": "Master of Data Science",
+    "admission_requirements": "Bachelor's degree in a relevant or any discipline (typical Australian postgrad IT/CS entry bar used as approximate default, not program-specific verified).",
+    "english_requirements": "IELTS Academic 6.5 overall, no band below 6.0 (typical postgrad bar used as approximate default, not program-verified).",
+    "source_url": "https://www.unisq.edu.au/study/degrees-and-courses/master-of-data-science"
+  },
+  {
+    "id": "a018e0a3-ad23-4ee3-b697-b0113515b289",
+    "uni": "Adelaide University",
+    "name": "Bachelor of Engineering (Civil) (Honours)",
+    "admission_requirements": "SACE (or equivalent) completion with an ATAR of approximately 85, including Mathematical Methods and a recommended study of Physics.",
+    "english_requirements": "IELTS Overall 6.5, with 6.0 minimum in each band (or equivalent).",
+    "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-engineering-civil-honours/"
+  },
+  {
+    "id": "4a6b9cb5-46ee-4ddd-83f6-559667a77d91",
+    "uni": "Melbourne Polytechnic",
+    "name": "Master of Information Technology",
+    "admission_requirements": "Bachelor's degree (any discipline) typically required (approximate, typical bar, not program-page-verified)",
+    "english_requirements": "IELTS 6.5 overall (typical bar, approximate)",
+    "source_url": "https://www.melbournepolytechnic.edu.au/study/master/information-technology/"
+  },
+  {
+    "id": "3792bf56-030b-49c0-9df9-4512b1c040d8",
+    "uni": "Adelaide University",
+    "name": "Bachelor of Oral Health",
+    "admission_requirements": "Completion of a secondary education qualification equivalent to the South Australian Certificate of Education (SACE), with a minimum ATAR of approximately 70 (or equivalent via VET Certificate IV+ or prior higher education study).",
+    "english_requirements": "IELTS Academic Overall 7.0, with no band below 7.0.",
+    "source_url": "https://www.adelaide.edu.au/study/degrees/bachelor-of-oral-health"
+  },
+  {
+    "id": "1e917c0f-f04a-4418-8b97-a7a2535bb570",
+    "uni": "University of Tasmania",
+    "name": "Bachelor of Laws",
+    "admission_requirements": "Completion of Australian Year 12 (or equivalent); ATAR of approximately 80 recommended",
+    "english_requirements": "IELTS Academic overall 6.5, no band below 6.0 (or equivalent)",
+    "source_url": "https://www.utas.edu.au/law"
+  },
+  {
+    "id": "c4c954af-bb16-4caa-acf0-1c4f52cdbfdd",
+    "uni": "Murdoch University",
+    "name": "Bachelor of Food Science and Nutrition / Master of Food Science",
+    "admission_requirements": "ATAR of approximately 65-70 (or equivalent); completion of WACE Chemistry recommended.",
+    "english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
+    "source_url": "https://www.murdoch.edu.au/study/courses"
+  },
+  {
+    "id": "1f855e50-f506-45c4-8460-a9c9ed706306",
+    "uni": "Griffith University",
+    "name": "Master of Public Health",
+    "admission_requirements": "Relevant bachelor's degree (or equivalent); some programs consider work experience in lieu (approximate, typical bar)",
+    "english_requirements": "IELTS 6.5 overall, no band below 6.0 (approximate, typical bar)",
+    "source_url": "https://www.griffith.edu.au/study/degrees/master-of-public-health"
+  },
+  {
+    "id": "6ce98a0d-6012-4b0c-8b40-18c5697052ef",
+    "uni": "National Institute of Dramatic Art (NIDA)",
+    "name": "Master of Fine Arts (Directing)",
+    "admission_requirements": "Bachelor's degree plus audition/portfolio and interview (approximate, typical bar, not program-page-verified)",
+    "english_requirements": "IELTS 6.5 overall (typical bar for postgrad at private AU providers, approximate)",
+    "source_url": "https://www.nida.edu.au/study/students/international-students/"
+  },
+  {
+    "id": "8350041f-8149-4a0f-86f1-27639066ed7b",
+    "uni": "University of Technology Sydney",
+    "name": "Bachelor of Engineering (Honours) in Software Engineering",
+    "admission_requirements": "Completion of Australian Year 12 with strong Mathematics background; ATAR approximately 85-90",
+    "english_requirements": "IELTS 6.5 overall, no band below 6.0 (or equivalent)",
+    "source_url": "https://www.uts.edu.au/courses/bachelor-of-engineering-honours"
+  },
+  {
+    "id": "353ab41a-4536-454b-9610-27242405ad52",
+    "uni": "Kaplan Business School",
+    "name": "Master of Business Administration",
+    "admission_requirements": "Bachelor's degree (any discipline) typically required; relevant work experience preferred (approximate, typical bar, not program-page-verified)",
+    "english_requirements": "IELTS 6.5 overall (typical bar for postgrad at private AU providers, approximate)",
+    "source_url": "https://www.kbs.edu.au/admissions/fees/international-fees"
+  },
+  {
+    "id": "3e2c8a5c-ee22-461b-a2e3-d53808774f81",
+    "uni": "University of Melbourne",
+    "name": "Bachelor of Arts",
+    "admission_requirements": "Completion of Year 12 (or equivalent); ATAR of approximately 80-90 typically competitive (no specific prerequisites beyond English).",
+    "english_requirements": "IELTS Academic overall 6.5 (writing 6.0); PTE Academic 58. The University of Melbourne also accepts its Melbourne University English Language Testing Service and pathway programs.",
+    "source_url": "https://study.unimelb.edu.au/find/courses/undergraduate/bachelor-of-arts/"
+  },
+  {
+    "id": "cd516ab9-5bcb-48c3-80fc-d14a68b4c8fa",
+    "uni": "University of Melbourne",
+    "name": "Bachelor of Biomedicine",
+    "admission_requirements": "Completion of Year 12 (or equivalent); ATAR of approximately 92-97, a common pathway toward Medicine/Dentistry postgraduate entry; prerequisite Units 3/4 Chemistry and Mathematical Methods recommended.",
+    "english_requirements": "IELTS Academic overall 7.0 (writing 6.5); PTE Academic 65. The University of Melbourne also accepts its Melbourne University English Language Testing Service and pathway programs.",
+    "source_url": "https://study.unimelb.edu.au/find/courses/undergraduate/bachelor-of-biomedicine/"
+  },
+  {
+    "id": "fe63cbb5-9096-4a17-899c-c2067c6e1b96",
+    "uni": "University of Melbourne",
+    "name": "Bachelor of Design",
+    "admission_requirements": "Completion of Year 12 (or equivalent); ATAR of approximately 80-88; pathway toward Master of Architecture, Landscape Architecture, Urban Planning or Construction Management.",
+    "english_requirements": "IELTS Academic overall 6.5 (writing 6.0); PTE Academic 58. The University of Melbourne also accepts its Melbourne University English Language Testing Service and pathway programs.",
+    "source_url": "https://study.unimelb.edu.au/find/courses/undergraduate/bachelor-of-design/"
+  },
+  {
+    "id": "46baaad9-6853-4288-a153-7e0660c3f61a",
+    "uni": "CQUniversity Australia",
+    "name": "Master of Information Technology",
+    "admission_requirements": "Bachelor's degree in a relevant or any discipline (typical Australian postgrad IT/CS entry bar used as approximate default, not program-specific verified).",
+    "english_requirements": "IELTS Academic 6.5 overall, no band below 6.0 (typical postgrad bar used as approximate default, not program-verified).",
+    "source_url": "https://www.cqu.edu.au/courses/cc54/master-of-information-technology"
+  },
+  {
+    "id": "228779dd-ce1c-4f98-aee7-4acbad98cd52",
+    "uni": "University of Southern Queensland",
+    "name": "Bachelor of Engineering (Honours)",
+    "admission_requirements": "Completion of Year 12 with sound achievement in English and Mathematics (Methods or equivalent recommended), ATAR of approximately 70-75 or equivalent; a Preparatory year is available for students who do not meet prerequisites.",
+    "english_requirements": "IELTS Academic 6.5 overall, no band below 6.0, or equivalent.",
+    "source_url": "https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-engineering-honours"
+  },
+  {
+    "id": "a315bf2a-7dab-4eb9-8c4f-eaf7c505fd2b",
+    "uni": "University of Tasmania",
+    "name": "Bachelor of Business",
+    "admission_requirements": "Completion of Australian Year 12 (or equivalent); ATAR of approximately 65 recommended",
+    "english_requirements": "IELTS Academic overall 6.0, no band below 6.0 (or equivalent)",
+    "source_url": "https://www.utas.edu.au/courses/tsbe/courses/b3a-bachelor-of-business"
+  },
+  {
+    "id": "adc3f93f-d542-4a46-964c-3a93a7a1bee4",
+    "uni": "University of Tasmania",
+    "name": "Bachelor of Psychological Science",
+    "admission_requirements": "Completion of Australian Year 12 (or equivalent); ATAR of approximately 70 recommended",
+    "english_requirements": "IELTS Academic overall 6.0, no band below 6.0 (or equivalent)",
+    "source_url": "https://www.utas.edu.au/courses/health/courses/53f-bachelor-of-psychological-science"
+  },
+  {
+    "id": "6cfeccc2-250a-4167-b083-bd9326ec137c",
+    "uni": "Murdoch University",
+    "name": "Bachelor of Biomedical Science / Master of Infectious Disease Surveillance and Control",
+    "admission_requirements": "ATAR of approximately 75-80 (or equivalent); completion of WACE Chemistry and Human Biology recommended.",
+    "english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
+    "source_url": "https://www.murdoch.edu.au/study/courses"
+  },
+  {
+    "id": "f7a61f4c-77d0-40f4-b3a7-74ec09c7271c",
+    "uni": "University of the Sunshine Coast",
+    "name": "Bachelor of Nursing Science",
+    "admission_requirements": "Completion of Year 12 (or equivalent) with an ATAR of approximately 65 or QTAC selection rank; competitive selection with National Police Check and vaccination/immunisation requirements for clinical placements",
+    "english_requirements": "IELTS Academic 7.0 overall with no band below 7.0, or equivalent (required for AHPRA registration as a nurse)",
+    "source_url": "https://www.unisc.edu.au/study/courses-and-programs/bachelor-degrees-undergraduate-programs/bachelor-of-nursing-science"
+  },
+  {
+    "id": "5ed4a7d9-6e95-48c2-a1f7-c6266be3d402",
+    "uni": "Adelaide University",
+    "name": "Bachelor of Laboratory Medicine (Honours)",
+    "admission_requirements": "Completion of a secondary education qualification equivalent to the South Australian Certificate of Education (SACE), with a minimum ATAR of approximately 80 (or equivalent via VET Certificate IV+ or prior higher education study).",
+    "english_requirements": "IELTS Academic Overall 6.5, with no band below 6.5.",
+    "source_url": "https://www.adelaide.edu.au/study/degrees/bachelor-of-laboratory-medicine-honours"
+  },
+  {
+    "id": "cacd9196-4390-49e7-b93c-6f65556fff83",
+    "uni": "Adelaide University",
+    "name": "Bachelor of Commerce: Accounting",
+    "admission_requirements": "SACE (or equivalent) completion with an ATAR of approximately 80.",
+    "english_requirements": "IELTS Overall 6.0, with 6.0 minimum in each band.",
+    "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-commerce/"
+  },
+  {
+    "id": "302bc1a0-c6a9-4ae8-8a3c-f65fc63fa706",
+    "uni": "University of Western Australia",
+    "name": "Bachelor of Design",
+    "admission_requirements": "Completion of Year 12 (WACE or equivalent); ATAR of approximately 85+; portfolio not typically required.",
+    "english_requirements": "IELTS 6.5 overall, no band below 6.0 (or equivalent).",
+    "source_url": "https://www.uwa.edu.au/study/courses/bachelor-of-design"
+  },
+  {
+    "id": "d1c2208e-5f2c-4da2-95c1-d3211e6d43d7",
+    "uni": "Federation University Australia",
+    "name": "Master of Business Administration",
+    "admission_requirements": "Relevant bachelor's degree (or equivalent); some programs consider work experience in lieu (approximate, typical bar)",
+    "english_requirements": "IELTS 6.5 overall, no band below 6.0 (approximate, typical bar)",
+    "source_url": "https://federation.edu.au/courses/master-of-business-administration"
+  },
+  {
+    "id": "bfc1a6c7-dc3d-4ec3-9234-7e866bc84b64",
+    "uni": "TAFE Queensland",
+    "name": "Bachelor of Nursing",
+    "admission_requirements": "Completion of Year 12 (Australian Senior Secondary Certificate) or equivalent, plus health/immunisation checks (approximate, typical bar)",
+    "english_requirements": "IELTS 7.0 overall (typical registration-body bar for nursing programs, approximate)",
+    "source_url": "https://tafeqld.edu.au/course/19/19195/bachelor-of-nursing"
+  },
+  {
+    "id": "e1e0c2a1-f907-4cc4-aad6-5e5e96629420",
+    "uni": "University of Tasmania",
+    "name": "Bachelor of Education (Primary)",
+    "admission_requirements": "Completion of Australian Year 12 (or equivalent) with satisfactory results in English; ATAR of approximately 65 recommended",
+    "english_requirements": "IELTS Academic overall 7.5, no band below 7.0 (Australian teacher registration requirement)",
+    "source_url": "https://www.utas.edu.au/courses/cale/courses/43b-bachelor-of-education-primary"
+  },
+  {
+    "id": "b7fdd8cc-8aab-447f-97aa-986293ec5498",
+    "uni": "University of Tasmania",
+    "name": "Bachelor of Marine and Antarctic Science",
+    "admission_requirements": "Completion of Australian Year 12 (or equivalent) with satisfactory results in English and a science subject; ATAR of approximately 70 recommended",
+    "english_requirements": "IELTS Academic overall 6.0, no band below 6.0 (or equivalent)",
+    "source_url": "https://www.utas.edu.au/study/undergraduate/marine-and-antarctic-science"
+  },
+  {
+    "id": "caefabf4-794c-425e-9bce-1c72f7220478",
+    "uni": "University of Tasmania",
+    "name": "Bachelor of Nursing",
+    "admission_requirements": "Completion of Australian Year 12 (or equivalent) with satisfactory results in English; ATAR of approximately 65 recommended",
+    "english_requirements": "IELTS Academic overall 7.0, no band below 7.0 (registration requirement for nursing)",
+    "source_url": "https://www.utas.edu.au/study/health/nursing"
+  },
+  {
+    "id": "e61ee3b7-df31-45a2-886d-9fe906a3fa51",
+    "uni": "TAFE NSW",
+    "name": "Bachelor of Information Technology (Cyber & Network Security)",
+    "admission_requirements": "Completion of Year 12 (Australian Senior Secondary Certificate) or equivalent (approximate, typical bar)",
+    "english_requirements": "IELTS 6.5 overall, no band below 6.0 (TAFE NSW's own published bachelor-entry bar)",
+    "source_url": "https://www.tafensw.edu.au/international/courses/degrees"
+  },
+  {
+    "id": "2116ca10-5fae-4454-bc77-3b671448a295",
+    "uni": "Murdoch University",
+    "name": "Bachelor of Applied Social Care",
+    "admission_requirements": "ATAR of approximately 60-65 (or equivalent); satisfactory National Police Certificate required prior to placement.",
+    "english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
+    "source_url": "https://www.murdoch.edu.au/course/undergraduate/b1424"
+  },
+  {
+    "id": "e1027cc2-39f9-4d89-b43e-2b1425760782",
+    "uni": "Murdoch University",
+    "name": "Bachelor of Nursing",
+    "admission_requirements": "ATAR of approximately 65-70 (or equivalent); satisfactory National Police Certificate and immunisation compliance required prior to clinical placement.",
+    "english_requirements": "IELTS overall 7.0 (no band below 6.5), or equivalent (TOEFL iBT 94, PTE 65), reflecting registration-body English requirements for nursing.",
+    "source_url": "https://www.murdoch.edu.au/study/courses"
+  },
+  {
+    "id": "cfee6be6-4f02-4e4e-ac3d-fac0c8c6f767",
+    "uni": "Murdoch University",
+    "name": "Bachelor of Science / Doctor of Veterinary Medicine",
+    "admission_requirements": "ATAR of approximately 90+ (or equivalent), plus completion of Murdoch's veterinary science aptitude assessment and/or interview; highly competitive limited-entry program.",
+    "english_requirements": "IELTS overall 6.5 (no band below 6.0), or equivalent (TOEFL iBT 79, PTE 58).",
+    "source_url": "https://www.murdoch.edu.au/study/courses"
+  },
+  {
+    "id": "d5ae8617-6f7c-4212-ab2b-d56488235d37",
+    "uni": "Adelaide University",
+    "name": "Bachelor of Speech Pathology (Honours)",
+    "admission_requirements": "Completion of a secondary education qualification equivalent to the South Australian Certificate of Education (SACE), with a minimum ATAR of approximately 90 (or equivalent via VET Certificate IV+ or prior higher education study).",
+    "english_requirements": "IELTS Academic Overall 8.0, with no band below 8.0.",
+    "source_url": "https://www.adelaide.edu.au/study/degrees/bachelor-of-speech-pathology-honours"
+  },
+  {
+    "id": "82d8afa8-f034-4d41-bfe5-a01f38d3888c",
+    "uni": "University of Western Australia",
+    "name": "Bachelor of Arts",
+    "admission_requirements": "Completion of Year 12 (WACE or equivalent); ATAR of approximately 80+.",
+    "english_requirements": "IELTS 6.5 overall, no band below 6.0 (or equivalent).",
+    "source_url": "https://www.uwa.edu.au/study/courses/bachelor-of-arts"
+  },
+  {
+    "id": "6fe7b710-9b54-48a6-a02c-c37467dd2730",
+    "uni": "University of Western Australia",
+    "name": "Bachelor of Commerce",
+    "admission_requirements": "Completion of Year 12 (WACE or equivalent); ATAR of approximately 85+.",
+    "english_requirements": "IELTS 6.5 overall, no band below 6.0 (or equivalent).",
+    "source_url": "https://www.uwa.edu.au/study/courses/bachelor-of-commerce"
+  },
+  {
+    "id": "d0b2264a-e89a-4174-a3df-aaad0520c9d6",
+    "uni": "Federation University Australia",
+    "name": "Bachelor of Nursing",
+    "admission_requirements": "Completion of Year 12 or equivalent, plus health/immunisation checks and (for clinical placements) police check (approximate, typical bar)",
+    "english_requirements": "IELTS 7.0 overall, no band below 7.0 (typical registration-body bar for nursing/health programs, approximate)",
+    "source_url": "https://federation.edu.au/courses/bachelor-of-nursing"
+  },
+  {
+    "id": "2f2ad33e-2915-438d-8847-b142f89a7d9f",
+    "uni": "University of Western Australia",
+    "name": "Bachelor of Science (Marine Science)",
+    "admission_requirements": "Completion of Year 12 (WACE or equivalent); ATAR of approximately 85+ with prerequisite Mathematics Methods and a science subject.",
+    "english_requirements": "IELTS 6.5 overall, no band below 6.0 (or equivalent).",
+    "source_url": "https://www.uwa.edu.au/study/courses/bachelor-of-science"
+  },
+  {
+    "id": "1b091d13-adce-4481-9f00-3c62455b6ff4",
+    "uni": "University of New England",
+    "name": "Bachelor of Education (Early Childhood and Primary)",
+    "admission_requirements": "Completion of Year 12 with an ATAR of approximately 65 or equivalent; satisfactory Working with Children Check required prior to placement",
+    "english_requirements": "IELTS 7.0 overall, no band below 7.0 (NESA professional teaching requirement)",
+    "source_url": "https://www.une.edu.au/study/courses/bachelor-of-education-early-childhood-and-primary"
+  },
+  {
+    "id": "11e673f2-e67e-4208-8c9e-bc145402ba54",
+    "uni": "University of Technology Sydney",
+    "name": "Bachelor of Communication (Honours)",
+    "admission_requirements": "Completion of Australian Year 12 (or equivalent); ATAR approximately 85-90, competitive entry across communication majors",
+    "english_requirements": "IELTS Academic overall 6.5 (writing 6.0); TOEFL iBT 79 (writing 21); PTE Academic 58 (writing 50). UTS also accepts its UTS College academic English courses.",
+    "source_url": "https://www.uts.edu.au/courses/bachelor-of-communication-honours"
+  },
+  {
+    "id": "65d31a0b-1845-41e6-8592-03cde91d6e32",
+    "uni": "Flinders University",
+    "name": "Bachelor of Nursing",
+    "admission_requirements": "Completion of Year 12 or equivalent, plus health/immunisation checks and (for clinical placements) police check (approximate, typical bar)",
+    "english_requirements": "IELTS 7.0 overall, no band below 7.0 (typical registration-body bar for nursing/health programs, approximate)",
+    "source_url": "https://www.flinders.edu.au/study/courses/bachelor-of-nursing"
+  },
+  {
+    "id": "eee70d28-61e0-4046-89c9-c69245ce3f4c",
+    "uni": "University of Newcastle",
+    "name": "Bachelor of Civil Engineering (Honours)",
+    "admission_requirements": "Completion of Year 12 / ATAR approximately 75-85, including Mathematics Advanced recommended",
+    "english_requirements": "IELTS 6.5 overall, no band below 6.0",
+    "source_url": "https://www.newcastle.edu.au/degrees/bachelor-of-civil-engineering-honours"
+  },
+  {
+    "id": "4d017ad7-ea16-4078-ae5e-46e4d83fde08",
+    "uni": "Murdoch University",
+    "name": "Bachelor of Agricultural Science / Bachelor of Business",
+    "admission_requirements": "ATAR of approximately 60-65 (or equivalent); completion of WACE or equivalent secondary qualification.",
+    "english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
+    "source_url": "https://www.murdoch.edu.au/study/courses"
+  },
+  {
+    "id": "109c63d4-89d7-4741-a0fa-4272ec92b9b9",
+    "uni": "Torrens University Australia",
+    "name": "Master of Business Administration",
+    "admission_requirements": "Bachelor's degree (any discipline), professional experience considered favourably (typical MBA entry bar, approximate default, not program-specific verified).",
+    "english_requirements": "IELTS Academic 6.5 overall, no band below 6.0 (typical postgrad bar used as approximate default, not program-verified).",
+    "source_url": "https://www.topuniversities.com/universities/torrens-university-australia/mba/master-business-administration-mba-0"
+  },
+  {
+    "id": "3c476cf9-0522-40f4-9394-d5a331b8ec4a",
+    "uni": "University of Western Australia",
+    "name": "Bachelor of Science (Agriculture)",
+    "admission_requirements": "Completion of Year 12 (WACE or equivalent); ATAR of approximately 75-80.",
+    "english_requirements": "IELTS 6.5 overall, no band below 6.0 (or equivalent).",
+    "source_url": "https://www.uwa.edu.au/study/courses/bachelor-of-science-agriculture"
+  },
+  {
+    "id": "bb1a2d0a-efc3-4a09-887f-701c2334823d",
+    "uni": "University of Newcastle",
+    "name": "Bachelor of Psychological Science",
+    "admission_requirements": "Completion of Year 12 / ATAR approximately 70-80",
+    "english_requirements": "IELTS 6.5 overall, no band below 6.0",
+    "source_url": "https://www.newcastle.edu.au/degrees/bachelor-of-psychological-science"
+  },
+  {
+    "id": "c40e5bfa-af81-4623-b743-7e70df8f7259",
+    "uni": "Murdoch University",
+    "name": "Bachelor of Engineering Honours",
+    "admission_requirements": "ATAR of approximately 75-80 (or equivalent); completion of WACE Mathematics Methods and Chemistry or Physics recommended.",
+    "english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
+    "source_url": "https://www.murdoch.edu.au/study/courses"
+  },
+  {
+    "id": "f13b645d-3862-4d7a-baa6-b92fbf3cb710",
+    "uni": "Federation University Australia",
+    "name": "Bachelor of Engineering (Honours)",
+    "admission_requirements": "Completion of Year 12 (Australian Senior Secondary Certificate) or equivalent, ATAR approx. 70-85 for competitive entry (approximate, typical bar)",
+    "english_requirements": "IELTS 6.5 overall, no band below 6.0 (approximate, typical bar)",
+    "source_url": "https://federation.edu.au/courses/bachelor-of-engineering-honours"
+  },
+  {
+    "id": "66d84a67-9503-4c33-b180-681aab000537",
+    "uni": "Murdoch University",
+    "name": "Bachelor of Data Analytics",
+    "admission_requirements": "ATAR of approximately 65-70 (or equivalent); completion of WACE Mathematics Methods (or equivalent) recommended.",
+    "english_requirements": "IELTS overall 6.0 (no band below 6.0), or equivalent (TOEFL iBT 60, PTE 50).",
+    "source_url": "https://www.murdoch.edu.au/study/courses"
+  },
+  {
+    "id": "fe78a875-59a3-4b91-bf67-3fc93dde3d81",
+    "uni": "University of Queensland",
+    "name": "Bachelor of Agricultural Science",
+    "admission_requirements": "Completion of Year 12 with ATAR of approximately 78+",
+    "english_requirements": "IELTS 6.5 overall, no band below 6.0",
+    "source_url": "https://study.uq.edu.au/study-options/programs/bachelor-agricultural-science-2358"
+  },
+  {
+    "id": "693a704a-aeea-4ad3-a76c-98ecfbcd0309",
+    "uni": "University of Tasmania",
+    "name": "Master of Information Technology and Systems",
+    "admission_requirements": "Bachelor's degree in a relevant or any discipline (typical Australian postgrad IT/CS entry bar used as approximate default, not program-specific verified).",
+    "english_requirements": "IELTS Academic 6.5 overall, no band below 6.0 (typical postgrad bar used as approximate default, not program-verified).",
+    "source_url": "https://www.mastersportal.com/studies/80557/information-technology-and-systems.html"
+  },
+  {
+    "id": "1381e2f5-a897-42f1-8efd-c36e70b12754",
+    "uni": "University of Queensland",
+    "name": "Bachelor of Veterinary Science (Honours)",
+    "admission_requirements": "Completion of Year 12 with ATAR of approximately 99+, prerequisite Chemistry",
+    "english_requirements": "IELTS 7.0 overall, no band below 7.0",
+    "source_url": "https://study.uq.edu.au/study-options/programs/bachelor-veterinary-science-honours-2378"
+  },
+  {
+    "id": "f1f929e9-d794-43cc-bbd9-c5c44ff2489b",
+    "uni": "Adelaide University",
+    "name": "Bachelor of Computer Science",
+    "admission_requirements": "SACE (or equivalent) completion with an ATAR of approximately 80, including recommended study of Mathematical Methods.",
+    "english_requirements": "IELTS Overall 6.0, with a minimum of 6.0 in each band (or equivalent).",
+    "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-computer-science/"
+  },
+  {
+    "id": "38b4b587-0eba-4f92-9c5e-463448ea5f23",
+    "uni": "Adelaide University",
+    "name": "Bachelor of Midwifery",
+    "admission_requirements": "Completion of a secondary education qualification equivalent to the South Australian Certificate of Education (SACE), with a minimum ATAR of approximately 95 (or equivalent via VET Certificate IV+ or prior higher education study).",
+    "english_requirements": "IELTS Academic Overall 7.0, with no band below 7.0.",
+    "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-midwifery"
+  },
+  {
+    "id": "947b45a5-ff46-4cc7-8a85-fc2825e0546f",
+    "uni": "Adelaide University",
+    "name": "Bachelor of Nursing",
+    "admission_requirements": "SACE (or equivalent) completion with an ATAR of approximately 80; current National Police Certificate and immunisation compliance required prior to placement.",
+    "english_requirements": "IELTS Overall 7.0, with a minimum of 7.0 in each band (registration/AHPRA English requirement).",
+    "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-nursing/"
+  },
+  {
+    "id": "934dd4a5-bba5-426f-b4e6-a40a20d52dfd",
+    "uni": "Adelaide University",
+    "name": "Bachelor of Podiatry (Honours)",
+    "admission_requirements": "Completion of a secondary education qualification equivalent to the South Australian Certificate of Education (SACE), with a minimum ATAR of approximately 85 (or equivalent via VET Certificate IV+ or prior higher education study).",
+    "english_requirements": "IELTS Academic Overall 7.0, with no band below 7.0.",
+    "source_url": "https://www.adelaide.edu.au/study/degrees/bachelor-of-podiatry-honours"
+  },
+  {
+    "id": "fe68a5ed-9163-4ec7-9c15-060dfca90d05",
+    "uni": "Adelaide University",
+    "name": "Bachelor of Social Work",
+    "admission_requirements": "Completion of a secondary education qualification equivalent to the South Australian Certificate of Education (SACE), with a minimum ATAR of approximately 75 (or equivalent via VET Certificate IV+ or prior higher education study).",
+    "english_requirements": "IELTS Academic Overall 7.0, with no band below 7.0.",
+    "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-social-work"
+  },
+  {
+    "id": "0aa8573a-e4c8-4653-a56c-a03bda3bb5a9",
+    "uni": "Southern Cross University",
+    "name": "Master of Information Technology",
+    "admission_requirements": "Bachelor's degree in a relevant or any discipline (typical Australian postgrad IT/CS entry bar used as approximate default, not program-specific verified).",
+    "english_requirements": "IELTS Academic 6.5 overall, no band below 6.0 (typical postgrad bar used as approximate default, not program-verified).",
+    "source_url": "https://www.courses.com.au/provider-course/master-of-information-technology-southern-cross-university"
+  },
+  {
+    "id": "b5cde2d4-03da-4689-a030-feefacd5578d",
+    "uni": "University of Western Australia",
+    "name": "Master of Information Technology",
+    "admission_requirements": "Bachelor's degree in a relevant or any discipline (typical Australian postgrad IT/CS entry bar used as approximate default, not program-specific verified).",
+    "english_requirements": "IELTS Academic 6.5 overall, no band below 6.0 (typical postgrad bar used as approximate default, not program-verified).",
+    "source_url": "https://www.idp.com/universities-and-colleges/the-university-of-western-australia/master-of-information-technology/PRG-AU-00117467/"
+  },
+  {
+    "id": "4e86fe40-2ad5-4ba8-a7fd-f17403f4641a",
+    "uni": "University of Canberra",
+    "name": "Bachelor of Physiotherapy",
+    "admission_requirements": "ATAR of approximately 85-90 (or equivalent); highly competitive limited-entry program with clinical placement compliance (National Police Certificate, immunisation).",
+    "english_requirements": "IELTS overall 7.0 (no band below 6.5), or equivalent (TOEFL iBT 94, PTE 65), reflecting registration-body English requirements.",
+    "source_url": "https://www.canberra.edu.au/course/202JA/7/2026"
+  },
+  {
+    "id": "39992747-9cee-47fd-bf8e-befec66bb7e7",
+    "uni": "University of Canberra",
+    "name": "Bachelor of Primary Education",
+    "admission_requirements": "ATAR of approximately 65-70 (or equivalent); satisfactory National Police Certificate required prior to professional placement.",
+    "english_requirements": "IELTS overall 7.5 (no band below 7.0), or equivalent (TOEFL iBT 102, PTE 69), reflecting registration-body English requirements for teaching.",
+    "source_url": "https://www.canberra.edu.au/course/321JA/5/2026"
+  },
+  {
+    "id": "0846dfd9-46b7-40ab-94ab-2c4f8dfd623f",
+    "uni": "Griffith University",
+    "name": "Master of Information Technology",
+    "admission_requirements": "Bachelor's degree in a relevant or any discipline (typical Australian postgrad IT/CS entry bar used as approximate default, not program-specific verified).",
+    "english_requirements": "IELTS Academic 6.5 overall, no band below 6.0 (typical postgrad bar used as approximate default, not program-verified).",
+    "source_url": "https://www.idp.com/universities-and-colleges/griffith-university/master-of-information-technology/PRG-AU-00400629/"
+  },
+  {
+    "id": "c06407ab-c724-4d66-aaa7-421f3aa5c07b",
+    "uni": "UNSW Sydney",
+    "name": "Master of Materials Technology",
+    "admission_requirements": "The entry requirement for the Masters of Materials Technology is one of the following: A Bachelor degree with a minimum weighted average mark (WAM) of 65 in a cognate science or engineering discipline OR a WAM of 50-65 PLUS approximately five years professional experience in a relevant field such as in the materials processing or testing industry. An Honours degree at a recognised university; A Graduate Certificate or Graduate Diploma in the Materials Sciences with a minimum WAM of 65; Applicants with other relevant qualifications and experience will need to demonstrate that they have achieved the same knowledge and skills through their formal or informal learning. This may be evidenced by qualification certificates, records of assessment activities relating to course or program learning outcomes, examples of experience from the workplace, community, or other context demonstrating rel...",
+    "english_requirements": "IELTS Academic overall 6.5 (minimum 6.0 in each band); PTE Academic 64 overall. UNSW also accepts TOEFL iBT, PTE Academic, C1 Advanced/C2 Proficiency Cambridge English and its own UNSW College pathway programs.",
+    "source_url": "https://www.unsw.edu.au/study/postgraduate/master-of-materials-technology"
+  },
+  {
+    "id": "76bfef92-286e-44bc-bda2-5eb93a371656",
+    "uni": "University of New England",
+    "name": "Bachelor of Agriculture",
+    "admission_requirements": "Completion of Year 12 with an ATAR of approximately 65 or equivalent; no prerequisite subjects required",
+    "english_requirements": "IELTS 6.0 overall, no band below 6.0",
+    "source_url": "https://www.une.edu.au/study/courses/bachelor-of-agriculture"
+  },
+  {
+    "id": "be195be4-234b-412e-a575-07afa9c80193",
+    "uni": "University of Newcastle",
+    "name": "Bachelor of Arts / Bachelor of Laws (Honours)",
+    "admission_requirements": "Completion of Year 12 / ATAR approximately 85-90, combined Arts/Law degree",
+    "english_requirements": "IELTS 6.5 overall, no band below 6.0",
+    "source_url": "https://www.newcastle.edu.au/degrees/bachelor-of-arts-laws-honours"
+  },
+  {
+    "id": "6961fce0-3fed-4c6c-8e79-35a9b24b6b63",
+    "uni": "Australian Institute of Business",
+    "name": "Master of Business Administration",
+    "admission_requirements": "Bachelor's degree (any discipline) typically required; relevant work experience preferred (approximate, typical private-provider MBA bar, not program-page-verified)",
+    "english_requirements": "IELTS 6.5 overall (typical bar for postgrad at private AU providers, approximate)",
+    "source_url": "https://www.aib.edu.au/courses/online-mba/fees/"
+  },
+  {
+    "id": "2c91be5b-53c2-437b-b1e0-a17b4b7b06ff",
+    "uni": "Flinders University",
+    "name": "Bachelor of Education (Primary)",
+    "admission_requirements": "Completion of Year 12 (Australian Senior Secondary Certificate) or equivalent, ATAR approx. 65-75 (approximate, typical bar)",
+    "english_requirements": "IELTS 6.5 overall, no band below 6.0 (approximate, typical bar)",
+    "source_url": "https://www.flinders.edu.au/study/courses/bachelor-of-education-primary"
+  },
+  {
+    "id": "8a22f798-fb1a-46c1-ad8b-0144c2b5714b",
+    "uni": "Australian Institute of Music",
+    "name": "Master of Music",
+    "admission_requirements": "Bachelor's degree in music or related field, plus audition/portfolio (approximate, typical bar, not program-page-verified)",
+    "english_requirements": "IELTS 6.0 overall (typical for creative/performance postgrad programs, approximate)",
+    "source_url": "https://aim.edu.au/how-to-apply/international/fees/"
+  },
+  {
+    "id": "4cec0ce3-67a5-419f-897d-db65119751bc",
+    "uni": "University of Tasmania",
+    "name": "Bachelor of Medical Science and Doctor of Medicine",
+    "admission_requirements": "Completion of Year 12 with high ATAR (approximately 90+), UCAT score, and interview; competitive selection",
+    "english_requirements": "IELTS Academic overall 7.0, no band below 7.0 (or equivalent)",
+    "source_url": "https://www.utas.edu.au/study/undergraduate/medicine"
+  },
+  {
+    "id": "accd1e2b-152c-4e76-9614-e2da68cb1399",
+    "uni": "International College of Management, Sydney",
+    "name": "Master of International Business",
+    "admission_requirements": "Bachelor's degree (any discipline) typically required (approximate, typical bar, not program-page-verified)",
+    "english_requirements": "IELTS 6.5 overall (typical bar for postgrad at private AU providers, approximate)",
+    "source_url": "https://www.shiksha.com/studyabroad/australia/universities/international-college-of-management-sydney/fees"
+  },
+  {
+    "id": "85c4f4f8-a1ec-4846-aa0d-10fdf1661e10",
+    "uni": "William Angliss Institute",
+    "name": "Master of International Hospitality Entrepreneurship",
+    "admission_requirements": "Bachelor's degree (any discipline) typically required (approximate, typical bar, not program-page-verified)",
+    "english_requirements": "IELTS 6.5 overall (typical bar for postgrad at private AU providers, approximate)",
+    "source_url": "https://studyinaustralia.tv/en/course/28468-Master-of-International-Hospitality-Entrepreneurship-William-Angliss-Institute"
+  },
+  {
+    "id": "6e5f253b-9dac-4fac-864e-49da37e82d3e",
+    "uni": "University of Southern Queensland",
+    "name": "Bachelor of Business",
+    "admission_requirements": "Completion of Year 12 (Queensland Certificate of Education) or equivalent, ATAR of approximately 60-65 or equivalent; no prerequisite subjects required.",
+    "english_requirements": "IELTS Academic 6.0 overall, no band below 6.0, or equivalent.",
+    "source_url": "https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-business"
+  },
+  {
+    "id": "198f7d73-35df-4f53-a901-d317d92479ab",
+    "uni": "University of Southern Queensland",
+    "name": "Bachelor of Education (Primary)",
+    "admission_requirements": "Completion of Year 12 or equivalent, ATAR of approximately 60-65 or equivalent, plus satisfactory completion of the Literacy and Numeracy Test for Initial Teacher Education (LANTITE) prior to final-year professional experience placement.",
+    "english_requirements": "IELTS Academic 7.0 overall with no band below 7.0 (or equivalent), reflecting Queensland teacher registration standards.",
+    "source_url": "https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-education-primary"
+  },
+  {
+    "id": "c9751452-ae58-493f-b2d2-14e9d2e8333e",
+    "uni": "University of the Sunshine Coast",
+    "name": "Bachelor of Sport and Exercise Science",
+    "admission_requirements": "Completion of Year 12 (or equivalent) with an ATAR of approximately 60 or QTAC selection rank; Mathematics and a science subject recommended but not required",
+    "english_requirements": "IELTS 6.0 overall, no band below 6.0, or equivalent",
+    "source_url": "https://www.unisc.edu.au/study/courses-and-programs/bachelor-degrees-undergraduate-programs/bachelor-of-sport-and-exercise-science"
+  },
+  {
+    "id": "280ee747-d1a6-4c40-846d-c70fe79605b0",
+    "uni": "Victoria University",
+    "name": "Master of Applied Information Technology",
+    "admission_requirements": "Bachelor's degree in a relevant or any discipline (typical Australian postgrad IT/CS entry bar used as approximate default, not program-specific verified).",
+    "english_requirements": "IELTS Academic 6.5 overall, no band below 6.0 (typical postgrad bar used as approximate default, not program-verified).",
+    "source_url": "https://www.vu.edu.au/courses/master-of-applied-information-technology-nmit"
+  },
+  {
+    "id": "2809fa4b-ab76-493d-87d0-43d71d4a8f4d",
+    "uni": "Charles Sturt University",
+    "name": "Master of Professional Information Technology",
+    "admission_requirements": "Bachelor's degree in a relevant or any discipline (typical Australian postgrad IT/CS entry bar used as approximate default, not program-specific verified).",
+    "english_requirements": "IELTS Academic 6.5 overall, no band below 6.0 (typical postgrad bar used as approximate default, not program-verified).",
+    "source_url": "https://study.csu.edu.au/international/courses/master-professional-information-technology"
+  },
+  {
+    "id": "874bb2c8-207f-4473-bb8c-59e90f2d3534",
+    "uni": "University of the Sunshine Coast",
+    "name": "Master of Information and Communications Technology",
+    "admission_requirements": "Bachelor's degree in a relevant or any discipline (typical Australian postgrad IT/CS entry bar used as approximate default, not program-specific verified).",
+    "english_requirements": "IELTS Academic 6.5 overall, no band below 6.0 (typical postgrad bar used as approximate default, not program-verified).",
+    "source_url": "https://www.usc.edu.au/international/programs-and-fees/tuition-fees-and-other-costs"
+  },
+  {
+    "id": "f0d26789-d217-4e6c-94a5-bb965761ee72",
+    "uni": "University of Western Australia",
+    "name": "Bachelor of Engineering (Honours)",
+    "admission_requirements": "Completion of Year 12 (WACE or equivalent); ATAR of approximately 90+ with prerequisite Mathematics Methods and Physics or Chemistry.",
+    "english_requirements": "IELTS 6.5 overall, no band below 6.0 (or equivalent).",
+    "source_url": "https://www.uwa.edu.au/study/courses/bachelor-of-engineering-honours"
+  },
+  {
+    "id": "7fc9a306-818b-46e6-837e-01a683f1e084",
+    "uni": "University of Newcastle",
+    "name": "Bachelor of Business",
+    "admission_requirements": "Completion of Year 12 / ATAR approximately 65-75; choice of up to two majors from accounting, finance, marketing, management, HR and international business",
+    "english_requirements": "IELTS 6.5 overall, no band below 6.0",
+    "source_url": "https://www.newcastle.edu.au/degrees/bachelor-of-business"
+  },
+  {
+    "id": "6f43423f-2fc7-4eb2-9b38-44fa9778f7c6",
+    "uni": "University of Newcastle",
+    "name": "Bachelor of Nursing",
+    "admission_requirements": "Completion of Year 12 / ATAR approximately 65-75; adjustment factors and portfolio pathways available",
+    "english_requirements": "IELTS 7.0 overall (no band below 7.0) or equivalent, reflecting nursing registration standards",
+    "source_url": "https://www.newcastle.edu.au/degrees/bachelor-of-nursing"
+  },
+  {
+    "id": "4d3c8a68-4256-412b-9dc9-fc9b7c9991f3",
+    "uni": "University of Queensland",
+    "name": "Bachelor of Commerce",
+    "admission_requirements": "Completion of Year 12 with ATAR of approximately 85+",
+    "english_requirements": "IELTS 6.5 overall, no band below 6.0",
+    "source_url": "https://study.uq.edu.au/study-options/programs/bachelor-commerce-2336"
+  }
+]
