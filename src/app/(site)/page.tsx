@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { EmailSignupForm } from "@/components/site/EmailSignupForm";
 import { PostCard } from "@/components/site/PostCard";
 import { ScrollCue } from "@/components/site/ScrollCue";
 import { SearchBar } from "@/components/site/SearchBar";
@@ -313,6 +314,14 @@ export default async function Home() {
                 Firm closing dates a university publishes. Each row links to
                 that university&rsquo;s page and the source it came from.
               </p>
+
+              <div className="mt-4 rounded-2xl border border-line bg-mist p-5 sm:p-6">
+                <p className="mb-3 font-body text-sm font-medium text-ink">
+                  Want to know when a deadline or visa rule changes? Leave
+                  your email &mdash; no spam, unsubscribe anytime.
+                </p>
+                <EmailSignupForm source="homepage-deadlines" />
+              </div>
             </section>
           )}
 

@@ -694,6 +694,19 @@ export interface Database {
           admin_notes?: string | null;
         }
       >;
+      email_subscribers: Table<
+        {
+          id: string;
+          email: string;
+          source: string;
+          created_at: string;
+        },
+        {
+          id?: string;
+          email: string;
+          source?: string;
+        }
+      >;
       activity_log: Table<
         {
           id: number;
