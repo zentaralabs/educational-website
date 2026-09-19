@@ -86,6 +86,270 @@
       "archived_at": "2026-08-29T15:54:57.122Z"
     },
     {
+      "id": "53982883-82e1-4a58-98b8-3a5a7b652266",
+      "name": "Associate Degree of Accounting Studies",
+      "reason": "Not in CDU's 2026 course-list API at any AQF level (international or domestic higher_education); the Accounting Studies award family in 2026 exists only as Graduate Certificate/Graduate Diploma (domestic), no Associate Degree tier remains",
+      "archived_at": "2026-09-18T02:35:26.253Z"
+    },
+    {
+      "id": "31c999ce-81ae-4be7-97fd-f2c19583766e",
+      "name": "Bachelor of Educational Studies",
+      "reason": "No Bachelor of Educational Studies in CDU's 2026 course-list API (international or domestic); only a Diploma of Educational Studies (domestic-only) exists at this award family in 2026, no Bachelor equivalent",
+      "archived_at": "2026-09-18T02:35:26.416Z"
+    },
+    {
+      "id": "d7459a56-8d01-4121-9711-19b6232444fb",
+      "name": "Bachelor of Medical Laboratory Science",
+      "reason": "Superseded by Bachelor of Medical Laboratory Science Honours, which is the only Medical Laboratory Science bachelor's award in CDU's 2026 course-list API (both international and domestic); already published separately in our DB",
+      "archived_at": "2026-09-18T02:35:26.580Z"
+    },
+    {
+      "id": "265c17e4-8189-4aa5-b1c2-6f8a600f1a5d",
+      "name": "Bachelor of Science and Technology",
+      "reason": "Not in CDU's 2026 course-list API at all (international or domestic higher_education); no successor award found under any related name",
+      "archived_at": "2026-09-18T02:35:26.739Z"
+    },
+    {
+      "id": "396eb236-8f96-4b3e-b1ac-34e0584ed824",
+      "name": "Diploma of Alcohol and Other Drugs Practice",
+      "reason": "Not in CDU's 2026 course-list API (international or domestic); no Alcohol and Other Drugs Practice diploma remains in the current catalogue",
+      "archived_at": "2026-09-18T02:35:26.895Z"
+    },
+    {
+      "id": "09b76020-5f80-4f47-9016-6ab9cbb712a2",
+      "name": "Diploma of Health Pathway",
+      "reason": "Not in CDU's 2026 course-list API (international or domestic); no Diploma of Health Pathway remains in the current catalogue",
+      "archived_at": "2026-09-18T02:35:27.047Z"
+    },
+    {
+      "id": "4944dbd2-6457-4b62-bd17-d6b617c0a775",
+      "name": "Diploma of Health Studies",
+      "reason": "Not in CDU's 2026 course-list API (international or domestic); no Diploma of Health Studies remains in the current catalogue",
+      "archived_at": "2026-09-18T02:35:27.204Z"
+    },
+    {
+      "id": "43a45195-f6ce-44b3-859b-e7feab30b605",
+      "name": "Diploma of Hospitality Management",
+      "reason": "Not in CDU's 2026 course-list API (international or domestic); no Hospitality Management diploma remains in the current catalogue",
+      "archived_at": "2026-09-18T02:35:27.357Z"
+    },
+    {
+      "id": "d7ba40cc-7a50-4912-9fce-4cafceb401a7",
+      "name": "Diploma of Introductory Accounting",
+      "reason": "Not in CDU's 2026 course-list API at any level (international or domestic); the Accounting Studies award family in 2026 exists only as Graduate Certificate/Graduate Diploma (domestic), no introductory Diploma tier remains",
+      "archived_at": "2026-09-18T02:35:27.510Z"
+    },
+    {
+      "id": "88687276-09a8-490c-84ce-c3aba0175b80",
+      "name": "Diploma of Social Care",
+      "reason": "Not in CDU's 2026 course-list API (international or domestic); no Diploma of Social Care remains in the current catalogue",
+      "archived_at": "2026-09-18T02:35:27.659Z"
+    },
+    {
+      "id": "f8abeb3c-da70-4b04-bfd3-b4cb6052e01e",
+      "name": "Graduate Certificate of Health Services Management",
+      "reason": "Not in CDU's 2026 course-list API (international or domestic); no Health Services Management award remains at Graduate Certificate level (a Bachelor of Health Services Management still exists)",
+      "archived_at": "2026-09-18T02:35:27.815Z"
+    },
+    {
+      "id": "d520a925-287f-41b7-a26b-07943e7492c3",
+      "name": "Graduate Certificate of Public Health",
+      "reason": "Not in CDU's 2026 course-list API at Graduate Certificate level (international or domestic); Public Health remains offered only as Graduate Diploma or Master in 2026",
+      "archived_at": "2026-09-18T02:35:27.969Z"
+    },
+    {
+      "id": "f4057d49-f94b-4c8f-9fb4-6541bfecd8c7",
+      "name": "Graduate Certificate of Sustainable Enterprise",
+      "reason": "Not in CDU's 2026 course-list API (international or domestic); no Sustainable Enterprise award remains at Graduate Certificate level",
+      "archived_at": "2026-09-18T02:35:28.121Z"
+    },
+    {
+      "id": "e18a708f-5b8f-4547-b6fa-27bb1ff95abc",
+      "name": "Graduate Diploma of Health and Social Care",
+      "reason": "Not in CDU's 2026 course-list API (international or domestic); no Health and Social Care graduate diploma remains in the current catalogue",
+      "archived_at": "2026-09-18T02:35:28.275Z"
+    },
+    {
+      "id": "f27cc273-0a0c-423c-b997-a7c0397be1fa",
+      "name": "Graduate Diploma of Mental Health",
+      "reason": "Not in CDU's 2026 course-list API (international or domestic); no Mental Health graduate diploma remains in the current catalogue",
+      "archived_at": "2026-09-18T02:35:28.422Z"
+    },
+    {
+      "id": "6a632105-0d60-4077-b34f-6cd916892cfc",
+      "name": "Master of Business Administration Sustainable Enterprise",
+      "reason": "Not in CDU's 2026 course-list API (international or domestic); current MBA specialisations are Professional Practice, Educational Leadership, Executive and Health Leadership only, no Sustainable Enterprise stream remains",
+      "archived_at": "2026-09-18T02:35:28.575Z"
+    },
+    {
+      "id": "08d3e826-06fd-4e7c-831c-42ad09765fd4",
+      "name": "Master of Business Administration Sustainable Leadership",
+      "reason": "Not in CDU's 2026 course-list API (international or domestic); current MBA specialisations are Professional Practice, Educational Leadership, Executive and Health Leadership only, no Sustainable Leadership stream remains",
+      "archived_at": "2026-09-18T02:35:28.724Z"
+    },
+    {
+      "id": "b2a48580-6416-42bf-a31c-32eff1bfdabb",
+      "name": "Master of Nutrition",
+      "reason": "Not in CDU's 2026 course-list API under this name (international or domestic); no standalone Master of Nutrition remains (CDU now offers Master of Dietetics and Bachelor of Nutrition instead)",
+      "archived_at": "2026-09-18T02:35:28.877Z"
+    },
+    {
+      "id": "0a7eff3f-a832-47a9-b674-8de2c285f938",
+      "name": "Master of Physiotherapy",
+      "reason": "Standalone entry discontinued; CDU's 2026 course-list API (international and domestic) only offers Physiotherapy via the combined Bachelor of Health Science/Master of Physiotherapy pathway",
+      "archived_at": "2026-09-18T02:35:29.034Z"
+    },
+    {
+      "id": "87145738-4653-4953-9caf-04ac74fa2a26",
+      "name": "Master of Speech and Language Therapy",
+      "reason": "Renamed to Master of Speech Pathology, which already exists as its own published row in our DB sourced from the same live CDU course page; kept as a single row to avoid duplicate content",
+      "archived_at": "2026-09-18T02:35:29.183Z"
+    },
+    {
+      "id": "53982883-82e1-4a58-98b8-3a5a7b652266",
+      "name": "Associate Degree of Accounting Studies",
+      "reason": "Not in CDU's 2026 course-list API at any AQF level (international or domestic higher_education); the Accounting Studies award family in 2026 exists only as Graduate Certificate/Graduate Diploma (domestic), no Associate Degree tier remains",
+      "archived_at": "2026-09-18T02:49:07.830Z"
+    },
+    {
+      "id": "31c999ce-81ae-4be7-97fd-f2c19583766e",
+      "name": "Bachelor of Educational Studies",
+      "reason": "No Bachelor of Educational Studies in CDU's 2026 course-list API (international or domestic); only a Diploma of Educational Studies (domestic-only) exists at this award family in 2026, no Bachelor equivalent",
+      "archived_at": "2026-09-18T02:49:07.991Z"
+    },
+    {
+      "id": "d7459a56-8d01-4121-9711-19b6232444fb",
+      "name": "Bachelor of Medical Laboratory Science",
+      "reason": "Superseded by Bachelor of Medical Laboratory Science Honours, which is the only Medical Laboratory Science bachelor's award in CDU's 2026 course-list API (both international and domestic); already published separately in our DB",
+      "archived_at": "2026-09-18T02:49:08.153Z"
+    },
+    {
+      "id": "265c17e4-8189-4aa5-b1c2-6f8a600f1a5d",
+      "name": "Bachelor of Science and Technology",
+      "reason": "Not in CDU's 2026 course-list API at all (international or domestic higher_education); no successor award found under any related name",
+      "archived_at": "2026-09-18T02:49:08.316Z"
+    },
+    {
+      "id": "396eb236-8f96-4b3e-b1ac-34e0584ed824",
+      "name": "Diploma of Alcohol and Other Drugs Practice",
+      "reason": "Not in CDU's 2026 course-list API (international or domestic); no Alcohol and Other Drugs Practice diploma remains in the current catalogue",
+      "archived_at": "2026-09-18T02:49:08.473Z"
+    },
+    {
+      "id": "09b76020-5f80-4f47-9016-6ab9cbb712a2",
+      "name": "Diploma of Health Pathway",
+      "reason": "Not in CDU's 2026 course-list API (international or domestic); no Diploma of Health Pathway remains in the current catalogue",
+      "archived_at": "2026-09-18T02:49:08.636Z"
+    },
+    {
+      "id": "4944dbd2-6457-4b62-bd17-d6b617c0a775",
+      "name": "Diploma of Health Studies",
+      "reason": "Not in CDU's 2026 course-list API (international or domestic); no Diploma of Health Studies remains in the current catalogue",
+      "archived_at": "2026-09-18T02:49:08.801Z"
+    },
+    {
+      "id": "43a45195-f6ce-44b3-859b-e7feab30b605",
+      "name": "Diploma of Hospitality Management",
+      "reason": "Not in CDU's 2026 course-list API (international or domestic); no Hospitality Management diploma remains in the current catalogue",
+      "archived_at": "2026-09-18T02:49:08.964Z"
+    },
+    {
+      "id": "d7ba40cc-7a50-4912-9fce-4cafceb401a7",
+      "name": "Diploma of Introductory Accounting",
+      "reason": "Not in CDU's 2026 course-list API at any level (international or domestic); the Accounting Studies award family in 2026 exists only as Graduate Certificate/Graduate Diploma (domestic), no introductory Diploma tier remains",
+      "archived_at": "2026-09-18T02:49:09.127Z"
+    },
+    {
+      "id": "88687276-09a8-490c-84ce-c3aba0175b80",
+      "name": "Diploma of Social Care",
+      "reason": "Not in CDU's 2026 course-list API (international or domestic); no Diploma of Social Care remains in the current catalogue",
+      "archived_at": "2026-09-18T02:49:09.289Z"
+    },
+    {
+      "id": "f8abeb3c-da70-4b04-bfd3-b4cb6052e01e",
+      "name": "Graduate Certificate of Health Services Management",
+      "reason": "Not in CDU's 2026 course-list API (international or domestic); no Health Services Management award remains at Graduate Certificate level (a Bachelor of Health Services Management still exists)",
+      "archived_at": "2026-09-18T02:49:09.448Z"
+    },
+    {
+      "id": "d520a925-287f-41b7-a26b-07943e7492c3",
+      "name": "Graduate Certificate of Public Health",
+      "reason": "Not in CDU's 2026 course-list API at Graduate Certificate level (international or domestic); Public Health remains offered only as Graduate Diploma or Master in 2026",
+      "archived_at": "2026-09-18T02:49:09.608Z"
+    },
+    {
+      "id": "f4057d49-f94b-4c8f-9fb4-6541bfecd8c7",
+      "name": "Graduate Certificate of Sustainable Enterprise",
+      "reason": "Not in CDU's 2026 course-list API (international or domestic); no Sustainable Enterprise award remains at Graduate Certificate level",
+      "archived_at": "2026-09-18T02:49:09.766Z"
+    },
+    {
+      "id": "e18a708f-5b8f-4547-b6fa-27bb1ff95abc",
+      "name": "Graduate Diploma of Health and Social Care",
+      "reason": "Not in CDU's 2026 course-list API (international or domestic); no Health and Social Care graduate diploma remains in the current catalogue",
+      "archived_at": "2026-09-18T02:49:09.930Z"
+    },
+    {
+      "id": "f27cc273-0a0c-423c-b997-a7c0397be1fa",
+      "name": "Graduate Diploma of Mental Health",
+      "reason": "Not in CDU's 2026 course-list API (international or domestic); no Mental Health graduate diploma remains in the current catalogue",
+      "archived_at": "2026-09-18T02:49:10.096Z"
+    },
+    {
+      "id": "6a632105-0d60-4077-b34f-6cd916892cfc",
+      "name": "Master of Business Administration Sustainable Enterprise",
+      "reason": "Not in CDU's 2026 course-list API (international or domestic); current MBA specialisations are Professional Practice, Educational Leadership, Executive and Health Leadership only, no Sustainable Enterprise stream remains",
+      "archived_at": "2026-09-18T02:49:10.260Z"
+    },
+    {
+      "id": "08d3e826-06fd-4e7c-831c-42ad09765fd4",
+      "name": "Master of Business Administration Sustainable Leadership",
+      "reason": "Not in CDU's 2026 course-list API (international or domestic); current MBA specialisations are Professional Practice, Educational Leadership, Executive and Health Leadership only, no Sustainable Leadership stream remains",
+      "archived_at": "2026-09-18T02:49:10.423Z"
+    },
+    {
+      "id": "b2a48580-6416-42bf-a31c-32eff1bfdabb",
+      "name": "Master of Nutrition",
+      "reason": "Not in CDU's 2026 course-list API under this name (international or domestic); no standalone Master of Nutrition remains (CDU now offers Master of Dietetics and Bachelor of Nutrition instead)",
+      "archived_at": "2026-09-18T02:49:10.582Z"
+    },
+    {
+      "id": "0a7eff3f-a832-47a9-b674-8de2c285f938",
+      "name": "Master of Physiotherapy",
+      "reason": "Standalone entry discontinued; CDU's 2026 course-list API (international and domestic) only offers Physiotherapy via the combined Bachelor of Health Science/Master of Physiotherapy pathway",
+      "archived_at": "2026-09-18T02:49:10.774Z"
+    },
+    {
+      "id": "87145738-4653-4953-9caf-04ac74fa2a26",
+      "name": "Master of Speech and Language Therapy",
+      "reason": "Renamed to Master of Speech Pathology, which already exists as its own published row in our DB sourced from the same live CDU course page; kept as a single row to avoid duplicate content",
+      "archived_at": "2026-09-18T02:49:10.972Z"
+    },
+    {
+      "id": "831657e7-0e8d-4067-a5b4-b1453333f89d",
+      "name": "Master of Teaching",
+      "reason": "Confirmed bare/umbrella name with no live course page: checked CDU's course-list API across both 2026 and 2027, and both international and domestic higher_education slices (99-187 rows each); in every slice only 4 named specialisations exist (Master of Teaching Birth to Five Years, Early Childhood, Primary, Secondary), never a standalone Master of Teaching page, in either year",
+      "archived_at": "2026-09-18T03:10:35.036Z"
+    },
+    {
+      "id": "12bb5b69-f040-4c4b-a343-9fc8782d0d56",
+      "name": "Bachelor of Health Honours",
+      "reason": "Confirmed present in CDU's domestic course catalogue (Bachelor of Health Science Honours, in the 187-row domestic sector=higher_education&year=2026 API listing with no student_type filter) but absent from the international course catalogue (student_type=International&sector=higher_education&year=2026, 119 rows) - not offered to international students for the 2026 intake",
+      "archived_at": "2026-09-18T03:10:35.188Z"
+    },
+    {
+      "id": "e6d098ba-952f-4138-bee4-9e640699a5a5",
+      "name": "Master of Psychology (Clinical)",
+      "reason": "Confirmed present in CDU's domestic course catalogue (Master of Psychology (Clinical), in the 187-row domestic sector=higher_education&year=2026 API listing with no student_type filter) but absent from the international course catalogue (student_type=International&sector=higher_education&year=2026, 119 rows) - not offered to international students for the 2026 intake",
+      "archived_at": "2026-09-18T03:10:35.337Z"
+    },
+    {
+      "id": "fa8dd4b6-18c9-4335-95da-eb9e842e69ba",
+      "name": "Graduate Certificate of Maternal Critical Care",
+      "reason": "Confirmed present in CDU's domestic course catalogue (Graduate Certificate of Maternal Critical Care, in the 187-row domestic sector=higher_education&year=2026 API listing with no student_type filter) but absent from the international course catalogue (student_type=International&sector=higher_education&year=2026, 119 rows) - not offered to international students for the 2026 intake",
+      "archived_at": "2026-09-18T03:10:35.485Z"
+    },
+    {
       "id": "a65b8047-e729-4507-9f39-c0166c464d43",
       "name": "Bachelor of Arts Honours",
       "reason": "ECU course page redirects to page-archived (crsArchived=C34), confirmed discontinued",
