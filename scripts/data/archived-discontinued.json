@@ -86,6 +86,24 @@
       "archived_at": "2026-08-29T15:54:57.122Z"
     },
     {
+      "id": "91735e1a-c757-4c34-8fbf-a6217bd0086a",
+      "name": "Bachelor of Education (Primary)",
+      "reason": "Duplicate of 11f4bfb7-8e85-44e4-939e-7e3789c89be5, same live CDU course page (Bachelor of Education Primary, WEDP02) at https://www.cdu.edu.au/study/course/bachelor-education-primary-wedp02 with real CRICOS 077777C; this row's source_url was only the generic CDU homepage with no CRICOS code",
+      "archived_at": "2026-09-18T03:17:38.134Z"
+    },
+    {
+      "id": "5269b04c-c194-4553-9c09-c9100bd3491f",
+      "name": "Bachelor of Engineering (Honours)",
+      "reason": "Duplicate of 0e8f5a58-0c72-4069-a5ed-10d565f15df7, same live CDU course page (Bachelor of Engineering Honours, VENG02) at https://www.cdu.edu.au/study/course/bachelor-engineering-honours-veng02 with real CRICOS 085155M; this row's source_url was only the generic CDU homepage with no CRICOS code",
+      "archived_at": "2026-09-18T03:17:38.287Z"
+    },
+    {
+      "id": "a4105d92-2122-454c-96d6-ff93f2abfc4c",
+      "name": "Bachelor of Education - Primary",
+      "reason": "Duplicate of e1e0c2a1-f907-4cc4-aad6-5e5e96629420, both source_urls (old arts-soc faculty path and current cale faculty path) redirect to the identical live UTAS course page (43B Bachelor of Education Primary); kept row has fuller content (curriculum, admission_requirements, english_requirements, application_url) and a more standard slug",
+      "archived_at": "2026-09-18T03:17:38.442Z"
+    },
+    {
       "id": "53982883-82e1-4a58-98b8-3a5a7b652266",
       "name": "Associate Degree of Accounting Studies",
       "reason": "Not in CDU's 2026 course-list API at any AQF level (international or domestic higher_education); the Accounting Studies award family in 2026 exists only as Graduate Certificate/Graduate Diploma (domestic), no Associate Degree tier remains",
