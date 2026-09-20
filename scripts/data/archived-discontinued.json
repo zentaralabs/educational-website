@@ -1032,6 +1032,36 @@
       "name": "Master of Technology (Enterprise Systems and Business Analytics)",
       "reason": "'Master of Technology (Enterprise Systems and Business Analytics)' does not exist in FedUni's current catalogue; no course under this or a near-identical name was found via live search.",
       "archived_at": "2026-09-20T04:14:23.565Z"
+    },
+    {
+      "id": "d171e0cb-cab0-4de8-9bee-66bd173e854d",
+      "name": "Bachelor of Biomedical Sciences",
+      "reason": "Bachelor of Biomedical Sciences: discontinued. Course code 116910 was Active in the 2026 handbook (handbook.jcu.edu.au/course/2026/116910) but returns 404 in the current 2027 handbook and does not appear in any handbook.jcu.edu.au search-all query for this year; no renamed successor found (checked Laboratory Medicine).",
+      "archived_at": "2026-09-20T04:58:50.971Z"
+    },
+    {
+      "id": "67a4c06f-2b64-4fe9-8e7d-c7e54f434ab3",
+      "name": "Master of Laws",
+      "reason": "Master of Laws: discontinued. Only variant that ever existed under this family was Master of Laws (Research), code 64003, Active in the 2026 handbook but 404 in the current 2027 handbook; a plain coursework Master of Laws never had a handbook match in any year checked, and no LLM/Legal Practice successor found.",
+      "archived_at": "2026-09-20T04:58:51.140Z"
+    },
+    {
+      "id": "6b300f8a-5641-4fb6-9e13-d2190ccd061e",
+      "name": "Bachelor of Medical Science (Honours)",
+      "reason": "Bachelor of Medical Science (Honours): duplicate row. The only real JCU course under this name is code 72109, titled Bachelor of Medical Science (Honours) [End-on] in the current handbook; that exact course is already tracked under DB row 9ce9061d-9272-4063-a63d-dd3c86f36fe5. No separate embedded or untagged Medical Science Honours course exists.",
+      "archived_at": "2026-09-20T04:58:51.302Z"
+    },
+    {
+      "id": "d8c749c1-4be7-489e-beb6-d0c44c14f827",
+      "name": "Bachelor of Veterinary Science (Honours)",
+      "reason": "Bachelor of Veterinary Science (Honours): duplicate row. The only real JCU course under this name is code 122609 (135 credit points), titled Bachelor of Veterinary Science (Honours) [Embedded] in the current handbook; that exact course is already tracked under DB row 389080f8-a77c-4f70-b81a-a9330e05b54f, whose [135cp] tag matches the course's real credit-point total.",
+      "archived_at": "2026-09-20T04:58:51.468Z"
+    },
+    {
+      "id": "84300dee-e25d-45af-a7f3-11c77342f160",
+      "name": "Bachelor of Veterinary Science (Honours) [End-on]",
+      "reason": "Bachelor of Veterinary Science (Honours) [End-on]: duplicate/non-existent variant. Only one real JCU Veterinary Science Honours course exists, code 122609 (Embedded structure, 135 credit points), already tracked under DB row 389080f8-a77c-4f70-b81a-a9330e05b54f as [135cp]. No separate End-on variant of this course exists in the current handbook.",
+      "archived_at": "2026-09-20T04:58:51.635Z"
     }
   ]
 }
