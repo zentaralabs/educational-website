@@ -612,6 +612,18 @@
       "name": "Undergraduate Certificate in Education",
       "reason": "Last offered in the 2024 handbook (course 2004200); absent from the current 2026/2027 course sitemap.",
       "archived_at": "2026-09-20T01:41:02.767Z"
+    },
+    {
+      "id": "6699b9d7-327e-405f-819d-c9d5067280b4",
+      "name": "Bachelor of Agricultural and Resource Economics",
+      "reason": "Not found at any guessed /study/courses/ slug (404), absent from UNE's authoritative 2026 international course-fee list, and absent from UNE full-text search for Agricultural/Resource Economics. No live UNE page or CRICOS entry found.",
+      "archived_at": "2026-09-20T02:23:11.346Z"
+    },
+    {
+      "id": "3dc716eb-68a6-4dc2-82cd-49fe57e9899a",
+      "name": "Doctor of Education",
+      "reason": "No /study/courses/ page found under any guessed slug (404), absent from UNE's authoritative 2026 international course-fee list. UNE search for Doctor of Education returns only an honorary-doctorate mention and graduation pages, not a live program.",
+      "archived_at": "2026-09-20T02:23:11.541Z"
     }
   ]
 }

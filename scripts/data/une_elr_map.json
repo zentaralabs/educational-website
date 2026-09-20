@@ -1,0 +1,9 @@
+{
+  "standard": {"overall": "6.0", "listening": "5.5", "reading": "5.5", "writing": "5.5", "speaking": "5.5"},
+  "education-nesa": {"overall": "7.5", "listening": "8.0", "reading": "7.0", "writing": "7.0", "speaking": "8.0"},
+  "law": {"overall": "6.5", "listening": "6.0", "reading": "6.0", "writing": "6.5", "speaking": "6.0"},
+  "nursing": {"overall": "7.0", "listening": "7.0", "reading": "7.0", "writing": "6.5", "speaking": "7.0"},
+  "pharmacy": {"overall": "7.0", "listening": "7.0", "reading": "6.0", "writing": "6.0", "speaking": "7.0"},
+  "social-work": {"overall": "7.0", "listening": "7.0", "reading": "7.0", "writing": "7.0", "speaking": "7.0"},
+  "hdr-other": {"overall": "6.5", "listening": "6.0", "reading": "6.0", "writing": "6.0", "speaking": "6.0"}
+}
