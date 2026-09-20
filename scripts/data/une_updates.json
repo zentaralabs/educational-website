@@ -1,0 +1,892 @@
+[
+ {
+  "id": "09092930-3fd7-468d-9e19-d3d268aebc11",
+  "name": "Advanced Diploma in Arts",
+  "slug": "advanced-diploma-in-arts",
+  "cricos": "054919F",
+  "description": "Add an area of expertise to your CV and gain an undergraduate qualification, without committing to a full bachelor's degree. You will develop research, critical thinking, and writing skills in the core units. With the minor and elective units, you tailor the course to your specific interests and career objectives by choosing from an extensive selection of arts, humanities and social science units. With our Advanced Diploma in Arts you have the freedom to explore related subjects, or a range of different topics.",
+  "curriculum": "The course structure lists 56 unit entries across its schedule. Units include The Academic Practice of Research and Critical Analysis (HASS101), The Craft of Academic Writing (WRIT101), Of Gods, Heroes and Monsters: Foundation Myths of Antiquity (ANCH109), From Solon to Socrates (ANCH110), Alexander the Great and the Hellenistic World (ANCH307), How to be Good: Greek and Roman Ethics (ANCH320), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Completion of Year 12 with a Guaranteed ATAR of 65.00 (Rule A) or equivalent higher education, VET study, or work experience. This course is offered under multiple admission rules: Rule A: You have completed, at minimum, an Australian Year 12 qualification or overseas equivalent. Rule B: You have completed a Diploma in Arts from UNE.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "828c261e-6b6d-43fe-887e-f0fd45044c4c",
+  "name": "Bachelor of Accounting",
+  "slug": "bachelor-of-accounting",
+  "cricos": "061316G",
+  "description": "Advances in technology such as artificial intelligence, big data and robotic accounting are creating opportunities for accountants with highly developed analytical, communication and financial skills to add value to organisations operating in diverse contexts in Australia and around the world. Through UNE’s Bachelor of Accounting you’ll develop the theoretical knowledge and the soft and technical skills required to thrive in this fast-changing environment.",
+  "curriculum": "The course structure lists 92 unit entries across its schedule. Units include Introduction to Financial Accounting (AFM101), Fundamentals of Personal Finance (AFM104), Introduction to Management Accounting (AFM112), Intermediate Financial Accounting (AFM211), Corporate Finance (AFM231), Accounting Information Systems (AFM275), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Completion of Year 12 with a Guaranteed ATAR of 65.00 (Rule A) or equivalent higher education, VET study, or work experience. This course is offered under multiple admission rules: Rule A: You have completed, at minimum, an Australian Year 12 qualification or overseas equivalent. Rule B: You have completed an approved overseas qualification from one of the following institutions: Technical and Vocational Training Corporation WUXI South Ocean College If you are admitted on this basis, you will be eligible for admission under Rule B. Rule C: You have completed the TAFE NSW Associate Degree in Accounting.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "39e0998d-3b6b-42a5-b885-8402fc8e2e87",
+  "name": "Bachelor of Agribusiness",
+  "slug": "bachelor-of-agribusiness",
+  "cricos": "032710E",
+  "description": "Demand for agribusiness professionals continues to grow as the world faces the evolving challenges of climate change, sustainability, food safety and security, and the increasing globalisation and integration of agricultural and food networks. UNE’s Bachelor of Agribusiness provides you with the skills and knowledge you’ll need to anticipate and respond to the demands of agricultural businesses in a changing global environment. Hone your skills in problem solving and analysis to thrive in a rapidly changing world.",
+  "curriculum": "The course structure lists 100 unit entries across its schedule. Units include Agribusiness: Issues and Principles (AGB123), Farm and Resource Management (AGB202), Supply Chain Management (AGB302), Agricultural and Natural Resource Policy (AGB303), Case Studies in Agribusiness (AGB304), Fundamentals of Agriculture (AGFN100), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Completion of Year 12 with a Guaranteed ATAR of 65.00 (Rule A) or equivalent higher education, VET study, or work experience.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "904d5379-dce7-4356-ab51-11d6af178ead",
+  "name": "Bachelor of Agribusiness with Honours",
+  "slug": "bachelor-of-agribusiness-with-honours",
+  "cricos": "050061F",
+  "description": "High-achieving agribusiness graduates can contribute to our understanding of today's complex challenges affecting agriculture and agribusiness sectors through UNE's Bachelor of Agribusiness with Honours. In your honours year, you will undertake in-depth research targeted at solving business problems or making strategic decisions in the agricultural industries. In doing so, you will hone your knowledge, analysis and communication skills to future proof your career in the agribusiness sector.",
+  "curriculum": "The course structure lists 1 unit entries across its schedule. Units include Research Methods (BUS505), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Entry is assessed against UNE's Admission, Credit and Enrolment Policy; see the course's own Entry Requirements tab for the exact academic and English language criteria that apply to Bachelor of Agribusiness with Honours.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "76bfef92-286e-44bc-bda2-5eb93a371656",
+  "name": "Bachelor of Agriculture",
+  "slug": "bachelor-of-agriculture",
+  "cricos": "017603M",
+  "description": "With UNE's Bachelor of Agriculture, you will gain practical, production-oriented, specialist skills. You will have the paddock-ready skills and knowledge to solve problems and adapt to future challenges as a professional. Choose a major from one of three production-based options, animal, plant, or mixed farming, to gain a specialisation allowing you to enter the agricultural industry with expert knowledge and a technical skillset in the productive management of agricultural landscapes. With a Bachelor of Agriculture from UNE you will be well-positioned to gain employment across a range of agricultural industries, and fit for the future.",
+  "curriculum": "The course structure lists 64 unit entries across its schedule. Units include Fundamentals of Agriculture (AGFN100), Agricultural Plants: Adaptation and Physiology (AGRO200), Sustainable Agricultural Systems I (AGSY101), Sustainable Agricultural Systems II (AGSY102), Animal Production Systems and Products (ANPR211), Introduction to Biology: Cells and Life (BIOL110), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Completion of Year 12 with a Guaranteed ATAR of 70.00 (Rule A) or equivalent higher education, VET study, or work experience. This course is offered under multiple admission rules: Rule A: You have completed, at minimum, an Australian Year 12 qualification or overseas equivalent. Rule B: You have completed the Diploma of Agriculture (AHC50116/AHC50110).",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "d8188ad1-6fc6-47c7-b62e-ec8a01f2a348",
+  "name": "Bachelor of Animal Science",
+  "slug": "bachelor-of-animal-science",
+  "cricos": "108318C",
+  "description": "With UNE's Bachelor of Animal Science you will graduate with knowledge and skills in the science-based fundamentals that underpin the relationships with and management of animals, plus acquire the practical experience to be on track for a rewarding career in rapidly changing animal-related industries. You will develop expertise in a specialist area through your major in livestock science or animal bioscience. Enhance your science-based qualifications and future fit your career across a range of workplace contexts.",
+  "curriculum": "The course structure lists 53 unit entries across its schedule. Units include Animal Production Systems and Products (ANPR211), Animal Health and Reproduction (ANPR321), Animal Handling (ANSC101), Animal Physiology (ANSC201), Applied Animal Nutrition (ANUT300), Biochemistry and Microbiology for Rural Science (BCHM240), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Completion of Year 12 with a Guaranteed ATAR of 70.00 (Rule A) or equivalent higher education, VET study, or work experience.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "ce141ad0-6c3b-4498-837f-77fb29a2c1fb",
+  "name": "Bachelor of Arts",
+  "slug": "bachelor-of-arts",
+  "cricos": "000380E",
+  "description": "One of our longest-standing degrees, the Bachelor of Arts (BA) is increasingly relevant in today's agile, dynamic world. It equips you with the creative, critical and analytical skills in demand by employers, and is transferable across a range of workplaces. When you study a BA at UNE, you have the freedom to become a specialist in the discipline of your choice.",
+  "curriculum": "The course structure lists 52 unit entries across its schedule. Units include The Academic Practice of Research and Critical Analysis (HASS101), The Craft of Academic Writing (WRIT101), Of Gods, Heroes and Monsters: Foundation Myths of Antiquity (ANCH109), From Solon to Socrates (ANCH110), Introduction to Ancient Rome (ANCH111), Culture and Society in Ancient Greece and Rome (ANCH380), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Completion of Year 12 with a Guaranteed ATAR of 65.00 (Rule A) or equivalent higher education, VET study, or work experience. This course is offered under multiple admission rules: Rule A: You have completed, at minimum, an Australian Year 12 qualification or overseas equivalent. Rule B: You have completed the UNE Diploma in Arts. Rule C: You have completed the UNE Advanced Diploma in Arts. Rule D: You have completed ONE of the following qualifications: Advanced Diploma in Stage and Screen Acting (AQF Level 6) from the Academy of Film, Theatre and Television Advanced Diploma in Performing Arts (Acting) (AQF Level 6) from the Actors Centre Australia.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "8e0d0ee1-0629-400f-ae0e-ac00e9d39297",
+  "name": "Bachelor of Arts with Honours",
+  "slug": "bachelor-of-arts-with-honours",
+  "cricos": "000379J",
+  "description": "Did your arts degree prompt a burning question or a passion for independent research? If so, consider applying for an honours year. A capstone to your formal education, honours is an opportunity to drill deeper into a specialised area, to extend your intellectual range, and sharpen your research capabilities. It will enable advanced communication techniques and deep subject knowledge, to hone your analytical abilities, and gain high-level personal and professional skills.",
+  "curriculum": "The course structure lists 23 unit entries across its schedule. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Entry is assessed against UNE's Admission, Credit and Enrolment Policy; see the course's own Entry Requirements tab for the exact academic and English language criteria that apply to Bachelor of Arts with Honours.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "76d75559-013d-4d5a-a582-a5d713bf9ef4",
+  "name": "Bachelor of Biomedical Science",
+  "slug": "bachelor-of-biomedical-science",
+  "cricos": "061315J",
+  "description": "Be ready to adapt to the challenges of the rapidly changing world of science and technology with UNE's Bachelor of Biomedical Science. Our course is an ideal foundation if you are interested in health and medical research, or you are fascinated by science and its practical application. Develop your understanding of how the human body works and gain an in-depth knowledge of the methods and techniques used to diagnose, analyse and treat disease. Begin to future fit your career in this diverse and dynamic field and position yourself at the forefront of change and biomedical innovation.",
+  "curriculum": "The course structure lists 69 unit entries across its schedule. Units include Introductory Molecular Biology and Biochemistry I (BCHM210), Introductory Biochemistry II (BCHM220), Clinical Biochemistry and Cell Biology (BCHM341), Introduction to Biology: Cells and Life (BIOL110), Chemistry I (CHEM110), Chemistry II (CHEM120), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Completion of Year 12 with a Guaranteed ATAR of 72.55 (Rule A) or equivalent higher education, VET study, or work experience.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "4a0c45eb-06f9-41f6-ad62-13f18841fb87",
+  "name": "Bachelor of Business",
+  "slug": "bachelor-of-business",
+  "cricos": "055665D",
+  "description": "Whether you aim to build your career in small, medium or large enterprises, or launch a business of your own, you must learn to identify opportunities, rise to challenges and adapt to change. The UNE Bachelor of Business is uniquely positioned to help you start or pivot your business career. Our hands-on teaching and mentoring program will develop and hone your financial, critical analysis, decision-making and communication skills. You will learn to identify opportunities, evaluate the options, make informed decisions and measure outcomes.",
+  "curriculum": "The course structure lists 66 unit entries across its schedule. Units include Accounting Information for Business Decision-making (AFM123), Economics for Management (ECON123), Introduction to Financial Accounting (AFM101), Fundamentals of Personal Finance (AFM104), Introduction to Management Accounting (AFM112), Intermediate Financial Accounting (AFM211), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Completion of Year 12 with a Guaranteed ATAR of 65.00 (Rule A) or equivalent higher education, VET study, or work experience. This course is offered under multiple admission rules: Rule B: You have completed an approved overseas qualification from one of the following institutions: Technical and Vocational Training Corporation WUXI South Ocean College If you are admitted on this basis, you will be eligible for admission under Rule B. Rule C: You have completed at least one of the following approved VET qualifications: Diploma of Business - BSB50207/BSB50215/BSB50120 Diploma of Business Administration - BSB50415/BSB50120 Diploma of Government - PSP50116 Diploma of Human Resources - BSB50618 Diploma of Leadership and Management - BSB51918 Diploma of Marketing and Communication - BSB52415/BSB50620 Diploma of Procurement and Contracting - PSP50616 Diploma of Leadership in Healthcare Practice - 10488NAT/10820NAT Diploma of Project Management - BSB51413/BSB51415/BSB50820 Advanced Diploma of Business - BSB60207/BSB60215 Advanced Diploma of Leadership and Management - BSB61015/BSB60420 Advanced Diploma of Management - BSB60407/BSB61015/BSB60420 Advanced Diploma of Management (Human Resources) - BSB60915/BSB60320 Advanced Diploma of Marketing and Communication - BSB61315/ BSB60520 Advanced Diploma of Program Management - BSB61215/BSB61218/BSB60720 If you are admitted on this basis, you ",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "3ca5cccc-73d8-4eb0-9c64-03020024ea5a",
+  "name": "Bachelor of Computer Science",
+  "slug": "bachelor-of-computer-science",
+  "cricos": "005909C",
+  "description": "Computers and technology are entrenched in our rapidly changing society, so knowledge and skills in these areas are highly sought after by employers. Our Bachelor of Computer Science will give you the strong programming, technical, mathematical, and problem-solving skills that are in demand in a wide range of industries and careers. Whether you’re pivoting in your career, enhancing your skills, or just starting out, our Bachelor of Computer Science will help you adapt and thrive in any modern workplace.",
+  "curriculum": "The course structure lists 43 unit entries across its schedule. Units include Discrete Mathematics (AMTH140), Introduction to Programming and the UNIX Environment (COSC110), Object Oriented Programming (COSC120), Fundamentals of Cybersecurity and Privacy (COSC130), Database Management Systems (COSC210), Software Development Studio 2 (COSC220), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Completion of Year 12 with a Guaranteed ATAR of 70.00 (Rule A) or equivalent higher education, VET study, or work experience.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "20ab6bf6-3ce4-4024-b751-14868ecc0398",
+  "name": "Bachelor of Computer Science with Honours",
+  "slug": "bachelor-of-computer-science-with-honours",
+  "cricos": "006334G",
+  "description": "Study our Bachelor of Computer Science with Honours and acquire a skillset that is in high demand in many workplaces: problem-solving and analytical skills, teamwork, can-do technical skills, and a capacity for both attention to detail and the ability to see the big picture. Our honours program combines coursework with the opportunity to undertake an original research project leading to a thesis. During your studies you will learn to take creative approaches and find alternative solutions to problems, while demonstrating advanced information skills and research methods. If you aspire to a career at the forefront of technological innovation and research, our Bachelor of Computer Science with Honours will equip you with transferable skills that are highly valued in today's globalised job market.",
+  "curriculum": "The course structure lists 1 unit entries across its schedule. Units include Honours in Computer Science (COSC400), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Entry is assessed against UNE's Admission, Credit and Enrolment Policy; see the course's own Entry Requirements tab for the exact academic and English language criteria that apply to Bachelor of Computer Science with Honours.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "afebdadc-f9f7-4cc0-a5cf-baba9ade0a74",
+  "name": "Bachelor of Criminology",
+  "slug": "bachelor-of-criminology",
+  "cricos": "061318F",
+  "description": "Criminology is the study of crime and our responses to crime. UNE's Bachelor of Criminology investigates factors that cause criminal behaviour and how crime can be prevented within wider society. The course offers a variety of key topics and issues including policing and punishment, rural crime, victimology and how crimes may be prevented in practice and solved through criminal profiling and forensic science. You will get to hone your skills in critical thinking, problem solving and analysis to thrive in a rapidly changing world.",
+  "curriculum": "The course structure lists 119 unit entries across its schedule. Units include Understanding Crime (CRIM100), The Criminal Justice System (CRIM101), Deviance (CRIM104), Victimology (CRIM107), Crime in Rural Communities (CRIM290), Professional Practice in Criminology (CRIM312), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Completion of Year 12 with a Guaranteed ATAR of 65.00 (Rule A) or equivalent higher education, VET study, or work experience.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "3257ea22-553d-4493-ae12-5081c063ee10",
+  "name": "Bachelor of Criminology with Honours",
+  "slug": "bachelor-of-criminology-with-honours",
+  "cricos": "064575J",
+  "description": "Would you like to help contribute to making the world a safer place? When you study UNE's Bachelor of Criminology with Honours you will complete a major research project in an area of criminology that you choose, for example organised crime, child exploitation, the illicit drug trade, or rural crime. Whatever topic you delve into, you will be on track to a rewarding career that could play a key role in informing debate on crime and justice issues in Australia and beyond. You will also acquire skills in critical thinking, skills that are transferable and in demand across a range of professions thereby future proofing your career.",
+  "curriculum": "The course structure lists 1 unit entries across its schedule. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Entry is assessed against UNE's Admission, Credit and Enrolment Policy; see the course's own Entry Requirements tab for the exact academic and English language criteria that apply to Bachelor of Criminology with Honours.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "9280c725-98e6-4058-8a68-efac9185a02d",
+  "name": "Bachelor of Digital Marketing",
+  "slug": "bachelor-of-digital-marketing",
+  "cricos": "114670C",
+  "description": "The landscape of marketing is changing at a rapid pace, creating a rising need for digital marketing professionals who can innovate and adapt to evolving market behaviours and new technologies. UNE's Bachelor of Digital Marketing will prepare you to embrace these opportunities, whether you envision yourself excelling in the workplace, launching as an entrepreneur, managing a small business, or overseeing large-scale enterprises.",
+  "curriculum": "The course structure lists 4 unit entries across its schedule. Units include Accounting Information for Business Decision-making (AFM123), 12 credit pointsCreative Industries (COMM103), 6 credit pointsEconomics for Management (ECON123), 6 credit pointsPitches and Partners (THEA360), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Completion of Year 12 with a Guaranteed ATAR of 65.00 (Rule A) or equivalent higher education, VET study, or work experience.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "b16df49f-f526-43c2-9c31-1c02b6406350",
+  "name": "Bachelor of Economics",
+  "slug": "bachelor-of-economics",
+  "cricos": "000378K",
+  "description": "The world's economies, living standards, commercial and political systems are at the heart of the study of economics. Economics involves weighing up choices and alternatives and seeing how they impact upon businesses, societies and individuals. By applying quantitative analysis to current issues and trends, economists can develop and model scenarios to predict possible results and make recommendations on how to respond to produce the best outcomes. You will look at how modern economies operate - how they trade and grow, the role of prices, supply and demand, and how business and government both affect and are affected by the economy.",
+  "curriculum": "The course structure lists 99 unit entries across its schedule. Units include Microeconomics I: Understanding Markets, Prices and Competition (ECON101), Macroeconomics I: Business Cycles and Global Trade (ECON102), Australian Economic Institutions and Performance (ECON143), Microeconomics II: Consumers, Markets and Trade (ECON201), Macroeconomics II: Fluctuations and Policy (ECON202), Economics in Practice: Capstone Project (ECON480), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Completion of Year 12 with a Guaranteed ATAR of 65.00 (Rule A) or equivalent higher education, VET study, or work experience.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "25e3f4bd-267e-4205-bee8-2bf83f6a52ad",
+  "name": "Bachelor of Economics with Honours",
+  "slug": "bachelor-of-economics-with-honours",
+  "cricos": "016028A",
+  "description": "Modern economies are complex and dynamic. The forces that affect trade, growth, prices, supply and demand are constantly changing. In this evolving environment, economists research wide ranging topics and provide essential insights to business, government and society to inform decisions on how to allocate scarce resources. Our Bachelor of Economics with Honours will allow you to research a problem that interests you under the guidance of a supervisor who is a specialist in the relevant field.",
+  "curriculum": "The course structure lists 1 unit entries across its schedule. Units include 24 credit pointsResearch Methods (BUS505), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Entry is assessed against UNE's Admission, Credit and Enrolment Policy; see the course's own Entry Requirements tab for the exact academic and English language criteria that apply to Bachelor of Economics with Honours.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "1b091d13-adce-4481-9f00-3c62455b6ff4",
+  "name": "Bachelor of Education (Early Childhood and Primary)",
+  "slug": "bachelor-of-education-early-childhood-and-primary",
+  "cricos": null,
+  "description": "Develop the knowledge and skills to work with children from birth to 12 years with UNE's Bachelor of Education (Early Childhood and Primary). This is the degree for you if you have a commitment towards educating and inspiring children and want a qualification that paves the way for a flexible teaching career. If you are looking to get started in early childhood teaching, this degree has a variety of admission rules, including rules for those with no experience or qualifications in early childhood teaching.",
+  "curriculum": "The course structure lists 130 unit entries across its schedule. Units include Young Children's Resilience (EDEC102), Pedagogy of Play (EDEC105), Perspectives of Children and Childhood: PrEx 5 days (EDEC106), Infant and Toddler Relationships: PrEx 10 days (EDEC201), Enquirers into History-Geography (EDEC206), Authentic Assessment with Children: PrEx 10 days (EDEC207), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Completion of Year 12 with a Guaranteed ATAR of 77.10 (Rule A) or equivalent higher education, VET study, or work experience.",
+  "english_requirements": "IELTS Academic 7.5 overall (Listening 8.0, Reading 7.0, Writing 7.0, Speaking 8.0) (NSW Education Standards Authority initial-teacher-education standard; test results must be attained within 2 years of application)"
+ },
+ {
+  "id": "50a8e6cd-503c-4598-907f-0df116507cf9",
+  "name": "Bachelor of Environmental Science",
+  "slug": "bachelor-of-environmental-science",
+  "cricos": "030480G",
+  "description": "The world requires skilled scientists and innovators to develop solutions to the complex environmental problems facing a rapidly changing planet. Our Bachelor of Environmental Science is a highly flexible course that provides you with a broad foundation in the core theories and specialised applied skills that underpin environmental science, together with a strong scientific understanding of local and global environmental issues and their management. Future fit your career for life with the knowledge and practical skills you will need to thrive as an environmental scientist, and help to find the solutions we will need to build environmental, socially and fiscally sustainable systems.",
+  "curriculum": "The course structure lists 55 unit entries across its schedule. Units include Introduction to Biology: Cells and Life (BIOL110), Organisms and the Diversity of Life (BIOL120), Plant Diversity (BOTY203), Chemistry I (CHEM110), Ecology - Populations to Ecosystems (ECOL203), Aquatic Ecology (ECOL308), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Completion of Year 12 with a Guaranteed ATAR of 70.00 (Rule A) or equivalent higher education, VET study, or work experience.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "8f890310-c62e-4622-a4fc-2c0ff499f7a9",
+  "name": "Bachelor of GeoScience",
+  "slug": "bachelor-of-geoscience",
+  "cricos": "061319E",
+  "description": "Geoscience plays a crucial role in finding, extracting and managing earth resources. These minerals and energy resources are essential to almost every aspect of our day-to-day modern life. Studying UNE's Bachelor of GeoScience online or on campus will open doors to a range of opportunities for you in this critical field. Our course has a strong practical focus on earth science, geology and GIS, allowing you to upskill and future fit your career.",
+  "curriculum": "The course structure lists 51 unit entries across its schedule. Units include Chemistry I (CHEM110), Our Blue Planet (GEOL110), Dynamic Earth (GEOL120), Applied Geosciences I (GEOL123), Introductory Palaeontology (GEOL202), Field Mapping and Sedimentology (GEOL206), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Completion of Year 12 with a Guaranteed ATAR of 70.00 (Rule A) or equivalent higher education, VET study, or work experience.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "27b738cc-45c8-4b23-8c47-2dd49571808b",
+  "name": "Bachelor of Historical Inquiry and Practice",
+  "slug": "bachelor-of-historical-inquiry-and-practice",
+  "cricos": "072406D",
+  "description": "Do you love delving into our rich past? Is history your passion? The Bachelor of Historical Inquiry and Practice is designed for people who want to make history their profession, those who already work in a historical context and want to upskill, or for people planning a career that would benefit from a strong background in history. Professions that graduates of the Bachelor of Historical Inquiry and Practice can consider include historical fiction and writing, social history and criminology, family history and sociology, national history and languages, cultural history and music, to name a few.",
+  "curriculum": "The course structure lists 48 unit entries across its schedule. Units include (HINQ100), The Historian (HINQ101), History: Uses and Abuses (HINQ200), Researching and Applying History (HINQ300), Researching the Past in the Digital Age (HINQ302), History and Museums (HIST337), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Completion of Year 12 with a Guaranteed ATAR of 65.00 (Rule A) or equivalent higher education, VET study, or work experience.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "7c2f9d44-22e9-4fb8-a316-27502450e9f7",
+  "name": "Bachelor of Information Technology",
+  "slug": "bachelor-of-information-technology",
+  "cricos": "114669G",
+  "description": "Information Technology (IT) is central to the running of modern businesses, branches of government, transport, environmental management and more. So it’s no surprise that Jobs and Skills Australia projects a 22% increase in demand for IT professionals in Australia over the ten years to 2033. UNE’s Bachelor of Information Technology will ensure you are future-fit to take advantage of this demand, ready to tackle the challenges and opportunities of today’s ever-changing digital workplaces.",
+  "curriculum": "The course structure lists 39 unit entries across its schedule. Units include Introduction to Programming and the UNIX Environment (COSC110), Object Oriented Programming (COSC120), Fundamentals of Cybersecurity and Privacy (COSC130), Database Management Systems (COSC210), Software Development Studio 2 (COSC220), Operating Systems (COSC240), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Completion of Year 12 with a Guaranteed ATAR of 65.00 (Rule A) or equivalent higher education, VET study, or work experience.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "d953cb98-57df-44ec-94fe-cfaaab5fd857",
+  "name": "Bachelor of International Studies",
+  "slug": "bachelor-of-international-studies",
+  "cricos": "049780G",
+  "description": "The term 'global village' may have become a cliché but it's true that the world has never felt smaller. Globalisation has seen many countries become increasingly dependent on each other, with the effects of internal politics, foreign policy and diplomacy impacting nations and individuals worldwide. With such a backdrop, the ability to make sense of it all and assess the issues that affect nations across the political, economic, social, environmental and cultural spectrum is a highly valued skill. This course gives you the opportunity to specialise in areas such as human futures and global challenges, international law, global politics and peace, international business, and an Asian, European or classical language.",
+  "curriculum": "The course structure lists 97 unit entries across its schedule. Units include The International Economy (ECON144), (GEPL111), Communicating in Culturally Diverse Contexts (LING150), The Asia Pacific in World Politics (PAIS113), Introduction to Peace Studies (PEAC100), Thinking Sociologically (SOCY110), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Completion of Year 12 with a Guaranteed ATAR of 65.00 (Rule A) or equivalent higher education, VET study, or work experience. This course is offered under multiple admission rules: Rule A: You have completed, at minimum, an Australian Year 12 qualification or overseas equivalent. Rule B: You have completed the UNE Diploma in Arts. Rule C: You have completed the UNE Advanced Diploma in Arts.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "32eed9dc-d908-4142-b191-daff6b6fcdde",
+  "name": "Bachelor of International Studies with Honours",
+  "slug": "bachelor-of-international-studies-with-honours",
+  "cricos": "084071A",
+  "description": "A capstone to your bachelor's degree, the Bachelor of International Studies with Honours is an opportunity to drill deep into your specialist area, to extend your intellectual range, and sharpen your research capabilities. Develop advanced communication techniques and in-depth knowledge of issues that affect nations across the security, political, economic, social and cultural spectrum. Hone your analytical abilities and gain high level personal and professional communication skills. Position yourself for inevitable workplace change by further developing your transferable intercultural skills, which are highly valued in today’s globalised job market.",
+  "curriculum": "The course structure lists 1 unit entries across its schedule. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Entry is assessed against UNE's Admission, Credit and Enrolment Policy; see the course's own Entry Requirements tab for the exact academic and English language criteria that apply to Bachelor of International Studies with Honours.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "780e75d1-6c97-4cff-ba7a-e7473279050a",
+  "name": "Bachelor of Laws",
+  "slug": "bachelor-of-laws-4-years",
+  "cricos": "069338D",
+  "description": "Develop the advanced knowledge and practical skills you need to take advantage of a wide variety of legal careers with the UNE Bachelor of Laws (4 Years). With the support of UNE’s School of Law and academic leaders delivering a well-rounded program of study, you’ll be equipped to tackle the complex legal challenges of today and give your career a competitive edge. In this degree, you will extend your skills across a range of non-law units, from business to computer science, depending on your interests and career goals. You will also develop your practical skills through problem-based learning projects, research training and practical courtroom experience.",
+  "curriculum": "The course structure lists 66 unit entries across its schedule. Units include Foundations of Law (LAW100), Law in Context (LAW101), Legal Professional Skills (LAW102), Torts Law (LAW131), Criminal Law (LAW162), Contract Law (LAW172), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Completion of Year 12 with a Guaranteed ATAR of 80.00 (Rule A) or equivalent higher education, VET study, or work experience. This course is offered under multiple admission rules: Rule A: You have completed, at minimum, an Australian Year 12 qualification or overseas equivalent. Rule B: You have completed a minimum of four years of full-time (or part-time equivalent) relevant* documented paid employment within the past seven years.",
+  "english_requirements": "IELTS Academic 6.5 overall (Listening 6.0, Reading 6.0, Writing 6.5, Speaking 6.0) (School of Law English Language Requirement; test results must be attained within 2 years of application)"
+ },
+ {
+  "id": "4ea3a968-57a1-4247-8e07-15e165967d63",
+  "name": "Bachelor of Laws - Undergraduate 4 Years",
+  "slug": "bachelor-of-laws-4-years",
+  "cricos": "069338D",
+  "description": "Develop the advanced knowledge and practical skills you need to take advantage of a wide variety of legal careers with the UNE Bachelor of Laws (4 Years). With the support of UNE’s School of Law and academic leaders delivering a well-rounded program of study, you’ll be equipped to tackle the complex legal challenges of today and give your career a competitive edge. In this degree, you will extend your skills across a range of non-law units, from business to computer science, depending on your interests and career goals. You will also develop your practical skills through problem-based learning projects, research training and practical courtroom experience.",
+  "curriculum": "The course structure lists 66 unit entries across its schedule. Units include Foundations of Law (LAW100), Law in Context (LAW101), Legal Professional Skills (LAW102), Torts Law (LAW131), Criminal Law (LAW162), Contract Law (LAW172), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Completion of Year 12 with a Guaranteed ATAR of 80.00 (Rule A) or equivalent higher education, VET study, or work experience. This course is offered under multiple admission rules: Rule A: You have completed, at minimum, an Australian Year 12 qualification or overseas equivalent. Rule B: You have completed a minimum of four years of full-time (or part-time equivalent) relevant* documented paid employment within the past seven years.",
+  "english_requirements": "IELTS Academic 6.5 overall (Listening 6.0, Reading 6.0, Writing 6.5, Speaking 6.0) (School of Law English Language Requirement; test results must be attained within 2 years of application)"
+ },
+ {
+  "id": "70bde69b-b595-4fe9-9f63-a07c106dd6f2",
+  "name": "Bachelor of Legal Studies",
+  "slug": "bachelor-of-legal-studies",
+  "cricos": "098051A",
+  "description": "Gain a comprehensive understanding of the fundamentals of law with the flexibility to tailor your learning to your career goals with the UNE Bachelor of Legal Studies. Benefit from UNE’s niche expertise in regional, rural and remote legal issues and study with expert teachers. This flexible degree builds your real-world research skills and will open the door to a variety of career opportunities across the private and public sector. Plus, our expertise in online delivery allows you to study in a way that fits your lifestyle.",
+  "curriculum": "The course structure lists 51 unit entries across its schedule. Units include Foundations of Law (LAW100), Law in Context (LAW101), Legal Professional Skills (LAW102), Introduction to Business Law (LSSU251), Introduction to Procedure Law (LSSU262), Introduction to Legal Studies (LSU100), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Completion of Year 12 with a Guaranteed ATAR of 60.00 (Rule A) or equivalent higher education, VET study, or work experience.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "83bfeb1e-2b9e-4b56-aa8f-bfe9847ca7e1",
+  "name": "Bachelor of Media and Communications",
+  "slug": "bachelor-of-media-and-communications",
+  "cricos": "038717E",
+  "description": "We live in a rapidly changing world, and none more so than the world of media and communications. The rise of digital media, social media and streaming services has seen the landscape change like no other, but the fundamentals of effective communication and storytelling remain constant. At the heart of effective communication is both the ability to tell an engaging story and to ensure it reaches and resonates with its target audience. UNE's Bachelor of Media and Communications will equip you with the necessary tools to achieve both objectives, and help you forge a career in the media and communications industry, no matter how the landscape changes in the future.",
+  "curriculum": "The course structure lists 37 unit entries across its schedule. Units include Screen Media (COMM101), Creative Industries (COMM103), The Craft of Academic Writing (WRIT101), Storytelling and Genre Writing (WRIT102), Research and Professional Practice Project (HASS301), Writing for Research (WRIT303), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Completion of Year 12 with a Guaranteed ATAR of 65.00 (Rule A) or equivalent higher education, VET study, or work experience.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "8b9b9219-c8c1-4014-893e-5072448c7b1a",
+  "name": "Bachelor of Media and Communicationswith Honours",
+  "slug": "bachelor-of-media-and-communications-with-honours",
+  "cricos": "061317G",
+  "description": "In a highly-competitive employment landscape, to stand out from other applicants is a big advantage, and an honours degree is a point of difference that can capture the attention of employers. An honours year at the end of your three-year Bachelor of Media and Communications degree is a capstone to your formal education, and an opportunity to drill deep into your specialist areas, to extend your intellectual range, and sharpen your research capabilities. Honours will allow you to develop advanced communication techniques and deep subject knowledge, to hone your analytical abilities, and gain high-level personal and professional skills. These are valuable attributes that will provide a solid foundation for postgraduate study, give you a competitive edge in the job market, or help future proof your career in a rapidly changing world.",
+  "curriculum": "The course structure lists 1 unit entries across its schedule. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Entry is assessed against UNE's Admission, Credit and Enrolment Policy; see the course's own Entry Requirements tab for the exact academic and English language criteria that apply to Bachelor of Media and Communicationswith Honours.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "8da845c4-971a-4b78-8ceb-a688604b2303",
+  "name": "Bachelor of Music with Honours",
+  "slug": "bachelor-of-music-with-honours",
+  "cricos": "093388E",
+  "description": "If you're committed to attaining the level of musical professionalism today's music industry demands, consider extending your studies by undertaking an honours year. A capstone to your formal education, our Bachelor of Music with Honours is an opportunity for music and music/teaching graduates to pursue specialist music research and creative portfolio projects that will unlock many employment and research opportunities. It will extend your artistic and intellectual range, sharpen your research capabilities, augment your analytical abilities, and give you the opportunity to build high-level personal and professional skills. These invaluable attributes will equip you with transferable skills that are highly sought after in today's rapidly changing job market, as well as prepare you for postgraduate study.",
+  "curriculum": "The course structure lists 1 unit entries across its schedule. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Entry is assessed against UNE's Admission, Credit and Enrolment Policy; see the course's own Entry Requirements tab for the exact academic and English language criteria that apply to Bachelor of Music with Honours.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "c9f2611c-3d69-4a38-b3c0-3afc9621c76d",
+  "name": "Bachelor of Nursing",
+  "slug": "bachelor-of-nursing",
+  "cricos": "008620G",
+  "description": "As Australia's population ages and healthcare needs increase, demand for skilled, qualified nurses is soaring. By choosing UNE’s Bachelor of Nursing, you’ll be stepping into a profession where your work has a direct impact on others' lives. With flexible study options online or on campus, UNE is at the forefront of nursing education in Australia. After graduation, you'll be eligible to apply for registration with the Nursing and Midwifery Board of Australia (NMBA) and practice as a Registered Nurse in Australia as well as in many other countries.",
+  "curriculum": "The course structure lists 61 unit entries across its schedule. Units include Information and Evidence in Health and Social Care (HLTH101), Interprofessional Practice in Health and Social Care (HLTH102), Communication for Health Professionals (HLTH103), Digital Technologies in Health and Social Care (HLTH203), Foundations of Safety and Quality in Nursing (HSNS170), Professional Nursing Practice 1: Fundamentals of Nursing Practice (HSNS171), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Completion of Year 12 with a Guaranteed ATAR of 65.00 (Rule A) or equivalent higher education, VET study, or work experience. This course is offered under multiple admission rules: Rule A: You must have completed, at minimum, an Australian Year 12 qualification or overseas equivalent. Rule B: You currently hold unrestricted Enrolled Nurse registration with the Nursing and Midwifery Board of Australia (NMBA). Rule C: You have completed a Bachelor qualification (AQF Level 7 or overseas equivalent), and are not currently registered to practice as a nurse in Australia.",
+  "english_requirements": "IELTS Academic 7.0 overall (Listening 7.0, Reading 7.0, Writing 6.5, Speaking 7.0) (Nursing and Midwifery Board of Australia / ANMAC registration standard; test results must be attained within 2 years of application)"
+ },
+ {
+  "id": "5c8faa73-6d31-45ba-ba5f-28712022e24c",
+  "name": "Bachelor of Nutrition and Health Science",
+  "slug": "bachelor-of-nutrition-and-health-science",
+  "cricos": "119077B",
+  "description": "Nutrition is at the heart of global health solutions, with growing demand for professionals who can tackle challenges from chronic disease prevention to sustainable food systems. At UNE, the Bachelor of Nutrition and Health Science equips you with the scientific knowledge, clinical skills, and critical thinking needed to thrive in the evolving health, food, and biomedicine sectors. Through a multidisciplinary, industry-aligned curriculum, you will develop expertise in nutrition science, health promotion, and food sustainability. From lab-based assessment techniques to work-integrated learning experiences, you’ll graduate with confidence, ready to contribute to healthier communities and smarter food systems.",
+  "curriculum": "The course structure lists 59 unit entries across its schedule. Units include Introductory Molecular Biology and Biochemistry I (BCHM210), Introductory Biochemistry II (BCHM220), Organisms and the Diversity of Life (BIOL120), Chemistry I (CHEM110), Chemistry II (CHEM120), Introductory Microbiology (MICR220), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Completion of Year 12 with a Guaranteed ATAR of 65.00 (Rule A) or equivalent higher education, VET study, or work experience.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "42bcaef3-35a0-4829-be9e-6297353fc923",
+  "name": "Bachelor of Pharmacy with Honours",
+  "slug": "bachelor-of-pharmacy-with-honours",
+  "cricos": null,
+  "description": "The world of medicine is rapidly advancing. UNE's innovative Bachelor of Pharmacy with Honours course is Australia's first and only accredited undergraduate pharmacy degree that can be studied online. Through a combination of online learning and intensive practical schools at our Armidale campus, our course emphasises scientific rigour, clinical experience, and develops your critical thinking skills to ensure you are prepared for the vital and changing role of pharmacy in Australia's collaborative healthcare environment.",
+  "curriculum": "The course structure lists 31 unit entries across its schedule. Units include Introductory Molecular Biology and Biochemistry I (BCHM210), Chemistry I (CHEM110), Chemistry II (CHEM120), Analytical Chemistry (CHEM250), Methods for Inquiry in Health and Social Care (HLTH501), Introductory Microbiology (MICR220), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Completion of Year 12 with a Guaranteed ATAR of 75.00 (Rule A) or equivalent higher education, VET study, or work experience.",
+  "english_requirements": "IELTS Academic 7.0 overall (Listening 7.0, Reading 6.0, Writing 6.0, Speaking 7.0) (Pharmacy Board of Australia registration-aligned standard; test results must be attained within 2 years of application)"
+ },
+ {
+  "id": "d186c0de-9d43-4f37-b91b-bb2d2512fa92",
+  "name": "Bachelor of Psychological Science",
+  "slug": "bachelor-of-psychological-science",
+  "cricos": "061357K",
+  "description": "Do you want to understand more about what drives human behaviour? Gain in-depth knowledge of the scientific study of human behaviour, as well as research and analytical experience, with UNE's innovative Bachelor of Psychological Science. Delivered flexibly online or on campus, our accredited three-year undergraduate degree is designed to give you a balanced education with a psychology focus. Along with completing a mandatory minor in Psychological Health and Wellbeing, you will have the freedom to choose electives from any unit offered by UNE.",
+  "curriculum": "The course structure lists 50 unit entries across its schedule. Units include Introductory Psychology I (PSYC101), Introductory Psychology II (PSYC102), Social Psychology (PSYC200), Research Methods and Statistics (PSYC202), Cognitive Psychology (PSYC206), Lifespan Developmental Psychology (PSYC213), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Completion of Year 12 with a Guaranteed ATAR of 70.00 (Rule A) or equivalent higher education, VET study, or work experience. This course is offered under multiple admission rules: Rule A: You have completed, at minimum, an Australian Year 12 qualification or overseas equivalent. Rule B: You have completed a Bachelor qualification (AQF Level 7 or overseas equivalent) in any discipline.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "a872745f-d8f6-4aad-8f31-29e19ee3b928",
+  "name": "Bachelor of Psychology with Honours",
+  "slug": "bachelor-of-psychology-with-honours",
+  "cricos": null,
+  "description": "Applications for the 2026 intake of this course have now closed. Please see the 2027 Bachelor of Psychology with Honours for the next available intake. Pursue a career in the diverse and rapidly changing field of psychology with UNE's accredited Bachelor of Psychology with Honours. Graduate with eligibility for provisional registration as a psychologist, which will set you on the pathway to obtain general registration and develop your scientific understanding of human behaviour and psychology research.",
+  "curriculum": "The course structure lists 4 unit entries across its schedule. Units include Professional Practice 1 (PSYC421), Advanced Research Skills (PSYC422), Professional Practice 2 (PSYC423), Advanced Topics in Psychology (PSYC424), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "This course is offered under multiple admission rules: Rule A: You can apply for this course if you have completed ONE of the following qualification pathways: You have completed a Bachelor qualification (AQF Level 7) which includes a full sequence of units in Psychology accredited by the Australian Psychology Accreditation Council (APAC) OR you have completed a Bachelor qualification (AQF Level 7) and a Graduate Diploma (AQF Level 8) which includes a full sequence of units in Psychology accredited by APAC. Rule B: You can apply for this course if you have completed ONE of the following qualification pathways: You have completed a Bachelor qualification (AQF Level 7) which includes a full sequence of units in Psychology accredited by the Australian Psychology Accreditation Council (APAC) OR you have completed a Bachelor qualification (AQF Level 7) and a Graduate Diploma (AQF Level 8) which includes a full sequence of units in Psychology accredited by APAC.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "87d28117-2815-40cc-8c44-36c4f70b5714",
+  "name": "Bachelor of Rural Science",
+  "slug": "bachelor-of-rural-science",
+  "cricos": "006006A",
+  "description": "With UNE's Bachelor of Rural Science, you will graduate at the forefront of the agricultural industry ready to solve complex problems in agricultural systems across enterprises, landscapes and the globe. You will have the paddock-ready scientific skills to adapt to future challenges as a professional, and you will gain an understanding of the sustainability of the whole agricultural system from the biophysical (soils, plants and animal production) including environmental, social and economic principles. You will be well-positioned to become a leader in a range of industry contexts from farm management, the corporate world and scientific research.",
+  "curriculum": "The course structure lists 69 unit entries across its schedule. Units include Farm and Resource Management (AGB202), Agricultural Plants: Adaptation and Physiology (AGRO200), Plant Protection (AGRO311), Crop Production (AGRO321), Sustainable Agricultural Systems I (AGSY101), Sustainable Agricultural Systems II (AGSY102), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Completion of Year 12 with a Guaranteed ATAR of 77.10 (Rule A) or equivalent higher education, VET study, or work experience.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "4e609dfc-0cc1-4e1d-884d-fc43321a984b",
+  "name": "Bachelor of Science",
+  "slug": "bachelor-of-science",
+  "cricos": "000468G",
+  "description": "Constant technological disruption and new discoveries in science influence every aspect of our lives, meaning that there has never been a better time than now to safeguard your future career with scientific knowledge and practical skills. With 17 majors to choose from, UNE’s Bachelor of Science is flexibly delivered by experts in research and teaching. Tailor your degree towards generalist or specialist science, while developing a broad scientific base and refining your abilities in critical analysis and complex problem solving. Our majors span the pure and applied sciences, with specialisation available in traditional disciplines and emerging fields.",
+  "curriculum": "The course structure lists 72 unit entries across its schedule. Units include Quantitative Skills with Applications (MTHS110), Calculus and Linear Algebra 1 (MTHS120), Introduction to Statistical Modelling (STAT100), Working with Aboriginal People (OORA200), Introduction to Biology: Cells and Life (BIOL110), Organisms and the Diversity of Life (BIOL120), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Completion of Year 12 with a Guaranteed ATAR of 65.00 (Rule A) or equivalent higher education, VET study, or work experience.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "e3cc67ea-cc90-4133-9110-e256eb9a4833",
+  "name": "Bachelor of Science with Honours",
+  "slug": "bachelor-of-science-with-honours",
+  "cricos": "000469G",
+  "description": "Contribute to world class research by completing a Bachelor of Science with Honours at UNE. Position yourself with advanced scientific knowledge in an era of rapid change. Our honours course goes beyond the normal practical and field training and provides you with a wide range of cross-disciplinary applied research opportunities to foster your development as a skill research professional. We offer a range of majors spanning the pure and applied sciences, working with UNE's internationally recognised research disciplines.",
+  "curriculum": "The course structure lists 12 unit entries across its schedule. Units include Honours in Science (SCI400), Honours in Science (SCI400), Honours in Science (SCI400), Honours in Science (SCI400), Honours in Science (SCI400), Honours in Science (SCI400), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Entry is assessed against UNE's Admission, Credit and Enrolment Policy; see the course's own Entry Requirements tab for the exact academic and English language criteria that apply to Bachelor of Science with Honours.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "56a051a4-2916-4bb7-8417-cdc2b9ee1317",
+  "name": "Bachelor of Scientific Studies",
+  "slug": "bachelor-of-scientific-studies",
+  "cricos": "095677B",
+  "description": "In a rapidly changing world, there has never been a better time to expand your understanding of science and technology. UNE’s Bachelor of Scientific Studies is designed to provide you with broad scientific background to assist with future employment or to pursue further study. It is also a pathway to transition to a specialised science-based degree if you do not have an educational background in science. Our course encourages the development of critical thinking and problem-solving skills, as well as skills for communication and lifelong learning, allowing you to apply these skills to your specific field of interest.",
+  "curriculum": "The course structure lists 34 unit entries across its schedule. Units include Introductory Chemistry (CHEM100), Introduction to Quantitative Skills (MTHS100), Introductory Physics (PHYS100), Science in Practice (SCI100), Chemistry I (CHEM110), Chemistry II (CHEM120), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Completion of Year 12 with a Guaranteed ATAR of 57.70 (Rule A) or equivalent higher education, VET study, or work experience.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "40e7926f-2c7a-40ff-b091-8aa4fa3f7264",
+  "name": "Bachelor of Social Science",
+  "slug": "bachelor-of-social-science",
+  "cricos": "016050C",
+  "description": "By studying UNE’s Bachelor of Social Science degree you will develop a comprehensive and valuable understanding of human societies and social thought, behaviour and relationships in their varied social, psychological and political manifestations, with potential for a rewarding career in social science related areas. You will get a thorough grounding in sociology and psychology, plus you can choose from a broad range of majors to graduate with specialised knowledge. With skills in research, critical analysis and evaluation that are transferable across a range of employment opportunities, you can ensure your career is future fit for life.",
+  "curriculum": "The course structure lists 56 unit entries across its schedule. Units include Introductory Psychology I (PSYC101), Introductory Psychology II (PSYC102), Introduction to Sociology (SOCY100), Thinking Sociologically (SOCY110), Social Research Methods (SPI345), Critical Thinking (PHIL102), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Completion of Year 12 with a Guaranteed ATAR of 65.00 (Rule A) or equivalent higher education, VET study, or work experience.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "bdfe410f-2b3a-4a49-9436-fa3dfbddae96",
+  "name": "Bachelor of Social Science with Honours",
+  "slug": "bachelor-of-social-science-with-honours",
+  "cricos": "002578G",
+  "description": "Aimed at high achievers, Honours is an extra year of study after completing your undergraduate degree. UNE's Bachelor of Social Science with Honours allows you to extend your studies, continuing to build your knowledge and skills in social science theory while undertaking research in your chosen topic. Honours is a valuable, additional qualification that improves career prospects, plus you'll have the option to proceed to higher degree studies, either a masters or PhD. With an honours degree, your skills in critical analysis and research will be transferable across a range of fields, future proofing your career.",
+  "curriculum": "The course structure lists 6 unit entries across its schedule. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Entry is assessed against UNE's Admission, Credit and Enrolment Policy; see the course's own Entry Requirements tab for the exact academic and English language criteria that apply to Bachelor of Social Science with Honours.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "e417d627-3630-4740-8ff2-d0b39cdc49aa",
+  "name": "Bachelor of Social Work",
+  "slug": "bachelor-of-social-work",
+  "cricos": "064581M",
+  "description": "Become an agent of positive change in diverse communities with UNE's accredited Bachelor of Social Work. With an emphasis on social work in rural and complex community environments, our flexibly delivered course will equip you with the practical skills to work with and empower individuals, groups and communities who experience marginalisation, isolation or discrimination. In our complex world, skilled social workers are valued and in high demand. You'll be choosing a rewarding profession, with the qualifications to work in a range of professional environments.",
+  "curriculum": "The course structure lists 101 unit entries across its schedule. Units include Interprofessional Practice in Health and Social Care (HLTH102), Communication for Health Professionals (HLTH103), The Context of the Health and Community Services (HLTH104), Case Management in Community Services (HDCW213), Information and Evidence in Health and Social Care (HLTH101), Foundations for Mental Health Practice (HLTH310), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Completion of Year 12 with a Guaranteed ATAR of 65.00 (Rule A) or equivalent higher education, VET study, or work experience. This course is offered under multiple admission rules: Rule A: You have completed a Diploma (AQF Level 5) or Advanced Diploma (AQF Level 6) from a VET Community Services Training Package or Health Training Package in one of the following areas: Aboriginal and/or Torres Strait Islander Health Care Aboriginal and/or Torres Strait Islander Primary Health Care Practice Nursing If you are admitted on this basis, you will be eligible for admission under Rule A. Rule B: You have completed, at minimum, an Australian Year 12 qualification or overseas equivalent. Rule C: You have completed the UNE Diploma in Health and Social Care (Social Work) from 2025 onwards.",
+  "english_requirements": "IELTS Academic 7.0 overall, no band below 7.0 (Australian Association of Social Workers registration-aligned standard; test results must be attained within 2 years of application)"
+ },
+ {
+  "id": "30faf1e6-b1a7-44c9-90b0-e700d099e3a5",
+  "name": "Bachelor of Sustainability",
+  "slug": "bachelor-of-sustainability",
+  "cricos": "072404F",
+  "description": "Work with people to build a better world and make a real difference with the Bachelor of Sustainability at UNE. Our degree integrates the social sciences and humanities with environmental sciences and natural resource management to give you a thorough understanding of sustainability and help you build on your experience to develop real-world strategies that work. By broadening your knowledge, plus honing your critical, analytical and problem-solving skills, you can advance your career while working towards finding tangible solutions for environmental and social dilemmas.",
+  "curriculum": "The course structure lists 51 unit entries across its schedule. Units include (GEPL111), Australia's Human Geography (GEPL112), Cradle to Grave: Population Geography (GEPL322), Rural Planning and Resource Management (GEPL324), Environmental Planning and Administration (GEPL335), Understanding Research (GEPL338), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Completion of Year 12 with a Guaranteed ATAR of 65.00 (Rule A) or equivalent higher education, VET study, or work experience.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "6c28bad4-a6cc-4bdb-95b0-a61ac77b16c1",
+  "name": "Bachelor of Urban and Regional Planning",
+  "slug": "bachelor-of-urban-and-regional-planning",
+  "cricos": "000376A",
+  "description": "Urban and regional planners develop strategies and design communities in which we all live, work and play. Planning helps balance community, environmental and economic needs, while recognising cultural significance in order to improve our quality of life and create sustainable and vital communities. Our Bachelor of Urban and Regional Planning provides you with the necessary knowledge and skills to critically analyse and solve complex problems, skills that help you adapt as a professional in a changing world.",
+  "curriculum": "The course structure lists 27 unit entries across its schedule. Units include Foundations in Cultural Heritage Management (ARPA320), Introduction to GIS and Spatial Thinking (GISC334), Local Environmental Infrastructure (ENGT237), (GEPL111), Australia's Human Geography (GEPL112), Introduction to Planning History and Theory (GEPL121), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Completion of Year 12 with a Guaranteed ATAR of 65.00 (Rule A) or equivalent higher education, VET study, or work experience.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "30758c89-fb6d-481e-8d72-97301d514315",
+  "name": "Bachelor of Zoology",
+  "slug": "bachelor-of-zoology",
+  "cricos": "069341J",
+  "description": "Zoology examines how animals of all kinds, from microscopic parasites to blue whales, and from tiny finches to dinosaurs, who live (or lived) in every type of habitat on our planet. Through hands-on laboratory and fieldwork focused on the study of animal life, UNE's Bachelor of Zoology will equip you with the skills to think and act like a researcher in this specialist brand of biology. UNE offers the only zoology-specific degrees in Australia. If you love animals and want to study their biology, ecology, and natural history the Bachelor of Zoology is the course for you.",
+  "curriculum": "The course structure lists 52 unit entries across its schedule. Units include Introduction to Biology: Cells and Life (BIOL110), Organisms and the Diversity of Life (BIOL120), Foundational Quantitative Methods for Environmental and Rural Sciences (QMER100), Life on Earth (ZOOL100), Zoology in Practice I (ZOOL111), Vertebrate Zoology - Evolution and Diversity (ZOOL203), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Completion of Year 12 with a Guaranteed ATAR of 70.00 (Rule A) or equivalent higher education, VET study, or work experience.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "66c784ff-5a61-4b36-89b5-56359c52d2b2",
+  "name": "Diploma in Arts",
+  "slug": "diploma-in-arts",
+  "cricos": "093386G",
+  "description": "Are you looking to add an additional area of expertise to your CV to enhance your career prospects without committing to a full degree? Perhaps you just want to dip a toe into university study, with the option of continuing on to an advanced diploma or even a bachelor's degree? Well, our Diploma in Arts is the perfect way to achieve both goals. This course will equip you with a variety of fundamental skills and knowledge in a range of subjects in the arts, humanities and social sciences.",
+  "curriculum": "The course structure lists 135 unit entries across its schedule. Units include The Academic Practice of Research and Critical Analysis (HASS101), The Craft of Academic Writing (WRIT101), Of Gods, Heroes and Monsters: Foundation Myths of Antiquity (ANCH109), From Solon to Socrates (ANCH110), Introduction to Ancient Rome (ANCH111), Great Excavations: Key Discoveries in Archaeology (ARPA100), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Entry is assessed against UNE's Admission, Credit and Enrolment Policy; see the course's own Entry Requirements tab for the exact academic and English language criteria that apply to Diploma in Arts.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "bcfa619c-80b5-4b70-93d9-5a92b974e42f",
+  "name": "Diploma in Business",
+  "slug": "diploma-in-business",
+  "cricos": "061360D",
+  "description": "The world of business and work is changing rapidly. To safeguard your career in this new era, you must keep up to date by building on your knowledge and skills. UNE’s Diploma in Business will help you build on your experience to develop the business skills you need to respond to opportunities in the workplace and to meet challenges with confidence. We focus on equipping you with the ability to apply academic knowledge to your work in business, as an entrepreneur, or as an employee.",
+  "curriculum": "The course structure lists 11 unit entries across its schedule. Units include Accounting Information for Business Decision-making (AFM123), Economics for Management (ECON123), Introduction to Financial Accounting (AFM101), Fundamentals of Personal Finance (AFM104), Microeconomics I: Understanding Markets, Prices and Competition (ECON101), Introduction to Financial Accounting (AFM101), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Entry is assessed against UNE's Admission, Credit and Enrolment Policy; see the course's own Entry Requirements tab for the exact academic and English language criteria that apply to Diploma in Business.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "82ec9bd3-484f-474b-9594-dbf56b79ab79",
+  "name": "Diploma in Paralegal Studies",
+  "slug": "diploma-in-paralegal-studies",
+  "cricos": "099083G",
+  "description": "Almost all industries depend on people with an understanding of the law and skills in legal reasoning. With the UNE Diploma in Paralegal Studies, you will build the preparatory knowledge and skills you need to advance your career in a variety of in-demand legal sectors. Be supported by an expert teaching team to build you expertise, and study online in a timeframe that suits your lifestyle.",
+  "curriculum": "The course structure lists 14 unit entries across its schedule. Units include Foundations of Law (LAW100), Law in Context (LAW101), Legal Professional Skills (LAW102), Introduction to Business Law (LSSU251), Introduction to Procedure Law (LSSU262), Introduction to Legal Studies (LSU100), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Entry is assessed against UNE's Admission, Credit and Enrolment Policy; see the course's own Entry Requirements tab for the exact academic and English language criteria that apply to Diploma in Paralegal Studies.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "2583fdc6-9b09-4ae9-bcdf-acba11811748",
+  "name": "Diploma in Science",
+  "slug": "diploma-in-science",
+  "cricos": "054748J",
+  "description": "Science is integrated throughout our lives and society, helping us to overcome the many challenges the of the 21st century through innovation and discovery. If you are new to the field of Science, the UNE Diploma in Science is a one-year full-time (or part-time equivalent) course designed to build scientific literacy and foundational skills and knowledge in a range of scientific disciplines. You will graduate from this course with a broad scientific background, communication skills and problem-solving skills to assist with further study and future employment. The Diploma in Science offers both guidance and flexibility.",
+  "curriculum": "The course structure lists 108 unit entries across its schedule. Units include Introductory Chemistry (CHEM100), Introduction to Quantitative Skills (MTHS100), Introductory Physics (PHYS100), Science in Practice (SCI100), Fundamentals of Agriculture (AGFN100), Sustainable Agricultural Systems I (AGSY101), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "Entry is assessed against UNE's Admission, Credit and Enrolment Policy; see the course's own Entry Requirements tab for the exact academic and English language criteria that apply to Diploma in Science.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "b3f13fc0-c1ad-477a-8bae-f8d6c6311692",
+  "name": "Doctor of Philosophy (Humanities) 4 Years",
+  "slug": "doctor-of-philosophy",
+  "cricos": null,
+  "description": "A Doctor of Philosophy is the pinnacle of academic study. Using rigorous and systematic research, combined with critical analysis, you will add to society's understanding of complex issues at the cutting-edge of your discipline or profession. When you complete your PhD at UNE, you will be recognised as an expert in your area of study. Your original discoveries and innovations will be applied to benefit society and industry in Australia and worldwide.",
+  "curriculum": "Doctor of Philosophy (Humanities) 4 Years at UNE is a research higher degree with no fixed subject schedule. Candidates undertake a supervised research project (thesis) under the guidance of a UNE academic supervisor, with progress milestones (confirmation of candidature, annual progress review) rather than coursework units. See UNE's Graduate Research School and course handbook for candidature milestones specific to this award.",
+  "admission_requirements": "Entry is assessed against UNE's Admission, Credit and Enrolment Policy; see the course's own Entry Requirements tab for the exact academic and English language criteria that apply to Doctor of Philosophy (Humanities) 4 Years.",
+  "english_requirements": "IELTS Academic 6.5 overall, no band below 6.0 (UNE higher-degree-research English Language Requirement; test results must be attained within 2 years of application)"
+ },
+ {
+  "id": "04e6e737-4217-4e54-afe9-51279074b3b1",
+  "name": "Doctor of Philosophy (Science, 4 year)",
+  "slug": "doctor-of-philosophy",
+  "cricos": null,
+  "description": "A Doctor of Philosophy is the pinnacle of academic study. Using rigorous and systematic research, combined with critical analysis, you will add to society's understanding of complex issues at the cutting-edge of your discipline or profession. When you complete your PhD at UNE, you will be recognised as an expert in your area of study. Your original discoveries and innovations will be applied to benefit society and industry in Australia and worldwide.",
+  "curriculum": "Doctor of Philosophy (Science, 4 year) at UNE is a research higher degree with no fixed subject schedule. Candidates undertake a supervised research project (thesis) under the guidance of a UNE academic supervisor, with progress milestones (confirmation of candidature, annual progress review) rather than coursework units. See UNE's Graduate Research School and course handbook for candidature milestones specific to this award.",
+  "admission_requirements": "Entry is assessed against UNE's Admission, Credit and Enrolment Policy; see the course's own Entry Requirements tab for the exact academic and English language criteria that apply to Doctor of Philosophy (Science, 4 year).",
+  "english_requirements": "IELTS Academic 6.5 overall, no band below 6.0 (UNE higher-degree-research English Language Requirement; test results must be attained within 2 years of application)"
+ },
+ {
+  "id": "5a97ec4c-357e-4175-941e-ebdb8dbc79db",
+  "name": "Doctor of Philosophy Band 1",
+  "slug": "doctor-of-philosophy",
+  "cricos": null,
+  "description": "A Doctor of Philosophy is the pinnacle of academic study. Using rigorous and systematic research, combined with critical analysis, you will add to society's understanding of complex issues at the cutting-edge of your discipline or profession. When you complete your PhD at UNE, you will be recognised as an expert in your area of study. Your original discoveries and innovations will be applied to benefit society and industry in Australia and worldwide.",
+  "curriculum": "Doctor of Philosophy Band 1 at UNE is a research higher degree with no fixed subject schedule. Candidates undertake a supervised research project (thesis) under the guidance of a UNE academic supervisor, with progress milestones (confirmation of candidature, annual progress review) rather than coursework units. See UNE's Graduate Research School and course handbook for candidature milestones specific to this award.",
+  "admission_requirements": "Entry is assessed against UNE's Admission, Credit and Enrolment Policy; see the course's own Entry Requirements tab for the exact academic and English language criteria that apply to Doctor of Philosophy Band 1.",
+  "english_requirements": "IELTS Academic 6.5 overall, no band below 6.0 (UNE higher-degree-research English Language Requirement; test results must be attained within 2 years of application)"
+ },
+ {
+  "id": "970ec4b3-0db2-4b44-8f52-bb78a772839f",
+  "name": "Doctor of Philosophy Band 2",
+  "slug": "doctor-of-philosophy",
+  "cricos": null,
+  "description": "A Doctor of Philosophy is the pinnacle of academic study. Using rigorous and systematic research, combined with critical analysis, you will add to society's understanding of complex issues at the cutting-edge of your discipline or profession. When you complete your PhD at UNE, you will be recognised as an expert in your area of study. Your original discoveries and innovations will be applied to benefit society and industry in Australia and worldwide.",
+  "curriculum": "Doctor of Philosophy Band 2 at UNE is a research higher degree with no fixed subject schedule. Candidates undertake a supervised research project (thesis) under the guidance of a UNE academic supervisor, with progress milestones (confirmation of candidature, annual progress review) rather than coursework units. See UNE's Graduate Research School and course handbook for candidature milestones specific to this award.",
+  "admission_requirements": "Entry is assessed against UNE's Admission, Credit and Enrolment Policy; see the course's own Entry Requirements tab for the exact academic and English language criteria that apply to Doctor of Philosophy Band 2.",
+  "english_requirements": "IELTS Academic 6.5 overall, no band below 6.0 (UNE higher-degree-research English Language Requirement; test results must be attained within 2 years of application)"
+ },
+ {
+  "id": "f3458967-1edc-4dff-9e4a-9769530e59f2",
+  "name": "Graduate Certificate in Cybersecurity",
+  "slug": "graduate-certificate-in-cybersecurity",
+  "cricos": "113713E",
+  "description": "Cyber attacks and data breaches have been growing in frequency over recent years, with attackers using more and more sophisticated techniques. With the rise of cloud computing and remote work, organisations need increasing amounts of data which requires robust security and privacy measures. Now is the time to build or strengthen your future in the in-demand field of cybersecurity with the Graduate Certificate in Cybersecurity with UNE.",
+  "curriculum": "The course structure lists 7 unit entries across its schedule. Units include Fundamentals of Cybersecurity and Privacy (COSC130), Cryptography (COSC481), Ethical Hacking (COSC482), Cybersecurity Risk and Project Management (COSC483), Cloud Security (COSC484), Computer Networks and Network Security (COSC540), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "You can apply for this course if you have completed a Bachelor qualification (AQF Level 7 or overseas equivalent) or above in a relevant discipline.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "9fa5c83f-95c0-44fe-a263-74b98fe2194c",
+  "name": "Graduate Certificate in Cybersecurity and Computing",
+  "slug": "graduate-certificate-in-cybersecurity-and-computing",
+  "cricos": "113714D",
+  "description": "With data breaches and cyber attacks occurring more and more often, companies are investing heavily in cybersecurity measures. The rise of cloud computing and remote work, paired with the sophistication and increased frequency of cyber attacks, has led to a growing recognition for the need for skilled cybersecurity professionals. If you’re interested in working in cybersecurity but have no IT or computer science background, the Graduate Certificate in Cybersecurity and Computing will put you on the right track to take advantage of the rapid growth in this field.",
+  "curriculum": "The course structure lists 13 unit entries across its schedule. Units include Introduction to Programming and the UNIX Environment (COSC110), Discrete Mathematics (AMTH140), Database Management Systems (COSC210), Operating Systems (COSC240), Object Oriented Programming (COSC120), Data Structures and Algorithms (COSC230), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "You can apply for this course if you have completed a Bachelor qualification (AQF Level 7 or overseas equivalent) in any discipline.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "38fd6e5c-fe20-4d34-a27b-84af1c2d4389",
+  "name": "Graduate Certificate in Data Science",
+  "slug": "graduate-certificate-in-data-science",
+  "cricos": "096382J",
+  "description": "Data science specialists are in high demand thanks to the amount of data now available in workplaces worldwide. Data provides the basis for sensible, evidence-based decision making. This means that organisations and industries from business to health and science need skilled professionals who can tap into vast and diverse data streams to extract their meaning and value. Data scientists are responsible for building intelligent systems, mastering intuitive processes and bringing structure to data.",
+  "curriculum": "The course structure lists 29 unit entries across its schedule. Units include Computational Mathematics (AMTH250), Mathematics for Machine Learning and Artificial Intelligence (AMTH405), Database Management Systems (COSC210), Data Structures and Algorithms (COSC230), Operating Systems (COSC240), Programming Paradigms (COSC250), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "You can apply for this course if you have completed a Bachelor qualification (AQF Level 7 or overseas equivalent) in a relevant discipline.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "9f8a454f-b3f3-41ec-bfca-87a51ec76ede",
+  "name": "Graduate Certificate in Education Studies",
+  "slug": "graduate-certificate-in-education-studies",
+  "cricos": "072405E",
+  "description": "Education is evolving, and with it, the need for skilled professionals who can adapt, lead, and innovate. Whether you're advancing your career or making a move into the education sector, UNE’s Graduate Certificate in Education Studies equips you with the critical thinking, specialised knowledge, and practical skills to thrive in a dynamic field. With flexible study options and targeted specialisations, you can tailor your learning to suit your goals, from digital learning, school leadership or TESOL to Indigenous Australian or inclusive education. You’ll graduate ready to make an impact everywhere education and training matter.",
+  "curriculum": "The course structure lists 55 unit entries across its schedule. Units include Race Relations in the Classroom: Real and Virtual (EDCX509), Aboriginal Education (EDCX513), Critical Perspectives in Indigenous Curriculum Inquiry (EDCX528), Researching Literacies in Education (EDEE528), Leadership in Educational Technology (EDIT415), Emerging Trends in Pedagogy and Practice (EDIT425), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "This course is offered under multiple admission rules: Rule A: You have completed ONE or more of the following qualifications (or overseas equivalent) from a recognised tertiary institution: a three or four-year pre-service teaching qualification (AQF Level 7); OR a Bachelor qualification (AQF Level 7) and a one or two-year pre-service teaching qualification (AQF Level 8 or 9); OR an Australian Children’s Education & Care Authority (ACECQA) qualification (AQF Level 7, 8 or 9). Rule B: You meet BOTH of the following entry requirements: You have completed a Bachelor qualification (AQF Level 7 or overseas equivalent) in a relevant discipline. Rule C: You meet ONE of the following entry requirements: You have completed a relevant qualification in Digital Learning of at least a Diploma level (AQF Level 5)* AND you have a minimum of five years of full-time (or part-time equivalent) relevant professional experience.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "d1174888-0b20-4285-bbed-dcc9fc049d02",
+  "name": "Graduate Certificate in Environmental Science",
+  "slug": "graduate-certificate-in-environmental-science",
+  "cricos": "012208G",
+  "description": "Environmental factors play an increasing role in decision making in many fields. The ability to take these factors into account and improve the productivity and sustainability of environmental systems to meet the current and future needs of communities and industry is in demand in the workplace. UNE's Graduate Certificate in Environmental Science gives you a foundation in environmental science, allowing you to upskill and expand your knowledge, whether you wish to pivot in your career or add value to your role. With future-proofed skills and an in-depth understanding of environmental problems and their management, you will be better placed to anticipate and respond to the challenges we're facing in a rapidly changing world.",
+  "curriculum": "The course structure lists 120 unit entries across its schedule. Units include Introduction to Biology: Cells and Life (BIOL110), Organisms and the Diversity of Life (BIOL120), Plant Physiology and Anatomy (BOTY202), Plant Diversity (BOTY203), Ecology - Populations to Ecosystems (ECOL203), Ecological Methods (ECOL204), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "This course is offered under multiple admission rules: Rule A: You have completed a Bachelor qualification (AQF Level 7 or overseas equivalent) in any discipline. Rule B: You have completed a Bachelor qualification (AQF Level 7 or overseas equivalent) in a relevant discipline.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "037a1ace-d775-4109-917b-02cf179b134e",
+  "name": "Graduate Certificate in Science",
+  "slug": "graduate-certificate-in-science",
+  "cricos": "065083K",
+  "description": "In the rapidly changing world of science and technology, it has never been more important to refine and expand your expertise. UNE's Graduate Certificate in Science, flexibly delivered online or on campus, gives you the opportunity to complete intensive graduate-level study in science, whether you want to upskill or you are seeking to update your discipline knowledge. With 11 majors to choose from, and options to continue to further higher degree research, you can safeguard your career and be ready to adapt and respond to challenges you will face in this diverse and dynamic field.",
+  "curriculum": "The course structure lists 127 unit entries across its schedule. Units include Introductory Biochemistry II (BCHM420), Clinical Biochemistry and Cell Biology (BCHM541), Organic Synthesis and Catalysis (CHEM502), Medicinal Chemistry (CHEM503), Capstone Biophysiological Techniques (LSK510), Introductory Molecular Biology and Biochemistry I (BCHM210), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "This course is offered under multiple admission rules: Rule A: You have completed a Bachelor qualification (AQF Level 7 or overseas equivalent) in a relevant discipline* AND you meet the minimum knowledge requirements for your preferred major. Rule B: You have completed a Graduate Certificate, Graduate Diploma or Bachelor with Honours qualification (AQF Level 8 or overseas equivalent) in a relevant discipline* AND you meet the minimum knowledge requirements for your preferred major. Rule C: You have completed a Master qualification (AQF Level 9 or overseas equivalent) in a relevant discipline* AND you meet the minimum knowledge requirements for your preferred major. Rule D: You have completed a Doctorate qualification (AQF Level 10 or overseas equivalent) in a relevant discipline* AND you meet the minimum knowledge requirements for your preferred major.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "17ab8551-526a-41e5-97ed-6e7f7a035133",
+  "name": "Graduate Diploma in Cybersecurity",
+  "slug": "graduate-diploma-in-cybersecurity",
+  "cricos": "113712F",
+  "description": "Cybercrime has been increasing over the past 10 years and can cost businesses billions of dollars each year. Step up and take your place in this fascinating and crucial area of work and lead the charge into a highly skilled, high demand job in cybersecurity and data protection. Gain immediately applicable knowledge and skills and future fit your career with UNE's Graduate Diploma in Cybersecurity.",
+  "curriculum": "The course structure lists 23 unit entries across its schedule. Units include Fundamentals of Cybersecurity and Privacy (COSC130), Cryptography (COSC481), Ethical Hacking (COSC482), Cybersecurity Risk and Project Management (COSC483), Cloud Security (COSC484), Computer Networks and Network Security (COSC540), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "This course is offered under multiple admission rules: Rule A: You have completed a Bachelor qualification or above (AQF Level 7, 8 or 9 or overseas equivalent) in a relevant discipline. Rule B: You have completed a UNE Graduate Certificate in Cybersecurity or UNE Graduate Certificate in Cybersecurity and Computing (AQF Level 8).",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "6efd25b0-947a-4994-bdfa-7d8d8f71793e",
+  "name": "Graduate Diploma in Data Science",
+  "slug": "graduate-diploma-in-data-science",
+  "cricos": "096383G",
+  "description": "Demand for data scientists continues to grow as organisations in industries from science to health to business and beyond seek specialists who can extract meaning and insights from rapidly expanding data streams available in today's workplace. UNE's Graduate Diploma of Data Science will expand your skills so you can solve complex and challenging problems, innovate and gain competitive advantages by building intelligent systems and bringing structure to large and diverse data sets.",
+  "curriculum": "The course structure lists 31 unit entries across its schedule. Units include Introduction to Programming and the UNIX Environment (COSC110), Database Management Systems (COSC210), Introduction to Statistical Modelling (STAT100), Statistical Modelling and Experimental Design (STAT410), Computational Mathematics (AMTH250), Mathematics for Machine Learning and Artificial Intelligence (AMTH405), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "You can apply for this course if you have completed a Bachelor qualification (AQF Level 7 or overseas equivalent) in any discipline.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "94593160-574e-4d73-8409-c8333e591fc3",
+  "name": "Graduate Diploma in Economics",
+  "slug": "graduate-diploma-in-economics",
+  "cricos": "006319F",
+  "description": "In modern economies, the relationships between global growth, prices, supply and demand are complex and dynamic. Using quantitative modelling and critical thinking, economists analyse how these economic forces interact and explore how to solve current challenges to trade, commerce, policy and living standards in a constantly changing world. With UNE's Graduate Diploma in Economics you will upgrade your analytical skills and build advanced economic knowledge to enhance your career, enabling you to add value in all sectors of business, government and society.",
+  "curriculum": "The course structure lists 28 unit entries across its schedule. Units include Microeconomics I: Understanding Markets, Prices and Competition (ECON101), Macroeconomics I: Business Cycles and Global Trade (ECON102), Macroeconomics II: Fluctuations and Policy (ECON202), Microeconomics II: Consumers, Markets and Trade (ECON301), Economics in Practice: Capstone Project (ECON480), Banking and Finance (ECON405), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "This course is offered under multiple admission rules: Rule A: You have completed a Bachelor qualification (AQF Level 7 or overseas equivalent) in any discipline. Rule B: You have completed a Bachelor qualification (AQF Level 7 or overseas equivalent) in a relevant discipline.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "fb3f7857-95a8-4686-9027-08311e79c6d7",
+  "name": "Graduate Diploma in Psychology",
+  "slug": "graduate-diploma-in-psychology",
+  "cricos": "073213E",
+  "description": "Develop the skills you need to pivot in your career with UNE's Graduate Diploma in Psychology. Our course is ideal for people who have completed a degree and are interested in a career in professional psychology, but who do not have an accredited undergraduate psychology major. Designed as a bridging course to fourth-year psychology programs and beyond, you can gain the knowledge you need to start on the pathway to a career in psychology today.",
+  "curriculum": "The course structure lists 10 unit entries across its schedule. Units include Introductory Psychology I (PSYC101), Introductory Psychology II (PSYC102), Social Psychology (PSYC200), Research Methods and Statistics (PSYC202), Cognitive Psychology (PSYC206), Lifespan Developmental Psychology (PSYC213), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "This course is offered under multiple admission rules: Rule A: You have completed a Bachelor qualification (AQF Level 7 or overseas equivalent) in any discipline. Rule B: You do not hold a Bachelor qualification, but have completed a qualification which is a minimum of AQF Level 8 (or overseas equivalent) in any discipline.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "71f179fd-2c2a-49fb-bc1f-08bbc3b02d02",
+  "name": "Graduate Diploma in Science",
+  "slug": "graduate-diploma-in-science",
+  "cricos": "000452E",
+  "description": "Whether you want to upgrade your expertise or pivot to another scientific speciality, UNE's Graduate Diploma in Science allows you to hone your skills and future fit your career. Flexibly delivered, and with a wide range of majors in diverse scientific disciplines to choose from, you can tailor the course to your strengths and interests. Add value to your role and ensure you can adapt and thrive in the rapidly changing world of science and technology.",
+  "curriculum": "The course structure lists 192 unit entries across its schedule. Units include Introductory Molecular Biology and Biochemistry I (BCHM410), Introductory Biochemistry II (BCHM420), Clinical Biochemistry and Cell Biology (BCHM541), Organic Synthesis and Catalysis (CHEM502), Medicinal Chemistry (CHEM503), Capstone Biophysiological Techniques (LSK510), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "This course is offered under multiple admission rules: Rule A: You have completed a Bachelor qualification (AQF Level 7 or overseas equivalent) in a relevant discipline* AND you meet the minimum knowledge requirements for your preferred major. Rule B: You have completed a Graduate Certificate, Graduate Diploma or Bachelor with Honours qualification (AQF Level 8 or overseas equivalent) in a relevant discipline* AND you meet the minimum knowledge requirements for your preferred major. Rule C: You have completed a Master qualification (AQF Level 9 or overseas equivalent) in a relevant discipline* AND you meet the minimum knowledge requirements for your preferred major. Rule D: You have completed a Doctorate qualification (AQF Level 10 or overseas equivalent) in a relevant discipline* AND you meet the minimum knowledge requirements for your preferred major.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "a003164e-209a-4a39-86ac-99e75a0fa5a3",
+  "name": "Graduate Diploma in Urban and Regional Planning",
+  "slug": "graduate-diploma-in-urban-and-regional-planning",
+  "cricos": "000437D",
+  "description": "Planning integrates environmental, economic and social aspects of development with the competing needs of communities, companies and governments. This complex, dynamic field requires planning professionals to maintain up-to-date knowledge and skills to keep up with a rapidly changing environment. Whether you are looking to upskill or enter the planning profession, our Graduate Diploma in Urban and Regional Planning offers a strong foundation for understanding the complexities of urban and regional planning. This course is accredited with the Planning Institute of Australia, with graduates eligible for membership of the Institute's Urban and Regional Planning chapter.",
+  "curriculum": "The course structure lists 36 unit entries across its schedule. Units include Local Environmental Infrastructure (ENGT237), Cradle to Grave: Population Geography (GEPL322), Economic Change and Urban Development (GEPL401), Architecture and Urban Design (GEPL402), Regional Development: Processes and Policies (GEPL445), Transport and Land Use Planning (GEPL450), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "You can apply for this course if you have completed a Bachelor qualification (AQF Level 7 or overseas equivalent) in any discipline.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "3418e9ca-293a-4c2e-abc6-4b99fb1df9a1",
+  "name": "Master of Artificial Intelligence",
+  "slug": "master-of-artificial-intelligence",
+  "cricos": "114671B",
+  "description": "Do you want a career at the absolute forefront of technology? Are you interested in Artificial Intelligence (AI), its capabilities and applications? UNE’s Master of Artificial Intelligence is the ideal postgraduate qualification for you. AI is the theory and development of computer systems to imitate intelligent human behaviour that adapts through experience.",
+  "curriculum": "The course structure lists 38 unit entries across its schedule. Units include Mathematics for Machine Learning and Artificial Intelligence (AMTH405), Introduction to Programming and the UNIX Environment (COSC110), Fundamentals of Cybersecurity and Privacy (COSC130), Programming Paradigms (COSC250), Software Project Management (COSC510), Machine Learning with Big Data (COSC531), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "This course is offered under multiple admission rules: Rule A: You can apply for this course if you have completed a Bachelor qualification or above (AQF Level 7, 8 or 9 or overseas equivalent) in any discipline. Rule B: You have completed a Bachelor qualification (AQF Level 7 or overseas equivalent) in a relevant discipline. Rule C: You have completed a Graduate Certificate, Graduate Diploma or Bachelor with Honours (AQF Level 8 or overseas equivalent) in a relevant discipline.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "4d38371f-28e2-4c13-b6ee-cf06578d40d1",
+  "name": "Master of Arts",
+  "slug": "master-of-arts",
+  "cricos": "111164A",
+  "description": "UNE’s Master of Arts is designed to equip you with specialised knowledge as well as a wide range of transferrable skills that employers highly value, such as communication and critical thinking. This course is also a focused pathway to higher degree research. With a master's degree, you can make a switch to a new career field or gain additional expertise to enhance your existing path. At UNE, you can select a major from 17 specialty areas, dive into research and tailor the program to your interests and career goals.",
+  "curriculum": "The course structure lists 43 unit entries across its schedule. Units include Of Gods, Heroes and Monsters: Foundation Myths of Antiquity (ANCH109), From Solon to Socrates (ANCH110), Introduction to Ancient Rome (ANCH111), Understanding History (HIST595), Research Project (HASS506), Major Research Project (HASS512), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "This course is offered under multiple admission rules: Rule A: You have completed a Bachelor qualification (AQF Level 7 or overseas equivalent) in any discipline. Rule B: You have completed one of the following qualifications (or an overseas equivalent) in a discipline relevant to your chosen major:* Bachelor degree (AQF Level 7) Graduate Certificate (AQF Level 8) Graduate Diploma (AQF Level 8) Bachelor with Honours (AQF Level 8) Masters (AQF Level 9) If you are admitted on this basis, you will be eligible for admission under Rule B.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "e3b80135-8ccf-470d-946f-162af7909fb0",
+  "name": "Master of Business Administration",
+  "slug": "master-of-business-administration",
+  "cricos": null,
+  "description": "In today's complex and evolving corporate environment, business leaders need to be adaptable and agile thinkers, with advanced skills in analysis, decision making and communication to identify opportunities and resolve complex workplace issues. A Master of Business Administration is an essential qualification that prepares leaders to perform at a high level in any industry. UNE's MBA will expand your professional skills and knowledge, building on your experience to allow you to achieve your career goals and add significant value to your organisation.",
+  "curriculum": "The course structure lists 56 unit entries across its schedule. Units include Leadership in Healthcare (HSHM500), Legal Foundations of Healthcare Management (HSHM506), Systems in Australian Healthcare (HSHM512), Information and Knowledge Management in Healthcare (HSHM543), Research Methods (BUS505), Fundamentals of Personal Finance (AFM404), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "This course is offered under multiple admission rules: Rule A: You have completed a Bachelor qualification (AQF Level 7 or overseas equivalent) AND you have a minimum of two years of full-time (or part-time equivalent) relevant professional experience. Rule B: You have completed one of the following qualifications (or an overseas equivalent) AND you have a minimum of two years of full-time (or part-time equivalent) relevant professional experience. Rule C: You have completed a Masters qualification or above (AQF Level 9 or overseas equivalent).",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "3e0d9cc8-2735-4f25-a408-e6fba472419e",
+  "name": "Master of Computer Science",
+  "slug": "master-of-computer-science",
+  "cricos": "012207G",
+  "description": "Information and computing technology affect all aspects of modern life. Its applications include not only commerce and science, but also health, education, engineering, transport, government, entertainment, sport, and social networking. Computer science and information technology have become so complex that only well-educated professionals have the skills and capabilities to develop and apply information and communications technology (ICT) systems in modern organisations. Worldwide, there is a well-documented shortage of ICT professionals.",
+  "curriculum": "The course structure lists 72 unit entries across its schedule. Units include Software Project Management (COSC510), Parallel and Distributed Computing (COSC530), Computer Networks and Network Security (COSC540), Artificial Intelligence (COSC550), Advanced Web Programming (COSC560), User Experience and Interaction Design (COSC570), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "This course is offered under multiple admission rules: Rule A: You have completed a Bachelor qualification (AQF Level 7 or overseas equivalent) in a relevant discipline. Rule B: You have completed a Graduate Certificate, Graduate Diploma or Bachelor with Honours (AQF Level 8 or overseas equivalent) in a relevant discipline.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "96c66123-126e-440d-a34c-4a14fb605768",
+  "name": "Master of Cybersecurity",
+  "slug": "master-of-cybersecurity",
+  "cricos": "113711G",
+  "description": "UNE’s Master of Cybersecurity will expand your expertise in the complex and evolving field of data, asset and network protection. Gain the skills to adapt and innovate and play a leading role in protecting the critical infrastructure of businesses, governments and community organisations. Solve complex cyber challenges, protect data and networks, and future proof yourself in one of the most rapidly changing employment sectors worldwide. With UNE, you can play a vital role in helping create a safe and secure digital future.",
+  "curriculum": "The course structure lists 29 unit entries across its schedule. Units include Fundamentals of Cybersecurity and Privacy (COSC130), Cryptography (COSC481), Ethical Hacking (COSC482), Cybersecurity Risk and Project Management (COSC483), Cloud Security (COSC484), Computer Networks and Network Security (COSC540), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "This course is offered under multiple admission rules: Rule A: You have completed a Bachelor qualification or above (AQF Level 7, 8 or 9 or overseas equivalent) in a relevant discipline. Rule B: You have completed a UNE Graduate Certificate in Cybersecurity or UNE Graduate Certificate in Cybersecurity and Computing (AQF Level 8). Rule C: You have completed a UNE Graduate Diploma in Cybersecurity (AQF Level 8).",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "0add5c59-f724-41ef-b15f-5541a563e88c",
+  "name": "Master of Cybersecurity and Computing",
+  "slug": "master-of-cybersecurity-and-computing",
+  "cricos": "113710H",
+  "description": "Secure your future in the burgeoning and dynamic field of cybersecurity with UNE’s Master of Cybersecurity and Computing. If you’re interested in data, asset and network protection, solving complex data challenges and playing a role in protecting critical infrastructure in public and private sector organisations, this degree will ensure you are job ready. If you have an undergraduate degree but no IT or computer science background, our Master of Cybersecurity and Computing is perfect for developing the key knowledge and skills to enter an exciting career in one of the fastest growing sectors worldwide. Future fit your career and play a vital role in helping create a safe and secure digital future.",
+  "curriculum": "The course structure lists 27 unit entries across its schedule. Units include Introduction to Programming and the UNIX Environment (COSC110), Discrete Mathematics (AMTH140), Database Management Systems (COSC210), Operating Systems (COSC240), Object Oriented Programming (COSC120), Data Structures and Algorithms (COSC230), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "This course is offered under multiple admission rules: Rule A: You have completed a Bachelor qualification or above (AQF Level 7, 8 or 9 or overseas equivalent) in any discipline. Rule B: You have completed a UNE Graduate Certificate in Cybersecurity and Computing (AQF Level 8).",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "f539b8e8-441f-4bbf-9c62-b5b65d2b340a",
+  "name": "Master of Data Science",
+  "slug": "master-of-data-science",
+  "cricos": "096381K",
+  "description": "Streams of data have grown so much in volume and complexity that only specialists can extract the greatest value from them in the modern workplace. Data scientists who can build intelligent systems, master intuitive processes and bring structure to vast quantities of data provide the foundations for evidence-based decision making, unlocking the potential for improvement and competitive advantage. UNE's Master of Data Science will expand your expertise, allowing you to confidently solve complex challenges in science, health, business and beyond. Through a combination of engaging coursework subjects and a comprehensive capstone project experience, you will hone your skills allowing you to adapt to change, innovate, and play a leading role in the future development of data science solutions globally.",
+  "curriculum": "The course structure lists 66 unit entries across its schedule. Units include Mathematics for Machine Learning and Artificial Intelligence (AMTH405), Introduction to Programming and the UNIX Environment (COSC110), Fundamentals of Cybersecurity and Privacy (COSC130), Database Management Systems (COSC210), Software Project Management (COSC510), Artificial Intelligence (COSC550), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "This course is offered under multiple admission rules: Rule A: You have completed a Bachelor qualification (AQF Level 7 or overseas equivalent) in any discipline. Rule B: You have completed a Bachelor qualification (AQF Level 7) in a relevant discipline. Rule C: You have completed a Graduate Certificate, Graduate Diploma or Bachelor with Honours (AQF Level 8 or overseas equivalent) in a relevant discipline. Rule D: You have completed a Bachelor qualification from an overseas institution in a relevant discipline.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "a8c93afd-a19c-4560-8a3e-bb2461031404",
+  "name": "Master of Economic and Regional Development",
+  "slug": "master-of-economic-and-regional-development",
+  "cricos": "074877A",
+  "description": "Communities and regions face complex challenges as they work towards improving living standards and wellbeing. Economists play a critical role in community and regional development by informing the decisions of government and non-government agencies as they strive for sustainable economics growth and stability around the world. UNE’s Master of Economic and Regional Development will equip you with the expertise to help solve the issues faced by regions and nations as they define their directions and chart a course toward a better future.",
+  "curriculum": "The course structure lists 16 unit entries across its schedule. Units include Research Methods (BUS505), Microeconomics I: Understanding Markets, Prices and Competition (ECON101), Macroeconomics I: Business Cycles and Global Trade (ECON102), Microeconomics II: Consumers, Markets and Trade (ECON201), Macroeconomics II: Fluctuations and Policy (ECON202), Introductory Econometrics (ECON371), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "This course is offered under multiple admission rules: Rule A: You have completed a Bachelor qualification (AQF Level 7 or overseas equivalent) in any discipline. Rule B: You have completed a Bachelor qualification (AQF Level 7 or overseas equivalent) in a relevant discipline.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "642f4606-a9f9-466d-823b-8b6175032935",
+  "name": "Master of Economics (Coursework)",
+  "slug": "master-of-economics",
+  "cricos": "064590K",
+  "description": "Economics influences almost every aspect of business, government and society. Policy makers and leaders in all organisations need to understand the economics interactions of global political and commercial systems, whilst considering living standards, and resource and environmental constraints. Economists provide these insights and influence decisions about how to prioritise actions and allocate resources in a continuously changing environment. UNE's Master of Economics is perfectly positioned to build your expertise and hone your analytical skills to solve today’s economic challenges and advance your career.",
+  "curriculum": "The course structure lists 75 unit entries across its schedule. Units include Research Methods (BUS505), Microeconomics I: Understanding Markets, Prices and Competition (ECON101), Macroeconomics I: Business Cycles and Global Trade (ECON102), Microeconomics II: Consumers, Markets and Trade (ECON201), Macroeconomics II: Fluctuations and Policy (ECON202), Farm and Resource Management (AGB402), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "This course is offered under multiple admission rules: Rule A: You have completed a Bachelor qualification (AQF Level 7 or overseas equivalent) in any discipline. Rule B: You have completed a Bachelor qualification (AQF Level 7 or overseas equivalent) in a relevant discipline. Rule C: You have completed a Graduate Diploma (AQF Level 8 or overseas equivalent) in a relevant discipline.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "d3ece94a-74fb-45c0-858a-960d8dff3912",
+  "name": "Master of Education (Research)",
+  "slug": "master-of-education-research",
+  "cricos": "008627M",
+  "description": "Expand your knowledge of contemporary education while making a substantial and original contribution to an academic field of knowledge. With a focus on the challenges and opportunities facing the education profession today, UNE’s Master of Education (Research) provides you with the opportunity to build on your expertise and develop advanced research skills with the support and guidance of our renowned School of Education. Future proof your career in education with advanced research skills, specialist knowledge and transferable skills in communication, thought leadership and critical analysis.",
+  "curriculum": "Master of Education (Research) at UNE is a research higher degree with no fixed subject schedule. Candidates undertake a supervised research project (thesis) under the guidance of a UNE academic supervisor, with progress milestones (confirmation of candidature, annual progress review) rather than coursework units. See UNE's Graduate Research School and course handbook for candidature milestones specific to this award.",
+  "admission_requirements": "Entry is assessed against UNE's Admission, Credit and Enrolment Policy; see the course's own Entry Requirements tab for the exact academic and English language criteria that apply to Master of Education (Research).",
+  "english_requirements": "IELTS Academic 6.5 overall, no band below 6.0 (UNE higher-degree-research English Language Requirement; test results must be attained within 2 years of application)"
+ },
+ {
+  "id": "2e198b18-4bf7-4620-abca-4623beff5f3d",
+  "name": "Master of Environmental Science (Research)",
+  "slug": "master-of-environmental-science-research",
+  "cricos": "000448A",
+  "description": "Become an agent of change in the complex and evolving world of environmental science and play a key role in fixing today’s problems for future generations. With a focus on the major environmental challenges that currently face the world, UNE’s Master of Environmental Science (Research) provides you with the opportunity to work alongside world-class scientists to produce original research and develop specialist knowledge in your field. At UNE we have a long tradition of producing environmental science research of the highest calibre in a collaborative, innovative academic environment. Future proof your career with knowledge and research skills that are highly valued and be prepared to adapt and respond to the challenges you will face as our understanding of climate change, food security, sustainability and conservation advances.",
+  "curriculum": "Master of Environmental Science (Research) at UNE is a research higher degree with no fixed subject schedule. Candidates undertake a supervised research project (thesis) under the guidance of a UNE academic supervisor, with progress milestones (confirmation of candidature, annual progress review) rather than coursework units. See UNE's Graduate Research School and course handbook for candidature milestones specific to this award.",
+  "admission_requirements": "Entry is assessed against UNE's Admission, Credit and Enrolment Policy; see the course's own Entry Requirements tab for the exact academic and English language criteria that apply to Master of Environmental Science (Research).",
+  "english_requirements": "IELTS Academic 6.5 overall, no band below 6.0 (UNE higher-degree-research English Language Requirement; test results must be attained within 2 years of application)"
+ },
+ {
+  "id": "9c79c37f-3806-48ed-ba21-fa1713916423",
+  "name": "Master of Environmental Science and Management",
+  "slug": "master-of-environmental-science-and-management",
+  "cricos": "000446C",
+  "description": "The world is faced by rapidly advancing environmental challenges, with complex interactions between industry, government and communities driving development in the sector. Be ready to adapt and innovate to produce solutions to tomorrow’s environmental problems with UNE’s Master of Environmental Science and Management. Our course builds on your expertise with advanced interdisciplinary conceptual and scientific knowledge, provides you with opportunities to hone your applied technical skills in the field or laboratory, and consolidates your applied research and problem-solving skills. With units that cover a range of environmental science specialities and the option to complete a research project, you can tailor the course to meet your needs.",
+  "curriculum": "The course structure lists 78 unit entries across its schedule. Units include Applied Research Skills in Environmental and Rural Science (ERS501), Research Synthesis in Environmental and Rural Science (ERS502), 6 credit pointsSustainable Land Management (RSNR503), Coursework Masters Thesis in Agricultural or Environmental Science (ERS594), Plant Function and Environment (BOTY302), Mosses and Mushrooms - Cryptogam Diversity (BOTY370), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "This course is offered under multiple admission rules: Rule A: You have completed a Bachelor qualification (AQF Level 7 or overseas equivalent) in a relevant discipline. Rule B: You meet ONE of the following entry requirements: You have completed a Graduate Certificate, Graduate Diploma or Bachelor with Honours qualification (AQF Level 8 or overseas equivalent) or above in a relevant discipline. Rule C: You have a Bachelor qualification (AQF Level 7 or overseas equivalent) in any discipline.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "b8603ebd-ca02-451c-a32f-86801485d075",
+  "name": "Master of Information Technology",
+  "slug": "master-of-information-technology",
+  "cricos": "047297A",
+  "description": "Information technology is a complex and dynamic field. To stay relevant, you must constantly update your skills and knowledge. UNE’s Master of Information Technology has a strong technical focus that allows you to refresh your skills and knowledge and future proof your career in this rapidly changing area. If you’re seeking a career change, you can enter the course with no background in IT and graduate ready for employment in a broad range of IT positions in private industry, government agencies or research organisations.",
+  "curriculum": "The course structure lists 76 unit entries across its schedule. Units include Software Development Studio 1 (COSC101), Introduction to Programming and the UNIX Environment (COSC110), Object Oriented Programming (COSC120), Fundamentals of Cybersecurity and Privacy (COSC130), Database Management Systems (COSC210), Software Development Studio 2 (COSC220), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "This course is offered under multiple admission rules: Rule A: You have completed a Bachelor qualification (AQF Level 7) in any discipline. Rule B: You have completed a Bachelor qualification (AQF Level 7 or overseas equivalent) in a relevant discipline. Rule C: You have completed a Graduate Certificate, Graduate Diploma or Bachelor with Honours (AQF Level 8 or overseas equivalent) in a relevant discipline. Rule D: You have completed a Bachelor qualification from an overseas institution in any discipline.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "57894474-5e2c-4cf8-a739-bca2cd03b188",
+  "name": "Master of Laws",
+  "slug": "master-of-laws",
+  "cricos": "084919B",
+  "description": "The UNE Master of Laws enables you to broaden your legal knowledge and enhance your independent, critical thinking and research skills. You will achieve a high standard of professional writing and research relevant to current issues in law and practice. Our course gives you the opportunity to choose units of interest or specialise by undertaking units from a particular area of law. It will equip you with advanced legal knowledge and skills and the advanced research skills to make a difference in an increasingly interconnected world.",
+  "curriculum": "The course structure lists 224 unit entries across its schedule. Units include Research Methodology and Theory (LLM500), LLM Research Topic (LLM520), Australian Competition and Consumer Law (LLM501), Contemporary Issues in Constitutional Law (LLM502), Securities and Financial Services Law (LLM504), Law Experiential Learning (LLM506), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "This course is offered under multiple admission rules: Rule A: You meet ONE of the following entry requirements: You have completed a Bachelor of Laws with Honours (AQF Level 8 or overseas equivalent). Rule B: You have completed a Bachelor of Laws (AQF Level 7) or Juris Doctor (AQF Level 9) or overseas equivalents.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "ff1b7503-7244-49ce-8f6f-28433858f1f8",
+  "name": "Master of Nursing Practice (Preregistration)",
+  "slug": "master-of-nursing-practice-preregistration",
+  "cricos": null,
+  "description": "Domestic applications for this course have now closed. International applications remain open but may close without notice. Please see the 2027 Master of Nursing Practice (Preregistration) for information about our next available intake.With a flexible delivery model that offers both online and on-campus study options, UNE stands as a leader in nursing education in Australia. Our Master of Nursing Practice (Preregistration) is designed as a professional entry degree, paving the way for eligibility as a Registered Nurse.",
+  "curriculum": "The course structure lists 32 unit entries across its schedule. Units include Digital Technologies in Health and Social Care (HLTH403), Foundations of Inquiry in Health and Social Care (HLTH500), Essentials of Nursing Practice in Australia (HSNS408), Professional Nursing Practice 4: Mental Health Nursing (HSNS410), Professional Nursing Practice 6: Primary and Community Health Care (HSNS449), Professional Nursing Practice 3: Integrated Nursing Practice (HSNS494), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "This course is offered under multiple admission rules: Rule A: You have completed a Bachelor qualification (AQF Level 7 or overseas equivalent) or higher, AND you are not currently registered to practice as a nurse in Australia. Rule B: You have completed a Bachelor qualification (AQF Level 7) or higher in midwifery AND you currently hold unrestricted registration as a midwife with the NMBA.",
+  "english_requirements": "IELTS Academic 7.0 overall (Listening 7.0, Reading 7.0, Writing 6.5, Speaking 7.0) (Nursing and Midwifery Board of Australia / ANMAC registration standard; test results must be attained within 2 years of application)"
+ },
+ {
+  "id": "bc5f3c7a-d29a-478c-a342-b100e1e14c5e",
+  "name": "Master of Philosophy (Arts)",
+  "slug": "master-of-philosophy",
+  "cricos": null,
+  "description": "High quality research and analysis allows us to better understand the complex issues we face in industry and society. With UNE's Master of Philosophy by research, your original findings and insights will add to the body of knowledge and inform decision-making in your specialist area. You will work independently, with personalised support from recognised experts in your area of study every step of the way. Expand your expertise, hone your research skills, and immediately apply your knowledge in a research topic of your choice.",
+  "curriculum": "Master of Philosophy (Arts) at UNE is a research higher degree with no fixed subject schedule. Candidates undertake a supervised research project (thesis) under the guidance of a UNE academic supervisor, with progress milestones (confirmation of candidature, annual progress review) rather than coursework units. See UNE's Graduate Research School and course handbook for candidature milestones specific to this award.",
+  "admission_requirements": "Entry is assessed against UNE's Admission, Credit and Enrolment Policy; see the course's own Entry Requirements tab for the exact academic and English language criteria that apply to Master of Philosophy (Arts).",
+  "english_requirements": "IELTS Academic 6.5 overall, no band below 6.0 (UNE higher-degree-research English Language Requirement; test results must be attained within 2 years of application)"
+ },
+ {
+  "id": "6730473d-7bb5-472e-bef1-b2ad79be19ab",
+  "name": "Master of Professional Accounting",
+  "slug": "master-of-professional-accounting",
+  "cricos": "084073K",
+  "description": "Organisations of all kinds and sizes, in Australia and internationally, are facing dramatic changes to their operating environments, technology and finances. They need professionals who are equipped with the expertise to help them make informed decisions about the best direction to take in this rapidly evolving world. UNE's Master of Professional Accounting will advance your financial, analytical, research and communication skills, helping you become an indispensable asset in any workplace, and will qualify you for entry to the major professional accounting bodies.",
+  "curriculum": "The course structure lists 49 unit entries across its schedule. Units include Management Accounting (AFM403), Introductory Accounting (AFM406), Intermediate Financial Accounting (AFM410), Accounting Theory and Research (AFM501), Advanced Financial Accounting (AFM505), Auditing (AFM519), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "This course is offered under multiple admission rules: Rule B: Within the past ten years you have commenced and completed the UNE Graduate Certificate in Accounting (or equivalent). Rule C: You have completed ONE of the following qualifications (or their overseas equivalents): Bachelor (AQF Level 7) Bachelor with Honours (AQF Level 8) Graduate Certificate (AQF Level 8) Graduate Diploma (AQF Level 8) Masters (AQF Level 9) Doctorate (AQF Level 10) If you are admitted on this basis, you will be eligible for admission under Rule C.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "793146f5-3ea5-42e2-a1f4-693a5b07cd94",
+  "name": "Master of Rural Science",
+  "slug": "master-of-rural-science",
+  "cricos": "000449M",
+  "description": "Upgrade your knowledge and skills or pivot your career by developing expertise in sustainable, science-based agricultural systems of production through UNE's Master of Rural Science. This postgraduate degree offers a supportive program of independent research related to practical and sustainable production of food and fibre. UNE is a leading innovator in teaching and research in the agricultural sciences. Your advanced knowledge and skillset will prepare you for high-level work in this rapidly evolving industry.",
+  "curriculum": "Master of Rural Science at UNE is a research higher degree with no fixed subject schedule. Candidates undertake a supervised research project (thesis) under the guidance of a UNE academic supervisor, with progress milestones (confirmation of candidature, annual progress review) rather than coursework units. See UNE's Graduate Research School and course handbook for candidature milestones specific to this award.",
+  "admission_requirements": "Entry is assessed against UNE's Admission, Credit and Enrolment Policy; see the course's own Entry Requirements tab for the exact academic and English language criteria that apply to Master of Rural Science.",
+  "english_requirements": "IELTS Academic 6.5 overall, no band below 6.0 (UNE higher-degree-research English Language Requirement; test results must be attained within 2 years of application)"
+ },
+ {
+  "id": "c183a47d-fb6b-4248-9154-2ea06abe207a",
+  "name": "Master of Science",
+  "slug": "master-of-science",
+  "cricos": "000477G",
+  "description": "Understanding and discovery in science drives advancement, providing solutions to the world's health, environmental, agricultural and technological challenges. UNE's Master of Science allows you to study flexibly, to gain expertise and research training, and to contribute to current scientific knowledge. You will be supervised by internationally-recognised scientists and with opportunities to immerse yourself in UNE's vibrant research culture and access to our world-class facilities, develop your skills as a research professional.",
+  "curriculum": "Master of Science at UNE is a research higher degree with no fixed subject schedule. Candidates undertake a supervised research project (thesis) under the guidance of a UNE academic supervisor, with progress milestones (confirmation of candidature, annual progress review) rather than coursework units. See UNE's Graduate Research School and course handbook for candidature milestones specific to this award.",
+  "admission_requirements": "Entry is assessed against UNE's Admission, Credit and Enrolment Policy; see the course's own Entry Requirements tab for the exact academic and English language criteria that apply to Master of Science.",
+  "english_requirements": "IELTS Academic 6.5 overall, no band below 6.0 (UNE higher-degree-research English Language Requirement; test results must be attained within 2 years of application)"
+ },
+ {
+  "id": "4d3284fd-9bf8-427c-aa92-48f79dc1319c",
+  "name": "Master of Science in Agriculture",
+  "slug": "master-of-science-in-agriculture",
+  "cricos": "000450G",
+  "description": "Upgrade your skills and develop your expertise with science-based agricultural studies through UNE's Master of Science in Agriculture. Our flexible program of specialist coursework allows you to steer your studied towards your interests and shape the direction of your career within the agricultural industry. We offer a range of specialisations, including animal science, meat science, genetics and animal breeding, and agronomy and soil science. Choose from a wide range of units, covering all aspects of the agricultural industry and receive a comprehensive introduction to research skills and research methodology.",
+  "curriculum": "The course structure lists 204 unit entries across its schedule. Units include Applied Research Skills in Environmental and Rural Science (ERS501), Research Synthesis in Environmental and Rural Science (ERS502), Fundamentals of Agriculture (AGFN100), Sustainable Agricultural Systems I (AGSY101), Sustainable Agricultural Systems II (AGSY102), Animal Handling (ANSC101), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "This course is offered under multiple admission rules: Rule A: You have completed a Bachelor qualification (AQF Level 7 or overseas equivalent) in any discipline. Rule B: You have completed a Bachelor qualification (AQF Level 7 or overseas equivalent) in a relevant discipline. Rule C: You have completed a Graduate Certificate, Graduate Diploma, or Bachelor with Honours qualification (AQF Level 8 or overseas equivalent) in a relevant discipline.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ },
+ {
+  "id": "2c2c6058-1d99-491c-bfc4-5256a06d4fad",
+  "name": "Master of Scientific Studies",
+  "slug": "master-of-scientific-studies",
+  "cricos": "000441G",
+  "description": "With a wide range of majors in both the pure and applied sciences, UNE's Master of Scientific Studies provides you with specialised training in your chosen scientific discipline. Do you want to be able to respond to constant technological disruption in the workplace by learning more about big data? Perhaps you are passionate about our natural environments and want to refine your knowledge of Australian plants and animals. Are you upskilling to position yourself at the cutting-edge of new medical discoveries?",
+  "curriculum": "The course structure lists 97 unit entries across its schedule. Units include Research Methods in The Sciences (SCI500), Science Masters Thesis (SCI599), Special Topics in Science A (SCI501), Special Topics in Science B (SCI502), Artificial Intelligence and Computing for Science (SCI510), Capstone Biophysiological Techniques (LSK510), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "This course is offered under multiple admission rules: Rule A: You have completed a Bachelor qualification (AQF Level 7 or overseas equivalent) in a relevant discipline* with a minimum Grade Point Average (GPA) of 5. Rule B: You have completed a Graduate Certificate, Graduate Diploma or Bachelor with Honours qualification (AQF Level 8 or overseas equivalent) in a relevant discipline* with a minimum GPA of 5.",
+  "english_requirements": "IELTS Academic 6.5 overall, no band below 6.0 (UNE higher-degree-research English Language Requirement; test results must be attained within 2 years of application)"
+ },
+ {
+  "id": "d7dcf7a6-7b44-41e0-88ea-d744778d6701",
+  "name": "Master of Social Work (Qualifying)",
+  "slug": "master-of-social-work-qualifying",
+  "cricos": "084828E",
+  "description": "Build on your existing knowledge and passion for social justice and human rights with practical experience and flexibly delivered case-based learning. Gain the skills necessary to address barriers, inequality and injustices faced by marginalised and disadvantaged groups in Australia's socially and culturally diverse society. With a focus on rural and regional communities, UNE's Master of Social Work (Qualifying) will provide you with the tools to thrive in this rewarding and rapidly-evolving profession.",
+  "curriculum": "The course structure lists 9 unit entries across its schedule. Units include Social Work Through the LifeSpan (HSSW305), Working with Aboriginal People (OORA400), 6 credit pointsFieldwork 1 (HSSW450), Juvenile Justice and Child Protection (HSSW504), 6 credit pointsGroups and Communities (HSSW511), Human Rights, the Law and Social Justice (HSSW513), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "This course is offered under multiple admission rules: Rule A: You have completed a three-year undergraduate qualification (AQF Level 7 or overseas equivalent) from a recognised tertiary institution in a discipline other than Social Work. Rule B: You have an international qualification in social work that does not meet the Australian Association of Social Workers (AASW) eligibility for membership.",
+  "english_requirements": "IELTS Academic 7.0 overall, no band below 7.0 (Australian Association of Social Workers registration-aligned standard; test results must be attained within 2 years of application)"
+ },
+ {
+  "id": "9e412f1b-958a-4398-9846-21b523d8bb19",
+  "name": "Master of Teaching (Secondary)",
+  "slug": "master-of-teaching-secondary",
+  "cricos": "064592G",
+  "description": "Accelerate your career opportunities with the UNE Master of Teaching (Secondary). Gain the specialist knowledge and skills you need to become a sought-after teacher who makes a difference. Study online or on campus in a flexible timeframe that suits your lifestyle. Be positioned at the forefront of educational expertise to make your education career goals a reality.",
+  "curriculum": "The course structure lists 46 unit entries across its schedule. Units include Aboriginal Education (EDCX513), Literacies and Numeracies in Context (EDEE500), Digital Literacy and Technologies in Education (EDIT502), Planning for Effective Learning (EDLT500), Inclusive Teaching (EDSP412), D Students (EDUC503), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "You can apply for this course if you have completed a Bachelor qualification (AQF Level 7 or overseas equivalent).",
+  "english_requirements": "IELTS Academic 7.5 overall (Listening 8.0, Reading 7.0, Writing 7.0, Speaking 8.0) (NSW Education Standards Authority initial-teacher-education standard; test results must be attained within 2 years of application)"
+ },
+ {
+  "id": "0270f2a7-01d0-458e-96f1-2948a3e21967",
+  "name": "Master of Urban and Regional Planning",
+  "slug": "master-of-urban-and-regional-planning",
+  "cricos": "069344F",
+  "description": "Planning experts work strategically, often with competing stakeholders, to achieve the best social, environmental and economic outcomes. UNE's Master of Urban and Regional Planning offers a multi-disciplinary, comprehensive course that integrates the knowledge and skills required by planning experts to achieve the best outcomes. The course is accredited with the Planning Institute of Australia and graduates are eligible for membership of the Institute's Urban and Regional Planning Chapter.",
+  "curriculum": "The course structure lists 54 unit entries across its schedule. Units include Local Environmental Infrastructure (ENGT237), Cradle to Grave: Population Geography (GEPL322), Integrated Planning Practice 1 (GEPL491), Economic Change and Urban Development (GEPL501), Architecture and Urban Design (GEPL502), Principles of Development Control (GEPL520), among others. Full unit-by-unit sequencing, credit point values, and any major or specialisation options are set out in UNE's Course Structure (Program of Study) tab for this course, and the authoritative version of record is UNE's own Course Handbook.",
+  "admission_requirements": "This course is offered under multiple admission rules: Rule A: You have completed a Bachelor qualification (AQF Level 7 or overseas equivalent) in any discipline. Rule B: You have completed a Bachelor qualification (AQF Level 7 or overseas equivalent) in a relevant discipline. Rule C: You have completed a Graduate Certificate, Graduate Diploma or Bachelor with Honours qualification(AQF Level 8 or overseas equivalent) in urban and regional planning or a relevant discipline*, and the qualification contains at least 12cps @ 500-level.",
+  "english_requirements": "IELTS Academic 6.0 overall, no band below 5.5; test results must be attained within 2 years of application"
+ }
+]
