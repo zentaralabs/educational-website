@@ -624,6 +624,90 @@
       "name": "Doctor of Education",
       "reason": "No /study/courses/ page found under any guessed slug (404), absent from UNE's authoritative 2026 international course-fee list. UNE search for Doctor of Education returns only an honorary-doctorate mention and graduation pages, not a live program.",
       "archived_at": "2026-09-20T02:23:11.541Z"
+    },
+    {
+      "id": "9a8ed5fa-9e7e-484a-b346-57229f67b647",
+      "name": "Bachelor of Arts",
+      "reason": "Confirmed via CQU's own course page (cqu.edu.au/courses/ca10/bachelor-of-arts) which carries an explicit 'Domestic only' badge; the course does not appear in CQU's international-student-filtered course finder search, and the course URL with ?audience=INTERNATIONAL does not resolve to a course detail page (redirects to generic Find a Course page). Not open to international student admission as of 2026-09-20.",
+      "archived_at": "2026-09-20T02:48:03.291Z"
+    },
+    {
+      "id": "97b3225e-bc5c-4abe-9d2b-426e14d6e37e",
+      "name": "Associate Degree of Aviation",
+      "reason": "Confirmed discontinued via CQU's own handbook: the historic code for this award (CL06) resolves to handbook.cqu.edu.au's 'Course Not Found ... no longer offered by CQUniversity' page, and the course does not appear in CQU's marketing course finder (domestic or international) under this name.",
+      "archived_at": "2026-09-20T03:02:39.617Z"
+    },
+    {
+      "id": "5821775f-f70f-4544-bd8f-eda842dce658",
+      "name": "Diploma of Agricultural Studies",
+      "reason": "Confirmed discontinued via CQU's own handbook: handbook.cqu.edu.au/he/courses/view/CM13 (the course's own code) resolves to 'Course Not Found ... no longer offered by CQUniversity', despite the title still appearing in the handbook's course-search index.",
+      "archived_at": "2026-09-20T03:02:39.793Z"
+    },
+    {
+      "id": "1bd2ca3d-724f-4119-b283-9535e1b25c26",
+      "name": "Bachelor of Health and Rehabilitation Science",
+      "reason": "Confirmed discontinued via CQU's own handbook (course code CM51, handbook.cqu.edu.au/he/courses/view/CM51): the page carries an explicit banner 'Please note, students can no longer be admitted into this course', with the course retitled internally as an Exit Award only.",
+      "archived_at": "2026-09-20T03:02:39.955Z"
+    },
+    {
+      "id": "8783d59d-d062-43f2-9b9b-0c1377d11fc5",
+      "name": "Bachelor of Hospitality Management",
+      "reason": "Confirmed discontinued via CQU's own handbook course search: course code CB69 is listed as 'Bachelor of Hospitality Management (No new enrolments)'.",
+      "archived_at": "2026-09-20T03:02:40.121Z"
+    },
+    {
+      "id": "4f8ecd33-7654-4ae1-b74f-23631456c8f5",
+      "name": "Diploma of Aviation (Flight Operations)",
+      "reason": "Confirmed discontinued via CQU's own handbook: the course's handbook code (CL11, handbook.cqu.edu.au/he/courses/view/CL11) resolves to 'Course Not Found ... no longer offered by CQUniversity'. CQU's only remaining aviation-diploma-level qualification is now offered at Graduate Diploma level (Graduate Diploma of Aviation (Flight Operations), code CL17).",
+      "archived_at": "2026-09-20T03:02:40.284Z"
+    },
+    {
+      "id": "f31091de-4819-43f6-9db8-b880839521d3",
+      "name": "Diploma of Engineering Studies",
+      "reason": "Confirmed discontinued via CQU's own handbook: the course's handbook code (CL42, handbook.cqu.edu.au/he/courses/view/CL42) resolves to 'Course Not Found ... no longer offered by CQUniversity'.",
+      "archived_at": "2026-09-20T03:02:40.451Z"
+    },
+    {
+      "id": "d8fceb0c-90b3-4b59-b9c2-b938fc6c6d07",
+      "name": "Associate Degree of Digital Media",
+      "reason": "Active at CQU (handbook code CC26, cqu.edu.au handbook) as a domestic pathway/exit award nested inside the Bachelor of Digital Media, but not open to international students: it does not appear in CQU's international-filtered course finder search, and its course URL (cqu.edu.au/courses/cc26) does not resolve with ?audience=INTERNATIONAL (redirects to the generic Find a Course page).",
+      "archived_at": "2026-09-20T03:04:06.039Z"
+    },
+    {
+      "id": "0b7ac1fa-8657-45b4-9bf0-5f417a37256a",
+      "name": "Associate Degree of Health Care",
+      "reason": "Active at CQU (handbook code CL92) but not open to international students: it does not appear in CQU's international-filtered course finder search, and its course URL (cqu.edu.au/courses/cl92) does not resolve with ?audience=INTERNATIONAL (redirects to the generic Find a Course page).",
+      "archived_at": "2026-09-20T03:04:06.203Z"
+    },
+    {
+      "id": "7db08cd5-fd2a-49b1-b913-2a774e61afe1",
+      "name": "Bachelor of Education (Early Childhood)",
+      "reason": "Active at CQU (handbook code CC14) but not open to international students: it does not appear in CQU's international-filtered course finder search, and its course URL (cqu.edu.au/courses/cc14/bachelor-of-education-early-childhood) errors (HTTP 500) with ?audience=INTERNATIONAL.",
+      "archived_at": "2026-09-20T03:04:06.359Z"
+    },
+    {
+      "id": "6e91d41d-630b-4599-a7c5-00208860fa63",
+      "name": "Bachelor of Teaching",
+      "reason": "Active at CQU (handbook code CC21, Apply Now shown) but not open to international students: it does not appear in CQU's international-filtered course finder search, and its course URL (cqu.edu.au/courses/cc21) does not resolve with ?audience=INTERNATIONAL (redirects to the generic Find a Course page).",
+      "archived_at": "2026-09-20T03:04:06.504Z"
+    },
+    {
+      "id": "f4ddad5e-1b3f-4872-8318-cedb9ab730a6",
+      "name": "Bachelor of Digital Media",
+      "reason": "Active at CQU (handbook code CC24, Apply Now shown) but not open to international students: it does not appear in CQU's international-filtered course finder search, and its course URL (cqu.edu.au/courses/cc24) does not resolve with ?audience=INTERNATIONAL (redirects to the generic Find a Course page).",
+      "archived_at": "2026-09-20T03:04:06.652Z"
+    },
+    {
+      "id": "7e644a74-5b49-41d3-b765-3a32361c22f5",
+      "name": "Bachelor of Allied Health",
+      "reason": "No course of this exact title exists at CQU: zero results in both CQU's marketing course finder (domestic and international) and CQU's own handbook course search for 'Bachelor of Allied Health'. CQU's allied-health undergraduate offerings are all separately named degrees (Bachelor of Health Science, Bachelor of Medical Imaging, Bachelor of Occupational Therapy (Honours), Bachelor of Physiotherapy (Honours), etc.), none titled 'Bachelor of Allied Health'.",
+      "archived_at": "2026-09-20T03:04:06.799Z"
+    },
+    {
+      "id": "28c3beb3-18ed-40f1-83cb-974518b2ea23",
+      "name": "Diploma of Health Care",
+      "reason": "Active at CQU (handbook code CL93) but not open to international students: it does not appear in CQU's international-filtered course finder search, and its course URL (cqu.edu.au/courses/cl93) does not resolve with ?audience=INTERNATIONAL (redirects to the generic Find a Course page).",
+      "archived_at": "2026-09-20T03:06:54.957Z"
     }
   ]
 }
