@@ -3,14 +3,17 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
+import { DEADLINE_PAGE_INDEXED, universityDeadlineHref } from "@/lib/deadline-detail";
 import { SITE_NAME, SITE_URL, SITE_YEAR } from "@/lib/site-config";
 import {
   listDeadlineFilterOptions,
   listPublishedDeadlines,
 } from "@/lib/queries/public-deadlines";
+import { listPublishedUniversityOptions } from "@/lib/queries/public-universities";
 import { JsonLd } from "@/lib/json-ld";
 import { pageMetadata } from "@/lib/page-metadata";
 import { DeadlinesExplorer } from "./DeadlinesExplorer";
+import { DeadlinesStaticList } from "./DeadlinesStaticList";
 
 // Filtering/pagination moved client-side (DeadlinesExplorer) specifically so
 // this page reads no searchParams: that was forcing full per-request dynamic
@@ -31,10 +34,15 @@ export const metadata: Metadata = {
 };
 
 export default async function DeadlinesPage() {
-  const [{ rows: deadlines, totalCount, pageSize }, options] = await Promise.all([
+  const [{ rows: deadlines, totalCount, pageSize }, options, universities] = await Promise.all([
     listPublishedDeadlines({}, 1),
     listDeadlineFilterOptions(),
+    listPublishedUniversityOptions(),
   ]);
+
+  const indexedUniversities = universities.filter((u) =>
+    DEADLINE_PAGE_INDEXED.has(u.slug),
+  );
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -107,7 +115,7 @@ export default async function DeadlinesPage() {
         ))}
       </div>
 
-      <Suspense fallback={null}>
+      <Suspense fallback={<DeadlinesStaticList deadlines={deadlines} />}>
         <DeadlinesExplorer
           initialRows={deadlines}
           initialTotalCount={totalCount}
@@ -115,6 +123,30 @@ export default async function DeadlinesPage() {
           options={options}
         />
       </Suspense>
+
+      {indexedUniversities.length > 0 && (
+        <section className="mt-12 border-t border-ink/10 pt-8">
+          <h2 className="font-display text-xl font-semibold text-ink">
+            Deadlines by university
+          </h2>
+          <p className="mt-1 max-w-2xl font-body text-sm text-slate">
+            Full deadline detail, by intake and degree level, for every
+            university with a dedicated deadlines page.
+          </p>
+          <ul className="mt-4 grid grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-2 md:grid-cols-3">
+            {indexedUniversities.map((u) => (
+              <li key={u.slug}>
+                <Link
+                  href={universityDeadlineHref(u.slug)}
+                  className="font-body text-sm text-status-open underline underline-offset-2"
+                >
+                  {u.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
     </main>
   );
 }

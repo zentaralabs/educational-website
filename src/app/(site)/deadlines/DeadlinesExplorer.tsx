@@ -4,6 +4,8 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { DeadlineTable } from "@/components/site/DeadlineTable";
+import { groupDeadlinesByMonth } from "@/lib/deadline-grouping";
+import { universityDeadlineHref } from "@/lib/deadline-detail";
 import type { PublicDeadlineRow } from "@/lib/queries/public-deadlines";
 
 const SELECT_CLASS =
@@ -15,19 +17,6 @@ type FilterOptions = {
   degreeLevels: string[];
   deadlineTypes: string[];
 };
-
-function groupByMonth(deadlines: PublicDeadlineRow[]) {
-  const groups = new Map<string, PublicDeadlineRow[]>();
-  for (const d of deadlines) {
-    const key = new Date(d.deadline_date).toLocaleDateString("en-US", {
-      month: "long",
-      year: "numeric",
-    });
-    if (!groups.has(key)) groups.set(key, []);
-    groups.get(key)!.push(d);
-  }
-  return groups;
-}
 
 function buildQuery(filters: Filters, page: number): string {
   const params = new URLSearchParams();
@@ -92,7 +81,7 @@ export function DeadlinesExplorer({
   }, []);
 
   const totalPages = Math.max(1, Math.ceil(totalCount / pageSize));
-  const grouped = groupByMonth(rows);
+  const grouped = groupDeadlinesByMonth(rows);
   const hasFilters = Boolean(filters.country || filters.degreeLevel || filters.type);
 
   return (
@@ -206,7 +195,7 @@ export function DeadlinesExplorer({
                 isRolling: d.is_rolling,
                 dateKind: d.date_kind,
                 ...(d.university
-                  ? { href: `/universities/${d.university.slug}` }
+                  ? { href: universityDeadlineHref(d.university.slug) }
                   : {}),
               }))}
             />

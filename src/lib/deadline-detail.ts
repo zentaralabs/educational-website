@@ -53,3 +53,15 @@ export const DEADLINE_PAGE_INDEXED = new Set<string>([
   "murdoch-university",
   "la-trobe-university",
 ]);
+
+/**
+ * Where a "see this university's deadlines" link should point. Indexed
+ * universities get their own dedicated page (worth the click and worth
+ * being the thing every inbound link on the site points at); the rest fall
+ * back to the profile page, which still carries a deadlines section.
+ */
+export function universityDeadlineHref(slug: string): string {
+  return DEADLINE_PAGE_INDEXED.has(slug)
+    ? `/universities/${slug}/deadlines`
+    : `/universities/${slug}`;
+}
