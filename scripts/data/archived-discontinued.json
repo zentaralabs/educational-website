@@ -486,6 +486,132 @@
       "name": "Undergraduate Certificate in General Studies",
       "reason": "Undergraduate Certificate in General Studies: never appears in any UniSC handbook edition (2009-2026) or marketing page under this exact name; only the Diploma in General Studies is a real, current UniSC award.",
       "archived_at": "2026-09-19T04:46:50.199Z"
+    },
+    {
+      "id": "fe318d50-f9c9-4210-b29c-5c3ac70c9249",
+      "name": "Associate Degree of Business and Enterprise",
+      "reason": "Nested exit award of Bachelor of Business and Enterprise (3007150), last offered in the 2024 handbook; absent from the current 2026/2027 course sitemap.",
+      "archived_at": "2026-09-20T01:40:59.668Z"
+    },
+    {
+      "id": "283e00da-cafd-4da7-be4e-af9cf62ac574",
+      "name": "Bachelor of Art and Design",
+      "reason": "Last offered in the 2024 handbook (course 3007160); absent from the current 2026/2027 course sitemap and the SCU course finder. Handbook redirects /2026 requests to the 2024 version.",
+      "archived_at": "2026-09-20T01:40:59.839Z"
+    },
+    {
+      "id": "f797f0d3-60ff-4b94-9dc5-d3da32286ac0",
+      "name": "Bachelor of Business and Enterprise (Aviation Management)",
+      "reason": "Aviation Management specialisation of Bachelor of Business and Enterprise (3007150), last offered in the 2024 handbook; absent from the current 2026/2027 course sitemap.",
+      "archived_at": "2026-09-20T01:40:59.993Z"
+    },
+    {
+      "id": "02995e98-0678-4310-a5b2-052401238e65",
+      "name": "Bachelor of Business in Tourism and Hospitality Management",
+      "reason": "Last offered in the 2018 handbook (course 3007314), 8 years gone; absent from the current 2026/2027 course sitemap.",
+      "archived_at": "2026-09-20T01:41:00.151Z"
+    },
+    {
+      "id": "cbc2ae64-03c6-4032-9243-3c20e6f9e14d",
+      "name": "Bachelor of Digital Media",
+      "reason": "Last offered in the 2024 handbook (course 3007084); absent from the current 2026/2027 course sitemap. Handbook redirects /2026 requests to the 2024 version.",
+      "archived_at": "2026-09-20T01:41:00.310Z"
+    },
+    {
+      "id": "89901169-1f07-49b3-b80b-ad09e304a9f6",
+      "name": "Bachelor of Engineering Systems (Honours)",
+      "reason": "Last offered in the 2025 handbook (course 3508003); absent from the current 2026/2027 course sitemap. Superseded by the restructured Bachelor of Engineering (Honours) (3508007), which now carries the Civil/Mechanical specialisations.",
+      "archived_at": "2026-09-20T01:41:00.460Z"
+    },
+    {
+      "id": "350bb154-999f-4728-9715-8b4e136cb8d3",
+      "name": "Bachelor of Environmental Science",
+      "reason": "Last offered in the 2020 handbook (course 3004100), 6 years gone; legacy-format CRICOS code (016152G) also indicates retirement. Absent from the current 2026/2027 course sitemap.",
+      "archived_at": "2026-09-20T01:41:00.615Z"
+    },
+    {
+      "id": "476ed328-1561-40aa-82de-d06ff5beefbe",
+      "name": "Diploma of Arts",
+      "reason": "Maps to SCU's 'Diploma of Arts and Social Sciences' (course 2125300); last offered in the 2023 handbook. Absent from the current 2026/2027 course sitemap.",
+      "archived_at": "2026-09-20T01:41:00.770Z"
+    },
+    {
+      "id": "01f7fb1e-2a8f-47de-82b1-500e5aa0cf74",
+      "name": "Diploma of Regenerative Agriculture",
+      "reason": "Last offered in the 2025 handbook (course 2125105); absent from the current 2026/2027 course sitemap. The whole Regenerative Agriculture suite (Grad Cert, Grad Dip, Diploma) was wound down together.",
+      "archived_at": "2026-09-20T01:41:00.923Z"
+    },
+    {
+      "id": "b0c78b8b-e09c-4585-974a-0fe63f4ce80f",
+      "name": "Graduate Certificate in Accounting",
+      "reason": "Last offered in the 2024 handbook (course 1007134); absent from the current 2026/2027 course sitemap. The whole standalone Accounting-certificate suite (Grad Cert, Grad Dip, Master of Professional Accounting) was wound down together.",
+      "archived_at": "2026-09-20T01:41:01.077Z"
+    },
+    {
+      "id": "ac0edcf7-e31a-46df-af9a-a180829ab45c",
+      "name": "Graduate Certificate in Computing",
+      "reason": "Handbook redirect for this course code (1008510) returns 404, the most decisive discontinuation signal of any row in this sprint; absent from the current 2026/2027 course sitemap.",
+      "archived_at": "2026-09-20T01:41:01.231Z"
+    },
+    {
+      "id": "b61170b3-4cd8-47ab-9d0b-de3e791ef89a",
+      "name": "Graduate Certificate in Regenerative Agriculture",
+      "reason": "Last offered in the 2025 handbook (course 1008140); absent from the current 2026/2027 course sitemap.",
+      "archived_at": "2026-09-20T01:41:01.387Z"
+    },
+    {
+      "id": "762e96e8-6e7b-4279-8448-81ebca5d5410",
+      "name": "Graduate Diploma of Accounting",
+      "reason": "Last offered in the 2024 handbook (course 1107135); absent from the current 2026/2027 course sitemap.",
+      "archived_at": "2026-09-20T01:41:01.544Z"
+    },
+    {
+      "id": "10f9c113-819a-408a-86a4-e7031c0c173c",
+      "name": "Graduate Diploma of Computing",
+      "reason": "Nested exit award of the discontinued Master of Computing (1209151); same fate, absent from current sitemap.",
+      "archived_at": "2026-09-20T01:41:01.702Z"
+    },
+    {
+      "id": "b6b3b466-2dcd-4963-80fd-8ab1a19b96cf",
+      "name": "Graduate Diploma of Regenerative Agriculture",
+      "reason": "Last offered in the 2025 handbook (course 1108440); absent from the current 2026/2027 course sitemap.",
+      "archived_at": "2026-09-20T01:41:01.854Z"
+    },
+    {
+      "id": "9a318dbb-7736-4a5a-9796-efdc3cadd0dc",
+      "name": "Master of Business",
+      "reason": "Legacy-format CRICOS code (016179G); no current SCU page, handbook entry, or course-sitemap entry found under this plain name (as distinct from Master of Business Administration, Master of Business Law, Master of Business in Global Hotel Leadership, or Master of Management, all of which are separately live and already matched).",
+      "archived_at": "2026-09-20T01:41:02.004Z"
+    },
+    {
+      "id": "e4cc69d8-1524-444b-b1fe-71b2f430213e",
+      "name": "Master of Computing",
+      "reason": "Last offered in the 2025 handbook (course 1209151); absent from the current 2026/2027 course sitemap.",
+      "archived_at": "2026-09-20T01:41:02.161Z"
+    },
+    {
+      "id": "73ac8c58-d278-4f16-bf49-fb89ecd369e0",
+      "name": "Master of Professional Accounting",
+      "reason": "Last offered in the 2024 handbook (course 1207045); absent from the current 2026/2027 course sitemap.",
+      "archived_at": "2026-09-20T01:41:02.307Z"
+    },
+    {
+      "id": "1224583e-5f2d-4859-9096-04cd35f1bdf6",
+      "name": "Master of Science (ES&M)",
+      "reason": "Legacy-format CRICOS code (051066D); no current or recent (post-2020) SCU page, handbook entry, or course-sitemap entry found under this name or code after genuine search effort.",
+      "archived_at": "2026-09-20T01:41:02.460Z"
+    },
+    {
+      "id": "a52a3f06-cb60-4e15-889d-4d967cea5da6",
+      "name": "Undergraduate Certificate in Business",
+      "reason": "Last offered in the 2022 handbook (course 2004300); absent from the current 2026/2027 course sitemap.",
+      "archived_at": "2026-09-20T01:41:02.613Z"
+    },
+    {
+      "id": "64d5fb36-8de9-45e5-9255-be36064601b7",
+      "name": "Undergraduate Certificate in Education",
+      "reason": "Last offered in the 2024 handbook (course 2004200); absent from the current 2026/2027 course sitemap.",
+      "archived_at": "2026-09-20T01:41:02.767Z"
     }
   ]
 }

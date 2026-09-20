@@ -1,0 +1,733 @@
+[
+  {
+    "id": "52a158ae-4919-4833-90e3-7fdfbefb380f",
+    "name": "Associate Degree of Business (Exit award)",
+    "matchType": null,
+    "url2026": null,
+    "url2027": null
+  },
+  {
+    "id": "fe318d50-f9c9-4210-b29c-5c3ac70c9249",
+    "name": "Associate Degree of Business and Enterprise",
+    "matchType": null,
+    "url2026": null,
+    "url2027": null
+  },
+  {
+    "id": "5bde087b-2e38-40b8-9de1-90fb3218b69c",
+    "name": "Associate Degree of Engineering",
+    "matchKey": "Associate Degree of Engineering",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/associate-degree-of-engineering-2206800/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/associate-degree-of-engineering-2206800/2027/"
+  },
+  {
+    "id": "3b2e422b-4e04-4c28-91ba-e62bdc189093",
+    "name": "Associate Degree of Global Hotel Management",
+    "matchKey": "Associate Degree of Global Hotel Management",
+    "matchType": "exact",
+    "url2026": null,
+    "url2027": "https://www.scu.edu.au/study/courses/associate-degree-of-global-hotel-management-2206710/2027/"
+  },
+  {
+    "id": "d83cdaf1-29ff-4d88-89c4-efdb2855c5e1",
+    "name": "Associate Degree of International Hotel and Tourism Management",
+    "matchKey": "Associate Degree of International Hotel and Tourism Management",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/associate-degree-of-international-hotel-and-tourism-management-2206700/2026/",
+    "url2027": null
+  },
+  {
+    "id": "1f1c5787-e48d-4100-86b4-4282d9fa79f0",
+    "name": "Associate Degree of Law (Paralegal Studies)",
+    "matchKey": "Associate Degree of Law (Paralegal Studies)",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/associate-degree-in-law-paralegal-studies-2206351/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/associate-degree-in-law-paralegal-studies-2206351/2027/"
+  },
+  {
+    "id": "283e00da-cafd-4da7-be4e-af9cf62ac574",
+    "name": "Bachelor of Art and Design",
+    "matchType": null,
+    "url2026": null,
+    "url2027": null
+  },
+  {
+    "id": "b397e1f3-708d-4709-8d42-13ee2a419149",
+    "name": "Bachelor of Biomedical Science",
+    "matchKey": "Bachelor of Biomedical Science",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/bachelor-of-biomedical-science-3007312/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/bachelor-of-biomedical-science-3007312/2027/"
+  },
+  {
+    "id": "0c00e656-c0d3-4196-ae91-f7ca7e073567",
+    "name": "Bachelor of Business",
+    "matchKey": "Bachelor of Business",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/bachelor-of-business-3007255/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/bachelor-of-business-3007255/2027/"
+  },
+  {
+    "id": "f797f0d3-60ff-4b94-9dc5-d3da32286ac0",
+    "name": "Bachelor of Business and Enterprise (Aviation Management)",
+    "matchKey": "Bachelor of Business",
+    "matchType": "fuzzy-contains",
+    "url2026": "https://www.scu.edu.au/study/courses/bachelor-of-business-3007255/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/bachelor-of-business-3007255/2027/"
+  },
+  {
+    "id": "d1dbd177-e747-4d3a-887a-e7df756684a2",
+    "name": "Bachelor of Business in Hotel Management",
+    "matchKey": "Bachelor of Business in Hotel Management",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/bachelor-of-business-in-hotel-management-3007005/2026/",
+    "url2027": null
+  },
+  {
+    "id": "02995e98-0678-4310-a5b2-052401238e65",
+    "name": "Bachelor of Business in Tourism and Hospitality Management",
+    "matchKey": "Bachelor of Business",
+    "matchType": "fuzzy-contains",
+    "url2026": "https://www.scu.edu.au/study/courses/bachelor-of-business-3007255/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/bachelor-of-business-3007255/2027/"
+  },
+  {
+    "id": "c3f95350-2600-465c-8f6a-a7628fe8ede1",
+    "name": "Bachelor of Clinical Exercise Physiology",
+    "matchKey": "Bachelor of Clinical Exercise Physiology",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/bachelor-of-clinical-exercise-physiology-3007012/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/bachelor-of-clinical-exercise-physiology-3007012/2027/"
+  },
+  {
+    "id": "d53e43e1-2b64-477c-93e2-539d4e55cc33",
+    "name": "Bachelor of Clinical Sciences (Osteopathic Studies)",
+    "matchKey": "Bachelor of Clinical Sciences (Osteopathic Studies)",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/bachelor-of-clinical-sciences-osteopathic-studies-3007162/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/bachelor-of-clinical-sciences-osteopathic-studies-3007162/2027/"
+  },
+  {
+    "id": "855cf899-8758-4c22-ac7c-61c8d35354eb",
+    "name": "Bachelor of Community Welfare",
+    "matchKey": "Bachelor of Community Welfare",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/bachelor-of-community-welfare-3007268/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/bachelor-of-community-welfare-3007268/2027/"
+  },
+  {
+    "id": "f5240951-5e10-4eca-8355-3539af199718",
+    "name": "Bachelor of Counselling",
+    "matchKey": "Bachelor of Counselling",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/bachelor-of-counselling-3007321/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/bachelor-of-counselling-3007321/2027/"
+  },
+  {
+    "id": "cbc2ae64-03c6-4032-9243-3c20e6f9e14d",
+    "name": "Bachelor of Digital Media",
+    "matchType": null,
+    "url2026": null,
+    "url2027": null
+  },
+  {
+    "id": "10a45520-701c-43a4-a550-ac1a3e4dd7ac",
+    "name": "Bachelor of Early Childhood Education",
+    "matchKey": "Bachelor of Early Childhood Education",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/bachelor-of-early-childhood-education-3007003/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/bachelor-of-early-childhood-education-3007003/2027/"
+  },
+  {
+    "id": "8302db90-b4f3-47c3-b2dd-84861d156ac3",
+    "name": "Bachelor of Education (Primary)",
+    "matchKey": "Bachelor of Education",
+    "matchType": "fuzzy-ambiguous(2)",
+    "url2026": "https://www.scu.edu.au/study/courses/bachelor-of-education-3007002/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/bachelor-of-education-3007002/2027/"
+  },
+  {
+    "id": "cf84085f-497f-46b3-93c0-dacbeb547cf5",
+    "name": "Bachelor of Engineering (Honours) (Civil Engineering)",
+    "matchKey": "Bachelor of Engineering (Honours)",
+    "matchType": "fuzzy-contains",
+    "url2026": "https://www.scu.edu.au/study/courses/bachelor-of-engineering-honours-3508007/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/bachelor-of-engineering-honours-3508007/2027/"
+  },
+  {
+    "id": "89901169-1f07-49b3-b80b-ad09e304a9f6",
+    "name": "Bachelor of Engineering Systems (Honours)",
+    "matchType": null,
+    "url2026": null,
+    "url2027": null
+  },
+  {
+    "id": "350bb154-999f-4728-9715-8b4e136cb8d3",
+    "name": "Bachelor of Environmental Science",
+    "matchType": null,
+    "url2026": null,
+    "url2027": null
+  },
+  {
+    "id": "ceb767ee-055e-4b10-92eb-109770c8a29a",
+    "name": "Bachelor of Exercise Science and Psychological Science",
+    "matchKey": "Bachelor of Exercise Science and Psychological Science",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/bachelor-of-exercise-science-and-psychological-science-3207113/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/bachelor-of-exercise-science-and-psychological-science-3207113/2027/"
+  },
+  {
+    "id": "d6a5807e-4d8c-4e04-b197-7e2cbe3e2390",
+    "name": "Bachelor of Global Hotel and Tourism Management",
+    "matchKey": "Bachelor of Global Hotel and Tourism Management",
+    "matchType": "exact",
+    "url2026": null,
+    "url2027": "https://www.scu.edu.au/study/courses/bachelor-of-global-hotel-and-tourism-management-3007007/2027/"
+  },
+  {
+    "id": "ebcf61b6-1da9-4e37-ba81-81f1d6cbfbb7",
+    "name": "Bachelor of Health Science (Health and Lifestyle)",
+    "matchKey": "Bachelor of Health Science (Health and Lifestyle)",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/bachelor-of-health-science-health-and-lifestyle-3007319/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/bachelor-of-health-science-health-and-lifestyle-3007319/2027/"
+  },
+  {
+    "id": "611f9a4e-84d1-41bd-9481-bd1256831a08",
+    "name": "Bachelor of Information Technology",
+    "matchKey": "Bachelor of Information Technology",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/bachelor-of-information-technology-3007410/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/bachelor-of-information-technology-3007410/2027/"
+  },
+  {
+    "id": "83068f91-5175-4b51-9979-e98be8be7913",
+    "name": "Bachelor of Innovation with Honours",
+    "matchKey": "Bachelor of Innovation with Honours",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/bachelor-of-innovation-with-honours-3508100/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/bachelor-of-innovation-with-honours-3508100/2027/"
+  },
+  {
+    "id": "98809c4c-6db2-4571-be43-84007baa4278",
+    "name": "Bachelor of Laws",
+    "matchKey": "Bachelor of Laws",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/bachelor-of-laws-3007001/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/bachelor-of-laws-3007001/2027/"
+  },
+  {
+    "id": "2f531d4c-c7eb-4f91-b414-6edee07e5f38",
+    "name": "Bachelor of Laws (Undergraduate) 3 years",
+    "matchKey": "Bachelor of Laws",
+    "matchType": "fuzzy-contains",
+    "url2026": "https://www.scu.edu.au/study/courses/bachelor-of-laws-3007001/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/bachelor-of-laws-3007001/2027/"
+  },
+  {
+    "id": "3129802a-b1d7-4c99-8bd6-e6d416c2c219",
+    "name": "Bachelor of Laws with Honours",
+    "matchKey": "Bachelor of Laws with Honours",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/bachelor-of-laws-with-honours-3508002/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/bachelor-of-laws-with-honours-3508002/2027/"
+  },
+  {
+    "id": "61069fab-c7b8-4c67-832d-a901b71f0c46",
+    "name": "Bachelor of Legal and Justice Studies",
+    "matchKey": "Bachelor of Legal and Justice Studies",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/bachelor-of-legal-and-justice-studies-3006110/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/bachelor-of-legal-and-justice-studies-3006110/2027/"
+  },
+  {
+    "id": "b7f240b5-589b-4cff-85ef-76c65cf5f824",
+    "name": "Bachelor of Midwifery",
+    "matchKey": "Bachelor of Midwifery",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/bachelor-of-midwifery-3007229/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/bachelor-of-midwifery-3007229/2027/"
+  },
+  {
+    "id": "c16b6fd3-3236-4e1d-a564-32ea71b82956",
+    "name": "Bachelor of Nursing",
+    "matchKey": "Bachelor of Nursing",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/bachelor-of-nursing-3007303/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/bachelor-of-nursing-3007303/2027/"
+  },
+  {
+    "id": "63646254-0fa2-4a57-aa41-e5cc8e532e22",
+    "name": "Bachelor of Nursing - Enrolled Nurse to Registered Nurse Pathway",
+    "matchKey": "Bachelor of Nursing",
+    "matchType": "fuzzy-contains",
+    "url2026": "https://www.scu.edu.au/study/courses/bachelor-of-nursing-3007303/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/bachelor-of-nursing-3007303/2027/"
+  },
+  {
+    "id": "b804430c-ca6e-4c66-a16c-5a4519a5e6dc",
+    "name": "Bachelor of Occupational Therapy",
+    "matchKey": "Bachelor of Occupational Therapy",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/bachelor-of-occupational-therapy-3007224/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/bachelor-of-occupational-therapy-3007224/2027/"
+  },
+  {
+    "id": "fed53284-ca65-4e06-8aa4-98e448b3cefb",
+    "name": "Bachelor of Physiotherapy",
+    "matchKey": "Bachelor of Physiotherapy",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/bachelor-of-physiotherapy-3007320/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/bachelor-of-physiotherapy-3007320/2027/"
+  },
+  {
+    "id": "fbc4eab9-08cb-4922-a85b-63e098d50b77",
+    "name": "Bachelor of Psychological Science",
+    "matchKey": "Bachelor of Psychological Science",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/bachelor-of-psychological-science-3007244/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/bachelor-of-psychological-science-3007244/2027/"
+  },
+  {
+    "id": "671165a0-2f34-4b11-ba23-68456e21a724",
+    "name": "Bachelor of Psychological Science with Honours",
+    "matchKey": "Bachelor of Psychological Science with Honours",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/bachelor-of-psychological-science-with-honours-3507245/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/bachelor-of-psychological-science-with-honours-3507245/2027/"
+  },
+  {
+    "id": "f8636b39-4e4c-4c91-85c9-8e136ca42b0d",
+    "name": "Bachelor of Science",
+    "matchKey": "Bachelor of Science",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/bachelor-of-science-3007420/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/bachelor-of-science-3007420/2027/"
+  },
+  {
+    "id": "8725dcc2-6f3e-4230-927e-3c01c08d030f",
+    "name": "Bachelor of Science with Honours",
+    "matchKey": "Bachelor of Science with Honours",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/bachelor-of-science-with-honours-3507030/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/bachelor-of-science-with-honours-3507030/2027/"
+  },
+  {
+    "id": "eed86759-e22e-4744-ac62-0684ba2dfd4c",
+    "name": "Bachelor of Social Work",
+    "matchKey": "Bachelor of Social Work",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/bachelor-of-social-work-3007316/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/bachelor-of-social-work-3007316/2027/"
+  },
+  {
+    "id": "51b003c8-f4db-4d68-99fb-492deb2e7714",
+    "name": "Bachelor of Speech Pathology",
+    "matchKey": "Bachelor of Speech Pathology",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/bachelor-of-speech-pathology-3007306/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/bachelor-of-speech-pathology-3007306/2027/"
+  },
+  {
+    "id": "c21d1e8f-3d52-49d4-88b3-a79f0be7f7ce",
+    "name": "Bachelor of Sport and Exercise Science",
+    "matchKey": "Bachelor of Sport and Exercise Science",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/bachelor-of-sport-and-exercise-science-3005113/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/bachelor-of-sport-and-exercise-science-3005113/2027/"
+  },
+  {
+    "id": "483811ea-45d8-4e1a-bc3e-523a0757d522",
+    "name": "Bachelor of Veterinary Technology",
+    "matchKey": "Bachelor of Veterinary Technology",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/bachelor-of-veterinary-technology-3007400/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/bachelor-of-veterinary-technology-3007400/2027/"
+  },
+  {
+    "id": "476ed328-1561-40aa-82de-d06ff5beefbe",
+    "name": "Diploma of Arts",
+    "matchType": null,
+    "url2026": null,
+    "url2027": null
+  },
+  {
+    "id": "cc928202-27f8-4285-ac72-64ad9393d8a0",
+    "name": "Diploma of Business",
+    "matchKey": "Diploma of Business",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/diploma-of-business-2127279/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/diploma-of-business-2127279/2027/"
+  },
+  {
+    "id": "dbcc462b-1424-4e97-8991-c997b830f126",
+    "name": "Diploma of Clinical and Allied Health",
+    "matchKey": "Diploma of Clinical and Allied Health",
+    "matchType": "exact",
+    "url2026": null,
+    "url2027": "https://www.scu.edu.au/study/courses/diploma-of-clinical-and-allied-health-2125170/2027/"
+  },
+  {
+    "id": "8184f813-339d-45ea-aa80-7dbe51fd8c04",
+    "name": "Diploma of Conveyancing (Law and Practice)",
+    "matchKey": "Diploma of Conveyancing (Law and Practice)",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/diploma-of-conveyancing-law-and-practice-2125600/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/diploma-of-conveyancing-law-and-practice-2125600/2027/"
+  },
+  {
+    "id": "14478661-e95a-4eeb-abc3-08067bbdbbb7",
+    "name": "Diploma of Education",
+    "matchKey": "Diploma of Education",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/diploma-of-education-2125500/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/diploma-of-education-2125500/2027/"
+  },
+  {
+    "id": "5e7434b3-c649-4136-b7ab-2504a524371f",
+    "name": "Diploma of Engineering",
+    "matchKey": "Diploma of Engineering",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/diploma-of-engineering-2125106/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/diploma-of-engineering-2125106/2027/"
+  },
+  {
+    "id": "5762d7c2-4737-4882-94e5-c5e7ddbece35",
+    "name": "Diploma of Global Hotel Management",
+    "matchKey": "Diploma of Global Hotel Management",
+    "matchType": "exact",
+    "url2026": null,
+    "url2027": "https://www.scu.edu.au/study/courses/diploma-of-global-hotel-management-2125260/2027/"
+  },
+  {
+    "id": "1591c57e-9a65-42b0-b0f6-348151d815a5",
+    "name": "Diploma of Health",
+    "matchKey": "Diploma of Health",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/diploma-of-health-2125150/2026/",
+    "url2027": null
+  },
+  {
+    "id": "e8466c3a-ed40-4f76-80ac-d827ceec96bb",
+    "name": "Diploma of Health and Human Sciences",
+    "matchKey": "Diploma of Health and Human Sciences",
+    "matchType": "exact",
+    "url2026": null,
+    "url2027": "https://www.scu.edu.au/study/courses/diploma-of-health-and-human-sciences-2125160/2027/"
+  },
+  {
+    "id": "a8471cce-4cde-409c-b10b-60bd6c09888c",
+    "name": "Diploma of Hotel Management",
+    "matchKey": "Diploma of Hotel Management",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/diploma-of-hotel-management-2125250/2026/",
+    "url2027": null
+  },
+  {
+    "id": "01bcc625-fbd8-4203-b3b9-29675171d75b",
+    "name": "Diploma of Information Technology",
+    "matchKey": "Diploma of Information Technology",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/diploma-of-information-technology-2125350/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/diploma-of-information-technology-2125350/2027/"
+  },
+  {
+    "id": "09a3941d-2685-46e2-b1ee-6a14029365a7",
+    "name": "Diploma of Legal Studies",
+    "matchKey": "Diploma of Legal Studies",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/diploma-of-legal-studies-2125107/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/diploma-of-legal-studies-2125107/2027/"
+  },
+  {
+    "id": "01f7fb1e-2a8f-47de-82b1-500e5aa0cf74",
+    "name": "Diploma of Regenerative Agriculture",
+    "matchType": null,
+    "url2026": null,
+    "url2027": null
+  },
+  {
+    "id": "f5023100-d453-4d4a-8057-5a8009840f1c",
+    "name": "Diploma of Science",
+    "matchKey": "Diploma of Science",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/diploma-of-science-2127298/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/diploma-of-science-2127298/2027/"
+  },
+  {
+    "id": "04657a46-3ed4-48d7-b944-86843ab0f964",
+    "name": "Doctor of Philosophy (Business)",
+    "matchType": null,
+    "url2026": null,
+    "url2027": null
+  },
+  {
+    "id": "b0c78b8b-e09c-4585-974a-0fe63f4ce80f",
+    "name": "Graduate Certificate in Accounting",
+    "matchType": null,
+    "url2026": null,
+    "url2027": null
+  },
+  {
+    "id": "4a490936-248b-411c-ba63-40cc186af875",
+    "name": "Graduate Certificate in Business",
+    "matchKey": "Graduate Certificate in Business",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/graduate-certificate-in-business-1008100/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/graduate-certificate-in-business-1008100/2027/"
+  },
+  {
+    "id": "ac0edcf7-e31a-46df-af9a-a180829ab45c",
+    "name": "Graduate Certificate in Computing",
+    "matchType": null,
+    "url2026": null,
+    "url2027": null
+  },
+  {
+    "id": "78948ef4-d8c7-4ae3-be74-227f55135eb0",
+    "name": "Graduate Certificate in Construction Practice",
+    "matchType": null,
+    "url2026": null,
+    "url2027": null
+  },
+  {
+    "id": "7eab917f-5043-4246-b331-70aac2ad340c",
+    "name": "Graduate Certificate in Early Childhood Education Leadership",
+    "matchKey": "Graduate Certificate in Early Childhood Education Leadership",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/graduate-certificate-in-early-childhood-education-leadership-1008253/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/graduate-certificate-in-early-childhood-education-leadership-1008253/2027/"
+  },
+  {
+    "id": "f0f7e6b6-797b-48d8-a877-0d42f3a2e3bb",
+    "name": "Graduate Certificate in Information Technology",
+    "matchKey": "Graduate Certificate in Information Technology",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/graduate-certificate-in-information-technology-1008550/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/graduate-certificate-in-information-technology-1008550/2027/"
+  },
+  {
+    "id": "b61170b3-4cd8-47ab-9d0b-de3e791ef89a",
+    "name": "Graduate Certificate in Regenerative Agriculture",
+    "matchType": null,
+    "url2026": null,
+    "url2027": null
+  },
+  {
+    "id": "99dd66a9-0b15-4997-b12c-a6a9e9d82b72",
+    "name": "Graduate Certificate in Social Sciences for Social Work",
+    "matchKey": "Graduate Certificate in Social Sciences for Social Work",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/graduate-certificate-in-social-sciences-for-social-work-1008520/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/graduate-certificate-in-social-sciences-for-social-work-1008520/2027/"
+  },
+  {
+    "id": "d3e9cadd-02f9-4107-a504-33b46502f5e1",
+    "name": "Graduate Certificate of Business in Global Hotel Leadership",
+    "matchKey": "Graduate Certificate of Business in Global Hotel Leadership",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/graduate-certificate-of-business-in-global-hotel-leadership-1008460/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/graduate-certificate-of-business-in-global-hotel-leadership-1008460/2027/"
+  },
+  {
+    "id": "762e96e8-6e7b-4279-8448-81ebca5d5410",
+    "name": "Graduate Diploma of Accounting",
+    "matchType": null,
+    "url2026": null,
+    "url2027": null
+  },
+  {
+    "id": "0f0f38ff-7e59-4a9d-9ed9-7699ac6a1e07",
+    "name": "Graduate Diploma of Business",
+    "matchKey": "Graduate Diploma of Business",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/graduate-diploma-in-business-1108100/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/graduate-diploma-in-business-1108100/2027/"
+  },
+  {
+    "id": "2320912e-992e-4ba8-a48f-68ed200ec0b8",
+    "name": "Graduate Diploma of Business in Global Hotel Leadership",
+    "matchKey": "Graduate Diploma of Business in Global Hotel Leadership",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/graduate-diploma-of-business-in-global-hotel-leadership-1108430/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/graduate-diploma-of-business-in-global-hotel-leadership-1108430/2027/"
+  },
+  {
+    "id": "10f9c113-819a-408a-86a4-e7031c0c173c",
+    "name": "Graduate Diploma of Computing",
+    "matchType": null,
+    "url2026": null,
+    "url2027": null
+  },
+  {
+    "id": "14977ce8-519b-4ee8-b85d-1f3979ada7ef",
+    "name": "Graduate Diploma of Education (Early Childhood)",
+    "matchKey": "Graduate Diploma of Education (Early Childhood)",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/graduate-diploma-in-education-early-childhood-1107425/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/graduate-diploma-in-education-early-childhood-1107425/2027/"
+  },
+  {
+    "id": "45c51315-0503-42ab-b753-b129b725caa6",
+    "name": "Graduate Diploma of Information Technology",
+    "matchKey": "Graduate Diploma of Information Technology",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/graduate-diploma-of-information-technology-1108520/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/graduate-diploma-of-information-technology-1108520/2027/"
+  },
+  {
+    "id": "b6b3b466-2dcd-4963-80fd-8ab1a19b96cf",
+    "name": "Graduate Diploma of Regenerative Agriculture",
+    "matchType": null,
+    "url2026": null,
+    "url2027": null
+  },
+  {
+    "id": "2566ab70-3131-413d-8811-9ebf21c1d711",
+    "name": "Graduate Diploma of Teaching",
+    "matchKey": "Graduate Diploma of Teaching",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/graduate-diploma-of-teaching-1108004/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/graduate-diploma-of-teaching-1108004/2027/"
+  },
+  {
+    "id": "9a318dbb-7736-4a5a-9796-efdc3cadd0dc",
+    "name": "Master of Business",
+    "matchKey": "Master of Business Administration",
+    "matchType": "fuzzy-ambiguous(3)",
+    "url2026": "https://www.scu.edu.au/study/courses/master-of-business-administration-1208100/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/master-of-business-administration-1208100/2027/"
+  },
+  {
+    "id": "def22d25-2a2d-427c-b601-cbb4baf89f8d",
+    "name": "Master of Business Administration",
+    "matchKey": "Master of Business Administration",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/master-of-business-administration-1208100/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/master-of-business-administration-1208100/2027/"
+  },
+  {
+    "id": "6cb2a49c-ad1e-4181-80e9-66ba8cb3501c",
+    "name": "Master of Business in Global Hotel Leadership",
+    "matchKey": "Master of Business in Global Hotel Leadership",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/master-of-business-in-global-hotel-leadership-1209230/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/master-of-business-in-global-hotel-leadership-1209230/2027/"
+  },
+  {
+    "id": "e4cc69d8-1524-444b-b1fe-71b2f430213e",
+    "name": "Master of Computing",
+    "matchType": null,
+    "url2026": null,
+    "url2027": null
+  },
+  {
+    "id": "1179fab1-b9a2-4d82-a07d-daf6e816c8e9",
+    "name": "Master of Construction Practice",
+    "matchKey": "Master of Construction Practice",
+    "matchType": "exact",
+    "url2026": null,
+    "url2027": "https://www.scu.edu.au/study/courses/master-of-construction-practice-1209410/2027/"
+  },
+  {
+    "id": "1bcf7f62-2654-4527-b56d-a332d4340f1e",
+    "name": "Master of Engineering",
+    "matchKey": "Master of Engineering",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/master-of-engineering-1209400/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/master-of-engineering-1209400/2027/"
+  },
+  {
+    "id": "5e8f036e-2468-4a96-b4e5-3b4759bb7337",
+    "name": "Master of Engineering Management",
+    "matchKey": "Master of Engineering Management",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/master-of-engineering-management-1209100/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/master-of-engineering-management-1209100/2027/"
+  },
+  {
+    "id": "0aa8573a-e4c8-4653-a56c-a03bda3bb5a9",
+    "name": "Master of Information Technology",
+    "matchKey": "Master of Information Technology",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/master-of-information-technology-1209160/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/master-of-information-technology-1209160/2027/"
+  },
+  {
+    "id": "fa21dc8d-bf83-43ed-a2f6-a368b883710b",
+    "name": "Master of Naturopathic Medicine",
+    "matchKey": "Master of Naturopathic Medicine",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/master-of-naturopathic-medicine-1209350/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/master-of-naturopathic-medicine-1209350/2027/"
+  },
+  {
+    "id": "c3141657-820a-4020-836c-2e508c4e7e1d",
+    "name": "Master of Nursing (Graduate Entry)",
+    "matchKey": "Master of Nursing (Graduate Entry)",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/master-of-nursing-graduate-entry-1209320/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/master-of-nursing-graduate-entry-1209320/2027/"
+  },
+  {
+    "id": "b5605b31-59a5-4785-a8db-dabe97620342",
+    "name": "Master of Osteopathic Medicine",
+    "matchKey": "Master of Osteopathic Medicine",
+    "matchType": "exact",
+    "url2026": "https://www.scu.edu.au/study/courses/master-of-osteopathic-medicine-1207235/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/master-of-osteopathic-medicine-1207235/2027/"
+  },
+  {
+    "id": "73ac8c58-d278-4f16-bf49-fb89ecd369e0",
+    "name": "Master of Professional Accounting",
+    "matchType": null,
+    "url2026": null,
+    "url2027": null
+  },
+  {
+    "id": "1224583e-5f2d-4859-9096-04cd35f1bdf6",
+    "name": "Master of Science (ES&M)",
+    "matchType": null,
+    "url2026": null,
+    "url2027": null
+  },
+  {
+    "id": "801ab388-4c9b-473a-acb2-5ad681868ce6",
+    "name": "Master of Social Work (Qualifying)",
+    "matchType": null,
+    "url2026": null,
+    "url2027": null
+  },
+  {
+    "id": "1dfb95c1-31f5-4a81-a117-6799847635be",
+    "name": "Master of Teaching (Secondary)",
+    "matchKey": "Master of Teaching",
+    "matchType": "fuzzy-contains",
+    "url2026": "https://www.scu.edu.au/study/courses/master-of-teaching-1209001/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/master-of-teaching-1209001/2027/"
+  },
+  {
+    "id": "280efd4e-1875-444e-868d-7e7795da96e5",
+    "name": "Masters by Thesis",
+    "matchType": null,
+    "url2026": null,
+    "url2027": null
+  },
+  {
+    "id": "a52a3f06-cb60-4e15-889d-4d967cea5da6",
+    "name": "Undergraduate Certificate in Business",
+    "matchKey": "Graduate Certificate in Business",
+    "matchType": "fuzzy-contains",
+    "url2026": "https://www.scu.edu.au/study/courses/graduate-certificate-in-business-1008100/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/graduate-certificate-in-business-1008100/2027/"
+  },
+  {
+    "id": "64d5fb36-8de9-45e5-9255-be36064601b7",
+    "name": "Undergraduate Certificate in Education",
+    "matchKey": "Graduate Certificate in Education",
+    "matchType": "fuzzy-contains",
+    "url2026": "https://www.scu.edu.au/study/courses/graduate-certificate-in-education-1008252/2026/",
+    "url2027": "https://www.scu.edu.au/study/courses/graduate-certificate-in-education-1008252/2027/"
+  }
+]

@@ -49,3 +49,6 @@ next-env.d.ts
 
 # Transient program-enrichment worklists (source of truth is programs.json)
 scripts/data/_*
+
+# Raw HTML scrape cache from build-out sprints (large, regenerable)
+scripts/data/scu_html_cache/
