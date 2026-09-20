@@ -708,6 +708,36 @@
       "name": "Diploma of Health Care",
       "reason": "Active at CQU (handbook code CL93) but not open to international students: it does not appear in CQU's international-filtered course finder search, and its course URL (cqu.edu.au/courses/cl93) does not resolve with ?audience=INTERNATIONAL (redirects to the generic Find a Course page).",
       "archived_at": "2026-09-20T03:06:54.957Z"
+    },
+    {
+      "id": "85cc65a1-60f6-4a29-a3b6-5ce55114f3a0",
+      "name": "Graduate Certificate in Clinical Ultrasound",
+      "reason": "Confirmed discontinued via CQU's own handbook: although the course still appears in handbook.cqu.edu.au's own search index (course code CH86, Graduate Certificate in Clinical Ultrasound), navigating directly to handbook.cqu.edu.au/he/courses/view/CH86 resolves to 'Course Not Found ... no longer offered by CQUniversity', the same decisive discontinuation pattern used for Diploma of Agricultural Studies (CM13) earlier in this rotation.",
+      "archived_at": "2026-09-20T03:22:23.003Z"
+    },
+    {
+      "id": "569185af-85ad-413f-8e55-9f2259198ed5",
+      "name": "Graduate Diploma of Engineering",
+      "reason": "Confirmed discontinued via CQU's own handbook (course code CV87, handbook.cqu.edu.au/he/courses/view/CV87): the live page carries an explicit banner 'Please note, students can no longer be admitted into this course', with the course retained only as an interim/exit award for students already enrolled.",
+      "archived_at": "2026-09-20T03:28:19.597Z"
+    },
+    {
+      "id": "d18eab9e-ec71-4f36-bce5-22c7a2f9a39f",
+      "name": "Graduate Diploma of Leading Organisational Change",
+      "reason": "Confirmed discontinued via CQU's own handbook: course code CM35 appears in handbook.cqu.edu.au's own search index (no 'Apply Now' link, unlike active courses), and navigating to handbook.cqu.edu.au/he/courses/view/CM35 resolves to 'Course Not Found ... no longer offered by CQUniversity'.",
+      "archived_at": "2026-09-20T03:31:30.289Z"
+    },
+    {
+      "id": "e1698db3-c520-47a6-8a24-4818974340a0",
+      "name": "Graduate Diploma of Nutrition",
+      "reason": "Confirmed discontinued via CQU's own handbook: course code CL89 appears in handbook.cqu.edu.au's own search index, but navigating to handbook.cqu.edu.au/he/courses/view/CL89 resolves to 'Course Not Found ... no longer offered by CQUniversity' (verified twice).",
+      "archived_at": "2026-09-20T03:34:34.551Z"
+    },
+    {
+      "id": "6fe00167-3622-421e-b0f1-f574c13aa02d",
+      "name": "Graduate Diploma of Public Health",
+      "reason": "Confirmed discontinued via CQU's own handbook (course code CL44, handbook.cqu.edu.au/he/courses/view/CL44): the live page carries an explicit banner 'Please note, students can no longer be admitted into this course'.",
+      "archived_at": "2026-09-20T03:34:34.722Z"
     }
   ]
 }
