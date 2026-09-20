@@ -140,9 +140,9 @@ export default async function CollectionPage({
                 className="group flex flex-col gap-1 rounded-2xl border border-line bg-mist p-5 transition-all duration-150 hover:-translate-y-0.5 hover:border-status-open/30 hover:shadow-[0_14px_36px_-18px_rgba(22,35,63,0.28)]"
               >
                 <span className="flex items-start justify-between gap-3">
-                  <span className="font-display text-lg font-semibold text-ink group-hover:underline">
+                  <h2 className="font-display text-lg font-semibold text-ink group-hover:underline">
                     {e.name}
-                  </span>
+                  </h2>
                   <ArrowUpRightIcon className="mt-1 h-4 w-4 flex-shrink-0 text-slate transition-colors duration-150 group-hover:text-status-open" />
                 </span>
                 <span className="font-utility text-sm font-medium text-status-open">
@@ -211,6 +211,21 @@ export default async function CollectionPage({
           <span className="text-ink">
             <span className="font-semibold">The full explanation:</span>{" "}
             {collection.relatedGuide.label}
+          </span>
+          <span aria-hidden="true" className="text-status-open">
+            &rarr;
+          </span>
+        </Link>
+      )}
+
+      {collection.seeAlso && (
+        <Link
+          href={collection.seeAlso.href}
+          className="mt-3 flex items-center justify-between gap-3 rounded-xl border border-line bg-mist px-4 py-3 font-body text-sm transition-colors duration-150 hover:border-status-open/30"
+        >
+          <span className="text-ink">
+            <span className="font-semibold">Also see:</span>{" "}
+            {collection.seeAlso.label}
           </span>
           <span aria-hidden="true" className="text-status-open">
             &rarr;

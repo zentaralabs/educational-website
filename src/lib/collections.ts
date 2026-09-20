@@ -62,6 +62,13 @@ export type Collection = {
    * competing for the same query.
    */
   relatedGuide?: { href: string; label: string };
+  /**
+   * A sibling /best collection covering an adjacent-but-distinct search
+   * intent (e.g. the MBA page and the broader business-schools page),
+   * rendered as its own callout so the two don't compete for the same
+   * query while still pointing a reader toward the more specific one.
+   */
+  seeAlso?: { href: string; label: string };
   build: (universities: CollectionUniversity[]) => CollectionEntry[];
 };
 
@@ -326,6 +333,10 @@ function businessSchoolsCollection(): Collection {
       href: "/guides/which-australian-courses-lead-to-permanent-residence",
       label: "Which Australian courses actually lead to permanent residence",
     },
+    seeAlso: {
+      href: "/best/best-mba-programs-in-australia",
+      label: "The best MBA programs in Australia, ranked and compared",
+    },
     faq: [
       {
         q: "Do I need work experience for an MBA in Australia?",
@@ -360,6 +371,229 @@ function businessSchoolsCollection(): Collection {
                 : "",
           note: why.get(u.slug) ?? "A recognised choice for business and management.",
         })),
+  };
+}
+
+/**
+ * The eight MBA programs, same schools and same source-checked figures as
+ * the table in `businessSchoolsCollection()`. Split into its own typed
+ * array so the dedicated MBA page (`mbaCollection()`, below) and the
+ * broader business-schools page can both build from one fact-checked
+ * source rather than drifting apart. See that function's comment for the
+ * verification date and method.
+ */
+const MBA_SCHOOLS: {
+  slug: string;
+  name: string;
+  program: string;
+  tuition: number;
+  duration: string;
+  accreditation: string;
+  entry: string;
+  intakes: string;
+}[] = [
+  {
+    slug: "university-of-melbourne",
+    name: "University of Melbourne",
+    program: "MBA (Melbourne Business School)",
+    tuition: 56250,
+    duration: "2 years",
+    accreditation: "AACSB, EQUIS",
+    entry: "2–3 yrs work experience; GMAT/GRE optional",
+    intakes: "Feb, Jul",
+  },
+  {
+    slug: "unsw-sydney",
+    name: "UNSW Sydney",
+    program: "MBA (AGSM)",
+    tuition: 68000,
+    duration: "1.5 years",
+    accreditation: "AACSB, EQUIS",
+    entry: "2 yrs work experience (or 6 yrs without a degree); GMAT/GRE preferred",
+    intakes: "Feb, Jul",
+  },
+  {
+    slug: "university-of-sydney",
+    name: "University of Sydney",
+    program: "MBA (Leadership and Enterprise)",
+    tuition: 60700,
+    duration: "1.5 years",
+    accreditation: "AACSB, EQUIS, AMBA",
+    entry: "3 yrs work experience, GPA 65+, interview; GMAT 600+ if below the academic bar",
+    intakes: "Contact the school",
+  },
+  {
+    slug: "monash-university",
+    name: "Monash University",
+    program: "MBA",
+    tuition: 62000,
+    duration: "1.5 years",
+    accreditation: "AACSB, EQUIS, AMBA",
+    entry: "Credit average (60%+) plus 3 yrs relevant work experience",
+    intakes: "Feb, Jul",
+  },
+  {
+    slug: "queensland-university-of-technology",
+    name: "Queensland University of Technology",
+    program: "MBA (Digital MBA)",
+    tuition: 44000,
+    duration: "2 years",
+    accreditation: "AACSB, EQUIS, AMBA",
+    entry: "Bachelor's degree plus 3 yrs professional work experience",
+    intakes: "Feb, Jul",
+  },
+  {
+    slug: "bond-university",
+    name: "Bond University",
+    program: "MBA",
+    tuition: 50900,
+    duration: "~16 months",
+    accreditation: "AACSB, EQUIS",
+    entry: "Bachelor's degree; work experience recommended, not always required",
+    intakes: "Jan, May, Sep",
+  },
+  {
+    slug: "university-of-technology-sydney",
+    name: "University of Technology Sydney",
+    program: "MBA",
+    tuition: 49990,
+    duration: "2 years",
+    accreditation: "AACSB, EQUIS",
+    entry: "Bachelor's with GPA 5.25/7, or a graduate-certificate pathway",
+    intakes: "Feb, Jul",
+  },
+  {
+    slug: "australian-institute-of-business",
+    name: "Australian Institute of Business",
+    program: "MBA (specialisations from AUD 34,000)",
+    tuition: 34000,
+    duration: "2 years",
+    accreditation: "TEQSA-registered (not AACSB/EQUIS/AMBA)",
+    entry: "Bachelor's in any discipline, or significant management experience",
+    intakes: "Feb, Jul, Oct",
+  },
+];
+
+/**
+ * Hand-authored, MBA-only collection, split out from `businessSchoolsCollection()`
+ * on 2026-09-20 per the SEO audit's cluster analysis: "best MBA in Australia"
+ * and "best business schools in Australia" return SERPs sharing zero top-10
+ * URLs, so a page titled and framed around business schools generally will
+ * not rank for MBA-specific intent no matter how much MBA content it
+ * contains, and the reverse is also true. GSC shows this as a real,
+ * separate opportunity: large impression volume at position 50-90 for the
+ * business/MBA cluster, with no dedicated page competing for it.
+ *
+ * The 9/9 top-ranking pages for "best MBA in Australia" are numbered
+ * listicles with a per-school heading, fees, and rank citations -- the
+ * `/best/[slug]` template's ranked-list rendering (real <h2> per entry,
+ * fixed 2026-09-20) matches that shape directly, unlike a narrative guide.
+ *
+ * Same eight schools and same September-2026-verified figures as
+ * `businessSchoolsCollection()` (see `MBA_SCHOOLS`); re-verify before
+ * reusing these numbers elsewhere.
+ */
+function mbaCollection(): Collection {
+  const order = new Map(MBA_SCHOOLS.map((m, i) => [m.slug, i]));
+  const byUniSlug = new Map(MBA_SCHOOLS.map((m) => [m.slug, m]));
+  return {
+    slug: "best-mba-programs-in-australia",
+    title: "The best MBA programs in Australia for international students",
+    metaTitle: "Best MBA in Australia: Cost, Entry Requirements, Rankings",
+    shortTitle: "Best MBA programs",
+    category: "subject",
+    metaDescription:
+      "Compare Australia's top MBA programs by tuition, duration, accreditation, and entry requirements, with what an MBA actually does for your permanent residence chances.",
+    intro: [
+      "An MBA in Australia costs from around AUD 34,000 a year at the low end to AUD 68,000 at UNSW Sydney, and most programs want at least two years of professional work experience before they'll admit you. That work-experience bar is what separates the MBA from a general business master's, which usually accepts a bachelor's in any discipline straight out of undergrad.",
+      "There is no official ranking of Australian MBA programs, and league-table position is a weaker signal than accreditation from AACSB, EQUIS, or AMBA, the three bodies that actually audit a business school's teaching and research quality. This list ranks the eight MBA programs with a genuine reputation among Australian business schools, with what each is known for. For the broader field, including business master's that don't require work experience, see the best business schools page.",
+    ],
+    sectionsBeforeList: [
+      {
+        heading: "Is an MBA actually the degree you want?",
+        body: [
+          "The MBA is built for people already in management: most programs want two or more years of work experience, cost the most of any business qualification, and lean on cohort networking and a case-study teaching style over classroom lectures. If you're a recent graduate or changing careers without that experience, a Master of Management, Master of Business Analytics, or a specialist master's in finance, marketing, or accounting is more accessible and usually cheaper, and most accept a bachelor's in any discipline with no work experience required.",
+          "Both sit under \"business and management\" in search results and on this site, but they lead to different outcomes and different price tags. If you're not sure an MBA is the one you need, the best business schools page covers the wider field.",
+        ],
+      },
+    ],
+    table: {
+      columns: ["University", "MBA program", "Tuition (per year)", "Duration", "Accreditation", "Typical entry bar", "Intakes"],
+      rows: MBA_SCHOOLS.map((m) => ({
+        cells: [
+          m.name,
+          m.program,
+          formatCurrency(m.tuition, "AUD"),
+          m.duration,
+          m.accreditation,
+          m.entry,
+          m.intakes,
+        ],
+      })),
+      note: "Annual tuition for the MBA (multiply by duration for the full program cost), checked against each school's own program page in September 2026. Fees change; confirm the current figure before applying. AIB is a TEQSA-registered private higher education provider, not a university, and does not hold AACSB, EQUIS, or AMBA accreditation.",
+    },
+    sectionsAfterList: [
+      {
+        heading: "Is an MBA worth it for permanent residence?",
+        body: [
+          "Weaker than it looks. General management and marketing roles, which is what an MBA graduate is usually aiming for, are hard to nominate for on Australia's skilled occupation lists. Accounting is the clear exception in the business faculty: Accountant (General), Management Accountant, and Taxation Accountant all sit on the Medium and Long-term Strategic Skills List and the Core Skills Occupation List, supporting the 189, 190, 491, and employer-sponsored 482 and 186 visas, with a skills assessment from CPA Australia, CA ANZ, or the IPA.",
+          "If permanent residence is the actual goal rather than a nice-to-have, an accredited Master of Professional Accounting is the more reliable route through a business faculty, not the MBA. Treat the MBA as a career and networking investment, and pair it with a genuine migration plan if you need one.",
+        ],
+      },
+      {
+        heading: "MBA entry requirements at a glance",
+        body: [
+          "English requirements cluster around IELTS Academic 6.5 overall, rising to 7.0 for the University of Sydney's MBA. The GMAT is rarely mandatory: only Sydney and, at some intakes, other Go8 schools lean on it as a fallback when the academic record or work experience falls short, and most schools will admit on your degree and CV alone.",
+          "Work experience is the real filter. UNSW, Monash, and QUT all expect two to three years in a professional role, Bond and UTS are more flexible about it, and the Australian Institute of Business will admit on a bachelor's degree in any discipline with no work experience at all, which is why it's the lowest-cost option here.",
+        ],
+      },
+    ],
+    methodology:
+      "The eight MBA programs with a genuine reputation among Australian business schools, based on research output, industry links, and accreditation, not league-table position. Tuition, duration, admission criteria, and intakes are the published figures for each school's flagship MBA, checked against the university's own program page and this site's program dataset in September 2026. It is not a ranking, and a shorter, cheaper program can suit your goals better than the most expensive name on this list.",
+    relatedGuide: {
+      href: "/guides/which-australian-courses-lead-to-permanent-residence",
+      label: "Which Australian courses actually lead to permanent residence",
+    },
+    seeAlso: {
+      href: "/best/best-australian-universities-for-business",
+      label: "The best business schools in Australia, including master's degrees that don't require work experience",
+    },
+    faq: [
+      {
+        q: "What is the best MBA in Australia?",
+        a: "There is no official ranking. The University of Sydney, Monash University, and Queensland University of Technology hold the AACSB, EQUIS, and AMBA \"triple crown\" accreditation, held by roughly 1 percent of business schools worldwide, which is a stronger signal than any league table. Melbourne Business School and UNSW's AGSM are the other two most recognised names.",
+      },
+      {
+        q: "How much does an MBA cost in Australia for international students?",
+        a: "Annual tuition runs from about AUD 34,000 at the Australian Institute of Business to AUD 68,000 at UNSW Sydney, for programs lasting roughly 16 months to two years, so the full program costs considerably more than the annual figure. Fees are reviewed annually; confirm the current figure with the school before applying.",
+      },
+      {
+        q: "Do I need work experience for an MBA in Australia?",
+        a: "Most programs want at least two to three years of professional work experience, and some, like UNSW and Sydney, will admit on six or more years without a completed degree. The Australian Institute of Business is the exception: it accepts a bachelor's degree in any discipline with no work experience required.",
+      },
+      {
+        q: "Can I get PR in Australia after an MBA?",
+        a: "It's a weaker path than it looks. General management roles are hard to nominate for on the skilled occupation lists. An accredited Master of Professional Accounting has a much clearer route, through CPA Australia, CA ANZ, or IPA skills assessment, because accounting occupations sit on both the MLTSSL and CSOL.",
+      },
+      {
+        q: "Do Australian MBA programs require the GMAT?",
+        a: "Rarely as a hard requirement. The University of Sydney asks for GMAT 600+ if your academic record falls below its bar, and a few other schools accept it as an optional strengthening of your application, but most admit on your degree, CV, and work experience alone.",
+      },
+    ],
+    build: (unis) =>
+      unis
+        .filter((u) => order.has(u.slug))
+        .sort((a, b) => (order.get(a.slug) ?? 99) - (order.get(b.slug) ?? 99))
+        .map((u) => {
+          const m = byUniSlug.get(u.slug)!;
+          return {
+            slug: u.slug,
+            name: u.name,
+            city: u.city,
+            headline: `${formatCurrency(m.tuition, "AUD")}/year`,
+            note: `${m.program}, ${m.duration}. ${m.accreditation}.`,
+          };
+        }),
   };
 }
 
@@ -815,6 +1049,7 @@ export const COLLECTIONS: Collection[] = [
   cityCollection({ city: "Canberra", match: /canberra/i, slug: "cheapest-universities-in-canberra-for-international-students" }),
   ...SUBJECT_BEST_PAGES.map(subjectBestCollection),
   businessSchoolsCollection(),
+  mbaCollection(),
   cheapestNursingCollection(),
 ];
 
