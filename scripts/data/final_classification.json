@@ -1,0 +1,43 @@
+{
+  "archive": {
+    "Bachelor of Art and Design": "Last offered in the 2024 handbook (course 3007160); absent from the current 2026/2027 course sitemap and the SCU course finder. Handbook redirects /2026 requests to the 2024 version.",
+    "Bachelor of Digital Media": "Last offered in the 2024 handbook (course 3007084); absent from the current 2026/2027 course sitemap. Handbook redirects /2026 requests to the 2024 version.",
+    "Bachelor of Engineering Systems (Honours)": "Last offered in the 2025 handbook (course 3508003); absent from the current 2026/2027 course sitemap. Superseded by the restructured Bachelor of Engineering (Honours) (3508007), which now carries the Civil/Mechanical specialisations.",
+    "Bachelor of Environmental Science": "Last offered in the 2020 handbook (course 3004100), 6 years gone; legacy-format CRICOS code (016152G) also indicates retirement. Absent from the current 2026/2027 course sitemap.",
+    "Diploma of Arts": "Maps to SCU's 'Diploma of Arts and Social Sciences' (course 2125300); last offered in the 2023 handbook. Absent from the current 2026/2027 course sitemap.",
+    "Diploma of Regenerative Agriculture": "Last offered in the 2025 handbook (course 2125105); absent from the current 2026/2027 course sitemap. The whole Regenerative Agriculture suite (Grad Cert, Grad Dip, Diploma) was wound down together.",
+    "Graduate Certificate in Regenerative Agriculture": "Last offered in the 2025 handbook (course 1008140); absent from the current 2026/2027 course sitemap.",
+    "Graduate Diploma of Regenerative Agriculture": "Last offered in the 2025 handbook (course 1108440); absent from the current 2026/2027 course sitemap.",
+    "Graduate Certificate in Accounting": "Last offered in the 2024 handbook (course 1007134); absent from the current 2026/2027 course sitemap. The whole standalone Accounting-certificate suite (Grad Cert, Grad Dip, Master of Professional Accounting) was wound down together.",
+    "Graduate Diploma of Accounting": "Last offered in the 2024 handbook (course 1107135); absent from the current 2026/2027 course sitemap.",
+    "Master of Professional Accounting": "Last offered in the 2024 handbook (course 1207045); absent from the current 2026/2027 course sitemap.",
+    "Graduate Certificate in Computing": "Handbook redirect for this course code (1008510) returns 404, the most decisive discontinuation signal of any row in this sprint; absent from the current 2026/2027 course sitemap.",
+    "Master of Computing": "Last offered in the 2025 handbook (course 1209151); absent from the current 2026/2027 course sitemap.",
+    "Graduate Diploma of Computing": "Nested exit award of the discontinued Master of Computing (1209151); same fate, absent from current sitemap.",
+    "Associate Degree of Business and Enterprise": "Nested exit award of Bachelor of Business and Enterprise (3007150), last offered in the 2024 handbook; absent from the current 2026/2027 course sitemap.",
+    "Bachelor of Business and Enterprise (Aviation Management)": "Aviation Management specialisation of Bachelor of Business and Enterprise (3007150), last offered in the 2024 handbook; absent from the current 2026/2027 course sitemap.",
+    "Bachelor of Business in Tourism and Hospitality Management": "Last offered in the 2018 handbook (course 3007314), 8 years gone; absent from the current 2026/2027 course sitemap.",
+    "Master of Science (ES&M)": "Legacy-format CRICOS code (051066D); no current or recent (post-2020) SCU page, handbook entry, or course-sitemap entry found under this name or code after genuine search effort.",
+    "Master of Business": "Legacy-format CRICOS code (016179G); no current SCU page, handbook entry, or course-sitemap entry found under this plain name (as distinct from Master of Business Administration, Master of Business Law, Master of Business in Global Hotel Leadership, or Master of Management, all of which are separately live and already matched).",
+    "Undergraduate Certificate in Business": "Last offered in the 2022 handbook (course 2004300); absent from the current 2026/2027 course sitemap.",
+    "Undergraduate Certificate in Education": "Last offered in the 2024 handbook (course 2004200); absent from the current 2026/2027 course sitemap."
+  },
+  "specialMatches": {
+    "Associate Degree of Business (Exit award)": {"url": "https://www.scu.edu.au/study/courses/bachelor-of-business-3007255/2026/", "note": "Nested exit award described inside the live Bachelor of Business course-requirements section, not a standalone course page."},
+    "Doctor of Philosophy (Business)": {"url": "https://www.scu.edu.au/graduate-school/higher-degrees-research/doctor-of-philosophy/", "note": "HDR research degree; sourced from the Graduate School PhD page plus the Business discipline research page, not a course-finder page."},
+    "Graduate Certificate in Construction Practice": {"url": "https://www.scu.edu.au/study/courses/master-of-construction-practice-1209410/2027/", "note": "Nested exit award described inside the live (2027-launch) Master of Construction Practice course-requirements section."},
+    "Master of Social Work (Qualifying)": {"url": "https://www.scu.edu.au/study/courses/master-of-social-work-professional-qualifying-1207269/2026/", "note": "Current live page is now branded 'Master of Social Work (Professional Qualifying)'; same course code 1207269."},
+    "Masters by Thesis": {"url": "https://www.scu.edu.au/graduate-school/higher-degrees-research/masters-by-thesis/", "note": "HDR research degree; sourced from the Graduate School Masters by Thesis page, not a course-finder page."}
+  },
+  "corrections": {
+    "Bachelor of Business and Enterprise (Aviation Management)": "ARCHIVE (see archive list) - previous fuzzy match to Bachelor of Business was wrong",
+    "Bachelor of Business in Tourism and Hospitality Management": "ARCHIVE (see archive list) - previous fuzzy match to Bachelor of Business was wrong",
+    "Bachelor of Education (Primary)": {"url": "https://www.scu.edu.au/study/courses/bachelor-of-education-3007002/2026/", "note": "Old standalone 'Bachelor of Education (Primary)' (110583A) restructured into a single combined 'Bachelor of Education' (3007002) with Primary and Secondary specialisations within the one award. Prior 'bond-standard' row used a dead source_url and fabricated ATAR/English figures - being fully re-sourced."},
+    "Bachelor of Laws (Undergraduate) 3 years": {"url": "https://www.scu.edu.au/study/courses/bachelor-of-laws-3007001/2026/", "note": "Same live LLB course as the plain 'Bachelor of Laws' row; undergraduate-entry (3 year) pathway is part of the same current course page."},
+    "Bachelor of Nursing": {"url": "https://www.scu.edu.au/study/courses/bachelor-of-nursing-3005105/2026/", "note": "Plain Bachelor of Nursing is course 3005105 (Coffs Harbour/Bilinga), distinct from the Enrolled-Nurse pathway course 3007303."},
+    "Bachelor of Nursing - Enrolled Nurse to Registered Nurse Pathway": {"url": "https://www.scu.edu.au/study/courses/bachelor-of-nursing-3007303/2026/", "note": "This pathway is course 3007303, distinct from the plain Bachelor of Nursing (3005105)."},
+    "Master of Business": "ARCHIVE (see archive list) - previous fuzzy match to Master of Business Administration was wrong",
+    "Undergraduate Certificate in Business": "ARCHIVE (see archive list) - previous fuzzy match to Graduate Certificate in Business was wrong",
+    "Undergraduate Certificate in Education": "ARCHIVE (see archive list) - previous fuzzy match to Graduate Certificate in Education was wrong"
+  }
+}
