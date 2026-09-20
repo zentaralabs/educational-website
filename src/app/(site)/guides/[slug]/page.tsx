@@ -1,7 +1,6 @@
 import { notFound, redirect } from "next/navigation";
 import { ArticleMeta } from "@/components/site/ArticleMeta";
 import { ArticleShell } from "@/components/site/ArticleShell";
-import { FaqSection } from "@/components/site/FaqSection";
 import { GuideContent } from "@/components/site/GuideContent";
 import { LastVerified } from "@/components/site/LastVerified";
 import { CheckBadgeIcon } from "@/components/site/icons";
@@ -62,6 +61,10 @@ export default async function GuidePage({
   if (guide.category === "comparison") redirect(`/compare/${guide.slug}`);
 
   const related = await getGuideRelatedContent(guide.id);
+  // Feeds FaqPage JSON-LD only. These are pulled from question-shaped
+  // headings already inside `guide.content`, which the body below renders
+  // in full -- a visible <FaqSection> here would show every one of these
+  // twice (once as an H2 in the article, once again in a card grid).
   const faqItems = extractFaqItems(guide.content).map((f) => ({ q: f.question, a: f.answer }));
   const toc = extractToc(guide.content);
 
@@ -132,10 +135,6 @@ export default async function GuidePage({
               <CheckBadgeIcon className="mt-0.5 h-4 w-4 flex-shrink-0 text-status-open" />
               <LastVerified date={guide.last_verified_at} sources={guide.source_urls} />
             </div>
-
-            {faqItems.length > 0 && (
-              <FaqSection heading="Common questions" items={faqItems} />
-            )}
 
             <RelatedLinks
               className="mt-12 border-t border-line pt-8"
