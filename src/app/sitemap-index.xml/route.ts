@@ -10,19 +10,26 @@ import { SITE_URL } from "@/lib/site-config";
  *
  * The practical one: Search Console recorded `/sitemap.xml` as "Couldn't
  * fetch" during the window when that route still ran a paginated 868-row
- * program query and could time out on a cold database. The query is gone and
- * the file now answers in ~200ms with a 200 and valid XML to Googlebot, but
- * the failed record persists and re-submitting the same URL does not clear it
- * (Search Console retries a failed sitemap slowly on a new domain). Submitting
- * this index is a fresh URL, so it gets a fresh record and pulls both children
- * in behind it.
+ * program query and could time out on a cold database. The query was fixed
+ * long before this comment was first written, but the failed record on that
+ * URL never cleared — repeated resubmission does nothing, and even live
+ * URL tests and Googlebot's own crawl history confirmed the file fetched
+ * fine while Search Console's Sitemaps report kept reporting failure against
+ * that exact URL. This index's own submission (2026-09-03) was a fresh URL
+ * and worked immediately, but it turned out that pulling the *content* of
+ * `/sitemap.xml` in as a child here did not carry the same immunity — the
+ * old URL's poisoned record apparently followed it even when reached
+ * indirectly. So on 2026-09-20 that content was moved again, this time to
+ * `/sitemap-pages.xml` (a URL with no history at all, same pattern already
+ * proven for `/sitemap-programs.xml`), and `/sitemap.xml` itself was retired
+ * with a `410 Gone` rather than reused for anything again.
  *
- * Next generates no index of its own for `sitemap.ts`, hence the hand-rolled
- * route.
+ * Next generates no index of its own for a metadata-route sitemap, hence the
+ * hand-rolled route.
  */
 export const revalidate = 21600; // 6h, same cadence as the children
 
-const CHILDREN = ["/sitemap.xml", "/sitemap-programs.xml"];
+const CHILDREN = ["/sitemap-pages.xml", "/sitemap-programs.xml"];
 
 export async function GET() {
   // The children carry per-URL `lastmod` from their own rows; the index only
