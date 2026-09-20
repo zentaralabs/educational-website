@@ -943,7 +943,7 @@ try {
   await pingIndexNow([
     "/visas/invitation-rounds",
     "/visas",
-    "/sitemap.xml",
+    "/sitemap-pages.xml",
     ...visas.map((v) => `/visas/${v.slug}`),
   ]);
 } catch (e) {

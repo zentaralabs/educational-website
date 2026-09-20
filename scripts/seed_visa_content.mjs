@@ -1890,7 +1890,7 @@ try {
   await pingIndexNow([
     "/blog",
     "/guides",
-    "/sitemap.xml",
+    "/sitemap-pages.xml",
     ...posts.map((p) => `/blog/${p.slug}`),
     ...guides.map((g) => `/guides/${g.slug}`),
   ]);

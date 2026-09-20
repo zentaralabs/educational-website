@@ -168,7 +168,7 @@ try {
       : "em-dash check: clean",
   );
 
-  await pingIndexNow(["/updates", "/sitemap.xml"]);
+  await pingIndexNow(["/updates", "/sitemap-pages.xml"]);
 } catch (e) {
   console.error("ERR", e.message);
   process.exit(1);
