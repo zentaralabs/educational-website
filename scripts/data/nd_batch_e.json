@@ -1,0 +1,74 @@
+[
+  {
+    "id": "4d1ab5b7-ed1b-49ff-ab87-c282ae4a8031",
+    "name": "Bachelor of Biomedical Science (Assured Pathway to Medicine)"
+  },
+  {
+    "id": "1a5ddb6d-40f8-4b1b-88b2-811e3b8b48c0",
+    "name": "Bachelor of Exercise and Sport Science"
+  },
+  {
+    "id": "50e4d05c-8acd-408d-af7d-bcd709e6d973",
+    "name": "Bachelor of Health Promotion"
+  },
+  {
+    "id": "22d95c3e-2c27-476b-b2e9-c7fbbaf00f6d",
+    "name": "Bachelor of Health Sciences"
+  },
+  {
+    "id": "4b17679d-9543-4856-a7dc-d44999adeda1",
+    "name": "Bachelor of Nursing"
+  },
+  {
+    "id": "ca64f940-231f-4e85-9207-1f520b9f4469",
+    "name": "Bachelor of Occupational Therapy (Honours)"
+  },
+  {
+    "id": "a2ac0549-36ab-464d-8d56-1d143952f53f",
+    "name": "Bachelor of Physiotherapy"
+  },
+  {
+    "id": "ae5fdcf2-513c-422e-920b-b0f674c25c08",
+    "name": "Doctor of Health Sciences"
+  },
+  {
+    "id": "6ddc03a2-91a1-41e3-9f30-a26db284b55c",
+    "name": "Doctor of Medicine"
+  },
+  {
+    "id": "0e6ed55c-ed6b-462b-a301-fb51856bcb55",
+    "name": "Doctor of Nursing"
+  },
+  {
+    "id": "b93cc64b-9487-4547-b488-c02dd032c0db",
+    "name": "Doctor of Physiotherapy Research"
+  },
+  {
+    "id": "4c76d44d-1a94-46f8-b2ca-4b36cbc93e1e",
+    "name": "Graduate Certificate in Medical Sciences"
+  },
+  {
+    "id": "37293e13-ce1d-43d3-9868-40d8392951a4",
+    "name": "Master of Health Sciences"
+  },
+  {
+    "id": "a5f32e41-f128-4f15-86cb-625b4b3f9606",
+    "name": "Master of Medicine/Surgery"
+  },
+  {
+    "id": "e7026ab8-1fed-4a92-879c-4d20a388f280",
+    "name": "Master of Nursing (Coursework and Thesis)"
+  },
+  {
+    "id": "4e4896f6-1c26-43db-8c7c-b1ccbd78082c",
+    "name": "Master of Philosophy (College of Nursing)"
+  },
+  {
+    "id": "3c1bd5f6-cbb0-412c-8397-10f20883e0f9",
+    "name": "Master of Physiotherapy"
+  },
+  {
+    "id": "3c93e013-0362-44de-a838-96a352a8d795",
+    "name": "Master of Science (Physiotherapy)"
+  }
+]
