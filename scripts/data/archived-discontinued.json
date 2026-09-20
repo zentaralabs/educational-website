@@ -738,6 +738,300 @@
       "name": "Graduate Diploma of Public Health",
       "reason": "Confirmed discontinued via CQU's own handbook (course code CL44, handbook.cqu.edu.au/he/courses/view/CL44): the live page carries an explicit banner 'Please note, students can no longer be admitted into this course'.",
       "archived_at": "2026-09-20T03:34:34.722Z"
+    },
+    {
+      "id": "46c7708f-89d2-440d-b233-e67395f3a360",
+      "name": "Advanced Diploma of Commerce",
+      "reason": "No 'Commerce' named course exists anywhere in FedUni's current 209-item live course catalogue (federation.edu.au CourseApi); keyword search for 'Commerce' returns zero matches.",
+      "archived_at": "2026-09-20T04:14:16.221Z"
+    },
+    {
+      "id": "07c73866-3728-4260-914f-93029da04a56",
+      "name": "Bachelor of Business Transformation (Accounting)",
+      "reason": "'Bachelor of Business Transformation' does not exist in FedUni's current course catalogue; only Bachelor of Business, Bachelor of Business (Accounting) and Bachelor of Business (Marketing and Management) are offered.",
+      "archived_at": "2026-09-20T04:14:16.382Z"
+    },
+    {
+      "id": "5cc6681f-bc92-4ed7-8c10-bc3dbb52f779",
+      "name": "Bachelor of Cognitive Enterprise",
+      "reason": "'Bachelor of Cognitive Enterprise' does not exist in FedUni's current course catalogue; live search returns no genuine match under this or a near-identical name.",
+      "archived_at": "2026-09-20T04:14:16.538Z"
+    },
+    {
+      "id": "f4a34fc3-5021-46ef-ad85-42ac7ea777e1",
+      "name": "Bachelor of Commerce (Accounting)",
+      "reason": "No 'Commerce' named course exists at FedUni; the current accounting-specialisation undergraduate degree is Bachelor of Business (Accounting) (DBU5.ACC), a different named qualification.",
+      "archived_at": "2026-09-20T04:14:16.693Z"
+    },
+    {
+      "id": "c433573d-4030-4306-8102-004fac22e1f2",
+      "name": "Bachelor of Digital Transformation (IT)",
+      "reason": "'Bachelor of Digital Transformation' does not exist; FedUni's current IT undergraduate offerings are all named Bachelor of Information Technology (with specialisations), not Digital Transformation.",
+      "archived_at": "2026-09-20T04:14:16.857Z"
+    },
+    {
+      "id": "f13b645d-3862-4d7a-baa6-b92fbf3cb710",
+      "name": "Bachelor of Engineering (Honours)",
+      "reason": "FedUni has no single generic 'Bachelor of Engineering (Honours)' course code; the degree is only offered as four separately-coded specialisations (Civil DEN8.CIV, Electrical DEN8.EIE, Mechanical DEN8.MEC, Mining DEN8.MIN), each with its own CRICOS code and entry requirements, confirmed via federation.edu.au and the live course-search API.",
+      "archived_at": "2026-09-20T04:14:17.021Z"
+    },
+    {
+      "id": "940248eb-6451-4799-9e3e-899934745650",
+      "name": "Bachelor of Environmental and Conservation Science",
+      "reason": "'Bachelor of Environmental and Conservation Science' does not exist; FedUni's current environmental offering is Bachelor of Science (Environmental Science) (DSI5.ES), a differently-named qualification, and Diploma of Conservation and Ecosystem Management is a VET-level award.",
+      "archived_at": "2026-09-20T04:14:17.180Z"
+    },
+    {
+      "id": "dc8e06cb-d056-4614-849c-c26aae7ff66d",
+      "name": "Bachelor of Geoscience",
+      "reason": "No 'Geoscience' named course exists at FedUni; keyword search returns only generic Bachelor of Science results, no dedicated geoscience degree.",
+      "archived_at": "2026-09-20T04:14:17.337Z"
+    },
+    {
+      "id": "baaf6523-affc-47ee-9e31-4b19d7ddd171",
+      "name": "Bachelor of Outdoor and Environmental Education",
+      "reason": "'Bachelor of Outdoor and Environmental Education' does not exist; FedUni's current related degree is Bachelor of Sport, Physical and Outdoor Education (DSO5), a differently-named qualification already represented by its own DB row.",
+      "archived_at": "2026-09-20T04:14:17.497Z"
+    },
+    {
+      "id": "956e98e7-f1f9-4399-87d0-3a790c3cd81b",
+      "name": "Bachelor of Professional Accounting",
+      "reason": "'Bachelor of Professional Accounting' does not exist; FedUni's accounting undergraduate degree is Bachelor of Business (Accounting) (DBU5.ACC).",
+      "archived_at": "2026-09-20T04:14:17.652Z"
+    },
+    {
+      "id": "4c7c686a-32fd-4025-8d35-209f31afe2b5",
+      "name": "Bachelor of Sustainable Food Systems",
+      "reason": "'Bachelor of Sustainable Food Systems' does not exist in FedUni's current catalogue; no course under this or a near-identical name was found via live search.",
+      "archived_at": "2026-09-20T04:14:17.813Z"
+    },
+    {
+      "id": "2491725e-c2c5-4d2b-9a49-811a525a1b5f",
+      "name": "Bachelor of Veterinary and Wildlife Science",
+      "reason": "'Bachelor of Veterinary and Wildlife Science' does not exist; FedUni's closest current offering is Bachelor of Science (Veterinary Bioscience) (DSI5.VB), a differently-scoped and differently-named qualification with no wildlife-science component.",
+      "archived_at": "2026-09-20T04:14:17.963Z"
+    },
+    {
+      "id": "300aa74d-2ef1-466f-8b9e-29aa72f0aa2e",
+      "name": "Diploma of Business (Higher Education)",
+      "reason": "'Diploma of Business (Higher Education)' does not exist; FedUni's current Higher Education diploma suite is Diploma of Health, Diploma of Business and Sports Management, and Diploma of Criminology and Criminal Justice, confirmed via the full Undergraduate-level course listing.",
+      "archived_at": "2026-09-20T04:14:18.119Z"
+    },
+    {
+      "id": "71761aad-481c-4a86-93f3-31d5ce9ccec3",
+      "name": "Diploma of Engineering (Higher Education)",
+      "reason": "'Diploma of Engineering (Higher Education)' does not exist; the only current engineering diploma is Diploma of Engineering - Technical (DLCL), a VET-level qualification, not a Higher Education one.",
+      "archived_at": "2026-09-20T04:14:18.275Z"
+    },
+    {
+      "id": "3f02ff5e-c8b7-4319-829e-1de2a033e277",
+      "name": "Diploma of Information Technology (Higher Education)",
+      "reason": "'Diploma of Information Technology (Higher Education)' does not exist in FedUni's current Higher Education diploma suite (Health, Business and Sports Management, Criminology and Criminal Justice only).",
+      "archived_at": "2026-09-20T04:14:18.422Z"
+    },
+    {
+      "id": "075933b5-f389-4064-8194-97b4abb6e928",
+      "name": "Doctor of Philosophy (Education)",
+      "reason": "'Doctor of Philosophy (Education)' does not exist as a separately-named award; FedUni's PhD is offered as multiple discipline-specific codes all titled plainly 'Doctor of Philosophy', with no code specifically suffixed 'Education'.",
+      "archived_at": "2026-09-20T04:14:18.578Z"
+    },
+    {
+      "id": "2521cfbc-f607-41c4-89be-4efe7a4c139d",
+      "name": "Foundation Studies",
+      "reason": "'Foundation Studies' as a named course does not match FedUni's live catalogue; the university's actual pathway program is 'Federation Access Studies (FAST)' (DFS0), a differently-named qualification.",
+      "archived_at": "2026-09-20T04:14:18.742Z"
+    },
+    {
+      "id": "07f8ce6a-672a-4689-b5e5-b0fd0d3214b2",
+      "name": "Graduate Certificate in Data Science",
+      "reason": "'Graduate Certificate in Data Science' does not exist; FedUni only offers this discipline at Master's level (Master of Data Science, DCX9), with no Graduate Certificate exit point confirmed on that course's own page.",
+      "archived_at": "2026-09-20T04:14:18.898Z"
+    },
+    {
+      "id": "42ad6553-c409-4606-97a0-79b72c4b0391",
+      "name": "Graduate Certificate in Education Studies",
+      "reason": "'Graduate Certificate in Education Studies' does not exist; FedUni's closest current offering is Graduate Certificate in Education (Tertiary Education) (DTK4), a differently-scoped qualification.",
+      "archived_at": "2026-09-20T04:14:19.051Z"
+    },
+    {
+      "id": "f0ff2cbe-2768-488d-8d08-1ea7199dc766",
+      "name": "Graduate Certificate in Enterprise Systems",
+      "reason": "'Graduate Certificate in Enterprise Systems' does not exist in FedUni's current catalogue; no course under this or a near-identical name was found via live search.",
+      "archived_at": "2026-09-20T04:14:19.198Z"
+    },
+    {
+      "id": "6913c007-67dd-4e15-8c15-21fd6706b396",
+      "name": "Graduate Certificate in Professional Accounting",
+      "reason": "'Graduate Certificate in Professional Accounting' does not exist; FedUni has no postgraduate accounting award at Graduate Certificate level in its current catalogue.",
+      "archived_at": "2026-09-20T04:14:19.356Z"
+    },
+    {
+      "id": "c863b644-2d0f-4434-84bb-47ddb93fad43",
+      "name": "Graduate Certificate of Applied Cyber Security",
+      "reason": "'Graduate Certificate of Applied Cyber Security' does not exist; FedUni only offers this discipline at Master's level (Master of Applied Cyber Security, DCQ9), with no Graduate Certificate exit point mentioned on that course's own page.",
+      "archived_at": "2026-09-20T04:14:19.502Z"
+    },
+    {
+      "id": "4fdd6da1-ff03-48d7-a246-f6ffaee36da9",
+      "name": "Graduate Certificate of Management",
+      "reason": "'Graduate Certificate of Management' does not exist in FedUni's current catalogue; the closest live management-adjacent award is Graduate Diploma of Local Government Leadership and Management (DLM4), a differently-named, differently-scoped qualification.",
+      "archived_at": "2026-09-20T04:14:19.648Z"
+    },
+    {
+      "id": "029416ae-d11b-47dd-b88b-b3fdce240653",
+      "name": "Graduate Diploma of Applied Cyber Security",
+      "reason": "'Graduate Diploma of Applied Cyber Security' does not exist; FedUni only offers this discipline at Master's level (Master of Applied Cyber Security, DCQ9), with no Graduate Diploma exit point mentioned on that course's own page.",
+      "archived_at": "2026-09-20T04:14:19.794Z"
+    },
+    {
+      "id": "f564003d-8a1e-4c4c-b188-9f4b9ca96d52",
+      "name": "Graduate Diploma of Data Science",
+      "reason": "'Graduate Diploma of Data Science' does not exist; FedUni only offers this discipline at Master's level (Master of Data Science, DCX9), with no Graduate Diploma exit point confirmed on that course's own page.",
+      "archived_at": "2026-09-20T04:14:19.941Z"
+    },
+    {
+      "id": "87d8464c-5007-4764-aed6-2078cbeb6131",
+      "name": "Graduate Diploma of Education Studies",
+      "reason": "'Graduate Diploma of Education Studies' does not exist in FedUni's current catalogue; no course under this or a near-identical name was found via live search.",
+      "archived_at": "2026-09-20T04:14:20.087Z"
+    },
+    {
+      "id": "5e30979a-3d71-44a4-bf7d-4e8c6185f240",
+      "name": "Graduate Diploma of Management",
+      "reason": "'Graduate Diploma of Management' does not exist in FedUni's current catalogue; the closest live award is Graduate Diploma of Local Government Leadership and Management (DLM4), a differently-named, differently-scoped qualification.",
+      "archived_at": "2026-09-20T04:14:20.234Z"
+    },
+    {
+      "id": "254440e9-8668-4d72-b3e4-9d23a7ab9a3b",
+      "name": "Graduate Diploma of Professional Accounting",
+      "reason": "'Graduate Diploma of Professional Accounting' does not exist; FedUni has no postgraduate accounting award at Graduate Diploma level in its current catalogue.",
+      "archived_at": "2026-09-20T04:14:20.380Z"
+    },
+    {
+      "id": "3e81dc18-06b2-4c12-b8c3-4caa46fc4633",
+      "name": "Graduate Diploma of Public Health",
+      "reason": "'Graduate Diploma of Public Health' does not exist; FedUni's Master of Health family (DHN9 and its specialisations) has no 'Public Health' variant and no separate Graduate Diploma exit point was found.",
+      "archived_at": "2026-09-20T04:14:20.526Z"
+    },
+    {
+      "id": "c7422bda-d433-456d-a411-e03afd06ba10",
+      "name": "Graduate Diploma of Technology (Software Engineering)",
+      "reason": "'Graduate Diploma of Technology (Software Engineering)' does not exist in FedUni's current catalogue; no course under this or a near-identical name was found via live search.",
+      "archived_at": "2026-09-20T04:14:20.673Z"
+    },
+    {
+      "id": "95655b3c-d9fe-4ed2-85a8-8fe9ffbdbf9c",
+      "name": "Master of Applied Science",
+      "reason": "'Master of Applied Science' does not exist as a standalone named course in FedUni's current catalogue; live search returns no genuine match.",
+      "archived_at": "2026-09-20T04:14:20.828Z"
+    },
+    {
+      "id": "54b7e02a-3bc2-447d-b22a-43c9c6b5294e",
+      "name": "Master of Arts (Research)",
+      "reason": "'Master of Arts (Research)' does not exist; FedUni's research-only Master's award across all disciplines is uniformly named 'Master of Philosophy', not 'Master of Arts (Research)'.",
+      "archived_at": "2026-09-20T04:14:20.979Z"
+    },
+    {
+      "id": "ce7eb3bc-7455-4e56-a688-71d540490abe",
+      "name": "Master of Business",
+      "reason": "Bare 'Master of Business' does not exist in FedUni's current catalogue; only Bachelor of Business (undergraduate) is offered under the Business name.",
+      "archived_at": "2026-09-20T04:14:21.135Z"
+    },
+    {
+      "id": "d1c2208e-5f2c-4da2-95c1-d3211e6d43d7",
+      "name": "Master of Business Administration",
+      "reason": "'Master of Business Administration' does not exist at FedUni; keyword search for 'MBA' returns only one loosely-related result (Graduate Diploma of Local Government Leadership and Management), confirming no standalone MBA is currently offered.",
+      "archived_at": "2026-09-20T04:14:21.300Z"
+    },
+    {
+      "id": "c337d881-dfb7-4b57-b6ae-2b6506158405",
+      "name": "Master of Computing",
+      "reason": "'Master of Computing' does not exist in FedUni's current catalogue; the university's postgraduate IT/computing awards are Master of Data Science and Master of Applied Cyber Security, neither named Master of Computing.",
+      "archived_at": "2026-09-20T04:14:21.454Z"
+    },
+    {
+      "id": "9b074bfb-ea62-4e68-933c-51cfafa97b45",
+      "name": "Master of Digital Business Transformation",
+      "reason": "'Master of Digital Business Transformation' does not exist; no course under this or a near-identical name (checked via 'Transformation' and 'Digital Business') was found in FedUni's current catalogue.",
+      "archived_at": "2026-09-20T04:14:21.610Z"
+    },
+    {
+      "id": "e0e93b1f-fd77-466a-91f6-9df1770bfbf6",
+      "name": "Master of Education",
+      "reason": "Bare 'Master of Education' does not exist; FedUni's postgraduate teaching awards are all named Master of Teaching (Early Childhood/Primary/Secondary), not Master of Education.",
+      "archived_at": "2026-09-20T04:14:21.764Z"
+    },
+    {
+      "id": "045f1960-1e7a-4762-9b98-55b23e991919",
+      "name": "Master of Education Studies",
+      "reason": "'Master of Education Studies' does not exist in FedUni's current catalogue; no course under this or a near-identical name was found via live search.",
+      "archived_at": "2026-09-20T04:14:21.909Z"
+    },
+    {
+      "id": "1969a999-b1a6-4531-a201-49bfea6a746f",
+      "name": "Master of Engineering Project Management",
+      "reason": "'Master of Engineering Project Management' does not exist; FedUni's postgraduate engineering awards are Master of Engineering Technology (Civil/Mechanical/Mining) and Master of Maintenance and Reliability Engineering, none named Project Management.",
+      "archived_at": "2026-09-20T04:14:22.057Z"
+    },
+    {
+      "id": "7be9a8e6-b97c-40ec-90d7-b26e2a65145e",
+      "name": "Master of Engineering Science",
+      "reason": "'Master of Engineering Science' does not exist in FedUni's current catalogue; no course under this or a near-identical name was found via live search.",
+      "archived_at": "2026-09-20T04:14:22.208Z"
+    },
+    {
+      "id": "340b8333-d910-4995-a0d8-e18c8dcf677c",
+      "name": "Master of Engineering Technology (Renewable Energy and Electrical Power Systems)",
+      "reason": "'Master of Engineering Technology (Renewable Energy and Electrical Power Systems)' does not exist; FedUni's current Master of Engineering Technology specialisations are Civil, Mechanical and Mining only, confirmed via the live course catalogue.",
+      "archived_at": "2026-09-20T04:14:22.355Z"
+    },
+    {
+      "id": "8bff0957-2d3f-43e4-aeb2-3e5840119662",
+      "name": "Master of Forensic Cyber Security",
+      "reason": "'Master of Forensic Cyber Security' does not exist; FedUni's cyber security postgraduate award is Master of Applied Cyber Security (DCQ9), a differently-named qualification with no forensic-specific variant.",
+      "archived_at": "2026-09-20T04:14:22.515Z"
+    },
+    {
+      "id": "b8708387-f0bb-48ec-b2e2-0f231efeb68d",
+      "name": "Master of Health Research",
+      "reason": "'Master of Health Research' does not exist under this exact name; FedUni's closest current award is Master of Health (Research Practice) (DHN9.RP), a differently-named qualification already represented by its own DB row.",
+      "archived_at": "2026-09-20T04:14:22.669Z"
+    },
+    {
+      "id": "8047329a-4262-4c65-8183-b14275fbac06",
+      "name": "Master of Human Movement",
+      "reason": "'Master of Human Movement' does not exist in FedUni's current catalogue; no course under this or a near-identical name was found via live search.",
+      "archived_at": "2026-09-20T04:14:22.822Z"
+    },
+    {
+      "id": "853006be-f892-4c23-b80b-854c7f3bbc63",
+      "name": "Master of Mathematical Sciences",
+      "reason": "'Master of Mathematical Sciences' does not exist in FedUni's current catalogue; no course under this or a near-identical name was found via live search.",
+      "archived_at": "2026-09-20T04:14:22.969Z"
+    },
+    {
+      "id": "06077501-4fb2-4b41-a0b5-904d8096815a",
+      "name": "Master of Nursing",
+      "reason": "Bare 'Master of Nursing' does not exist; FedUni's current postgraduate nursing award is Master of Nursing (Nurse Practitioner) (DNP9), a differently-named qualification, alongside the separate Master of Health (nursing specialisation) family.",
+      "archived_at": "2026-09-20T04:14:23.116Z"
+    },
+    {
+      "id": "eafb087c-cd50-4974-91d0-84b39de0eb8d",
+      "name": "Master of Professional Accounting",
+      "reason": "'Master of Professional Accounting' does not exist; FedUni has no postgraduate accounting award in its current catalogue at any level.",
+      "archived_at": "2026-09-20T04:14:23.272Z"
+    },
+    {
+      "id": "13b27b9f-bd87-4eb2-848f-56dc1433e66b",
+      "name": "Master of Public Health",
+      "reason": "'Master of Public Health' does not exist; FedUni's Master of Health family (DHN9 and its specialisations) has no 'Public Health' named variant.",
+      "archived_at": "2026-09-20T04:14:23.418Z"
+    },
+    {
+      "id": "470999f7-4188-43eb-bee6-d7afdd15e04d",
+      "name": "Master of Technology (Enterprise Systems and Business Analytics)",
+      "reason": "'Master of Technology (Enterprise Systems and Business Analytics)' does not exist in FedUni's current catalogue; no course under this or a near-identical name was found via live search.",
+      "archived_at": "2026-09-20T04:14:23.565Z"
     }
   ]
 }
