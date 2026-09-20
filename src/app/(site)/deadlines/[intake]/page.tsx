@@ -10,6 +10,7 @@ import { StatusBadge } from "@/components/StatusBadge";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import { faqJsonLd } from "@/lib/faq";
 import { deadlineBadgeStatus, formatDeadlineDate } from "@/lib/deadline-status";
+import { universityDeadlineHref } from "@/lib/deadline-detail";
 import { getIntakeHub, INTAKE_HUB_SLUGS } from "@/lib/intakes";
 import { SITE_NAME, SITE_URL } from "@/lib/site-config";
 import {
@@ -268,7 +269,7 @@ export default async function IntakeDeadlinePage({
                       <td className="px-3 py-2.5">
                         {rowIndex === 0 ? (
                           <Link
-                            href={`/universities/${group.slug}`}
+                            href={universityDeadlineHref(group.slug)}
                             className="font-medium text-status-open underline underline-offset-2"
                           >
                             {group.name}
