@@ -1,0 +1,605 @@
+[
+  {
+    "id": "e9b243ba-ac87-4be9-ac18-24a2b359815d",
+    "name": "Bachelor of Accounting",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "490fdd8c-f072-45b5-b1d8-f4ae488e410f",
+    "name": "Bachelor of Arts",
+    "description": true,
+    "curriculum": true,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": "https://www.notredame.edu.au/about-us/faculties-and-schools/school-of-arts-and-sciences/sydney/our-programs"
+  },
+  {
+    "id": "107ed4f3-c284-4fc1-aba0-670bab34b653",
+    "name": "Bachelor of Arts in Psychology",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "e56de7b4-1cf3-4b71-ac55-c881f1d24a4d",
+    "name": "Bachelor of Behavioural Science",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "4d1ab5b7-ed1b-49ff-ab87-c282ae4a8031",
+    "name": "Bachelor of Biomedical Science (Assured Pathway to Medicine)",
+    "description": true,
+    "curriculum": true,
+    "admission_requirements": true,
+    "english_requirements": true,
+    "source_url": "https://www.notredame.edu.au/programs/school-of-health-sciences/undergraduate/bachelor-of-biomedical-science-assured"
+  },
+  {
+    "id": "1a98f0de-a91b-4f6c-8ee6-1b9c73fc7ed1",
+    "name": "Bachelor of Business Administration",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "23f482ae-ebb2-48e4-8b1f-005bdcb3ef4f",
+    "name": "Bachelor of Commerce",
+    "description": true,
+    "curriculum": true,
+    "admission_requirements": true,
+    "english_requirements": true,
+    "source_url": "https://www.notredame.edu.au/study/find-a-course"
+  },
+  {
+    "id": "952ad11b-5240-4ac3-ad0b-705426d3b988",
+    "name": "Bachelor of Communications and Media",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "86fb7a9d-f522-45ab-baca-92e7316fb4c8",
+    "name": "Bachelor of Computer Science",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "6195a1c3-2233-4acf-a6dc-4c16645e33c6",
+    "name": "Bachelor of Counselling",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "a2577052-35ee-4841-910d-5f6381cff7dd",
+    "name": "Bachelor of Early Childhood Education",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "9e8fa82b-da37-431c-b834-07dadb276d13",
+    "name": "Bachelor of Education (Primary)",
+    "description": true,
+    "curriculum": true,
+    "admission_requirements": true,
+    "english_requirements": true,
+    "source_url": "https://www.notredame.edu.au/study/find-a-course"
+  },
+  {
+    "id": "1a5ddb6d-40f8-4b1b-88b2-811e3b8b48c0",
+    "name": "Bachelor of Exercise and Sport Science",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "70e8ea4b-9b61-4943-a234-86c26587e89d",
+    "name": "Bachelor of Health and Physical Education (Primary) (Honours)",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "50e4d05c-8acd-408d-af7d-bcd709e6d973",
+    "name": "Bachelor of Health Promotion",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "22d95c3e-2c27-476b-b2e9-c7fbbaf00f6d",
+    "name": "Bachelor of Health Sciences",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "90a58051-2784-4d36-8354-d04ec8f313ae",
+    "name": "Bachelor of Human Resource Management",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "266d4e34-08b5-4a60-b2c6-012c32dfccf3",
+    "name": "Bachelor of Laws",
+    "description": true,
+    "curriculum": true,
+    "admission_requirements": true,
+    "english_requirements": true,
+    "source_url": "https://www.notredame.edu.au/study/find-a-course"
+  },
+  {
+    "id": "24ca8bc0-49a3-4f46-9ed3-957f37247a85",
+    "name": "Bachelor of Marketing and Public Relations",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "4b17679d-9543-4856-a7dc-d44999adeda1",
+    "name": "Bachelor of Nursing",
+    "description": true,
+    "curriculum": true,
+    "admission_requirements": true,
+    "english_requirements": true,
+    "source_url": "https://www.notredame.edu.au/programs/school-of-health-sciences/undergraduate/bachelor-of-nursing"
+  },
+  {
+    "id": "ca64f940-231f-4e85-9207-1f520b9f4469",
+    "name": "Bachelor of Occupational Therapy (Honours)",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "0cc34b6a-53bd-4d3a-b0bf-f8f527a03448",
+    "name": "Bachelor of Philosophy",
+    "description": true,
+    "curriculum": true,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": "https://www.notredame.edu.au/study/find-a-course"
+  },
+  {
+    "id": "ed37d17e-64e9-4d5f-bcc4-3f522d5a31f2",
+    "name": "Bachelor of Philosophy, Politics, Economics",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "a2ac0549-36ab-464d-8d56-1d143952f53f",
+    "name": "Bachelor of Physiotherapy",
+    "description": true,
+    "curriculum": true,
+    "admission_requirements": true,
+    "english_requirements": true,
+    "source_url": "https://www.notredame.edu.au/study/find-a-course"
+  },
+  {
+    "id": "2a3f9250-7cca-450f-8fe7-ae2512f1ce2c",
+    "name": "Bachelor of Primary Education",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "3c127d3c-5f76-4b0a-9104-35660bc8f0b7",
+    "name": "Bachelor of Science",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "caaa1f9c-584b-4d86-ae4f-59d29eeb02b5",
+    "name": "Bachelor of Secondary Education",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "f1f9bad5-fe20-46b4-a1e2-454ea39dbdfd",
+    "name": "Bachelor of Sport and Recreation Management",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "9cda1adb-60d7-47d7-847c-84f7898bb300",
+    "name": "Bachelor of Theology",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "7be44b7d-f4b2-49fd-90fe-284ba9f996a6",
+    "name": "Diploma of Theology",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "cc977420-bf5a-4765-838f-aaf26906f01e",
+    "name": "Doctor of Business Administration",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "e598ca53-bb3c-431a-9e65-f59385e1fa3a",
+    "name": "Doctor of Counselling",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "a7dca0ac-28a6-4394-bb40-bb1ff6041736",
+    "name": "Doctor of Education",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "ae5fdcf2-513c-422e-920b-b0f674c25c08",
+    "name": "Doctor of Health Sciences",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "6ddc03a2-91a1-41e3-9f30-a26db284b55c",
+    "name": "Doctor of Medicine",
+    "description": true,
+    "curriculum": true,
+    "admission_requirements": true,
+    "english_requirements": true,
+    "source_url": "https://www.notredame.edu.au/programs/school-of-medicine/postgraduate/doctor-of-medicine"
+  },
+  {
+    "id": "0e6ed55c-ed6b-462b-a301-fb51856bcb55",
+    "name": "Doctor of Nursing",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "0e9b2191-525f-41e9-b4bb-fe9d9614fe08",
+    "name": "Doctor of Philosophy",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "b93cc64b-9487-4547-b488-c02dd032c0db",
+    "name": "Doctor of Physiotherapy Research",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "320a80d7-889f-45c5-b08e-14d41fc95d56",
+    "name": "Graduate Certificate in Business",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "91910577-1e1c-4396-8b41-d7e536006ed1",
+    "name": "Graduate Certificate in Computer Science",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "4c76d44d-1a94-46f8-b2ca-4b36cbc93e1e",
+    "name": "Graduate Certificate in Medical Sciences",
+    "description": true,
+    "curriculum": true,
+    "admission_requirements": true,
+    "english_requirements": true,
+    "source_url": "https://www.notredame.edu.au/study/find-a-course"
+  },
+  {
+    "id": "f7e78f06-68d1-44a1-85e5-982927aa1956",
+    "name": "Graduate Diploma of Architectural Studies",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "d17689b0-b117-49cd-90a1-5938a6c604bf",
+    "name": "Graduate Diploma of Computer Science",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "55a68dc6-9764-4427-adf0-10322c30791a",
+    "name": "Graduate Diploma of Philosophy",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "ee7f1c06-43ee-48f9-8d3f-4132e0889478",
+    "name": "Graduate Diploma of Theology",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "9ccfbf04-4a4d-47e5-acc9-efde387a5b7b",
+    "name": "Juris Doctor",
+    "description": true,
+    "curriculum": true,
+    "admission_requirements": true,
+    "english_requirements": true,
+    "source_url": "https://www.notredame.edu.au/study/find-a-course"
+  },
+  {
+    "id": "c8177f45-e30f-4986-ba4a-ff6985b46c97",
+    "name": "Master of Architecture",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "51f53e8c-2e68-4a40-aff6-d0bb1323fcf7",
+    "name": "Master of Arts (Research)",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "bbfda9ab-a82a-4bd9-8c73-f993c25fde28",
+    "name": "Master of Business (Research)",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "2365b858-7337-4e3a-b7d4-6f5af392f8a7",
+    "name": "Master of Business Administration",
+    "description": true,
+    "curriculum": true,
+    "admission_requirements": true,
+    "english_requirements": true,
+    "source_url": "https://www.mbanews.com.au/course/unda-mba/"
+  },
+  {
+    "id": "c1e25c86-2f7c-4dc1-9785-a8d0a9be0c09",
+    "name": "Master of Computer Science",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "b554a28c-fd05-4e2b-a16c-a2ca3b097c4f",
+    "name": "Master of Counselling (2 years)",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "62f7075c-ad0b-4602-87d3-d9244aae5f0d",
+    "name": "Master of Education (Leadership and Management)",
+    "description": true,
+    "curriculum": true,
+    "admission_requirements": true,
+    "english_requirements": true,
+    "source_url": "https://www.notredame.edu.au/programs/school-of-education/postgraduate/master-of-education-leadership-and-management"
+  },
+  {
+    "id": "37293e13-ce1d-43d3-9868-40d8392951a4",
+    "name": "Master of Health Sciences",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "ee2593b2-65e3-4c2d-aa28-29953c5c0fa7",
+    "name": "Master of Laws (Coursework)",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "a5f32e41-f128-4f15-86cb-625b4b3f9606",
+    "name": "Master of Medicine/Surgery",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "e7026ab8-1fed-4a92-879c-4d20a388f280",
+    "name": "Master of Nursing (Coursework and Thesis)",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "4e4896f6-1c26-43db-8c7c-b1ccbd78082c",
+    "name": "Master of Philosophy (College of Nursing)",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "3c1bd5f6-cbb0-412c-8397-10f20883e0f9",
+    "name": "Master of Physiotherapy",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "e081f45c-fe28-4743-ad34-0ef7dc4035ee",
+    "name": "Master of Primary Teaching",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "a584d21c-6baf-4737-ac47-c21a928b64f7",
+    "name": "Master of Professional Psychology",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "f0e8ecb3-97a1-4fcb-b4a7-d78c93bdb3be",
+    "name": "Master of Religious Education (Thesis)",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "3c93e013-0362-44de-a838-96a352a8d795",
+    "name": "Master of Science (Physiotherapy)",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "099cccd8-025f-49d9-858d-e7033531bd78",
+    "name": "Master of Secondary Teaching",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "70fec805-e3f1-4fcc-ba27-ef9975fc38b4",
+    "name": "Master of Social Work (Qualifying)",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "26dd4df3-3979-439e-8849-ae214d010afd",
+    "name": "Master of Teaching (Primary)",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  },
+  {
+    "id": "15327180-e165-44e8-83ca-65d6d7985e6f",
+    "name": "Master of Theology (Research)",
+    "description": false,
+    "curriculum": false,
+    "admission_requirements": false,
+    "english_requirements": false,
+    "source_url": null
+  }
+]

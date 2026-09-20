@@ -1062,6 +1062,72 @@
       "name": "Bachelor of Veterinary Science (Honours) [End-on]",
       "reason": "Bachelor of Veterinary Science (Honours) [End-on]: duplicate/non-existent variant. Only one real JCU Veterinary Science Honours course exists, code 122609 (Embedded structure, 135 credit points), already tracked under DB row 389080f8-a77c-4f70-b81a-a9330e05b54f as [135cp]. No separate End-on variant of this course exists in the current handbook.",
       "archived_at": "2026-09-20T04:58:51.635Z"
+    },
+    {
+      "id": "1a98f0de-a91b-4f6c-8ee6-1b9c73fc7ed1",
+      "name": "Bachelor of Business Administration",
+      "reason": "No standalone Bachelor of Business Administration page exists: /programs/school-of-business/undergraduate/bachelor-of-business-administration 404s, absent from the full ~250-URL sitemap, and the live Bachelor of Commerce page lists Business Administration only as a selectable Major within Commerce, not a standalone award.",
+      "archived_at": "2026-09-20T07:03:27.693Z"
+    },
+    {
+      "id": "90a58051-2784-4d36-8354-d04ec8f313ae",
+      "name": "Bachelor of Human Resource Management",
+      "reason": "No standalone page exists: guessed URL 404s, absent from sitemap; Human Resource Management exists only as a Bachelor of Commerce major (accredited with AHRI) and a Bachelor of Arts second major, never its own degree.",
+      "archived_at": "2026-09-20T07:03:27.856Z"
+    },
+    {
+      "id": "24ca8bc0-49a3-4f46-9ed3-957f37247a85",
+      "name": "Bachelor of Marketing and Public Relations",
+      "reason": "No standalone page exists: guessed URL 404s, absent from sitemap; Marketing and Public Relations exists only as a Bachelor of Commerce major and separate Bachelor of Arts second major variants, never its own degree.",
+      "archived_at": "2026-09-20T07:03:28.008Z"
+    },
+    {
+      "id": "9ccfbf04-4a4d-47e5-acc9-efde387a5b7b",
+      "name": "Juris Doctor",
+      "reason": "No Juris Doctor award exists at UNDA: /programs/school-of-law/postgraduate/juris-doctor 404s, zero hits for juris-doctor anywhere in the full sitemap, and UNDA's graduate entry law pathway is explicitly branded Bachelor of Laws (Graduate Entry), program 3530, a differently named award, not a JD.",
+      "archived_at": "2026-09-20T07:03:28.155Z"
+    },
+    {
+      "id": "bbfda9ab-a82a-4bd9-8c73-f993c25fde28",
+      "name": "Master of Business (Research)",
+      "reason": "No Master of Business (Research) page exists: guessed URL 404s, absent from sitemap; UNDA's real School of Business research postgraduate degree is titled Master of Philosophy (Business), program 5125, a differently named award.",
+      "archived_at": "2026-09-20T07:03:28.310Z"
+    },
+    {
+      "id": "e56de7b4-1cf3-4b71-ac55-c881f1d24a4d",
+      "name": "Bachelor of Behavioural Science",
+      "reason": "No standalone Bachelor of Behavioural Science page exists at notredame.edu.au. Direct slug attempts both return HTTP 404, and the name does not appear anywhere in the site's ~250-URL sitemap. Behavioural Science exists only as a Major (Fremantle only, 8 courses) and Minor (Fremantle only, 6 courses) within the Bachelor of Arts, Bachelor of Communications and Media, and Bachelor of Science degrees, not as a standalone award UNDA currently offers.",
+      "archived_at": "2026-09-20T07:04:40.072Z"
+    },
+    {
+      "id": "ee7f1c06-43ee-48f9-8d3f-4132e0889478",
+      "name": "Graduate Diploma of Theology",
+      "reason": "No Graduate Diploma of Theology page or CRICOS-style slug exists at notredame.edu.au (checked full ~250-URL sitemap). The Theological Studies ladder (Graduate Certificate in Theological Studies, Graduate Diploma of Theological Studies, Master of Theological Studies) is a distinct, separately named award family. The plain Theology ladder has Diploma of Theology at undergraduate level then jumps straight to Master of Theology, Master of Theology (Research) and Doctor of Theology with no Graduate Diploma rung. No page merges these two families under this exact name.",
+      "archived_at": "2026-09-20T07:08:34.290Z"
+    },
+    {
+      "id": "f0e8ecb3-97a1-4fcb-b4a7-d78c93bdb3be",
+      "name": "Master of Religious Education (Thesis)",
+      "reason": "No thesis track exists for Religious Education at UNDA. Checked both live candidate pages, Master of Religious Education and Master of Education (Religious Education): both are explicit coursework degrees (8 EDUC/THEO courses each) with zero mention of a thesis pathway anywhere in their page text, and the word thesis does not appear on either page. The full sitemap has no URL containing thesis anywhere on the site, and no third religious-education award exists beyond these two coursework degrees plus the WA and NSW Graduate Certificates in Religious Education.",
+      "archived_at": "2026-09-20T07:08:34.456Z"
+    },
+    {
+      "id": "9e8fa82b-da37-431c-b834-07dadb276d13",
+      "name": "Bachelor of Education (Primary)",
+      "reason": "Duplicate of Bachelor of Primary Education (program 3587). Notre Dame's own English-requirements exceptions page lists Bachelor of Education (Conversion) 3088, Bachelor of Education (Early Learning) 3584, Bachelor of Primary Education 3587 and Bachelor of Secondary Education 3588 as its complete named School of Education program list; no program coded or titled Bachelor of Education (Primary) exists anywhere in the ~250-URL sitemap or that list. Bachelor of Primary Education (3587) is the real, live award and has been rebuilt to Bond standard under this sprint; this row duplicates it under a variant name.",
+      "archived_at": "2026-09-20T07:14:02.599Z"
+    },
+    {
+      "id": "26dd4df3-3979-439e-8849-ae214d010afd",
+      "name": "Master of Teaching (Primary)",
+      "reason": "Duplicate of Master of Primary Teaching. Both DB rows map to the single real page /programs/school-of-education/postgraduate/master-of-primary-teaching, titled exactly Master of Primary Teaching, with real EDUC6082 to EDUC6096 unit codes. No separate Master of Teaching (Primary) page or program code exists anywhere in the sitemap. Master of Primary Teaching has been rebuilt to Bond standard under this sprint; this row duplicates it under a variant name.",
+      "archived_at": "2026-09-20T07:14:02.757Z"
+    },
+    {
+      "id": "50e4d05c-8acd-408d-af7d-bcd709e6d973",
+      "name": "Bachelor of Health Promotion",
+      "reason": "No standalone Bachelor of Health Promotion page exists at notredame.edu.au. Direct slug attempts (/programs/school-of-health-sciences/undergraduate/bachelor-of-health-promotion and a Bachelor of Arts major variant) both 404, and the name is absent from the full ~250-URL sitemap. Health Promotion appears only as a named topic within the Bachelor of Health Sciences curriculum (Population Approaches to Health Promotion, HLTH2007) and as an accredited career/topic area, not a standalone award UNDA currently offers.",
+      "archived_at": "2026-09-20T07:21:27.694Z"
     }
   ]
 }

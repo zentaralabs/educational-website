@@ -1,0 +1,54 @@
+[
+  {
+    "id": "e9b243ba-ac87-4be9-ac18-24a2b359815d",
+    "name": "Bachelor of Accounting"
+  },
+  {
+    "id": "1a98f0de-a91b-4f6c-8ee6-1b9c73fc7ed1",
+    "name": "Bachelor of Business Administration"
+  },
+  {
+    "id": "23f482ae-ebb2-48e4-8b1f-005bdcb3ef4f",
+    "name": "Bachelor of Commerce"
+  },
+  {
+    "id": "90a58051-2784-4d36-8354-d04ec8f313ae",
+    "name": "Bachelor of Human Resource Management"
+  },
+  {
+    "id": "266d4e34-08b5-4a60-b2c6-012c32dfccf3",
+    "name": "Bachelor of Laws"
+  },
+  {
+    "id": "24ca8bc0-49a3-4f46-9ed3-957f37247a85",
+    "name": "Bachelor of Marketing and Public Relations"
+  },
+  {
+    "id": "f1f9bad5-fe20-46b4-a1e2-454ea39dbdfd",
+    "name": "Bachelor of Sport and Recreation Management"
+  },
+  {
+    "id": "cc977420-bf5a-4765-838f-aaf26906f01e",
+    "name": "Doctor of Business Administration"
+  },
+  {
+    "id": "320a80d7-889f-45c5-b08e-14d41fc95d56",
+    "name": "Graduate Certificate in Business"
+  },
+  {
+    "id": "9ccfbf04-4a4d-47e5-acc9-efde387a5b7b",
+    "name": "Juris Doctor"
+  },
+  {
+    "id": "bbfda9ab-a82a-4bd9-8c73-f993c25fde28",
+    "name": "Master of Business (Research)"
+  },
+  {
+    "id": "2365b858-7337-4e3a-b7d4-6f5af392f8a7",
+    "name": "Master of Business Administration"
+  },
+  {
+    "id": "ee2593b2-65e3-4c2d-aa28-29953c5c0fa7",
+    "name": "Master of Laws (Coursework)"
+  }
+]

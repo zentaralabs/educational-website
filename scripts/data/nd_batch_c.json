@@ -1,0 +1,34 @@
+[
+  {
+    "id": "0cc34b6a-53bd-4d3a-b0bf-f8f527a03448",
+    "name": "Bachelor of Philosophy"
+  },
+  {
+    "id": "ed37d17e-64e9-4d5f-bcc4-3f522d5a31f2",
+    "name": "Bachelor of Philosophy, Politics, Economics"
+  },
+  {
+    "id": "9cda1adb-60d7-47d7-847c-84f7898bb300",
+    "name": "Bachelor of Theology"
+  },
+  {
+    "id": "7be44b7d-f4b2-49fd-90fe-284ba9f996a6",
+    "name": "Diploma of Theology"
+  },
+  {
+    "id": "55a68dc6-9764-4427-adf0-10322c30791a",
+    "name": "Graduate Diploma of Philosophy"
+  },
+  {
+    "id": "ee7f1c06-43ee-48f9-8d3f-4132e0889478",
+    "name": "Graduate Diploma of Theology"
+  },
+  {
+    "id": "f0e8ecb3-97a1-4fcb-b4a7-d78c93bdb3be",
+    "name": "Master of Religious Education (Thesis)"
+  },
+  {
+    "id": "15327180-e165-44e8-83ca-65d6d7985e6f",
+    "name": "Master of Theology (Research)"
+  }
+]

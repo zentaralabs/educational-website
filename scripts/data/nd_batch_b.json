@@ -1,0 +1,74 @@
+[
+  {
+    "id": "490fdd8c-f072-45b5-b1d8-f4ae488e410f",
+    "name": "Bachelor of Arts"
+  },
+  {
+    "id": "107ed4f3-c284-4fc1-aba0-670bab34b653",
+    "name": "Bachelor of Arts in Psychology"
+  },
+  {
+    "id": "e56de7b4-1cf3-4b71-ac55-c881f1d24a4d",
+    "name": "Bachelor of Behavioural Science"
+  },
+  {
+    "id": "952ad11b-5240-4ac3-ad0b-705426d3b988",
+    "name": "Bachelor of Communications and Media"
+  },
+  {
+    "id": "86fb7a9d-f522-45ab-baca-92e7316fb4c8",
+    "name": "Bachelor of Computer Science"
+  },
+  {
+    "id": "6195a1c3-2233-4acf-a6dc-4c16645e33c6",
+    "name": "Bachelor of Counselling"
+  },
+  {
+    "id": "3c127d3c-5f76-4b0a-9104-35660bc8f0b7",
+    "name": "Bachelor of Science"
+  },
+  {
+    "id": "e598ca53-bb3c-431a-9e65-f59385e1fa3a",
+    "name": "Doctor of Counselling"
+  },
+  {
+    "id": "0e9b2191-525f-41e9-b4bb-fe9d9614fe08",
+    "name": "Doctor of Philosophy"
+  },
+  {
+    "id": "91910577-1e1c-4396-8b41-d7e536006ed1",
+    "name": "Graduate Certificate in Computer Science"
+  },
+  {
+    "id": "f7e78f06-68d1-44a1-85e5-982927aa1956",
+    "name": "Graduate Diploma of Architectural Studies"
+  },
+  {
+    "id": "d17689b0-b117-49cd-90a1-5938a6c604bf",
+    "name": "Graduate Diploma of Computer Science"
+  },
+  {
+    "id": "c8177f45-e30f-4986-ba4a-ff6985b46c97",
+    "name": "Master of Architecture"
+  },
+  {
+    "id": "51f53e8c-2e68-4a40-aff6-d0bb1323fcf7",
+    "name": "Master of Arts (Research)"
+  },
+  {
+    "id": "c1e25c86-2f7c-4dc1-9785-a8d0a9be0c09",
+    "name": "Master of Computer Science"
+  },
+  {
+    "id": "b554a28c-fd05-4e2b-a16c-a2ca3b097c4f",
+    "name": "Master of Counselling (2 years)"
+  },
+  {
+    "id": "a584d21c-6baf-4737-ac47-c21a928b64f7",
+    "name": "Master of Professional Psychology"
+  },
+  {
+    "id": "70fec805-e3f1-4fcc-ba27-ef9975fc38b4",
+    "name": "Master of Social Work (Qualifying)"
+  }
+]
