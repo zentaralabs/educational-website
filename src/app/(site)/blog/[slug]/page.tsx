@@ -2,7 +2,6 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArticleMeta } from "@/components/site/ArticleMeta";
 import { ArticleShell } from "@/components/site/ArticleShell";
-import { FaqSection } from "@/components/site/FaqSection";
 import { GuideContent } from "@/components/site/GuideContent";
 import { LastVerified } from "@/components/site/LastVerified";
 import { RelatedLinks } from "@/components/site/RelatedLinks";
@@ -64,6 +63,10 @@ export default async function BlogPostPage({
   const post = await getPublishedBlogPost(slug);
   if (!post) notFound();
 
+  // Feeds FaqPage JSON-LD only. These are pulled from question-shaped
+  // headings already inside `post.content`, which the body below renders
+  // in full -- a visible <FaqSection> here would show every one of these
+  // twice (once as an H2 in the article, once again in a card grid).
   const faqItems = extractFaqItems(post.content).map((f) => ({ q: f.question, a: f.answer }));
   const toc = extractToc(post.content);
   const related = blogRelated(post.slug).slice(0, RELATED_LIMIT);
@@ -142,10 +145,6 @@ export default async function BlogPostPage({
               <CheckBadgeIcon className="mt-0.5 h-4 w-4 flex-shrink-0 text-status-open" />
               <LastVerified date={post.last_verified_at} sources={post.source_urls} />
             </div>
-
-            {faqItems.length > 0 && (
-              <FaqSection heading="Common questions" items={faqItems} />
-            )}
 
             <RelatedLinks
               className="mt-12 border-t border-line pt-8"
