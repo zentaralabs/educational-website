@@ -54,7 +54,7 @@ export function ExperienceSubmissionForm({
       setDone(true);
     } catch (err) {
       setErrorMsg(
-        err instanceof Error ? err.message : "Could not submit — try again.",
+        err instanceof Error ? err.message : "Could not submit. Try again.",
       );
     } finally {
       setSaving(false);
@@ -64,7 +64,7 @@ export function ExperienceSubmissionForm({
   if (done) {
     return (
       <div className="rounded-xl border border-status-open/30 bg-status-open/5 px-5 py-4 font-body text-sm text-ink">
-        Thanks — this has gone to an editor for review. If it holds up, it
+        Thanks. This has gone to an editor for review. If it holds up, it
         may be published (anonymized if you asked for that) on the relevant
         page. We won&rsquo;t publish anything without checking it first.
       </div>
@@ -107,7 +107,7 @@ export function ExperienceSubmissionForm({
           value={surprisedNotes}
           onChange={(e) => setSurprisedNotes(e.target.value)}
           rows={5}
-          placeholder="Be as specific as you can — real details are what make this useful to the next person."
+          placeholder="Be as specific as you can. Real details are what make this useful to the next person."
           className="w-full rounded-md border border-ink/20 bg-paper px-3 py-1.5 font-body text-sm text-ink placeholder:text-slate/60 focus-visible:border-status-open"
         />
       </label>
@@ -153,7 +153,7 @@ export function ExperienceSubmissionForm({
 
       <label className="block">
         <span className="mb-1 block font-body text-xs font-semibold tracking-wide text-slate uppercase">
-          Email (optional — only so an editor can follow up, never published)
+          Email (optional, only so an editor can follow up, never published)
         </span>
         <input
           type="email"
