@@ -1,0 +1,34 @@
+{
+  "entries": [
+    {
+      "id": "d350b87f-98cd-4388-9f61-a6e447cebe37",
+      "name": "Bachelor of Business and Commerce",
+      "reason": "Real under the code BBCM through UniSQ's 2022 handbook, alongside its own double-degree combinations (BCIN with Bachelor of Information Technology, BCLW with Bachelor of Laws); absent from the 2023 handbook and from the current Business hub page. This is a distinct, separately-coded award from the still-current Bachelor of Business (BBIZ), not a rename of it; the whole BBCM family was wound down together.",
+      "archived_at": "2026-09-24T13:04:58.773Z"
+    },
+    {
+      "id": "1b2231a7-3d64-443f-b008-15ecbbf5a259",
+      "name": "Bachelor of Human Services",
+      "reason": "Real under the code BHMS through UniSQ's 2023 handbook (unisq.edu.au/handbook/2023/allprog.html); absent from the current sitemap-derived /study/degrees-and-courses/ catalogue and from the Health degrees hub page (unisq.edu.au/study/degrees-and-courses/health), which lists every current Health award by name. No successor standalone award found under any close variant name.",
+      "archived_at": "2026-09-24T13:04:58.946Z"
+    },
+    {
+      "id": "c59bcab1-4629-4f9f-b4df-3d949281f7ca",
+      "name": "Graduate Certificate of Sport and Exercise",
+      "reason": "Real under the code GCSE through UniSQ's 2023 handbook; absent from the current sitemap and from the Health hub page's full list of current Graduate Certificates (Counselling, First Nations Culturally Safe Health Leadership, Nursing, Public Health). Sport and Exercise now only survives as a specialisation within the Master of Science and Graduate Diploma of Science, not as its own Graduate Certificate.",
+      "archived_at": "2026-09-24T13:04:59.100Z"
+    },
+    {
+      "id": "547c32d1-82bf-4a54-a037-6c04236df095",
+      "name": "Master of IT Innovation (MATI)",
+      "reason": "Real under the code MATI through UniSQ's 2020 handbook only; absent from the 2021, 2022 and 2023 handbooks and from the current Information Technology degrees hub page (unisq.edu.au/study/degrees-and-courses/information-technology), which lists every current IT postgraduate award (Master of Cyber Security, Data Science, Information Systems, Information Technology).",
+      "archived_at": "2026-09-24T13:04:59.256Z"
+    },
+    {
+      "id": "c4b02052-b339-4b6a-a8e9-8c242aed2072",
+      "name": "Master of Professional Accounting (MPAC)",
+      "reason": "Real under the code MPAC through UniSQ's 2020 handbook only; absent from the 2021, 2022 and 2023 handbooks and from the current Business degrees hub page (unisq.edu.au/study/degrees-and-courses/business), which lists every current Business postgraduate award. Professional Accounting now survives only as a Major within the Bachelor of Accounting.",
+      "archived_at": "2026-09-24T13:04:59.409Z"
+    }
+  ]
+}

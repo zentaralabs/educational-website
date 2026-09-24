@@ -1,0 +1,302 @@
+{
+  "54b34184-6c7e-4681-ad43-cb64d336e290": {
+    "name": "Associate Degree in Engineering",
+    "slug": "associate-degree-of-engineering",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/associate-degree-of-engineering"
+  },
+  "282642d8-10fd-4bfe-b2c7-697d8dc3b23b": {
+    "name": "Associate Degree of Allied Health",
+    "slug": "associate-degree-of-allied-health",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/associate-degree-of-allied-health"
+  },
+  "1fcf7b22-ddfc-4a93-b2c2-da1218565fbb": {
+    "name": "Associate Degree of Biomedical Science",
+    "slug": "associate-degree-of-biomedical-sciences",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/associate-degree-of-biomedical-sciences"
+  },
+  "a49947be-5c68-4642-b1c4-101c1fffe937": {
+    "name": "Associate Degree of Business",
+    "slug": "associate-degree-of-business",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/associate-degree-of-business"
+  },
+  "c9fca4be-7873-47dc-bc86-8badb2dbf1b2": {
+    "name": "Associate Degree of Construction",
+    "slug": "associate-degree-of-construction",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/associate-degree-of-construction"
+  },
+  "c8552909-eb22-447d-9a99-460ab1e75d2a": {
+    "name": "Associate Degree of Medical Laboratory Science",
+    "slug": "associate-degree-of-medical-laboratory-science",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/associate-degree-of-medical-laboratory-science"
+  },
+  "87dfa8d8-ae85-4f31-bf95-bd21d690362c": {
+    "name": "Associate Degree of Surveying",
+    "slug": "associate-degree-of-surveying",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/associate-degree-of-surveying"
+  },
+  "caa2dc3e-c9fd-48a6-ace0-87b87faed63c": {
+    "name": "Bachelor of Accounting (BACT)",
+    "slug": "bachelor-of-accounting",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-accounting"
+  },
+  "4990f751-7b33-480b-bb84-b3c7821d85d8": {
+    "name": "Bachelor of Agricultural Technology and Management",
+    "slug": "bachelor-of-agricultural-technology",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-agricultural-technology"
+  },
+  "b96cfe8f-20c1-4561-9733-edb4b7def470": {
+    "name": "Bachelor of Arts",
+    "slug": "bachelor-of-arts",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-arts"
+  },
+  "e091a2cf-408a-4df4-a5de-52f9a3d40bd6": {
+    "name": "Bachelor of Aviation",
+    "slug": "bachelor-of-aviation",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-aviation"
+  },
+  "960e5610-7ca3-46b9-b441-23cd4b1880c7": {
+    "name": "Bachelor of Biomedical Sciences",
+    "slug": "bachelor-of-biomedical-sciences",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-biomedical-sciences"
+  },
+  "6e5f253b-9dac-4fac-864e-49da37e82d3e": {
+    "name": "Bachelor of Business",
+    "slug": "bachelor-of-business",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-business"
+  },
+  "d350b87f-98cd-4388-9f61-a6e447cebe37": {
+    "name": "Bachelor of Business and Commerce",
+    "slug": null,
+    "url": null
+  },
+  "91b63fb4-92d3-43df-9537-75227cf18f49": {
+    "name": "Bachelor of Creative Arts (Honours)",
+    "slug": "bachelor-of-creative-arts-honours",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-creative-arts-honours"
+  },
+  "220f4f0d-8934-4edd-b343-811b01c30656": {
+    "name": "Bachelor of Design and Interactive Technologies",
+    "slug": "bachelor-of-digital-design",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-digital-design"
+  },
+  "198f7d73-35df-4f53-a901-d317d92479ab": {
+    "name": "Bachelor of Education (Primary)",
+    "slug": "bachelor-of-education-primary",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-education-primary"
+  },
+  "228779dd-ce1c-4f98-aee7-4acbad98cd52": {
+    "name": "Bachelor of Engineering (Honours)",
+    "slug": "bachelor-of-engineering-honours",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-engineering-honours"
+  },
+  "4dc052fe-1142-4b71-83e7-2bad96dd92b6": {
+    "name": "Bachelor of Engineering Technology",
+    "slug": "bachelor-of-engineering-technology",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-engineering-technology"
+  },
+  "e0b1d36c-ff9e-479e-aac2-da347de83232": {
+    "name": "Bachelor of Environmental Science",
+    "slug": "bachelor-of-environmental-science",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-environmental-science"
+  },
+  "1b2231a7-3d64-443f-b008-15ecbbf5a259": {
+    "name": "Bachelor of Human Services",
+    "slug": null,
+    "url": null
+  },
+  "cb6ae21c-a212-4859-8a2e-c744eae334a6": {
+    "name": "Bachelor of Information Technology",
+    "slug": "bachelor-of-information-technology",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-information-technology"
+  },
+  "8484cabe-bfa8-4042-94cf-2847635a6bda": {
+    "name": "Bachelor of Medical Laboratory Science",
+    "slug": "bachelor-of-medical-laboratory-science",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-medical-laboratory-science"
+  },
+  "4d6cbde1-e074-46b2-8937-9d920cd1e016": {
+    "name": "Bachelor of Nursing",
+    "slug": "bachelor-of-nursing",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-nursing"
+  },
+  "b23a25e5-128c-42a3-a25f-f87a47e7840d": {
+    "name": "Bachelor of Occupational Therapy (Honours)",
+    "slug": "bachelor-of-occupational-therapy-honours",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-occupational-therapy-honours"
+  },
+  "520f3d4a-d79e-47af-b923-effe0fbde4c1": {
+    "name": "Bachelor of Paramedicine",
+    "slug": "bachelor-of-paramedicine",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-paramedicine"
+  },
+  "56335436-6c75-4143-a041-d7d3c849358d": {
+    "name": "Bachelor of Physiotherapy (Honours)",
+    "slug": "bachelor-of-physiotherapy-honours",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-physiotherapy-honours"
+  },
+  "f94fc8bf-a7bb-44a0-bd7e-49b7c9e81e44": {
+    "name": "Bachelor of Psychology (Honours)",
+    "slug": "bachelor-of-psychology-honours",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-psychology-honours"
+  },
+  "80610d4d-670b-4e14-a1d6-b52e64eff105": {
+    "name": "Bachelor of Science",
+    "slug": "bachelor-of-science",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-science"
+  },
+  "131e1082-fdcb-4252-b640-a317a3187d70": {
+    "name": "Bachelor of Speech Pathology (Honours)",
+    "slug": "bachelor-of-speech-pathology-honours",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-speech-pathology-honours"
+  },
+  "0f8db4b2-8a43-47dc-8349-98294c32e944": {
+    "name": "Bachelor of Surveying (Honours)",
+    "slug": "bachelor-of-surveying-honours",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-surveying-honours"
+  },
+  "e2e2aa5e-e0a5-4aa7-95e9-dc955ddb3e5f": {
+    "name": "Bachelor of Surveying Technology",
+    "slug": "bachelor-of-surveying-technology",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-surveying-technology"
+  },
+  "01f0c256-4b21-4b88-8acf-f699db7cb11f": {
+    "name": "Bachelor of Theatre",
+    "slug": "bachelor-of-theatre",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-theatre"
+  },
+  "91ca13b8-05c1-455c-8392-46ba3d53b01a": {
+    "name": "Bachelor of Visual Art",
+    "slug": "bachelor-of-visual-art",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-visual-art"
+  },
+  "29bfd70c-a603-4c34-9135-6905b1366e6a": {
+    "name": "Diploma of Business",
+    "slug": "diploma-of-business-and-management-studies",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/diploma-of-business-and-management-studies"
+  },
+  "00c88ed6-0a27-4f67-aa9f-8039fca3fe06": {
+    "name": "Doctor of Philosophy",
+    "slug": "doctor-of-philosophy",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/doctor-of-philosophy"
+  },
+  "ec392a26-4fa1-4391-8145-a8f351b7e541": {
+    "name": "Graduate Certificate in Science",
+    "slug": "graduate-certificate-of-science",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/graduate-certificate-of-science"
+  },
+  "fd023cad-1b5c-441a-8b7e-04182aa28cb7": {
+    "name": "Graduate Certificate of Business (GCBU)",
+    "slug": "graduate-certificate-of-business",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/graduate-certificate-of-business"
+  },
+  "4550f2fb-f6e3-4066-a6f5-699a28a6e6b4": {
+    "name": "Graduate Certificate of Professional Engineering",
+    "slug": "graduate-certificate-of-professional-engineering",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/graduate-certificate-of-professional-engineering"
+  },
+  "c59bcab1-4629-4f9f-b4df-3d949281f7ca": {
+    "name": "Graduate Certificate of Sport and Exercise",
+    "slug": null,
+    "url": null
+  },
+  "18a27b6b-f377-4ce9-bd89-57dda432a4e9": {
+    "name": "Graduate Diploma of Business (GDBZ)",
+    "slug": "graduate-diploma-of-business",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/graduate-diploma-of-business"
+  },
+  "ee327a03-0d56-4e03-bb7e-084495cfe07e": {
+    "name": "Graduate Diploma of Professional Engineering",
+    "slug": "graduate-diploma-of-professional-engineering",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/graduate-diploma-of-professional-engineering"
+  },
+  "5465102a-d8f8-4f5a-b6c1-40e07694b8e9": {
+    "name": "Graduate Diploma of Science",
+    "slug": "graduate-diploma-of-science",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/graduate-diploma-of-science"
+  },
+  "7ce86073-4a18-4524-9a69-b7335ff9da6d": {
+    "name": "Master of Business (MBIZ)",
+    "slug": "master-of-business",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/master-of-business"
+  },
+  "59c279bd-7934-4707-8d5c-8666afc5c535": {
+    "name": "Master of Business Administration",
+    "slug": "master-of-business-administration",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/master-of-business-administration"
+  },
+  "6a8b0cf6-26e0-40a3-bfd5-95c9cc34e3a9": {
+    "name": "Master of Clinical Psychology",
+    "slug": "master-of-clinical-psychology",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/master-of-clinical-psychology"
+  },
+  "407b0f2b-1294-4715-b1a7-38ff66143214": {
+    "name": "Master of Cyber Security (MCYS)",
+    "slug": "master-of-cyber-security",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/master-of-cyber-security"
+  },
+  "1345f0c9-5c8a-415b-945f-b6f98aa78ab8": {
+    "name": "Master of Data Science",
+    "slug": "master-of-data-science",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/master-of-data-science"
+  },
+  "05cfa929-a768-4c21-9a52-78455bfa9ae2": {
+    "name": "Master of Education",
+    "slug": "master-of-education",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/master-of-education"
+  },
+  "8b76ea96-2c3e-4c3e-a8ca-0d03a7630703": {
+    "name": "Master of Information Systems (MISP)",
+    "slug": "master-of-information-systems",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/master-of-information-systems"
+  },
+  "a426e8dd-9835-4146-9653-b36d0ed7c8de": {
+    "name": "Master of Information Technology (MCTN)",
+    "slug": "master-of-information-technology",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/master-of-information-technology"
+  },
+  "547c32d1-82bf-4a54-a037-6c04236df095": {
+    "name": "Master of IT Innovation (MATI)",
+    "slug": null,
+    "url": null
+  },
+  "d547c3dc-8db1-4334-a0cf-d44e8029822c": {
+    "name": "Master of Nursing",
+    "slug": "master-of-nursing",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/master-of-nursing"
+  },
+  "c4b02052-b339-4b6a-a8e9-8c242aed2072": {
+    "name": "Master of Professional Accounting (MPAC)",
+    "slug": null,
+    "url": null
+  },
+  "34993840-6f2f-4161-9f39-5e358f750734": {
+    "name": "Master of Professional Engineering",
+    "slug": "master-of-professional-engineering",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/master-of-professional-engineering"
+  },
+  "2a0b2891-dc5e-45ec-a9af-883232aae60d": {
+    "name": "Master of Professional Psychology",
+    "slug": "master-of-professional-psychology",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/master-of-professional-psychology"
+  },
+  "ff44cf60-97ed-4bb0-8e03-aa771b957d00": {
+    "name": "Master of Public Health",
+    "slug": "master-of-public-health",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/master-of-public-health"
+  },
+  "c0bd088c-8659-4ae3-a66e-10c1292b65ae": {
+    "name": "Master of Research",
+    "slug": "master-of-research",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/master-of-research"
+  },
+  "1cc4fe6a-eacb-426d-b8ba-2db40d831f78": {
+    "name": "Master of Science",
+    "slug": "master-of-science",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/master-of-science"
+  },
+  "578ce0e2-5584-4728-bace-f33878289615": {
+    "name": "Master of Social Work (Qualifying)",
+    "slug": "master-of-social-work-qualifying",
+    "url": "https://www.unisq.edu.au/study/degrees-and-courses/master-of-social-work-qualifying"
+  }
+}
