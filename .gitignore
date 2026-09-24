@@ -52,3 +52,9 @@ scripts/data/_*
 
 # Raw HTML scrape cache from build-out sprints (large, regenerable)
 scripts/data/scu_html_cache/
+scripts/data/tq_cache/
+scripts/data/tq_sitemap.xml
+scripts/data/tq_academic_global.html
+scripts/data/tq_elp_global.html
+scripts/data/tq_course_urls.txt
+scripts/data/tq_row_map_draft.json

@@ -1,0 +1,363 @@
+{
+  "4b2259cd-8b1c-4ef1-9bc6-7a513fcf4a4c": {
+    "name": "Advanced Diploma of Engineering",
+    "action": "build",
+    "urls": [
+      "https://tafeqld.edu.au/course/17/17916/advanced-diploma-of-engineering"
+    ],
+    "note": null
+  },
+  "ae15b3c6-5356-41d7-8d1d-858bb6ff7f2a": {
+    "name": "Advanced Diploma of Engineering Technology - Electrical",
+    "action": "build",
+    "urls": [
+      "https://tafeqld.edu.au/course/17/17857/advanced-diploma-of-engineering-technology-electrical"
+    ],
+    "note": null
+  },
+  "383c575a-0f2a-4093-b118-0bd729bcfcbb": {
+    "name": "Associate Degree in Applied Technologies (Advanced Manufacturing)",
+    "action": "build",
+    "urls": [
+      "https://tafeqld.edu.au/course/19/19442/associate-degree-in-applied-technologies"
+    ],
+    "note": "TAFE Queensland's own live course page titles this qualification plainly \"Associate Degree in Applied Technologies\" (HED012) with no specialisation suffix; its content is entirely about the Advanced Manufacturing specialisation (automation, robotics, digital fabrication, Industry 4.0, CAD/CAM) so this is genuinely the same course as the DB row, just without a bracketed suffix on the live site."
+  },
+  "a66ac4b2-86c9-4a86-aa90-224796d464b2": {
+    "name": "Associate Degree in Civil Engineering",
+    "action": "build",
+    "urls": [
+      "https://tafeqld.edu.au/course/17/17680/associate-degree-in-civil-engineering"
+    ],
+    "note": null
+  },
+  "6a861d7b-c005-4fe3-967b-44e9f9482f32": {
+    "name": "Bachelor of Business",
+    "action": "archive",
+    "reason": "Confirmed via TAFE Queensland's own /courses/course-types/degrees/university-partnerships/pathways-to-university-of-southern-queensland page: Bachelor of Business is a University of Southern Queensland (UniSQ) degree that TAFE Queensland's own Diploma of Business (BSB50120) and Advanced Diploma of Leadership and Management (BSB60420) articulate INTO. It is UniSQ's own award, not a TAFE-Queensland-granted qualification (unlike the real University of Canberra dual-award Creative Industries/Design/Built Environment degrees, which ARE delivered and taught by TAFE Queensland itself). Zero matches in the 555-course catalogue or the university-partnerships page under any TAFEQ-granted Business bachelor."
+  },
+  "794a79c8-8ad3-47cf-b08a-4ec8af310bc8": {
+    "name": "Bachelor of Creative Industries (Drama and Performance)",
+    "action": "build",
+    "urls": [
+      "https://tafeqld.edu.au/course/18/18983/bachelor-of-creative-industries-drama-and-performance"
+    ],
+    "note": null
+  },
+  "6744d58a-44f3-4406-862f-4efd2f5b6e2a": {
+    "name": "Bachelor of Creative Industries (Visual Arts)",
+    "action": "build",
+    "urls": [
+      "https://tafeqld.edu.au/course/17/17919/bachelor-of-creative-industries-visual-arts"
+    ],
+    "note": null
+  },
+  "927daf94-6732-4609-a685-e39ad02733be": {
+    "name": "Bachelor of Dental Prosthetics",
+    "action": "build",
+    "urls": [
+      "https://tafeqld.edu.au/course/17/17880/bachelor-of-dental-prosthetics"
+    ],
+    "note": null
+  },
+  "377796a0-562e-4252-a4e8-ff5d177098a8": {
+    "name": "Bachelor of Design (Visual Communication Design)",
+    "action": "build",
+    "urls": [
+      "https://tafeqld.edu.au/course/18/18967/bachelor-of-design-visual-communication-design"
+    ],
+    "note": null
+  },
+  "8fd3e455-5a03-499d-8081-9fa363c7805b": {
+    "name": "Bachelor of Engineering Technologies (Advanced Manufacturing)",
+    "action": "honest_null",
+    "reason": "Confirmed real and specifically named, but not yet independently enrolling: TAFE Queensland's own live Associate Degree in Applied Technologies page (HED012, /course/19/19442) states graduates are \"on the path to further advanced studies, with articulation options into the Bachelor of Engineering Technologies and related qualifications\" - naming it as a genuine forthcoming/pathway qualification. But it has no course code, no course page, and no HED listing of its own anywhere on tafeqld.edu.au (checked the 555-course catalogue, the admission-ranking HED table which only runs to HED012, and a full-site search). The Associate Degree feeding into it only launched in March 2026 per TAFE Queensland's own news article, consistent with the Bachelor not yet being live. Same shape as CQU's Master of Data Analytics honest-null precedent: a real, cited, named future qualification, not a research gap."
+  },
+  "3aec9bcc-2488-4893-b1da-c8975362e4ed": {
+    "name": "Bachelor of Information Technology (Cyber Security)",
+    "action": "archive",
+    "reason": "The DB's own stored source_url (https://tafeqld.edu.au/courses/study-areas/business-and-it/information-technology/cyber-security) is TAFE Queensland's real cyber security study-area hub page, and it lists exactly 5 real courses in the pathway: Certificate IV in Cyber Security, Graduate Certificate in Cyber Security, Graduate Diploma in Cyber Security, Master of Cyber Security, Master of Cyber Security (Advanced). No Bachelor's-level award exists anywhere in that ladder or in the 555-course catalogue. TAFE Queensland's IT/cyber offering goes straight from VET Certificate IV to postgraduate Grad Cert/Grad Dip/Master, with no Bachelor of IT at all."
+  },
+  "bfc1a6c7-dc3d-4ec3-9234-7e866bc84b64": {
+    "name": "Bachelor of Nursing",
+    "action": "build",
+    "urls": [
+      "https://tafeqld.edu.au/course/19/19195/bachelor-of-nursing"
+    ],
+    "note": null
+  },
+  "f620b22f-05bd-450b-895d-f6c348aa0c44": {
+    "name": "Bachelor of the Built Environment (Architecture)",
+    "action": "build",
+    "urls": [
+      "https://tafeqld.edu.au/course/19/19222/bachelor-of-the-built-environment-architecture"
+    ],
+    "note": null
+  },
+  "8247ee43-998a-4169-9111-333d107effe2": {
+    "name": "Diploma of Accounting",
+    "action": "build",
+    "urls": [
+      "https://tafeqld.edu.au/course/18/18795/diploma-of-accounting"
+    ],
+    "note": null
+  },
+  "eb502ca7-f69c-4b54-953a-bb96de64ca08": {
+    "name": "Diploma of Agribusiness Management",
+    "action": "build",
+    "urls": [
+      "https://tafeqld.edu.au/course/17/17904/diploma-of-agribusiness-management"
+    ],
+    "note": null
+  },
+  "e4bb1bc5-2a27-4846-b60b-f0f6899f060c": {
+    "name": "Diploma of Anaesthetic Technology and Practice",
+    "action": "build",
+    "urls": [
+      "https://tafeqld.edu.au/course/17/17792/diploma-of-anaesthetic-technology-and-practice"
+    ],
+    "note": null
+  },
+  "2fb686f0-dc55-4049-b3d1-69ece2b1cd51": {
+    "name": "Diploma of Apparel, Fashion and Textiles",
+    "action": "build",
+    "urls": [
+      "https://tafeqld.edu.au/course/19/19406/diploma-of-apparel-fashion-and-textiles",
+      "https://tafeqld.edu.au/course/19/19419/diploma-of-apparel-fashion-and-textiles"
+    ],
+    "note": null,
+    "multiStream": true
+  },
+  "a9150ca7-3462-4203-a8c4-16d31535f88c": {
+    "name": "Diploma of Beauty Therapy",
+    "action": "build",
+    "urls": [
+      "https://tafeqld.edu.au/course/17/17811/diploma-of-beauty-therapy"
+    ],
+    "note": null
+  },
+  "21de73fd-8265-494f-9d49-0870d21c8a0a": {
+    "name": "Diploma of Building Design",
+    "action": "build",
+    "urls": [
+      "https://tafeqld.edu.au/course/17/17752/diploma-of-building-design"
+    ],
+    "note": null
+  },
+  "379f9969-0643-4baf-bb41-2d09c4ea5063": {
+    "name": "Diploma of Business",
+    "action": "build",
+    "urls": [
+      "https://tafeqld.edu.au/course/17/17667/diploma-of-business"
+    ],
+    "note": null
+  },
+  "d75e0ed8-fd6c-4ac5-8112-59d46758a47b": {
+    "name": "Diploma of Community Services",
+    "action": "build",
+    "urls": [
+      "https://tafeqld.edu.au/course/17/17679/diploma-of-community-services"
+    ],
+    "note": null
+  },
+  "ffee5b7f-3974-4c12-835c-827d15aa98a7": {
+    "name": "Diploma of Conservation and Ecosystem Management",
+    "action": "build",
+    "urls": [
+      "https://tafeqld.edu.au/course/17/17967/diploma-of-conservation-and-ecosystem-management"
+    ],
+    "note": null
+  },
+  "abaff642-bd52-4215-97b9-76be703dd2f6": {
+    "name": "Diploma of Dental Technology",
+    "action": "build",
+    "urls": [
+      "https://tafeqld.edu.au/course/17/17768/diploma-of-dental-technology"
+    ],
+    "note": null
+  },
+  "8e9aa597-4384-4284-92bf-bc77a204d458": {
+    "name": "Diploma of Early Childhood Education and Care",
+    "action": "build",
+    "urls": [
+      "https://tafeqld.edu.au/course/17/17801/diploma-of-early-childhood-education-and-care",
+      "https://tafeqld.edu.au/course/18/18750/diploma-of-early-childhood-education-and-care"
+    ],
+    "note": null
+  },
+  "67c689c9-6fe9-4ecf-a232-df69d0000b99": {
+    "name": "Diploma of Engineering - Technical",
+    "action": "build",
+    "urls": [
+      "https://tafeqld.edu.au/course/17/17674/diploma-of-engineering-technical"
+    ],
+    "note": null
+  },
+  "0d4bf85e-0121-4938-a037-26a834b686a9": {
+    "name": "Diploma of Event Management",
+    "action": "build",
+    "urls": [
+      "https://tafeqld.edu.au/course/17/17947/diploma-of-event-management",
+      "https://tafeqld.edu.au/course/19/19425/diploma-of-event-management"
+    ],
+    "note": null
+  },
+  "c408bd62-2c81-4247-a2db-e61bcff8ce8e": {
+    "name": "Diploma of Graphic Design",
+    "action": "build",
+    "urls": [
+      "https://tafeqld.edu.au/course/17/17790/diploma-of-graphic-design"
+    ],
+    "note": null
+  },
+  "cad4895b-b981-4ab2-88d7-70f059c1099a": {
+    "name": "Diploma of Hospitality Management",
+    "action": "build",
+    "urls": [
+      "https://tafeqld.edu.au/course/18/18028/diploma-of-hospitality-management"
+    ],
+    "note": null
+  },
+  "03970e30-1a78-4c13-8513-ea768c9591bc": {
+    "name": "Diploma of Information Technology",
+    "action": "build",
+    "urls": [
+      "https://tafeqld.edu.au/course/19/19415/diploma-of-information-technology"
+    ],
+    "note": null
+  },
+  "32e08c82-2e83-4f9e-898e-f1c0ce4e83cf": {
+    "name": "Diploma of Interior Design",
+    "action": "build",
+    "urls": [
+      "https://tafeqld.edu.au/course/18/18833/diploma-of-interior-design"
+    ],
+    "note": null
+  },
+  "0badf60a-23f5-4c1f-82a3-72f5a36dd683": {
+    "name": "Diploma of Laboratory Technology",
+    "action": "archive",
+    "reason": "The DB's claimed subject area (Health and science > Laboratory science, https://tafeqld.edu.au/courses/study-areas/health-and-science/laboratory-science) lists exactly 2 real courses: Certificate III in Laboratory Skills and Certificate IV in Laboratory Techniques. No Diploma level exists in this subject anywhere in the 555-course catalogue or on the study-area hub page."
+  },
+  "e12e0042-db85-49b7-9b27-7690f283b14d": {
+    "name": "Diploma of Landscape Design",
+    "action": "archive",
+    "reason": "The DB's closest real subject area (Environment and animal services > Horticulture, https://tafeqld.edu.au/courses/study-areas/environment-and-animal-services/horticulture) lists exactly 3 real courses, all Certificate III level (Horticulture, Conservation and Ecosystem Management, Parks and Gardens). No Landscape Design course of any kind, Diploma or otherwise, exists in the 555-course catalogue; 'landscape design' appears only as a career-outcome phrase for Certificate III in Landscape Construction in an unrelated news article."
+  },
+  "c43586e5-4dfe-49b5-bd15-1c0244fe35e2": {
+    "name": "Diploma of Leadership and Management",
+    "action": "build",
+    "urls": [
+      "https://tafeqld.edu.au/course/17/17673/diploma-of-leadership-and-management"
+    ],
+    "note": null
+  },
+  "27d3b3fe-6373-4cee-a21f-41a69a63ba3b": {
+    "name": "Diploma of Marketing and Communication",
+    "action": "build",
+    "urls": [
+      "https://tafeqld.edu.au/course/18/18014/diploma-of-marketing-and-communication"
+    ],
+    "note": null
+  },
+  "53859ac5-a3b1-4333-b775-86969b33789b": {
+    "name": "Diploma of Mental Health",
+    "action": "build",
+    "urls": [
+      "https://tafeqld.edu.au/course/18/18075/diploma-of-mental-health"
+    ],
+    "note": null
+  },
+  "46c3efdf-2f19-4cde-9368-201c9143e06f": {
+    "name": "Diploma of Music",
+    "action": "build",
+    "urls": [
+      "https://tafeqld.edu.au/course/17/17841/diploma-of-music",
+      "https://tafeqld.edu.au/course/17/17849/diploma-of-music"
+    ],
+    "note": null,
+    "multiStream": true
+  },
+  "9d4ed3ba-e3ca-4b94-885f-634ea41438dc": {
+    "name": "Diploma of Nursing",
+    "action": "build",
+    "urls": [
+      "https://tafeqld.edu.au/course/17/17738/diploma-of-nursing"
+    ],
+    "note": null
+  },
+  "cbc41ae6-b18f-41df-be20-b1753ebe79eb": {
+    "name": "Diploma of Photography and Digital Imaging",
+    "action": "build",
+    "urls": [
+      "https://tafeqld.edu.au/course/17/17839/diploma-of-photography-and-digital-imaging"
+    ],
+    "note": null
+  },
+  "58c06f21-fccb-42d9-98d0-d79e015e3995": {
+    "name": "Diploma of Remedial Massage",
+    "action": "build",
+    "urls": [
+      "https://tafeqld.edu.au/course/17/17778/diploma-of-remedial-massage",
+      "https://tafeqld.edu.au/course/19/19480/diploma-of-remedial-massage"
+    ],
+    "note": null
+  },
+  "44ecaa27-ca81-4828-bb36-7b58f8c52ff0": {
+    "name": "Diploma of Screen and Media",
+    "action": "build",
+    "urls": [
+      "https://tafeqld.edu.au/course/18/18877/diploma-of-screen-and-media"
+    ],
+    "note": null
+  },
+  "1d4793a0-69ea-47b2-a680-2956e9773e9d": {
+    "name": "Diploma of Sport",
+    "action": "build",
+    "urls": [
+      "https://tafeqld.edu.au/course/17/17934/diploma-of-sport",
+      "https://tafeqld.edu.au/course/19/19478/diploma-of-sport"
+    ],
+    "note": null
+  },
+  "271e6fd7-57b4-4b23-90b4-9b3b617b65bf": {
+    "name": "Diploma of Travel and Tourism Management",
+    "action": "build",
+    "urls": [
+      "https://tafeqld.edu.au/course/17/17950/diploma-of-travel-and-tourism-management"
+    ],
+    "note": null
+  },
+  "b68f465d-682c-472d-9231-a4901b1cec2e": {
+    "name": "Diploma of Visual Arts",
+    "action": "build",
+    "urls": [
+      "https://tafeqld.edu.au/course/17/17782/diploma-of-visual-arts"
+    ],
+    "note": null
+  },
+  "211b82f2-9153-497e-94bc-3251aa470062": {
+    "name": "Graduate Certificate in Cyber Security",
+    "action": "build",
+    "urls": [
+      "https://tafeqld.edu.au/course/19/19380/graduate-certificate-in-cyber-security"
+    ],
+    "note": null
+  },
+  "711f0679-0bc3-4e5a-b6af-05848e586695": {
+    "name": "Graduate Diploma in Cyber Security",
+    "action": "build",
+    "urls": [
+      "https://tafeqld.edu.au/course/19/19381/graduate-diploma-in-cyber-security"
+    ],
+    "note": null
+  },
+  "93665c6d-7c7b-47cb-89cd-c52f57f741bd": {
+    "name": "Master of Cyber Security",
+    "action": "build",
+    "urls": [
+      "https://tafeqld.edu.au/course/19/19383/master-of-cyber-security"
+    ],
+    "note": null
+  }
+}
