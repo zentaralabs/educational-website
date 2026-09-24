@@ -141,6 +141,118 @@ const LEAD: Record<string, string> = {
     "Canberra is smaller and quieter than the big east-coast cities, with a tighter but generally cheaper rental market and short commutes. The choice is narrow: ANU, which is highly selective and sits in the top fee band, and the University of Canberra, which is more accessible on both entry and cost. The whole ACT counts as a regional area for skilled migration, and it runs its own 190 and 491 nomination through the Canberra Matrix.",
 };
 
+/**
+ * Optional hand-written sections/FAQ layered onto the generic
+ * subjectBestCollection template, keyed by SUBJECT_BEST_PAGES slug. Added so
+ * these pages carry real field-specific depth (accreditation body, migration
+ * pathway, entry bar) instead of just the generic intro + ranked list.
+ * Content checked against ACS/Engineers Australia/NMBA published guidance
+ * and the skilled occupation lists in September 2026; re-verify before
+ * reusing elsewhere.
+ */
+const SUBJECT_BEST_EXTRA: Record<
+  string,
+  {
+    sectionsBeforeList?: CollectionSection[];
+    sectionsAfterList?: CollectionSection[];
+    faq?: { q: string; a: string }[];
+  }
+> = {
+  "computer-science": {
+    sectionsAfterList: [
+      {
+        heading: "Accreditation and the migration pathway",
+        body: [
+          "The Australian Computer Society (ACS) is the skills assessing authority for ICT occupations on the skilled migration lists, and it accredits specific computer science degrees at each university rather than a department as a whole. An ACS-accredited degree still needs an ACS skills assessment before a skilled visa application, but graduating from an accredited program removes any question about whether your qualification counts as \"ICT major\" content, which is where self-taught-heavy or conversion degrees can run into trouble.",
+          "Software Engineer, Developer Programmer, Systems Analyst, and Computer Network and Systems Engineer are among the ICT occupations that sit on the Core Skills Occupation List, which supports the 189, 190, 491, and employer-sponsored 482 and 186 visas. Most computer science graduates on the 485 graduate visa apply for the ACS assessment while they have work rights, since it takes several weeks and some occupations require documented employment history.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "Do I need an ACS-accredited degree to work in tech in Australia?",
+        a: "Not to get a job, but you need an ACS skills assessment for most ICT skilled visas, and graduating from an ACS-accredited program makes that assessment more straightforward because the ICT content of your degree isn't in question.",
+      },
+      {
+        q: "Is computer science a good pathway to permanent residence in Australia?",
+        a: "Yes. Several ICT occupations, including Software Engineer and Developer Programmer, sit on the Core Skills Occupation List, and the 485 graduate visa gives time to build the local experience some pathways want before applying for a skilled visa.",
+      },
+    ],
+  },
+  "information-technology": {
+    sectionsAfterList: [
+      {
+        heading: "ACS assessment and which IT roles count",
+        body: [
+          "Information technology sits under the same ACS skills-assessing framework as computer science, but the occupation list is broader: ICT Business Analyst, Analyst Programmer, and ICT Security Specialist join Software Engineer and Systems Analyst on the Core Skills Occupation List, alongside less technical roles like ICT Project Manager. Which ANZSCO occupation your degree and work experience map to matters more for a skilled visa than which university you attended, so check the specific occupation before picking a specialisation.",
+          "A general IT degree without a strong major (networking, security, or software development, for example) can be harder for ACS to match to a specific skilled occupation. Universities that clearly label their IT specialisations make that mapping easier when you apply for the assessment.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "What is the difference between computer science and information technology degrees for migration?",
+        a: "Both go through the same ACS skills assessment and can lead to the same ICT occupations. Computer science tends to be more theory- and software-development-heavy; IT degrees are often broader and can include networking, security, or business-systems specialisations, so the occupation you're assessed against depends more on your major and work history than the degree title.",
+      },
+    ],
+  },
+  "data-science": {
+    sectionsAfterList: [
+      {
+        heading: "Where data science fits on the skilled migration lists",
+        body: [
+          "Data Scientist is not its own line on Australia's skilled occupation lists, so ACS skills assessments for data science graduates are usually matched against a related ICT occupation such as ICT Business Analyst, Analyst Programmer, or Software Engineer, depending on how much of the degree was programming and systems work versus statistics and analytics. That mapping is worth checking with ACS before you enrol if migration is the main goal, since it affects which occupation ceiling and state nomination criteria apply to you.",
+          "In practice, a data science degree with a strong programming and software-engineering core maps more cleanly to an ICT occupation than one built mostly around statistics electives, which can sit closer to a mathematics or analytics classification instead.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "Is there a dedicated Data Scientist visa occupation in Australia?",
+        a: "No. Data Scientist doesn't appear as its own entry on the skilled occupation lists, so ACS typically assesses data science graduates against a related ICT occupation like ICT Business Analyst, Analyst Programmer, or Software Engineer, based on the degree's actual content and your work history.",
+      },
+    ],
+  },
+  engineering: {
+    sectionsAfterList: [
+      {
+        heading: "Engineers Australia accreditation and the Washington Accord",
+        body: [
+          "Engineers Australia accredits specific engineering degrees, not universities as a whole, against the Washington Accord competency standard. A degree accredited under the Washington Accord is recognised as equivalent to a professional engineering qualification in every other signatory country, and graduating from one means Engineers Australia's Migration Skills Assessment (the standard route to a skilled engineering visa) accepts your qualification without the extra Competency Demonstration Report that non-accredited or overseas-qualified applicants have to write.",
+          "Most four-year Bachelor of Engineering (Honours) programs at Australian universities are Washington Accord accredited; check the specific program and major, since a small number of newer or combined degrees are not, or are accredited under a different track (the Sydney Accord, for engineering technologist qualifications, carries a lower level of recognition).",
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "Does my engineering degree need to be Engineers Australia accredited for a skilled visa?",
+        a: "It doesn't have to be, but it makes the Migration Skills Assessment far simpler. A Washington Accord-accredited degree skips the Competency Demonstration Report that non-accredited and overseas graduates must write to prove their engineering competencies against Engineers Australia's standard.",
+      },
+      {
+        q: "What is the difference between the Washington Accord and the Sydney Accord for engineering degrees?",
+        a: "The Washington Accord covers full professional engineering (Engineer) qualifications; the Sydney Accord covers engineering technologist qualifications, a step below, which carry a lower migration skills-assessment outcome (Engineering Technologist rather than Professional Engineer). Check which accord your specific program is accredited under, not just whether it says \"accredited\".",
+      },
+    ],
+  },
+  "nursing-and-health-sciences": {
+    sectionsAfterList: [
+      {
+        heading: "NMBA registration is the real gate, not the university",
+        body: [
+          "Every Bachelor of Nursing accredited by the Australian Nursing and Midwifery Accreditation Council leads to the same outcome: eligibility to register as a Registered Nurse with the Nursing and Midwifery Board of Australia (NMBA). The university you attend affects clinical placement quality, campus location, and cost, but not whether you can register, since accreditation (not institutional prestige) is what NMBA checks.",
+          "The NMBA's English requirement is stricter than most university admission requirements: IELTS Academic 7.0 in listening, reading, and speaking, and 6.5 in writing, or the equivalent OET or PTE Academic score. Confirm your university's admission IELTS bar against this registration bar separately, since a program that admits at 6.5 overall can still require you to hit 7.0 in three of four bands before NMBA will register you at the end.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "Does it matter which Australian university I study nursing at for registration?",
+        a: "Not for eligibility to register. Any Bachelor of Nursing accredited by the Australian Nursing and Midwifery Accreditation Council leads to NMBA registration eligibility. It matters for clinical placement access, cost, and campus location, which is what actually varies between universities.",
+      },
+    ],
+  },
+};
+
 /** Builds a "best universities for <subject>" collection from the curated
  *  strongAt list in SUBJECT_CONTENT. */
 function subjectBestCollection(subjectSlug: string): Collection {
@@ -148,6 +260,7 @@ function subjectBestCollection(subjectSlug: string): Collection {
   const curated = SUBJECT_CONTENT[subjectSlug]?.strongAt ?? [];
   const order = new Map(curated.map((c, i) => [c.slug, i]));
   const why = new Map(curated.map((c) => [c.slug, c.why]));
+  const extra = SUBJECT_BEST_EXTRA[subjectSlug];
   return {
     slug: `best-australian-universities-for-${subjectSlug}`,
     title: `The best Australian universities for ${name}`,
@@ -162,6 +275,8 @@ function subjectBestCollection(subjectSlug: string): Collection {
       `There is no official ranking of Australian universities by field of study, so "best for ${name}" comes down to research reputation, industry links, and how seriously a university invests in the area.`,
       `This shortlist is the universities with a genuine reputation in ${name}, with a note on what sets each apart. For the full list of every university that teaches it, plus the cheapest programs, see the ${name} subject page.`,
     ],
+    sectionsAfterList: extra?.sectionsAfterList,
+    faq: extra?.faq,
     methodology: `Curated from the research strengths, specialist facilities, and industry links each university is known for in ${name}. It is not a league table, and a strong department at a lower-ranked university can beat a weak one at a famous name. Check the specific program.`,
     build: (unis) =>
       unis
@@ -726,6 +841,87 @@ function cheapestNursingCollection(): Collection {
   };
 }
 
+/**
+ * Optional hand-written sections/FAQ layered onto the generic cityCollection
+ * template, keyed by the collection slug. Added so these pages carry real
+ * city-specific depth (transport, work rights, regional-migration status)
+ * instead of just the generic intro + ranked list. Transport fares and
+ * regional-migration classification checked against each state's transit
+ * operator and the Migration (LIN 19/051) regional-area instrument in
+ * September 2026; re-verify before reusing elsewhere.
+ */
+const CITY_EXTRA: Record<
+  string,
+  { sectionsAfterList?: CollectionSection[]; faq?: { q: string; a: string }[] }
+> = {
+  "cheapest-universities-in-sydney-for-international-students": {
+    sectionsAfterList: [
+      {
+        heading: "Getting around without inflating your budget",
+        body: [
+          "A weekly Opal transport cap keeps unlimited bus, train, ferry, and light rail travel to a set fee once you've tapped on and off enough times in a week, which matters more in Sydney than most cities because campuses and share-house-friendly suburbs are rarely in the same postcode. Budget for the cap as a recurring cost, not an occasional top-up, especially if your course is at a CBD or harbourside campus and you're renting further out to save on rent.",
+          "Student visa holders can work up to 48 hours a fortnight during term and unlimited hours during scheduled breaks, which is worth planning around before you pick the cheapest-on-paper university: a campus poorly served by public transport can cost you more in commute time (and therefore lost work hours) than a slightly pricier one near where you'll actually live.",
+        ],
+      },
+    ],
+  },
+  "cheapest-universities-in-melbourne-for-international-students": {
+    sectionsAfterList: [
+      {
+        heading: "Myki caps and the tram-heavy inner city",
+        body: [
+          "Melbourne's Myki system caps daily and weekly fares, and the free tram zone covers most of the CBD, which helps if your campus and part-time job both sit inside it. Once you're outside that zone the cost adds up like any other city's transit, so factor your actual commute (not just the CBD free-zone marketing) into the budget figure above.",
+          "Inner-north and inner-west suburbs near RMIT, Melbourne, and Victoria University's city campuses tend to have the most share-house stock aimed at students, which is often the more realistic cost lever than the university's own tuition figure once you account for where you'll actually be able to find a room.",
+        ],
+      },
+    ],
+  },
+  "cheapest-universities-in-perth-for-international-students": {
+    sectionsAfterList: [
+      {
+        heading: "The regional-migration angle is the real draw here",
+        body: [
+          "The whole of Western Australia, including metropolitan Perth, is classified as a regional area under the Department of Home Affairs' regional migration boundaries, which is a genuine structural advantage over Sydney and Melbourne: it adds points on the skilled visa points test, opens the 491 and 190 regional-nomination pathways, and can extend post-study work rights under the 485 visa for graduates of a regional campus. Confirm the current postcode list and points value on the Department of Home Affairs site before relying on it, since regional classifications are reviewed periodically.",
+          "Balanced against that, Perth's distance from the eastern states means fewer direct flights and a higher cost to travel home or to conferences/interviews on the east coast, worth weighing against the migration points if your degree or career plans pull you toward Sydney or Melbourne after graduation.",
+        ],
+      },
+    ],
+  },
+  "cheapest-universities-in-brisbane-for-international-students": {
+    sectionsAfterList: [
+      {
+        heading: "Go Card and the Brisbane-to-Gold-Coast commute",
+        body: [
+          "Translink's Go Card covers Brisbane's buses, trains, and ferries with off-peak discounts that matter if your class schedule lets you avoid the morning and evening peak. Griffith and Bond both run Gold Coast campuses that sit outside metropolitan Brisbane's fare zones and are a genuine commute from Brisbane proper, so check which campus a program is actually taught at before assuming inner-Brisbane rent and transport costs apply.",
+          "Brisbane itself does not carry regional-migration status, but several other Queensland university towns and Gold Coast postcodes do at different times depending on the current Home Affairs boundary, so a Queensland university with satellite or regional campuses can be worth checking against the migration angle even if its main Brisbane campus doesn't qualify.",
+        ],
+      },
+    ],
+  },
+  "cheapest-universities-in-adelaide-for-international-students": {
+    sectionsAfterList: [
+      {
+        heading: "The 2026 Adelaide University merger and what it means for fees",
+        body: [
+          "The University of Adelaide and the University of South Australia merged into Adelaide University at the start of 2026, and current international applicants should expect some fee schedules, program names, and application pages to still be settling as the merged institution consolidates its catalogue. Where a program you're comparing existed at both legacy universities, confirm you're looking at the current merged-institution fee, not a legacy page that hasn't been updated yet.",
+          "Adelaide's cost advantage is real and holds regardless of the merger: South Australia is consistently one of the cheaper state capitals to rent in, and the whole of South Australia is classified as a regional area for skilled migration, adding points and opening state-nomination pathways on top of the raw living-cost saving.",
+        ],
+      },
+    ],
+  },
+  "cheapest-universities-in-canberra-for-international-students": {
+    sectionsAfterList: [
+      {
+        heading: "The Canberra Matrix and ACT nomination",
+        body: [
+          "The whole of the Australian Capital Territory is classified as a regional area for skilled migration, and the ACT runs its own state-nomination points test, the Canberra Matrix, rather than using the generic points system other states apply. Studying at ANU or the University of Canberra can position you well for ACT nomination on the 190 or 491 visa, but the Matrix changes its point allocations periodically, so check the current version on the ACT government's migration site before treating it as a fixed plan.",
+          "Canberra's small size cuts both ways: rent and commute times are genuinely lower than in the bigger east-coast cities, but the part-time job market is thinner outside the public service and hospitality sectors, worth weighing if you're counting on local work income to fund your studies.",
+        ],
+      },
+    ],
+  },
+};
+
 /** Builds a "cheapest universities in <city>" collection. */
 function cityCollection(opts: {
   city: string;
@@ -733,6 +929,7 @@ function cityCollection(opts: {
   slug: string;
 }): Collection {
   const { city, match, slug } = opts;
+  const extra = CITY_EXTRA[slug];
   return {
     slug,
     title: `The cheapest universities in ${city} for international students`,
@@ -745,6 +942,8 @@ function cityCollection(opts: {
       `${city} has universities across the full price range, and where you study inside the city matters less for cost than which institution and course you pick. This list ranks the ${city} universities by estimated first-year budget, cheapest first.`,
       `The budget figure is the cheapest international tuition on record for each university plus our ${city} living-cost estimate plus a rough setup allowance. Tuition varies a lot by course, so treat the order as a guide and check your specific program.`,
     ],
+    sectionsAfterList: extra?.sectionsAfterList,
+    faq: extra?.faq,
     methodology: `We took every published university with a campus in ${city}, used its lowest international tuition (university-wide or its cheapest program), added the ${city} living-cost estimate and about AUD 4,000 in setup costs, and sorted low to high.`,
     build: (unis) =>
       unis
