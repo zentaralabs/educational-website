@@ -159,6 +159,15 @@ const SUBJECT_BEST_EXTRA: Record<
   }
 > = {
   "computer-science": {
+    sectionsBeforeList: [
+      {
+        heading: "You don't need a maths-heavy background to switch into it",
+        body: [
+          "A direct-entry Bachelor of Computer Science usually wants senior secondary maths at a level comparable to Australian Methods or Specialist Maths, which rules some international applicants out or means a bridging semester. The more common route for international students who already hold a bachelor's degree in an unrelated field is a conversion Master of Computer Science: an 18-month to two-year postgraduate degree that assumes no prior programming, admits graduates from any discipline, and is still ACS-accredited at the end, exactly like the undergraduate degree.",
+          "ACS accreditation itself is recognised beyond Australia through the Seoul Accord, the ICT equivalent of engineering's Washington Accord, a mutual-recognition agreement between the computing accreditation bodies of Australia, Canada, the US, the UK, Japan, Korea, and several other signatories. That matters less for the visa (which runs on the ACS skills assessment either way) and more if you're weighing whether the qualification will be recognised if you later work outside Australia.",
+        ],
+      },
+    ],
     sectionsAfterList: [
       {
         heading: "Accreditation and the migration pathway",
@@ -177,9 +186,22 @@ const SUBJECT_BEST_EXTRA: Record<
         q: "Is computer science a good pathway to permanent residence in Australia?",
         a: "Yes. Several ICT occupations, including Software Engineer and Developer Programmer, sit on the Core Skills Occupation List, and the 485 graduate visa gives time to build the local experience some pathways want before applying for a skilled visa.",
       },
+      {
+        q: "What's the difference between a Bachelor of Computer Science and a Bachelor of Software Engineering?",
+        a: "Software engineering programs generally lean more toward formal engineering design process and large-system architecture, while computer science is broader and lets you specialise later in AI, security, or data through electives. Both are assessed by ACS for ICT skilled visas, so the choice matters more for what you'll actually enjoy studying than for the migration outcome.",
+      },
     ],
   },
   "information-technology": {
+    sectionsBeforeList: [
+      {
+        heading: "The Professional Year: a structured bridge from degree to visa",
+        body: [
+          "The ACS Professional Year in IT is a 44-week program (32 weeks of classroom training plus a 12-week workplace internship) built specifically for recent IT graduates on a 485 graduate visa, and it's worth planning for before you finish your degree rather than discovering it afterwards. Completing it within four years of your visa application adds 5 points on the general skilled migration points test for eligible occupations, on top of giving you the local workplace experience and references that are otherwise hard to get straight out of an international student's degree.",
+          "It's a separate, ACS-approved provider program, not something your university runs, and it only makes sense once you're already ACS skills-assessed and holding (or about to hold) a 485 visa, so it's a post-graduation decision rather than something that affects which university or degree you pick now.",
+        ],
+      },
+    ],
     sectionsAfterList: [
       {
         heading: "ACS assessment and which IT roles count",
@@ -194,15 +216,33 @@ const SUBJECT_BEST_EXTRA: Record<
         q: "What is the difference between computer science and information technology degrees for migration?",
         a: "Both go through the same ACS skills assessment and can lead to the same ICT occupations. Computer science tends to be more theory- and software-development-heavy; IT degrees are often broader and can include networking, security, or business-systems specialisations, so the occupation you're assessed against depends more on your major and work history than the degree title.",
       },
+      {
+        q: "Is the ACS Professional Year worth doing after an IT degree?",
+        a: "If you're on a 485 graduate visa and planning a skilled visa application, generally yes: it's the most direct way to add 5 points and get supervised local work experience, and both count toward occupations that are otherwise hard to build a local track record for straight out of a degree. It costs money and takes 44 weeks, so weigh that against how close you already are to the points threshold without it.",
+      },
+      {
+        q: "Do I need work experience before applying for an IT graduate role in Australia?",
+        a: "Not formally for an entry-level graduate role, but international graduates without local internships or a placement built into their degree often find the local-experience expectation is the real barrier, not the degree itself. A degree with an industry placement, or completing the ACS Professional Year afterward, addresses this directly.",
+      },
     ],
   },
   "data-science": {
+    sectionsBeforeList: [
+      {
+        heading: "The same degree title, taught out of different faculties",
+        body: [
+          "\"Data science\" isn't a single standardised curriculum in Australia the way \"nursing\" is: at one university it's taught out of the science faculty with a heavy statistics and mathematics core, at another it sits inside the engineering or IT faculty and leans toward software engineering and systems work. Both get called a Bachelor or Master of Data Science, but they lead to meaningfully different skill sets and, as above, different skilled-migration occupation mappings, so read the actual unit list before assuming two programs with the same name are interchangeable.",
+          "Entry maths requirements track the faculty: science-faculty programs generally expect a stronger senior secondary maths background than IT-faculty ones, which more often offer a bridging or foundation option for students without it.",
+        ],
+      },
+    ],
     sectionsAfterList: [
       {
         heading: "Where data science fits on the skilled migration lists",
         body: [
           "Data Scientist is not its own line on Australia's skilled occupation lists, so ACS skills assessments for data science graduates are usually matched against a related ICT occupation such as ICT Business Analyst, Analyst Programmer, or Software Engineer, depending on how much of the degree was programming and systems work versus statistics and analytics. That mapping is worth checking with ACS before you enrol if migration is the main goal, since it affects which occupation ceiling and state nomination criteria apply to you.",
           "In practice, a data science degree with a strong programming and software-engineering core maps more cleanly to an ICT occupation than one built mostly around statistics electives, which can sit closer to a mathematics or analytics classification instead.",
+          "If migration is the priority rather than the specific job title, this actually gives you room to choose: picking electives that lean toward programming and systems work over pure statistics keeps more ICT occupations open to you at assessment time, without changing the degree you graduate with.",
         ],
       },
     ],
@@ -211,9 +251,30 @@ const SUBJECT_BEST_EXTRA: Record<
         q: "Is there a dedicated Data Scientist visa occupation in Australia?",
         a: "No. Data Scientist doesn't appear as its own entry on the skilled occupation lists, so ACS typically assesses data science graduates against a related ICT occupation like ICT Business Analyst, Analyst Programmer, or Software Engineer, based on the degree's actual content and your work history.",
       },
+      {
+        q: "Should I do a data science degree or a straight computer science degree if I want to work in AI or machine learning?",
+        a: "Either can work: a computer science degree with machine learning and AI electives gives you a broader software-engineering foundation that's useful for building production systems, while a data science degree goes deeper on the statistics and modelling side earlier. Employers hiring for ML engineering roles specifically often prefer the stronger software-engineering base, so check the elective list rather than the degree title.",
+      },
+      {
+        q: "Do I need a strong maths background to study data science in Australia?",
+        a: "It depends on the faculty. Science-faculty data science programs generally expect senior secondary maths at a level comparable to Australian Specialist or Methods Maths; IT-faculty programs are often more accessible and may offer a bridging option if your maths background is weaker.",
+      },
+      {
+        q: "Is a data science master's worth it if I already have a computer science or maths bachelor's?",
+        a: "Often yes, if you want structured depth in statistics, machine learning, and big-data systems specifically, rather than picking those up piecemeal through electives or on the job. It's a genuine specialisation, not just a relabelled computer science degree, so check the unit list matches what you actually want to go deeper on before enrolling.",
+      },
     ],
   },
   engineering: {
+    sectionsBeforeList: [
+      {
+        heading: "The Professional Year applies here too",
+        body: [
+          "Engineering has its own version of the ACS Professional Year: a structured post-graduation program combining workplace-readiness training with an industry internship, run by an Engineers Australia-approved provider rather than by ACS, aimed at international graduates on a 485 visa. Like the IT version, completing it within the required window before you lodge a skilled visa application adds bonus points on the general skilled migration points test, and it's a post-degree decision rather than something that changes which university or program you should pick now.",
+          "Most four-year Bachelor of Engineering (Honours) programs run a mandatory industry placement or work-integrated-learning component built into the degree itself, separate from the Professional Year, and universities vary in how much help they give international students to secure one. Ask about placement support specifically, not just whether a placement is required, since a required-but-unsupported placement can be a real barrier for a student without existing local contacts.",
+        ],
+      },
+    ],
     sectionsAfterList: [
       {
         heading: "Engineers Australia accreditation and the Washington Accord",
@@ -232,9 +293,22 @@ const SUBJECT_BEST_EXTRA: Record<
         q: "What is the difference between the Washington Accord and the Sydney Accord for engineering degrees?",
         a: "The Washington Accord covers full professional engineering (Engineer) qualifications; the Sydney Accord covers engineering technologist qualifications, a step below, which carry a lower migration skills-assessment outcome (Engineering Technologist rather than Professional Engineer). Check which accord your specific program is accredited under, not just whether it says \"accredited\".",
       },
+      {
+        q: "Is the engineering Professional Year the same program as the IT one?",
+        a: "No, it's run by an Engineers Australia-approved provider rather than ACS and structured for engineering occupations specifically, but the shape is the same: classroom job-readiness training plus a workplace internship, done on a 485 visa, adding bonus points toward a skilled visa within the required window.",
+      },
     ],
   },
   "nursing-and-health-sciences": {
+    sectionsBeforeList: [
+      {
+        heading: "Already have a bachelor's degree? You don't need to start over",
+        body: [
+          "A Master of Nursing (Graduate Entry) is the standard route into nursing for international students who already hold a bachelor's degree in an unrelated field. It's a full postgraduate nursing qualification, typically completed in around two years full-time (some universities offer it in as little as 18 months), built around the same ANMAC-accredited curriculum and clinical placement requirements as the undergraduate Bachelor of Nursing, and it leads to the identical outcome: eligibility to register as a Registered Nurse with NMBA. It is not a shortcut with a lesser qualification at the end, just a faster route to the same one if you're not starting from a blank undergraduate transcript.",
+          "The NMBA English and clinical-placement requirements below apply identically whether you take the three- or four-year undergraduate route or the graduate-entry master's, so don't assume the postgraduate pathway relaxes them.",
+        ],
+      },
+    ],
     sectionsAfterList: [
       {
         heading: "NMBA registration is the real gate, not the university",
@@ -248,6 +322,14 @@ const SUBJECT_BEST_EXTRA: Record<
       {
         q: "Does it matter which Australian university I study nursing at for registration?",
         a: "Not for eligibility to register. Any Bachelor of Nursing accredited by the Australian Nursing and Midwifery Accreditation Council leads to NMBA registration eligibility. It matters for clinical placement access, cost, and campus location, which is what actually varies between universities.",
+      },
+      {
+        q: "Can I do a Master of Nursing in Australia if I already have a nursing degree from another country?",
+        a: "The graduate-entry master's is designed for a non-nursing bachelor's, not as a bridging pathway for an overseas nursing qualification. If you already hold a nursing degree from another country, NMBA's overseas qualification assessment process (rather than enrolling in a new Australian nursing degree) is usually the more direct route, and it may require a bridging program rather than a full degree.",
+      },
+      {
+        q: "How many clinical placement hours does an Australian nursing degree require?",
+        a: "ANMAC-accredited programs build a substantial block of supervised clinical placement hours into the curriculum, spread across the degree rather than concentrated at the end, and the exact number and settings (hospital, aged care, community health) vary by university. Ask the specific program for its placement hour total and where placements are typically located, since travel to a placement site is a real cost some students don't budget for.",
       },
     ],
   },
@@ -275,6 +357,7 @@ function subjectBestCollection(subjectSlug: string): Collection {
       `There is no official ranking of Australian universities by field of study, so "best for ${name}" comes down to research reputation, industry links, and how seriously a university invests in the area.`,
       `This shortlist is the universities with a genuine reputation in ${name}, with a note on what sets each apart. For the full list of every university that teaches it, plus the cheapest programs, see the ${name} subject page.`,
     ],
+    sectionsBeforeList: extra?.sectionsBeforeList,
     sectionsAfterList: extra?.sectionsAfterList,
     faq: extra?.faq,
     methodology: `Curated from the research strengths, specialist facilities, and industry links each university is known for in ${name}. It is not a league table, and a strong department at a lower-ranked university can beat a weak one at a famous name. Check the specific program.`,
@@ -852,9 +935,22 @@ function cheapestNursingCollection(): Collection {
  */
 const CITY_EXTRA: Record<
   string,
-  { sectionsAfterList?: CollectionSection[]; faq?: { q: string; a: string }[] }
+  {
+    sectionsBeforeList?: CollectionSection[];
+    sectionsAfterList?: CollectionSection[];
+    faq?: { q: string; a: string }[];
+  }
 > = {
   "cheapest-universities-in-sydney-for-international-students": {
+    sectionsBeforeList: [
+      {
+        heading: "Rent, not tuition, is what actually blows the budget here",
+        body: [
+          "Sydney's rental vacancy rate is consistently among the tightest of any Australian capital, and most universities only guarantee first-year on-campus or partner accommodation to a limited number of students who apply early, not to everyone who wants it. If you're not offered a place, budget for weeks of share-house hunting on arrival, competing against other students and the general rental market, and treat a temporary short-stay booking for your first few weeks as a real line item, not an afterthought.",
+          "Because rent varies so much by suburb, the cheapest-on-paper university isn't automatically the cheapest to actually live near. A pricier university with a campus in a suburb where students can realistically find affordable share housing can beat a cheaper university whose only nearby suburbs are already expensive.",
+        ],
+      },
+    ],
     sectionsAfterList: [
       {
         heading: "Getting around without inflating your budget",
@@ -864,8 +960,35 @@ const CITY_EXTRA: Record<
         ],
       },
     ],
+    faq: [
+      {
+        q: "Is it possible to find affordable student housing in Sydney?",
+        a: "Yes, but it takes real search effort and usually means share housing further from the CBD rather than a purpose-built student residence near campus. Applying for university-partnered accommodation as early as your offer allows, and having a short-stay booking as a fallback for your first weeks, both matter more in Sydney than in a less competitive rental market.",
+      },
+      {
+        q: "Which Sydney university is genuinely the cheapest for international students?",
+        a: "It changes as fees are reviewed, so check the ranked list above for the current figures rather than a fixed answer. As a pattern, western-Sydney universities are consistently cheaper on tuition than the Group of Eight campuses closer to the CBD and harbour.",
+      },
+      {
+        q: "Does metropolitan Sydney count as regional for skilled migration?",
+        a: "No. Unlike Perth, Adelaide, and Canberra, metropolitan Sydney is not classified as a regional area under the Department of Home Affairs' boundaries, so studying here doesn't add the regional points or open the 491 nomination pathway those cities carry.",
+      },
+      {
+        q: "What should I budget for setup costs when I first arrive in Sydney?",
+        a: "Beyond the first weeks of temporary accommodation, budget for a rental bond (commonly four weeks' rent), basic furniture and kitchenware if your share house is unfurnished, a local phone plan, and initial transport top-ups before your first pay cheque or scholarship instalment lands. This is on top of, not instead of, the general setup allowance already built into the budget figures above.",
+      },
+    ],
   },
   "cheapest-universities-in-melbourne-for-international-students": {
+    sectionsBeforeList: [
+      {
+        heading: "The biggest international student market has upsides and a trade-off",
+        body: [
+          "Melbourne has been ranked Australia's top student city by QS every year since 2015, and placed fifth globally in the 2026 QS Best Student Cities index, with roughly 230,000 international students across its ten universities. That scale means a genuinely large student support ecosystem (dedicated student-housing stock, an established international-student services sector, a large peer network from almost every country) but also the most competition for the cheapest share housing and entry-level part-time jobs, both of which get harder to find the later in the enrolment cycle you arrive.",
+          "Booking accommodation and lining up part-time work before you land, rather than after, matters more in Melbourne than in a smaller city precisely because of that scale: the cheap options exist, but they don't sit unclaimed for long.",
+        ],
+      },
+    ],
     sectionsAfterList: [
       {
         heading: "Myki caps and the tram-heavy inner city",
@@ -875,8 +998,35 @@ const CITY_EXTRA: Record<
         ],
       },
     ],
+    faq: [
+      {
+        q: "Why is Melbourne ranked the best student city in Australia?",
+        a: "QS's Best Student Cities index scores factors including student mix, affordability relative to income, employability, and how students themselves rate the city, and Melbourne has topped Australia's ranking every year since 2015. That's a reputation and lifestyle signal, not a guarantee of low cost: it's still one of the more expensive cities on this list once rent is factored in.",
+      },
+      {
+        q: "Is it hard to find a part-time job as an international student in Melbourne?",
+        a: "It's competitive precisely because Melbourne has the largest international student population of any Australian city, which means more people chasing the same entry-level hospitality and retail roles. Starting the search before semester begins, rather than after classes start, meaningfully improves your odds.",
+      },
+      {
+        q: "Is metropolitan Melbourne a regional area for skilled migration?",
+        a: "No. Metropolitan Melbourne sits outside the Department of Home Affairs' regional boundaries, the same as Sydney, so it doesn't carry the regional points or 491 nomination access that Perth, Adelaide, and Canberra offer.",
+      },
+      {
+        q: "Does Victoria have any regional areas near Melbourne worth considering?",
+        a: "Yes. Cities like Geelong, which several Melbourne-area universities also have campuses in, sit outside the metropolitan exclusion and carry regional status, so a Geelong-based program can combine Melbourne-adjacent access with a genuine regional-migration benefit metropolitan Melbourne itself doesn't offer.",
+      },
+    ],
   },
   "cheapest-universities-in-perth-for-international-students": {
+    sectionsBeforeList: [
+      {
+        heading: "A resources-driven economy, not a services one",
+        body: [
+          "Western Australia's economy runs on mining and energy in a way no eastern-state economy does, which shapes the part-time and graduate job market international students actually encounter: strong demand in engineering, geology, and trades-adjacent support roles, but a smaller finance, media, and corporate-services sector than Sydney or Melbourne offers. If your field is engineering, mining, or earth sciences, that's a genuine advantage; if you're aiming at a career in banking, consulting, or media, the graduate job market is thinner than on the east coast, migration points aside.",
+          "Weigh that against the regional-migration points below rather than assuming they cancel out: a strong PR pathway on paper is worth less if the actual graduate job market in your field is thin where you studied.",
+        ],
+      },
+    ],
     sectionsAfterList: [
       {
         heading: "The regional-migration angle is the real draw here",
@@ -886,8 +1036,39 @@ const CITY_EXTRA: Record<
         ],
       },
     ],
+    faq: [
+      {
+        q: "Does studying in Perth actually help with permanent residence?",
+        a: "It can, through the extra points and nomination pathways that come with Western Australia's whole-of-state regional classification, but the strength of that pathway depends on your occupation being on the relevant state or federal skilled occupation list. Check your specific occupation against WA's current nomination criteria rather than assuming the regional classification alone is enough.",
+      },
+      {
+        q: "Is Perth a cheaper place to live than Sydney or Melbourne?",
+        a: "Generally yes, on rent in particular, and that gap is part of why it shows up ahead of Sydney and Melbourne on the budget figures above. It's also more isolated, with a higher cost and longer travel time to reach the eastern states, which is worth weighing if you'll want to travel for internships, interviews, or visits home on that side of the country.",
+      },
+      {
+        q: "What jobs are actually easy to find for students in Perth?",
+        a: "Hospitality, retail, and warehousing roles are as available in Perth as in any Australian city; what's genuinely different is the depth of demand in engineering, geology, and technical support roles feeding the resources sector, which is a real advantage if your degree is in one of those fields and less relevant if it isn't.",
+      },
+      {
+        q: "How far is Perth from Sydney and Melbourne, and does that matter for studying there?",
+        a: "It's roughly a four-hour flight, noticeably further than the one-to-two-hour hops between the eastern-state capitals. It mostly matters for the cost and hassle of attending east-coast interviews, conferences, or family visits, rather than for the day-to-day experience of studying in Perth itself.",
+      },
+      {
+        q: "Do I need to be studying a mining or engineering degree to benefit from Perth's regional status?",
+        a: "No, the regional-migration points and nomination pathways apply regardless of your field of study; only the graduate job-market advantage is field-specific. A business or arts graduate in Perth gets the same regional points as an engineering graduate, just without the same local industry demand once they're job hunting.",
+      },
+    ],
   },
   "cheapest-universities-in-brisbane-for-international-students": {
+    sectionsBeforeList: [
+      {
+        heading: "The 2032 Olympics is reshaping the city while you'll be studying here",
+        body: [
+          "Brisbane is the confirmed host of the 2032 Summer Olympics, and the infrastructure and construction spending that comes with it (transport, venues, housing) will run through most of the years a current international student will spend studying and, on a 485 visa, working here. That's relevant beyond curiosity: it's driving genuine demand in construction, project management, engineering, and event-adjacent hospitality roles for the next several years, a graduate job market tailwind Sydney and Melbourne don't currently have to the same degree.",
+          "The same construction boom is also a contributor to Brisbane's rising rents and competitive housing market, so the cost advantage over Sydney and Melbourne, while still real, has been narrowing rather than staying fixed. Treat the budget figures below as a snapshot, not a guarantee.",
+        ],
+      },
+    ],
     sectionsAfterList: [
       {
         heading: "Go Card and the Brisbane-to-Gold-Coast commute",
@@ -897,8 +1078,39 @@ const CITY_EXTRA: Record<
         ],
       },
     ],
+    faq: [
+      {
+        q: "Is Brisbane cheaper than Sydney or Melbourne for international students?",
+        a: "Yes, though the gap has been narrowing as Olympics-related construction pushes up rents. It's still generally cheaper on everyday living costs than the two bigger cities, with tuition varying by university rather than being uniformly lower.",
+      },
+      {
+        q: "Should I study at a Brisbane campus or a Gold Coast campus for a Queensland university?",
+        a: "Check which campus your specific program is actually taught at before enrolling: Griffith and Bond both run genuinely separate Gold Coast campuses, which sit outside Brisbane's fare zones and rental market and shouldn't be assumed to carry the same cost or commute profile as the university's main Brisbane site.",
+      },
+      {
+        q: "Will Brisbane's Olympics construction boom actually create graduate jobs by the time I finish my degree?",
+        a: "Construction and infrastructure spending for the 2032 Games is already ramping up and will continue through the years most current students will be studying and, on a 485 visa, working here, so the timing lines up for construction, project management, and engineering graduates specifically. It's a less direct benefit for graduates outside those fields.",
+      },
+      {
+        q: "Is Brisbane classified as regional for skilled migration?",
+        a: "Metropolitan Brisbane itself is not, unlike Perth, Adelaide, and Canberra. Some other Queensland cities and Gold Coast postcodes do carry regional status depending on the current Home Affairs boundary, so it's worth checking a specific postcode rather than assuming the whole state is excluded.",
+      },
+      {
+        q: "Is the Gold Coast a cheaper place to live than Brisbane?",
+        a: "It varies by suburb and season rather than being uniformly cheaper, since Gold Coast rents are also shaped by tourism demand. Check the actual rental market near the specific campus (Griffith's or Bond's Gold Coast site, not central Brisbane) before assuming it's automatically the more affordable option.",
+      },
+    ],
   },
   "cheapest-universities-in-adelaide-for-international-students": {
+    sectionsBeforeList: [
+      {
+        heading: "The AUKUS submarine program is a real, if narrow, graduate opportunity",
+        body: [
+          "South Australia's naval shipbuilding expansion under the AUKUS submarine program is expected to employ up to 5,000 people in the industry by 2030, with several thousand of those direct shipyard roles, plus dedicated graduate, apprentice, and traineeship places being created specifically to build the workforce. For engineering, manufacturing, and some computing graduates, it's a genuine, growing local employer base that didn't exist at this scale a few years ago, and it's a reasonable reason to weight an Adelaide engineering degree higher than the tuition figure alone suggests.",
+          "The caveat matters: many direct defence-industry roles require Australian citizenship or a security clearance that citizenship alone can satisfy, which most international graduates won't hold straight out of a degree. Check the citizenship and clearance requirements for a specific role before treating this as your PR-to-career plan, rather than assuming a defence-adjacent Adelaide degree opens defence-industry doors on its own.",
+        ],
+      },
+    ],
     sectionsAfterList: [
       {
         heading: "The 2026 Adelaide University merger and what it means for fees",
@@ -908,8 +1120,39 @@ const CITY_EXTRA: Record<
         ],
       },
     ],
+    faq: [
+      {
+        q: "Does the Adelaide University merger affect my existing offer or enrolment?",
+        a: "If you already hold an offer from the University of Adelaide or the University of South Australia, contact the merged institution directly to confirm how your specific program, fees, and start date are being carried across, since the transition timeline can vary by faculty. Don't assume a legacy offer letter still reflects the current fee.",
+      },
+      {
+        q: "Is Adelaide a safe, welcoming city for international students?",
+        a: "Adelaide is generally regarded as one of the more liveable and lower-stress Australian capitals to study in, with a smaller international-student population than Sydney or Melbourne but an established support ecosystem across its universities. That smaller scale also means a less crowded rental and part-time job market than the bigger cities.",
+      },
+      {
+        q: "Are the AUKUS submarine program jobs open to international graduates?",
+        a: "Some are, but many direct defence-industry and shipyard roles require Australian citizenship or a security clearance that only citizens or permanent residents can readily obtain. Treat it as a strong reason to study engineering or a related field in Adelaide rather than a guaranteed job outcome for an international graduate specifically, and check the citizenship requirement for any role before counting on it.",
+      },
+      {
+        q: "How does Adelaide's regional-migration status compare to Perth's?",
+        a: "Both give access to the same broad category of regional points and 491/190 nomination pathways, since the whole of South Australia (like the whole of Western Australia) is classified as regional. The specific state-nomination criteria and occupation priorities differ between South Australia and Western Australia, so check each state's current list rather than assuming they're identical.",
+      },
+      {
+        q: "How far is Adelaide from Sydney and Melbourne?",
+        a: "About a two-hour flight to Melbourne and a bit over two hours to Sydney, closer than Perth's isolation but still enough that regular travel adds up. Both routes have frequent direct flights, which makes weekend visits or interstate interviews reasonably practical.",
+      },
+    ],
   },
   "cheapest-universities-in-canberra-for-international-students": {
+    sectionsBeforeList: [
+      {
+        heading: "A city built at a human scale, for better and worse",
+        body: [
+          "Canberra was purpose-planned rather than grown organically, which means wide bike paths, short commutes, and a compact footprint that makes it genuinely easy to live without a car, unusual for an Australian capital. The trade-off is a smaller, quieter social and nightlife scene than Sydney or Melbourne offers, and fewer direct international flights, so weigh the lower cost and calmer pace against whether that's the kind of city you actually want to spend several years in, not just the cheapest one on paper.",
+          "The ACT's economy leans heavily on the federal public service and its surrounding contractor and consulting ecosystem, which is a specific, narrower job market than a diversified state capital, and one where local citizenship or permanent residency is often a prerequisite for the public-service roles themselves.",
+        ],
+      },
+    ],
     sectionsAfterList: [
       {
         heading: "The Canberra Matrix and ACT nomination",
@@ -917,6 +1160,28 @@ const CITY_EXTRA: Record<
           "The whole of the Australian Capital Territory is classified as a regional area for skilled migration, and the ACT runs its own state-nomination points test, the Canberra Matrix, rather than using the generic points system other states apply. Studying at ANU or the University of Canberra can position you well for ACT nomination on the 190 or 491 visa, but the Matrix changes its point allocations periodically, so check the current version on the ACT government's migration site before treating it as a fixed plan.",
           "Canberra's small size cuts both ways: rent and commute times are genuinely lower than in the bigger east-coast cities, but the part-time job market is thinner outside the public service and hospitality sectors, worth weighing if you're counting on local work income to fund your studies.",
         ],
+      },
+    ],
+    faq: [
+      {
+        q: "Is Canberra a good choice if I want to work in Australian government or policy?",
+        a: "Studying in Canberra puts you physically close to the federal public service and its policy, consulting, and defence-adjacent contractor ecosystem, which is a genuine networking advantage. Most core public-service graduate roles require Australian citizenship, though, so check the specific eligibility for any program you're targeting rather than assuming proximity alone is enough.",
+      },
+      {
+        q: "Is ANU worth the higher cost compared to the University of Canberra?",
+        a: "ANU carries a stronger international research reputation and sits at the top fee band on this list; the University of Canberra is more accessible on both entry and cost. Which is worth it depends on whether you need ANU's specific research strength and prestige for your field, or whether a more affordable, still ACT-based degree meets your goals just as well.",
+      },
+      {
+        q: "Is Canberra too quiet for international students used to a bigger city?",
+        a: "It's a genuine trade-off, not just a cost saving: Canberra's nightlife, dining, and cultural scene are smaller than Sydney's or Melbourne's, and its international flight options are limited, so most travel connects through Sydney or Melbourne anyway. Some students prefer the calmer pace and lower cost; others find it too quiet after a semester or two and transfer, so weigh your own preference, not just the budget figures.",
+      },
+      {
+        q: "How easy is it to get to Sydney or Melbourne from Canberra?",
+        a: "Very easy by Australian standards: it's about a three-hour drive or coach trip to Sydney, with regular direct flights to both Sydney and Melbourne taking around an hour. That makes weekend trips or interstate interviews genuinely practical, unlike Perth's isolation from the eastern states.",
+      },
+      {
+        q: "Does Canberra have a large international student community despite its small size?",
+        a: "It's smaller in absolute numbers than Sydney or Melbourne, but ANU and the University of Canberra both draw a genuinely international cohort, and the city's compact size means that community is easier to find and connect with than in a larger, more spread-out city.",
       },
     ],
   },
@@ -942,6 +1207,7 @@ function cityCollection(opts: {
       `${city} has universities across the full price range, and where you study inside the city matters less for cost than which institution and course you pick. This list ranks the ${city} universities by estimated first-year budget, cheapest first.`,
       `The budget figure is the cheapest international tuition on record for each university plus our ${city} living-cost estimate plus a rough setup allowance. Tuition varies a lot by course, so treat the order as a guide and check your specific program.`,
     ],
+    sectionsBeforeList: extra?.sectionsBeforeList,
     sectionsAfterList: extra?.sectionsAfterList,
     faq: extra?.faq,
     methodology: `We took every published university with a campus in ${city}, used its lowest international tuition (university-wide or its cheapest program), added the ${city} living-cost estimate and about AUD 4,000 in setup costs, and sorted low to high.`,
