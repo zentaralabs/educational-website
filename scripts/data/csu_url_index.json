@@ -1,0 +1,283 @@
+{
+  "Bachelor of Accounting": {
+    "id": "d0c7137a-058b-43f3-9f61-f8bc7fbc1564",
+    "pCode": "2401AC01",
+    "catalogueUrl": "https://study.csu.edu.au/courses/bachelor-accounting"
+  },
+  "Bachelor of Agricultural Business Management": {
+    "id": "32e92881-40c8-423e-8e73-4f72091e2002",
+    "pCode": "5428AB01",
+    "catalogueUrl": "https://study.csu.edu.au/courses/bachelor-agricultural-business-management"
+  },
+  "Bachelor of Agricultural Science": {
+    "id": "be0e2f8c-d6c5-475c-b630-b332e217131a",
+    "pCode": "4410AS01",
+    "catalogueUrl": "https://study.csu.edu.au/courses/bachelor-agricultural-science"
+  },
+  "Bachelor of Agriculture": {
+    "id": "6bdeb56a-84bb-46ab-a3b3-f59f94bf5016",
+    "pCode": "4420AG01",
+    "catalogueUrl": "https://study.csu.edu.au/courses/bachelor-agriculture"
+  },
+  "Bachelor of Animal Science": {
+    "id": "fde0b644-0cb4-4c64-afab-3ecda2d11bfc",
+    "pCode": "5407AS01",
+    "catalogueUrl": "https://study.csu.edu.au/courses/bachelor-animal-science"
+  },
+  "Bachelor of Business (with specialisations)": {
+    "id": "db0ca6ba-bba0-4aa3-863e-450a72570bee",
+    "pCode": "2421BU01",
+    "catalogueUrl": "https://study.csu.edu.au/courses/bachelor-business"
+  },
+  "Bachelor of Business Studies": {
+    "id": "8410833b-234c-489f-a734-054aa43c7b8d",
+    "pCode": "2401BS01",
+    "catalogueUrl": "https://study.csu.edu.au/courses/bachelor-business-studies"
+  },
+  "Bachelor of Communication": {
+    "id": "63edf71f-b60a-4f77-aad6-c3062954d822",
+    "pCode": "1421CS01",
+    "catalogueUrl": "https://study.csu.edu.au/courses/bachelor-communication"
+  },
+  "Bachelor of Criminal Justice": {
+    "id": "902023e8-cc7c-47a0-b67f-c9c53e811865",
+    "pCode": null,
+    "archive": true,
+    "reason": "No standalone 'Bachelor of Criminal Justice' course exists in CSU's current course-finder catalogue or handbook. The only course carrying 'Criminal Justice' in its title is the combined double degree 'Bachelor of Laws / Bachelor of Criminal Justice' (course code 2418LC01), which CSU's own live course-finder API (study.csu.edu.au course-finder-var.js) flags with meta_status \"suspended-all\" (closed to all new enrolments). Bachelor of Criminology (course code 1415CJ01) is the live current standalone award in this subject area."
+  },
+  "Bachelor of Dental Science": {
+    "id": "d76c9b50-6a50-40fd-9183-a8f6b5543741",
+    "pCode": "4409DS01",
+    "catalogueUrl": "https://study.csu.edu.au/courses/bachelor-dental-science"
+  },
+  "Bachelor of Engineering (Honours)": {
+    "id": "df6aadbc-8a14-411f-a2d0-192acdbafd54",
+    "pCode": "2422EH01",
+    "catalogueUrl": "https://study.csu.edu.au/courses/bachelor-engineering-honours"
+  },
+  "Bachelor of Environmental Science and Management": {
+    "id": "34fbf7b2-2575-40c9-84e8-44368ea56573",
+    "pCode": "4421ES01",
+    "catalogueUrl": "https://study.csu.edu.au/courses/bachelor-environmental-science-management"
+  },
+  "Bachelor of Equine Science": {
+    "id": "d5b87def-dac3-4670-93b7-19f1af7d4421",
+    "pCode": "5403ES01",
+    "catalogueUrl": "https://study.csu.edu.au/courses/bachelor-equine-science"
+  },
+  "Bachelor of Information Technology": {
+    "id": "01be91cc-ff1b-48e1-9333-d08bc3b3b343",
+    "pCode": "5414IT01",
+    "catalogueUrl": "https://study.csu.edu.au/courses/bachelor-information-technology"
+  },
+  "Bachelor of Laws": {
+    "id": "0599016c-fdb2-47db-86eb-c27bebba9d24",
+    "pCode": "1416LW01",
+    "catalogueUrl": "https://study.csu.edu.au/courses/bachelor-laws"
+  },
+  "Bachelor of Medical Radiation Science": {
+    "id": "ffaca577-fc76-413c-accb-34c98007c5f9",
+    "pCode": "4411RS01"
+  },
+  "Bachelor of Nursing": {
+    "id": "60db8473-ceec-4885-9768-acd814fd0d26",
+    "pCode": "4421NS01",
+    "catalogueUrl": "https://study.csu.edu.au/courses/bachelor-nursing"
+  },
+  "Bachelor of Occupational Therapy": {
+    "id": "34817906-eb16-4269-9500-c54ebc15071d",
+    "pCode": "4409OT01",
+    "catalogueUrl": "https://study.csu.edu.au/courses/bachelor-occupational-therapy"
+  },
+  "Bachelor of Oral Health (Therapy and Hygiene)": {
+    "id": "13d76ccf-b409-4a4d-9cab-8d76115c3ae8",
+    "pCode": "4430TH01",
+    "catalogueUrl": "https://study.csu.edu.au/courses/bachelor-oral-health-therapy-hygiene"
+  },
+  "Bachelor of Paramedicine": {
+    "id": "cacdd707-8ec3-4bc6-bf12-641e9188734b",
+    "pCode": "4418PM01",
+    "catalogueUrl": "https://study.csu.edu.au/courses/bachelor-paramedicine"
+  },
+  "Bachelor of Pharmacy": {
+    "id": "d8105dba-ba6f-4d96-a47f-30e9dce0dee8",
+    "pCode": "4527PH01",
+    "note": "CSU has restructured this into 'Bachelor of Pharmacy (Honours)' (implementation year 2027); the live study.csu.edu.au/courses/bachelor-pharmacy URL now resolves directly to the Honours course page, confirming this is the real current successor, not a fabrication.",
+    "catalogueUrl": "https://study.csu.edu.au/courses/bachelor-pharmacy-honours"
+  },
+  "Bachelor of Physiotherapy": {
+    "id": "9a3c55d3-5bc3-4498-8b9d-38628a034eca",
+    "pCode": "4405PH01",
+    "catalogueUrl": "https://study.csu.edu.au/courses/bachelor-physiotherapy"
+  },
+  "Bachelor of Physiotherapy (Honours) Integrated Honours": {
+    "id": "9f11727f-babf-4045-81ef-1079423177c2",
+    "pCode": "4505BP01",
+    "note": "Confirmed via the plain Bachelor of Physiotherapy (4405PH01) handbook page's own associations_grouped data, which names 4505BP01 'Bachelor of Physiotherapy (Honours)' with association_type 'Integrated Honours' - a genuinely distinct, real course code."
+  },
+  "Bachelor of Social Science (Psychology)": {
+    "id": "e83d0012-77a6-4c6d-9316-477d325bcc55",
+    "pCode": "2420SS01",
+    "catalogueUrl": "https://study.csu.edu.au/courses/bachelor-social-science-psychology"
+  },
+  "Bachelor of Theology": {
+    "id": "b026fbf0-a3fa-4d50-b98c-497027a2b38e",
+    "pCode": "1460TH01",
+    "catalogueUrl": "https://study.csu.edu.au/courses/bachelor-theology"
+  },
+  "Bachelor of Veterinary Biology/Bachelor of Veterinary Science": {
+    "id": "008c0533-94cf-44df-a600-747a58aefd07",
+    "pCode": "4488BS01",
+    "catalogueUrl": "https://study.csu.edu.au/courses/bachelor-veterinary-biology-bachelor-veterinary-science"
+  },
+  "Bachelor of Wine Business": {
+    "id": "6bbef3fb-6b34-48d2-9fbd-e1fb03cb4e9d",
+    "pCode": "4415WB01",
+    "note": "Confirmed active through the 2026 handbook year (status Approved/Active); simply not present in the 260-item course-finder catalogue snapshot, which does not list every currently offered course."
+  },
+  "Doctor of Philosophy (Lab Based Science)": {
+    "id": "403f17d4-cf8c-4002-b276-4294e58c3c70",
+    "pCode": "4901SL01",
+    "note": "Handbook title is 'Doctor of Philosophy (Science)', parent_academic_org 'Faculty of Science and Health' - matches the DB row's lab-based-science framing, distinct from the separate 'Doctor of Philosophy (Arts and Education)' (1921PH01) and 'Doctor of Philosophy (Business, Justice and Behavioural Sciences)' (2921PH01).",
+    "catalogueUrl": "https://study.csu.edu.au/courses/doctor-philosophy-science-agriculture"
+  },
+  "Doctor of Veterinary Studies": {
+    "id": "b677fd97-2d43-49e2-8a7a-a9009ddf48f8",
+    "pCode": "4900VT01",
+    "catalogueUrl": "https://study.csu.edu.au/courses/doctor-veterinary-studies"
+  },
+  "Graduate Certificate in Agricultural Business Management [Exit Only]": {
+    "id": "d82852da-c097-4b2f-a059-aa2aa62f1bae",
+    "pCode": "4323AB01",
+    "note": "Confirmed real embedded exit-point-only award, title 'Graduate Certificate in Agricultural Business Management [Exit point only]', named explicitly in Master of Agriculture's (4723AG01) own alt_exit_options text."
+  },
+  "Graduate Certificate in Agriculture [Exit Only]": {
+    "id": "5eadaf45-df6c-4128-adcf-d1b9a47f58b5",
+    "pCode": "4323AG01",
+    "note": "Confirmed real embedded exit-point-only award, title 'Graduate Certificate in Agriculture [Exit point only]'; its own overview text says it articulates into the Master of Agriculture."
+  },
+  "Graduate Certificate in Fish Conservation and Management": {
+    "id": "f1d29512-b3e6-4e64-8a94-6e543f5cef1a",
+    "pCode": "4320FM01",
+    "catalogueUrl": "https://study.csu.edu.au/courses/graduate-certificate-in-fish-conservation-and-management"
+  },
+  "Graduate Certificate in Human Services": {
+    "id": "f1e1df39-acdb-4728-87e1-880cf15696b6",
+    "pCode": "1307HS01",
+    "catalogueUrl": "https://study.csu.edu.au/courses/graduate-certificate-human-services"
+  },
+  "Graduate Certificate in Professional Accounting (Professional Practice) [Exit Only]": {
+    "id": "40eb69a0-3e9b-44b6-9a58-a48b1697d7a4",
+    "pCode": "2322PP01",
+    "note": "Confirmed real embedded exit-point-only award named explicitly in Master of Professional Accounting (Professional Practice)'s (2722PP01) own alt_exit_options text, with real subject codes (ACG511, ACG516)."
+  },
+  "Graduate Certificate in Professional Information Technology [Exit Point Only]": {
+    "id": "c778abfa-f752-432d-bad0-44c35d328ba6",
+    "pCode": "1322PI01",
+    "note": "Confirmed real embedded exit-point-only award, title 'Graduate Certificate in Professional Information Technology [Exit point only]', part of the Master of Professional Information Technology's (1722PI01) articulated set."
+  },
+  "Graduate Certificate in Theological Studies": {
+    "id": "092cb883-124c-4f61-8eaa-4f168ac9763e",
+    "pCode": "1320TH01",
+    "catalogueUrl": "https://study.csu.edu.au/courses/graduate-certificate-theological-studies"
+  },
+  "Graduate Diploma in Professional Accounting (Professional Practice)": {
+    "id": "87774d34-65bc-4672-a36a-2f9f34dbe60e",
+    "pCode": "2622PP01",
+    "note": "Confirmed real course, handbook title 'Graduate Diploma of Professional Accounting (Professional Practice)', part of the Master of Professional Accounting (Professional Practice)'s articulated set."
+  },
+  "Graduate Diploma of Business Data Analytics": {
+    "id": "8dd55331-4144-4a71-acf9-04e1331c9221",
+    "pCode": "2625DA01",
+    "note": "Confirmed real course, part of the Master of Business Data Analytics's (2725DA01) articulated set (own alt_exit_options text confirms a Master/Graduate Diploma articulated set)."
+  },
+  "Graduate Diploma of Professional Information Technology": {
+    "id": "1b5c874c-5c87-44d4-9542-2a7d151f1c54",
+    "pCode": "1622PI01",
+    "catalogueUrl": "https://study.csu.edu.au/courses/graduate-diploma-professional-information-technology"
+  },
+  "Graduate Diploma of Project Management and Leadership": {
+    "id": "3a3f8f41-900f-4b9e-9b74-79f9eeed770a",
+    "pCode": "2607PM01",
+    "note": "CSU's own catalogue and handbook both title this course plainly 'Graduate Diploma of Project Management' (no 'and Leadership'); no separate code exists under the longer DB name. Treated as the same real course, not archived, since the course itself is genuinely live.",
+    "catalogueUrl": "https://study.csu.edu.au/courses/graduate-diploma-project-management"
+  },
+  "Graduate Diploma of Theological Studies": {
+    "id": "e66b34b9-efbd-47a2-910f-259c4f1a7df8",
+    "pCode": "1620TH01",
+    "catalogueUrl": "https://study.csu.edu.au/courses/graduate-diploma-theological-studies"
+  },
+  "Master of Agricultural Science": {
+    "id": "7e95ebd2-a80f-4580-b766-b11b0e34f2db",
+    "pCode": "4723AS01",
+    "catalogueUrl": "https://study.csu.edu.au/courses/master-agricultural-science"
+  },
+  "Master of Agriculture": {
+    "id": "2a002545-8f2e-4e5a-a04a-e3c918e602a0",
+    "pCode": "4723AG01",
+    "catalogueUrl": "https://study.csu.edu.au/courses/master-agriculture"
+  },
+  "Master of Arts (Theological Studies)": {
+    "id": "828e27cf-bd76-414e-b9ad-e8e6512bf53e",
+    "pCode": "1720TH01",
+    "catalogueUrl": "https://study.csu.edu.au/courses/master-arts-theological-studies"
+  },
+  "Master of Business Data Analytics": {
+    "id": "75561879-aded-4f96-953c-d59e9c9eec02",
+    "pCode": "2725DA01",
+    "catalogueUrl": "https://study.csu.edu.au/courses/master-of-business-data-analytics"
+  },
+  "Master of Education (with specialisations)": {
+    "id": "a16dbc99-fb0a-4aac-82e8-3f50182b6733",
+    "pCode": "3702EE01",
+    "catalogueUrl": "https://study.csu.edu.au/courses/master-education"
+  },
+  "Master of Health Professional Practice (with specialisations)": {
+    "id": "894eb205-978b-44c9-9bcc-824b704f7143",
+    "pCode": "4727PP01",
+    "catalogueUrl": "https://study.csu.edu.au/courses/master-health-professional-practice-specialisations"
+  },
+  "Master of Nursing (Pre-Registration)": {
+    "id": "f3c6accc-b023-44c8-860c-cebd50418cc5",
+    "pCode": "4727MN01",
+    "catalogueUrl": "https://study.csu.edu.au/courses/master-nursing-pre-registration"
+  },
+  "Master of Philosophy (Lab Based)": {
+    "id": "5c81487a-345a-4941-a709-f7bd0d74f96a",
+    "pCode": "5801PH01",
+    "note": "Handbook title is plain 'Master of Philosophy', parent_academic_org 'Faculty of Science and Health' - distinct from the separate 'Master of Philosophy (Arts and Education)' (1721PH01).",
+    "catalogueUrl": "https://study.csu.edu.au/courses/master-philosophy"
+  },
+  "Master of Professional Accounting (Professional Practice)": {
+    "id": "68edff21-61f8-4aec-94b1-9a259de7462c",
+    "pCode": "2722PP01",
+    "catalogueUrl": "https://study.csu.edu.au/courses/master-professional-accounting-professional-practice"
+  },
+  "Master of Professional Information Technology": {
+    "id": "2809fa4b-ab76-493d-87d0-43d71d4a8f4d",
+    "pCode": "1722PI01",
+    "catalogueUrl": "https://study.csu.edu.au/courses/master-professional-information-technology"
+  },
+  "Master of Project Management and Leadership (Professional Practice)": {
+    "id": "b9bd6a21-6791-4296-a2d2-1adb1ec20160",
+    "pCode": "2707PM01",
+    "note": "CSU's own catalogue and handbook both title this course plainly 'Master of Project Management' (no 'and Leadership (Professional Practice)'); no separate code exists under the longer DB name. Treated as the same real course, not archived.",
+    "catalogueUrl": "https://study.csu.edu.au/courses/master-project-management"
+  },
+  "Master of Social Work (Professional Qualifying)": {
+    "id": "ff5cec6b-ccde-4d4d-8627-87ae0fa4c315",
+    "pCode": "1708PQ01",
+    "catalogueUrl": "https://study.csu.edu.au/courses/master-social-work-professional-qualifying"
+  },
+  "Master of Theology": {
+    "id": "13f7df51-2b8a-4546-971b-d9ba9b937333",
+    "pCode": "1716TH01",
+    "catalogueUrl": "https://study.csu.edu.au/courses/master-theology"
+  },
+  "Master of Veterinary Studies (Research)": {
+    "id": "955511de-6d5d-46db-bd4e-b9911e5f53de",
+    "pCode": "4700VT01",
+    "note": "Handbook's own title is exactly 'Master of Veterinary Studies (Research)', matching the DB name exactly.",
+    "catalogueUrl": "https://study.csu.edu.au/courses/master-veterinary-studies"
+  }
+}
