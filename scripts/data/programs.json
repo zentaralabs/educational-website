@@ -2416,7 +2416,7 @@
   {
     "university_slug": "adelaide-university",
     "degree_level": "Undergraduate",
-    "subject_slug": "nursing-and-health-sciences",
+    "subject_slug": null,
     "id": "7ffd98f2-80e1-4ea5-b2e0-ec6c30db8f0b",
     "name": "Bachelor of Exercise and Sport Science",
     "slug": "bachelor-of-exercise-and-sport-science",
@@ -11868,7 +11868,7 @@
   {
     "university_slug": "australian-catholic-university",
     "degree_level": "Undergraduate",
-    "subject_slug": "nursing-and-health-sciences",
+    "subject_slug": null,
     "id": "5949d41f-cb76-4e77-8525-ab322262abaa",
     "name": "Bachelor of Exercise and Sports Science",
     "slug": "bachelor-of-exercise-and-sports-science",
@@ -32336,7 +32336,7 @@
   {
     "university_slug": "charles-darwin-university",
     "degree_level": "Undergraduate",
-    "subject_slug": "nursing-and-health-sciences",
+    "subject_slug": null,
     "id": "3371f10d-aee0-480e-944e-782848a69036",
     "name": "Bachelor of Exercise and Sport Science",
     "slug": "bachelor-of-exercise-and-sport-science",
@@ -47364,7 +47364,7 @@
   {
     "university_slug": "deakin-university",
     "degree_level": "Undergraduate",
-    "subject_slug": "nursing-and-health-sciences",
+    "subject_slug": null,
     "id": "c2532480-d591-4261-8978-6fa306abd1d0",
     "name": "Bachelor of Exercise and Sport Science",
     "slug": "bachelor-of-exercise-and-sport-science",
@@ -52430,7 +52430,7 @@
   {
     "university_slug": "edith-cowan-university",
     "degree_level": "Undergraduate",
-    "subject_slug": "nursing-and-health-sciences",
+    "subject_slug": null,
     "id": "16a52bdb-f0ef-4820-809c-9628caddd08e",
     "name": "Bachelor of Science (Exercise and Sports Science)",
     "slug": "bachelor-of-science-exercise-and-sports-science",
@@ -55592,7 +55592,7 @@
   {
     "university_slug": "federation-university-australia",
     "degree_level": "Undergraduate",
-    "subject_slug": "nursing-and-health-sciences",
+    "subject_slug": null,
     "id": "ee9fa3c9-9cb4-4dbc-ab3b-d2dffa009764",
     "name": "Bachelor of Exercise and Sport Science",
     "slug": "bachelor-of-exercise-and-sport-science",
@@ -56136,7 +56136,7 @@
   {
     "university_slug": "federation-university-australia",
     "degree_level": "Undergraduate",
-    "subject_slug": "nursing-and-health-sciences",
+    "subject_slug": null,
     "id": "1ecd7b5b-68cb-445e-a6af-757c2f69e80e",
     "name": "Bachelor of Sport, Physical and Outdoor Education",
     "slug": "bachelor-of-sport-physical-and-outdoor-education",
@@ -59128,7 +59128,7 @@
   {
     "university_slug": "flinders-university",
     "degree_level": "Undergraduate",
-    "subject_slug": "nursing-and-health-sciences",
+    "subject_slug": null,
     "id": "9797c011-9865-40f6-ac6c-da2bba5a0232",
     "name": "Bachelor of Exercise and Sport Science",
     "slug": "bachelor-of-exercise-and-sport-science",
@@ -75482,7 +75482,7 @@
   {
     "university_slug": "james-cook-university",
     "degree_level": "Undergraduate",
-    "subject_slug": "nursing-and-health-sciences",
+    "subject_slug": null,
     "id": "f2a6815b-d1f2-4da2-8877-e4ce8c83e6ec",
     "name": "Bachelor of Sport and Exercise Science (Honours) [End-on]",
     "slug": "bachelor-of-sport-and-exercise-science-honours-end-on",
@@ -77998,7 +77998,7 @@
   {
     "university_slug": "la-trobe-university",
     "degree_level": "Undergraduate",
-    "subject_slug": "nursing-and-health-sciences",
+    "subject_slug": null,
     "id": "21188c0c-1439-4eb6-9d8f-7b2f1a05357c",
     "name": "Associate Degree in Sport Coaching and Development",
     "slug": "associate-degree-in-sport-coaching-and-development",
@@ -79936,7 +79936,7 @@
   {
     "university_slug": "la-trobe-university",
     "degree_level": "Undergraduate",
-    "subject_slug": "nursing-and-health-sciences",
+    "subject_slug": null,
     "id": "14f71736-eb25-4980-a417-8eb745bd519a",
     "name": "Bachelor of Sport and Exercise Science",
     "slug": "bachelor-of-sport-and-exercise-science",
@@ -80004,7 +80004,7 @@
   {
     "university_slug": "la-trobe-university",
     "degree_level": "Undergraduate",
-    "subject_slug": "nursing-and-health-sciences",
+    "subject_slug": null,
     "id": "c6c99136-9a17-44c4-ad2d-6d664a10c0f7",
     "name": "Bachelor of Sport Coaching and Development",
     "slug": "bachelor-of-sport-coaching-and-development",
@@ -81262,7 +81262,7 @@
   {
     "university_slug": "la-trobe-university",
     "degree_level": "Graduate",
-    "subject_slug": "nursing-and-health-sciences",
+    "subject_slug": null,
     "id": "e05557cf-15a0-4bde-b9f9-f346b10662d8",
     "name": "Graduate Certificate in Sport Analytics",
     "slug": "graduate-certificate-in-sport-analytics",
@@ -82044,7 +82044,7 @@
   {
     "university_slug": "la-trobe-university",
     "degree_level": "Graduate",
-    "subject_slug": "nursing-and-health-sciences",
+    "subject_slug": null,
     "id": "89801d01-af01-4da8-9432-5cac14b9199e",
     "name": "Graduate Diploma in Sport Analytics",
     "slug": "graduate-diploma-in-sport-analytics",
@@ -84016,7 +84016,7 @@
   {
     "university_slug": "la-trobe-university",
     "degree_level": "Graduate",
-    "subject_slug": "nursing-and-health-sciences",
+    "subject_slug": null,
     "id": "0ffc8588-793d-4558-a5a1-9308eab5ab2a",
     "name": "Master of Sport Analytics",
     "slug": "master-of-sport-analytics",
@@ -85070,7 +85070,7 @@
   {
     "university_slug": "macquarie-university",
     "degree_level": "Undergraduate",
-    "subject_slug": "nursing-and-health-sciences",
+    "subject_slug": null,
     "id": "89425d61-13df-4645-8539-2144781df4de",
     "name": "Bachelor of Exercise and Sports Science",
     "slug": "bachelor-of-exercise-and-sports-science",
@@ -105946,7 +105946,7 @@
   {
     "university_slug": "murdoch-university",
     "degree_level": "Undergraduate",
-    "subject_slug": "nursing-and-health-sciences",
+    "subject_slug": null,
     "id": "15d5f065-0bbd-403b-bdd2-fc8b66f8af55",
     "name": "Bachelor of Sport and Exercise Science",
     "slug": "bachelor-of-sport-and-exercise-science",
@@ -107306,7 +107306,7 @@
   {
     "university_slug": "murdoch-university",
     "degree_level": "Graduate",
-    "subject_slug": "nursing-and-health-sciences",
+    "subject_slug": null,
     "id": "aa5e4c91-01e8-4e79-b7da-cf993d05bb37",
     "name": "Graduate Certificate in High Performance Sport",
     "slug": "graduate-certificate-in-high-performance-sport",
@@ -110026,7 +110026,7 @@
   {
     "university_slug": "murdoch-university",
     "degree_level": "Graduate",
-    "subject_slug": "nursing-and-health-sciences",
+    "subject_slug": null,
     "id": "f84da9f4-a285-49fd-81a2-439f15eb25bf",
     "name": "Master of High Performance Sport",
     "slug": "master-of-high-performance-sport",
@@ -112848,7 +112848,7 @@
   {
     "university_slug": "queensland-university-of-technology",
     "degree_level": "Undergraduate",
-    "subject_slug": "nursing-and-health-sciences",
+    "subject_slug": null,
     "id": "86f22677-2eed-412b-82b4-52e48bb68226",
     "name": "Bachelor of Sport and Exercise Science",
     "slug": "bachelor-of-sport-and-exercise-science",
@@ -127094,7 +127094,7 @@
   {
     "university_slug": "southern-cross-university",
     "degree_level": "Undergraduate",
-    "subject_slug": "nursing-and-health-sciences",
+    "subject_slug": null,
     "id": "c21d1e8f-3d52-49d4-88b3-a79f0be7f7ce",
     "name": "Bachelor of Sport and Exercise Science",
     "slug": "bachelor-of-sport-and-exercise-science",
@@ -144264,7 +144264,7 @@
   {
     "university_slug": "university-of-canberra",
     "degree_level": "Undergraduate",
-    "subject_slug": "nursing-and-health-sciences",
+    "subject_slug": null,
     "id": "671ef8a9-db83-4416-a0de-967ac29bfcba",
     "name": "Bachelor of Sport and Exercise Science",
     "slug": "bachelor-of-sport-and-exercise-science",
@@ -147902,7 +147902,7 @@
   {
     "university_slug": "university-of-canberra",
     "degree_level": "Graduate",
-    "subject_slug": "nursing-and-health-sciences",
+    "subject_slug": null,
     "id": "80c1e02c-18c5-4618-8771-07abf0c10ea7",
     "name": "Master of Sport and Exercise Science (Research)",
     "slug": "master-of-sport-and-exercise-science-research",
@@ -162862,7 +162862,7 @@
   {
     "university_slug": "university-of-newcastle",
     "degree_level": "Undergraduate",
-    "subject_slug": "nursing-and-health-sciences",
+    "subject_slug": null,
     "id": "ed725a1e-4bb5-4ba5-b1e4-b25faec7df4f",
     "name": "Bachelor of Exercise and Sports Science (Honours)",
     "slug": "bachelor-of-exercise-and-sports-science-honours",
@@ -166568,7 +166568,7 @@
   {
     "university_slug": "university-of-notre-dame-australia",
     "degree_level": "Undergraduate",
-    "subject_slug": "nursing-and-health-sciences",
+    "subject_slug": null,
     "id": "1a5ddb6d-40f8-4b1b-88b2-811e3b8b48c0",
     "name": "Bachelor of Exercise and Sport Science",
     "slug": "bachelor-of-exercise-and-sport-science",
@@ -169424,7 +169424,7 @@
   {
     "university_slug": "university-of-queensland",
     "degree_level": "Undergraduate",
-    "subject_slug": "nursing-and-health-sciences",
+    "subject_slug": null,
     "id": "68df9072-4195-44e5-9360-dcc964292405",
     "name": "Bachelor of Health, Sport and Physical Education (Honours)",
     "slug": "bachelor-of-health-sport-and-physical-education-honours",
@@ -177074,7 +177074,7 @@
   {
     "university_slug": "university-of-southern-queensland",
     "degree_level": "Graduate",
-    "subject_slug": "nursing-and-health-sciences",
+    "subject_slug": null,
     "id": "c59bcab1-4629-4f9f-b4df-3d949281f7ca",
     "name": "Graduate Certificate of Sport and Exercise",
     "slug": "graduate-certificate-of-sport-and-exercise",
@@ -177992,7 +177992,7 @@
   {
     "university_slug": "university-of-sydney",
     "degree_level": "Undergraduate",
-    "subject_slug": "nursing-and-health-sciences",
+    "subject_slug": null,
     "id": "231c8af2-b2fb-480c-8f26-220aaeab596f",
     "name": "Bachelor of Applied Science (Exercise and Sport Science) Honours",
     "slug": "bachelor-of-applied-science-exercise-and-sport-science-honours",
@@ -191320,7 +191320,7 @@
   {
     "university_slug": "university-of-tasmania",
     "degree_level": "Undergraduate",
-    "subject_slug": "nursing-and-health-sciences",
+    "subject_slug": null,
     "id": "fdd0c37c-79c7-47ff-be55-fe6a6f2bf319",
     "name": "Bachelor of Exercise and Sport Science",
     "slug": "bachelor-of-exercise-and-sport-science",
@@ -197202,7 +197202,7 @@
   {
     "university_slug": "university-of-technology-sydney",
     "degree_level": "Undergraduate",
-    "subject_slug": "nursing-and-health-sciences",
+    "subject_slug": null,
     "id": "2067047c-aef3-44f8-8358-c7b45c471132",
     "name": "Bachelor of Sport and Exercise Science (Honours)",
     "slug": "bachelor-of-sport-and-exercise-science-honours",
@@ -202744,7 +202744,7 @@
   {
     "university_slug": "university-of-technology-sydney",
     "degree_level": "Graduate",
-    "subject_slug": "nursing-and-health-sciences",
+    "subject_slug": null,
     "id": "4b7844b8-cc62-4a8c-a151-ac35ca183292",
     "name": "Master of Sport and Exercise (Research)",
     "slug": "master-of-sport-and-exercise-research",
@@ -204478,7 +204478,7 @@
   {
     "university_slug": "university-of-the-sunshine-coast",
     "degree_level": "Undergraduate",
-    "subject_slug": "nursing-and-health-sciences",
+    "subject_slug": null,
     "id": "c9751452-ae58-493f-b2d2-14e9d2e8333e",
     "name": "Bachelor of Sport and Exercise Science",
     "slug": "bachelor-of-sport-and-exercise-science",
@@ -204512,7 +204512,7 @@
   {
     "university_slug": "university-of-the-sunshine-coast",
     "degree_level": "Undergraduate",
-    "subject_slug": "nursing-and-health-sciences",
+    "subject_slug": null,
     "id": "3bc5363d-36cc-4f36-a42e-1db0304a4935",
     "name": "Bachelor of Sports Studies",
     "slug": "bachelor-of-sports-studies",
@@ -206178,7 +206178,7 @@
   {
     "university_slug": "university-of-the-sunshine-coast",
     "degree_level": "Graduate",
-    "subject_slug": "nursing-and-health-sciences",
+    "subject_slug": null,
     "id": "56c388aa-02d7-4669-98e2-60df80c45097",
     "name": "Master of Sport and Exercise Science by Research",
     "slug": "master-of-sport-and-exercise-science-by-research",
@@ -207742,7 +207742,7 @@
   {
     "university_slug": "university-of-western-australia",
     "degree_level": "Undergraduate",
-    "subject_slug": "nursing-and-health-sciences",
+    "subject_slug": null,
     "id": "8e0dc04f-d8b3-43ec-92f1-2f8c235c92e0",
     "name": "Bachelor of Sport and Exercise Sciences",
     "slug": "bachelor-of-sport-and-exercise-sciences",
@@ -229332,7 +229332,7 @@
   {
     "university_slug": "victoria-university",
     "degree_level": "Undergraduate",
-    "subject_slug": "nursing-and-health-sciences",
+    "subject_slug": null,
     "id": "b72e65ac-de4e-47b8-9aa6-69f353eaddb3",
     "name": "Bachelor of Exercise and Sport Science",
     "slug": "bachelor-of-exercise-and-sport-science",
@@ -229366,7 +229366,7 @@
   {
     "university_slug": "victoria-university",
     "degree_level": "Undergraduate",
-    "subject_slug": "nursing-and-health-sciences",
+    "subject_slug": null,
     "id": "52c45ad5-d13e-4ce0-b175-bbc0418ba783",
     "name": "Bachelor of Exercise Science (Sport Practice)",
     "slug": "bachelor-of-exercise-science-sport-practice",
@@ -229672,7 +229672,7 @@
   {
     "university_slug": "victoria-university",
     "degree_level": "Undergraduate",
-    "subject_slug": "nursing-and-health-sciences",
+    "subject_slug": null,
     "id": "b20f2a02-75d2-408c-b474-73ad65633d37",
     "name": "Bachelor of Physical Education and Sport Science",
     "slug": "bachelor-of-physical-education-and-sport-science",
@@ -231100,7 +231100,7 @@
   {
     "university_slug": "victoria-university",
     "degree_level": "Undergraduate",
-    "subject_slug": "nursing-and-health-sciences",
+    "subject_slug": null,
     "id": "b5b0ed99-38f4-452a-9203-66545374bb17",
     "name": "Diploma of Physical Education and Sport Science Studies",
     "slug": "diploma-of-physical-education-and-sport-science-studies",
@@ -231202,7 +231202,7 @@
   {
     "university_slug": "victoria-university",
     "degree_level": "Undergraduate",
-    "subject_slug": "nursing-and-health-sciences",
+    "subject_slug": null,
     "id": "424c7345-c5c5-4a3b-8bd5-a3eff58fde44",
     "name": "Diploma of Sport Science Studies",
     "slug": "diploma-of-sport-science-studies",
