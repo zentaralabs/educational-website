@@ -9,7 +9,7 @@ import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import { formatDeadlineDateLong } from "@/lib/deadline-status";
 import { DEADLINE_PAGE_INDEXED } from "@/lib/deadline-detail";
 import { faqJsonLd } from "@/lib/faq";
-import { SITE_YEAR } from "@/lib/site-config";
+import { INTAKE_YEAR } from "@/lib/site-config";
 import {
   getPublishedDeadlinesForUniversity,
   getPublishedUniversity,
@@ -19,8 +19,6 @@ import { JsonLd } from "@/lib/json-ld";
 import { composeTitle, pageMetadata } from "@/lib/page-metadata";
 
 export const revalidate = 3600;
-
-const INTAKE_YEAR = SITE_YEAR + 1;
 
 export async function generateStaticParams() {
   const slugs = await listPublishedUniversitySlugs();
