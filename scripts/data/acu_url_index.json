@@ -1,0 +1,436 @@
+[
+  {
+    "id": "a4a92430-683c-44f3-9004-9b224643a8d8",
+    "name": "Bachelor of Accounting and Finance",
+    "slug": "bachelor-of-accounting-and-finance",
+    "marketing_url": "https://www.acu.edu.au/course/bachelor-of-accounting-and-finance",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/bachelor-of-accounting-and-finance"
+  },
+  {
+    "id": "0ec2c822-927f-42ad-abcb-a8b0c5a8ecbf",
+    "name": "Bachelor of Allied Health",
+    "slug": "bachelor-of-allied-health",
+    "marketing_url": null,
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/bachelor-of-allied-health"
+  },
+  {
+    "id": "57a98c9e-9254-44c3-8ec8-a134b90a3607",
+    "name": "Bachelor of Applied Public Health",
+    "slug": "bachelor-of-applied-public-health",
+    "marketing_url": null,
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/bachelor-of-applied-public-health"
+  },
+  {
+    "id": "febc9eb4-26c3-4bfe-8f47-9b591cbabf1e",
+    "name": "Bachelor of Arts",
+    "slug": "bachelor-of-arts",
+    "marketing_url": "https://www.acu.edu.au/course/bachelor-of-arts",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/bachelor-of-arts"
+  },
+  {
+    "id": "cb98f37e-e117-421f-9d02-96ce560bccf9",
+    "name": "Bachelor of Biomedical Science (Honours)",
+    "slug": "bachelor-of-biomedical-science-honours",
+    "marketing_url": "https://www.acu.edu.au/course/bachelor-of-biomedical-science-honours",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/bachelor-of-biomedical-science-honours"
+  },
+  {
+    "id": "14065739-4fba-44c1-9274-16b37587194f",
+    "name": "Bachelor of Business",
+    "slug": "bachelor-of-business",
+    "marketing_url": "https://www.acu.edu.au/course/bachelor-of-business",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/bachelor-of-business"
+  },
+  {
+    "id": "93dfed8a-30eb-40a9-9129-a1fc0c0efd47",
+    "name": "Bachelor of Business Administration",
+    "slug": "bachelor-of-business-administration",
+    "marketing_url": "https://www.acu.edu.au/course/bachelor-of-business-administration",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/bachelor-of-business-administration"
+  },
+  {
+    "id": "f4e98236-34c6-4c63-b167-0ad11454cf99",
+    "name": "Bachelor of Commerce",
+    "slug": "bachelor-of-commerce",
+    "marketing_url": "https://www.acu.edu.au/course/bachelor-of-commerce",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/bachelor-of-commerce"
+  },
+  {
+    "id": "0fb7f128-f5ef-4065-9e59-1aca9162dcbe",
+    "name": "Bachelor of Computer Science",
+    "slug": "bachelor-of-computer-science",
+    "marketing_url": "https://www.acu.edu.au/course/bachelor-of-computer-science",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/bachelor-of-computer-science"
+  },
+  {
+    "id": "0249f5b2-9655-4713-9e4c-2ab466020e1d",
+    "name": "Bachelor of Criminology and Criminal Justice",
+    "slug": "bachelor-of-criminology-and-criminal-justice",
+    "marketing_url": "https://www.acu.edu.au/course/bachelor-of-criminology-and-criminal-justice",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/bachelor-of-criminology-and-criminal-justice"
+  },
+  {
+    "id": "b06d7fc1-f7f9-455f-a622-ff243696dbba",
+    "name": "Bachelor of Early Childhood Education (Birth to Five Years)",
+    "slug": "bachelor-of-early-childhood-education-birth-to-five-years",
+    "marketing_url": "https://www.acu.edu.au/course/bachelor-of-early-childhood-education-birth-to-five-years",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/bachelor-of-early-childhood-education-birth-to-five-years"
+  },
+  {
+    "id": "46b3d3bc-ddf0-4bd0-8dc9-b419a26f5f98",
+    "name": "Bachelor of Education (Primary and Secondary)",
+    "slug": "bachelor-of-education-primary-and-secondary",
+    "marketing_url": "https://www.acu.edu.au/course/bachelor-of-education-primary-and-secondary",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/bachelor-of-education-primary-and-secondary"
+  },
+  {
+    "id": "91b91be1-59a5-4843-a125-7e664649cc4a",
+    "name": "Bachelor of Educational Studies",
+    "slug": "bachelor-of-educational-studies",
+    "marketing_url": "https://www.acu.edu.au/course/bachelor-of-educational-studies",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/bachelor-of-educational-studies"
+  },
+  {
+    "id": "5949d41f-cb76-4e77-8525-ab322262abaa",
+    "name": "Bachelor of Exercise and Sports Science",
+    "slug": "bachelor-of-exercise-and-sports-science",
+    "marketing_url": "https://www.acu.edu.au/course/bachelor-of-exercise-and-sports-science",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/bachelor-of-exercise-and-sports-science"
+  },
+  {
+    "id": "9380b792-17a4-412c-9b65-6ad2a8fd73ed",
+    "name": "Bachelor of High Performance Sport (Honours)",
+    "slug": "bachelor-of-high-performance-sport-honours",
+    "marketing_url": "https://www.acu.edu.au/course/bachelor-of-high-performance-sport-honours",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/bachelor-of-high-performance-sport-honours"
+  },
+  {
+    "id": "e7509bb6-ef52-47d3-9332-ab17fa10c153",
+    "name": "Bachelor of Human Rights",
+    "slug": "bachelor-of-human-rights",
+    "marketing_url": "https://www.acu.edu.au/course/bachelor-of-human-rights",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/bachelor-of-human-rights"
+  },
+  {
+    "id": "fcb1a46f-b0cb-46bb-8cca-a86d9e634baf",
+    "name": "Bachelor of Information Technology",
+    "slug": "bachelor-of-information-technology",
+    "marketing_url": "https://www.acu.edu.au/course/bachelor-of-information-technology",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/bachelor-of-information-technology"
+  },
+  {
+    "id": "391220ac-7a00-4218-81d0-03c2a2f6b39b",
+    "name": "Bachelor of International Development Studies",
+    "slug": "bachelor-of-international-development-studies",
+    "marketing_url": null,
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/bachelor-of-international-development-studies"
+  },
+  {
+    "id": "560408f7-1a41-45b4-837a-31b4aa1e2950",
+    "name": "Bachelor of Laws",
+    "slug": "bachelor-of-laws",
+    "marketing_url": "https://www.acu.edu.au/course/bachelor-of-laws",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/bachelor-of-laws"
+  },
+  {
+    "id": "4bda08d3-36f0-404e-89b3-8d5d49e7af8e",
+    "name": "Bachelor of Nursing",
+    "slug": "bachelor-of-nursing",
+    "marketing_url": "https://www.acu.edu.au/course/bachelor-of-nursing",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/bachelor-of-nursing"
+  },
+  {
+    "id": "304aa263-2332-4f37-8420-5d654c7cc9f5",
+    "name": "Bachelor of Nutrition Science (Honours)",
+    "slug": "bachelor-of-nutrition-science-honours",
+    "marketing_url": "https://www.acu.edu.au/course/bachelor-of-nutrition-science-honours",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/bachelor-of-nutrition-science-honours"
+  },
+  {
+    "id": "fb0af3f6-dcd9-4433-9a65-20942dedf4c5",
+    "name": "Bachelor of Occupational Therapy",
+    "slug": "bachelor-of-occupational-therapy",
+    "marketing_url": "https://www.acu.edu.au/course/bachelor-of-occupational-therapy",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/bachelor-of-occupational-therapy"
+  },
+  {
+    "id": "0ec933b2-139d-4b21-b980-77105cbf6522",
+    "name": "Bachelor of Paramedicine",
+    "slug": "bachelor-of-paramedicine",
+    "marketing_url": "https://www.acu.edu.au/course/bachelor-of-paramedicine",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/bachelor-of-paramedicine"
+  },
+  {
+    "id": "8d09a9dc-4349-4335-8a1f-44b8677718a1",
+    "name": "Bachelor of Physiotherapy",
+    "slug": "bachelor-of-physiotherapy",
+    "marketing_url": "https://www.acu.edu.au/course/bachelor-of-physiotherapy",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/bachelor-of-physiotherapy"
+  },
+  {
+    "id": "c3cfba5b-6521-489b-9ea8-49f7a63d56f1",
+    "name": "Bachelor of Psychological Science",
+    "slug": "bachelor-of-psychological-science",
+    "marketing_url": "https://www.acu.edu.au/course/bachelor-of-psychological-science",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/bachelor-of-psychological-science"
+  },
+  {
+    "id": "7c43f907-7958-4a81-8e4d-c334b020405e",
+    "name": "Bachelor of Psychology (Honours)",
+    "slug": "bachelor-of-psychology-honours",
+    "marketing_url": "https://www.acu.edu.au/course/bachelor-of-psychology-honours",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/bachelor-of-psychology-honours"
+  },
+  {
+    "id": "64974827-d4b3-4d31-bd7e-c6003123daee",
+    "name": "Bachelor of Social and Environmental Sustainability",
+    "slug": "bachelor-of-social-and-environmental-sustainability",
+    "marketing_url": "https://www.acu.edu.au/course/bachelor-of-social-and-environmental-sustainability",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/bachelor-of-social-and-environmental-sustainability"
+  },
+  {
+    "id": "df54684a-79fc-46a0-b7cb-8a0cee41ed02",
+    "name": "Bachelor of Social Work",
+    "slug": "bachelor-of-social-work",
+    "marketing_url": "https://www.acu.edu.au/course/bachelor-of-social-work",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/bachelor-of-social-work"
+  },
+  {
+    "id": "b6353e40-2c6e-4c7e-9d35-3e840fbd562e",
+    "name": "Bachelor of Speech Pathology",
+    "slug": "bachelor-of-speech-pathology",
+    "marketing_url": "https://www.acu.edu.au/course/bachelor-of-speech-pathology",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/bachelor-of-speech-pathology"
+  },
+  {
+    "id": "2f235d5c-2df1-4253-9e35-811c40ae28f6",
+    "name": "Bachelor of Theology",
+    "slug": "bachelor-of-theology",
+    "marketing_url": "https://www.acu.edu.au/course/bachelor-of-theology",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/bachelor-of-theology"
+  },
+  {
+    "id": "501c35fe-a7ae-4379-a666-2109fd352745",
+    "name": "Bachelor of Visual Arts and Design",
+    "slug": "bachelor-of-visual-arts-and-design",
+    "marketing_url": "https://www.acu.edu.au/course/bachelor-of-visual-arts-and-design",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/bachelor-of-visual-arts-and-design"
+  },
+  {
+    "id": "61a86c65-7595-49cc-87b9-d5346a222a49",
+    "name": "Bachelor of Youth Work",
+    "slug": "bachelor-of-youth-work",
+    "marketing_url": "https://www.acu.edu.au/course/bachelor-of-youth-work",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/bachelor-of-youth-work"
+  },
+  {
+    "id": "945b5568-8f21-4660-85b2-1f77c9c9592e",
+    "name": "Diploma in Biomedical Science",
+    "slug": "diploma-in-biomedical-science",
+    "marketing_url": "https://www.acu.edu.au/course/diploma-in-biomedical-science",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/diploma-in-biomedical-science"
+  },
+  {
+    "id": "fa5f60e3-4f1e-48db-9fc6-e464d9b5edea",
+    "name": "Diploma in Business",
+    "slug": "diploma-in-business",
+    "marketing_url": "https://www.acu.edu.au/course/diploma-in-business",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/diploma-in-business"
+  },
+  {
+    "id": "b752ad95-d7bc-4b6d-8256-e731e18827e3",
+    "name": "Diploma in Criminology",
+    "slug": "diploma-in-criminology",
+    "marketing_url": "https://www.acu.edu.au/course/diploma-in-criminology",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/diploma-in-criminology"
+  },
+  {
+    "id": "f908dc3b-1636-4725-9edb-78f52ae2d1c8",
+    "name": "Diploma in Educational Studies (Tertiary Preparation)",
+    "slug": "diploma-in-educational-studies-tertiary-preparation",
+    "marketing_url": "https://www.acu.edu.au/course/diploma-in-educational-studies-tertiary-preparation",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/diploma-in-educational-studies-tertiary-preparation"
+  },
+  {
+    "id": "2b406b06-b6a7-4420-bc7c-e1ce5e9f0857",
+    "name": "Diploma in Exercise Science",
+    "slug": "diploma-in-exercise-science",
+    "marketing_url": "https://www.acu.edu.au/course/diploma-in-exercise-science",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/diploma-in-exercise-science"
+  },
+  {
+    "id": "e03a2549-3da0-4e59-8d24-c4e63d91ad47",
+    "name": "Diploma in Information Technology",
+    "slug": "diploma-in-information-technology",
+    "marketing_url": "https://www.acu.edu.au/course/diploma-in-information-technology-online",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/diploma-in-information-technology-acu-online-online"
+  },
+  {
+    "id": "5bdf5c61-f383-4783-b48a-4968e922cedb",
+    "name": "Diploma in Liberal Arts",
+    "slug": "diploma-in-liberal-arts",
+    "marketing_url": "https://www.acu.edu.au/course/diploma-in-liberal-arts",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/diploma-in-liberal-arts"
+  },
+  {
+    "id": "ac2cc624-4c8a-4775-98c8-bc2d572a0310",
+    "name": "Diploma in Nutrition Science",
+    "slug": "diploma-in-nutrition-science",
+    "marketing_url": "https://www.acu.edu.au/course/diploma-in-nutrition-science",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/diploma-in-nutrition-science"
+  },
+  {
+    "id": "aaa43e99-e608-4e7c-b5ab-aed4bf789cb6",
+    "name": "Diploma in Visual Arts and Design",
+    "slug": "diploma-in-visual-arts-and-design",
+    "marketing_url": "https://www.acu.edu.au/course/diploma-in-visual-arts-and-design",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/diploma-in-visual-arts-and-design"
+  },
+  {
+    "id": "ca8199d1-856b-4d60-a4c7-bdce62a44c7f",
+    "name": "Doctor of Ministry",
+    "slug": "doctor-of-ministry",
+    "marketing_url": "https://www.acu.edu.au/course/doctor-of-ministry",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/doctor-of-ministry"
+  },
+  {
+    "id": "1b1da63e-7612-43b8-ad1c-997489fb3762",
+    "name": "Doctor of Philosophy",
+    "slug": "doctor-of-philosophy",
+    "marketing_url": "https://www.acu.edu.au/course/doctor-of-philosophy",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/doctor-of-philosophy"
+  },
+  {
+    "id": "e904d2b0-69ce-4863-b350-aa36ce76d992",
+    "name": "Foundation Studies",
+    "slug": "foundation-studies",
+    "marketing_url": "https://www.acu.edu.au/course/foundation-studies",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/foundation-studies"
+  },
+  {
+    "id": "185a806d-0adb-4c18-9720-1adc742a4f2f",
+    "name": "Graduate Certificate in Business Administration",
+    "slug": "graduate-certificate-in-business-administration",
+    "marketing_url": "https://www.acu.edu.au/course/graduate-certificate-in-business-administration",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/graduate-certificate-in-business-administration"
+  },
+  {
+    "id": "b9c2c991-50d2-4c19-b77b-0297701fed8b",
+    "name": "Graduate Certificate in Information Technology",
+    "slug": "graduate-certificate-in-information-technology",
+    "marketing_url": "https://www.acu.edu.au/course/graduate-certificate-in-information-technology",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/graduate-certificate-in-information-technology"
+  },
+  {
+    "id": "8db16453-18e3-4ee2-9c05-3373ed22ceea",
+    "name": "Graduate Diploma in Public Health",
+    "slug": "graduate-diploma-in-public-health",
+    "marketing_url": "https://www.acu.edu.au/course/graduate-diploma-in-public-health",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/graduate-diploma-in-public-health"
+  },
+  {
+    "id": "e2169714-5023-4dc2-a6e0-e112cf77905f",
+    "name": "Master of Business Administration",
+    "slug": "master-of-business-administration",
+    "marketing_url": "https://www.acu.edu.au/course/master-of-business-administration",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/master-of-business-administration"
+  },
+  {
+    "id": "c154fccd-bbfc-46c6-8397-ebfc5838362d",
+    "name": "Master of Clinical Exercise Physiology",
+    "slug": "master-of-clinical-exercise-physiology",
+    "marketing_url": "https://www.acu.edu.au/course/master-of-clinical-exercise-physiology",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/master-of-clinical-exercise-physiology"
+  },
+  {
+    "id": "72aea04e-d826-44c2-a562-30c368db49d5",
+    "name": "Master of Dietetic Practice",
+    "slug": "master-of-dietetic-practice",
+    "marketing_url": "https://www.acu.edu.au/course/master-of-dietetic-practice",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/master-of-dietetic-practice"
+  },
+  {
+    "id": "443301e4-11b3-4705-b48e-aed66e649a06",
+    "name": "Master of Education",
+    "slug": "master-of-education",
+    "marketing_url": "https://www.acu.edu.au/course/master-of-education",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/master-of-education"
+  },
+  {
+    "id": "1c830938-bf7d-4c71-a695-027924bcee7f",
+    "name": "Master of Information Technology",
+    "slug": "master-of-information-technology",
+    "marketing_url": "https://www.acu.edu.au/course/master-of-information-technology",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/master-of-information-technology"
+  },
+  {
+    "id": "774fd40e-9143-4caa-9373-1afe336bb3ee",
+    "name": "Master of Leadership and Management in Health Care",
+    "slug": "master-of-leadership-and-management-in-health-care",
+    "marketing_url": "https://www.acu.edu.au/course/master-of-leadership-and-management-in-health-care",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/master-of-leadership-and-management-in-health-care"
+  },
+  {
+    "id": "6f96850f-661e-4331-8b81-ac7b52ecd300",
+    "name": "Master of Liberal Arts (Western Civilisation)",
+    "slug": "master-of-liberal-arts-western-civilisation",
+    "marketing_url": "https://www.acu.edu.au/course/master-of-liberal-arts-western-civilisation",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/master-of-liberal-arts-western-civilisation"
+  },
+  {
+    "id": "82380a15-5462-47ed-8e38-f6471f076af9",
+    "name": "Master of Philosophy",
+    "slug": "master-of-philosophy",
+    "marketing_url": "https://www.acu.edu.au/course/master-of-philosophy",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/master-of-philosophy"
+  },
+  {
+    "id": "b239e9e2-0eed-4439-8568-a3a0eafa005e",
+    "name": "Master of Professional Accounting",
+    "slug": "master-of-professional-accounting",
+    "marketing_url": "https://www.acu.edu.au/course/master-of-professional-accounting",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/master-of-professional-accounting"
+  },
+  {
+    "id": "db5bf095-eae5-4718-8fc1-0f77505433ff",
+    "name": "Master of Professional Psychology",
+    "slug": "master-of-professional-psychology",
+    "marketing_url": "https://www.acu.edu.au/course/master-of-professional-psychology",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/master-of-professional-psychology"
+  },
+  {
+    "id": "27c33ef4-29b5-4a67-b93a-27409687ad8b",
+    "name": "Master of Psychology (Clinical)",
+    "slug": "master-of-psychology-clinical",
+    "marketing_url": "https://www.acu.edu.au/course/master-of-psychology-clinical",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/master-of-psychology-clinical"
+  },
+  {
+    "id": "a09ae5e8-fc68-4e66-8ecc-bad12c48a179",
+    "name": "Master of Public Health",
+    "slug": "master-of-public-health",
+    "marketing_url": "https://www.acu.edu.au/course/master-of-public-health",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/master-of-public-health"
+  },
+  {
+    "id": "a1e05eef-6546-4c71-bdcd-5b4753fd132c",
+    "name": "Master of Social Work (Qualifying)",
+    "slug": "master-of-social-work-qualifying",
+    "marketing_url": "https://www.acu.edu.au/course/master-of-social-work-qualifying",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/master-of-social-work-qualifying"
+  },
+  {
+    "id": "7bc3b61f-514d-4938-8e47-6352943c6a5d",
+    "name": "Master of Teaching (Secondary)",
+    "slug": "master-of-teaching-secondary",
+    "marketing_url": "https://www.acu.edu.au/course/master-of-teaching-secondary",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/master-of-teaching-secondary"
+  },
+  {
+    "id": "67e2c00f-22a9-41c5-adbf-46e2b0eb04b5",
+    "name": "Master of Teaching (Secondary)/Graduate Certificate of Religious Education",
+    "slug": "master-of-teaching-secondary-graduate-certificate-of-religious-education",
+    "marketing_url": "https://www.acu.edu.au/course/master-of-teaching-secondarygraduate-certificate-in-religious-education",
+    "handbook_url": "https://www.acu.edu.au/handbook/handbook-2027/course/master-of-teaching-secondarygraduate-certificate-in-religious-education"
+  }
+]

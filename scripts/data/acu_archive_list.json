@@ -1,0 +1,22 @@
+[
+  {
+    "id": "57a98c9e-9254-44c3-8ec8-a134b90a3607",
+    "name": "Bachelor of Applied Public Health",
+    "reason": "Confirmed via acu.edu.au/handbook: this plain (non-Honours) award existed through the 2023 handbook (real course page, real unit schedule) but returns a soft-404 handbook landing page for 2024, 2025, 2026 and 2027, and has no marketing page at /course/bachelor-of-applied-public-health. The current live ACU award in this family is Bachelor of Applied Public Health (Honours), a different one-year graduate-entry course, not this row."
+  },
+  {
+    "id": "391220ac-7a00-4218-81d0-03c2a2f6b39b",
+    "name": "Bachelor of International Development Studies",
+    "reason": "Confirmed via acu.edu.au/handbook: real standalone award through the 2024 handbook (real course page, real unit schedule) but soft-404 for 2025, 2026 and 2027, with no current marketing page. International Development Studies now exists only as a Major (acu.edu.au/handbook/handbook-2026/major/international-development-studies) within other degrees, not as its own standalone award."
+  },
+  {
+    "id": "f4e98236-34c6-4c63-b167-0ad11454cf99",
+    "name": "Bachelor of Commerce",
+    "reason": "Confirmed via acu.edu.au/handbook: real standalone award through the 2026 handbook (real course page, real unit schedule) but soft-404 for the current 2027 handbook year, and /course/bachelor-of-commerce marketing page also resolves to the generic Find a Course listing (soft-404), confirming no new-student intake for this award."
+  },
+  {
+    "id": "93dfed8a-30eb-40a9-9129-a1fc0c0efd47",
+    "name": "Bachelor of Business Administration",
+    "reason": "Confirmed via acu.edu.au/handbook: real standalone award through the 2025 handbook (real course page, real unit schedule) but soft-404 for 2026 and 2027 handbook years, and /course/bachelor-of-business-administration marketing page also resolves to the generic Find a Course listing (soft-404), confirming no new-student intake for this award."
+  }
+]
