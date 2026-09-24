@@ -1,0 +1,28 @@
+{
+  "entries": [
+    {
+      "id": "6a861d7b-c005-4fe3-967b-44e9f9482f32",
+      "name": "Bachelor of Business",
+      "reason": "Confirmed via TAFE Queensland's own /courses/course-types/degrees/university-partnerships/pathways-to-university-of-southern-queensland page: Bachelor of Business is a University of Southern Queensland (UniSQ) degree that TAFE Queensland's own Diploma of Business (BSB50120) and Advanced Diploma of Leadership and Management (BSB60420) articulate INTO. It is UniSQ's own award, not a TAFE-Queensland-granted qualification (unlike the real University of Canberra dual-award Creative Industries/Design/Built Environment degrees, which ARE delivered and taught by TAFE Queensland itself). Zero matches in the 555-course catalogue or the university-partnerships page under any TAFEQ-granted Business bachelor.",
+      "archived_at": "2026-09-24T16:23:09.120Z"
+    },
+    {
+      "id": "3aec9bcc-2488-4893-b1da-c8975362e4ed",
+      "name": "Bachelor of Information Technology (Cyber Security)",
+      "reason": "The DB's own stored source_url (https://tafeqld.edu.au/courses/study-areas/business-and-it/information-technology/cyber-security) is TAFE Queensland's real cyber security study-area hub page, and it lists exactly 5 real courses in the pathway: Certificate IV in Cyber Security, Graduate Certificate in Cyber Security, Graduate Diploma in Cyber Security, Master of Cyber Security, Master of Cyber Security (Advanced). No Bachelor's-level award exists anywhere in that ladder or in the 555-course catalogue. TAFE Queensland's IT/cyber offering goes straight from VET Certificate IV to postgraduate Grad Cert/Grad Dip/Master, with no Bachelor of IT at all.",
+      "archived_at": "2026-09-24T16:23:09.306Z"
+    },
+    {
+      "id": "0badf60a-23f5-4c1f-82a3-72f5a36dd683",
+      "name": "Diploma of Laboratory Technology",
+      "reason": "The DB's claimed subject area (Health and science > Laboratory science, https://tafeqld.edu.au/courses/study-areas/health-and-science/laboratory-science) lists exactly 2 real courses: Certificate III in Laboratory Skills and Certificate IV in Laboratory Techniques. No Diploma level exists in this subject anywhere in the 555-course catalogue or on the study-area hub page.",
+      "archived_at": "2026-09-24T16:23:09.478Z"
+    },
+    {
+      "id": "e12e0042-db85-49b7-9b27-7690f283b14d",
+      "name": "Diploma of Landscape Design",
+      "reason": "The DB's closest real subject area (Environment and animal services > Horticulture, https://tafeqld.edu.au/courses/study-areas/environment-and-animal-services/horticulture) lists exactly 3 real courses, all Certificate III level (Horticulture, Conservation and Ecosystem Management, Parks and Gardens). No Landscape Design course of any kind, Diploma or otherwise, exists in the 555-course catalogue; 'landscape design' appears only as a career-outcome phrase for Certificate III in Landscape Construction in an unrelated news article.",
+      "archived_at": "2026-09-24T16:23:09.649Z"
+    }
+  ]
+}
