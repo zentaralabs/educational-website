@@ -7,7 +7,7 @@ import { pageMetadata } from "@/lib/page-metadata";
 export const metadata = pageMetadata({
   title: "Share Your Experience",
   description:
-    "Went through an Australian university or visa application yourself? Share what actually happened — an editor reviews every submission before anything is published.",
+    "Went through an Australian university or visa application yourself? Share what actually happened. An editor reviews every submission before anything is published.",
   path: "/share-your-experience",
   type: "website",
 });
@@ -32,8 +32,8 @@ export default function ShareExperiencePage({
       </h1>
       <p className="mt-3 max-w-xl font-body text-base leading-relaxed text-ink/90">
         Every guide on this site is written from official sources, not from
-        going through the process ourselves. If you have — applying for a
-        visa, uploading a CoE, booking biometrics, waiting on a grant — the
+        going through the process ourselves. If you have (applying for a
+        visa, uploading a CoE, booking biometrics, waiting on a grant), the
         specific, sometimes unglamorous details of what that was actually
         like are worth more to the next applicant than another summary of
         the rules. Real, ordinary, and a little rough beats polished.
