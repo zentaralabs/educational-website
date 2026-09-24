@@ -1,0 +1,17 @@
+[
+  {
+    "id": "aa79f6b5-a188-43ce-9fec-56b0d4101d87",
+    "name": "Graduate Certificate of Accounting",
+    "reason": "Graduate Certificate of Accounting is currently TEQSA-accredited for ICMS (renewal date 10/09/2031, i.e. not expired/discontinued), but has no live marketing page anywhere on icms.edu.au, aspire.edu.au or iscaustralia.edu.au (absent from the course nav, course locator, 2027 prospectus and 2027 fee schedule, and a guessed-URL check returned 404), no UAC listing, and Wayback Machine's CDX index of icms.edu.au shows no historical URL for it either (only individual 'accounting' subject pages within other degrees). A real, currently-accredited award with no page to source Bond-standard content from, not a discontinued course to archive."
+  },
+  {
+    "id": "657d4ab9-8a44-484b-a928-20caa0cfcc3f",
+    "name": "Graduate Diploma of Business Administration",
+    "reason": "Graduate Diploma of Business Administration is currently TEQSA-accredited for ICMS (renewal date 20/04/2030, i.e. not expired/discontinued) and is mentioned as a nested mid-point on the Master of Business Administration page's own admission criteria ('Successful completion of a Graduate Certificate or Graduate Diploma...'), but has no live marketing/course page anywhere on icms.edu.au (absent from course nav, course locator, 2027 prospectus, 2027 fee schedule; a guessed-URL check 404s), no UAC listing, and no historical Wayback URL either. A real, currently-accredited nested award with no page to source Bond-standard content from, not a discontinued course to archive."
+  },
+  {
+    "id": "cad78f36-e806-4c78-9c85-784f8ed64cb6",
+    "name": "Master of Professional Accounting",
+    "reason": "Master of Professional Accounting is currently TEQSA-accredited for ICMS (renewal date 10/09/2031, i.e. not expired/discontinued), but has no live marketing page anywhere on icms.edu.au (absent from course nav, course locator, 2027 prospectus, 2027 fee schedule; a guessed-URL check 404s), no UAC listing, and Wayback Machine's CDX index shows no historical URL for it either (only individual accounting-subject pages within other degrees, and the ICMS prospectus PDF's own 'professional accounting bodies' mention is about professional-body recognition of the Bachelor of Business (Accounting), not this Master's). A real, currently-accredited award with no page to source Bond-standard content from, not a discontinued course to archive."
+  }
+]
