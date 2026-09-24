@@ -1,0 +1,77 @@
+[
+  {
+    "id": "824ae8f9-998c-464d-bcb2-1e4c5fb1b4b2",
+    "name": "Advanced Diploma of Engineering Technology",
+    "reason": "Melbourne Polytechnic own website: this exact name 301-redirects to the Engineering subject hub (/study/engineering/) rather than resolving to a real course page, and is absent from the live umbraco courseSearchApi full catalogue (181 items, 2026-09-24). No Advanced Diploma level currently exists in the Engineering study area (only Diploma of Engineering Technology - Civil Engineering, and the Bachelor/Associate Degree of Engineering Technology (Civil))."
+  },
+  {
+    "id": "6ea1e44c-bfef-4dfe-8a3a-335876245910",
+    "name": "Associate Degree in Agriculture and Technology",
+    "reason": "404 on every guessed melbournepolytechnic.edu.au URL and absent from the live course search API (181-item catalogue, 2026-09-24) and the Agriculture and Land Management study-area hub. No standalone Associate Degree exists in this subject area; the only agriculture higher-education award is the Bachelor of Agriculture and Technology (with 4 major specialisations)."
+  },
+  {
+    "id": "66ebf2cc-3739-4e51-bdbe-251d7eb48a4c",
+    "name": "Associate Degree of Accounting",
+    "reason": "404 on every guessed URL and absent from the live course search API (181-item catalogue, 2026-09-24). No Associate Degree of Accounting page or listing exists anywhere on melbournepolytechnic.edu.au; the Bachelor of Accounting page has no stated associate-degree exit pathway of its own (unlike Engineering Technology (Civil), IT, and Veterinary Nursing, which explicitly do)."
+  },
+  {
+    "id": "d2445a24-2eb9-4a44-9fce-28b509cbd469",
+    "name": "Associate Degree of Business",
+    "reason": "404 on every guessed URL and absent from the live course search API (181-item catalogue, 2026-09-24). No Associate Degree of Business page or listing exists; the Bachelor of Business page does not mention an associate-degree exit award of its own."
+  },
+  {
+    "id": "ca986fed-0a9e-4150-9e1f-df0c5635d3a9",
+    "name": "Associate Degree of Hospitality Management",
+    "reason": "404 on every guessed URL and absent from the live course search API (181-item catalogue, 2026-09-24). No Associate Degree of Hospitality Management page or listing exists; the Bachelor and Diploma/Advanced Diploma levels are the only Hospitality Management awards currently offered."
+  },
+  {
+    "id": "6baf8e2c-3e4c-401b-9e09-7d7cb7defd0e",
+    "name": "Associate Degree of Illustration",
+    "reason": "404 on every guessed URL and absent from the live course search API (181-item catalogue, 2026-09-24). No Associate Degree of Illustration page or listing exists; Illustration is offered at Bachelor and Diploma level only."
+  },
+  {
+    "id": "cdfed1ac-7e1c-4727-8937-e5dd7cec6f93",
+    "name": "Associate Degree of Music",
+    "reason": "404 on every guessed URL and absent from the live course search API (181-item catalogue, 2026-09-24). No Associate Degree of Music page or listing exists; Music is offered at Diploma, Advanced Diploma (Performance) and Bachelor level only."
+  },
+  {
+    "id": "356bbe5f-83c8-4377-af3c-3e612327355a",
+    "name": "Associate Degree of Songwriting and Music Production",
+    "reason": "404 on every guessed URL and absent from the live course search API (181-item catalogue, 2026-09-24). No Associate Degree page or listing exists for this subject; only the Bachelor of Songwriting and Music Production is currently offered."
+  },
+  {
+    "id": "8eb49447-ecef-4946-a767-b7c5c60e789a",
+    "name": "Diploma of Agriculture",
+    "reason": "This exact name 301-redirects to the Agriculture subject hub (/study/agriculture-and-land-management/agriculture/) rather than a real course page, and is absent from the live course search API (181-item catalogue, 2026-09-24). The current Agriculture-area Diploma-level awards are Diploma of Applied Horticultural Science and Diploma of Conservation and Ecosystem Management; no course is named plain Diploma of Agriculture."
+  },
+  {
+    "id": "5e20d561-7a08-4267-b81a-c962f5e75e02",
+    "name": "Diploma of Graphic Design",
+    "reason": "This exact name 301-redirects to the Visual Art subject hub (/study/visual-art/) rather than a real course page, and is absent from the live course search API (181-item catalogue, 2026-09-24). The current Visual Art Diploma-level awards are Diploma of Visual Arts (Illustration / Painting Printmaking / Glasswork streams); no course is named Diploma of Graphic Design."
+  },
+  {
+    "id": "85491e56-9100-4864-8745-16792208f4da",
+    "name": "Diploma of Information Technology",
+    "reason": "This exact name 301-redirects to the Information Technology and Security subject hub (/study/information-technology-and-security/) rather than a real course page, and is absent from the live course search API (181-item catalogue, 2026-09-24). IT is currently offered at Certificate III, Bachelor, Master, Graduate Certificate and Graduate Diploma level at MP, with no Diploma-level award in between."
+  },
+  {
+    "id": "c7e86c76-02cf-4069-a4b3-6df91b253270",
+    "name": "Graduate Certificate of Information Technology",
+    "reason": "404 and absent from the live course search API (181-item catalogue, 2026-09-24). No Graduate Certificate of IT page or listing exists; the only postgraduate IT award currently offered is the Master of Information Technology."
+  },
+  {
+    "id": "9685ce24-34d2-46cb-a966-e5979ace8704",
+    "name": "Graduate Diploma of Information Technology",
+    "reason": "404 and absent from the live course search API (181-item catalogue, 2026-09-24). No Graduate Diploma of IT page or listing exists; the only postgraduate IT award currently offered is the Master of Information Technology."
+  },
+  {
+    "id": "d6b486e0-d57a-4a06-abd6-bf3defee3712",
+    "name": "Graduate Diploma of Professional and Practicing Accounting",
+    "reason": "404 and absent from the live course search API (181-item catalogue, 2026-09-24). No Graduate Diploma of Professional and Practicing Accounting page or listing exists; the only postgraduate accounting award currently offered is the Master of Professional and Practicing Accounting."
+  },
+  {
+    "id": "d4d5ef65-80ca-430f-a54f-e4395608ba59",
+    "name": "Bachelor of Music",
+    "reason": "Melbourne Polytechnic own course page (https://www.melbournepolytechnic.edu.au/study/bachelor/music/, fetched 2026-09-24) states verbatim: \"Unfortunately we are no longer accepting enrolments into this course. You may wish to consider enrolment into our other music courses as an alternative,\" linking to the Music and Sound subject hub. Bachelor of Songwriting and Music Production is the current live bachelor-level award in this subject area."
+  }
+]
