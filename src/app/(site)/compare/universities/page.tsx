@@ -76,6 +76,43 @@ export default async function CompareUniversitiesPage({
           </p>
         </div>
 
+        <div className="mt-6 space-y-4 font-body text-sm text-ink/80">
+          <p>
+            Tuition and total cost of attendance vary widely between Australian universities,
+            even for the same degree, and so does selectivity: some accept a far narrower band
+            of applicants than others. Entry requirements (English test scores, prerequisite
+            subjects, or a required academic average) differ too, and can rule a university out
+            before cost even comes into it. Campus location matters as well, since a CBD campus
+            and a suburban campus in the same city can mean very different living costs and
+            commute times.
+          </p>
+          <p>
+            Pick two to four universities below to build your own table, or start from a
+            ready-made comparison:{" "}
+            <Link
+              href="/compare/university-of-melbourne-vs-university-of-sydney"
+              className="text-ink underline underline-offset-2 hover:text-slate"
+            >
+              Melbourne vs Sydney
+            </Link>
+            ,{" "}
+            <Link
+              href="/compare/monash-university-vs-unsw-sydney"
+              className="text-ink underline underline-offset-2 hover:text-slate"
+            >
+              Monash vs UNSW
+            </Link>
+            , or{" "}
+            <Link
+              href="/compare/australian-national-university-vs-university-of-melbourne"
+              className="text-ink underline underline-offset-2 hover:text-slate"
+            >
+              ANU vs Melbourne
+            </Link>
+            .
+          </p>
+        </div>
+
         {slugs.length > 0 && universities.length < 2 && (
           <p className="mt-4 font-body text-sm text-status-closed">
             Couldn&rsquo;t find enough of those universities to compare. Pick again below.
