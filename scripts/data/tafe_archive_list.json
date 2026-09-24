@@ -1,0 +1,67 @@
+[
+  {
+    "id": "b4278e43-0037-4d65-97e0-0ffdd1013e1b",
+    "name": "Advanced Diploma of Graphic Design",
+    "reason": "Absent from TAFE NSW's international course-search index (query_string=CUA60325 returns 0 hits) and absent from the international 'Advanced Diplomas' category page, despite a real live domestic page existing (CUA60325-01). TAFE NSW's international Advanced Diploma offering is limited to Civil Construction Design, Engineering (Mechanical) and Marine Engineering (Class 1) only; Graphic Design tops out at Diploma level for international students."
+  },
+  {
+    "id": "7dea2622-f30e-49ec-a737-08a591e4212e",
+    "name": "Advanced Diploma of Hospitality Management",
+    "reason": "No course of this name/level exists at TAFE NSW under any current training package; the SIT (Tourism, Travel and Hospitality) package tops out at Diploma of Hospitality Management (SIT50422) both domestically and internationally. Confirmed via the food-and-hospitality course-area hub (no Advanced Diploma listed) and the international course-search index (0 hits for any Hospitality Management course above Diploma level)."
+  },
+  {
+    "id": "d68bedca-85c5-420d-ae99-684bff596eac",
+    "name": "Associate Degree of 3D Art and Animation",
+    "reason": "TAFE NSW currently offers no Associate Degree in this subject area under any name. The /degrees marketing hub and the international course-search index (101 items) contain zero 'Associate Degree' entries in Digital Media/3D Art; the only Associate Degree TAFE NSW currently offers at all is Associate Degree of Manufacturing and Applied Digital Technologies (engineering), an unrelated award. Only the Bachelor of 3D Art and Animation exists in this subject."
+  },
+  {
+    "id": "24b16317-8f1d-469a-84ca-0ee0b1b76bdd",
+    "name": "Associate Degree of Business",
+    "reason": "Same evidence as Associate Degree of 3D Art and Animation: TAFE NSW's only current Associate Degree (Manufacturing and Applied Digital Technologies) is unrelated; no Associate Degree of Business exists under any name in the business-and-marketing course area or the international course list."
+  },
+  {
+    "id": "8735a232-4e7a-437b-8f9a-ecd995c881d2",
+    "name": "Associate Degree of Fashion",
+    "reason": "Same evidence again: no Associate Degree exists in the fashion course area (only Certificate II/III, Diploma of Apparel Fashion and Textiles, Diploma of Fashion, and Bachelor of Fashion Design); TAFE NSW's sole current Associate Degree is unrelated (Manufacturing and Applied Digital Technologies)."
+  },
+  {
+    "id": "fba51dc6-156e-440d-be03-7cbf8ce71b82",
+    "name": "Diploma of 3D Art and Animation",
+    "reason": "No standalone Diploma exists in this subject; only the Bachelor of 3D Art and Animation is offered (screen-media-and-games course area and international index both confirm no 'Diploma of 3D Art and Animation' at any national code)."
+  },
+  {
+    "id": "cded6632-b85d-48a5-b9a8-0c2090804247",
+    "name": "Diploma of Agriculture",
+    "reason": "Real, currently-taught domestic course (AHC50122-01, farming-and-primary-production course area) but absent from TAFE NSW's international course-search index (query_string=AHC50122 returns 0 hits) and absent from the international course list entirely; its own live page's entry requirements are pure domestic VET pathway text (Certificate III completion or industry experience) with zero CRICOS code and zero English-language/international content anywhere on the page, unlike genuinely international courses of the same qualification level."
+  },
+  {
+    "id": "4b313328-e43c-491c-a3b8-2f8b32370d07",
+    "name": "Diploma of Engineering - Technical",
+    "reason": "Real, currently-taught domestic course (Diploma of Engineering - Technical (Mechanical), MEM50222-02, engineering course area) but absent from TAFE NSW's international course-search index (query_string=MEM50222 returns 0 hits); its own live page carries no CRICOS code and no English-language/international content, unlike TAFE NSW's genuinely internationally-marketed engineering qualifications (Advanced Diploma of Engineering, Advanced Diploma of Civil Construction Design, Diploma of Civil Construction Design, Diploma of Electronics and Communications Engineering, all of which ARE in the international index)."
+  },
+  {
+    "id": "ff747b03-a611-4632-8b51-09a910903760",
+    "name": "Diploma of Maritime Operations",
+    "reason": "Real, currently-taught domestic course (Diploma of Maritime Operations (Watchkeeper Deck), MAR50320-03, maritime course area) but absent from TAFE NSW's international course-search index (query_string=MAR50320 returns 0 hits) and absent from the international course list; its own live page carries no CRICOS code and no English/international content. TAFE NSW's internationally-marketed maritime qualification is the separate Diploma of Marine Engineering (Engineer Watchkeeper, MAR50120), a distinct engine-room qualification already a separate published row, not this deck-operations qualification."
+  },
+  {
+    "id": "5d91b762-6ba5-42a4-a3a6-4d992afc279b",
+    "name": "Diploma of Renewable Energy Engineering",
+    "reason": "Real, CRICOS-registered course (HE20552V01, CRICOS 107756M, electrotechnology course area) but absent from TAFE NSW's international course-search index and, decisively, absent from TAFE NSW's own curated 'Popular degrees and diplomas' list on the international/courses/degrees marketing hub, which names every other higher-education award TAFE NSW actively markets to international students. No published English-language (IELTS) requirement exists anywhere on its own live page. Treated as not currently part of TAFE NSW's active international offering despite the historic CRICOS registration."
+  },
+  {
+    "id": "3886e58e-37cd-4863-a195-2807b2082a1d",
+    "name": "Diploma of Visual Arts",
+    "reason": "Real, currently-taught domestic course (CUA51125-01, art-and-design course area) but absent from TAFE NSW's international course-search index (query_string=CUA51125 returns 0 hits); no CRICOS code or English/international content on its own live page. TAFE NSW's internationally-marketed art-and-design offerings are limited to Graphic Design (Diploma) and the Bachelor's-level degrees; standalone Visual Arts is not currently offered to international students."
+  },
+  {
+    "id": "84cd4e01-ad6f-43a8-adc9-c4986447bf07",
+    "name": "Graduate Certificate in Financial Planning (Professional Practice)",
+    "reason": "Real, CRICOS-registered course (HE20529V01, CRICOS O100524, accounting-and-finance course area) but absent from the international course-search index and from the international degrees hub's curated list. Its own page's 'International students' link points only to the generic international/study/courses/degrees listing page (which does not itself list this course), and no course-specific English-language requirement is published anywhere; entry is via professional financial-planner credentials, not academic/English criteria. Not currently part of TAFE NSW's active international offering."
+  },
+  {
+    "id": "3044357c-1cd9-40bb-b135-6f303789e2f5",
+    "name": "Graduate Diploma of Financial Planning",
+    "reason": "Same evidence as the Graduate Certificate in Financial Planning: real CRICOS code (O100525) but absent from the international course index and the curated international degrees list, no published course-specific English requirement, entry via professional credentials rather than academic/English criteria. Not currently part of TAFE NSW's active international offering."
+  }
+]
