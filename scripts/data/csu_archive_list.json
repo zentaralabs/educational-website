@@ -1,0 +1,7 @@
+[
+  {
+    "id": "902023e8-cc7c-47a0-b67f-c9c53e811865",
+    "name": "Bachelor of Criminal Justice",
+    "reason": "No standalone 'Bachelor of Criminal Justice' course exists in CSU's current course-finder catalogue or handbook. The only course carrying 'Criminal Justice' in its title is the combined double degree 'Bachelor of Laws / Bachelor of Criminal Justice' (course code 2418LC01), which CSU's own live course-finder API (study.csu.edu.au course-finder-var.js) flags with meta_status \"suspended-all\" (closed to all new enrolments). Bachelor of Criminology (course code 1415CJ01) is the live current standalone award in this subject area."
+  }
+]
