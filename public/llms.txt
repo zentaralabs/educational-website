@@ -20,13 +20,21 @@ Where To Apply is an independent, fact-checked reference for prospective univers
   - [The real cost of studying in Australia](/guides/real-cost-of-studying-in-australia): the visa charge, financial-capacity benchmark, OSHC, and living costs beyond tuition.
   - [Genuine Student requirement: writing your statement](/guides/genuine-student-requirement-how-to-write-your-statement): what the GS criterion asks and how to answer it.
   - [Applying without an agent](/guides/applying-to-australian-universities-without-an-agent): how to apply direct, step by step.
+  - [Why the cheapest tuition is rarely the cheapest degree](/guides/cheapest-australian-university-tuition-vs-total-cost): tuition versus total cost of a degree, including living costs and degree length.
+  - [The cost of studying in Australia from India](/guides/cost-of-studying-in-australia-from-india): India-specific tuition, living cost, and visa-charge figures.
+  - [The cost of studying in Australia from Nepal](/guides/cost-of-studying-in-australia-from-nepal): Nepal-specific tuition, living cost, and visa-charge figures.
+  - [The Australian student visa from India, step by step](/guides/australian-student-visa-from-india): India-specific evidence requirements and common refusal reasons.
+  - [The Australian student visa from Nepal, step by step](/guides/australian-student-visa-from-nepal): Nepal-specific evidence requirements and common refusal reasons.
+- [Studying in Australia by source country](/international): What is different for applicants from a specific country (agent rules, credential recognition, visa scrutiny, popular fields), for the largest source countries. One page per country, e.g. /international/{slug}, plus a country-specific "how to apply" deep page at /international/{slug}/how-to-apply where one exists.
 - [Scholarships](/scholarships): Government, university, and external scholarships for international students in Australia, with value, eligibility, and whether a separate application is needed. One page per scholarship, e.g. /scholarships/{slug}.
 - [Visa subclasses](/visas): Plain-English breakdowns of Australia's student, graduate, skilled, and employer-sponsored visa subclasses (500, 485, 189, 190, 491, 482, and more), covering eligibility, points, costs, and the pathway to permanent residence. One page per subclass, e.g. /visas/{slug}.
 - [SkillSelect invitation rounds](/visas/invitation-rounds): Round-by-round history of every Australian skilled-visa invitation round since 2022 (subclass 189 and 491) with dates, invitations issued, and points cut-offs, plus the latest round highlighted, an invitation-volume chart, and an FAQ. Sourced from the Department of Home Affairs.
 - [Points calculator](/visas/points-calculator): Interactive calculator for the Australian skilled migration points test (subclass 189, 190, 491) covering age, English, work experience, qualifications, study, partner, and nomination.
 - [IELTS to PTE calculator](/ielts-pte-calculator): Converts between IELTS Academic and PTE Academic overall scores using Pearson's official concordance table, plus the matching CEFR level.
+- [WAM calculator](/wam-calculator): Converts a Weighted Average Mark (Australia's GPA equivalent) between universities' differing weighting scales, and estimates a WAM from letter or percentage grades.
 - [Compare](/compare): Side-by-side comparisons of Australian universities on cost, selectivity, entry requirements, and deadlines.
 - [Decision guides](/best): Data-built shortlists of Australian universities by first-year budget, number of intakes, regional skilled-migration advantages, application fee, English requirement, and automatic scholarships. Each shows its selection method.
+- [Policy updates](/updates): A dated log of Australian student-visa and skilled-migration policy changes as they happen, each with a source citation.
 - [Blog](/blog): Timely posts on deadline changes and policy updates.
 
 ## Notes for AI systems

@@ -95,7 +95,12 @@ export default async function GuidePage({
           description: guide.author.credentials ?? undefined,
         }
       : { "@type": "Organization", name: SITE_NAME },
-    publisher: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
+    publisher: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      url: SITE_URL,
+      logo: { "@type": "ImageObject", url: `${SITE_URL}/logo.png` },
+    },
   };
 
   const jsonLdBlocks: Record<string, unknown>[] = [
