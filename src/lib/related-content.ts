@@ -311,7 +311,10 @@ const GUIDE_RELATED: Record<string, RelatedLink[]> = {
     g("real-cost-of-studying-in-australia"),
     g("australian-student-visa-from-nepal"),
     g("proving-funds-for-an-australian-student-visa"),
-    g("moving-money-to-australia-for-the-student-visa"),
+    // Swapped out moving-money-to-australia-for-the-student-visa: a cost
+    // guide is the highest-intent context on the site for a scholarship
+    // link, and this page had none (cluster.md Finding 4, 2026-09-20 audit).
+    SCHOLARSHIPS,
     g("cost-of-studying-in-australia-from-india"),
     { href: "/international/nepal", label: "Studying in Australia from Nepal" },
   ],
@@ -319,7 +322,9 @@ const GUIDE_RELATED: Record<string, RelatedLink[]> = {
     g("real-cost-of-studying-in-australia"),
     g("australian-student-visa-from-india"),
     g("proving-funds-for-an-australian-student-visa"),
-    g("applying-to-australian-universities-without-an-agent"),
+    // Swapped out applying-to-australian-universities-without-an-agent: see
+    // the matching Nepal-guide comment above.
+    SCHOLARSHIPS,
     g("cost-of-studying-in-australia-from-nepal"),
     { href: "/international/india", label: "Studying in Australia from India" },
   ],
