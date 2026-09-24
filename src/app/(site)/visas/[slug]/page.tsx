@@ -127,8 +127,16 @@ export default async function VisaPage({
           {VISA_CATEGORY_LABELS[visa.category] ?? visa.category}
           {visa.stream && ` · ${visa.stream}`}
         </p>
+        {/* The subclass number is the strongest on-page signal for how people
+            actually search ("student visa 500" beats "student visa"), and
+            the eyebrow line above already carries it but a heading is worth
+            more to both search and AI-answer engines than a badge is. Skip
+            it for the bridging-visa row: its code is "010/020/030" (nobody
+            searches that string) and its name already reads fine alone --
+            same special-casing rationale as the meta_title override above. */}
         <h1 className="mt-2 font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
           {visa.name}
+          {!visa.code.includes("/") && ` (Subclass ${visa.code})`}
         </h1>
         {visa.summary && (
           <p className="mt-4 max-w-2xl font-body text-base leading-relaxed text-ink/90 sm:text-lg">
