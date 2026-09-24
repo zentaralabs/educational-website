@@ -18,7 +18,7 @@ import { ProgramsList } from "@/components/site/ProgramsList";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import { FaqSection } from "@/components/site/FaqSection";
 import { faqJsonLd, universityFaq } from "@/lib/faq";
-import { SITE_URL, SITE_YEAR } from "@/lib/site-config";
+import { INTAKE_YEAR, SITE_URL, SITE_YEAR } from "@/lib/site-config";
 import { deadlineBadgeStatus, formatDeadlineDateLong } from "@/lib/deadline-status";
 import { formatCurrency, selectivityLabel } from "@/lib/format";
 import { getPublishedProgramsForUniversity } from "@/lib/queries/public-programs";
@@ -79,19 +79,25 @@ export async function generateMetadata({
   if (!university) return {};
 
   const title = composeTitle(university.name, [
-    `Fees, Entry Requirements & Deadlines ${SITE_YEAR}`,
-    `Fees, Entry & Deadlines ${SITE_YEAR}`,
+    `Fees, Entry Requirements & Deadlines ${INTAKE_YEAR}`,
+    `Fees, Entry & Deadlines ${INTAKE_YEAR}`,
     `Fees & Entry Requirements ${SITE_YEAR}`,
     `Fees & Entry ${SITE_YEAR}`,
   ]);
-  // distinctive_summary leads so the real, per-university content survives
-  // clampDescription's 155-char budget — it alone often exceeds that, which
-  // is fine, since the generic tail below just repeats words already in the
-  // title ("Fees, Entry & Deadlines") and previously became the *entire*
-  // visible description once distinctive_summary got clipped off the end.
-  const description =
-    (university.distinctive_summary ? `${university.distinctive_summary} ` : "") +
-    `${university.name} for international students${university.city ? ` in ${university.city.split(",")[0]}` : ""}: tuition fees, entry requirements, application deadlines, and scholarships.`;
+  // Leads with a real number (tuition), not distinctive_summary's trivia --
+  // sxo.md Finding 6 (2026-09-20 audit) flagged this exact page as an
+  // example of a meta description that "answers no query": distinctive_summary
+  // is genuinely interesting (still shown on-page, just not here) but assumes
+  // context a searcher scanning a SERP doesn't have yet. The /study/[slug]
+  // template's own description leads with numbers ("166 programs... Tuition
+  // from $X across N universities") and that's the pattern to match.
+  const tuitionBit =
+    university.tuition_international != null
+      ? `International tuition from ${formatCurrency(university.tuition_international, university.currency ?? "AUD")}/year. `
+      : "";
+  const description = tuitionBit
+    ? `${university.name}${university.city ? ` in ${university.city.split(",")[0]}` : ""}: ${tuitionBit}Entry requirements, application deadlines, and scholarships for international students.`
+    : `${university.name}${university.city ? ` in ${university.city.split(",")[0]}` : ""}: entry requirements, application deadlines, and scholarships for international students.`;
   const url = `/universities/${slug}`;
 
   return pageMetadata({

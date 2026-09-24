@@ -29,6 +29,20 @@ export const SITE_URL = (
  */
 export const SITE_YEAR = new Date().getFullYear();
 
+/**
+ * The intake year deadline content actually refers to: by the time anyone
+ * is checking a deadline, the current year's intakes have mostly already
+ * closed, so "when do I apply" content means next year's dates. Unlike
+ * SITE_YEAR, this is a real content fact used in visible copy and titles
+ * (a deadlines page's own H1 says "application deadlines {INTAKE_YEAR}"),
+ * not just a freshness signal — keep every "Deadlines {year}" claim on
+ * this constant so a parent page and its deadlines child page can't drift
+ * apart the way university overview pages did before this was centralised
+ * (sxo.md Finding 4, 2026-09-20 SEO audit: overview said "Deadlines 2026",
+ * its own deadlines subpage said "Deadlines 2027").
+ */
+export const INTAKE_YEAR = SITE_YEAR + 1;
+
 // Australia only, and the public URL structure commits to it: routes are flat
 // and un-prefixed (no /australia/ segment). A future second country would get
 // its own path prefix (/uk/...) rather than triggering a site-wide migration.
