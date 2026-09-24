@@ -212,6 +212,11 @@ export const SUBJECT_CONTENT: Record<string, SubjectContent> = {
       "Nursing and the allied health fields are strong choices in Australia because they lead to registered professions that appear on the skilled occupation lists and are in genuine shortage. The main routes are a Bachelor of Nursing, a two-year Master of Nursing for graduates of other fields, or specialist master's in public health, nutrition, and physiotherapy.",
       "Nursing has higher English requirements than most degrees, set by the Nursing and Midwifery Board of Australia: IELTS Academic 7.0 in listening, reading, and speaking, and at least 6.5 in writing, or the OET or PTE equivalent. Clinical placements are built into every nursing program.",
     ],
+    requirements: [
+      "The English bar is set by the regulator, not the university, and universities apply it at admission rather than leaving it for registration later: IELTS Academic 7.0 in listening, reading, and speaking, at least 6.5 in writing, or an equivalent OET or PTE Academic score, under the Nursing and Midwifery Board of Australia's (NMBA) standard.",
+      "Check that the specific program carries ANMAC accreditation. That is what makes it count toward Registered Nurse registration, not the degree title alone.",
+      "Every accredited program builds in supervised clinical placements, which come with their own entry checks once you're enrolled: a national police check, an immunisation and vaccination record meeting the placement provider's requirements, and sometimes a Working with Children check.",
+    ],
     careers: "Registered nurse is one of the most reliably nominated occupations across every state. Placement hours during study count toward registration, and a 485 visa gives time to register and gain experience before applying for a skilled visa.",
     strongAt: [
       { slug: "university-of-technology-sydney", why: "One of the largest and highest-ranked nursing faculties in Australia." },
@@ -332,6 +337,11 @@ export const SUBJECT_CONTENT: Record<string, SubjectContent> = {
       "Psychology in Australia follows a structured sequence: an accredited three-year bachelor's, then a fourth honours year, then postgraduate professional training. International students often start with a Bachelor of Psychological Science or a Graduate Diploma of Psychology to enter the sequence.",
       "Becoming a registered psychologist requires accreditation from the Australian Psychology Accreditation Council at each stage and registration with the Psychology Board of Australia. Standard entry to a bachelor's is a strong secondary record and IELTS 6.5; postgraduate places are competitive.",
     ],
+    requirements: [
+      "International students most commonly enter partway through the sequence, typically at the postgraduate stage after an accredited bachelor's and honours year done overseas or in Australia. APAC assesses whether a prior qualification meets the standard for entry into its accredited fourth- and fifth-year programs.",
+      "Entry to the bachelor's itself needs a strong secondary result and IELTS 6.5 or the equivalent, the same as most other bachelor degrees. Registration is the stage with the real English bar: the Psychology Board of Australia applies the same standard as nursing, IELTS Academic 7.0 overall with 7.0 in listening, reading, and speaking and at least 6.5 in writing, or an equivalent OET or PTE Academic score.",
+      "Postgraduate places in the accredited master's or doctorate are genuinely competitive and capped, more so than most coursework master's, because they include supervised placement hours the university has to source and staff.",
+    ],
     careers: "Registered psychologist and clinical psychologist appear on skilled lists but the training pathway is long. Many graduates work in research, HR, or counselling-adjacent roles that do not require full registration.",
     faq: [
       {
@@ -344,6 +354,10 @@ export const SUBJECT_CONTENT: Record<string, SubjectContent> = {
     intro: [
       "Teaching qualifications in Australia are the Bachelor of Education and the graduate-entry Master of Teaching (primary or secondary) for people who already hold a bachelor's in a teaching area. Both are accredited by state teacher regulatory authorities.",
       "Teaching has higher English requirements than most fields, usually IELTS 7.5 with 8.0 in speaking and listening, set by the regulators. Programs include supervised practicum in schools. Fees are moderate, often in the high AUD 20,000s to low AUD 30,000s.",
+    ],
+    requirements: [
+      "The university's own bar for entry to the Bachelor of Education or Master of Teaching is usually a standard postgraduate-level IELTS 6.5 to 7.0, not the higher figure above. IELTS 7.5 overall with 8.0 in speaking and listening and no band below 7.0 is what a state teacher regulatory authority (VIT, NESA, and their equivalents elsewhere) requires to actually register once you graduate, so budget for a second, harder English test late in your degree if you didn't already clear it at entry.",
+      "The degree needs to be an accredited initial teacher education program with a minimum of 45 days of supervised teaching practice, documented by your university with the exact number of days, age range taught, and school setting. A qualification without that documentation will not satisfy a registration authority later, whatever the degree title says.",
     ],
     careers: "Secondary teachers in maths, science, and languages are consistently on skilled lists and nominated by several states. Primary teaching is more variable. Registration with a state teaching authority is required to work.",
     strongAt: [
@@ -381,6 +395,11 @@ export const SUBJECT_CONTENT: Record<string, SubjectContent> = {
     intro: [
       "Architecture in Australia is a two-part qualification: a three-year Bachelor of Design or Architectural Studies, then a two-year Master of Architecture, which is the professional degree accredited by the Architects Accreditation Council of Australia.",
       "Both stages usually require a portfolio. Registration as an architect needs the accredited master's plus logged practical experience and the Architectural Practice Examination. Fees are in the mid AUD 30,000s at most universities.",
+    ],
+    requirements: [
+      "Accreditation from the Architects Accreditation Council of Australia (AACA) applies to the Master of Architecture specifically, not the bachelor's that leads into it. Check a program's accreditation status at the master's level before assuming the whole two-part sequence counts, especially if you're weighing a bachelor's at one university against a master's at another.",
+      "The bachelor's stage generally asks for a design portfolio alongside academic results, on top of the standard IELTS 6.5 most bachelor degrees want. The master's is more selective about the portfolio, since it's the professionally accredited half of the qualification.",
+      "Finishing the Master of Architecture doesn't make you a registered architect. You still need the Architectural Practice Examination (APE), sat after documented practical experience, administered separately from your degree by your state or territory's architects board.",
     ],
     careers: "Architect is on the skilled occupation lists, assessed by the Architects Accreditation Council of Australia. The full path from study to registration takes several years.",
     strongAt: [
