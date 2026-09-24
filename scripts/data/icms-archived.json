@@ -1,0 +1,40 @@
+{
+  "entries": [
+    {
+      "id": "2e5bfb8f-8291-4968-af84-ce5e6c0e696a",
+      "name": "Associate Degree of Business",
+      "reason": "No live marketing, admission, course-locator or UAC listing found anywhere for a generic Associate Degree of Business despite an exhaustive search (icms.edu.au nav/sitemap/course-locator/2027 prospectus, aspire.edu.au sitemap, iscaustralia.edu.au sitemap, and a full UAC course-search filter on International College of Management, Sydney returning 51 current courses with zero 'Associate' matches). TEQSA's national register lists it only under 'previously accredited', with an expiry date (29/08/2026) matching the batch-wide date every other now-self-accredited ICMS course (including ones confirmed still live, e.g. Bachelor of Hospitality Management) also shows, so that date alone is not proof of continuation; the decisive signal is the total absence from every current ICMS/Aspire/UAC channel.",
+      "archived_at": "2026-09-24T18:21:45.035Z"
+    },
+    {
+      "id": "64154cf7-2d3d-4940-8553-041a4587e187",
+      "name": "Associate Degree of Event Management",
+      "reason": "Same exhaustive-search result as Associate Degree of Business: no live page, nav entry, course-locator entry or UAC listing found anywhere for Associate Degree of Event Management. TEQSA shows it only as previously-accredited (expired 29/08/2026, the same self-accreditation-transition date as still-live courses, so not itself proof of discontinuation), with no corroborating current marketing evidence anywhere.",
+      "archived_at": "2026-09-24T18:21:45.200Z"
+    },
+    {
+      "id": "9dd59705-e4ac-4cbc-8b2e-354f4b444064",
+      "name": "Associate Degree of Hospitality Management",
+      "reason": "Same exhaustive-search result: no live page, nav entry, course-locator entry or UAC listing found anywhere for Associate Degree of Hospitality Management. TEQSA shows it only as previously-accredited (expired 29/08/2026, the self-accreditation-transition date), with no corroborating current marketing evidence anywhere.",
+      "archived_at": "2026-09-24T18:21:45.357Z"
+    },
+    {
+      "id": "0507514a-717f-44a8-a045-8d5967ffb053",
+      "name": "Bachelor of Business (Property)",
+      "reason": "'Bachelor of Business (Property)' never appears anywhere in TEQSA's full ICMS accreditation history (current or previously-accredited, which for other courses goes back to 2013) under this or any variant name, and the row's own stored data (source_url = bare icms.edu.au homepage, cricos_code null, a flat $29,000/3-year placeholder shared verbatim with two other clearly-fabricated rows) matches the established fabricated-placeholder-import pattern from prior sprints. ICMS's one real, current property degree is 'Bachelor of Property (Development, Investment and Valuation)' (CRICOS 106412K), already correctly represented by its own separate DB row.",
+      "archived_at": "2026-09-24T18:21:45.513Z"
+    },
+    {
+      "id": "c57797be-7ede-46b6-b397-9470f73be22d",
+      "name": "Bachelor of International Hotel and Resort Management",
+      "reason": "'Bachelor of International Hotel and Resort Management' never appears anywhere in TEQSA's full ICMS accreditation history (current or previously-accredited) under this or any variant name, is absent from every current ICMS marketing channel (nav, sitemap, course locator, 2027 prospectus, UAC), and the row's own stored data (source_url = bare icms.edu.au homepage, cricos_code null, the same flat $29,000/3-year placeholder shared with the other fabricated rows) matches the established fabricated-placeholder-import pattern. ICMS's real current hospitality/tourism bachelor's degrees are 'Bachelor of Hospitality Management' and 'Bachelor of Business (International Tourism)', both already separately represented by other DB rows.",
+      "archived_at": "2026-09-24T18:21:45.675Z"
+    },
+    {
+      "id": "7d4a45f6-a15b-4dcc-881a-82f486ae2c84",
+      "name": "Bachelor of International Tourism and Hospitality Management",
+      "reason": "'Bachelor of International Tourism and Hospitality Management' never appears anywhere in TEQSA's full ICMS accreditation history under this exact name (only 'Bachelor of International Tourism', expired 2022, and the current 'Bachelor of Business (International Tourism)' exist), and the row's own stored data (source_url = bare icms.edu.au homepage, cricos_code null, the same flat $29,000/3-year placeholder shared with the other fabricated rows) matches the established fabricated-placeholder-import pattern rather than a genuine alternate name for the current degree. ICMS's one real, current tourism degree is 'Bachelor of Business (International Tourism)', which has no separate DB row of its own and is not otherwise represented, so nothing is lost by archiving this duplicate/fabricated title.",
+      "archived_at": "2026-09-24T18:21:45.850Z"
+    }
+  ]
+}
