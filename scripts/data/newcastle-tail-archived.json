@@ -1,0 +1,47 @@
+{
+  "note": "University of Newcastle tail-closure archive log, 2026-09-25 session. Reverse with: update programs set status='published' where id = '<id>'.",
+  "entries": [
+    {
+      "id": "1862265f-774a-4745-bb33-6afccfea2ab8",
+      "name": "Bachelor of Climate Science and Adaptation",
+      "reason": "Confirmed genuinely discontinued: the 2025 handbook (program 40245) explicitly states 'This program is being discontinued and is no longer available to new students. This Handbook is relevant to continuing students only', and the program is fully absent from the 2026 handbook (404 at handbook.newcastle.edu.au/program/2026/40245) and has no live marketing page (404 at /degrees/bachelor-of-climate-science-and-adaptation). No new-student intake exists to describe honestly.",
+      "archived_at": "2026-09-25T15:15:54.824Z"
+    },
+    {
+      "id": "f3f588b2-69c8-4e5c-befd-5dc3f855f365",
+      "name": "Graduate Certificate in Applied Finance",
+      "reason": "Program 11198 was Active in the 2025 handbook with a real description, but is entirely absent from the 2026 handbook (404) and has no live marketing page (404 at /degrees/graduate-certificate-in-applied-finance). Genuinely discontinued between the 2025 and 2026 catalogue years; no current content exists to source honestly.",
+      "archived_at": "2026-09-25T15:15:54.991Z"
+    },
+    {
+      "id": "22e1056a-9575-4ea5-91b5-2d2f40cb5340",
+      "name": "Master of Applied Finance",
+      "reason": "Program 12374 was Active in the 2025 handbook, but is entirely absent from the 2026 handbook (404) and has no live marketing page (404 at /degrees/master-of-applied-finance). Genuinely discontinued between the 2025 and 2026 catalogue years; no current content exists to source honestly.",
+      "archived_at": "2026-09-25T15:15:55.149Z"
+    },
+    {
+      "id": "1f9aef43-c997-4cfd-93d5-8b0f3157a258",
+      "name": "Graduate Certificate in Nutrition",
+      "reason": "CRICOS course 116621G is still listed as an active CRICOS registration, but the program has no entry in either the 2025 or 2026 University of Newcastle handbook, no live marketing page (404), and no Wayback Machine snapshot ever recorded for it. No discoverable curriculum, admission, or English-requirement content exists for this program at Newcastle.",
+      "archived_at": "2026-09-25T15:15:55.307Z"
+    },
+    {
+      "id": "b2977f3b-82dd-4dde-9b0c-37c6f912c6d2",
+      "name": "Master of Engineering",
+      "reason": "CRICOS course 118233C is still listed as an active CRICOS registration under this exact generic name, but Newcastle's live handbook (both 2025 and 2026) only indexes discipline-specific 'Master of Professional Engineering (Discipline)' programs; this exact name has no marketing page (404) and no Wayback Machine snapshot. Treated as a legacy CRICOS registration superseded by the Professional Engineering family, with no discoverable current curriculum or admission content.",
+      "archived_at": "2026-09-25T15:15:55.462Z"
+    },
+    {
+      "id": "ebcc94c3-5927-4f62-bab0-45a6189e1526",
+      "name": "Master of Marketing",
+      "reason": "Program 40135 (Master of Marketing) was Active in the 2025 handbook alongside a newer 'Master of Marketing and Digital Strategy' (50060). By the 2026 handbook only the '...and Digital Strategy' program remains; 40135 is gone (404) and the marketing site has no page under the old name. Genuinely renamed/superseded between the 2025 and 2026 catalogue years.",
+      "archived_at": "2026-09-25T15:15:55.619Z"
+    },
+    {
+      "id": "0e0951a7-3d51-4842-9735-c5a1644a5927",
+      "name": "Graduate Certificate in Marketing",
+      "reason": "Program 40136 (Graduate Certificate in Marketing) was Active in the 2025 handbook alongside a newer 'Graduate Certificate in Marketing and Digital Strategy' (50061). By the 2026 handbook only the '...and Digital Strategy' program remains; 40136 is gone (404). Genuinely renamed/superseded between the 2025 and 2026 catalogue years, the same pattern as Master of Marketing.",
+      "archived_at": "2026-09-25T15:15:55.771Z"
+    }
+  ]
+}
