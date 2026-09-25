@@ -1128,6 +1128,18 @@
       "name": "Bachelor of Health Promotion",
       "reason": "No standalone Bachelor of Health Promotion page exists at notredame.edu.au. Direct slug attempts (/programs/school-of-health-sciences/undergraduate/bachelor-of-health-promotion and a Bachelor of Arts major variant) both 404, and the name is absent from the full ~250-URL sitemap. Health Promotion appears only as a named topic within the Bachelor of Health Sciences curriculum (Population Approaches to Health Promotion, HLTH2007) and as an accredited career/topic area, not a standalone award UNDA currently offers.",
       "archived_at": "2026-09-20T07:21:27.694Z"
+    },
+    {
+      "id": "00f9ed38-8303-4ea2-90cd-c8decc48b94a",
+      "name": "Graduate Certificate in Energy and Carbon Studies",
+      "reason": "Murdoch's own Handbook course-version data (handbook.murdoch.edu.au/courses/20/C1137) explicitly flags this course is_discontinued: true. No live marketing page exists under any of the 5 known murdoch.edu.au/course/<segment>/C1137 URL segments (checked 2026-09-25, all 404). CRICOS course code 094589K is still listed as registered with a current-looking fee ($22,280) as of 2026-09-25, consistent with a teach-out lag rather than continued active enrolment; see this rotation's Holmes Institute finding that CRICOS/TEQSA registration can outlive a course's real status.",
+      "archived_at": "2026-09-25T09:45:27.495Z"
+    },
+    {
+      "id": "a781229f-7238-4576-b298-2d18332daaa9",
+      "name": "Graduate Diploma in Energy and the Environment",
+      "reason": "Murdoch's own Handbook course-version data (handbook.murdoch.edu.au/courses/20/G1062) explicitly flags this course is_discontinued: true. No live marketing page exists under any of the 5 known murdoch.edu.au/course/<segment>/G1062 URL segments (checked 2026-09-25, all 404). CRICOS course code 034962B is still listed as registered with a current-looking fee ($44,560) as of 2026-09-25, consistent with a teach-out lag rather than continued active enrolment; see this rotation's Holmes Institute finding that CRICOS/TEQSA registration can outlive a course's real status.",
+      "archived_at": "2026-09-25T09:45:27.656Z"
     }
   ]
 }
