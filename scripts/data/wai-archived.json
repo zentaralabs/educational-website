@@ -1,0 +1,22 @@
+{
+  "entries": [
+    {
+      "id": "7144f060-08e9-4b35-b845-86a4287bcb4d",
+      "name": "Advanced Diploma of Travel and Tourism Management",
+      "reason": "Discontinued. Absent from angliss.edu.au's current sitemap.xml and from the live /courses/tourism/travel/ category page's own course listing (which now shows only the Diploma of Travel and Tourism Management, SIT50122); the guessed current-URL pattern https://www.angliss.edu.au/courses/tourism/travel/advanced-diploma-of-travel-and-tourism/ returns HTTP 404. Wayback Machine's CDX API shows its last real live snapshot was 2021-03-09, over five years before this sprint, with no course page found in any more recent crawl.",
+      "archived_at": "2026-09-25T04:10:12.447Z"
+    },
+    {
+      "id": "742aba21-ff60-4a80-a66f-b169231a2ac1",
+      "name": "Associate Degree in Event Management",
+      "reason": "Discontinued. Absent from angliss.edu.au's current sitemap.xml and from the live /courses/events/event-management/ category page's own course listing (which now shows only the Diploma of Event Management and the Bachelor of Event Management Diploma-to-Degree Pathway); the former live URL https://www.angliss.edu.au/courses/events/event-management/Associate-degree-event-management/ returns HTTP 404 today. Wayback Machine's CDX API shows its last real live snapshot was 2024-10-22, with no course page found in any more recent crawl.",
+      "archived_at": "2026-09-25T04:10:12.612Z"
+    },
+    {
+      "id": "12f83256-f13c-45fe-a27e-c360cd7cd92c",
+      "name": "Bachelor of Food Studies",
+      "reason": "Discontinued. The former live course page https://www.angliss.edu.au/courses/foods/food-studies/ now returns an HTTP 301 redirect straight to the generic /courses/foods/ category landing page (Angliss's own removed-page redirect pattern), and the course is absent from the current sitemap.xml and from the live Foods category page's own course listing. Wayback Machine's CDX API shows its last real live snapshot was 2022-10-25, over three years before this sprint, with no course page found in any more recent crawl.",
+      "archived_at": "2026-09-25T04:10:12.769Z"
+    }
+  ]
+}
