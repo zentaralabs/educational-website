@@ -1,0 +1,12 @@
+[
+  {
+    "id": "e4c5d2f1-cc5b-4863-a965-8758ef97cead",
+    "name": "Graduate Certificate in International Relations",
+    "reason": "Still CRICOS-registered (course code 107662F, 18 weeks, provider 00017B) but confirmed discontinued from live recruitment: Bond's own current 'Program structure and sequence plans for the Faculty of Society & Design' page (https://bond.edu.au/current-students/study-information/enrolment/program-structure-and-sequence/program-structure-and-2) lists intake codes for this program (and its Online variant) only through 2024 (code 243), with the 2025/2026/2027 columns blank, meaning no student has been able to commence since 2024; and it is absent from Bond's live Program Finder filtered to the International Relations, Politics, and Arts study area (18 programs currently listed, https://bond.edu.au/study/program-finder), which is Bond's authoritative current-catalogue front end. CRICOS registration persisting after teach-out is a known lag (matches the Melbourne Institute of Technology and Greenwich College sprints' precedent), not evidence the course is still recruiting."
+  },
+  {
+    "id": "0050f456-cd81-4538-a662-899822953c31",
+    "name": "Master of Science by Research (Health Sciences)",
+    "reason": "Still CRICOS-registered (course code 073729K, 104 weeks, provider 00017B) but absent from Bond's current live catalogue: not listed anywhere in Bond's Program Finder filtered to the Health, Biomedical, and Sport Sciences study area, and not one of the exactly 5 currently-offered research-degree programs on Bond's own exhaustive 'Research degree options' page (https://bond.edu.au/research/research-degrees/research-degree-options) -- Master of Philosophy, Master of Laws (by Research), Doctor of Philosophy, Doctor of Legal Science (Research), Professional Doctorate of Occupational Therapy. Health Sciences research candidates are now folded into the generic Master of Philosophy container rather than enrolling under a discipline-named research master's title. Confirms and strengthens the original 2026-09-12 sprint's finding (genuinely absent from the live catalogue, no explicit successor statement) with decisive current-catalogue evidence."
+  }
+]
