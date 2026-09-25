@@ -1,0 +1,22 @@
+{
+  "entries": [
+    {
+      "id": "c5275814-62bd-4c28-a78d-32ade9c1ba19",
+      "name": "Bachelor of Science",
+      "reason": "No standalone Bachelor of Science exists on avondale.edu.au today. Avondale's own Science and Mathematics subject hub (avondale.edu.au/study/science-and-mathematics/) lists only the Bachelor of Arts (with science majors) and the Bachelor of Science/Bachelor of Teaching combined degree, and the current /course/bachelor-of-science/ URL 301-redirects straight to the BSc/BTeaching page. The Wayback Machine CDX index shows a standalone course page (avondale.edu.au/courses/science/undergraduate/bachelor-of-science/) was live (HTTP 200) as recently as 2024-04-19, then absent from the July 2024 site rebuild's new course-sitemap.xml (34 URLs, none for a standalone BSc) and every subject hub listing since. Its former content (Biological Science, Chemistry, Food and Nutrition, Mathematics majors) is now folded entirely into the Bachelor of Arts as per Avondale's own site copy.",
+      "archived_at": "2026-09-25T06:49:48.520Z"
+    },
+    {
+      "id": "63c7e460-7ecf-4ed1-b203-81d8947fdad6",
+      "name": "Master of Leadership and Management",
+      "reason": "No standalone Master of Leadership and Management exists on avondale.edu.au today. The current Business subject page (avondale.edu.au/study/business/) and the postgraduate course-sitemap.xml (34 URLs, generated 2024-07-01) list only Graduate Certificate in Leadership and Management, Graduate Diploma of Leadership and Management and Master of Business Administration under this ladder, no Master of Leadership and Management. The Wayback Machine CDX index shows the old course page (avondale.edu.au/courses/postgraduate/course-work/master-of-leadership-and-management/, the same URL previously stored as this row's own source_url) was last live on 2020-08-11, over 5 years before this sprint, and has zero snapshots since. The current Master of Business Administration page's own admission criteria now names 'an Avondale Graduate Certificate or Graduate Diploma in Leadership and Management' as an alternate entry pathway, confirming that ladder (Grad Cert, Grad Dip, then MBA) is the real current successor structure.",
+      "archived_at": "2026-09-25T06:49:48.696Z"
+    },
+    {
+      "id": "abeb3cd4-1b94-45a4-a795-a330ee323b2a",
+      "name": "Master of Nursing (Coursework)",
+      "reason": "Avondale's live Master of Nursing page (avondale.edu.au/course/master-of-nursing/) states directly and repeatedly, in both its Key Information panel and its own Admission Criteria section: 'This course is in teach out and closed to new admissions.' Study Mode is listed as 'Not available for new students.' This is a real, currently CRICOS-registered course (course code 2094) winding down for existing enrolments only, not a live pathway for a prospective student researching where to apply, so it does not belong published as an open program on a prospective-student-facing site.",
+      "archived_at": "2026-09-25T06:49:48.856Z"
+    }
+  ]
+}
