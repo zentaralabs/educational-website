@@ -1,0 +1,58 @@
+{
+  "entries": [
+    {
+      "id": "7b350a70-fec6-41c7-a771-2063a807d029",
+      "name": "Bachelor of Arts and Entertainment Management",
+      "reason": "Superseded name, not a currently marketed course: TEQSA's national register lists the current live accreditation as \"Bachelor of Music Business (formerly Bachelor of Arts and Entertainment Management)\", renewal date 08/06/2029; aim.edu.au's own sitemap, course-search dropdown and 2026 course guide only ever list \"Bachelor of Music Business\" (built separately in this same sprint), with no live page anywhere under the old name.",
+      "archived_at": "2026-09-25T03:03:40.941Z"
+    },
+    {
+      "id": "4f9f77f5-70f7-4fa4-b070-a2592f62db51",
+      "name": "Bachelor of Entertainment Management",
+      "reason": "Distinct, separately-numbered TEQSA course from Bachelor of Music Business/Arts and Entertainment Management; TEQSA's national register shows \"Bachelor of Entertainment Management\" accreditation expired effective 31/12/2025, with no live aim.edu.au page, no UAC listing, and no entry in AIM's 2026 course guide or course-enquiry dropdown.",
+      "archived_at": "2026-09-25T03:03:41.119Z"
+    },
+    {
+      "id": "5b32b161-1539-47ca-9e99-bbba22d038c5",
+      "name": "Bachelor of Performance",
+      "reason": "Distinct, separately-numbered TEQSA course from Bachelor of Music (Performance) (built separately in this same sprint); TEQSA's national register shows \"Bachelor of Performance\" accreditation expired effective 07/08/2022, with no live aim.edu.au page, no UAC listing, and no entry in AIM's 2026 course guide or course-enquiry dropdown.",
+      "archived_at": "2026-09-25T03:03:41.273Z"
+    },
+    {
+      "id": "428d3e9b-9efc-4575-8eec-6776c1bf3a64",
+      "name": "Diploma of Arts and Entertainment Management",
+      "reason": "Superseded name, not a currently marketed course: TEQSA's national register lists the current live accreditation as \"Diploma of Music Business (formerly Diploma of Arts and Entertainment Management)\" (built separately in this same sprint under its current name); aim.edu.au's own sitemap and course-enquiry dropdown only ever list \"Diploma of Music Business\", with no live page anywhere under the old name.",
+      "archived_at": "2026-09-25T03:03:41.433Z"
+    },
+    {
+      "id": "db7f9308-21ff-4f2c-94c0-24b34720e969",
+      "name": "Graduate Certificate in Arts Management",
+      "reason": "TEQSA's national register lists \"Graduate Certificate in Arts Management\" (this exact name) with course status Inactive and provider notation \"Not renewed\"; no live aim.edu.au page, no CRICOS code, and no entry in AIM's 2026 course guide or course-enquiry dropdown.",
+      "archived_at": "2026-09-25T03:03:41.589Z"
+    },
+    {
+      "id": "19fc7db5-c248-48da-a65e-afca65e07457",
+      "name": "Graduate Diploma of Arts Management",
+      "reason": "TEQSA's national register lists \"Graduate Diploma of Arts Management\" (this exact name) with course status Inactive and provider notation \"Not renewed\"; no live aim.edu.au page, no CRICOS code, and no entry in AIM's 2026 course guide or course-enquiry dropdown.",
+      "archived_at": "2026-09-25T03:03:41.745Z"
+    },
+    {
+      "id": "7c06f189-1b86-42db-afe3-fcb1053e627a",
+      "name": "Master of Arts Management",
+      "reason": "TEQSA's national register lists \"Master of Arts Management\" (this exact name) with course status Inactive and provider notation \"Not renewed\"; no live aim.edu.au page, no CRICOS code, and no entry in AIM's 2026 course guide or course-enquiry dropdown.",
+      "archived_at": "2026-09-25T03:03:41.898Z"
+    },
+    {
+      "id": "0282f842-82c2-462a-8abc-9c43c2506134",
+      "name": "Master of Arts and Entertainment Management",
+      "reason": "Distinct TEQSA course from Master of Arts Management (also archived this sprint); TEQSA's national register shows \"Master of Arts and Entertainment Management\" accreditation expired effective 31/07/2026 (recently lapsed), with no live aim.edu.au page, no CRICOS code, and no entry in AIM's 2026 course guide or course-enquiry dropdown.",
+      "archived_at": "2026-09-25T03:03:42.050Z"
+    },
+    {
+      "id": "6a9497d9-9d6f-4c36-8aa2-d1168fe24eb4",
+      "name": "Foundation Program",
+      "reason": "No evidence this qualification has ever existed under AIM's provider registration: absent from TEQSA's full 44-entry national-register history for The Australian Institute of Music Limited (every course ever accredited to AIM, active or lapsed, under any name), absent from aim.edu.au's own site search, sitemap, 2026 course guide, course-enquiry dropdown, and UAC course listing, and no web search result ties a \"Foundation Program\" of any kind to AIM (aim.edu.au/life-at-aim/education-foundation/ is an unrelated philanthropic scholarship foundation, not an academic program).",
+      "archived_at": "2026-09-25T03:03:42.208Z"
+    }
+  ]
+}
