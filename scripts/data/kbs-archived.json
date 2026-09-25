@@ -1,0 +1,10 @@
+{
+  "entries": [
+    {
+      "id": "b7551bcc-a54e-436c-b64e-f76b8b2059b1",
+      "name": "Diploma of Commerce",
+      "reason": "Absent from kbs.edu.au's current course catalogue, sitemap.xml and /courses listing (returns a 301 redirect to /404 at the guessed /courses/diploma-of-commerce URL); Wayback Machine CDX shows its last real live kbs.edu.au page was in August 2015, over a decade ago, with only 404s/redirects since. TEQSA shows 'Accreditation expired, effective 27/06/2026', but that exact date is shared with several courses confirmed still live and current on kbs.edu.au today (Master of Business Administration, Master of Accounting, Master of Professional Accounting, Graduate Certificate in Accounting, Graduate Diploma/Certificate of Business Administration) -- it is KBS's self-accrediting-authority transition date, not evidence of discontinuation on its own. Still CRICOS-registered (056929K) but with zero live marketing anywhere; combined with the 10+ year absence from the university's own site, this is treated as a genuine discontinuation rather than an honest-null unmarketed-but-current award.",
+      "archived_at": "2026-09-25T03:50:24.603Z"
+    }
+  ]
+}
