@@ -1,0 +1,37 @@
+[
+  {
+    "id": "c239d7fe-83e0-4a2f-8aaa-f6882b953160",
+    "name": "Associate Degree in Hospitality Management",
+    "reason": "Real and currently accredited: TEQSA's national register shows ASSOCIATE DEGREE OF HOSPITALITY MANAGEMENT as accredited with a fresh, non-expiring renewal date of 25/07/2031 (a 2026 re-accreditation, distinct from an older, separate 'teach out' record under the same name from a prior accreditation period). But it is genuinely unmarketed: absent from Box Hill's live 167-course search catalogue, absent from the official 2026 International Course Guide (which lists Bachelor and Diploma tiers only, no Associate Degrees at all), and no reachable course page at any guessed URL. Bachelor of Hospitality Management's own live page makes no mention of an embedded 2-year exit award. Left published with null content fields rather than fabricated or archived, per the CQU/TAFE Queensland/AIM precedent for real-but-currently-unmarketed awards."
+  },
+  {
+    "id": "e6621b1b-5251-4029-a6ce-874b555b1a1f",
+    "name": "Associate Degree of Commerce (Applied)",
+    "reason": "Real and currently accredited: TEQSA's national register shows Associate Degree in Commerce (Applied) accredited with a fresh, non-expiring renewal date of 25/07/2031 (a 2026 re-accreditation, distinct from an older, separate 'teach out' record under the same name). Genuinely unmarketed: absent from Box Hill's live 167-course search catalogue and the official 2026 International Course Guide, no reachable course page at any guessed URL, and Bachelor of Commerce (Applied)'s own live page makes no mention of an embedded exit award. Left published with null content fields rather than fabricated or archived."
+  },
+  {
+    "id": "6351823a-1af2-43f5-aa33-635c46b89e36",
+    "name": "Associate Degree of Design",
+    "reason": "Real and currently accredited: TEQSA's national register shows Associate Degree of Design accredited with a non-expiring renewal date of 13/05/2029, the same renewal cycle as the live Bachelor of Design. Genuinely unmarketed: absent from Box Hill's live 167-course search catalogue and the official 2026 International Course Guide, no reachable course page at any guessed URL, and neither of the Bachelor of Design's two live majors (Fashion Design, Fashion Enterprise) mentions an embedded exit award. Left published with null content fields rather than fabricated or archived."
+  },
+  {
+    "id": "6d128c57-137a-4585-a21c-f1860e9784bd",
+    "name": "Associate Degree of Information Technology",
+    "reason": "Real and currently accredited: TEQSA's national register shows Associate Degree of Information Technology accredited with a non-expiring renewal date of 16/11/2028, the same renewal cycle as the live Bachelor of Information Technology. Genuinely unmarketed: absent from Box Hill's live 167-course search catalogue and the official 2026 International Course Guide, no reachable course page at any guessed URL, and the Bachelor of IT's own live page describes only a credit-recognition pathway FROM the Diploma of Information Technology INTO the Bachelor, with no mention of an Associate Degree exit award out of the Bachelor. Left published with null content fields rather than fabricated or archived."
+  },
+  {
+    "id": "826ce4f4-4aeb-4db5-82e2-4df6faa96f9c",
+    "name": "Bachelor of Biosecurity Science",
+    "reason": "Real and currently accredited: TEQSA's national register shows Bachelor of Biosecurity Science accredited with a non-expiring renewal date of 19/11/2028, alongside a companion Undergraduate Certificate of Biosecurity Science on the same renewal cycle, confirming this is a genuine, current course family. Genuinely unmarketed: absent from Box Hill's live 167-course search catalogue, absent from the official 2026 International Course Guide, and no reachable course page at any guessed URL on boxhill.edu.au. Left published with null content fields rather than fabricated or archived, per the CQU/TAFE Queensland/AIM precedent for real-but-currently-unmarketed awards."
+  },
+  {
+    "id": "2bc598d6-0083-401b-9f2a-ad8cd01c624e",
+    "name": "Diploma of Graphic Design",
+    "reason": "Real, currently-taught VET course with a live page (CA5GD-D, diploma-of-graphic-design-ca5gd-d), but explicitly flagged 'currently in transition' in Box Hill's own official 2026 International Course Guide, and its own live page shows IsInternational: false with no published EnglishLanguageProficiency, AdmissionsProfile or SpecialAdmissionRequirements content and zero listed intakes. Its CRICOS registration (119872H) differs from the stale one previously stored on this DB row (105822M), which appears in no current Box Hill channel at all. Left published with null content fields rather than fabricating international-specific admission/English requirements the institute has not itself published for this course's current, in-transition state."
+  },
+  {
+    "id": "8cf29538-0ae7-40ad-bcee-2d3b82b10edd",
+    "name": "Diploma of Hospitality Management",
+    "reason": "Real but not yet operational for international enrolment: Box Hill's own official 2026 International Course Guide lists 'Diploma of Hospitality Management, SIT50422, CRICOS TBC' with entry requirements marked 'TBC', meaning neither the CRICOS registration nor the entry requirements exist yet in a citable, Box-Hill-published form. The institute's own course-areas/hospitality/ listing (the current source of truth for what's actually live under this subject area) lists only the Bachelor of Hospitality Management and a domestic traineeship certificate, no Diploma. Left published with null content fields rather than sourcing admission/English requirements from generic SIT50422 training-package or other-provider pages, which would misrepresent Box Hill's own specific (not-yet-published) requirements."
+  }
+]

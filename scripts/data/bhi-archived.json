@@ -1,0 +1,34 @@
+{
+  "entries": [
+    {
+      "id": "db44777b-03a3-41d4-b417-b49cef75336b",
+      "name": "Bachelor of Computer Systems (Networking)",
+      "reason": "Discontinued. TEQSA's national register shows the renamed successor course, Bachelor of Computer Systems (formerly Bachelor of Computer Systems (Networking)), with accreditation expired effective 31/12/2024, alongside the matching Associate Degree in Computer Systems (formerly ...Networking)) and Diploma of Computer Systems, both also expired 31/12/2024, with no fresher re-accreditation record for any of the three anywhere on TEQSA. The stored source_url (aws-cid.boxhill.edu.au) is a non-production subdomain, not a live boxhill.edu.au course page, and no course by this name (or its renamed successor) appears anywhere in Box Hill Institute's own live, complete 167-course search catalogue or its official 2026 International Course Guide. Box Hill's current international IT higher-education offering is solely the Bachelor of Information Technology (CRICOS 107931A), built as a separate Bond-standard row this sprint.",
+      "archived_at": "2026-09-25T03:32:53.280Z"
+    },
+    {
+      "id": "132b3cbd-54a8-419e-9d54-d53b8eb27d6d",
+      "name": "Bachelor of Fashion",
+      "reason": "Discontinued and renamed. TEQSA's national register shows Bachelor of Fashion with accreditation expired effective 28/12/2023 (alongside the related Bachelor of Fashion Merchandising, Associate Degree in Fashion and Associate Degree in Fashion Merchandising, all expired the same date), with no fresher re-accreditation record anywhere. The real, current successor award is Bachelor of Design (TEQSA accredited, renewal date 13/05/2029), which Box Hill now markets as two live majors, Bachelor of Design (Fashion Design) and Bachelor of Design (Fashion Enterprise), both built as a single Bond-standard 'Bachelor of Design' row this sprint. The stored source_url for this row was literally the bare boxhill.edu.au homepage, itself a strong non-match tell, and no course named plain 'Bachelor of Fashion' appears anywhere in Box Hill's live 167-course search catalogue or its official 2026 International Course Guide.",
+      "archived_at": "2026-09-25T03:32:53.452Z"
+    },
+    {
+      "id": "8cfb4980-3efd-4572-aa83-b857505b4952",
+      "name": "Diploma of Aviation (Commercial Pilot Licence - Aeroplane)",
+      "reason": "Discontinued. Box Hill Institute was stripped of its authority to deliver the Commercial Pilot Licence diploma course from February 2020 (contemporaneous industry reporting: PPRuNe Forums 'Box Hill TAFE drops Aviation Diploma' and AOPA Australia's 'Box Hill Institute Aviation Shut Down'), and a class action was subsequently brought on behalf of students who enrolled in the diploma between December 2015 and March 2020 (bhiclassaction.com.au). No course matching this name, or any aviation/pilot training course, appears anywhere in Box Hill's live 167-course search catalogue or its official 2026 International Course Guide.",
+      "archived_at": "2026-09-25T03:32:53.608Z"
+    },
+    {
+      "id": "aa380e8e-19dc-4d84-abe6-2fab5ad3ad2b",
+      "name": "Diploma of Community Services",
+      "reason": "Real, live, currently-taught VET course (CS525-D, confirmed via the boxhill.edu.au/course-areas/community-services/ course listing), but domestic-only: no CRICOS registration anywhere in Box Hill's live 167-course catalogue, IsInternational not set, and no international content (no English/admission requirements block) on its own live page. The internationally-marketed award in this subject area is Bachelor of Community Services (CRICOS 082590E), built as a separate Bond-standard row this sprint, which itself notes Diploma of Community Services graduates get a direct credit-recognition pathway into it.",
+      "archived_at": "2026-09-25T03:32:53.766Z"
+    },
+    {
+      "id": "a90099c0-1559-436c-856b-270f57eea011",
+      "name": "Diploma of Laboratory Technology",
+      "reason": "No live trace anywhere on boxhill.edu.au: absent from Box Hill's complete, live 167-course search catalogue (search/?query= endpoint, allCourses payload), absent from the official 2026 International Course Guide, and no working URL at any guessed slug pattern. The only current laboratory-subject offering anywhere on the site is a single Certificate III in Laboratory Skills (VETIS/school-based only, ls322-vetis), not a genuine successor pathway. Third-party aggregator listings for this course (deltaimmigration.com.au, studyinaustralia.tv) are the only remaining trace and appear to be stale, unmaintained third-party marketing pages rather than evidence of a currently-live Box Hill Institute offering.",
+      "archived_at": "2026-09-25T03:32:53.923Z"
+    }
+  ]
+}
