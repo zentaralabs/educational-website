@@ -1,0 +1,22 @@
+{
+  "entries": [
+    {
+      "id": "4a8f3c79-006c-4089-8f59-2334483e267d",
+      "name": "Associate Degree in Management",
+      "reason": "TEQSA's National Register lists this AIB course under \"Courses previously accredited by TEQSA\" with accreditation expired effective 16/03/2020. It has no live aib.edu.au page (404), no Wayback Machine snapshot ever, and is absent from AIB's current course-navigation footer and course list, which only covers its postgraduate MBA/Master of Management/GCM/GDM/GCRM/DBA/PhD suite. Confirmed discontinued, not fabricated-but-real.",
+      "archived_at": "2026-09-25T08:25:30.431Z"
+    },
+    {
+      "id": "f2738f1c-3931-4767-b734-09cf866d3e5b",
+      "name": "Bachelor of Business Administration",
+      "reason": "TEQSA's National Register lists this AIB course under \"Courses previously accredited by TEQSA\" with accreditation expired effective 16/03/2020 (several BBA specialisation variants also expired 16/03/2019). It has no live aib.edu.au page (404), no Wayback Machine snapshot ever, and is absent from AIB's current course-navigation footer and course list, which only covers its postgraduate MBA/Master of Management/GCM/GDM/GCRM/DBA/PhD suite. AIB currently has no undergraduate offering of any kind. Confirmed discontinued, not fabricated-but-real.",
+      "archived_at": "2026-09-25T08:25:30.602Z"
+    },
+    {
+      "id": "ee8033b5-0a69-431e-a636-d6460ad30c1d",
+      "name": "Master of Fine Arts (Design for Performance)",
+      "reason": "Absent from NIDA's current course-sitemap.xml (which lists all 3 currently live postgraduate MFA course pages: Cultural Leadership, Directing, Dramatic Writing) and from the postgraduate landing page's own course links; the guessed current-URL-scheme page (/study/postgraduate/mfa-design-for-performance/) 404s. On-site search confirms it was a genuine past award (alumni tagged 'Master of Fine Arts (Design for Performance)' as recently as a 2019 cohort in APDG Awards news coverage), so this is a real, historical qualification no longer offered, not an invented one. NIDA's current design training at CRICOS level is undergraduate-only (BFA Design for Performance).",
+      "archived_at": "2026-09-25T08:25:30.756Z"
+    }
+  ]
+}

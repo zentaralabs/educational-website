@@ -1,0 +1,82 @@
+[
+  {
+    "id": "4a8f3c79-006c-4089-8f59-2334483e267d",
+    "name": "Associate Degree in Management"
+  },
+  {
+    "id": "f2738f1c-3931-4767-b734-09cf866d3e5b",
+    "name": "Bachelor of Business Administration"
+  },
+  {
+    "id": "91994b2b-b08c-453d-a515-f33a8ce8793f",
+    "name": "Doctor of Business Administration"
+  },
+  {
+    "id": "fa9d72d8-c7b9-4aed-aa0c-be31a72fa37c",
+    "name": "Doctor of Philosophy (Business)"
+  },
+  {
+    "id": "e44d1ee7-d933-4f55-86dc-a5622dae09f9",
+    "name": "Graduate Certificate in Management"
+  },
+  {
+    "id": "a333419c-503d-45db-93c2-c18e45d251f6",
+    "name": "Graduate Diploma in Management"
+  },
+  {
+    "id": "6961fce0-3fed-4c6c-8e79-35a9b24b6b63",
+    "name": "Master of Business Administration"
+  },
+  {
+    "id": "49a7bd8b-9d4f-441a-ba96-245797931979",
+    "name": "Master of Business Administration (Entrepreneurial Management)"
+  },
+  {
+    "id": "9d60da68-6458-4afa-a6bd-bea815fabb33",
+    "name": "Master of Business Administration (Finance)"
+  },
+  {
+    "id": "91ba8029-b3e5-44af-898a-d4ad6b8ff956",
+    "name": "Master of Business Administration (Human Resource Management)"
+  },
+  {
+    "id": "f7b815f5-2512-430b-b3ed-5cff02b8eb05",
+    "name": "Master of Business Administration (Logistics and Supply Chain Management)"
+  },
+  {
+    "id": "13409ad9-2501-4d99-98db-49e35c8d809c",
+    "name": "Master of Management"
+  },
+  {
+    "id": "475f400f-b980-4765-83cb-088c95f34f31",
+    "name": "Bachelor of Fine Arts (Acting)"
+  },
+  {
+    "id": "60a25cb9-5e7d-451e-9217-5eb07d1288b5",
+    "name": "Bachelor of Fine Arts (Costume)"
+  },
+  {
+    "id": "0a0c9eda-55b6-469d-9863-2eaf0893e6f2",
+    "name": "Bachelor of Fine Arts (Design for Performance)"
+  },
+  {
+    "id": "9f1b9773-2fcd-45ed-b777-e55ab3e77d14",
+    "name": "Bachelor of Fine Arts (Properties and Objects)"
+  },
+  {
+    "id": "81e337fa-92a8-4fcb-b2ad-5be4595ba4c1",
+    "name": "Bachelor of Fine Arts (Technical Production)"
+  },
+  {
+    "id": "ee8033b5-0a69-431e-a636-d6460ad30c1d",
+    "name": "Master of Fine Arts (Design for Performance)"
+  },
+  {
+    "id": "6ce98a0d-6012-4b0c-8b40-18c5697052ef",
+    "name": "Master of Fine Arts (Directing)"
+  },
+  {
+    "id": "66a28c50-8017-401a-a60d-2c239e138df1",
+    "name": "Master of Fine Arts (Writing for Performance)"
+  }
+]
