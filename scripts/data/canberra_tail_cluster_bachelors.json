@@ -1,0 +1,86 @@
+{
+  "4dd095ae-b6bc-4b66-ba6d-b36459a6feb1": {
+    "curriculum": "University of Canberra does not offer a single generic 'Bachelor of Creative Industries' course of its own. Students enrol in one of its specialisation coded variants, delivered with TAFE Queensland at the Brisbane South Bank campus: Acting and Performance (ARB401), Applied Fashion (ARB402), Contemporary Music Practice (ARB403), Drama and Performance (ARB404), and Visual Arts. Each variant shares a common Core Major in Professional and Creative Industries (24 credit points), including Professional Practice 1 and 2 (Work Integrated Learning), Creative Practice 1 and 2, and Creativity and Culture: Truth and Ideation, but differs in its Specialist Major. The Contemporary Music Practice variant (ARB403), for example, adds a 24 credit point Specialist Major in Contemporary Music Practice covering units such as Synthesis and Sampling, Songwriting and Production, Commercial Music Performance and Music for Media, plus 24 credit points of open electives drawn from TAFE Queensland or UC Bruce units. The degree is 72 credit points, standard 3 years full time.",
+    "admission_requirements": "Admission is based on an entrance rank, achieved through Year 12 ATAR, a diploma pathway, another Australian qualification, work experience or an overseas qualification, plus an audition or portfolio outcome for most specialisations. For the Contemporary Music Practice variant (ARB403), applicants who meet the minimum entrance rank are required to complete an audition as part of the admission process, at a date and time set out in the offer letter. Alternative entry pathways are also available.",
+    "english_requirements": "An IELTS Academic score of 6.0 overall, with no band score below 6.0, or equivalent. Confirmed on the Contemporary Music Practice specialisation page (ARB403) and consistent with the figures already stored against this row."
+  },
+  "6988099f-0d81-41a9-be84-b6a02f18c132": {
+    "curriculum": "University of Canberra does not offer a single generic 'Bachelor of the Built Environment' course of its own. Students enrol in one of its specialisation coded variants: Architecture (ABB001) or Interior Architecture (ABB002). Each shares a common Core Major in the Built Environment (24 credit points), including BE: Analysis Studio, Heritage Conservation, BE: History and Culture, and Work Integrated Learning Professional Practice units, but differs in its Specialist Major. The Architecture variant (ABB001) adds a 36 credit point Specialist Major in Architecture covering units such as Built Environment Technology 1 to 3, BE: Design Studio, BE: Visual Communication, Architecture: History and Theory 2 and 3, and Architecture Studio 1 and 4, plus 12 credit points of open electives from anywhere in the university. The degree is 72 credit points, standard 3 years full time.",
+    "admission_requirements": "Admission to this course is based on an entrance rank, achieved through Year 12 ATAR, another Australian qualification, work experience or an overseas qualification. No assumed knowledge is required and a number of alternative entry pathways and admissions schemes are available. Sourced from the Architecture specialisation page (ABB001).",
+    "english_requirements": "An IELTS Academic score of 6.0 overall, with no band score below 6.0, or equivalent. Confirmed on the Architecture specialisation page (ABB001) and consistent with the figures already stored against this row."
+  },
+  "_archive_candidates": [
+    {
+      "id": "098eb668-204a-4900-b481-b879016916c8",
+      "name": "Bachelor of Educational Studies",
+      "reason": "No course of this exact name exists anywhere on canberra.edu.au, UAC, or IDP under any code. A search initially surfaced course code 328JA under this title, but direct verification shows 328JA has always been a different, unrelated award: 'Bachelor of Secondary Education/Bachelor of Science', confirmed identical across 11 real historical snapshots from 2018 through 2023 (versions 1-3). UC's current Education faculty offers Bachelor of Early Childhood and Primary Education, Bachelor of Primary Education, and Bachelor of Secondary Education variants, none named 'Educational Studies'.",
+      "evidence_url_or_note": "https://www.canberra.edu.au/course/328JA/3/2023 (title: Bachelor of Secondary Education/Bachelor of Science); https://www.canberra.edu.au/future-students/study-at-uc/study-areas/education (current Education offerings, no 'Educational Studies' title)"
+    },
+    {
+      "id": "398e26ec-682c-4f24-9c81-64866c58ad4c",
+      "name": "Bachelor of Engineering in Network and Software Engineering (Honours)",
+      "reason": "Course code 344JA is real (confirmed live 2018-2020 under this exact title) but has no valid page for any year 2021-2027 across versions 1-8, tested exhaustively. Faculty of Science and Technology has since consolidated engineering study into the general Bachelor of Engineering (Honours) (ETB001, confirmed live 2027) which now carries a Major in Network Engineering (MJ0158) as one major among several, rather than a standalone Network and Software Engineering honours award.",
+      "evidence_url_or_note": "https://www.canberra.edu.au/course/344JA/1/2019 (last confirmed live snapshot); https://www.canberra.edu.au/course/ETB001/3/2027 (current successor, Bachelor of Engineering (Honours)); https://www.canberra.edu.au/major/MJ0158/1 (Major in Network Engineering)"
+    },
+    {
+      "id": "5af2cbde-a138-4ede-90a2-ff86e8c1fc10",
+      "name": "Bachelor of Event and Tourism Management",
+      "reason": "Course code MGB401 is real and its most recent live snapshots (2024 and 2025) both state verbatim: 'This course is not open for new admissions.' No 2026 or 2027 page exists despite testing all reasonable version numbers. Canberra Times reporting on University of Canberra's 2024-2025 faculty restructuring explicitly lists 'Bachelor of Event and Tourism Management - discontinued (27 students enrolled in 2024)' under the Business, Government and Law faculty changes.",
+      "evidence_url_or_note": "https://www.canberra.edu.au/course/MGB401/2/2025 (states 'This course is not open for new admissions'); https://www.canberratimes.com.au/story/8860201/major-course-and-faculty-changes-at-university-of-canberra/ (news report naming this course as discontinued)"
+    },
+    {
+      "id": "b44eb9f0-6de0-4823-b27a-dd06334eea9a",
+      "name": "Bachelor of Games and Interactive Design",
+      "reason": "Course code 307JA is real, confirmed live 2018-2020 under this exact title, but has no valid page for any year 2021-2027 across versions 1-8, tested exhaustively. Consolidated into the current 'Bachelor of Design' (ARB007, confirmed live 2026) with a Game Development major (Bachelor of Design (Game Development), ARB008, confirmed live 2026) replacing the standalone Games and Interactive Design award.",
+      "evidence_url_or_note": "https://www.canberra.edu.au/course/307JA/1/2020 (last confirmed live snapshot); https://www.canberra.edu.au/course/ARB008/1/2026 (current successor, Bachelor of Design (Game Development))"
+    },
+    {
+      "id": "6b8addf0-c028-48c4-a5aa-8f6a6b685e91",
+      "name": "Bachelor of Health Studies",
+      "reason": "Course code 316JA is real, confirmed live 2018-2019 under this exact title, but has no valid page for any year 2020-2027 across versions 1-8, tested exhaustively. UC's current Faculty of Health offers 'Bachelor of Health Science' (HLB103, confirmed live 2027) as the umbrella award covering this subject area now. Canberra Times reporting on the 2024-2025 restructuring separately notes 8 low-enrolment Faculty of Health programs were cut in the same round.",
+      "evidence_url_or_note": "https://www.canberra.edu.au/course/316JA/1/2019 (last confirmed live snapshot); https://www.canberra.edu.au/course/HLB103/2/2027 (current successor, Bachelor of Health Science); https://www.canberratimes.com.au/story/8860201/major-course-and-faculty-changes-at-university-of-canberra/"
+    },
+    {
+      "id": "820bc825-80bd-496c-a3ae-412716f3dd9e",
+      "name": "Bachelor of Landscape Architecture (Honours)",
+      "reason": "Course code ABB201 (and older alternate code 355JA) confirmed real, live through 2024 and 2025 only. The 2025 page states verbatim: 'This course is not open for new admissions.' Canberra Times reporting on the 2024-2025 Faculty of Arts and Design restructuring explicitly names 'Bachelor of Landscape Architecture (Honours) - suspended for new enrolments', noting only 30-40 students enrolled per year over the preceding five years.",
+      "evidence_url_or_note": "https://www.canberra.edu.au/course/ABB201/1/2025 (states 'This course is not open for new admissions'); https://www.canberratimes.com.au/story/8860201/major-course-and-faculty-changes-at-university-of-canberra/"
+    },
+    {
+      "id": "3b3078bb-920c-40a7-b105-b320147799a4",
+      "name": "Bachelor of Landscape Design",
+      "reason": "Course code 290JA returns no valid live page for any year from 2018 through 2027 across versions 1-8, tested exhaustively, and no successor code could be located via UC's own site search or third-party aggregators. This sits alongside the confirmed, separately documented suspension of the sibling Bachelor of Landscape Architecture (Honours) as part of the 2024-2025 Faculty of Arts and Design (Built Environment) restructuring, though no single news source names 'Landscape Design' specifically.",
+      "evidence_url_or_note": "No live canberra.edu.au page found for 290JA at any tested version/year 2018-2027; https://www.canberra.edu.au/future-students/study-at-uc/study-areas/built-environment (current Built Environment offerings list Architecture, Interior Architecture, Building and Construction Management and Landscape Architecture, but no separate Landscape Design course)"
+    },
+    {
+      "id": "b73aa528-ced5-4057-b32a-0dc895de0259",
+      "name": "Bachelor of Social and Economic Policy (Economic Policy)",
+      "reason": "Confirmed to be a genuine standalone award (course code SCB301), not merely a specialisation tag, but it is being phased out. Both the 2024 and 2025 live snapshots of SCB301 state verbatim: 'This course is not open for new admissions.' Its sibling SCB302 (Sociology) shows the identical pattern. UC has introduced a new 'Bachelor of Government' (SCB401, confirmed live 2026) with majors in Applied Economics, Politics and International Relations, and Public Policy and Administration, which now covers this subject area.",
+      "evidence_url_or_note": "https://www.canberra.edu.au/course/SCB301/1/2025 (states 'This course is not open for new admissions'); https://www.canberra.edu.au/course/SCB401/1/2026 (successor, Bachelor of Government)"
+    },
+    {
+      "id": "16406073-bf9f-4e64-b1c7-ef9d95e09740",
+      "name": "Graduate Certificate in Health Research",
+      "reason": "Course code 133JA confirmed real, live through 2024 and 2025 only; both years' pages state verbatim: 'This course is not open for new admissions.' Canberra Times reporting on the 2024-2025 restructuring notes 'Six graduate certificate programs - closed' in the Faculty of Health round of cuts.",
+      "evidence_url_or_note": "https://www.canberra.edu.au/course/133JA/2/2025 (states 'This course is not open for new admissions'); https://www.canberratimes.com.au/story/8860201/major-course-and-faculty-changes-at-university-of-canberra/"
+    },
+    {
+      "id": "e6909c5c-0d30-491e-a1a6-8cfa59418b0e",
+      "name": "Graduate Certificate in Pharmacotherapy",
+      "reason": "Course code 302JA confirmed real, but its last live snapshot is 2022, and that 2022 page already states verbatim: 'This course is not open for new admissions.' No valid page exists for 2023-2027 across versions 1-3. This bridging course fed directly into the Master of Pharmacy; its disappearance predates the 2024-2025 restructuring round and appears to be an earlier, separate discontinuation.",
+      "evidence_url_or_note": "https://www.canberra.edu.au/course/302JA/1/2022 (last confirmed live snapshot, states 'This course is not open for new admissions')"
+    },
+    {
+      "id": "b5bab479-d829-4933-a1f4-a6e48812cc9f",
+      "name": "Graduate Diploma in International Development",
+      "reason": "Course code 337JA confirmed real, live through 2024 only, and that page states verbatim: 'This course is not open for new admissions.' Canberra Times reporting on the 2024-2025 Faculty of Arts and Design restructuring explicitly names 'Graduate Diploma of International Development - suspended for new enrolments'. The related Master of International Development (193JA) remains live and active (confirmed 2026) as the surviving award in this subject area.",
+      "evidence_url_or_note": "https://www.canberra.edu.au/course/337JA/1/2024 (states 'This course is not open for new admissions'); https://www.canberratimes.com.au/story/8860201/major-course-and-faculty-changes-at-university-of-canberra/; https://www.canberra.edu.au/course/193JA/3/2026 (surviving related award, Master of International Development)"
+    },
+    {
+      "id": "e3c7111b-5959-46d3-8026-d9ee692c2538",
+      "name": "Master of Diagnostic Pathology",
+      "reason": "Course code 315JA confirmed real via UC's own site, live only in 2018 and 2019. No valid page exists for 2020-2027 across versions 1-5, tested exhaustively. Third-party course aggregators (mastersportal, findcourse) still list the program with future intake dates, but these are stale secondary listings, not UC's own site, and could not be corroborated against any live canberra.edu.au page or current Faculty of Health course listing.",
+      "evidence_url_or_note": "https://www.canberra.edu.au/course/315JA/1/2019 (last confirmed live snapshot on UC's own site); no live canberra.edu.au page found for 315JA at any tested version/year 2020-2027"
+    }
+  ]
+}

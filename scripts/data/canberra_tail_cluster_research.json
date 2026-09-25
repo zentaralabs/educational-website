@@ -1,0 +1,52 @@
+{
+  "_archive_candidates": [
+    {
+      "id": "b58b39d7-3ab6-4d3f-a6ae-56df2df034d0",
+      "name": "Doctor of Philosophy 254HC",
+      "reason": "254HC is not present anywhere in UC's current 382-URL course.xml sitemap (re-verified 2026-09-25). Its versioned course URL only resolves as far as https://www.canberra.edu.au/course/254HC/2/2020 (a 302 redirect chain from /course/254HC/2 lands on year 2020; no 2021 through 2027 version exists at any version number 1 through 5, all return the site's soft-404 Error page). UC's current generic PhD offering lives at a different, live code: https://www.canberra.edu.au/course/MXP001/1/2026 (Doctor of Philosophy, 96 credit points, live for 2026/2027/2028 intakes). HC/LC most likely denoted a high-cost vs low-cost PhD fee band (a 2019-era search snippet described '254LC low-cost PhD' and '254HC high-cost PhD' fee tiers), but that fee-tier course structure appears to have been retired and folded into the single MXP001 code.",
+      "evidence_url_or_note": "https://www.canberra.edu.au/course/254HC/2/2020 (last live snapshot, year 2020); https://www.canberra.edu.au/course/MXP001/1/2026 (current live replacement); course.xml sitemap has zero PhD-code entries at all: https://www.canberra.edu.au/services/wcm/site-map/course.xml"
+    },
+    {
+      "id": "9b67b5b9-a6fa-4ebd-bca1-e16f15d13208",
+      "name": "Doctor of Philosophy 254LC",
+      "reason": "Same finding as 254HC. 254LC is absent from the current course.xml sitemap. Its versioned URL only resolves as far as https://www.canberra.edu.au/course/254LC/2/2020 (302 redirect from /course/254LC/2), with no 2021-2027 version at any version number 1 through 5 (all soft-404). UC's current generic PhD is the live MXP001 code.",
+      "evidence_url_or_note": "https://www.canberra.edu.au/course/254LC/2/2020 (last live snapshot, year 2020); https://www.canberra.edu.au/course/MXP001/1/2026 (current live replacement); course.xml sitemap has zero PhD-code entries at all: https://www.canberra.edu.au/services/wcm/site-map/course.xml"
+    },
+    {
+      "id": "80c1e02c-18c5-4618-8771-07abf0c10ea7",
+      "name": "Master of Sport and Exercise Science (Research)",
+      "reason": "No live canberra.edu.au page, no versioned /course/CODE/version/year URL, and no course code for this exact title could be found via extensive WebSearch, the current course.xml sitemap, or Wayback Machine CDX search of canberra.edu.au. The only trace found is a fragment from UC's pre-2013 legacy CMS structure (courses-units/m-research/sport/897aa), which predates the current versioned course-page system entirely and cannot be confirmed to be the same award. UC's current generic research-masters offering is the new Master of Research (MXM001, confirmed live at https://www.canberra.edu.au/course/MXM001/1/2026, explicitly marketed as a new, discipline-general research masters), consistent with UC folding discipline-named research masters into one generic container the same way it folded its PhD variants into MXP001.",
+      "evidence_url_or_note": "No live or archived current-system canberra.edu.au page found; legacy-CMS fragment only: http://www.canberra.edu.au/courses-units/m-research/sport/897aa (pre-2013, unconfirmed match); current generic successor: https://www.canberra.edu.au/course/MXM001/1/2026"
+    },
+    {
+      "id": "1d19fc30-bfa3-4b96-b7fd-36bc1e3b217c",
+      "name": "Master of Sport Management (Research)",
+      "reason": "Same finding as Master of Sport and Exercise Science (Research). No live canberra.edu.au page, no versioned course URL, and no course code found via WebSearch, the current course.xml sitemap, or Wayback CDX search. Only a pre-2013 legacy-CMS fragment (courses-units/m-research/sport/896aa) turned up, which cannot be confirmed as the same award and predates UC's current course-page system. UC's current generic research-masters offering is the new Master of Research (MXM001).",
+      "evidence_url_or_note": "No live or archived current-system canberra.edu.au page found; legacy-CMS fragment only: http://www.canberra.edu.au/courses-units/m-research/sport/896aa (pre-2013, unconfirmed match); current generic successor: https://www.canberra.edu.au/course/MXM001/1/2026"
+    },
+    {
+      "id": "c247c2c2-1a2a-40b0-af80-c6e7bd87d079",
+      "name": "Master of Applied Arts and Humanities (Research)",
+      "reason": "Real course code 303JA confirmed live only through version 2, 2025 (https://www.canberra.edu.au/course/303JA/2/2025), whose page explicitly states 'This course is not open for new admissions.' No 2026 or later version exists, and 303JA is absent from the current course.xml sitemap. UC's own live Master of Research page (MXM001, https://www.canberra.edu.au/course/MXM001/1/2026) explicitly markets itself as UC's 'new' discipline-general research masters, delivered over 18 months full time with an integrated coursework-plus-thesis structure, replacing the previous set of discipline-named research masters (Applied Arts and Humanities, Applied Science, Health, and the Professional Doctorate in Public Administration) the same way UC's PhD variants consolidated into the single MXP001 code. Real, current content exists for this award (sourced and would have been Bond-standard), but since the award itself cannot currently be applied to and has a confirmed live generic successor, it is archived rather than published with content nobody can enrol into.",
+      "evidence_url_or_note": "https://www.canberra.edu.au/course/303JA/2/2025 (states 'This course is not open for new admissions'); https://www.canberra.edu.au/course/MXM001/1/2026 (current live generic successor, Master of Research)"
+    },
+    {
+      "id": "029b405d-1b80-498f-a0bc-8b3c195c2371",
+      "name": "Master of Applied Science (Research)",
+      "reason": "Real course code 910AA confirmed live only through version 2, 2025 (https://www.canberra.edu.au/course/910AA/2/2025), whose page explicitly states 'This course is not open for new admissions.' No 2026 or later version exists, and 910AA is absent from the current course.xml sitemap. As with the Master of Applied Arts and Humanities (Research), UC's current live Master of Research (MXM001) is the confirmed generic successor research masters. Archived rather than published with content nobody can enrol into.",
+      "evidence_url_or_note": "https://www.canberra.edu.au/course/910AA/2/2025 (states 'This course is not open for new admissions'); https://www.canberra.edu.au/course/MXM001/1/2026 (current live generic successor, Master of Research)"
+    },
+    {
+      "id": "dddd7a4b-e8d3-4f95-b81f-ea41ffaaa154",
+      "name": "Master of Health (Research)",
+      "reason": "Real course code 135JA confirmed live only through version 3, 2025 (https://www.canberra.edu.au/course/135JA/3/2025), whose page explicitly states 'This course is not open for new admissions.' No 2026 or later version exists, and 135JA is absent from the current course.xml sitemap. As with the other named research masters in this cluster, UC's current live Master of Research (MXM001) is the confirmed generic successor. Archived rather than published with content nobody can enrol into.",
+      "evidence_url_or_note": "https://www.canberra.edu.au/course/135JA/3/2025 (states 'This course is not open for new admissions'); https://www.canberra.edu.au/course/MXM001/1/2026 (current live generic successor, Master of Research)"
+    },
+    {
+      "id": "4eb366f5-15db-4f60-81da-cafdab943376",
+      "name": "Professional Doctorate in Public Administration (Research)",
+      "reason": "Real course code 385JA confirmed live only through version 1, 2024 (https://www.canberra.edu.au/course/385JA/1/2024), whose page explicitly states 'This course is not open for new admissions.' No 2025 or later version exists, and 385JA is absent from the current course.xml sitemap. UC's current live professional/research doctoral offerings are the generic Doctor of Philosophy (MXP001) and Master of Research (MXM001); no live named Professional Doctorate remains. Archived rather than published with content nobody can enrol into.",
+      "evidence_url_or_note": "https://www.canberra.edu.au/course/385JA/1/2024 (states 'This course is not open for new admissions'); https://www.canberra.edu.au/course/MXP001/1/2026 and https://www.canberra.edu.au/course/MXM001/1/2026 (current live generic successors)"
+    }
+  ]
+}
