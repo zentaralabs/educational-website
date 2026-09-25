@@ -1,0 +1,52 @@
+{
+  "_archive_candidates": [
+    {
+      "id": "8984ae6c-96b5-41ba-b830-04f40b96c681",
+      "name": "Bachelor of Accounting",
+      "reason": "Real UC course code MGB001 found and verified live. The page explicitly states 'Periods course is open for new admissions: This course is not open for new admissions.' Only one version (v1) exists, and its default/most-recent year is 2025 (page banner: 'Please note these are the 2025 details for this course'). No 2026, 2027, or 2028 version exists for MGB001 in UC's current course sitemap (services/wcm/site-map/course.xml) or via direct year/version probing (checked v1-v3, years 2023-2028). UC's current live undergraduate business catalogue (MGB1xx series) has majors in HRM (MGB103), International Business (MGB104), Management (MGB105), Marketing (MGB106), Sport Management (MGB108) and general Business (MGB109), but no standalone Accounting bachelor's degree or Accounting major bachelor code currently live; accounting study now lives inside the Bachelor of Business as the Specialist Major in Accounting (SM0016, https://www.canberra.edu.au/major/SM0016/1), and separately as the standalone Master of Professional Accounting (297JA, live for 2026/2027). Do not reuse SM0016 major content as if it were this distinct discontinued degree.",
+      "evidence_url_or_note": "https://www.canberra.edu.au/course/MGB001/1/2025 (title: 'Bachelor of Accounting (MGB001) - University of Canberra', admissions-closed banner present); cross-checked against https://www.canberra.edu.au/services/wcm/site-map/course.xml (no MGB001 entry, no accounting-named MGB1xx code)"
+    },
+    {
+      "id": "72740d43-57d8-4c76-81ae-430b380f9915",
+      "name": "Graduate Certificate in Accounting",
+      "reason": "Real UC course code MGC001 found and verified live. Page explicitly states 'This course is not open for new admissions.' Two versions exist (v1 -> 2021, v2 -> 2024); no version redirects to 2026/2027/2028 and MGC001 is absent from the current course sitemap. 'About this course' prose (real, sourced) describes it as being for students with an overseas accounting qualification needing 4 units (12cp), explicitly not meeting professional-body accreditation as a standalone award, with a described pathway 'to progress to UC's G[raduate Diploma in Accounting]' (text was cut off in extraction but the pattern matches the Grad Dip page's parallel pathway sentence to the Master's). This is one exit-award tier in a discontinued Accounting-pathway ladder (Grad Cert -> Grad Dip -> Master of Professional Accounting), and the ladder's lower two rungs (Grad Cert, Grad Dip) have been retired while the top rung, Master of Professional Accounting (297JA), remains live for 2026/2027.",
+      "evidence_url_or_note": "https://www.canberra.edu.au/course/MGC001/2/2024 (title: 'Graduate Certificate in Accounting (MGC001) - University of Canberra', admissions-closed banner present, 'Please note these are the 2024 details for this course')"
+    },
+    {
+      "id": "cf67aecf-6b05-4503-aabb-6557cb0c0053",
+      "name": "Graduate Diploma in Accounting",
+      "reason": "Real UC course code MGG001 found and verified live. Page explicitly states 'This course is not open for new admissions.' Two versions exist (v1 -> 2021, v2 -> 2024); no version redirects to 2026/2027/2028 and MGG001 is absent from the current course sitemap. Real 'About this course' prose confirms it is designed for students with an overseas accounting qualification needing 8 units (24cp), explicitly does not meet CPA Australia / CAANZ accreditation as a standalone award, and is described as a pathway to progress toward UC's Master of Professional Accounting (297JA), which remains a live, current course for 2026/2027.",
+      "evidence_url_or_note": "https://www.canberra.edu.au/course/MGG001/2/2024 (title: 'Graduate Diploma in Accounting (MGG001) - University of Canberra', admissions-closed banner present, 'Please note these are the 2024 details for this course')"
+    },
+    {
+      "id": "3d889458-672b-45e9-b6c3-872430c943b5",
+      "name": "Graduate Diploma in Business",
+      "reason": "Real UC course code MGG101 found and verified live. Page explicitly states 'This course is not open for new admissions.' Only one version (v1) exists, defaulting to 2024 ('Please note these are the 2024 details for this course'); no 2026/2027/2028 version exists and MGG101 is absent from the current course sitemap. Real 'About this course' prose was read in full: it is a standalone generalist business graduate diploma (not described anywhere on the page as an exit award of the MBA or another Master's), covering accounting/finance, marketing, management, HR, economics and international business units. It appears to have simply been discontinued as a standalone award, with UC's current postgraduate generalist-business offering being the MBA family (723AA, MGM102 MBA Plus, MGM104 MBA Online), none of which is a like-for-like Graduate Diploma equivalent.",
+      "evidence_url_or_note": "https://www.canberra.edu.au/course/MGG101/1/2024 (title: 'Graduate Diploma in Business (MGG101) - University of Canberra', admissions-closed banner present)"
+    },
+    {
+      "id": "bb9e6d55-8d0c-4a13-95fd-3ece27fe3df0",
+      "name": "Bachelor of Marketing Management",
+      "reason": "Real standalone UC course code 187JA found and verified live (distinct from the double-degree code 235JA 'Bachelor of Marketing Management/Bachelor of Communication in Advertising', which is a different award and was not used). 187JA's page explicitly states 'This course is not open for new admissions,' and its most recent version (v2) defaults to 2018 ('Please note these are the 2018 details for this course') -- no version has existed for 2019 onward. UC's current live undergraduate marketing degree is the Bachelor of Business (Marketing), course code MGB106, live for 2026 (https://www.canberra.edu.au/course/MGB106/1/2026), which is a genuinely different course structure/title (a Bachelor of Business with a marketing major, not a standalone Bachelor of Marketing Management), so its content was not substituted in as if it were the same award.",
+      "evidence_url_or_note": "https://www.canberra.edu.au/course/187JA/2/2018 (title: 'Bachelor of Marketing Management (187JA) - University of Canberra', admissions-closed banner present); successor major-based degree at https://www.canberra.edu.au/course/MGB106/1/2026"
+    },
+    {
+      "id": "685f97ed-e966-4c78-b494-458697c4fa35",
+      "name": "Master of Human Resource Management",
+      "reason": "Real UC course code MGM201 found and verified live. Page explicitly states 'This course is not open for new admissions.' Checked versions v1-v3 across years 2023-2028; the only real content exists at v1, defaulting to 2025 ('Please note these are the 2025 details for this course'), with no 2026+ version and no entry in the current course sitemap. UC's current live postgraduate offering folds HR management into the Master of Business Administration (Plus) (MGM102, live 2026/2027), which per UC's own course copy 'offers the opportunity to specialise in human resource management, marketing or international business by taking four additional units' -- i.e. HRM is now a specialisation stream inside the MBA (Plus), not a standalone Master's degree. Did not substitute MBA (Plus) generic content in place of this discontinued row.",
+      "evidence_url_or_note": "https://www.canberra.edu.au/course/MGM201/1/2025 (title: 'Master of Human Resource Management (MGM201) - University of Canberra', admissions-closed banner present); successor specialisation described on https://www.canberra.edu.au/course/MGM102/3/2026 (MBA Plus)"
+    },
+    {
+      "id": "73948f49-7438-47e0-aef5-fc9464f34054",
+      "name": "Master of International Business",
+      "reason": "Real UC course code MGM401 found and verified live. Page explicitly states 'This course is not open for new admissions.' Checked versions v1-v3 across years 2023-2028; real content exists at v1 (defaulting to 2022) and v2 (defaulting to 2025, most recent, 'Please note these are the 2025 details for this course'); no 2026+ version exists and MGM401 is absent from the current course sitemap. As with the Master of Human Resource Management, UC's current live postgraduate offering folds international business into the Master of Business Administration (Plus) (MGM102, live 2026/2027) as a specialisation stream via four additional units, rather than as a standalone Master's degree.",
+      "evidence_url_or_note": "https://www.canberra.edu.au/course/MGM401/2/2025 (title: 'Master of International Business (MGM401) - University of Canberra', admissions-closed banner present); successor specialisation described on https://www.canberra.edu.au/course/MGM102/3/2026 (MBA Plus)"
+    },
+    {
+      "id": "841a7da1-01d2-412d-975d-21cdc169cc77",
+      "name": "Master of Marketing Management",
+      "reason": "Real UC course code MGM301 found and verified live. Page explicitly states 'This course is not open for new admissions.' Only one version (v1) exists, defaulting to 2025 ('Please note these are the 2025 details for this course'); no 2026+ version exists and MGM301 is absent from the current course sitemap. As with the other two discontinued Masters in this cluster, UC's current live postgraduate offering folds marketing management into the Master of Business Administration (Plus) (MGM102, live 2026/2027) as a specialisation stream via four additional units, rather than as a standalone Master's degree.",
+      "evidence_url_or_note": "https://www.canberra.edu.au/course/MGM301/1/2025 (title: 'Master of Marketing Management (MGM301) - University of Canberra', admissions-closed banner present); successor specialisation described on https://www.canberra.edu.au/course/MGM102/3/2026 (MBA Plus)"
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "note": "University of Canberra tail-closure archive log, 2026-09-25 session. Reverse with: update programs set status='published' where id = '<id>'.",
+  "entries": [
+    {
+      "id": "098eb668-204a-4900-b481-b879016916c8",
+      "name": "Bachelor of Educational Studies",
+      "reason": "No course of this exact name exists anywhere on canberra.edu.au, UAC, or IDP under any code. A search initially surfaced course code 328JA under this title, but direct verification shows 328JA has always been a different, unrelated award: 'Bachelor of Secondary Education/Bachelor of Science', confirmed identical across 11 real historical snapshots from 2018 through 2023 (versions 1-3). UC's current Education faculty offers Bachelor of Early Childhood and Primary Education, Bachelor of Primary Education, and Bachelor of Secondary Education variants, none named 'Educational Studies'.",
+      "archived_at": "2026-09-25T11:44:59.421Z"
+    },
+    {
+      "id": "398e26ec-682c-4f24-9c81-64866c58ad4c",
+      "name": "Bachelor of Engineering in Network and Software Engineering (Honours)",
+      "reason": "Course code 344JA is real (confirmed live 2018-2020 under this exact title) but has no valid page for any year 2021-2027 across versions 1-8, tested exhaustively. Faculty of Science and Technology has since consolidated engineering study into the general Bachelor of Engineering (Honours) (ETB001, confirmed live 2027) which now carries a Major in Network Engineering (MJ0158) as one major among several, rather than a standalone Network and Software Engineering honours award.",
+      "archived_at": "2026-09-25T11:44:59.585Z"
+    },
+    {
+      "id": "5af2cbde-a138-4ede-90a2-ff86e8c1fc10",
+      "name": "Bachelor of Event and Tourism Management",
+      "reason": "Course code MGB401 is real and its most recent live snapshots (2024 and 2025) both state verbatim: 'This course is not open for new admissions.' No 2026 or 2027 page exists despite testing all reasonable version numbers. Canberra Times reporting on University of Canberra's 2024-2025 faculty restructuring explicitly lists 'Bachelor of Event and Tourism Management - discontinued (27 students enrolled in 2024)' under the Business, Government and Law faculty changes.",
+      "archived_at": "2026-09-25T11:44:59.744Z"
+    },
+    {
+      "id": "b44eb9f0-6de0-4823-b27a-dd06334eea9a",
+      "name": "Bachelor of Games and Interactive Design",
+      "reason": "Course code 307JA is real, confirmed live 2018-2020 under this exact title, but has no valid page for any year 2021-2027 across versions 1-8, tested exhaustively. Consolidated into the current 'Bachelor of Design' (ARB007, confirmed live 2026) with a Game Development major (Bachelor of Design (Game Development), ARB008, confirmed live 2026) replacing the standalone Games and Interactive Design award.",
+      "archived_at": "2026-09-25T11:44:59.914Z"
+    },
+    {
+      "id": "6b8addf0-c028-48c4-a5aa-8f6a6b685e91",
+      "name": "Bachelor of Health Studies",
+      "reason": "Course code 316JA is real, confirmed live 2018-2019 under this exact title, but has no valid page for any year 2020-2027 across versions 1-8, tested exhaustively. UC's current Faculty of Health offers 'Bachelor of Health Science' (HLB103, confirmed live 2027) as the umbrella award covering this subject area now. Canberra Times reporting on the 2024-2025 restructuring separately notes 8 low-enrolment Faculty of Health programs were cut in the same round.",
+      "archived_at": "2026-09-25T11:45:00.075Z"
+    },
+    {
+      "id": "820bc825-80bd-496c-a3ae-412716f3dd9e",
+      "name": "Bachelor of Landscape Architecture (Honours)",
+      "reason": "Course code ABB201 (and older alternate code 355JA) confirmed real, live through 2024 and 2025 only. The 2025 page states verbatim: 'This course is not open for new admissions.' Canberra Times reporting on the 2024-2025 Faculty of Arts and Design restructuring explicitly names 'Bachelor of Landscape Architecture (Honours) - suspended for new enrolments', noting only 30-40 students enrolled per year over the preceding five years.",
+      "archived_at": "2026-09-25T11:45:00.228Z"
+    },
+    {
+      "id": "3b3078bb-920c-40a7-b105-b320147799a4",
+      "name": "Bachelor of Landscape Design",
+      "reason": "Course code 290JA returns no valid live page for any year from 2018 through 2027 across versions 1-8, tested exhaustively, and no successor code could be located via UC's own site search or third-party aggregators. This sits alongside the confirmed, separately documented suspension of the sibling Bachelor of Landscape Architecture (Honours) as part of the 2024-2025 Faculty of Arts and Design (Built Environment) restructuring, though no single news source names 'Landscape Design' specifically.",
+      "archived_at": "2026-09-25T11:45:00.381Z"
+    },
+    {
+      "id": "b73aa528-ced5-4057-b32a-0dc895de0259",
+      "name": "Bachelor of Social and Economic Policy (Economic Policy)",
+      "reason": "Confirmed to be a genuine standalone award (course code SCB301), not merely a specialisation tag, but it is being phased out. Both the 2024 and 2025 live snapshots of SCB301 state verbatim: 'This course is not open for new admissions.' Its sibling SCB302 (Sociology) shows the identical pattern. UC has introduced a new 'Bachelor of Government' (SCB401, confirmed live 2026) with majors in Applied Economics, Politics and International Relations, and Public Policy and Administration, which now covers this subject area.",
+      "archived_at": "2026-09-25T11:45:00.534Z"
+    },
+    {
+      "id": "16406073-bf9f-4e64-b1c7-ef9d95e09740",
+      "name": "Graduate Certificate in Health Research",
+      "reason": "Course code 133JA confirmed real, live through 2024 and 2025 only; both years' pages state verbatim: 'This course is not open for new admissions.' Canberra Times reporting on the 2024-2025 restructuring notes 'Six graduate certificate programs - closed' in the Faculty of Health round of cuts.",
+      "archived_at": "2026-09-25T11:45:00.690Z"
+    },
+    {
+      "id": "e6909c5c-0d30-491e-a1a6-8cfa59418b0e",
+      "name": "Graduate Certificate in Pharmacotherapy",
+      "reason": "Course code 302JA confirmed real, but its last live snapshot is 2022, and that 2022 page already states verbatim: 'This course is not open for new admissions.' No valid page exists for 2023-2027 across versions 1-3. This bridging course fed directly into the Master of Pharmacy; its disappearance predates the 2024-2025 restructuring round and appears to be an earlier, separate discontinuation.",
+      "archived_at": "2026-09-25T11:45:00.848Z"
+    },
+    {
+      "id": "b5bab479-d829-4933-a1f4-a6e48812cc9f",
+      "name": "Graduate Diploma in International Development",
+      "reason": "Course code 337JA confirmed real, live through 2024 only, and that page states verbatim: 'This course is not open for new admissions.' Canberra Times reporting on the 2024-2025 Faculty of Arts and Design restructuring explicitly names 'Graduate Diploma of International Development - suspended for new enrolments'. The related Master of International Development (193JA) remains live and active (confirmed 2026) as the surviving award in this subject area.",
+      "archived_at": "2026-09-25T11:45:01.004Z"
+    },
+    {
+      "id": "e3c7111b-5959-46d3-8026-d9ee692c2538",
+      "name": "Master of Diagnostic Pathology",
+      "reason": "Course code 315JA confirmed real via UC's own site, live only in 2018 and 2019. No valid page exists for 2020-2027 across versions 1-5, tested exhaustively. Third-party course aggregators (mastersportal, findcourse) still list the program with future intake dates, but these are stale secondary listings, not UC's own site, and could not be corroborated against any live canberra.edu.au page or current Faculty of Health course listing.",
+      "archived_at": "2026-09-25T11:45:01.157Z"
+    },
+    {
+      "id": "8984ae6c-96b5-41ba-b830-04f40b96c681",
+      "name": "Bachelor of Accounting",
+      "reason": "Real UC course code MGB001 found and verified live. The page explicitly states 'Periods course is open for new admissions: This course is not open for new admissions.' Only one version (v1) exists, and its default/most-recent year is 2025 (page banner: 'Please note these are the 2025 details for this course'). No 2026, 2027, or 2028 version exists for MGB001 in UC's current course sitemap (services/wcm/site-map/course.xml) or via direct year/version probing (checked v1-v3, years 2023-2028). UC's current live undergraduate business catalogue (MGB1xx series) has majors in HRM (MGB103), International Business (MGB104), Management (MGB105), Marketing (MGB106), Sport Management (MGB108) and general Business (MGB109), but no standalone Accounting bachelor's degree or Accounting major bachelor code currently live; accounting study now lives inside the Bachelor of Business as the Specialist Major in Accounting (SM0016, https://www.canberra.edu.au/major/SM0016/1), and separately as the standalone Master of Professional Accounting (297JA, live for 2026/2027). Do not reuse SM0016 major content as if it were this distinct discontinued degree.",
+      "archived_at": "2026-09-25T11:45:01.308Z"
+    },
+    {
+      "id": "72740d43-57d8-4c76-81ae-430b380f9915",
+      "name": "Graduate Certificate in Accounting",
+      "reason": "Real UC course code MGC001 found and verified live. Page explicitly states 'This course is not open for new admissions.' Two versions exist (v1 -> 2021, v2 -> 2024); no version redirects to 2026/2027/2028 and MGC001 is absent from the current course sitemap. 'About this course' prose (real, sourced) describes it as being for students with an overseas accounting qualification needing 4 units (12cp), explicitly not meeting professional-body accreditation as a standalone award, with a described pathway 'to progress to UC's G[raduate Diploma in Accounting]' (text was cut off in extraction but the pattern matches the Grad Dip page's parallel pathway sentence to the Master's). This is one exit-award tier in a discontinued Accounting-pathway ladder (Grad Cert -> Grad Dip -> Master of Professional Accounting), and the ladder's lower two rungs (Grad Cert, Grad Dip) have been retired while the top rung, Master of Professional Accounting (297JA), remains live for 2026/2027.",
+      "archived_at": "2026-09-25T11:45:01.460Z"
+    },
+    {
+      "id": "cf67aecf-6b05-4503-aabb-6557cb0c0053",
+      "name": "Graduate Diploma in Accounting",
+      "reason": "Real UC course code MGG001 found and verified live. Page explicitly states 'This course is not open for new admissions.' Two versions exist (v1 -> 2021, v2 -> 2024); no version redirects to 2026/2027/2028 and MGG001 is absent from the current course sitemap. Real 'About this course' prose confirms it is designed for students with an overseas accounting qualification needing 8 units (24cp), explicitly does not meet CPA Australia / CAANZ accreditation as a standalone award, and is described as a pathway to progress toward UC's Master of Professional Accounting (297JA), which remains a live, current course for 2026/2027.",
+      "archived_at": "2026-09-25T11:45:01.616Z"
+    },
+    {
+      "id": "3d889458-672b-45e9-b6c3-872430c943b5",
+      "name": "Graduate Diploma in Business",
+      "reason": "Real UC course code MGG101 found and verified live. Page explicitly states 'This course is not open for new admissions.' Only one version (v1) exists, defaulting to 2024 ('Please note these are the 2024 details for this course'); no 2026/2027/2028 version exists and MGG101 is absent from the current course sitemap. Real 'About this course' prose was read in full: it is a standalone generalist business graduate diploma (not described anywhere on the page as an exit award of the MBA or another Master's), covering accounting/finance, marketing, management, HR, economics and international business units. It appears to have simply been discontinued as a standalone award, with UC's current postgraduate generalist-business offering being the MBA family (723AA, MGM102 MBA Plus, MGM104 MBA Online), none of which is a like-for-like Graduate Diploma equivalent.",
+      "archived_at": "2026-09-25T11:45:01.764Z"
+    },
+    {
+      "id": "bb9e6d55-8d0c-4a13-95fd-3ece27fe3df0",
+      "name": "Bachelor of Marketing Management",
+      "reason": "Real standalone UC course code 187JA found and verified live (distinct from the double-degree code 235JA 'Bachelor of Marketing Management/Bachelor of Communication in Advertising', which is a different award and was not used). 187JA's page explicitly states 'This course is not open for new admissions,' and its most recent version (v2) defaults to 2018 ('Please note these are the 2018 details for this course') -- no version has existed for 2019 onward. UC's current live undergraduate marketing degree is the Bachelor of Business (Marketing), course code MGB106, live for 2026 (https://www.canberra.edu.au/course/MGB106/1/2026), which is a genuinely different course structure/title (a Bachelor of Business with a marketing major, not a standalone Bachelor of Marketing Management), so its content was not substituted in as if it were the same award.",
+      "archived_at": "2026-09-25T11:45:01.914Z"
+    },
+    {
+      "id": "685f97ed-e966-4c78-b494-458697c4fa35",
+      "name": "Master of Human Resource Management",
+      "reason": "Real UC course code MGM201 found and verified live. Page explicitly states 'This course is not open for new admissions.' Checked versions v1-v3 across years 2023-2028; the only real content exists at v1, defaulting to 2025 ('Please note these are the 2025 details for this course'), with no 2026+ version and no entry in the current course sitemap. UC's current live postgraduate offering folds HR management into the Master of Business Administration (Plus) (MGM102, live 2026/2027), which per UC's own course copy 'offers the opportunity to specialise in human resource management, marketing or international business by taking four additional units' -- i.e. HRM is now a specialisation stream inside the MBA (Plus), not a standalone Master's degree. Did not substitute MBA (Plus) generic content in place of this discontinued row.",
+      "archived_at": "2026-09-25T11:45:02.064Z"
+    },
+    {
+      "id": "73948f49-7438-47e0-aef5-fc9464f34054",
+      "name": "Master of International Business",
+      "reason": "Real UC course code MGM401 found and verified live. Page explicitly states 'This course is not open for new admissions.' Checked versions v1-v3 across years 2023-2028; real content exists at v1 (defaulting to 2022) and v2 (defaulting to 2025, most recent, 'Please note these are the 2025 details for this course'); no 2026+ version exists and MGM401 is absent from the current course sitemap. As with the Master of Human Resource Management, UC's current live postgraduate offering folds international business into the Master of Business Administration (Plus) (MGM102, live 2026/2027) as a specialisation stream via four additional units, rather than as a standalone Master's degree.",
+      "archived_at": "2026-09-25T11:45:02.215Z"
+    },
+    {
+      "id": "841a7da1-01d2-412d-975d-21cdc169cc77",
+      "name": "Master of Marketing Management",
+      "reason": "Real UC course code MGM301 found and verified live. Page explicitly states 'This course is not open for new admissions.' Only one version (v1) exists, defaulting to 2025 ('Please note these are the 2025 details for this course'); no 2026+ version exists and MGM301 is absent from the current course sitemap. As with the other two discontinued Masters in this cluster, UC's current live postgraduate offering folds marketing management into the Master of Business Administration (Plus) (MGM102, live 2026/2027) as a specialisation stream via four additional units, rather than as a standalone Master's degree.",
+      "archived_at": "2026-09-25T11:45:02.369Z"
+    },
+    {
+      "id": "b58b39d7-3ab6-4d3f-a6ae-56df2df034d0",
+      "name": "Doctor of Philosophy 254HC",
+      "reason": "254HC is not present anywhere in UC's current 382-URL course.xml sitemap (re-verified 2026-09-25). Its versioned course URL only resolves as far as https://www.canberra.edu.au/course/254HC/2/2020 (a 302 redirect chain from /course/254HC/2 lands on year 2020; no 2021 through 2027 version exists at any version number 1 through 5, all return the site's soft-404 Error page). UC's current generic PhD offering lives at a different, live code: https://www.canberra.edu.au/course/MXP001/1/2026 (Doctor of Philosophy, 96 credit points, live for 2026/2027/2028 intakes). HC/LC most likely denoted a high-cost vs low-cost PhD fee band (a 2019-era search snippet described '254LC low-cost PhD' and '254HC high-cost PhD' fee tiers), but that fee-tier course structure appears to have been retired and folded into the single MXP001 code.",
+      "archived_at": "2026-09-25T11:45:02.522Z"
+    },
+    {
+      "id": "9b67b5b9-a6fa-4ebd-bca1-e16f15d13208",
+      "name": "Doctor of Philosophy 254LC",
+      "reason": "Same finding as 254HC. 254LC is absent from the current course.xml sitemap. Its versioned URL only resolves as far as https://www.canberra.edu.au/course/254LC/2/2020 (302 redirect from /course/254LC/2), with no 2021-2027 version at any version number 1 through 5 (all soft-404). UC's current generic PhD is the live MXP001 code.",
+      "archived_at": "2026-09-25T11:45:02.678Z"
+    },
+    {
+      "id": "80c1e02c-18c5-4618-8771-07abf0c10ea7",
+      "name": "Master of Sport and Exercise Science (Research)",
+      "reason": "No live canberra.edu.au page, no versioned /course/CODE/version/year URL, and no course code for this exact title could be found via extensive WebSearch, the current course.xml sitemap, or Wayback Machine CDX search of canberra.edu.au. The only trace found is a fragment from UC's pre-2013 legacy CMS structure (courses-units/m-research/sport/897aa), which predates the current versioned course-page system entirely and cannot be confirmed to be the same award. UC's current generic research-masters offering is the new Master of Research (MXM001, confirmed live at https://www.canberra.edu.au/course/MXM001/1/2026, explicitly marketed as a new, discipline-general research masters), consistent with UC folding discipline-named research masters into one generic container the same way it folded its PhD variants into MXP001.",
+      "archived_at": "2026-09-25T11:45:02.832Z"
+    },
+    {
+      "id": "1d19fc30-bfa3-4b96-b7fd-36bc1e3b217c",
+      "name": "Master of Sport Management (Research)",
+      "reason": "Same finding as Master of Sport and Exercise Science (Research). No live canberra.edu.au page, no versioned course URL, and no course code found via WebSearch, the current course.xml sitemap, or Wayback CDX search. Only a pre-2013 legacy-CMS fragment (courses-units/m-research/sport/896aa) turned up, which cannot be confirmed as the same award and predates UC's current course-page system. UC's current generic research-masters offering is the new Master of Research (MXM001).",
+      "archived_at": "2026-09-25T11:45:02.988Z"
+    },
+    {
+      "id": "c247c2c2-1a2a-40b0-af80-c6e7bd87d079",
+      "name": "Master of Applied Arts and Humanities (Research)",
+      "reason": "Real course code 303JA confirmed live only through version 2, 2025 (https://www.canberra.edu.au/course/303JA/2/2025), whose page explicitly states 'This course is not open for new admissions.' No 2026 or later version exists, and 303JA is absent from the current course.xml sitemap. UC's own live Master of Research page (MXM001, https://www.canberra.edu.au/course/MXM001/1/2026) explicitly markets itself as UC's 'new' discipline-general research masters, delivered over 18 months full time with an integrated coursework-plus-thesis structure, replacing the previous set of discipline-named research masters (Applied Arts and Humanities, Applied Science, Health, and the Professional Doctorate in Public Administration) the same way UC's PhD variants consolidated into the single MXP001 code. Real, current content exists for this award (sourced and would have been Bond-standard), but since the award itself cannot currently be applied to and has a confirmed live generic successor, it is archived rather than published with content nobody can enrol into.",
+      "archived_at": "2026-09-25T11:45:03.140Z"
+    },
+    {
+      "id": "029b405d-1b80-498f-a0bc-8b3c195c2371",
+      "name": "Master of Applied Science (Research)",
+      "reason": "Real course code 910AA confirmed live only through version 2, 2025 (https://www.canberra.edu.au/course/910AA/2/2025), whose page explicitly states 'This course is not open for new admissions.' No 2026 or later version exists, and 910AA is absent from the current course.xml sitemap. As with the Master of Applied Arts and Humanities (Research), UC's current live Master of Research (MXM001) is the confirmed generic successor research masters. Archived rather than published with content nobody can enrol into.",
+      "archived_at": "2026-09-25T11:45:03.291Z"
+    },
+    {
+      "id": "dddd7a4b-e8d3-4f95-b81f-ea41ffaaa154",
+      "name": "Master of Health (Research)",
+      "reason": "Real course code 135JA confirmed live only through version 3, 2025 (https://www.canberra.edu.au/course/135JA/3/2025), whose page explicitly states 'This course is not open for new admissions.' No 2026 or later version exists, and 135JA is absent from the current course.xml sitemap. As with the other named research masters in this cluster, UC's current live Master of Research (MXM001) is the confirmed generic successor. Archived rather than published with content nobody can enrol into.",
+      "archived_at": "2026-09-25T11:45:03.445Z"
+    },
+    {
+      "id": "4eb366f5-15db-4f60-81da-cafdab943376",
+      "name": "Professional Doctorate in Public Administration (Research)",
+      "reason": "Real course code 385JA confirmed live only through version 1, 2024 (https://www.canberra.edu.au/course/385JA/1/2024), whose page explicitly states 'This course is not open for new admissions.' No 2025 or later version exists, and 385JA is absent from the current course.xml sitemap. UC's current live professional/research doctoral offerings are the generic Doctor of Philosophy (MXP001) and Master of Research (MXM001); no live named Professional Doctorate remains. Archived rather than published with content nobody can enrol into.",
+      "archived_at": "2026-09-25T11:45:03.598Z"
+    }
+  ]
+}
