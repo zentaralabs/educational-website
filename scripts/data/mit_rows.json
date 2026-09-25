@@ -1,0 +1,62 @@
+[
+  {
+    "id": "cbe98adb-4d17-41a8-8251-3b54091a8191",
+    "name": "Bachelor of Business"
+  },
+  {
+    "id": "bd924fac-2481-487c-a27a-3d23d5ff3465",
+    "name": "Bachelor of Data Analytics"
+  },
+  {
+    "id": "9dd748bb-5bd6-468c-904f-63d6cd4bf28b",
+    "name": "Bachelor of Engineering Technology (Telecommunications)"
+  },
+  {
+    "id": "6c14990d-e3f9-4c9e-9017-297fa6ee3026",
+    "name": "Bachelor of Networking"
+  },
+  {
+    "id": "faa545d0-5a99-427b-9f34-b5f188cb35eb",
+    "name": "Graduate Diploma of Accounting"
+  },
+  {
+    "id": "3db82256-7267-4d98-91cb-416c2ebd9ece",
+    "name": "Graduate Diploma of Networking"
+  },
+  {
+    "id": "cf35a062-59b7-4a9a-98f6-1e7c93633c53",
+    "name": "Master of Artificial Intelligence and Machine Learning"
+  },
+  {
+    "id": "d164d25f-6fe8-4f6c-81fc-030294c8db29",
+    "name": "Master of Business Analytics"
+  },
+  {
+    "id": "c1280eed-a3eb-48a6-af9f-7a4424067d10",
+    "name": "Master of Business Research"
+  },
+  {
+    "id": "a167a199-8523-44e5-a584-f8641cc1251a",
+    "name": "Master of Data Analytics (MDA)"
+  },
+  {
+    "id": "35ad7832-222a-45c6-96af-6ccc6fac4099",
+    "name": "Master of Engineering (Telecommunications)"
+  },
+  {
+    "id": "d55905ea-7f7d-44bb-9151-c3bdd15b435f",
+    "name": "Master of ICT Research"
+  },
+  {
+    "id": "bc0a6b95-8e32-4661-aba8-e271c5a85bbb",
+    "name": "Master of Information Technology"
+  },
+  {
+    "id": "11d0b585-51a7-4894-9ca9-06888c6e7571",
+    "name": "Master of Networking"
+  },
+  {
+    "id": "b7f801da-655c-4c63-9b8b-f8b85a3c15f1",
+    "name": "Master of Professional Accounting"
+  }
+]
