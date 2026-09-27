@@ -48,6 +48,18 @@ in this pass, so indexation claims below are from `scripts/data/programs.json`
    floor (program page) corrected. The floor has been 85 in both TS and SQL
    since migration 0032.
 
+**GSC follow-up (same day, `sitemap-programs.xml` page indexing, data to Sep 21):**
+1,072 indexed / 3,259 discovered-not-indexed / 497 crawled-not-indexed /
+177 excluded by noindex. Of the pages Google actually fetched, 68% were
+indexed, so the bottleneck is crawl rate, not a quality rejection, and finding
+1's "cut the program sitemap" is withdrawn. The finding not to lower the
+floor further still stands. All 177 noindex URLs are indexable in the current
+data and were last crawled Aug 30 to Sep 16, before their universities'
+build-outs merged (Sep 20-26): stale crawls, not a TS/SQL drift. Action:
+"Validate fix" on that row in GSC to queue a recrawl. Site impressions peaked
+at 2,018/day on Sep 8 and settled around 720-930 by Sep 18-21 while indexed
+program pages grew 573 → 1,072.
+
 **Checked and clean:** titles ≤60 via `composeTitle`, `og:image` always set,
 no duplicate program names within a university among indexable rows,
 sitemap pagination ordered by `id`, `/sitemap.xml` 410 + index/child layout.
