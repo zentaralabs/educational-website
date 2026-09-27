@@ -235,6 +235,56 @@ on purpose: a long pitch reads as marketing.
 > Hi [name], following up once on the note below in case it is useful. If it
 > is not for you, no reply needed, and I will not chase it again.
 
+### D7 — the 17 September family ban, follow-up angle  *(added 2026-09-27; supersedes D1's hook)*
+
+D1's "nobody has covered Evidence Level 3" hook is eight months old. The live
+peg is Tony Burke's 17 September 2026 announcement: most new student (500)
+and graduate (485) visas lose the right to include a partner or children,
+with exemptions for PhD candidates, Pacific and ASEAN citizens, and
+government-sponsored students. Nepal is in none of those groups. The news
+itself was covered (Nepal Press, Nepalnews explainer, Educast Nepal, SBS
+Nepali), so do not claim it wasn't. Pitch the **second-day story**: no start
+date has been published, families are lodging right now without knowing
+whether the rule will catch them, and it stacks on top of Evidence Level 3.
+Our post: `/blog/australia-migration-overhaul-september-2026-student-family-ban`.
+
+Targets, in order: SBS Nepali (Australian public broadcaster, Nepali-language
+program, interviews sources), Nepali Times, Online Khabar English. Kathmandu
+Post gets the **opinion piece** version instead, sent alone (their
+no-simultaneous-pitch rule).
+
+> **Subject:** Nepali families are lodging Australian student visas without knowing if the family ban applies to them
+>
+> Hi [name],
+>
+> Australia's 17 September announcement bars most new student and graduate
+> visa holders from bringing a partner or children. The exemptions cover PhD
+> students, Pacific and ASEAN citizens, and government-sponsored students.
+> Nepal is in none of them.
+>
+> Two things I haven't seen covered yet. First, there is still no start date,
+> so families lodging this month don't know whether a spouse included today
+> will be accepted. Second, it lands on top of January's move to Evidence
+> Level 3, so Nepali applicants now face the strictest financial checks and,
+> soon, a solo-only visa. The Home Affairs figures cited in the announcement
+> put South Asian countries at over 70% of the 45,991 dependant visas granted
+> last year. This is a Nepal and India policy in practice.
+>
+> I run wheretoapply.xyz, an independent reference site for students applying
+> to Australia. I'm not an agent and take no commission. I've written up
+> what's announced versus what's actually in force, with sources:
+> https://www.wheretoapply.xyz/blog/australia-migration-overhaul-september-2026-student-family-ban
+>
+> Happy to talk on the record about what families should do before lodging,
+> or just to pass you the figures.
+>
+> Roman Lama
+> Kathmandu
+> https://www.wheretoapply.xyz
+
+*Before sending:* re-check the Home Affairs page for a start date. If one has
+been published, lead with it instead of "no start date".
+
 ### D2 — Nepali tech media, founder story  *(TechLekh, ICT Frame, Business 360)*
 
 > **Subject:** Solo Nepali developer, free database of every Australian university, for Nepali students
