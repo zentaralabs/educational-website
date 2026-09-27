@@ -151,7 +151,7 @@ export const SUBJECT_CONTENT: Record<string, SubjectContent> = {
       { slug: "monash-university", why: "Large data science program with business analytics and applied streams." },
       { slug: "university-of-technology-sydney", why: "Industry-facing analytics with a strong placement component." },
       { slug: "unsw-sydney", why: "Data science across the science and engineering faculties." },
-      { slug: "university-of-adelaide", why: "Machine learning research strength, with the Australian Institute for Machine Learning." },
+      { slug: "adelaide-university", why: "Machine learning research strength, with the Australian Institute for Machine Learning." },
     ],
     faq: [
       {
@@ -449,7 +449,7 @@ export const SUBJECT_CONTENT: Record<string, SubjectContent> = {
     ],
     careers: "Agricultural consultant, agronomist, and agricultural scientist appear on skilled lists and are nominated by several states, particularly for regional roles. Studying at a regional campus adds migration points.",
     strongAt: [
-      { slug: "university-of-adelaide", why: "The Waite campus, one of the largest agricultural research precincts in the southern hemisphere." },
+      { slug: "adelaide-university", why: "The Waite campus, one of the largest agricultural research precincts in the southern hemisphere." },
       { slug: "charles-sturt-university", why: "Trains a large share of Australia's rural agronomists and vets, across regional NSW." },
       { slug: "university-of-new-england", why: "Australia's first regional university, with deep strength in agriculture and rural science." },
       { slug: "university-of-queensland", why: "Gatton campus and strong agricultural and animal science programs." },

@@ -111,7 +111,8 @@ export async function generateMetadata({
     path: `/universities/${slug}/programs/${program.slug}`,
     type: "website",
     // Index only programs with real sourced content of their own — a parsed
-    // curriculum or an "About this program" description of 110+ words (see
+    // curriculum, or an "About this program" description of PROGRAM_INDEX_MIN_WORDS+
+    // words with a filled facts table (see
     // `isProgramIndexable`). The short templated long-tail cards stay
     // noindex, still live for users and internal links, pending a later
     // verification wave. See PROJECT_STATUS "Description pass".

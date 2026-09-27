@@ -10,6 +10,52 @@ Redirects · Canonical/sitemap/metadata changes · Testing done.**
 
 ---
 
+## 2026-09-27 · Delta audit since 2026-09-03 (source-level; live site unreachable from audit env)
+
+**Scope:** everything shipped after the 09-03 audit: SEO PRs #104-#121 and the
+~40 program build-out PRs (#97-#146). No live crawl or GSC export was possible
+in this pass, so indexation claims below are from `scripts/data/programs.json`
+(kept in sync by every build-out PR), not from Search Console.
+
+### Findings
+
+1. **Program pages are now ~94% of the indexable site (HIGH, decision needed).**
+   A parsed `curriculum` alone makes a program indexable, and the build-outs
+   gave nearly every surviving row one. The snapshot has 6,090 published
+   programs, **5,385 of them indexable** and in `/sitemap-programs.xml`,
+   against ~340 hub and editorial URLs. The 09-03 audit split the sitemap
+   when the file held 868 programs, on the premise of re-checking the floor
+   around November. The count has since grown about sixfold without that
+   check. The content is not thin (median description 101 words plus
+   curriculum, admissions and English requirements; little boilerplate, with
+   the worst case being one ANU intro sentence reused 186 times), but it is
+   still ~5.4k near-template pages on a low-authority domain. Recommend:
+   read the per-sitemap coverage in GSC before any further roll-down, and cap
+   the program sitemap to the demand-first set if "Crawled – currently not
+   indexed" dominates.
+2. **628 indexable programs have no `subject_slug` (MED).** No related-programs
+   block and no link from any `/study/*` hub, so their only inbound link is
+   the university's program list. ANU 55, UWA 34, Monash 32, UNSW 32.
+3. **Adelaide University missing from two `/study` "known for" lists (LOW, fixed).**
+   `subjects.ts` still used the pre-merger `university-of-adelaide` slug; the
+   page silently filters unknown slugs, so the pick vanished from
+   `/study/data-science` and `/study/agriculture`. Now `adelaide-university`.
+4. **Theoretical TS/SQL indexability drift (LOW, no action).** `btrim()` strips
+   spaces only, where JS `.trim()` strips all whitespace, so a
+   newline-only curriculum would be in the sitemap but `noindex`. 0 rows
+   affected today.
+5. **Stale comments** claiming ~870 program URLs (`robots.ts`) and a 110-word
+   floor (program page) corrected. The floor has been 85 in both TS and SQL
+   since migration 0032.
+
+**Checked and clean:** titles ≤60 via `composeTitle`, `og:image` always set,
+no duplicate program names within a university among indexable rows,
+sitemap pagination ordered by `id`, `/sitemap.xml` 410 + index/child layout.
+
+**Testing done:** the data checks above were run as node scripts against `programs.json`. No
+`tsc` run: `node_modules` is absent in the audit environment, and the only
+code change is a string literal plus comments.
+
 ## 2026-09-05 · CRICOS course-register import: programs table 1,103 → ~7,100
 
 **Affected routes:** `/universities/{slug}/programs/{program-slug}` (≈6,000 new

@@ -47,8 +47,8 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     // Index first, then both children explicitly. `/sitemap-pages.xml` is the
-    // ~340 URLs worth crawl budget; `/sitemap-programs.xml` is the ~870
-    // templated program cards, split out so they neither dilute the main
+    // ~340 hub/editorial URLs; `/sitemap-programs.xml` is the ~5,400
+    // indexable program pages, split out so they neither dilute the main
     // file's discovery signal nor hide which section is actually getting
     // indexed. Listing all three is redundant but harmless, and means a
     // crawler that ignores index files still finds both. `/sitemap.xml` is
