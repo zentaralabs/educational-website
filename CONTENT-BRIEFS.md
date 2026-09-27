@@ -5,9 +5,17 @@ SERP/competitor analysis against the site's actual data and structure. Each
 brief is self-contained — hand the relevant section to whoever (or whichever
 agent) is writing the page.
 
+**Status check 2026-09-27:** the Business, Nursing, and Malaysia briefs below,
+plus the named-scholarships template pass, are all already implemented in
+`src/lib/collections.ts` / `src/lib/origin-countries.ts` (business schools got
+its own MBA-specific split page too; all 23 `/international/[country]` pages
+already carry a populated `scholarships` field). Kept below for reference
+only — don't re-run them. Only the Application Fee brief is still open, and
+it stays deferred per the note on it below.
+
 ---
 
-## Brief: Best Business Schools in Australia
+## Brief: Best Business Schools in Australia — DONE, see status check above
 
 Target: improve the existing page at
 `/best/best-australian-universities-for-business` (currently ~950 words,
@@ -85,7 +93,7 @@ several with per-school fee tables.
 
 ---
 
-## Brief: Cheapest Nursing Courses in Australia
+## Brief: Cheapest Nursing Courses in Australia — DONE, see status check above
 
 Target: new page at `/best/cheapest-nursing-courses-in-australia-for-international-students`.
 
@@ -169,7 +177,7 @@ that (see prerequisite above); the new page must not repeat the mistake.
 
 ---
 
-## Brief: Study in Australia from Malaysia (Improve)
+## Brief: Study in Australia from Malaysia (Improve) — DONE, see status check above
 
 Target: `/international/malaysia` (existing, ~2,200 words, meta title "Study
 in Australia from Malaysia: Cost & Visa 2026"). GSC: "study in australia for
@@ -283,7 +291,7 @@ This is an engineering/data ticket more than a writing task: check how many of t
 
 ---
 
-## Brief: Named country-specific scholarships (template addition to `/international/[country]`)
+## Brief: Named country-specific scholarships (template addition to `/international/[country]`) — DONE, see status check above
 
 Target: not a single URL — a recurring gap across the 24 `/international/[country]`
 pages, found while checking Vietnam as a candidate for a full rewrite brief

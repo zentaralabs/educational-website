@@ -53,11 +53,29 @@ type UniFaqInput = {
   livingCost: number;
 };
 
+/**
+ * RMIT's application fee is country-conditional (AU$100 for applicants from
+ * a specific list of countries, including parts of India and Pakistan; free
+ * otherwise) rather than a flat figure, so the `application_fee` column
+ * (currently 0, meaning "free" for most applicants) can't represent it
+ * alone. Sourced against RMIT's own country list, checked 2026-09-27:
+ * https://www.rmit.edu.au/study-with-us/international-students/fees-for-international-students/countries-required-to-pay-an-application-fee
+ * Re-check that page before reusing this note; the country list can change.
+ */
+export const RMIT_SLUG = "rmit-university";
+export const RMIT_APPLICATION_FEE_NOTE =
+  "RMIT does not charge most international applicants an application fee, but applicants from a specific list of countries, including parts of India and Pakistan, pay AU$100 per application. Check RMIT's current country list before you apply.";
+
 export function universityFaq(u: UniFaqInput): FaqItem[] {
   const items: FaqItem[] = [];
   const cityShort = u.city?.split(",")[0] ?? "this location";
 
-  if (u.application_fee != null) {
+  if (u.slug === RMIT_SLUG) {
+    items.push({
+      q: `Does ${u.name} charge an application fee for international students?`,
+      a: RMIT_APPLICATION_FEE_NOTE,
+    });
+  } else if (u.application_fee != null) {
     items.push({
       q: `Does ${u.name} charge an application fee for international students?`,
       a:
