@@ -1,6 +1,7 @@
 import { GO8_SLUGS, isRegionalCity } from "@/lib/australia";
 import type { CollectionUniversity } from "@/lib/queries/public-collections";
 import { formatCurrency } from "@/lib/format";
+import { RMIT_SLUG } from "@/lib/faq";
 import { SUBJECT_BEST_PAGES, SUBJECT_CONTENT } from "@/lib/subjects";
 
 export type CollectionEntry = {
@@ -1463,10 +1464,10 @@ export const COLLECTIONS: Collection[] = [
       "That means you can put in several applications and compare your offers without spending anything upfront. A small number of universities do charge a direct-application fee, usually AUD 55 to 125, though several waive it for agent-lodged applications.",
     ],
     methodology:
-      "We list universities recorded as charging no application fee for international students. The figure reflects the standard direct-application fee; some universities that charge one waive it for applications through an authorised agent, so confirm before you apply. Third-party application platforms may add their own service fee regardless.",
+      "We list universities recorded as charging no application fee for international students. The figure reflects the standard direct-application fee; some universities that charge one waive it for applications through an authorised agent, so confirm before you apply. Third-party application platforms may add their own service fee regardless. RMIT is excluded here even though it charges most applicants nothing, because its fee is country-conditional (AU$100 for a specific list of countries, including parts of India and Pakistan) rather than genuinely fee-free for everyone.",
     build: (unis) =>
       unis
-        .filter((u) => u.applicationFee === 0)
+        .filter((u) => u.applicationFee === 0 && u.slug !== RMIT_SLUG)
         .sort((a, b) => (a.firstYearBudget ?? 9e9) - (b.firstYearBudget ?? 9e9))
         .map((u) => ({
           slug: u.slug,
@@ -1503,7 +1504,7 @@ export const COLLECTIONS: Collection[] = [
           headline: u.pteOverall != null ? "IELTS 6.0 / PTE 50 minimum" : "IELTS 6.0 minimum",
           note: `Institutional minimum for undergraduate entry is IELTS 6.0${
             u.pteOverall != null ? " (PTE Academic 50)" : ""
-          }.${u.applicationFee === 0 ? " No application fee." : ""} Specific courses require more.`,
+          }.${u.applicationFee === 0 && u.slug !== RMIT_SLUG ? " No application fee." : ""} Specific courses require more.`,
         })),
   },
   cityCollection({ city: "Sydney", match: /sydney|manly/i, slug: "cheapest-universities-in-sydney-for-international-students" }),

@@ -8,7 +8,8 @@ import { WhyTrust } from "@/components/site/WhyTrust";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import { formatDeadlineDateLong } from "@/lib/deadline-status";
 import { DEADLINE_PAGE_INDEXED } from "@/lib/deadline-detail";
-import { faqJsonLd } from "@/lib/faq";
+import { faqJsonLd, RMIT_APPLICATION_FEE_NOTE, RMIT_SLUG } from "@/lib/faq";
+import { formatCurrency } from "@/lib/format";
 import { INTAKE_YEAR } from "@/lib/site-config";
 import {
   getPublishedDeadlinesForUniversity,
@@ -86,6 +87,17 @@ export default async function UniversityDeadlinesPage({
     ...new Set(deadlines.map((d) => d.deadline_type?.name).filter(Boolean)),
   ] as string[];
 
+  // RMIT's fee is country-conditional, not a flat figure (see faq.ts), so it
+  // gets its own note instead of reading university.application_fee.
+  const feeAnswer =
+    slug === RMIT_SLUG
+      ? RMIT_APPLICATION_FEE_NOTE
+      : university.application_fee != null
+        ? university.application_fee === 0
+          ? `No. ${name} does not charge international students an application fee when you apply directly or through an authorised agent. Third-party application platforms may add their own service fee.`
+          : `${name} charges a non-refundable application fee of about ${formatCurrency(university.application_fee, "AUD")} per application, payable when you submit online. Some universities waive this for applications lodged through an authorised agent, so check before you pay.`
+        : null;
+
   // The seed appends the same university-wide guidance to every deadline
   // row (only the intake month differs). On a page that is nothing but the
   // deadline table that repeats badly, so normalise the intake reference,
@@ -157,6 +169,9 @@ export default async function UniversityDeadlinesPage({
       q: `How early should I apply to ${name}?`,
       a: `Three to four months before your intended intake is the usual advice, and earlier for competitive courses or if you are from a country where the student visa takes longer to process. Applying early also means an earlier offer, which helps with scholarships and accommodation.`,
     },
+    ...(feeAnswer
+      ? [{ q: `How much does it cost to apply to ${name}?`, a: feeAnswer }]
+      : []),
   ];
 
   const jsonLd: Record<string, unknown>[] = [
@@ -238,6 +253,17 @@ export default async function UniversityDeadlinesPage({
       </div>
 
       <VerifiedInline date={verifiedAt} source={source} />
+
+      {feeAnswer && (
+        <div className="mt-4 flex flex-col gap-2 rounded-xl border border-line bg-mist p-4">
+          <h2 className="font-body text-xs font-semibold tracking-wide text-slate uppercase">
+            {name} application fee
+          </h2>
+          <p className="font-body text-sm leading-relaxed text-ink">
+            {feeAnswer}
+          </p>
+        </div>
+      )}
 
       {guidance.length > 0 && (
         <div className="mt-4 flex flex-col gap-2 rounded-xl border border-line bg-mist p-4">
