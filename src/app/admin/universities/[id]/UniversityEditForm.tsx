@@ -414,6 +414,7 @@ function ProgramsPanel({
             content_indexable:
               Boolean(fields.curriculum?.trim()) ||
               (fields.description ?? "").trim().split(/\s+/).filter(Boolean).length >= 100,
+            seo_noindex: false,
             created_at: new Date().toISOString(),
             updated_at: new Date().toISOString(),
           },

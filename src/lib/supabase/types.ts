@@ -224,6 +224,9 @@ export interface Database {
           /** Generated column (migration 0023): mirrors isProgramIndexable().
            * Read-only — never written. */
           content_indexable: boolean;
+          /** Manual noindex override (migration 0038). True = the page is
+           * robots noindex and out of the sitemap regardless of content. */
+          seo_noindex: boolean;
           created_at: string;
           updated_at: string;
         },
@@ -258,6 +261,7 @@ export interface Database {
           last_verified_at?: string | null;
           source_url?: string | null;
           cricos_code?: string | null;
+          seo_noindex?: boolean;
         }
       >;
       // occupations / program_occupations — see supabase/migrations/0030_add_occupations.sql.
