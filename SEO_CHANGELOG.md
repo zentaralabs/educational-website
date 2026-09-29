@@ -10,6 +10,42 @@ Redirects · Canonical/sitemap/metadata changes · Testing done.**
 
 ---
 
+## 2026-09-29 · Manual noindex override for program pages (`seo_noindex`), Step A prepared
+
+**Affected routes:** `/universities/{slug}/programs/{program-slug}` and
+`/sitemap-programs.xml`. **Nothing changes on deploy**: the column defaults to
+false, so no page changes state until the SQL script is run by hand.
+
+**Why:** impressions fell from ~1,460/day (Sep 23) to near zero (Sep 27),
+starting the day Google's September 2026 spam update began (Sep 24). Search
+Console shows 502 program pages "Crawled - currently not indexed" and 3,324
+"Discovered - currently not indexed". Production has 5,438 indexable program
+pages (`content_indexable`), ~94% of all indexable URLs, up from 868 on Sep 3.
+Of those, 520 are description-only (no curriculum), 495 of them at seven
+universities (Sydney 259, Melbourne 132, Griffith 38, UTS 26, Victoria 14,
+Monash 13, Western Sydney 13). Cause is unproven; this removes the weakest
+tail first and adds a reversible switch for any later, demand-based cut.
+
+**What changed:**
+- Migration `0038_program_seo_noindex.sql`: `programs.seo_noindex boolean not
+  null default false`.
+- `isProgramIndexable()` returns false when `seo_noindex` is set (page robots
+  meta); `listPublishedProgramsForSitemap()` filters `seo_noindex = false`.
+- `scripts/sql/0038-noindex-description-only.sql`: preview, apply (with a KEEP
+  list for pages that have real impressions) and undo. Not run automatically.
+
+**Deploy order matters:** run migration 0038 first, then deploy the code, then
+run the apply script. Code deployed before the migration would query a missing
+column and break the program pages and the program sitemap.
+
+**Rollback:** `update programs set seo_noindex = false where seo_noindex;`
+
+**SEO impact: MED** once applied (~520 URLs leave the index and sitemap; pages
+stay live for users and links). **Testing:** `tsc --noEmit` clean (after `next
+typegen`); eslint clean on changed files. Not yet run against a database.
+
+---
+
 ## 2026-09-05 · CRICOS course-register import: programs table 1,103 → ~7,100
 
 **Affected routes:** `/universities/{slug}/programs/{program-slug}` (≈6,000 new

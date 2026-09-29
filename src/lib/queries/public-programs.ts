@@ -22,6 +22,7 @@ export const PROGRAM_INDEX_MIN_WORDS = 85;
  * 0023, re-cut by 0032). See PROJECT_STATUS.md "Program pages".
  */
 export function isProgramIndexable(program: {
+  seo_noindex?: boolean | null;
   description?: string | null;
   curriculum?: string | null;
   duration_years?: number | null;
@@ -29,6 +30,8 @@ export function isProgramIndexable(program: {
   tuition_domestic?: number | null;
   ielts_overall?: number | null;
 }): boolean {
+  // Manual per-row override (migration 0038). Wins over every content rule.
+  if (program.seo_noindex) return false;
   if (program.curriculum && program.curriculum.trim()) return true;
   const words = (program.description ?? "").trim().split(/\s+/).filter(Boolean);
   if (words.length < PROGRAM_INDEX_MIN_WORDS) return false;
@@ -103,6 +106,7 @@ export type ProgramOccupation = {
 };
 
 export type PublicProgramDetail = PublicProgramRow & {
+  seo_noindex: boolean;
   description: string | null;
   curriculum: string | null;
   degree_level_id: number | null;
@@ -132,7 +136,7 @@ export type PublicProgramDetail = PublicProgramRow & {
   } | null;
 };
 
-const PROGRAM_DETAIL_SELECT = `id, slug, name, description, curriculum, degree_level_id, duration_years, tuition_international, tuition_domestic, tuition_domestic_is_csp, currency, application_url, admission_requirements, english_requirements, ielts_overall, ielts_listening, ielts_reading, ielts_writing, ielts_speaking, pte_overall, pte_listening, pte_reading, pte_writing, pte_speaking, last_verified_at, source_url, cricos_code,
+const PROGRAM_DETAIL_SELECT = `id, slug, name, seo_noindex, description, curriculum, degree_level_id, duration_years, tuition_international, tuition_domestic, tuition_domestic_is_csp, currency, application_url, admission_requirements, english_requirements, ielts_overall, ielts_listening, ielts_reading, ielts_writing, ielts_speaking, pte_overall, pte_listening, pte_reading, pte_writing, pte_speaking, last_verified_at, source_url, cricos_code,
       degree_level:degree_levels(name), subject:subjects(slug, name),
       university:universities!inner(id, slug, name, status, city, apply_url, application_fee, tuition_international, tuition_domestic, tuition_domestic_is_csp, currency, ielts_overall, ielts_listening, ielts_reading, ielts_writing, ielts_speaking, pte_overall, pte_listening, pte_reading, pte_writing, pte_speaking, country:countries!inner(code, name, is_launched))`;
 
@@ -322,6 +326,9 @@ export async function listPublishedProgramsForSitemap(): Promise<SitemapProgramR
       )
       .eq("status", "published")
       .eq("content_indexable", true)
+      // Manual override (migration 0038): rows flagged noindex stay out of
+      // the sitemap, matching the page's own robots meta.
+      .eq("seo_noindex", false)
       .eq("university.status", "published")
       .eq("university.country.is_launched", true)
       // Without an explicit order, PostgREST doesn't guarantee stable row
