@@ -225,7 +225,9 @@ export default async function InvitationRoundsPage() {
                           })}
                           {r.is_estimated && (
                             <span className="ml-1 text-status-pending">
-                              (projected)
+                              {r.round_date < new Date().toISOString().slice(0, 10)
+                                ? "(projected; official figures not yet published)"
+                                : "(projected)"}
                             </span>
                           )}
                         </td>

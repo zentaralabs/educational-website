@@ -134,14 +134,21 @@ export default async function ScholarshipPage({
           }
         />
         <Fact
-          label="Deadline"
+          label={
+            s.deadline_date && s.deadline_date < new Date().toISOString().slice(0, 10)
+              ? "Most recent deadline"
+              : "Deadline"
+          }
           value={
             s.deadline_date
               ? new Date(s.deadline_date).toLocaleDateString("en-AU", {
                   day: "numeric",
                   month: "long",
                   year: "numeric",
-                })
+                }) +
+                (s.deadline_date < new Date().toISOString().slice(0, 10)
+                  ? " (closed; check the official page for the next round)"
+                  : "")
               : tiedToProgramDeadline
                 ? "Your program's application deadline"
                 : null

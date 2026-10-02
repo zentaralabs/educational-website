@@ -11,8 +11,14 @@ import {
   getProgramsForOccupation,
   getPublishedOccupation,
   listPublishedOccupationSlugs,
+  listPublishedOccupations,
 } from "@/lib/queries/public-occupations";
 import { SITE_YEAR } from "@/lib/site-config";
+import {
+  clusterLead,
+  clusterRelatives,
+  isClusterDuplicate,
+} from "@/lib/occupation-clusters";
 import { JsonLd } from "@/lib/json-ld";
 import { composeTitle, pageMetadata } from "@/lib/page-metadata";
 
@@ -92,7 +98,7 @@ export async function generateMetadata({
     // resolve to at least one real published program. See the "SEO/keyword
     // assessment" note in memory: the reverse lookup is the whole point, not
     // the ANZSCO trivia every migration-agent SOL page already has.
-    robots: { index: programs.length > 0, follow: true },
+    robots: { index: programs.length > 0 && !isClusterDuplicate(slug), follow: true },
   });
 }
 
@@ -117,6 +123,19 @@ export default async function OccupationDetailPage({
   const data = await loadOccupation(slug);
   if (!data) notFound();
   const { occupation, programs } = data;
+
+  // Occupations that link the same set of degrees. Only the lead of each
+  // cluster is indexed (see lib/occupation-clusters); every member points at
+  // the others so the shared list has one obvious home.
+  const relativeSlugs = clusterRelatives(slug);
+  const leadSlug = clusterLead(slug);
+  const nameBySlug = relativeSlugs.length
+    ? new Map((await listPublishedOccupations()).map((o) => [o.slug, o.name]))
+    : new Map<string, string>();
+  const relatives = relativeSlugs.flatMap((s) => {
+    const name = nameBySlug.get(s);
+    return name ? [{ href: `/occupations/${s}`, label: name }] : [];
+  });
 
   const lists = listBadges(occupation);
   const pointsTested = occupation.mltssl || occupation.stsol || occupation.rol;
@@ -199,6 +218,18 @@ export default async function OccupationDetailPage({
             {occupation.visa_pathway_note}
           </p>
         </section>
+      )}
+
+      {relatives.length > 0 && (
+        <RelatedLinks
+          className="mt-10 max-w-2xl"
+          heading={
+            leadSlug
+              ? "Same degree pathways: full list on the main page"
+              : "Occupations that share these degree pathways"
+          }
+          items={relatives}
+        />
       )}
 
       {universities.length > 0 && (

@@ -1,4 +1,5 @@
 import { createPublicClient } from "@/lib/supabase/public";
+import { isClusterDuplicate } from "@/lib/occupation-clusters";
 
 export type PublicOccupationListRow = {
   slug: string;
@@ -81,7 +82,7 @@ export async function listPublishedOccupationSlugsForSitemap(): Promise<
   ]);
   const linked = new Set(linkedSlugs);
   return occupations
-    .filter((r) => linked.has(r.slug))
+    .filter((r) => linked.has(r.slug) && !isClusterDuplicate(r.slug))
     .map((r) => ({ slug: r.slug, updatedAt: r.updated_at }));
 }
 
