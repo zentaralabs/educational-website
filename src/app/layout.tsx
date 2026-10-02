@@ -5,6 +5,7 @@ import { Analytics } from "@/components/site/Analytics";
 import { CookieConsentBanner } from "@/components/site/CookieConsentBanner";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_SAME_AS, SITE_URL } from "@/lib/site-config";
 import { JsonLd } from "@/lib/json-ld";
+import { FOUNDER_JSON_LD } from "@/lib/author-jsonld";
 
 /** Site-wide publisher identity. Given a stable @id so page-level schema
  * (Article, Dataset, ItemList) can reference it as publisher. */
@@ -18,7 +19,7 @@ const organizationJsonLd = {
   email: "admin@wheretoapply.xyz",
   description: SITE_DESCRIPTION,
   sameAs: SITE_SAME_AS,
-  founder: { "@type": "Person", name: "Roman Lama" },
+  founder: FOUNDER_JSON_LD,
   foundingDate: "2026",
   knowsAbout: [
     "University admissions in Australia",

@@ -29,6 +29,8 @@ export default async function MethodologyPage() {
     description:
       "Structured data on Australian universities for international students: application deadlines and intake windows, international tuition, application fees, English-test minimums (IELTS and PTE), selectivity, scholarships, and student and skilled-visa facts. Each fact is tied to an official source and a verification date.",
     url: "/methodology",
+    // Same date as the visible "Last updated" line below.
+    dateModified: "2026-08-29",
     keywords: [
       "Australian universities",
       "international students",

@@ -291,10 +291,11 @@ export default async function OriginCountryPage({
           <div className="mt-5">
             <div className="overflow-x-auto rounded-xl border border-line">
               <table className="w-full border-collapse text-left font-body text-sm">
+<caption className="sr-only">Qualification recognition and entry requirements</caption>
                 <thead>
                   <tr className="bg-mist">
                     {c.qualificationTable.columns.map((col) => (
-                      <th
+                      <th scope="col"
                         key={col}
                         className="whitespace-nowrap px-4 py-2.5 font-utility text-xs font-semibold tracking-wide text-slate uppercase"
                       >

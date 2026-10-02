@@ -87,6 +87,7 @@ export async function generateMetadata({
     description,
     path: pageNum === 1 ? `/occupations/${slug}` : `/occupations/${slug}?page=${pageNum}`,
     type: "article",
+    image: `/occupations/${slug}/og`,
     // Thin without the reverse lookup — index only occupations that actually
     // resolve to at least one real published program. See the "SEO/keyword
     // assessment" note in memory: the reverse lookup is the whole point, not

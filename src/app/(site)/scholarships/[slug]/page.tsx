@@ -54,6 +54,7 @@ export async function generateMetadata({
     description,
     path: `/scholarships/${slug}`,
     type: "article",
+    image: `/scholarships/${slug}/og`,
   });
 }
 

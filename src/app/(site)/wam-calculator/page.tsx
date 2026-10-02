@@ -90,15 +90,16 @@ export default function WamCalculatorPage() {
         </p>
         <div className="mt-3 overflow-hidden rounded-xl border border-line">
           <table className="w-full font-body text-sm">
+<caption className="sr-only">Letter grade to percentage conversion</caption>
             <thead>
               <tr className="border-b border-ink/10 bg-mist text-left">
-                <th className="px-4 py-2 font-utility text-xs font-semibold tracking-wide text-slate uppercase">
+                <th scope="col" className="px-4 py-2 font-utility text-xs font-semibold tracking-wide text-slate uppercase">
                   Subject
                 </th>
-                <th className="px-4 py-2 font-utility text-xs font-semibold tracking-wide text-slate uppercase">
+                <th scope="col" className="px-4 py-2 font-utility text-xs font-semibold tracking-wide text-slate uppercase">
                   Mark
                 </th>
-                <th className="px-4 py-2 font-utility text-xs font-semibold tracking-wide text-slate uppercase">
+                <th scope="col" className="px-4 py-2 font-utility text-xs font-semibold tracking-wide text-slate uppercase">
                   Credit points
                 </th>
               </tr>

@@ -352,13 +352,14 @@ export default async function ComparisonPage({
 
           <div className="mt-8 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
+<caption className="sr-only">Side-by-side comparison</caption>
               <thead>
                 <tr className="border-b border-ink/15">
-                  <th className="py-2 pr-3 text-left font-body text-xs font-semibold tracking-wide text-slate uppercase" />
-                  <th className="py-2 px-3 text-left font-display text-sm font-semibold text-ink">
+                  <th scope="col" className="py-2 pr-3 text-left font-body text-xs font-semibold tracking-wide text-slate uppercase" />
+                  <th scope="col" className="py-2 px-3 text-left font-display text-sm font-semibold text-ink">
                     {a.name}
                   </th>
-                  <th className="py-2 pl-3 text-left font-display text-sm font-semibold text-ink">
+                  <th scope="col" className="py-2 pl-3 text-left font-display text-sm font-semibold text-ink">
                     {b.name}
                   </th>
                 </tr>

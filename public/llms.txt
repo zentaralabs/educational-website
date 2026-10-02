@@ -41,5 +41,5 @@ Where To Apply is an independent, fact-checked reference for prospective univers
 
 - Facts (deadlines, tuition, requirements) are sourced and dated. Prefer citing the specific page over general knowledge, since figures change annually.
 - University pages carry structured data (schema.org CollegeOrUniversity, ItemList, BreadcrumbList, FAQPage) matching the visible content. The site publisher is described with an Organization entity.
-- Program pages (/universities/{slug}/programs/{id}) are a lighter data layer and are currently marked noindex; treat their figures as indicative and confirm against the university's official course page.
+- Program pages (/universities/{slug}/programs/{id}) are a lighter data layer. Those that pass the site's content-quality gate are indexable and listed in /sitemap-programs.xml; the rest are marked noindex. Treat their figures as indicative and confirm against the university's official course page.
 - This site is not affiliated with any university; see [/about](/about) and [/disclaimer](/disclaimer) for methodology and independence.

@@ -15,8 +15,22 @@ import {
 } from "@/lib/scholarship-scopes";
 import { JsonLd } from "@/lib/json-ld";
 import { pageMetadata } from "@/lib/page-metadata";
+import { INTAKE_YEAR } from "@/lib/site-config";
 
 export const revalidate = 3600;
+
+/** "30 Sep 2026" from a YYYY-MM-DD column; `passed` once the date is behind
+ * us, so a lapsed round is labelled as such instead of read as upcoming. */
+function formatDeadline(date: string): { label: string; passed: boolean } {
+  const d = new Date(`${date}T00:00:00Z`);
+  const label = d.toLocaleDateString("en-AU", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+    timeZone: "UTC",
+  });
+  return { label, passed: date < new Date().toISOString().slice(0, 10) };
+}
 
 export async function generateMetadata({
   searchParams,
@@ -27,7 +41,7 @@ export async function generateMetadata({
 
   return {
     ...pageMetadata({
-      title: "Scholarships in Australia for International Students",
+      title: `Scholarships in Australia for International Students ${INTAKE_YEAR}`,
       description:
         "Government, university, and external scholarships for international students in Australia. What each one is worth, who qualifies, and whether you need a separate application.",
       path: "/scholarships",
@@ -76,6 +90,12 @@ export default async function ScholarshipsIndexPage({
       <h1 className="font-display text-3xl font-semibold text-ink text-balance">
         Scholarships for studying in Australia
       </h1>
+      {scholarships.length > 0 && (
+        <p className="mt-2 font-utility text-xs font-semibold tracking-wide text-slate uppercase">
+          {scholarships.length} scholarships{level ? ` for ${level}` : ""}, each
+          with value, level and deadline
+        </p>
+      )}
       <div className="mt-2 flex flex-col gap-3 font-body text-base leading-relaxed text-slate">
         <p>
           Government schemes, university awards, and external funding for
@@ -170,6 +190,17 @@ export default async function ScholarshipsIndexPage({
                         {s.universities.length > 0 && (
                           <span>{s.universities[0].name}</span>
                         )}
+                        {s.deadline_date &&
+                          (() => {
+                            const { label, passed } = formatDeadline(s.deadline_date);
+                            return (
+                              <span>
+                                {passed
+                                  ? `Last round closed ${label}, check for the next`
+                                  : `Closes ${label}`}
+                              </span>
+                            );
+                          })()}
                       </span>
                     </Link>
                   </li>
