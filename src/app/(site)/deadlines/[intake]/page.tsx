@@ -12,6 +12,7 @@ import { faqJsonLd } from "@/lib/faq";
 import { deadlineBadgeStatus, formatDeadlineDate } from "@/lib/deadline-status";
 import { universityDeadlineHref } from "@/lib/deadline-detail";
 import { getIntakeHub, INTAKE_HUB_SLUGS } from "@/lib/intakes";
+import { FOUNDER_JSON_LD, ORGANIZATION_ID } from "@/lib/author-jsonld";
 import { SITE_NAME, SITE_URL } from "@/lib/site-config";
 import {
   listIntakeDeadlines,
@@ -111,8 +112,8 @@ export default async function IntakeDeadlinePage({
       mainEntityOfPage: { "@type": "WebPage", "@id": pageUrl },
       datePublished: `${hub.lastVerified}T00:00:00Z`,
       dateModified: `${hub.lastVerified}T00:00:00Z`,
-      author: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
-      publisher: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
+      author: FOUNDER_JSON_LD,
+      publisher: { "@id": ORGANIZATION_ID },
     },
     {
       "@context": "https://schema.org",
@@ -120,6 +121,7 @@ export default async function IntakeDeadlinePage({
       name: `Australian university application deadlines: ${hub.intakeName} intake`,
       description: `Sourced ${hub.intakeName} intake application dates for universities in Australia, by degree level.`,
       url: pageUrl,
+      dateModified: `${hub.lastVerified}T00:00:00Z`,
       variableMeasured: "Application deadline date",
       isAccessibleForFree: true,
       creator: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
@@ -242,14 +244,15 @@ export default async function IntakeDeadlinePage({
 
         <div className="overflow-x-auto rounded-xl border border-line">
           <table className="w-full min-w-[36rem] border-collapse text-left font-body text-sm">
+<caption className="sr-only">{hub.intakeName} intake application deadlines by university</caption>
             <thead>
               <tr className="border-b border-line bg-mist">
-                <th className="px-3 py-2.5 font-semibold text-ink">University</th>
-                <th className="px-3 py-2.5 font-semibold text-ink">Level</th>
-                <th className="px-3 py-2.5 font-semibold text-ink">
+                <th scope="col" className="px-3 py-2.5 font-semibold text-ink">University</th>
+                <th scope="col" className="px-3 py-2.5 font-semibold text-ink">Level</th>
+                <th scope="col" className="px-3 py-2.5 font-semibold text-ink">
                   Apply by
                 </th>
-                <th className="px-3 py-2.5 font-semibold text-ink">
+                <th scope="col" className="px-3 py-2.5 font-semibold text-ink">
                   Last checked
                 </th>
               </tr>

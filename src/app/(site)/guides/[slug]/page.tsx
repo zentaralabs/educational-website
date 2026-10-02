@@ -16,7 +16,8 @@ import {
 import { readingMinutes } from "@/lib/reading";
 import { RELATED_LIMIT, guideRelated } from "@/lib/related-content";
 import { RelatedLinks } from "@/components/site/RelatedLinks";
-import { SITE_NAME, SITE_URL } from "@/lib/site-config";
+import { ORGANIZATION_ID, personJsonLd } from "@/lib/author-jsonld";
+import { SITE_URL } from "@/lib/site-config";
 import { extractToc } from "@/lib/toc";
 import { JsonLd } from "@/lib/json-ld";
 import { pageMetadata } from "@/lib/page-metadata";
@@ -89,18 +90,9 @@ export default async function GuidePage({
     dateModified:
       guide.last_verified_at ?? guide.updated_at ?? guide.created_at ?? undefined,
     author: guide.author
-      ? {
-          "@type": "Person",
-          name: guide.author.name,
-          description: guide.author.credentials ?? undefined,
-        }
-      : { "@type": "Organization", name: SITE_NAME },
-    publisher: {
-      "@type": "Organization",
-      name: SITE_NAME,
-      url: SITE_URL,
-      logo: { "@type": "ImageObject", url: `${SITE_URL}/logo.png` },
-    },
+      ? personJsonLd(guide.author)
+      : { "@id": ORGANIZATION_ID },
+    publisher: { "@id": ORGANIZATION_ID },
   };
 
   const jsonLdBlocks: Record<string, unknown>[] = [

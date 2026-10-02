@@ -13,6 +13,8 @@ export function datasetJsonLd(opts: {
   keywords?: string[];
   variableMeasured?: string[];
   temporalCoverage?: string;
+  /** ISO date the dataset was last updated; mirrors the visible "updated" date. */
+  dateModified?: string;
 }) {
   return {
     "@context": "https://schema.org",
@@ -24,6 +26,7 @@ export function datasetJsonLd(opts: {
     isAccessibleForFree: true,
     creator: { "@id": `${SITE_URL}/#organization` },
     publisher: { "@id": `${SITE_URL}/#organization` },
+    ...(opts.dateModified ? { dateModified: opts.dateModified } : {}),
     ...(opts.keywords ? { keywords: opts.keywords } : {}),
     ...(opts.temporalCoverage
       ? { temporalCoverage: opts.temporalCoverage }

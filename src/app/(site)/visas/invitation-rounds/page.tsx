@@ -204,13 +204,14 @@ export default async function InvitationRoundsPage() {
               </h2>
               <div className="overflow-x-auto">
                 <table className="w-full border-collapse font-utility text-sm">
+<caption className="sr-only">SkillSelect invitation rounds: date, stream, invitations issued and minimum points</caption>
                   <thead>
                     <tr className="border-b border-ink/15 text-left text-xs tracking-wide text-slate uppercase">
-                      <th className="py-2 pr-4 font-semibold">Round date</th>
-                      <th className="py-2 pr-4 font-semibold">Visa</th>
-                      <th className="py-2 pr-4 font-semibold">Stream</th>
-                      <th className="py-2 pr-4 font-semibold">Invitations</th>
-                      <th className="py-2 font-semibold">Min points</th>
+                      <th scope="col" className="py-2 pr-4 font-semibold">Round date</th>
+                      <th scope="col" className="py-2 pr-4 font-semibold">Visa</th>
+                      <th scope="col" className="py-2 pr-4 font-semibold">Stream</th>
+                      <th scope="col" className="py-2 pr-4 font-semibold">Invitations</th>
+                      <th scope="col" className="py-2 font-semibold">Min points</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -224,7 +225,9 @@ export default async function InvitationRoundsPage() {
                           })}
                           {r.is_estimated && (
                             <span className="ml-1 text-status-pending">
-                              (projected)
+                              {r.round_date < new Date().toISOString().slice(0, 10)
+                                ? "(projected; official figures not yet published)"
+                                : "(projected)"}
                             </span>
                           )}
                         </td>

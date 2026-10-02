@@ -47,13 +47,14 @@ export function ComparisonTable({
   return (
     <div className="overflow-x-auto rounded-md border border-ink/15">
       <table className="w-full border-collapse font-body text-sm">
+<caption className="sr-only">University comparison: country, selectivity, tuition and required tests</caption>
         <thead>
           <tr>
-            <th className="border-b border-ink/15 px-4 py-3 text-left font-body text-xs font-semibold tracking-wide text-slate uppercase">
+            <th scope="col" className="border-b border-ink/15 px-4 py-3 text-left font-body text-xs font-semibold tracking-wide text-slate uppercase">
               &nbsp;
             </th>
             {universities.map((u) => (
-              <th
+              <th scope="col"
                 key={u.id}
                 className="border-b border-ink/15 px-4 py-3 text-left font-display text-base font-semibold text-ink"
               >
@@ -70,7 +71,7 @@ export function ComparisonTable({
         <tbody>
           {ROWS.map((row) => (
             <tr key={row.label} className="border-b border-ink/10 last:border-b-0">
-              <th className="px-4 py-2.5 text-left font-body text-xs font-semibold tracking-wide text-slate uppercase">
+              <th scope="row" className="px-4 py-2.5 text-left font-body text-xs font-semibold tracking-wide text-slate uppercase">
                 {row.label}
               </th>
               {universities.map((u) => (

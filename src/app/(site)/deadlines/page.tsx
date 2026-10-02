@@ -40,6 +40,18 @@ export default async function DeadlinesPage() {
     listPublishedUniversityOptions(),
   ]);
 
+  // The explorer serialises its props into the page's RSC payload, on top of
+  // the static fallback list already in the HTML. It only renders a handful
+  // of fields, so drop the nested country objects (unused by the row UI) to
+  // keep that second copy small.
+  const initialRows = deadlines.map((d) => ({
+    ...d,
+    country: null,
+    university: d.university
+      ? { name: d.university.name, slug: d.university.slug }
+      : null,
+  }));
+
   const indexedUniversities = universities.filter((u) =>
     DEADLINE_PAGE_INDEXED.has(u.slug),
   );
@@ -117,7 +129,7 @@ export default async function DeadlinesPage() {
 
       <Suspense fallback={<DeadlinesStaticList deadlines={deadlines} />}>
         <DeadlinesExplorer
-          initialRows={deadlines}
+          initialRows={initialRows}
           initialTotalCount={totalCount}
           pageSize={pageSize}
           options={options}

@@ -252,12 +252,13 @@ export default async function Home() {
               </div>
               <div className="overflow-x-auto rounded-2xl border border-line">
                 <table className="w-full min-w-[36rem] border-collapse text-left">
+<caption className="sr-only">Next application deadlines for international students, by university and intake</caption>
                   <thead>
                     <tr className="bg-mist">
-                      <th className={thClass}>University</th>
-                      <th className={thClass}>Intake</th>
-                      <th className={thClass}>Apply by</th>
-                      <th className={thClass}>Status</th>
+                      <th scope="col" className={thClass}>University</th>
+                      <th scope="col" className={thClass}>Intake</th>
+                      <th scope="col" className={thClass}>Apply by</th>
+                      <th scope="col" className={thClass}>Status</th>
                     </tr>
                   </thead>
                   <tbody>
