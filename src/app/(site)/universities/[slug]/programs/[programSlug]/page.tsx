@@ -18,6 +18,7 @@ import {
   isProgramIndexable,
   resolveProgramSlugById,
 } from "@/lib/queries/public-programs";
+import { filterOccupationsForProgram } from "@/lib/program-occupation-evidence";
 import { JsonLd } from "@/lib/json-ld";
 import { TITLE_MAX, composeTitle, pageMetadata } from "@/lib/page-metadata";
 import { parseCurriculum } from "@/lib/curriculum-parser";
@@ -133,7 +134,14 @@ export default async function ProgramDetailPage({
     notFound();
   }
 
-  const occupations = await getProgramOccupations(program.id);
+  // Occupations are linked by subject, so the raw list is the same on every
+  // program in that subject. Keep only those the program's name evidences.
+  const subjectOccupations = await getProgramOccupations(program.id);
+  const occupations = filterOccupationsForProgram(
+    subjectOccupations,
+    program.name,
+    program.degree_level?.name,
+  );
   const relatedPrograms = program.subject
     ? await getRelatedProgramsBySubject(
         program.subject.slug,
@@ -511,6 +519,23 @@ export default async function ProgramDetailPage({
               points calculator
             </Link>{" "}
             before relying on this for a visa decision.
+          </p>
+        </ProfileSection>
+      )}
+
+      {occupations.length === 0 && subjectOccupations.length > 0 && (
+        <ProfileSection title="Career & PR pathway">
+          <p className="font-body text-sm text-slate">
+            Which careers {program.subject?.name ? `in ${program.subject.name} ` : ""}lead to
+            skilled migration depends on the occupation, not the degree title. See the{" "}
+            <Link href="/guides/skilled-occupation-lists-explained" className="underline underline-offset-2 hover:text-ink">
+              skilled occupation lists guide
+            </Link>{" "}
+            for which occupations are on each list, and the{" "}
+            <Link href="/visas/points-calculator" className="underline underline-offset-2 hover:text-ink">
+              points calculator
+            </Link>{" "}
+            to check where you stand.
           </p>
         </ProfileSection>
       )}
