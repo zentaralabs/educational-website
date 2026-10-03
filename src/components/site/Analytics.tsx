@@ -1,15 +1,17 @@
 "use client";
 
 import Script from "next/script";
-import { useSyncExternalStore } from "react";
+import { useEffect, useSyncExternalStore } from "react";
 import { cookieConsentStore } from "@/lib/cookie-consent";
 import { SITE_URL } from "@/lib/site-config";
 
 /**
- * Loads GA4 only when both (a) NEXT_PUBLIC_GA_MEASUREMENT_ID is actually
- * set — inert until analytics is really configured — and (b) the visitor
- * has accepted the cookie consent banner. Matches the claim on /privacy
- * that "analytics only run after you accept the cookie consent banner."
+ * Loads GA4 whenever NEXT_PUBLIC_GA_MEASUREMENT_ID is set, using Google
+ * Consent Mode v2: storage defaults to "denied", so until the visitor
+ * accepts the cookie banner GA4 sets no cookies and sends only cookieless
+ * pings (aggregate page views). Accepting flips analytics_storage to
+ * "granted" and full measurement begins. This matches /privacy: no
+ * analytics cookie is set before consent.
  *
  * Both the script and event beacons are served first-party (see the
  * rewrites in next.config.ts) rather than from googletagmanager.com /
@@ -24,7 +26,15 @@ export function Analytics() {
     cookieConsentStore.getServerSnapshot,
   );
 
-  if (!measurementId || consent !== "accepted") return null;
+  useEffect(() => {
+    const gtag = (window as unknown as { gtag?: (...a: unknown[]) => void }).gtag;
+    if (typeof gtag !== "function") return;
+    gtag("consent", "update", {
+      analytics_storage: consent === "accepted" ? "granted" : "denied",
+    });
+  }, [consent]);
+
+  if (!measurementId) return null;
 
   return (
     <>
@@ -33,6 +43,14 @@ export function Analytics() {
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
+          var accepted = false;
+          try { accepted = window.localStorage.getItem('cookie-consent') === 'accepted'; } catch (e) {}
+          gtag('consent', 'default', {
+            analytics_storage: accepted ? 'granted' : 'denied',
+            ad_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied'
+          });
           gtag('js', new Date());
           gtag('config', '${measurementId}', { transport_url: '${SITE_URL}/api/hit' });
         `}
