@@ -79,8 +79,8 @@ function ToolCard({
 
 /**
  * Sticky house-ad columns in the empty margins either side of the page, on
- * wide desktops only (1600px+, where there is room beside the widest
- * content). They promote the site's own tools; the same slots can later
+ * wide desktops only (1400px+, where there is room beside the widest
+ * article column, 64rem). They promote the site's own tools; the same slots can later
  * hold affiliate or AdSense units.
  */
 export function HouseAdRails() {
@@ -88,13 +88,13 @@ export function HouseAdRails() {
   if (!showRails(pathname)) return null;
 
   const rail =
-    "pointer-events-none absolute inset-y-0 hidden w-44 min-[1600px]:block";
+    "pointer-events-none absolute inset-y-0 hidden w-[9.5rem] min-[1400px]:block";
 
   return (
     <>
       <aside
         aria-label="Free tools"
-        className={`${rail} left-[calc(50%-36rem-1.5rem-11rem)]`}
+        className={`${rail} left-[calc(50%-32rem-1rem-9.5rem)]`}
       >
         <div className="pointer-events-auto sticky top-24 flex flex-col gap-4 pt-8">
           <ToolCard
@@ -129,7 +129,7 @@ export function HouseAdRails() {
 
       <aside
         aria-label="Free tools"
-        className={`${rail} right-[calc(50%-36rem-1.5rem-11rem)]`}
+        className={`${rail} right-[calc(50%-32rem-1rem-9.5rem)]`}
       >
         <div className="pointer-events-auto sticky top-24 flex flex-col gap-4 pt-8">
           <div
