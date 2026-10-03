@@ -42,7 +42,7 @@ export default function InternationalHubPage() {
 
       <Breadcrumbs items={breadcrumbs} />
 
-      <h1 className="mt-2 font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
+      <h1 className="page-title">
         Study in Australia from your country
       </h1>
 

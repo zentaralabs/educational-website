@@ -332,17 +332,17 @@ export default async function ComparisonPage({
 
         <div>
           <Breadcrumbs items={breadcrumbs} />
-          <div className="rounded-2xl bg-gradient-to-br from-ink/[0.04] via-ink/[0.02] to-transparent p-6 sm:p-8">
-            <p className="flex items-center gap-2 font-utility text-[0.8rem] font-semibold tracking-wide text-slate uppercase">
+          <div className="page-hero">
+            <p className="page-eyebrow">
               <span className="inline-block h-1.5 w-1.5 rounded-full bg-status-open" />
               Comparison
             </p>
-            <h1 className="mt-2 font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
+            <h1 className="page-title">
               {a.name} vs {b.name}
             </h1>
           </div>
 
-          <div className="mt-6 flex max-w-2xl flex-col gap-3">
+          <div className="mt-6 flow-copy flow-lead">
             {intro.map((p) => (
               <p key={p} className="font-body text-base leading-relaxed text-ink">
                 {p}
@@ -508,13 +508,13 @@ export default async function ComparisonPage({
       <div className="mx-auto max-w-3xl">
         <Breadcrumbs items={breadcrumbs} />
 
-        <div className="rounded-2xl bg-gradient-to-br from-ink/[0.04] via-ink/[0.02] to-transparent p-6 sm:p-8">
-          <p className="flex items-center gap-2 font-utility text-[0.8rem] font-semibold tracking-wide text-slate uppercase">
+        <div className="page-hero">
+          <p className="page-eyebrow">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-status-open" />
             Comparison
             {guide.country && ` · ${guide.country.name}`}
           </p>
-          <h1 className="mt-2 font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
+          <h1 className="page-title">
             {guide.title}
           </h1>
 
@@ -541,7 +541,7 @@ export default async function ComparisonPage({
 
       <div className="mx-auto max-w-3xl">
         <div className="mt-8">
-          <GuideContent content={guide.content} />
+          <GuideContent content={guide.content} variant="article" />
         </div>
 
         <div className="mt-10 flex items-center gap-2 rounded-xl bg-status-open/5 px-4 py-3">

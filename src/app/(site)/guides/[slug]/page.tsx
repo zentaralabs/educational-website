@@ -156,7 +156,7 @@ export default async function GuidePage({
           </>
         }
       >
-        <GuideContent content={guide.content} />
+        <GuideContent content={guide.content} variant="article" />
       </ArticleShell>
     </>
   );

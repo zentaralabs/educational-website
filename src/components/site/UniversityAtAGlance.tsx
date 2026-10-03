@@ -57,7 +57,7 @@ export function UniversityAtAGlance(p: AtAGlanceProps) {
 
   return (
     <section className="mt-6">
-      <h2 className="mb-3 font-display text-lg font-semibold text-ink">
+      <h2 className="mb-4 font-display text-2xl font-semibold text-ink sm:text-[1.75rem]">
         At a glance
       </h2>
       <FactBox>
@@ -104,19 +104,19 @@ export function UniversityAtAGlance(p: AtAGlanceProps) {
       </FactBox>
 
       {(goodFor.length > 0 || weakerFor.length > 0) && (
-        <div className="mt-3 grid gap-3 sm:grid-cols-2">
+        <div className="mt-4 grid gap-4 sm:grid-cols-2">
           {goodFor.length > 0 && (
-            <div className="rounded-xl border border-line bg-mist p-4">
-              <p className="font-body text-xs font-semibold tracking-wide text-slate uppercase">
+            <div className="rounded-2xl border border-teal/30 bg-teal/[0.08] p-5">
+              <p className="font-body text-sm font-semibold tracking-wider text-teal uppercase">
                 Good for
               </p>
-              <ul className="mt-2 flex flex-col gap-1.5">
+              <ul className="mt-3 flex flex-col gap-2.5">
                 {goodFor.map((g) => (
                   <li
                     key={g}
-                    className="flex gap-2 font-body text-sm text-ink"
+                    className="flex gap-2.5 font-body text-base leading-snug text-ink"
                   >
-                    <span aria-hidden className="text-status-open">✓</span>
+                    <span aria-hidden className="font-semibold text-teal">✓</span>
                     {g}
                   </li>
                 ))}
@@ -124,17 +124,17 @@ export function UniversityAtAGlance(p: AtAGlanceProps) {
             </div>
           )}
           {weakerFor.length > 0 && (
-            <div className="rounded-xl border border-line bg-mist p-4">
-              <p className="font-body text-xs font-semibold tracking-wide text-slate uppercase">
+            <div className="rounded-2xl border border-coral/30 bg-coral/[0.07] p-5">
+              <p className="font-body text-sm font-semibold tracking-wider text-coral uppercase">
                 Weaker fit for
               </p>
-              <ul className="mt-2 flex flex-col gap-1.5">
+              <ul className="mt-3 flex flex-col gap-2.5">
                 {weakerFor.map((w) => (
                   <li
                     key={w}
-                    className="flex gap-2 font-body text-sm text-ink"
+                    className="flex gap-2.5 font-body text-base leading-snug text-ink"
                   >
-                    <span aria-hidden className="text-slate">✕</span>
+                    <span aria-hidden className="font-semibold text-coral">✕</span>
                     {w}
                   </li>
                 ))}
@@ -143,7 +143,7 @@ export function UniversityAtAGlance(p: AtAGlanceProps) {
           )}
         </div>
       )}
-      <p className="mt-2 font-body text-xs text-slate">
+      <p className="mt-3 font-body text-sm text-slate">
         Derived from the data on this page. Individual courses set their own
         fees, entry scores, and intakes, so check the ones you are applying to.
       </p>

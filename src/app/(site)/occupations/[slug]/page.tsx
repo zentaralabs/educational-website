@@ -170,13 +170,13 @@ export default async function OccupationDetailPage({
 
       <Breadcrumbs items={breadcrumbs} />
 
-      <div className="rounded-2xl bg-gradient-to-br from-ink/[0.04] via-ink/[0.02] to-transparent p-6 sm:p-8">
-        <p className="flex items-center gap-2 font-utility text-[0.8rem] font-semibold tracking-wide text-slate uppercase">
+      <div className="page-hero">
+        <p className="page-eyebrow">
           <span className="inline-block h-1.5 w-1.5 rounded-full bg-status-open" />
           ANZSCO {occupation.anzsco_code}
           {occupation.skill_level != null && ` · Skill level ${occupation.skill_level}`}
         </p>
-        <h1 className="mt-2 font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
+        <h1 className="page-title">
           {occupation.name}
         </h1>
         {occupation.summary && (

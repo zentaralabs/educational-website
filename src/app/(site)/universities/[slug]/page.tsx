@@ -282,8 +282,8 @@ export default async function UniversityProfilePage({
 
       <Breadcrumbs items={breadcrumbs} />
 
-      <div className="rounded-2xl bg-gradient-to-br from-ink/[0.04] via-ink/[0.02] to-transparent p-6 sm:p-8">
-        <p className="flex items-center gap-2 font-utility text-[0.8rem] font-semibold tracking-wide text-slate uppercase">
+      <div className="page-hero">
+        <p className="page-eyebrow">
           <span className="inline-block h-1.5 w-1.5 rounded-full bg-status-open" />
           {[university.city, university.region, university.country?.name]
             .filter(Boolean)
@@ -291,7 +291,7 @@ export default async function UniversityProfilePage({
           {university.institution_type && ` · ${university.institution_type}`}
         </p>
         <div className="mt-2 flex flex-wrap items-center gap-3">
-          <h1 className="font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
+          <h1 className="page-title">
             {university.name}
           </h1>
           {overallStatus && <StatusBadge status={overallStatus} />}
@@ -330,7 +330,7 @@ export default async function UniversityProfilePage({
               href={university.apply_url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 rounded-full bg-ink px-5 py-2.5 font-body text-sm font-medium text-paper shadow-md shadow-ink/10 transition-all duration-150 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-ink/15"
+              className="inline-flex items-center gap-1.5 rounded-full bg-brand px-5 py-2.5 font-body text-sm font-medium text-paper shadow-md shadow-brand/25 transition-all duration-150 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-ink/15"
             >
               Apply ↗
             </OutboundLink>
@@ -396,7 +396,7 @@ export default async function UniversityProfilePage({
 
       {university.distinctive_summary && (
         <ProfileSection title="Overview">
-          <p className="rounded-xl border border-line bg-mist p-5 font-body text-base leading-relaxed text-ink">
+          <p className="lead-card">
             {university.distinctive_summary}
           </p>
         </ProfileSection>
@@ -404,8 +404,8 @@ export default async function UniversityProfilePage({
 
       {university.who_is_it_for && (
         <ProfileSection title="Who is this university for?">
-          <div className="rounded-xl border border-line bg-mist p-5">
-            <GuideContent content={university.who_is_it_for} />
+          <div className="rounded-2xl border border-line bg-mist p-6">
+            <GuideContent content={university.who_is_it_for} variant="section" />
           </div>
         </ProfileSection>
       )}
@@ -442,7 +442,7 @@ export default async function UniversityProfilePage({
             source={primarySource}
           />
           {university.selectivity_band && (
-            <p className="mt-2 font-body text-xs text-slate">
+            <p className="mt-2 font-body text-sm text-slate">
               Australian universities do not publish official acceptance rates.
               Selectivity here is our editorial band, not a percentage.
               {university.selectivity_note ? ` ${university.selectivity_note}` : ""}{" "}
@@ -512,7 +512,7 @@ export default async function UniversityProfilePage({
             </div>
           )}
 
-          <p className="mt-3 font-body text-xs text-slate">
+          <p className="mt-3 font-body text-sm text-slate">
             The living-cost figure is an estimate for{" "}
             {university.city?.split(",")[0] ?? "this location"}, anchored to the
             Australian Government&rsquo;s{" "}
@@ -536,7 +536,7 @@ export default async function UniversityProfilePage({
             {scholarships.map((s) => {
               const inner = (
                 <>
-                  <span className="font-body text-sm font-medium text-ink">
+                  <span className="font-body text-base font-medium text-ink">
                     {s.name}
                   </span>
                   {s.amount && (
@@ -567,7 +567,7 @@ export default async function UniversityProfilePage({
               );
             })}
           </ul>
-          <p className="mt-3 font-body text-xs text-slate">
+          <p className="mt-3 font-body text-sm text-slate">
             See all{" "}
             <Link
               href="/scholarships"
@@ -596,7 +596,7 @@ export default async function UniversityProfilePage({
             <ProgramsList programs={programs} universitySlug={university.slug} />
           )}
 
-          <p className="mt-4 font-body text-xs text-slate">
+          <p className="mt-4 font-body text-sm text-slate">
             Comparing options across universities?{" "}
             <Link href="/study" className="underline underline-offset-2 hover:text-ink">
               Browse programs by subject
@@ -608,7 +608,7 @@ export default async function UniversityProfilePage({
 
       {university.international_student_notes && (
         <ProfileSection title="For international students">
-          <p className="rounded-xl border border-line bg-mist p-5 font-body text-base leading-relaxed text-ink">
+          <p className="lead-card">
             {university.international_student_notes}
           </p>
         </ProfileSection>
@@ -625,7 +625,7 @@ export default async function UniversityProfilePage({
       {deadlines.length > 0 && (
         <ProfileSection title="Application deadlines">
           {deadlines.every((d) => d.is_rolling) ? (
-            <p className="mb-3 font-body text-sm text-slate">
+            <p className="mb-4 font-body text-base leading-relaxed text-slate">
               {university.name} assesses international applications on a rolling
               basis rather than by a single fixed date. Apply as early as you
               can: places in popular courses fill, and you need time afterward
@@ -633,7 +633,7 @@ export default async function UniversityProfilePage({
               your intake starts.
             </p>
           ) : (
-            <p className="mb-3 font-body text-sm text-slate">
+            <p className="mb-4 font-body text-base leading-relaxed text-slate">
               {university.name} runs fixed intakes rather than one hard deadline.
               The dates below are the recommended times to have your
               international application in, about three to four months before
@@ -768,7 +768,7 @@ export default async function UniversityProfilePage({
               sources={university.source_urls}
             />
             {(university.author || university.reviewed_by) && (
-              <p className="mt-2 font-body text-xs text-slate">
+              <p className="mt-2 font-body text-sm text-slate">
                 {university.author && <>Written by {university.author.name}</>}
                 {university.author?.credentials && ` (${university.author.credentials})`}
                 {university.reviewed_by && <>{university.author ? " · " : ""}Reviewed by {university.reviewed_by.name}</>}
@@ -776,7 +776,7 @@ export default async function UniversityProfilePage({
             )}
           </div>
         </div>
-        <p className="mt-3 font-body text-xs text-slate">
+        <p className="mt-3 font-body text-sm text-slate">
           Spotted an out-of-date deadline, fee, or requirement?{" "}
           <a
             href={`mailto:admin@wheretoapply.xyz?subject=${encodeURIComponent(

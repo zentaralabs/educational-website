@@ -178,7 +178,7 @@ export default async function BlogPostPage({
           </>
         }
       >
-        <GuideContent content={post.content} />
+        <GuideContent content={post.content} variant="article" />
       </ArticleShell>
     </>
   );

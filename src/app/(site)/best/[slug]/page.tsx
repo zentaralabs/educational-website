@@ -70,7 +70,7 @@ export default async function CollectionPage({
       <JsonLd data={itemListJsonLd} />
       <Breadcrumbs items={breadcrumbs} />
 
-      <h1 className="font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
+      <h1 className="page-title">
         {collection.title}
       </h1>
 

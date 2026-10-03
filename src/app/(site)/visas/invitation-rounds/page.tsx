@@ -127,7 +127,7 @@ export default async function InvitationRoundsPage() {
       <JsonLd data={faqJsonLd(faq)} />
       <Breadcrumbs items={breadcrumbs} />
 
-      <h1 className="font-display text-3xl font-semibold text-ink text-balance">
+      <h1 className="page-title">
         SkillSelect invitation rounds
       </h1>
       <p className="mt-2 font-body text-base text-slate">

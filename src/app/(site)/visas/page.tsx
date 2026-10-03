@@ -110,7 +110,7 @@ export default async function VisasIndexPage() {
 
       <Breadcrumbs items={breadcrumbs} />
 
-      <h1 className="font-display text-3xl font-semibold text-ink text-balance">
+      <h1 className="page-title">
         Australian student and skilled visa subclasses
       </h1>
       <div className="mt-3 flex flex-col gap-3 font-body text-base text-slate">

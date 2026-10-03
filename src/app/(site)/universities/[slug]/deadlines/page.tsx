@@ -199,7 +199,7 @@ export default async function UniversityDeadlinesPage({
 
       <Breadcrumbs items={breadcrumbs} />
 
-      <h1 className="mt-2 font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
+      <h1 className="page-title">
         {name} application deadlines {INTAKE_YEAR}
       </h1>
 
@@ -278,7 +278,7 @@ export default async function UniversityDeadlinesPage({
         </div>
       )}
 
-      <div className="mt-8 flex flex-col gap-3 font-body text-base leading-relaxed text-ink">
+      <div className="mt-8 flow-copy flow-lead">
         <p>
           These dates are for international applicants. Domestic dates, and the
           exact date for a specific course, can differ. Always confirm on{" "}

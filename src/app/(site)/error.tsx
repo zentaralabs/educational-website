@@ -16,7 +16,7 @@ export default function Error({
 
   return (
     <main className="mx-auto w-full max-w-2xl px-6 py-16">
-      <h1 className="font-display text-3xl font-semibold text-ink text-balance">
+      <h1 className="page-title">
         Something went wrong on our end
       </h1>
       <p className="mt-4 font-body text-base leading-relaxed text-slate">

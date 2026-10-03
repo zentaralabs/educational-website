@@ -104,7 +104,7 @@ export default async function UpdatesPage() {
 
       <Breadcrumbs items={breadcrumbs} />
 
-      <h1 className="font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
+      <h1 className="page-title">
         Australia student &amp; visa updates
       </h1>
       <p className="mt-3 max-w-2xl font-body text-base text-ink/80">

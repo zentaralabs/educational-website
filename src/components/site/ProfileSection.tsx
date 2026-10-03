@@ -13,7 +13,7 @@ export function ProfileSection({
   narrow?: boolean;
 }) {
   return (
-    <section className="mt-8 border-t border-ink/10 pt-8 first:mt-0 first:border-t-0 first:pt-0">
+    <section className="scroll-reveal mt-14 border-t border-line pt-10 first:mt-0 first:border-t-0 first:pt-0">
       <SectionHeading>{title}</SectionHeading>
       {narrow ? <div className="max-w-2xl">{children}</div> : children}
     </section>
@@ -34,12 +34,12 @@ export function Fact({
 }) {
   if (value === null || value === undefined || value === "") return null;
   return (
-    <div className="flex flex-col gap-0.5">
-      <dt className="font-body text-xs font-semibold tracking-wide text-slate uppercase">
+    <div className="flex flex-col gap-1 fact-tile rounded-xl border border-line bg-paper p-4 shadow-card">
+      <dt className="font-body text-[0.75rem] font-semibold tracking-wider text-slate uppercase">
         {label}
       </dt>
       <dd
-        className={`font-utility text-lg font-medium ${accent ? "text-status-open" : "text-ink"}`}
+        className={`font-utility text-xl font-semibold leading-snug ${accent ? "text-status-open" : "text-ink"}`}
       >
         {value}
       </dd>
@@ -51,7 +51,7 @@ export function Fact({
  * the Admissions/Cost & Aid/Academics sections. */
 export function FactBox({ children }: { children: React.ReactNode }) {
   return (
-    <dl className="grid grid-cols-2 gap-x-6 gap-y-4 rounded-xl border border-line bg-mist p-5 sm:grid-cols-3">
+    <dl className="grid grid-cols-1 gap-3 rounded-2xl border border-line bg-mist p-3 sm:grid-cols-2 sm:p-4 lg:grid-cols-3">
       {children}
     </dl>
   );

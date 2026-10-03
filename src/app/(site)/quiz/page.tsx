@@ -25,7 +25,7 @@ export default async function QuizPage() {
       <JsonLd data={breadcrumbJsonLd(breadcrumbs)} />
       <Breadcrumbs items={breadcrumbs} />
 
-      <h1 className="font-display text-3xl font-semibold text-ink text-balance">
+      <h1 className="page-title">
         Find the right university for me
       </h1>
       <p className="mt-2 font-body text-base text-slate">

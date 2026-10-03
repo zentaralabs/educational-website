@@ -120,18 +120,18 @@ export default async function OriginCountryPage({
 
       <Breadcrumbs items={breadcrumbs} />
 
-      <div className="rounded-2xl bg-gradient-to-br from-ink/[0.04] via-ink/[0.02] to-transparent p-6 sm:p-8">
-        <p className="flex items-center gap-2 font-utility text-[0.8rem] font-semibold tracking-wide text-slate uppercase">
+      <div className="page-hero">
+        <p className="page-eyebrow">
           <span className="inline-block h-1.5 w-1.5 rounded-full bg-status-open" />
           Study in Australia
         </p>
-        <h1 className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
+        <h1 className="flex flex-wrap items-center gap-x-3 gap-y-1 page-title">
           <span aria-hidden="true">{flagEmoji(c.code)}</span>
           <span>Study in Australia from {c.name}</span>
         </h1>
       </div>
 
-      <div className="mt-6 flex max-w-2xl flex-col gap-3 font-body text-base leading-relaxed text-ink">
+      <div className="mt-6 flow-copy flow-lead">
         {c.intro.map((p) => (
           <p key={p.slice(0, 24)}>{p}</p>
         ))}
@@ -168,7 +168,7 @@ export default async function OriginCountryPage({
       </ProfileSection>
 
       <ProfileSection narrow title={`Applying from ${c.name}`}>
-        <div className="flex flex-col gap-3 font-body text-base leading-relaxed text-ink">
+        <div className="flow-copy">
           {c.applying.map((p) => (
             <p key={p.slice(0, 24)}>{p}</p>
           ))}
@@ -193,7 +193,7 @@ export default async function OriginCountryPage({
 
       {c.pathways && c.pathways.length > 0 && (
         <ProfileSection narrow title="Pathway and twinning programs">
-          <div className="flex flex-col gap-3 font-body text-base leading-relaxed text-ink">
+          <div className="flow-copy">
             {c.pathways.map((p) => (
               <p key={p.slice(0, 24)}>{p}</p>
             ))}
@@ -202,7 +202,7 @@ export default async function OriginCountryPage({
       )}
 
       <ProfileSection narrow title="What it costs">
-        <div className="flex flex-col gap-3 font-body text-base leading-relaxed text-ink">
+        <div className="flow-copy">
           {localBudget && (
             <p>
               A first year in Australia costs roughly {localBudget} for a
@@ -243,7 +243,7 @@ export default async function OriginCountryPage({
 
       {c.scholarships && c.scholarships.items.length > 0 && (
         <ProfileSection narrow title={`Scholarships for ${c.demonym} students`}>
-          <div className="flex flex-col gap-3 font-body text-base leading-relaxed text-ink">
+          <div className="flow-copy">
             <p>{c.scholarships.intro}</p>
           </div>
           <ul className="mt-4 flex flex-col gap-2">
@@ -282,7 +282,7 @@ export default async function OriginCountryPage({
       )}
 
       <ProfileSection title="Your qualifications and English">
-        <div className="max-w-2xl flex flex-col gap-3 font-body text-base leading-relaxed text-ink">
+        <div className="flow-copy">
           {c.credentials.map((p) => (
             <p key={p.slice(0, 24)}>{p}</p>
           ))}
@@ -325,7 +325,7 @@ export default async function OriginCountryPage({
       </ProfileSection>
 
       <ProfileSection narrow title="The student visa">
-        <div className="flex flex-col gap-3 font-body text-base leading-relaxed text-ink">
+        <div className="flow-copy">
           <p>
             International students hold the subclass 500 student visa. You apply
             after you receive and accept an offer and the university issues a
@@ -351,7 +351,7 @@ export default async function OriginCountryPage({
       </ProfileSection>
 
       <ProfileSection narrow title="After you graduate">
-        <div className="flex flex-col gap-3 font-body text-base leading-relaxed text-ink">
+        <div className="flow-copy">
           <p>
             Most bachelor&rsquo;s and master&rsquo;s graduates qualify for a{" "}
             <Link

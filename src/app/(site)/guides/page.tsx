@@ -63,7 +63,7 @@ export default async function GuidesIndexPage() {
 
       <Breadcrumbs items={breadcrumbs} />
 
-      <h1 className="font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
+      <h1 className="page-title">
         Application guides for studying in Australia
       </h1>
       <p className="mt-2 max-w-2xl font-body text-base text-slate">

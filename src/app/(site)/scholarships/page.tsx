@@ -87,7 +87,7 @@ export default async function ScholarshipsIndexPage({
 
       <Breadcrumbs items={breadcrumbs} />
 
-      <h1 className="font-display text-3xl font-semibold text-ink text-balance">
+      <h1 className="page-title">
         Scholarships for studying in Australia
       </h1>
       {scholarships.length > 0 && (
@@ -96,7 +96,7 @@ export default async function ScholarshipsIndexPage({
           with value, level and deadline
         </p>
       )}
-      <div className="mt-2 flex flex-col gap-3 font-body text-base leading-relaxed text-slate">
+      <div className="mt-2 flow-copy flow-lead">
         <p>
           Government schemes, university awards, and external funding for
           international students, grouped by who runs them. Each entry says what

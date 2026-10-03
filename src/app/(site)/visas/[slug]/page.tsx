@@ -134,8 +134,8 @@ export default async function VisaPage({
 
       <Breadcrumbs items={breadcrumbs} />
 
-      <div className="rounded-2xl bg-gradient-to-br from-ink/[0.04] via-ink/[0.02] to-transparent p-6 sm:p-8">
-        <p className="flex items-center gap-2 font-utility text-[0.8rem] font-semibold tracking-wide text-slate uppercase">
+      <div className="page-hero">
+        <p className="page-eyebrow">
           <span className="inline-block h-1.5 w-1.5 rounded-full bg-status-open" />
           Subclass {visa.code}
           {" · "}
@@ -149,7 +149,7 @@ export default async function VisaPage({
             it for the bridging-visa row: its code is "010/020/030" (nobody
             searches that string) and its name already reads fine alone --
             same special-casing rationale as the meta_title override above. */}
-        <h1 className="mt-2 font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
+        <h1 className="page-title">
           {visa.name}
           {!visa.code.includes("/") && ` (Subclass ${visa.code})`}
         </h1>

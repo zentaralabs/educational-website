@@ -43,7 +43,7 @@ export default async function CompareIndexPage() {
 
       <Breadcrumbs items={breadcrumbs} />
 
-      <h1 className="font-display text-3xl font-semibold text-ink text-balance">
+      <h1 className="page-title">
         Compare Australian universities
       </h1>
       <p className="mt-2 font-body text-base text-slate">

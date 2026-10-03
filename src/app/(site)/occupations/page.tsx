@@ -43,7 +43,7 @@ export default async function OccupationsIndexPage() {
 
       <Breadcrumbs items={breadcrumbs} />
 
-      <h1 className="font-display text-3xl font-semibold text-ink text-balance">
+      <h1 className="page-title">
         Skilled occupations: which degree leads where
       </h1>
       <p className="mt-3 max-w-2xl font-body text-base text-slate">
