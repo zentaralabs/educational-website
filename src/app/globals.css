@@ -1040,3 +1040,48 @@ a[aria-current="page"][class*="rounded-full"] {
   color: white !important;
   border-color: var(--color-brand) !important;
 }
+
+/* Narrow side-rail signup: stack the input over the button. */
+.rail-signup form {
+  flex-direction: column;
+  align-items: stretch;
+}
+.rail-signup input,
+.rail-signup button {
+  width: 100%;
+  flex: none;
+}
+
+/* ---- House-ad side rails ------------------------------------------------
+   Anchored just outside the widest article column (64rem). 1280-1399px gets
+   compact cards (title + button); 1400px+ gets the full cards. */
+.house-rail {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 6.5rem;
+  pointer-events: none;
+}
+.house-rail-left { left: max(0.25rem, calc(50% - 32rem - 0.5rem - 6.5rem)); }
+.house-rail-right { right: max(0.25rem, calc(50% - 32rem - 0.5rem - 6.5rem)); }
+@media (min-width: 1280px) {
+  .house-rail { display: block; }
+}
+.rail-card { padding: 0.65rem; }
+.rail-title { font-size: 0.9rem; }
+.rail-cta { padding: 0.3rem 0.7rem; font-size: 0.75rem; }
+.rail-detail,
+.rail-full { display: none; }
+.rail-short { display: inline; }
+@media (min-width: 1400px) {
+  .house-rail { width: 9.5rem; }
+  .house-rail-left { left: calc(50% - 32rem - 1rem - 9.5rem); }
+  .house-rail-right { right: calc(50% - 32rem - 1rem - 9.5rem); }
+  .rail-card { padding: 1rem; }
+  .rail-title { font-size: 1rem; }
+  .rail-cta { padding: 0.375rem 0.875rem; font-size: 0.8rem; }
+  .rail-detail { display: block; }
+  .rail-full { display: inline; }
+  .rail-short { display: none; }
+}
