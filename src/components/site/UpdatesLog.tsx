@@ -124,7 +124,17 @@ export function UpdatesLog({ items }: { items: UpdateItem[] }) {
                       </div>
 
                       <h3 className="mt-3 font-display text-xl font-semibold text-ink text-balance sm:text-2xl">
-                        {u.title}
+                        {u.detailUrl ? (
+                          <Link
+                            href={u.detailUrl}
+                            className="decoration-brand/40 decoration-2 underline-offset-4 hover:text-brand hover:underline"
+                          >
+                            {u.title}
+                            <span aria-hidden className="ml-1.5 text-brand">&rarr;</span>
+                          </Link>
+                        ) : (
+                          u.title
+                        )}
                       </h3>
                       {u.effectiveLabel && (
                         <p className="mt-1 font-utility text-sm text-slate">
