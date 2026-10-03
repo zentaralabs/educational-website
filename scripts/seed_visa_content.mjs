@@ -349,7 +349,9 @@ The level does not change what you are eligible for. It changes how complete you
 - Evidence of a welfare arrangement: either a Confirmation of Appropriate Accommodation and Welfare (CAAW) letter from your provider, or a nominated student guardian
 - Parental or legal guardian consent
 
-### If you are including family
+### If you are including family (exempt applicants only)
+
+From 2 October 2026 most applicants cannot include a partner or children. This list applies only if you meet an exemption category, such as being a PhD student, a DFAT or Defence-sponsored student, a foreign government scholarship recipient, or an eligible student from a Pacific or ASEAN country.
 
 - Marriage certificate, or evidence of a de facto relationship of at least twelve months
 - Birth certificates for dependent children
@@ -433,7 +435,7 @@ The visa requirements, the role of the Document Checklist Tool and its twice-yea
     excerpt:
       "What Overseas Student Health Cover pays for, what it does not, and how to avoid a gap that breaches your visa.",
     content:
-      "Overseas Student Health Cover (OSHC) is a mandatory condition of the [subclass 500](/visas/student-500). You must hold it for the entire length of your visa, from the day you arrive to the day the visa ends, not just for the length of your course. Budget roughly AUD 500 to 700 a year for a single policy, more for a couple or family.\n\n## What OSHC covers\n\n| Covered | Partly covered | Not covered by a standard policy |\n| --- | --- | --- |\n| GP visits | Prescription medicines (capped per item and per year) | Dental |\n| Public hospital treatment as a public patient | Some emergency ambulance | Optical |\n| Scheduled surgery in a public hospital | | Physiotherapy and other allied health |\n| Limited private hospital cover | | Elective cosmetic procedures |\n| Ambulance in most states | | Anything before a waiting period ends |\n\nProviders include Bupa, Medibank, Allianz Care, nib, ahm, and CBHS. Your university usually has a preferred provider that it can arrange with your enrolment, but you are free to buy your own policy and switch later.\n\n## Waiting periods to know about\n\n- **Pre-existing conditions:** up to 12 months before the policy will pay for treatment related to a condition you had when you took out the cover.\n- **Pregnancy:** a 12-month wait on most policies. If you are planning a family during your studies, factor this in early.\n- **Major dental and optical:** only on higher tiers, and usually with their own waiting periods.\n\n## The visa trap: never let it lapse\n\nCondition 8501 requires continuous cover. If there is a gap, even a few days between one policy ending and the next starting, you have breached a visa condition, and that can be raised against you when you apply for a [485](/visas/temporary-graduate-485) or any later visa.\n\nTwo rules keep you safe:\n\n1. Buy cover that ends **after** your expected visa end date, not on your course end date. Visas usually run a month or two past the course.\n2. If you [extend your visa](/guides/proving-funds-for-an-australian-student-visa), extend or re-buy your OSHC first, so the new policy is already in place when the new visa is granted.\n\n## Family members on your visa\n\nIf you add a partner or children to your student visa, they must be on an OSHC policy too. Cover is priced as single, couple, single-parent family, or family, and the jump from single to family is significant, often two to three times the single premium. Include it in your [financial capacity evidence](/guides/proving-funds-for-an-australian-student-visa).\n\n## Getting money back\n\nIf you leave Australia before your policy ends, finish your course early, or move onto a visa that gives you Medicare access (for example some partner or skilled visas), you can usually claim a pro-rata refund for the unused months. Keep the policy documents and apply to the provider directly.\n\n## Choosing a policy\n\nThe cheapest compliant policy meets the visa condition, and for a healthy single student that is often enough. Consider a mid tier if you wear glasses, expect dental work, or want shorter waiting periods. Compare the single-policy annual premium, the pharmaceutical cap, and whether ambulance is included in your state before you pick.",
+      "Overseas Student Health Cover (OSHC) is a mandatory condition of the [subclass 500](/visas/student-500). You must hold it for the entire length of your visa, from the day you arrive to the day the visa ends, not just for the length of your course. Budget roughly AUD 500 to 700 a year for a single policy, more for a couple or family.\n\n## What OSHC covers\n\n| Covered | Partly covered | Not covered by a standard policy |\n| --- | --- | --- |\n| GP visits | Prescription medicines (capped per item and per year) | Dental |\n| Public hospital treatment as a public patient | Some emergency ambulance | Optical |\n| Scheduled surgery in a public hospital | | Physiotherapy and other allied health |\n| Limited private hospital cover | | Elective cosmetic procedures |\n| Ambulance in most states | | Anything before a waiting period ends |\n\nProviders include Bupa, Medibank, Allianz Care, nib, ahm, and CBHS. Your university usually has a preferred provider that it can arrange with your enrolment, but you are free to buy your own policy and switch later.\n\n## Waiting periods to know about\n\n- **Pre-existing conditions:** up to 12 months before the policy will pay for treatment related to a condition you had when you took out the cover.\n- **Pregnancy:** a 12-month wait on most policies. If you are planning a family during your studies, factor this in early.\n- **Major dental and optical:** only on higher tiers, and usually with their own waiting periods.\n\n## The visa trap: never let it lapse\n\nCondition 8501 requires continuous cover. If there is a gap, even a few days between one policy ending and the next starting, you have breached a visa condition, and that can be raised against you when you apply for a [485](/visas/temporary-graduate-485) or any later visa.\n\nTwo rules keep you safe:\n\n1. Buy cover that ends **after** your expected visa end date, not on your course end date. Visas usually run a month or two past the course.\n2. If you apply for another student visa, extend or re-buy your OSHC first, so the new policy is already in place when the new visa is granted. See [proving you can afford it](/guides/proving-funds-for-an-australian-student-visa) for the funds evidence.\n\n## Family members on your visa\n\nIf you are exempt and include a partner or children in your student visa application (most applicants can no longer include family from 2 October 2026), they must be on an OSHC policy too. Cover is priced as single, couple, single-parent family, or family, and the jump from single to family is significant, often two to three times the single premium. Include it in your [financial capacity evidence](/guides/proving-funds-for-an-australian-student-visa).\n\n## Getting money back\n\nIf you leave Australia before your policy ends, finish your course early, or move onto a visa that gives you Medicare access (for example some partner or skilled visas), you can usually claim a pro-rata refund for the unused months. Keep the policy documents and apply to the provider directly.\n\n## Choosing a policy\n\nThe cheapest compliant policy meets the visa condition, and for a healthy single student that is often enough. Consider a mid tier if you wear glasses, expect dental work, or want shorter waiting periods. Compare the single-policy annual premium, the pharmaceutical cap, and whether ambulance is included in your state before you pick.",
     sources: [
       "https://www.studyaustralia.gov.au/en/plan-your-move/health-and-safety/oshc",
       "https://privatehealth.gov.au/health_insurance/overseas/overseas_student_health_cover.htm",
@@ -947,8 +949,7 @@ A lower charge applies if you are an eligible citizen of a Pacific Island countr
 
 Things that add to the charge:
 
-- **Each family member** you include costs an extra application charge, with a higher amount for an adult than for a child. See [bringing family on a student visa](/guides/bringing-family-on-an-australian-student-visa).
-- An adult family member who **cannot show functional English** is billed a second, large instalment before the visa is granted, unless they provide evidence of English.
+- **Each family member** you include costs an extra application charge. For most students the Home Affairs pricing table lists AUD 1,530 for each family member aged 18 or over and AUD 500 for each under 18. Most applicants can no longer include family from 2 October 2026, so this applies only if you are exempt. See [bringing your partner and children](/guides/bringing-family-on-an-australian-student-visa).
 - Paying by **card** adds a surcharge, usually around one to two percent depending on the card type.
 
 ## What that is in your own currency
@@ -989,9 +990,9 @@ That is before tuition, before flights, and before the AUD 29,710 you have to sh
 ## Where the cost goes up
 
 - **A longer course** means more years of OSHC bought upfront.
-- **Bringing a partner or children** adds an application charge each, more health cover, and possibly the second English instalment.
+- **Bringing a partner or children**, if you are exempt, adds an application charge each and more health cover.
 - **A refusal** means the AUD 2,500 is gone and a fresh application restarts the charges. A weak [Genuine Student statement](/guides/genuine-student-requirement-how-to-write-your-statement) is the most common reason for refusal.
-- **Applying inside Australia** to switch from another visa to a 500 can attract a subsequent temporary application charge on top.
+- **Applying inside Australia** can attract a subsequent temporary application charge, listed at AUD 700 for most students. From 2 October 2026 most applicants must lodge from outside Australia unless an exemption applies, so read [what changed](/blog/student-visa-rules-changed-2-october-2026-whats-in-force) before you plan to lodge onshore.
 
 For the full picture with tuition and city living costs, see [the real cost of studying in Australia](/guides/real-cost-of-studying-in-australia).
 
@@ -1001,7 +1002,7 @@ No. The application charge is not refunded if your visa is refused, or if you wi
 
 ## Can I pay the student visa charge in instalments?
 
-Not the main charge. It is paid in full at lodgement. The only split payment in the system is the second instalment for an adult family member without functional English, and that is billed to you later rather than chosen.
+Not the main charge. It is paid in full at lodgement. Home Affairs says a visa application charge can have a second instalment payable before the visa is granted, but its current pricing table lists none for the student visa. Use the Visa Pricing Estimator on the Home Affairs website to see your exact total before you lodge.
 
 ## Is the AUD 29,710 a fee I pay the government?
 
@@ -1230,7 +1231,7 @@ It is already past University B's safe date. Maria accepts University A's offer,
 
 ## Does this apply if I am already in Australia?
 
-No. Ministerial Direction 115 covers applications lodged from outside Australia. If you lodge a student visa from inside Australia, the department aims to assess applications broadly in the order they are received.
+No. Ministerial Direction 115 covers applications lodged from outside Australia. If you lodge a student visa from inside Australia, the department aims to assess applications broadly in the order they are received. From 2 October 2026 fewer applicants can lodge from inside Australia, because most temporary visa holders and most current student visa holders must now apply from outside it unless an exemption applies.
 
 ## Can my priority change after I lodge?
 
@@ -1716,7 +1717,9 @@ No. Your priority is locked in on the day you lodge. Later changes to the provid
     tags: ["visas", "australia", "student-visa", "skilled-migration"],
     excerpt:
       'Home Affairs Minister Tony Burke announced sweeping visa changes on 17 September 2026, including a family ban for most student visas that will hit Nepal and India hardest, a course-progression crackdown, a visitor visa "no further stay" condition, Working Holiday ballots, and equal points for construction trades.',
-    content: `Home Affairs Minister Tony Burke used a National Press Club address on 17 September 2026 to announce the biggest overhaul of Australia's temporary visa system in years. The changes are aimed at cutting net overseas migration from about 292,100 (the year to March 2026) to a budgeted 245,000 this financial year and 225,000 the year after. They will be made through regulation and changes to visa conditions rather than new legislation.
+    content: `**Update, 2 October 2026:** the student visa changes in this post took effect today. Home Affairs' own pages set out the detail, including who can still apply from inside Australia and the family exemptions. See [what is now in force](/blog/student-visa-rules-changed-2-october-2026-whats-in-force) and our corrected [guide to bringing your partner and children](/guides/bringing-family-on-an-australian-student-visa). The original report below is kept as published on 18 September.
+
+Home Affairs Minister Tony Burke used a National Press Club address on 17 September 2026 to announce the biggest overhaul of Australia's temporary visa system in years. The changes are aimed at cutting net overseas migration from about 292,100 (the year to March 2026) to a budgeted 245,000 this financial year and 225,000 the year after. They will be made through regulation and changes to visa conditions rather than new legislation.
 
 For students from Nepal and India, the single biggest change is this: most international students and graduates will no longer be able to bring a partner or children to Australia on their visa.
 
@@ -1736,9 +1739,9 @@ If you are applying for a student visa from Nepal or India and were planning to 
 
 Burke also announced a crackdown on what he called "visa hopping": students bouncing between courses and providers to extend their stay without a genuine study or migration purpose. Two changes follow from this.
 
-First, a student who wants to transfer to a different course or provider now generally needs to lodge a new student visa application, rather than simply switching enrolment.
+Home Affairs' rules, which took effect on 2 October, handle this through where a student can lodge. A current Student visa holder who wants another Student visa must now apply from outside Australia, unless they meet an exemption. The exemptions include finishing a main course within 12 more months with the same provider, and, after completing a main course that has an AQF level, progressing to a course at a higher AQF level. If the completed course was higher education, the next one must also be higher education at a higher education provider.
 
-Second, when a student progresses to a new course, it must be at a higher qualification level than the one their current visa was granted for. Burke's own example: a bachelor's degree graduate can apply to study a master's. A student cannot move down to a cheaper certificate or diploma course and expect to keep progressing their visa on that basis. "To hop around, up and down, to different institutions, and claim that what is actually just seeking a migration outcome as part of Australia's export of international education will come to an end as a model," Burke said.
+Burke's own example was that a bachelor's degree graduate can apply to study a master's. The official pages do not describe a separate rule about transferring enrolment mid-course, so check Home Affairs directly before you change course or provider.
 
 For anyone building a study plan around Australia, this reinforces something worth planning for from day one: pick your course level with your end pathway in mind, because you will not be able to use a downgrade to buy time later. Our [study to permanent residence pathway](/guides/study-to-permanent-residence-pathway-australia) guide walks through how course choice interacts with PR eligibility.
 
@@ -1773,7 +1776,7 @@ No. The government confirmed existing families already attached to a visa and in
 
 ## Can I switch to a cheaper course to extend my student visa?
 
-Not under the new rule. Course changes must now move to a higher qualification level than your current visa was granted for, and changing course or provider generally requires a new visa application rather than a simple enrolment switch.
+A current student visa holder who wants another student visa must now generally apply from outside Australia, unless an exemption applies. One exemption covers progressing to a higher AQF level after completing a main course, so a move to a cheaper, lower-level course would generally not qualify. Home Affairs does not describe a separate rule for changing course mid-visa, so check with Home Affairs before you switch.
 
 ## Does the visitor visa change stop me visiting Australia?
 
