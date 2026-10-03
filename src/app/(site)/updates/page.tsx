@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { FaqSection } from "@/components/site/FaqSection";
+import { UpdatesLog } from "@/components/site/UpdatesLog";
 import { LastVerified } from "@/components/site/LastVerified";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import { faqJsonLd, type FaqItem } from "@/lib/faq";
@@ -81,16 +82,6 @@ const faq: FaqItem[] = [
 export default async function UpdatesPage() {
   const updates = await listPublishedPolicyUpdates();
 
-  const byYear = new Map<string, typeof updates>();
-  for (const u of updates) {
-    const year = u.announced_date.slice(0, 4);
-    const list = byYear.get(year) ?? [];
-    list.push(u);
-    byYear.set(year, list);
-  }
-  const years = [...byYear.keys()].sort().reverse();
-
-  const latest = updates.find((u) => !u.is_estimated) ?? updates[0] ?? null;
   const latestVerified =
     updates
       .map((u) => u.last_verified_at)
@@ -130,133 +121,33 @@ export default async function UpdatesPage() {
         </p>
       </div>
 
-      {latest && (
-        <div className="mt-8 rounded-2xl border border-brand/25 bg-gradient-to-br from-brand/[0.08] to-sun/[0.12] p-6 sm:p-7">
-          <p className="inline-flex items-center gap-2 rounded-full bg-coral px-3 py-1 font-utility text-xs font-semibold tracking-wider text-white uppercase">
-            <span className="h-1.5 w-1.5 rounded-full bg-white" />
-            Latest update
-          </p>
-          <h2
-            id={`${latest.slug}-latest`}
-            className="mt-3 font-display text-2xl font-semibold text-ink text-balance"
-          >
-            {latest.title}
-          </h2>
-          <p className="mt-2 font-utility text-sm text-slate">
-            Announced {fmtDate(latest.announced_date)}
-            {effectiveLabel(latest.effective_date)
-              ? ` · ${effectiveLabel(latest.effective_date)}`
-              : ""}
-          </p>
-          <p className="mt-4 font-body text-base leading-relaxed text-ink">{latest.summary}</p>
-        </div>
-      )}
-
       {updates.length === 0 ? (
         <p className="mt-8 font-body text-base text-slate">
           No updates logged yet.
         </p>
       ) : (
-        <div className="mt-12 flex flex-col gap-10">
-          {years.map((year) => (
-            <section key={year}>
-              <h2 className="mb-5 inline-block rounded-full bg-ink px-4 py-1 font-utility text-sm font-semibold tracking-wider text-paper">
-                {year}
-              </h2>
-              <div className="flex flex-col gap-5">
-                {byYear.get(year)!.map((u) => (
-                  <article
-                    key={u.slug}
-                    id={u.slug}
-                    className="scroll-mt-24 rounded-2xl border border-line bg-paper p-5 shadow-card sm:p-6"
-                    style={{
-                      borderLeft: `5px solid ${CATEGORY_COLOR[u.category]}`,
-                    }}
-                  >
-                    <div className="flex flex-wrap items-center gap-x-3 gap-y-2 font-utility text-sm text-slate">
-                      <span
-                        className="rounded-full px-3 py-0.5 text-xs font-semibold tracking-wide text-white uppercase"
-                        style={{ background: CATEGORY_COLOR[u.category] }}
-                      >
-                        {CATEGORY_LABEL[u.category]}
-                      </span>
-                      <time dateTime={u.announced_date} className="font-semibold text-ink">
-                        {fmtDate(u.announced_date)}
-                      </time>
-                      {u.is_estimated && (
-                        <span className="text-status-pending">estimate</span>
-                      )}
-                      {effectiveLabel(u.effective_date) && (
-                        <span>{effectiveLabel(u.effective_date)}</span>
-                      )}
-                    </div>
-
-                    <h3 className="mt-3 font-display text-xl font-semibold text-ink text-balance sm:text-2xl">
-                      {u.title}
-                    </h3>
-                    <p className="mt-2 font-body text-base leading-relaxed text-ink/85">
-                      {u.summary}
-                    </p>
-
-                    {u.impact && (
-                      <p className="mt-4 rounded-xl border border-teal/30 bg-teal/[0.08] px-4 py-3 font-body text-base leading-relaxed text-ink">
-                        <span className="font-semibold text-teal">What to do: </span>
-                        {u.impact}
-                      </p>
-                    )}
-
-                    {u.affects && u.affects.length > 0 && (
-                      <ul className="mt-2.5 flex flex-wrap gap-1.5">
-                        {u.affects.map((a) => (
-                          <li
-                            key={a}
-                            className="rounded-full border border-line bg-mist px-3 py-1 font-body text-sm text-slate"
-                          >
-                            {a}
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-
-                    <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 border-t border-line pt-3 font-utility text-sm text-slate">
-                      {u.source_urls.length > 0 && (
-                        <span className="flex flex-wrap items-center gap-x-1.5">
-                          Source:
-                          {u.source_urls.map((url, i) => (
-                            <a
-                              key={url}
-                              href={url}
-                              target="_blank"
-                              rel="noopener noreferrer nofollow"
-                              className="underline decoration-slate/40 underline-offset-2 hover:text-ink hover:decoration-ink"
-                            >
-                              [{i + 1}]
-                            </a>
-                          ))}
-                        </span>
-                      )}
-                      {u.last_verified_at && (
-                        <span>
-                          Verified{" "}
-                          <time dateTime={u.last_verified_at}>
-                            {fmtDate(u.last_verified_at)}
-                          </time>
-                        </span>
-                      )}
-                      {u.detail_url && (
-                        <Link
-                          href={u.detail_url}
-                          className="font-semibold text-brand underline underline-offset-2"
-                        >
-                          Read our analysis &rarr;
-                        </Link>
-                      )}
-                    </div>
-                  </article>
-                ))}
-              </div>
-            </section>
-          ))}
+        <div className="mt-10">
+          <UpdatesLog
+            items={updates.map((u, idx) => ({
+              slug: u.slug,
+              title: u.title,
+              summary: u.summary,
+              impact: u.impact ?? null,
+              category: u.category,
+              categoryLabel: CATEGORY_LABEL[u.category],
+              color: CATEGORY_COLOR[u.category],
+              announced: u.announced_date,
+              announcedLabel: fmtDate(u.announced_date),
+              effectiveLabel: effectiveLabel(u.effective_date),
+              estimated: u.is_estimated,
+              affects: u.affects ?? [],
+              sources: u.source_urls,
+              verifiedLabel: u.last_verified_at ? fmtDate(u.last_verified_at) : null,
+              verifiedIso: u.last_verified_at ?? null,
+              detailUrl: u.detail_url ?? null,
+              isNewest: idx === 0,
+            }))}
+          />
         </div>
       )}
 
