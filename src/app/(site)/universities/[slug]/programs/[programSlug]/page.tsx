@@ -375,12 +375,17 @@ export default async function ProgramDetailPage({
 
       {curriculumTerms && curriculumTerms.length > 0 && (
         <ProfileSection title="Course structure">
-          <p className="mb-4 flex items-center gap-2 font-body text-sm text-slate">
-            <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-status-open/10 text-status-open">
-              <BookIcon className="h-3.5 w-3.5" />
-            </span>
-            {curriculumTerms.length} term{curriculumTerms.length === 1 ? "" : "s"} of coursework
-          </p>
+          {/* A parsed block is not necessarily a term (many programs store the
+              whole structure as one block), so only describe a count when
+              there are several; never claim "1 term" for a multi-year degree. */}
+          {curriculumTerms.length > 1 && (
+            <p className="mb-4 flex items-center gap-2 font-body text-sm text-slate">
+              <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-status-open/10 text-status-open">
+                <BookIcon className="h-3.5 w-3.5" />
+              </span>
+              Study plan in {curriculumTerms.length} parts
+            </p>
+          )}
           <div className="grid gap-4 sm:grid-cols-2">
             {curriculumTerms.map((term, i) => (
               <div
