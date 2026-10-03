@@ -39,6 +39,7 @@ function ToolCard({
   color,
   label,
   title,
+  short,
   body,
   cta,
 }: {
@@ -47,28 +48,31 @@ function ToolCard({
   color: string;
   label: string;
   title: string;
+  /** Shorter title for the compact (1280-1400px) rail. */
+  short: string;
   body: string;
   cta: string;
 }) {
   return (
     <div
-      className="rounded-2xl border border-line bg-paper p-4 shadow-card"
+      className="rail-card rounded-2xl border border-line bg-paper shadow-card"
       style={{ borderTop: `4px solid ${color}` }}
     >
       <p
-        className="font-utility text-[0.7rem] font-semibold tracking-wider uppercase"
+        className="rail-detail font-utility text-[0.7rem] font-semibold tracking-wider uppercase"
         style={{ color }}
       >
         {label}
       </p>
-      <p className="mt-1.5 font-display text-base leading-snug font-semibold text-ink">
-        {title}
+      <p className="rail-title mt-1.5 font-display leading-snug font-semibold text-ink">
+        <span className="rail-full">{title}</span>
+        <span className="rail-short">{short}</span>
       </p>
-      <p className="mt-1.5 font-body text-[0.8rem] leading-snug text-slate">{body}</p>
+      <p className="rail-detail mt-1.5 font-body text-[0.8rem] leading-snug text-slate">{body}</p>
       <Link
         href={href}
         onClick={() => trackEvent("house_ad_click", { slot })}
-        className="mt-3 inline-block rounded-full px-3.5 py-1.5 font-body text-[0.8rem] font-semibold text-white"
+        className="rail-cta mt-3 inline-block rounded-full font-body font-semibold text-white"
         style={{ background: color }}
       >
         {cta} &rarr;
@@ -79,22 +83,20 @@ function ToolCard({
 
 /**
  * Sticky house-ad columns in the empty margins either side of the page, on
- * wide desktops only (1400px+, where there is room beside the widest
- * article column, 64rem). They promote the site's own tools; the same slots can later
+ * laptops and up (1280px+): compact cards at 1280-1399, full cards from
+ * 1400. Anchored beside the widest article column (64rem). They promote the site's own tools; the same slots can later
  * hold affiliate or AdSense units.
  */
 export function HouseAdRails() {
   const pathname = usePathname();
   if (!showRails(pathname)) return null;
 
-  const rail =
-    "pointer-events-none absolute inset-y-0 hidden w-[9.5rem] min-[1400px]:block";
 
   return (
     <>
       <aside
         aria-label="Free tools"
-        className={`${rail} left-[calc(50%-32rem-1rem-9.5rem)]`}
+        className="house-rail house-rail-left"
       >
         <div className="pointer-events-auto sticky top-24 flex flex-col gap-4 pt-8">
           <ToolCard
@@ -103,8 +105,9 @@ export function HouseAdRails() {
             color="var(--color-brand)"
             label="Free tool"
             title="Not sure where to apply?"
+            short="Where to apply?"
             body="Answer a few questions and get a shortlist matched to your budget and English score."
-            cta="2-minute quiz"
+            cta="Quiz"
           />
           <ToolCard
             slot="left-wam"
@@ -112,6 +115,7 @@ export function HouseAdRails() {
             color="var(--color-teal)"
             label="Free tool"
             title="What is your WAM?"
+            short="Your WAM?"
             body="Convert your marks to Australia's grade average."
             cta="Calculate"
           />
@@ -121,28 +125,30 @@ export function HouseAdRails() {
             color="var(--color-violet)"
             label="Free tool"
             title="How many PR points do you have?"
+            short="Your PR points?"
             body="Check your points for the 189, 190 and 491 skilled visas."
-            cta="Points calculator"
+            cta="Points"
           />
         </div>
       </aside>
 
       <aside
         aria-label="Free tools"
-        className={`${rail} right-[calc(50%-32rem-1rem-9.5rem)]`}
+        className="house-rail house-rail-right"
       >
         <div className="pointer-events-auto sticky top-24 flex flex-col gap-4 pt-8">
           <div
-            className="rounded-2xl border border-line bg-paper p-4 shadow-card"
+            className="rail-card rounded-2xl border border-line bg-paper shadow-card"
             style={{ borderTop: "4px solid var(--color-coral)" }}
           >
-            <p className="font-utility text-[0.7rem] font-semibold tracking-wider text-coral uppercase">
+            <p className="rail-detail font-utility text-[0.7rem] font-semibold tracking-wider text-coral uppercase">
               Stay ahead
             </p>
-            <p className="mt-1.5 font-display text-base leading-snug font-semibold text-ink">
-              Never miss a deadline
+            <p className="rail-title mt-1.5 font-display leading-snug font-semibold text-ink">
+              <span className="rail-full">Never miss a deadline</span>
+              <span className="rail-short">Deadline alerts</span>
             </p>
-            <p className="mt-1.5 mb-3 font-body text-[0.8rem] leading-snug text-slate">
+            <p className="rail-detail mt-1.5 mb-3 font-body text-[0.8rem] leading-snug text-slate">
               One email when a deadline or visa rule changes. No spam.
             </p>
             <div className="rail-signup">
@@ -155,8 +161,9 @@ export function HouseAdRails() {
             color="var(--color-sun)"
             label="Free tool"
             title="What will it cost?"
+            short="Total cost?"
             body="Tuition, rent, health cover and flights in one total."
-            cta="Cost calculator"
+            cta="Cost"
           />
         </div>
       </aside>
