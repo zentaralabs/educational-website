@@ -1040,3 +1040,14 @@ a[aria-current="page"][class*="rounded-full"] {
   color: white !important;
   border-color: var(--color-brand) !important;
 }
+
+/* Narrow side-rail signup: stack the input over the button. */
+.rail-signup form {
+  flex-direction: column;
+  align-items: stretch;
+}
+.rail-signup input,
+.rail-signup button {
+  width: 100%;
+  flex: none;
+}
