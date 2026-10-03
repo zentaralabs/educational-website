@@ -113,6 +113,27 @@ const updates = [
       "https://immi.homeaffairs.gov.au/help-support/meeting-our-requirements/english-language",
     ],
   },
+  {
+    slug: "student-visa-onshore-and-family-rules-2-october-2026",
+    title: "Student visa onshore and family rules change from 2 October 2026",
+    category: "student-visa",
+    announced_date: "2026-09-17",
+    effective_date: "2026-10-02",
+    summary:
+      "From 2 October 2026, most temporary visa holders must be outside Australia when they lodge, and when they are granted, a Student (subclass 500) or Student Guardian (subclass 590) visa. Current student visa holders must also apply offshore unless they meet an exemption, and student applicants can no longer include a partner or children unless an exemption applies. Family members can no longer be added after a student visa is granted, with no exemptions. Applications lodged before 2 October 2026 are assessed under the old rules.",
+    impact:
+      "Before you enrol, pay or lodge, check whether you must be outside Australia and whether an exemption applies. An application lodged onshore when you were required to be offshore is invalid, and so is one that includes an ineligible family member.",
+    affects: ["Student visa applicants","Current student visa holders","Students with partners or children"],
+    detail_url: "/blog/student-visa-rules-changed-2-october-2026-whats-in-force",
+    // Per-entry date: this row was checked on 2 Oct 2026, so it must not take
+    // the older shared TODAY on a re-seed.
+    last_verified_at: "2026-10-02",
+    sources: [
+      "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/changes-to-student-visa-application-rules-500-590",
+      "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/changes-to-student-visa-application-rules-500-590/applying-in-australia",
+      "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/changes-to-student-visa-application-rules-500-590/family-members",
+    ],
+  },
 ];
 
 const client = new pg.Client({
@@ -151,7 +172,7 @@ try {
         u.affects,
         u.detail_url,
         u.sources,
-        TODAY,
+        u.last_verified_at ?? TODAY,
       ],
     );
     n++;

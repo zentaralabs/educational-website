@@ -1788,6 +1788,78 @@ Yes, but places are capped at 45,000 through a ballot, and completing 88 days of
       "https://www.abc.net.au/news/2026-09-17/labor-to-unveil-delayed-migration-overhaul/107161834",
     ],
   },
+  {
+    slug: "student-visa-rules-changed-2-october-2026-whats-in-force",
+    title: "Student visa rules changed on 2 October: what is now in force",
+    published_at: "2026-10-02",
+    // Per-entry date so this does not take the shared TODAY used by older posts.
+    lastVerifiedAt: "2026-10-02",
+    tags: ["visas","australia","student-visa"],
+    excerpt:
+      "Home Affairs' new Student and Student Guardian visa rules took effect on 2 October 2026. Here is what the official pages say about applying from inside Australia, the exemptions, and bringing family.",
+    content: `The new Home Affairs rules for the Student (subclass 500) and Student Guardian (subclass 590) visas took effect today, 2 October 2026. They follow the [migration overhaul Tony Burke announced on 17 September](/blog/australia-migration-overhaul-september-2026-student-family-ban), which our earlier post covered. This post sets out what Home Affairs' own pages now say is in force. Applications lodged before 2 October 2026 continue to be assessed under the rules that applied when they were lodged.
+
+## Who now has to apply from outside Australia
+
+Most temporary visa holders must be outside Australia when they lodge a Student or Student Guardian visa application, and also when the visa is granted. Home Affairs lists the affected temporary visas on its Subclass 500 page. There are no exemptions for holders of those visas.
+
+Current Student visa holders applying for another Student visa must also lodge from outside Australia unless they meet one of the exemptions below. If you hold a Student visa as a dependant and want to apply as the main student, you must apply and be granted from outside Australia, with no exemptions. Your current visa is not affected. Current Student Guardian (590) holders can still lodge a further 590 application in Australia.
+
+## When a student visa holder can still apply in Australia
+
+| Exemption | Condition |
+|---|---|
+| Finishing your course | You need up to 12 more months after your original course end date, with the same provider. If you study a package of courses, it must be your main course. |
+| Sponsored study | You are sponsored by the Department of Foreign Affairs and Trade (DFAT) or Defence. |
+| PhD | You are applying to study a PhD. |
+| School | You are applying for primary or secondary school studies. |
+| Moving up a level | You have completed your main course that has an AQF level and are progressing to a higher AQF level. If you completed a higher education course, the next one must also be higher education at a higher education provider. |
+| Moving between AQF and non-AQF courses | You completed school and move to a course with no AQF level, or completed a course with no AQF level and move to one that has an AQF level. |
+| Provider default | You cannot continue because your education provider has defaulted. |
+
+## Partners and children
+
+Student visa applicants can no longer include a partner or dependent children, including in an application for a further Student visa, unless an exemption applies. The exemptions Home Affairs lists include PhD students, DFAT or Defence-sponsored students, foreign government scholarship recipients, and eligible students from Pacific and ASEAN countries.
+
+If your family members are already on your current Student visa, you may be able to include them in your next application if you apply in Australia. You may also include them, whether you apply in or outside Australia, if you need up to 12 more months to finish your main course or must lodge again because your provider defaulted. The main applicant and everyone included must be in the same location when the application is lodged.
+
+Family members can no longer be added after a Student visa has been granted. Home Affairs says there are no exemptions to that rule.
+
+## What happens if you apply in the wrong place
+
+Home Affairs says an onshore application lodged when you were required to be offshore is invalid, and that an invalid outcome could affect your visa status and your ability to apply again if your visa has already expired. An application that includes an ineligible family member is invalid for that person.
+
+If you apply from outside Australia and are not eligible to apply onshore, you may return to Australia on another valid visa while the application is processed, but you must be outside Australia when it is granted. You will not receive a bridging visa linked to an application lodged outside Australia.
+
+## What to do before you enrol or lodge
+
+Check whether you must apply offshore and whether an exemption covers you, before you enrol in a new course, pay fees or book travel. Our [Student visa 500 page](/visas/student-500) has the subclass overview, and the [genuine student statement guide](/guides/genuine-student-requirement-how-to-write-your-statement) and [proving funds guide](/guides/proving-funds-for-an-australian-student-visa) cover the offshore application itself. If you are exempt and planning to include family, our [guide to bringing your partner and children](/guides/bringing-family-on-an-australian-student-visa) covers the money and work rules. If a student visa has been refused, see [what to do if your student visa is refused](/guides/what-to-do-if-your-student-visa-is-refused). We also log this change on the [policy updates page](/updates).
+
+## What we have not verified
+
+This post covers the Home Affairs pages for subclasses 500 and 590 only. The family restriction announced on 17 September for the Temporary Graduate (485) visa is not covered by those pages, so check Home Affairs directly before relying on it. We have also not listed the temporary visas that count as "affected", which Home Affairs lists on its Subclass 500 page. Read the exemption wording on the Subclass 500 page before you lodge, as these rules decide whether an application is valid.
+
+## Can I apply for a student visa from inside Australia after 2 October 2026?
+
+Only in limited cases. Most temporary visa holders must lodge and be granted a Student visa from outside Australia. Current Student visa holders can still lodge in Australia if they meet an exemption, such as needing up to 12 more months for their main course, studying a PhD, or moving to a higher AQF level.
+
+## Can I still bring my partner or children on a student visa?
+
+Not unless an exemption applies. Home Affairs lists PhD students, DFAT or Defence-sponsored students, foreign government scholarship recipients, and eligible students from Pacific and ASEAN countries. Family members also cannot be added after the visa is granted.
+
+## Does this change my current student visa?
+
+No. Home Affairs says the changes do not affect your current Student visa. They apply when you lodge a new application.
+
+## What if I lodged my student visa application before 2 October 2026?
+
+It continues to be assessed under the rules that applied when you lodged it, including applications that included family members.`,
+    sources: [
+      "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/changes-to-student-visa-application-rules-500-590/applying-in-australia",
+      "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/changes-to-student-visa-application-rules-500-590/family-members",
+      "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/changes-to-student-visa-application-rules-500-590/what-you-need-to-do",
+    ],
+  },
 ];
 
 // ---------------------------------------------------------------------------
@@ -1870,7 +1942,7 @@ try {
         wc(p.content),
         AUTHOR_ID,
         p.published_at,
-        TODAY,
+        p.lastVerifiedAt ?? TODAY,
         p.sources,
       ],
     );
