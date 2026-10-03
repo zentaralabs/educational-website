@@ -52,6 +52,17 @@ function effectiveLabel(effective: string | null): string | null {
     : `In effect since ${fmtDate(effective)}`;
 }
 
+/* One colour per policy area, so the log is scannable at a glance. */
+const CATEGORY_COLOR: Record<PolicyUpdateCategory, string> = {
+  "student-visa": "var(--color-brand)",
+  "post-study-work": "var(--color-teal)",
+  "fees-and-charges": "var(--color-sun)",
+  "english-language": "var(--color-violet)",
+  "pr-pathway": "var(--color-coral)",
+  "university-sector": "var(--color-slate)",
+  other: "var(--color-slate)",
+};
+
 const faq: FaqItem[] = [
   {
     q: "How often is this page updated?",
@@ -104,35 +115,40 @@ export default async function UpdatesPage() {
 
       <Breadcrumbs items={breadcrumbs} />
 
-      <h1 className="page-title">
-        Australia student &amp; visa updates
-      </h1>
-      <p className="mt-3 max-w-2xl font-body text-base text-ink/80">
-        A dated log of policy changes that affect applying to study in
-        Australia: student visa charges, processing priorities, post-study
-        work, English-test recognition, and the international-student planning
-        level. Every entry links its official source and carries the date we
-        last checked it.
-      </p>
+      <div className="page-hero">
+        <p className="page-eyebrow">
+          <span className="inline-block h-1.5 w-1.5 rounded-full bg-status-open" />
+          {updates.length} dated, sourced changes
+        </p>
+        <h1 className="page-title">Australia student &amp; visa updates</h1>
+        <p>
+          A dated log of policy changes that affect applying to study in
+          Australia: student visa charges, processing priorities, post-study
+          work, English-test recognition, and the international-student
+          planning level. Every entry links its official source and carries the
+          date we last checked it.
+        </p>
+      </div>
 
       {latest && (
-        <div className="mt-8 rounded-2xl border border-status-open/30 bg-status-open/5 p-5">
-          <p className="font-body text-[0.8rem] font-semibold tracking-wide text-slate uppercase">
+        <div className="mt-8 rounded-2xl border border-brand/25 bg-gradient-to-br from-brand/[0.08] to-sun/[0.12] p-6 sm:p-7">
+          <p className="inline-flex items-center gap-2 rounded-full bg-coral px-3 py-1 font-utility text-xs font-semibold tracking-wider text-white uppercase">
+            <span className="h-1.5 w-1.5 rounded-full bg-white" />
             Latest update
           </p>
           <h2
             id={`${latest.slug}-latest`}
-            className="mt-2 font-display text-xl font-semibold text-ink"
+            className="mt-3 font-display text-2xl font-semibold text-ink text-balance"
           >
             {latest.title}
           </h2>
-          <p className="mt-1 font-utility text-xs text-slate">
+          <p className="mt-2 font-utility text-sm text-slate">
             Announced {fmtDate(latest.announced_date)}
             {effectiveLabel(latest.effective_date)
               ? ` · ${effectiveLabel(latest.effective_date)}`
               : ""}
           </p>
-          <p className="mt-3 font-body text-sm text-ink">{latest.summary}</p>
+          <p className="mt-4 font-body text-base leading-relaxed text-ink">{latest.summary}</p>
         </div>
       )}
 
@@ -144,23 +160,29 @@ export default async function UpdatesPage() {
         <div className="mt-12 flex flex-col gap-10">
           {years.map((year) => (
             <section key={year}>
-              <h2 className="mb-4 font-body text-[0.8rem] font-semibold tracking-wide text-slate uppercase">
+              <h2 className="mb-5 inline-block rounded-full bg-ink px-4 py-1 font-utility text-sm font-semibold tracking-wider text-paper">
                 {year}
               </h2>
-              <div className="flex flex-col gap-8">
+              <div className="flex flex-col gap-5">
                 {byYear.get(year)!.map((u) => (
                   <article
                     key={u.slug}
                     id={u.slug}
-                    className="scroll-mt-24 border-l-2 border-line pl-4"
+                    className="scroll-mt-24 rounded-2xl border border-line bg-paper p-5 shadow-card sm:p-6"
+                    style={{
+                      borderLeft: `5px solid ${CATEGORY_COLOR[u.category]}`,
+                    }}
                   >
-                    <div className="flex flex-wrap items-center gap-x-3 gap-y-1 font-utility text-xs text-slate">
-                      <time dateTime={u.announced_date}>
-                        {fmtDate(u.announced_date)}
-                      </time>
-                      <span className="rounded-sm border border-line bg-mist px-1.5 py-0.5 tracking-wide text-slate uppercase">
+                    <div className="flex flex-wrap items-center gap-x-3 gap-y-2 font-utility text-sm text-slate">
+                      <span
+                        className="rounded-full px-3 py-0.5 text-xs font-semibold tracking-wide text-white uppercase"
+                        style={{ background: CATEGORY_COLOR[u.category] }}
+                      >
                         {CATEGORY_LABEL[u.category]}
                       </span>
+                      <time dateTime={u.announced_date} className="font-semibold text-ink">
+                        {fmtDate(u.announced_date)}
+                      </time>
                       {u.is_estimated && (
                         <span className="text-status-pending">estimate</span>
                       )}
@@ -169,16 +191,16 @@ export default async function UpdatesPage() {
                       )}
                     </div>
 
-                    <h3 className="mt-1.5 font-body text-lg font-semibold text-ink">
+                    <h3 className="mt-3 font-display text-xl font-semibold text-ink text-balance sm:text-2xl">
                       {u.title}
                     </h3>
-                    <p className="mt-1.5 font-body text-sm leading-relaxed text-ink/80">
+                    <p className="mt-2 font-body text-base leading-relaxed text-ink/85">
                       {u.summary}
                     </p>
 
                     {u.impact && (
-                      <p className="mt-2 font-body text-sm leading-relaxed text-ink">
-                        <span className="font-semibold">What to do: </span>
+                      <p className="mt-4 rounded-xl border border-teal/30 bg-teal/[0.08] px-4 py-3 font-body text-base leading-relaxed text-ink">
+                        <span className="font-semibold text-teal">What to do: </span>
                         {u.impact}
                       </p>
                     )}
@@ -188,7 +210,7 @@ export default async function UpdatesPage() {
                         {u.affects.map((a) => (
                           <li
                             key={a}
-                            className="rounded-full border border-line bg-mist px-2.5 py-0.5 font-body text-xs text-slate"
+                            className="rounded-full border border-line bg-mist px-3 py-1 font-body text-sm text-slate"
                           >
                             {a}
                           </li>
@@ -196,7 +218,7 @@ export default async function UpdatesPage() {
                       </ul>
                     )}
 
-                    <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 font-utility text-xs text-slate">
+                    <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 border-t border-line pt-3 font-utility text-sm text-slate">
                       {u.source_urls.length > 0 && (
                         <span className="flex flex-wrap items-center gap-x-1.5">
                           Source:
@@ -224,7 +246,7 @@ export default async function UpdatesPage() {
                       {u.detail_url && (
                         <Link
                           href={u.detail_url}
-                          className="font-medium text-status-open underline underline-offset-2"
+                          className="font-semibold text-brand underline underline-offset-2"
                         >
                           Read our analysis &rarr;
                         </Link>
@@ -238,11 +260,11 @@ export default async function UpdatesPage() {
         </div>
       )}
 
-      <div className="mt-12 rounded-2xl border border-line bg-mist p-5">
+      <div className="mt-12 rounded-2xl border border-line bg-mist p-6">
         <h2 className="font-display text-lg font-semibold text-ink">
           How to use this page
         </h2>
-        <p className="mt-2 font-body text-sm text-slate">
+        <p className="mt-2 font-body text-base leading-relaxed text-slate">
           Each entry summarises one change and links the official page it comes
           from. Whether a change applies to you usually depends on when you
           lodge, and for processing priorities on your education provider.
