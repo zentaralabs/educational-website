@@ -77,12 +77,12 @@ export function SubjectComparisonTable({
           </caption>
           <thead>
             <tr className="bg-mist font-utility text-xs font-semibold tracking-wide text-slate uppercase">
-              <th className="px-3 py-2.5">University</th>
-              <th className="px-3 py-2.5">Program</th>
-              <th className="px-3 py-2.5">Level</th>
-              <th className="px-3 py-2.5 whitespace-nowrap">Duration</th>
-              <th className="px-3 py-2.5 whitespace-nowrap">Tuition / yr</th>
-              <th className="px-3 py-2.5">IELTS</th>
+              <th scope="col" className="px-3 py-2.5">University</th>
+              <th scope="col" className="px-3 py-2.5">Program</th>
+              <th scope="col" className="px-3 py-2.5">Level</th>
+              <th scope="col" className="px-3 py-2.5 whitespace-nowrap">Duration</th>
+              <th scope="col" className="px-3 py-2.5 whitespace-nowrap">Tuition / yr</th>
+              <th scope="col" className="px-3 py-2.5">IELTS</th>
             </tr>
           </thead>
           <tbody className="font-body text-sm">

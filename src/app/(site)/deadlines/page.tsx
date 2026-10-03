@@ -40,6 +40,18 @@ export default async function DeadlinesPage() {
     listPublishedUniversityOptions(),
   ]);
 
+  // The explorer serialises its props into the page's RSC payload, on top of
+  // the static fallback list already in the HTML. It only renders a handful
+  // of fields, so drop the nested country objects (unused by the row UI) to
+  // keep that second copy small.
+  const initialRows = deadlines.map((d) => ({
+    ...d,
+    country: null,
+    university: d.university
+      ? { name: d.university.name, slug: d.university.slug }
+      : null,
+  }));
+
   const indexedUniversities = universities.filter((u) =>
     DEADLINE_PAGE_INDEXED.has(u.slug),
   );
@@ -69,12 +81,12 @@ export default async function DeadlinesPage() {
 
       <Breadcrumbs items={breadcrumbs} />
 
-      <div className="rounded-2xl bg-gradient-to-br from-ink/[0.04] via-ink/[0.02] to-transparent p-6 sm:p-8">
-        <p className="flex items-center gap-2 font-utility text-[0.8rem] font-semibold tracking-wide text-slate uppercase">
+      <div className="page-hero">
+        <p className="page-eyebrow">
           <span className="inline-block h-1.5 w-1.5 rounded-full bg-status-open" />
           {totalCount} sourced deadlines
         </p>
-        <h1 className="mt-2 font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
+        <h1 className="page-title">
           Application deadline calendar
         </h1>
         <p className="mt-2 max-w-2xl font-body text-base text-ink/80">
@@ -117,7 +129,7 @@ export default async function DeadlinesPage() {
 
       <Suspense fallback={<DeadlinesStaticList deadlines={deadlines} />}>
         <DeadlinesExplorer
-          initialRows={deadlines}
+          initialRows={initialRows}
           initialTotalCount={totalCount}
           pageSize={pageSize}
           options={options}

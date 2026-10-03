@@ -54,6 +54,7 @@ export async function generateMetadata({
     description,
     path: `/scholarships/${slug}`,
     type: "article",
+    image: `/scholarships/${slug}/og`,
   });
 }
 
@@ -104,13 +105,13 @@ export default async function ScholarshipPage({
       )}
       <Breadcrumbs items={breadcrumbs} />
 
-      <div className="rounded-2xl bg-gradient-to-br from-ink/[0.04] via-ink/[0.02] to-transparent p-6 sm:p-8">
-        <p className="flex items-center gap-2 font-utility text-[0.8rem] font-semibold tracking-wide text-slate uppercase">
+      <div className="page-hero">
+        <p className="page-eyebrow">
           <span className="inline-block h-1.5 w-1.5 rounded-full bg-status-open" />
           {SCHOLARSHIP_SCOPE_LABELS[s.scope] ?? s.scope}
           {s.universities.length === 1 && ` · ${s.universities[0].name}`}
         </p>
-        <h1 className="mt-2 font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
+        <h1 className="page-title">
           {s.name}
         </h1>
         {s.amount && (
@@ -133,14 +134,21 @@ export default async function ScholarshipPage({
           }
         />
         <Fact
-          label="Deadline"
+          label={
+            s.deadline_date && s.deadline_date < new Date().toISOString().slice(0, 10)
+              ? "Most recent deadline"
+              : "Deadline"
+          }
           value={
             s.deadline_date
               ? new Date(s.deadline_date).toLocaleDateString("en-AU", {
                   day: "numeric",
                   month: "long",
                   year: "numeric",
-                })
+                }) +
+                (s.deadline_date < new Date().toISOString().slice(0, 10)
+                  ? " (closed; check the official page for the next round)"
+                  : "")
               : tiedToProgramDeadline
                 ? "Your program's application deadline"
                 : null
@@ -210,7 +218,7 @@ export default async function ScholarshipPage({
           href={s.external_url}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-8 inline-flex items-center gap-1.5 rounded-full bg-ink px-5 py-2.5 font-body text-sm font-medium text-paper shadow-md shadow-ink/10 transition-all duration-150 hover:-translate-y-0.5 hover:shadow-lg"
+          className="mt-8 inline-flex items-center gap-1.5 rounded-full bg-brand px-5 py-2.5 font-body text-sm font-medium text-paper shadow-md shadow-brand/25 transition-all duration-150 hover:-translate-y-0.5 hover:shadow-lg"
         >
           Official scholarship page ↗
         </a>

@@ -109,11 +109,11 @@ function daysUntil(dateStr: string): number {
   return Math.round((d.getTime() - today.getTime()) / 86_400_000);
 }
 
-const sectionTitleClass = "font-display text-2xl font-semibold text-ink text-balance";
+const sectionTitleClass = "section-title font-display text-2xl font-semibold text-ink text-balance sm:text-[1.75rem]";
 const moreLinkClass =
   "font-body text-sm font-medium text-status-open underline underline-offset-2 whitespace-nowrap";
 const thClass =
-  "px-4 py-3 font-utility text-xs font-semibold tracking-wide text-slate uppercase";
+  "px-4 py-3 font-utility text-xs font-semibold tracking-wide text-brand uppercase";
 
 export default async function Home() {
   const [
@@ -153,7 +153,8 @@ export default async function Home() {
                 className="animate-fade-up font-display text-[2rem] leading-[1.1] font-semibold text-ink text-balance sm:text-4xl lg:text-[2.7rem]"
                 style={{ animationDelay: "0ms" }}
               >
-                Study in Australia, sorted
+                Study in Australia,{" "}
+                <span className="text-gradient">sorted</span>
               </h1>
 
               <p
@@ -217,9 +218,9 @@ export default async function Home() {
 
           {/* POPULAR RIGHT NOW — quick jumps, sits under the search */}
           <section className="scroll-reveal mt-6">
-            <div className="rounded-2xl border border-line bg-mist p-6 sm:p-8">
+            <div className="rounded-2xl border border-line bg-paper p-6 sm:p-8">
               <div className="mb-2 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-                <h2 className="font-utility text-[0.8rem] font-semibold tracking-wide text-slate uppercase">
+                <h2 className="font-utility text-[0.8rem] font-semibold tracking-wide text-brand uppercase">
                   Popular right now
                 </h2>
                 <Link href="/best" className={moreLinkClass}>
@@ -231,7 +232,7 @@ export default async function Home() {
                   <li key={p.href} className="border-t border-line/70 first:border-t-0 sm:[&:nth-child(2)]:border-t-0 lg:[&:nth-child(3)]:border-t-0">
                     <Link
                       href={p.href}
-                      className="block py-2.5 font-body text-[0.95rem] font-medium text-ink transition-colors hover:text-status-open"
+                      className="block py-2.5 font-body text-[0.95rem] font-medium text-ink transition-colors hover:text-brand"
                     >
                       {p.label}
                     </Link>
@@ -252,12 +253,13 @@ export default async function Home() {
               </div>
               <div className="overflow-x-auto rounded-2xl border border-line">
                 <table className="w-full min-w-[36rem] border-collapse text-left">
+<caption className="sr-only">Next application deadlines for international students, by university and intake</caption>
                   <thead>
-                    <tr className="bg-mist">
-                      <th className={thClass}>University</th>
-                      <th className={thClass}>Intake</th>
-                      <th className={thClass}>Apply by</th>
-                      <th className={thClass}>Status</th>
+                    <tr className="bg-brand/10">
+                      <th scope="col" className={thClass}>University</th>
+                      <th scope="col" className={thClass}>Intake</th>
+                      <th scope="col" className={thClass}>Apply by</th>
+                      <th scope="col" className={thClass}>Status</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -327,16 +329,16 @@ export default async function Home() {
 
           {/* START HERE */}
           <section className="scroll-reveal mt-16">
-            <div className="rounded-2xl bg-mist p-6 sm:p-8">
+            <div className="rounded-2xl bg-gradient-to-br from-brand/10 via-teal/10 to-sun/15 p-6 sm:p-8">
               <h2 className={sectionTitleClass}>Start here</h2>
-              <ul className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              <ul className="task-list mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
                 {PRIMARY_TASKS.map(({ label, href, desc, Icon }) => (
                   <li key={href}>
                     <Link
                       href={href}
-                      className="group flex h-full flex-col gap-1 rounded-xl border border-line bg-paper p-4 transition-all duration-150 hover:-translate-y-0.5 hover:border-status-open/40"
+                      className="task-card group flex h-full flex-col gap-1 rounded-xl border border-line bg-paper p-4 shadow-card transition-all duration-150 hover:-translate-y-0.5"
                     >
-                      <Icon className="h-5 w-5 text-status-open" />
+                      <span className="task-icon"><Icon className="h-5 w-5" /></span>
                       <span className="mt-0.5 font-body text-[0.95rem] font-semibold text-ink group-hover:underline">
                         {label}
                       </span>
@@ -376,7 +378,7 @@ export default async function Home() {
                   <li key={u.slug}>
                     <Link
                       href={`/universities/${u.slug}`}
-                      className="card card-hover group flex h-full flex-col gap-1.5 p-4"
+                      className="card card-hover card-accent group flex h-full flex-col gap-1.5 p-4"
                     >
                       <span className="font-body text-[0.98rem] font-semibold text-ink group-hover:underline">
                         {u.name}

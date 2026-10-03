@@ -9,7 +9,7 @@ export function LegalPage({
 }) {
   return (
     <main className="mx-auto w-full max-w-2xl px-6 py-12">
-      <h1 className="font-display text-3xl font-semibold text-ink text-balance">
+      <h1 className="page-title">
         {title}
       </h1>
       <p className="mt-2 font-utility text-xs text-slate">Last updated {updated}</p>

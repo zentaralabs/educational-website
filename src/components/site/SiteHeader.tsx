@@ -13,8 +13,9 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-4 gap-y-3 px-6 py-4 sm:flex-nowrap">
         <Link
           href="/"
-          className="whitespace-nowrap font-display text-lg font-semibold tracking-tight text-ink"
+          className="flex items-center gap-2 whitespace-nowrap font-display text-lg font-semibold tracking-tight text-ink"
         >
+          <span aria-hidden className="logo-mark" />
           Where To Apply
         </Link>
 

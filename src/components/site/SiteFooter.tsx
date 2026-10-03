@@ -37,30 +37,30 @@ const SITE = [
 ];
 
 const linkCls =
-  "font-body text-sm text-slate transition-colors duration-150 hover:text-ink";
+  "font-body text-sm text-white/75 transition-colors duration-150 hover:text-white";
 const headingCls =
-  "font-body text-xs font-semibold tracking-wide text-ink uppercase";
+  "font-body text-xs font-semibold tracking-wider text-sun uppercase";
 
 export async function SiteFooter() {
   const countries = await listPublicCountries();
 
   return (
-    <footer className="mt-16 border-t border-line bg-mist">
+    <footer className="site-footer mt-16 text-white">
       <div className="mx-auto grid max-w-6xl gap-10 px-6 py-12 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <p className="font-display text-lg font-semibold text-ink">
+          <p className="font-display text-lg font-semibold text-white">
             Where To Apply
           </p>
-          <p className="mt-2 max-w-xs font-body text-sm text-slate">
+          <p className="mt-2 max-w-xs font-body text-sm text-white/75">
             Deadlines, entry requirements, tuition, scholarships, and visa
             pathways for studying at universities in{" "}
             {joinWithAnd(countries.map((c) => c.name))}.
           </p>
-          <p className="mt-3 font-body text-sm text-slate">
+          <p className="mt-3 font-body text-sm text-white/75">
             Browse by country:{" "}
             {countries.map((c, i) => (
               <span key={c.code}>
-                <Link href={`/deadlines?country=${c.code}`} className="underline underline-offset-2 hover:text-ink">
+                <Link href={`/deadlines?country=${c.code}`} className="underline underline-offset-2 text-white hover:text-sun">
                   {c.name}
                 </Link>
                 {i < countries.length - 1 && ", "}
@@ -110,10 +110,10 @@ export async function SiteFooter() {
       </div>
 
       <div
-        className="border-t border-line px-6 py-4"
+        className="border-t border-white/15 px-6 py-4"
         style={{ paddingBottom: "calc(1rem + var(--cookie-banner-h))" }}
       >
-        <p className="mx-auto max-w-6xl font-utility text-xs text-slate">
+        <p className="mx-auto max-w-6xl font-utility text-xs text-white/60">
           © {new Date().getFullYear()} Where To Apply. Not affiliated with any
           university. Information is independently researched and verified; see
           each page&rsquo;s &ldquo;last verified&rdquo; date and sources.

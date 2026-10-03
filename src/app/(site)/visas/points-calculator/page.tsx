@@ -67,7 +67,7 @@ export default function PointsCalculatorPage() {
 
       <Breadcrumbs items={breadcrumbs} />
 
-      <h1 className="font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
+      <h1 className="page-title">
         Australia skilled migration points calculator
       </h1>
       <p className="mt-3 font-body text-base leading-relaxed text-slate">

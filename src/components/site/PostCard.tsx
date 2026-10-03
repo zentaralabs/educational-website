@@ -24,20 +24,20 @@ export function PostCard({
   return (
     <Link
       href={href}
-      className={`group flex flex-col gap-2 rounded-2xl border transition-all duration-150 hover:-translate-y-0.5 hover:border-status-open/40 hover:shadow-[0_14px_36px_-18px_rgba(22,35,63,0.28)] ${
+      className={`group flex flex-col gap-2 rounded-2xl border transition-all duration-150 hover:-translate-y-0.5 hover:border-brand/50 hover:shadow-[0_14px_36px_-18px_rgba(46,91,234,0.35)] ${
         featured
-          ? "border-status-open/25 bg-status-open/[0.04] p-6 sm:p-8"
-          : "border-line bg-paper p-5 sm:p-6"
+          ? "border-brand/25 bg-gradient-to-br from-brand/[0.08] to-teal/[0.08] p-6 sm:p-8"
+          : "post-card border-line bg-paper p-5 sm:p-6"
       }`}
     >
       {(eyebrow || isNew) && (
         <span className="flex items-center gap-2 font-utility text-xs font-semibold tracking-wide uppercase">
           {isNew && (
-            <span className="rounded-full bg-status-open/10 px-2 py-0.5 text-status-open">
+            <span className="rounded-full bg-coral px-2 py-0.5 text-white">
               New
             </span>
           )}
-          {eyebrow && <span className="text-status-open">{eyebrow}</span>}
+          {eyebrow && <span className="text-brand">{eyebrow}</span>}
         </span>
       )}
       <span className="flex items-start justify-between gap-3">
@@ -48,7 +48,7 @@ export function PostCard({
         >
           {title}
         </span>
-        <ArrowUpRightIcon className="mt-1.5 h-4 w-4 flex-shrink-0 text-slate transition-colors duration-150 group-hover:text-status-open" />
+        <ArrowUpRightIcon className="mt-1.5 h-4 w-4 flex-shrink-0 text-slate transition-colors duration-150 group-hover:text-brand" />
       </span>
       {excerpt && (
         <span

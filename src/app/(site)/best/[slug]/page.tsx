@@ -70,7 +70,7 @@ export default async function CollectionPage({
       <JsonLd data={itemListJsonLd} />
       <Breadcrumbs items={breadcrumbs} />
 
-      <h1 className="font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
+      <h1 className="page-title">
         {collection.title}
       </h1>
 
@@ -98,10 +98,11 @@ export default async function CollectionPage({
       {collection.table && (
         <div className="mt-8 overflow-x-auto rounded-2xl border border-line">
           <table className="w-full border-collapse text-left font-body text-sm">
+<caption className="sr-only">{collection.title}: universities compared</caption>
             <thead>
               <tr className="bg-mist">
                 {collection.table.columns.map((c) => (
-                  <th key={c} className="whitespace-nowrap px-4 py-2.5 font-utility text-xs font-semibold tracking-wide text-slate uppercase">
+                  <th scope="col" key={c} className="whitespace-nowrap px-4 py-2.5 font-utility text-xs font-semibold tracking-wide text-slate uppercase">
                     {c}
                   </th>
                 ))}

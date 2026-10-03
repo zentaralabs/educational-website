@@ -11,8 +11,14 @@ import {
   getProgramsForOccupation,
   getPublishedOccupation,
   listPublishedOccupationSlugs,
+  listPublishedOccupations,
 } from "@/lib/queries/public-occupations";
 import { SITE_YEAR } from "@/lib/site-config";
+import {
+  clusterLead,
+  clusterRelatives,
+  isClusterDuplicate,
+} from "@/lib/occupation-clusters";
 import { JsonLd } from "@/lib/json-ld";
 import { composeTitle, pageMetadata } from "@/lib/page-metadata";
 
@@ -87,11 +93,12 @@ export async function generateMetadata({
     description,
     path: pageNum === 1 ? `/occupations/${slug}` : `/occupations/${slug}?page=${pageNum}`,
     type: "article",
+    image: `/occupations/${slug}/og`,
     // Thin without the reverse lookup — index only occupations that actually
     // resolve to at least one real published program. See the "SEO/keyword
     // assessment" note in memory: the reverse lookup is the whole point, not
     // the ANZSCO trivia every migration-agent SOL page already has.
-    robots: { index: programs.length > 0, follow: true },
+    robots: { index: programs.length > 0 && !isClusterDuplicate(slug), follow: true },
   });
 }
 
@@ -116,6 +123,19 @@ export default async function OccupationDetailPage({
   const data = await loadOccupation(slug);
   if (!data) notFound();
   const { occupation, programs } = data;
+
+  // Occupations that link the same set of degrees. Only the lead of each
+  // cluster is indexed (see lib/occupation-clusters); every member points at
+  // the others so the shared list has one obvious home.
+  const relativeSlugs = clusterRelatives(slug);
+  const leadSlug = clusterLead(slug);
+  const nameBySlug = relativeSlugs.length
+    ? new Map((await listPublishedOccupations()).map((o) => [o.slug, o.name]))
+    : new Map<string, string>();
+  const relatives = relativeSlugs.flatMap((s) => {
+    const name = nameBySlug.get(s);
+    return name ? [{ href: `/occupations/${s}`, label: name }] : [];
+  });
 
   const lists = listBadges(occupation);
   const pointsTested = occupation.mltssl || occupation.stsol || occupation.rol;
@@ -150,13 +170,13 @@ export default async function OccupationDetailPage({
 
       <Breadcrumbs items={breadcrumbs} />
 
-      <div className="rounded-2xl bg-gradient-to-br from-ink/[0.04] via-ink/[0.02] to-transparent p-6 sm:p-8">
-        <p className="flex items-center gap-2 font-utility text-[0.8rem] font-semibold tracking-wide text-slate uppercase">
+      <div className="page-hero">
+        <p className="page-eyebrow">
           <span className="inline-block h-1.5 w-1.5 rounded-full bg-status-open" />
           ANZSCO {occupation.anzsco_code}
           {occupation.skill_level != null && ` · Skill level ${occupation.skill_level}`}
         </p>
-        <h1 className="mt-2 font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
+        <h1 className="page-title">
           {occupation.name}
         </h1>
         {occupation.summary && (
@@ -198,6 +218,18 @@ export default async function OccupationDetailPage({
             {occupation.visa_pathway_note}
           </p>
         </section>
+      )}
+
+      {relatives.length > 0 && (
+        <RelatedLinks
+          className="mt-10 max-w-2xl"
+          heading={
+            leadSlug
+              ? "Same degree pathways: full list on the main page"
+              : "Occupations that share these degree pathways"
+          }
+          items={relatives}
+        />
       )}
 
       {universities.length > 0 && (

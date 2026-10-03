@@ -12,6 +12,7 @@ import { faqJsonLd } from "@/lib/faq";
 import { deadlineBadgeStatus, formatDeadlineDate } from "@/lib/deadline-status";
 import { universityDeadlineHref } from "@/lib/deadline-detail";
 import { getIntakeHub, INTAKE_HUB_SLUGS } from "@/lib/intakes";
+import { FOUNDER_JSON_LD, ORGANIZATION_ID } from "@/lib/author-jsonld";
 import { SITE_NAME, SITE_URL } from "@/lib/site-config";
 import {
   listIntakeDeadlines,
@@ -111,8 +112,8 @@ export default async function IntakeDeadlinePage({
       mainEntityOfPage: { "@type": "WebPage", "@id": pageUrl },
       datePublished: `${hub.lastVerified}T00:00:00Z`,
       dateModified: `${hub.lastVerified}T00:00:00Z`,
-      author: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
-      publisher: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
+      author: FOUNDER_JSON_LD,
+      publisher: { "@id": ORGANIZATION_ID },
     },
     {
       "@context": "https://schema.org",
@@ -120,6 +121,7 @@ export default async function IntakeDeadlinePage({
       name: `Australian university application deadlines: ${hub.intakeName} intake`,
       description: `Sourced ${hub.intakeName} intake application dates for universities in Australia, by degree level.`,
       url: pageUrl,
+      dateModified: `${hub.lastVerified}T00:00:00Z`,
       variableMeasured: "Application deadline date",
       isAccessibleForFree: true,
       creator: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
@@ -146,12 +148,12 @@ export default async function IntakeDeadlinePage({
 
       <Breadcrumbs items={breadcrumbs} />
 
-      <div className="rounded-2xl bg-gradient-to-br from-ink/[0.04] via-ink/[0.02] to-transparent p-6 sm:p-8">
-        <p className="flex items-center gap-2 font-utility text-[0.8rem] font-semibold tracking-wide text-slate uppercase">
+      <div className="page-hero">
+        <p className="page-eyebrow">
           <span className="inline-block h-1.5 w-1.5 rounded-full bg-status-open" />
           Australian university deadlines
         </p>
-        <h1 className="mt-2 font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
+        <h1 className="page-title">
           {hub.intakeName} intake deadlines for Australian universities
         </h1>
         <p className="mt-3 max-w-2xl font-body text-base text-ink/80">
@@ -180,14 +182,14 @@ export default async function IntakeDeadlinePage({
         </ul>
       </section>
 
-      <div className="mt-8 flex max-w-2xl flex-col gap-3 font-body text-base leading-relaxed text-ink">
+      <div className="mt-8 flow-copy flow-lead">
         {hub.intro.map((p) => (
           <p key={p.slice(0, 24)}>{p}</p>
         ))}
       </div>
 
       <ProfileSection narrow title={`Is the ${hub.intakeName} intake right for you?`}>
-        <div className="flex flex-col gap-3 font-body text-base leading-relaxed text-ink">
+        <div className="flow-copy">
           {hub.decision.map((p) => (
             <p key={p.slice(0, 24)}>{p}</p>
           ))}
@@ -242,14 +244,15 @@ export default async function IntakeDeadlinePage({
 
         <div className="overflow-x-auto rounded-xl border border-line">
           <table className="w-full min-w-[36rem] border-collapse text-left font-body text-sm">
+<caption className="sr-only">{hub.intakeName} intake application deadlines by university</caption>
             <thead>
               <tr className="border-b border-line bg-mist">
-                <th className="px-3 py-2.5 font-semibold text-ink">University</th>
-                <th className="px-3 py-2.5 font-semibold text-ink">Level</th>
-                <th className="px-3 py-2.5 font-semibold text-ink">
+                <th scope="col" className="px-3 py-2.5 font-semibold text-ink">University</th>
+                <th scope="col" className="px-3 py-2.5 font-semibold text-ink">Level</th>
+                <th scope="col" className="px-3 py-2.5 font-semibold text-ink">
                   Apply by
                 </th>
-                <th className="px-3 py-2.5 font-semibold text-ink">
+                <th scope="col" className="px-3 py-2.5 font-semibold text-ink">
                   Last checked
                 </th>
               </tr>

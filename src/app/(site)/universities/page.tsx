@@ -101,11 +101,11 @@ export default async function UniversitiesIndexPage() {
 
       <Breadcrumbs items={breadcrumbs} />
 
-      <h1 className="mt-2 font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
+      <h1 className="page-title">
         Australian universities for international students
       </h1>
 
-      <div className="mt-4 flex flex-col gap-3 font-body text-base leading-relaxed text-ink">
+      <div className="mt-4 flow-copy flow-lead">
         <p>
           All {universities.length} universities and colleges in Australia that
           enrol international students, with the numbers that actually decide

@@ -110,7 +110,7 @@ export default async function VisasIndexPage() {
 
       <Breadcrumbs items={breadcrumbs} />
 
-      <h1 className="font-display text-3xl font-semibold text-ink text-balance">
+      <h1 className="page-title">
         Australian student and skilled visa subclasses
       </h1>
       <div className="mt-3 flex flex-col gap-3 font-body text-base text-slate">
@@ -233,21 +233,22 @@ export default async function VisasIndexPage() {
           </h2>
           <div className="overflow-x-auto rounded-xl border border-line">
             <table className="w-full min-w-[40rem] border-collapse text-left font-body text-sm">
+<caption className="sr-only">Australian visa subclasses compared</caption>
               <thead>
                 <tr className="border-b border-line bg-mist">
-                  <th className="px-4 py-3 font-utility text-xs font-semibold tracking-wide text-slate uppercase">
+                  <th scope="col" className="px-4 py-3 font-utility text-xs font-semibold tracking-wide text-slate uppercase">
                     Visa
                   </th>
-                  <th className="px-4 py-3 font-utility text-xs font-semibold tracking-wide text-slate uppercase">
+                  <th scope="col" className="px-4 py-3 font-utility text-xs font-semibold tracking-wide text-slate uppercase">
                     Stay
                   </th>
-                  <th className="px-4 py-3 font-utility text-xs font-semibold tracking-wide text-slate uppercase">
+                  <th scope="col" className="px-4 py-3 font-utility text-xs font-semibold tracking-wide text-slate uppercase">
                     Points-tested
                   </th>
-                  <th className="px-4 py-3 font-utility text-xs font-semibold tracking-wide text-slate uppercase">
+                  <th scope="col" className="px-4 py-3 font-utility text-xs font-semibold tracking-wide text-slate uppercase">
                     Base charge
                   </th>
-                  <th className="px-4 py-3 font-utility text-xs font-semibold tracking-wide text-slate uppercase">
+                  <th scope="col" className="px-4 py-3 font-utility text-xs font-semibold tracking-wide text-slate uppercase">
                     Leads to PR
                   </th>
                 </tr>

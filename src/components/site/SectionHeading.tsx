@@ -17,14 +17,14 @@ export function SectionHeading({
 }) {
   return (
     <Tag
-      className={`mb-4 flex items-center gap-2 font-display text-xl font-semibold text-ink ${className}`}
+      className={`mb-5 flex items-center gap-3 font-display text-2xl font-semibold text-ink sm:text-[1.75rem] ${className}`}
     >
       <span
         aria-hidden
-        className="inline-block h-5 w-1 flex-shrink-0 rounded-full"
+        className="section-bar inline-block h-7 w-1.5 flex-shrink-0 rounded-full"
         style={{
           backgroundColor:
-            "color-mix(in srgb, var(--color-status-open) 60%, transparent)",
+            "var(--color-status-open)",
         }}
       />
       {children}

@@ -25,7 +25,7 @@ export default function NotFound() {
       <p className="font-utility text-xs font-semibold tracking-wide text-slate uppercase">
         404
       </p>
-      <h1 className="mt-2 font-display text-3xl font-semibold text-ink text-balance">
+      <h1 className="page-title">
         We couldn&rsquo;t find that page
       </h1>
       <p className="mt-4 font-body text-base leading-relaxed text-slate">

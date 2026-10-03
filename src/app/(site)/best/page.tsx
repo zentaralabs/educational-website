@@ -48,10 +48,10 @@ export default function BestIndexPage() {
 
       <Breadcrumbs items={breadcrumbs} />
 
-      <h1 className="font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
+      <h1 className="page-title">
         Best universities in Australia, by category
       </h1>
-      <div className="mt-2 flex max-w-2xl flex-col gap-3 font-body text-base leading-relaxed text-slate">
+      <div className="mt-2 flow-copy flow-lead">
         <p>
           There is no single &ldquo;best&rdquo; university, so this is a set of
           shortlists built from the data on this site: cheapest first year, most

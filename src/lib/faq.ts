@@ -202,7 +202,10 @@ export function visaFaq(v: VisaFaqInput): FaqItem[] {
   if (v.stay_period) {
     items.push({
       q: `How long can I stay on the subclass ${v.code} visa?`,
-      a: `${v.stay_period}.`,
+      // A bare "Permanent." or "Up to 2 years." is too thin to quote on its own
+      // (and `terminated` stops a source value that already ends in a period
+      // from doubling it), so frame it as a full answer.
+      a: `Stay period for the ${label}: ${terminated(v.stay_period)} The exact period and any conditions are set on your grant notice, so confirm yours on the Department of Home Affairs website or in VEVO before you plan travel, study or work around it.`,
     });
   }
   return items;
@@ -247,7 +250,10 @@ export function scholarshipFaq(s: SchFaqInput): FaqItem[] {
   if (s.deadline_date) {
     items.push({
       q: `When is the deadline for the ${s.name}?`,
-      a: `The recorded deadline is ${new Date(s.deadline_date).toLocaleDateString("en-AU", { day: "numeric", month: "long", year: "numeric" })}. Deadlines change each intake, so confirm on the official page.`,
+      a:
+        s.deadline_date < new Date().toISOString().slice(0, 10)
+          ? `The most recent recorded round closed on ${new Date(s.deadline_date).toLocaleDateString("en-AU", { day: "numeric", month: "long", year: "numeric" })}. Deadlines change each intake, so check the official page for the next round.`
+          : `The recorded deadline is ${new Date(s.deadline_date).toLocaleDateString("en-AU", { day: "numeric", month: "long", year: "numeric" })}. Deadlines change each intake, so confirm on the official page.`,
     });
   }
   return items;

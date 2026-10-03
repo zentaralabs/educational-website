@@ -35,10 +35,10 @@ export default async function StudyIndexPage() {
 
       <Breadcrumbs items={breadcrumbs} />
 
-      <h1 className="font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
+      <h1 className="page-title">
         Study by subject in Australia
       </h1>
-      <div className="mt-3 flex flex-col gap-3 font-body text-base leading-relaxed text-slate">
+      <div className="mt-3 flow-copy flow-lead">
         <p>
           Pick a field to see how many programs Australian universities offer,
           which universities teach it, the cheapest tuition on record, the

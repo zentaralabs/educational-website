@@ -96,7 +96,7 @@ export default async function QuizResultsPage({
         event="quiz_completed"
         eventParams={{ matches: matches.length, filters: criteria.length }}
       />
-      <h1 className="font-display text-3xl font-semibold text-ink text-balance">
+      <h1 className="page-title">
         Your matches
       </h1>
       <p className="mt-2 font-body text-base text-slate">

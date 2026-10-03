@@ -29,15 +29,15 @@ export function HowToApply({
   return (
     <div>
       {markdown ? (
-        <GuideContent content={markdown} />
+        <GuideContent content={markdown} variant="section" />
       ) : (
-        <ol className="ml-4 list-decimal space-y-2 font-body text-base leading-relaxed text-ink marker:font-utility marker:text-slate">
-          {GENERIC_STEPS.map((step) => (
-            <li key={step} className="pl-1.5">
-              {step}
-            </li>
-          ))}
-        </ol>
+        <div className="prose-guide prose-article prose-section font-body text-ink">
+          <ol>
+            {GENERIC_STEPS.map((step) => (
+              <li key={step}>{step}</li>
+            ))}
+          </ol>
+        </div>
       )}
 
       {applyUrl && (
@@ -47,13 +47,13 @@ export function HowToApply({
           href={applyUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-5 inline-flex items-center gap-1.5 rounded-full bg-ink px-5 py-2.5 font-body text-sm font-medium text-paper shadow-md shadow-ink/10 transition-all duration-150 hover:-translate-y-0.5 hover:shadow-lg"
+          className="mt-5 inline-flex items-center gap-1.5 rounded-full bg-brand px-5 py-2.5 font-body text-sm font-medium text-paper shadow-md shadow-brand/25 transition-all duration-150 hover:-translate-y-0.5 hover:shadow-lg"
         >
           Start your application at {universityName} ↗
         </OutboundLink>
       )}
 
-      <p className="mt-4 font-body text-xs text-slate">
+      <p className="mt-4 font-body text-sm text-slate">
         Requirements and steps can vary by course. Always confirm the process for
         your specific program on the university&rsquo;s official website before
         applying.

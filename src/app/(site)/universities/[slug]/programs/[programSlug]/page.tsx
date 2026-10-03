@@ -241,7 +241,7 @@ export default async function ProgramDetailPage({
 
       <Breadcrumbs items={breadcrumbs} />
 
-      <div className="mt-4 rounded-2xl bg-gradient-to-br from-ink/[0.04] via-ink/[0.02] to-transparent p-6 sm:p-8">
+      <div className="mt-4 page-hero">
         <p className="flex flex-wrap items-center gap-2 font-utility text-xs font-semibold tracking-wide text-status-open uppercase">
           <span className="inline-block h-1.5 w-1.5 rounded-full bg-status-open" />
           {program.degree_level?.name && <span>{program.degree_level.name}</span>}
@@ -257,7 +257,7 @@ export default async function ProgramDetailPage({
         </p>
         <div className="mt-2 flex flex-wrap items-start justify-between gap-4">
           <div>
-            <h1 className="font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
+            <h1 className="page-title">
               {program.name}
             </h1>
             <p className="mt-2 font-body text-base text-slate">
@@ -277,7 +277,7 @@ export default async function ProgramDetailPage({
               href={program.application_url ?? university.apply_url!}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex flex-shrink-0 items-center gap-1.5 rounded-full bg-ink px-5 py-2.5 font-body text-sm font-medium text-paper shadow-md shadow-ink/10 transition-all duration-150 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-ink/15"
+              className="inline-flex flex-shrink-0 items-center gap-1.5 rounded-full bg-brand px-5 py-2.5 font-body text-sm font-medium text-paper shadow-md shadow-brand/25 transition-all duration-150 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-ink/15"
             >
               Apply
               <ArrowUpRightIcon className="h-3.5 w-3.5" />
@@ -609,7 +609,7 @@ async function DiscontinuedProgram({
         <p className="font-utility text-xs font-semibold tracking-wide text-slate uppercase">
           {[archived.degree_level?.name, archived.subject?.name].filter(Boolean).join(" · ")}
         </p>
-        <h1 className="mt-2 font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
+        <h1 className="page-title">
           {archived.name}
         </h1>
         <p className="mt-4 font-body text-base leading-7 text-ink">

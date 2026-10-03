@@ -17,6 +17,7 @@ import {
 } from "@/components/site/visa-blocks";
 import { faqJsonLd, visaFaq } from "@/lib/faq";
 import { RELATED_LIMIT, guidesLinkingToVisa, visaRelated } from "@/lib/related-content";
+import { ORGANIZATION_ID, personJsonLd } from "@/lib/author-jsonld";
 import { SITE_URL, SITE_YEAR } from "@/lib/site-config";
 import { extractFaqItems } from "@/lib/extract-faq";
 import { authorInitials } from "@/lib/format";
@@ -69,6 +70,7 @@ export async function generateMetadata({
     description,
     path: `/visas/${slug}`,
     type: "article",
+    image: `/visas/${slug}/og`,
   });
 }
 
@@ -98,12 +100,25 @@ export default async function VisaPage({
     { label: `Subclass ${visa.code}` },
   ];
 
+  const visaUrl = `${SITE_URL}/visas/${slug}`;
+  // Article (not bare WebPage) so the byline, publisher and freshness date
+  // the page already shows are machine-readable too -- the guides carry the
+  // same block. `about` ties the page to the visa subclass it covers.
   const webPageJsonLd = {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    name: visa.name,
-    url: `${SITE_URL}/visas/${slug}`,
+    "@type": "Article",
+    "@id": `${visaUrl}#article`,
+    headline: visa.name,
+    description: visa.short_description ?? visa.summary ?? undefined,
+    url: visaUrl,
+    mainEntityOfPage: { "@type": "WebPage", "@id": visaUrl },
+    image: `${visaUrl}/og`,
     dateModified: visa.last_verified_at ?? undefined,
+    about: `Australian visa subclass ${visa.code}`,
+    author: visa.author
+      ? personJsonLd(visa.author)
+      : { "@id": ORGANIZATION_ID },
+    publisher: { "@id": ORGANIZATION_ID },
   };
 
   const jsonLdBlocks: Record<string, unknown>[] = [webPageJsonLd, breadcrumbJsonLd(breadcrumbs)];
@@ -119,8 +134,8 @@ export default async function VisaPage({
 
       <Breadcrumbs items={breadcrumbs} />
 
-      <div className="rounded-2xl bg-gradient-to-br from-ink/[0.04] via-ink/[0.02] to-transparent p-6 sm:p-8">
-        <p className="flex items-center gap-2 font-utility text-[0.8rem] font-semibold tracking-wide text-slate uppercase">
+      <div className="page-hero">
+        <p className="page-eyebrow">
           <span className="inline-block h-1.5 w-1.5 rounded-full bg-status-open" />
           Subclass {visa.code}
           {" · "}
@@ -134,7 +149,7 @@ export default async function VisaPage({
             it for the bridging-visa row: its code is "010/020/030" (nobody
             searches that string) and its name already reads fine alone --
             same special-casing rationale as the meta_title override above. */}
-        <h1 className="mt-2 font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
+        <h1 className="page-title">
           {visa.name}
           {!visa.code.includes("/") && ` (Subclass ${visa.code})`}
         </h1>
@@ -274,12 +289,13 @@ export default async function VisaPage({
           </div>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full border-collapse font-utility text-sm">
+<caption className="sr-only">Recent SkillSelect invitation rounds for subclass {visa.code}</caption>
               <thead>
                 <tr className="border-b border-ink/15 text-left text-xs tracking-wide text-slate uppercase">
-                  <th className="py-2 pr-4 font-semibold">Round</th>
-                  <th className="py-2 pr-4 font-semibold">Stream</th>
-                  <th className="py-2 pr-4 font-semibold">Invitations</th>
-                  <th className="py-2 font-semibold">Min points</th>
+                  <th scope="col" className="py-2 pr-4 font-semibold">Round</th>
+                  <th scope="col" className="py-2 pr-4 font-semibold">Stream</th>
+                  <th scope="col" className="py-2 pr-4 font-semibold">Invitations</th>
+                  <th scope="col" className="py-2 font-semibold">Min points</th>
                 </tr>
               </thead>
               <tbody>

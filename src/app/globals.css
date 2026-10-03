@@ -17,8 +17,17 @@
 
   /* Recessed surface + a visible-but-soft hairline. Introduced to give the
      UI depth — bg-ink/[0.02] and border-ink/10 were near-invisible. */
-  --color-mist: #f3f5f9;
-  --color-line: #e0e5ee;
+  --color-mist: #eef3ff;
+  --color-line: #d6e0f5;
+
+  /* Accent palette (2026-10-03): the original navy/sage/amber read as pale.
+     These carry decoration only (hero washes, tile edges, chapter numbers);
+     status-* stays the semantic open/pending/closed set. */
+  --color-brand: #2e5bea;
+  --color-teal: #0e9f8e;
+  --color-sun: #f5a524;
+  --color-coral: #ef5b6b;
+  --color-violet: #7c4dde;
 
   --color-status-open: #3f6b4f;
   --color-status-pending: #b8823d;
@@ -37,6 +46,12 @@
   --color-mist: var(--color-mist);
   --color-line: var(--color-line);
 
+  --color-brand: var(--color-brand);
+  --color-teal: var(--color-teal);
+  --color-sun: var(--color-sun);
+  --color-coral: var(--color-coral);
+  --color-violet: var(--color-violet);
+
   --color-status-open: var(--color-status-open);
   --color-status-pending: var(--color-status-pending);
   --color-status-closed: var(--color-status-closed);
@@ -46,6 +61,18 @@
   --font-display: var(--font-display);
   --font-body: var(--font-body);
   --font-utility: var(--font-utility);
+
+  /* Type scale nudged up (2026-10-03): the stock 12px / 14px steps read as
+     fine print on this audience's phones. Every text-xs / text-sm / text-base
+     in the site moves up together, so hierarchy is preserved. */
+  --text-xs: 0.8125rem;
+  --text-xs--line-height: 1.5;
+  --text-sm: 0.9375rem;
+  --text-sm--line-height: 1.6;
+  --text-base: 1.0625rem;
+  --text-base--line-height: 1.7;
+  --text-lg: 1.2rem;
+  --text-lg--line-height: 1.6;
 }
 
 body {
@@ -292,4 +319,737 @@ h3.font-display,
 }
 .prose-guide th {
   background: color-mix(in srgb, var(--color-ink) 4%, transparent);
+}
+
+/*
+ * Article variant — the rich long-form treatment for guides, blog posts and
+ * comparisons (GuideContent variant="article"). Same tokens, same markdown;
+ * it only changes how the text is paced and framed: a bigger reading size, a
+ * lead paragraph, numbered chapters, step lists, callouts and framed tables.
+ */
+.prose-article {
+  --chapter: 0;
+  counter-reset: chapter step;
+  font-size: 1.1875rem;
+  line-height: 1.8;
+  color: color-mix(in srgb, var(--color-ink) 92%, white);
+}
+
+@media (min-width: 640px) {
+  .prose-article {
+    font-size: 1.25rem;
+  }
+}
+
+.prose-article > * + * {
+  margin-top: 1.3em;
+}
+
+/* Lead paragraph: the first paragraph is the promise of the page. */
+.prose-article > p:first-child {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  line-height: 1.55;
+  color: var(--color-ink);
+  letter-spacing: -0.008em;
+}
+@media (min-width: 640px) {
+  .prose-article > p:first-child {
+    font-size: 1.6rem;
+  }
+}
+
+/* Chapters: numbered, ruled, large. */
+.prose-article h2 {
+  counter-increment: chapter;
+  margin-top: 3.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-line);
+  font-size: 1.75rem;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+@media (min-width: 640px) {
+  .prose-article h2 {
+    font-size: 2.05rem;
+  }
+}
+.prose-article h2:not(.is-question)::before {
+  content: counter(chapter, decimal-leading-zero);
+  display: block;
+  margin-bottom: 0.6rem;
+  font-family: var(--font-utility);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: var(--color-status-open);
+}
+.prose-article h2:not(.is-question)::after {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 3px;
+  margin-top: 0.85rem;
+  border-radius: 99px;
+  background: var(--color-status-pending);
+}
+
+/* Question-shaped h2s read as FAQ prompts, not chapters. */
+.prose-article h2.is-question {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  margin-top: 2.25rem;
+  padding: 1.1rem 1.25rem;
+  border: 1px solid var(--color-line);
+  border-radius: 0.9rem 0.9rem 0 0;
+  background: var(--color-mist);
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  font-weight: 650;
+  line-height: 1.35;
+}
+.prose-article h2.is-question::before {
+  content: "?";
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 99px;
+  background: var(--color-ink);
+  color: var(--color-paper);
+  font-family: var(--font-utility);
+  font-size: 0.95rem;
+}
+.prose-article h2.is-question + p {
+  margin-top: 0;
+  padding: 1rem 1.25rem 1.2rem;
+  border: 1px solid var(--color-line);
+  border-top: 0;
+  border-radius: 0 0 0.9rem 0.9rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.prose-article h3 {
+  position: relative;
+  margin-top: 2.4rem;
+  padding-left: 1rem;
+  font-size: 1.35rem;
+  line-height: 1.3;
+}
+.prose-article h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.2em;
+  bottom: 0.2em;
+  width: 4px;
+  border-radius: 99px;
+  background: var(--color-status-open);
+}
+
+/* Bold is the skim layer: a soft highlighter stroke makes it pop. */
+.prose-article p strong,
+.prose-article li strong {
+  font-weight: 650;
+  color: var(--color-ink);
+  background: linear-gradient(
+    transparent 58%,
+    color-mix(in srgb, var(--color-status-open) 18%, transparent) 58%
+  );
+  padding: 0 0.12em;
+  border-radius: 2px;
+}
+
+.prose-article a {
+  font-weight: 500;
+  text-decoration-thickness: 2px;
+  text-decoration-color: color-mix(in srgb, var(--color-status-open) 40%, transparent);
+  transition: text-decoration-color 0.15s ease, background 0.15s ease;
+}
+.prose-article a:hover {
+  text-decoration-color: var(--color-status-open);
+  background: color-mix(in srgb, var(--color-status-open) 10%, transparent);
+}
+
+/* Money amounts. */
+.figure-chip {
+  display: inline-block;
+  padding: 0.02em 0.45em;
+  border-radius: 99px;
+  background: color-mix(in srgb, var(--color-status-pending) 14%, white);
+  border: 1px solid color-mix(in srgb, var(--color-status-pending) 30%, white);
+  font-family: var(--font-utility);
+  font-size: 0.86em;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--color-ink);
+  white-space: nowrap;
+}
+
+/* Bullet lists: green ticks instead of dots. */
+.prose-article ul,
+.prose-article ol {
+  padding-left: 0;
+  list-style: none;
+}
+.prose-article li {
+  position: relative;
+  padding-left: 2rem;
+}
+.prose-article li + li {
+  margin-top: 0.7em;
+}
+.prose-article ul > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 99px;
+  background-color: color-mix(in srgb, var(--color-status-open) 14%, white);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%233f6b4f' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5.5 10.5l3 3 6-6.5'/%3E%3C/svg%3E");
+  background-size: 100%;
+}
+/* Nested bullets stay quiet. */
+.prose-article li ul > li::before {
+  width: 0.45rem;
+  height: 0.45rem;
+  top: 0.8em;
+  left: 0.4rem;
+  background-image: none;
+  background-color: var(--color-status-open);
+}
+
+/* Numbered lists become a step timeline. */
+.prose-article ol {
+  counter-reset: step;
+}
+.prose-article ol > li {
+  counter-increment: step;
+  padding-left: 3.4rem;
+  padding-bottom: 0.35rem;
+}
+.prose-article ol > li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0.15em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 99px;
+  background: var(--color-ink);
+  color: var(--color-paper);
+  font-family: var(--font-utility);
+  font-size: 0.95rem;
+  font-weight: 600;
+  z-index: 1;
+}
+.prose-article ol > li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: calc(1.125rem - 1px);
+  top: 2.5rem;
+  bottom: -1.1rem;
+  width: 2px;
+  background: var(--color-line);
+}
+
+/* Callouts: blockquotes and "Tip:" / "Note:" paragraphs. */
+.prose-article blockquote,
+.prose-article .callout {
+  padding: 1.1rem 1.25rem 1.1rem 1.4rem;
+  border: 1px solid color-mix(in srgb, var(--color-status-pending) 28%, white);
+  border-left: 5px solid var(--color-status-pending);
+  border-radius: 0.9rem;
+  background: color-mix(in srgb, var(--color-status-pending) 8%, white);
+  color: var(--color-ink);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+.prose-article blockquote > * + * {
+  margin-top: 0.7em;
+}
+.prose-article .callout-tip {
+  border-color: color-mix(in srgb, var(--color-status-open) 28%, white);
+  border-left-color: var(--color-status-open);
+  background: color-mix(in srgb, var(--color-status-open) 7%, white);
+}
+.prose-article .callout-warn {
+  border-color: color-mix(in srgb, var(--color-status-closed) 25%, white);
+  border-left-color: var(--color-status-closed);
+  background: color-mix(in srgb, var(--color-status-closed) 6%, white);
+}
+.prose-article .callout strong {
+  background: none;
+  padding: 0;
+}
+
+.prose-article hr {
+  border: 0;
+  height: 1.5rem;
+  background: radial-gradient(circle, var(--color-line) 0 3px, transparent 3.5px) center / 1.5rem 100% repeat-x;
+  width: 6rem;
+  margin-inline: auto;
+}
+
+/* Tables: a framed, scrollable card with a quiet header and row hover. */
+.prose-article .table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--color-line);
+  border-radius: 0.9rem;
+  box-shadow: var(--shadow-card);
+}
+.prose-article .table-wrap:focus-visible {
+  outline-offset: 0;
+}
+.prose-article table {
+  min-width: 34rem;
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+.prose-article th,
+.prose-article td {
+  border: 0;
+  border-bottom: 1px solid var(--color-line);
+  padding: 0.8rem 1rem;
+  vertical-align: top;
+}
+.prose-article th {
+  background: var(--color-mist);
+  font-family: var(--font-utility);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-slate);
+  white-space: nowrap;
+}
+.prose-article tbody tr:last-child td {
+  border-bottom: 0;
+}
+.prose-article tbody tr:hover td {
+  background: color-mix(in srgb, var(--color-status-open) 5%, white);
+}
+.prose-article td:first-child {
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.prose-article img {
+  border-radius: 0.9rem;
+}
+
+/* Thin reading-progress bar pinned under the sticky header (see
+   ReadingProgress). Driven by a CSS var set from scroll position. */
+.reading-progress {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 3px;
+  z-index: 60;
+  pointer-events: none;
+  background: transparent;
+}
+.reading-progress > span {
+  display: block;
+  height: 100%;
+  width: 100%;
+  transform-origin: left;
+  transform: scaleX(var(--read, 0));
+  background: linear-gradient(90deg, var(--color-status-open), var(--color-status-pending));
+}
+
+/* Section variant — the article look at in-page scale, for prose blocks that
+   sit inside a profile page (university "who is it for", how to apply). No
+   lead paragraph and no chapter numbering. */
+.prose-section {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+}
+@media (min-width: 640px) {
+  .prose-section {
+    font-size: 1.125rem;
+  }
+}
+.prose-section > p:first-child {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: normal;
+}
+.prose-section h2 {
+  margin-top: 2rem;
+  padding-top: 0;
+  border-top: 0;
+  font-size: 1.35rem;
+}
+.prose-section h2:not(.is-question)::before,
+.prose-section h2:not(.is-question)::after {
+  display: none;
+}
+.prose-section h3 {
+  font-size: 1.15rem;
+}
+.prose-section ol > li {
+  padding-left: 3rem;
+}
+
+/* Lead card — the one-paragraph "overview" blocks on profile pages. */
+.lead-card {
+  padding: 1.4rem 1.5rem;
+  border: 1px solid var(--color-line);
+  border-left: 5px solid var(--color-status-open);
+  border-radius: 1rem;
+  background: var(--color-mist);
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--color-ink);
+}
+@media (min-width: 640px) {
+  .lead-card {
+    font-size: 1.4rem;
+  }
+}
+
+/*
+ * Page chrome shared by every top-level page (replaces per-page utility
+ * strings): hero card, pill eyebrow, big headline.
+ */
+.page-hero {
+  border: 1px solid var(--color-line);
+  border-radius: 1.5rem;
+  padding: 1.75rem 1.4rem;
+  background:
+    radial-gradient(60rem 18rem at 100% 0%, color-mix(in srgb, var(--color-status-open) 10%, transparent), transparent 60%),
+    linear-gradient(135deg, var(--color-mist), var(--color-paper));
+}
+@media (min-width: 640px) {
+  .page-hero {
+    padding: 2.5rem 2.25rem;
+  }
+}
+
+.page-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 99px;
+  border: 1px solid color-mix(in srgb, var(--color-status-open) 25%, transparent);
+  background: color-mix(in srgb, var(--color-status-open) 10%, transparent);
+  font-family: var(--font-utility);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-status-open);
+}
+
+.page-title {
+  margin-top: 1rem;
+  font-family: var(--font-display);
+  font-size: 2.1rem;
+  line-height: 1.1;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--color-ink);
+  text-wrap: balance;
+}
+@media (min-width: 640px) {
+  .page-title {
+    font-size: 3rem;
+  }
+}
+/* An h1 that is not inside a hero (index pages) needs no eyebrow gap. */
+:not(.page-hero) > .page-title:first-child {
+  margin-top: 0;
+}
+
+/* Multi-paragraph prose blocks on hand-built pages (intros, per-country
+   notes). Same rhythm as the article body: roomy, with a lead paragraph. */
+.flow-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-width: 42rem;
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--color-ink);
+}
+@media (min-width: 640px) {
+  .flow-copy {
+    font-size: 1.1875rem;
+  }
+}
+.flow-copy strong {
+  font-weight: 650;
+  background: linear-gradient(
+    transparent 58%,
+    color-mix(in srgb, var(--color-status-open) 18%, transparent) 58%
+  );
+  padding: 0 0.12em;
+}
+.flow-lead > p:first-child {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  line-height: 1.55;
+  letter-spacing: -0.008em;
+}
+@media (min-width: 640px) {
+  .flow-lead > p:first-child {
+    font-size: 1.5rem;
+  }
+}
+
+/* Index pages: the paragraph right under the headline is the page's promise,
+   so it gets lead sizing, and bare headlines get a short accent bar. */
+.page-title + p:not([class*="font-utility"]) {
+  max-width: 40rem;
+  margin-top: 0.9rem;
+  font-size: 1.2rem;
+  line-height: 1.65;
+  color: var(--color-slate);
+}
+:not(.page-hero) > .page-title::after {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 4px;
+  margin-top: 0.9rem;
+  border-radius: 99px;
+  background: var(--color-status-pending);
+}
+
+
+/* ---- Colour pass -------------------------------------------------------- */
+
+/* A thin rainbow edge across the very top of every page. */
+body {
+  border-top: 4px solid transparent;
+  border-image: linear-gradient(
+      90deg,
+      var(--color-brand),
+      var(--color-teal),
+      var(--color-sun),
+      var(--color-coral)
+    )
+    1;
+}
+
+/* Heroes: a saturated wash instead of grey. */
+.page-hero {
+  border-color: color-mix(in srgb, var(--color-brand) 18%, var(--color-line));
+  background:
+    radial-gradient(34rem 16rem at 100% 0%, color-mix(in srgb, var(--color-sun) 30%, transparent), transparent 70%),
+    radial-gradient(30rem 16rem at 0% 100%, color-mix(in srgb, var(--color-teal) 22%, transparent), transparent 70%),
+    linear-gradient(135deg, color-mix(in srgb, var(--color-brand) 12%, white), white);
+}
+.page-eyebrow {
+  border: 0;
+  background: var(--color-brand);
+  color: white;
+}
+.page-eyebrow > span {
+  background: var(--color-sun) !important;
+}
+.page-title::after {
+  background: linear-gradient(90deg, var(--color-brand), var(--color-teal)) !important;
+}
+
+/* Section headings: the accent bar cycles through the palette. */
+.section-bar {
+  background: var(--color-brand) !important;
+}
+section:nth-of-type(5n + 2) .section-bar { background: var(--color-teal) !important; }
+section:nth-of-type(5n + 3) .section-bar { background: var(--color-sun) !important; }
+section:nth-of-type(5n + 4) .section-bar { background: var(--color-coral) !important; }
+section:nth-of-type(5n + 5) .section-bar { background: var(--color-violet) !important; }
+
+/* Fact tiles: coloured top edge, rotating. */
+.fact-tile {
+  border-top: 4px solid var(--color-brand);
+}
+.fact-tile:nth-child(5n + 2) { border-top-color: var(--color-teal); }
+.fact-tile:nth-child(5n + 3) { border-top-color: var(--color-sun); }
+.fact-tile:nth-child(5n + 4) { border-top-color: var(--color-coral); }
+.fact-tile:nth-child(5n + 5) { border-top-color: var(--color-violet); }
+
+/* Article accents follow a per-chapter colour. */
+.prose-article h2 { --acc: var(--color-brand); }
+.prose-article h2:nth-of-type(4n + 2) { --acc: var(--color-teal); }
+.prose-article h2:nth-of-type(4n + 3) { --acc: var(--color-coral); }
+.prose-article h2:nth-of-type(4n + 4) { --acc: var(--color-violet); }
+.prose-article h2:not(.is-question)::before { color: var(--acc); }
+.prose-article h2:not(.is-question)::after { background: var(--acc); }
+.prose-article h3::before { background: var(--color-sun); }
+.prose-article ol > li::before { background: var(--color-brand); }
+.prose-article ol > li:not(:last-child)::after {
+  background: color-mix(in srgb, var(--color-brand) 25%, white);
+}
+.prose-article h2.is-question::before { background: var(--color-violet); }
+.prose-article h2.is-question {
+  background: color-mix(in srgb, var(--color-violet) 7%, white);
+  border-color: color-mix(in srgb, var(--color-violet) 20%, white);
+}
+.prose-article th {
+  background: color-mix(in srgb, var(--color-brand) 9%, white);
+  color: var(--color-brand);
+}
+.prose-article tbody tr:hover td {
+  background: color-mix(in srgb, var(--color-brand) 5%, white);
+}
+.prose-article p strong,
+.prose-article li strong,
+.flow-copy strong {
+  background: linear-gradient(
+    transparent 58%,
+    color-mix(in srgb, var(--color-sun) 38%, transparent) 58%
+  );
+}
+.prose-article a { color: var(--color-brand); text-decoration-color: color-mix(in srgb, var(--color-brand) 40%, transparent); }
+.prose-article a:hover { text-decoration-color: var(--color-brand); background: color-mix(in srgb, var(--color-brand) 10%, transparent); }
+.figure-chip {
+  background: color-mix(in srgb, var(--color-sun) 22%, white);
+  border-color: color-mix(in srgb, var(--color-sun) 55%, white);
+}
+
+.lead-card {
+  border-left-color: var(--color-brand);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--color-brand) 8%, white), white);
+}
+
+.reading-progress > span {
+  background: linear-gradient(90deg, var(--color-brand), var(--color-teal), var(--color-sun));
+}
+
+/* Cards get a coloured edge on hover. */
+.card-hover:hover {
+  border-color: color-mix(in srgb, var(--color-brand) 45%, var(--color-line));
+}
+.prose-article ul > li::before {
+  background-color: color-mix(in srgb, var(--color-teal) 16%, white);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%230e9f8e' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5.5 10.5l3 3 6-6.5'/%3E%3C/svg%3E");
+}
+.prose-article li ul > li::before {
+  background-image: none;
+  background-color: var(--color-teal);
+}
+
+/* ---- Colour pass 2: homepage + chrome ----------------------------------- */
+.text-gradient {
+  background: linear-gradient(90deg, var(--color-brand), var(--color-teal) 60%, var(--color-sun));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.home-glow {
+  position: relative;
+  isolation: isolate;
+}
+.home-glow::before {
+  content: "";
+  position: absolute;
+  inset: -2rem -1rem;
+  z-index: -1;
+  background:
+    radial-gradient(28rem 14rem at 15% 20%, color-mix(in srgb, var(--color-brand) 16%, transparent), transparent 70%),
+    radial-gradient(26rem 14rem at 85% 30%, color-mix(in srgb, var(--color-sun) 22%, transparent), transparent 70%),
+    radial-gradient(24rem 12rem at 50% 100%, color-mix(in srgb, var(--color-teal) 16%, transparent), transparent 70%);
+}
+.logo-mark {
+  width: 1.15rem;
+  height: 1.15rem;
+  border-radius: 0.35rem 0.9rem 0.35rem 0.9rem;
+  background: linear-gradient(135deg, var(--color-brand), var(--color-teal) 55%, var(--color-sun));
+}
+.section-title {
+  position: relative;
+  padding-left: 0.9rem;
+}
+.section-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.2em;
+  bottom: 0.2em;
+  width: 5px;
+  border-radius: 99px;
+  background: linear-gradient(var(--color-brand), var(--color-teal));
+}
+.popular-card {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--color-brand) 10%, white), color-mix(in srgb, var(--color-sun) 14%, white));
+  border-color: color-mix(in srgb, var(--color-brand) 20%, var(--color-line));
+}
+.task-card { --c: var(--color-brand); border-top: 4px solid var(--c); }
+.task-list > li:nth-child(6n + 2) .task-card { --c: var(--color-teal); }
+.task-list > li:nth-child(6n + 3) .task-card { --c: var(--color-sun); }
+.task-list > li:nth-child(6n + 4) .task-card { --c: var(--color-coral); }
+.task-list > li:nth-child(6n + 5) .task-card { --c: var(--color-violet); }
+.task-list > li:nth-child(6n + 6) .task-card { --c: var(--color-teal); }
+.task-card:hover { border-color: var(--c); }
+.task-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.6rem;
+  background: color-mix(in srgb, var(--c) 16%, white);
+  color: var(--c);
+}
+.card-accent { border-left: 4px solid var(--color-brand); }
+li:nth-child(4n + 2) > .card-accent { border-left-color: var(--color-teal); }
+li:nth-child(4n + 3) > .card-accent { border-left-color: var(--color-sun); }
+li:nth-child(4n + 4) > .card-accent { border-left-color: var(--color-coral); }
+.post-card { border-left: 4px solid var(--color-brand); }
+.site-footer {
+  background: linear-gradient(160deg, #14224a, #1b2f6b 55%, #14405f);
+  border-top: 4px solid transparent;
+  border-image: linear-gradient(90deg, var(--color-brand), var(--color-teal), var(--color-sun), var(--color-coral)) 1;
+}
+.site-footer .font-display { color: white; }
+
+/* List cards across the site (scholarships, visas, universities, related
+   links, ...) share a rotating coloured left edge, so index pages read as a
+   colourful set rather than a grey stack. */
+main li > a[class*="bg-mist"],
+main li > div[class*="bg-mist"],
+main li > a.card,
+main li > .card {
+  border-left: 4px solid var(--color-brand);
+}
+main li:nth-child(4n + 2) > a[class*="bg-mist"],
+main li:nth-child(4n + 2) > div[class*="bg-mist"],
+main li:nth-child(4n + 2) > .card { border-left-color: var(--color-teal); }
+main li:nth-child(4n + 3) > a[class*="bg-mist"],
+main li:nth-child(4n + 3) > div[class*="bg-mist"],
+main li:nth-child(4n + 3) > .card { border-left-color: var(--color-sun); }
+main li:nth-child(4n + 4) > a[class*="bg-mist"],
+main li:nth-child(4n + 4) > div[class*="bg-mist"],
+main li:nth-child(4n + 4) > .card { border-left-color: var(--color-coral); }
+
+/* Titles on those cards pick up the brand colour on hover. */
+main a[class*="bg-mist"]:hover { border-color: var(--color-brand); }
+
+/* Selected filter chips / toggles anywhere on the site. */
+button[aria-pressed="true"] {
+  background: var(--color-brand) !important;
+  border-color: var(--color-brand) !important;
+  color: white !important;
+}
+a[aria-current="true"][class*="rounded-full"],
+a[aria-current="page"][class*="rounded-full"] {
+  background: var(--color-brand) !important;
+  color: white !important;
+  border-color: var(--color-brand) !important;
 }

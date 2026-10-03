@@ -64,7 +64,7 @@ export default function WamCalculatorPage() {
 
       <Breadcrumbs items={breadcrumbs} />
 
-      <h1 className="font-display text-3xl font-semibold text-ink text-balance sm:text-4xl">
+      <h1 className="page-title">
         WAM calculator
       </h1>
       <p className="mt-3 font-body text-base leading-relaxed text-slate">
@@ -90,15 +90,16 @@ export default function WamCalculatorPage() {
         </p>
         <div className="mt-3 overflow-hidden rounded-xl border border-line">
           <table className="w-full font-body text-sm">
+<caption className="sr-only">Letter grade to percentage conversion</caption>
             <thead>
               <tr className="border-b border-ink/10 bg-mist text-left">
-                <th className="px-4 py-2 font-utility text-xs font-semibold tracking-wide text-slate uppercase">
+                <th scope="col" className="px-4 py-2 font-utility text-xs font-semibold tracking-wide text-slate uppercase">
                   Subject
                 </th>
-                <th className="px-4 py-2 font-utility text-xs font-semibold tracking-wide text-slate uppercase">
+                <th scope="col" className="px-4 py-2 font-utility text-xs font-semibold tracking-wide text-slate uppercase">
                   Mark
                 </th>
-                <th className="px-4 py-2 font-utility text-xs font-semibold tracking-wide text-slate uppercase">
+                <th scope="col" className="px-4 py-2 font-utility text-xs font-semibold tracking-wide text-slate uppercase">
                   Credit points
                 </th>
               </tr>
