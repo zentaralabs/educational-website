@@ -115,6 +115,15 @@ export function HouseAdRails() {
             body="Convert your marks to Australia's grade average."
             cta="Calculate"
           />
+          <ToolCard
+            slot="left-points"
+            href="/visas/points-calculator"
+            color="var(--color-violet)"
+            label="Free tool"
+            title="How many PR points do you have?"
+            body="Check your points for the 189, 190 and 491 skilled visas."
+            cta="Points calculator"
+          />
         </div>
       </aside>
 
