@@ -833,19 +833,6 @@ h3.font-display,
 
 /* ---- Colour pass -------------------------------------------------------- */
 
-/* A thin rainbow edge across the very top of every page. */
-body {
-  border-top: 4px solid transparent;
-  border-image: linear-gradient(
-      90deg,
-      var(--color-brand),
-      var(--color-teal),
-      var(--color-sun),
-      var(--color-coral)
-    )
-    1;
-}
-
 /* Heroes: a saturated wash instead of grey. */
 .page-hero {
   border-color: color-mix(in srgb, var(--color-brand) 18%, var(--color-line));

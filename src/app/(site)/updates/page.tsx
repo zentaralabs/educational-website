@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { FaqSection } from "@/components/site/FaqSection";
+import { UpdatesLog } from "@/components/site/UpdatesLog";
 import { LastVerified } from "@/components/site/LastVerified";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import { faqJsonLd, type FaqItem } from "@/lib/faq";
@@ -52,6 +53,17 @@ function effectiveLabel(effective: string | null): string | null {
     : `In effect since ${fmtDate(effective)}`;
 }
 
+/* One colour per policy area, so the log is scannable at a glance. */
+const CATEGORY_COLOR: Record<PolicyUpdateCategory, string> = {
+  "student-visa": "var(--color-brand)",
+  "post-study-work": "var(--color-teal)",
+  "fees-and-charges": "var(--color-sun)",
+  "english-language": "var(--color-violet)",
+  "pr-pathway": "var(--color-coral)",
+  "university-sector": "var(--color-slate)",
+  other: "var(--color-slate)",
+};
+
 const faq: FaqItem[] = [
   {
     q: "How often is this page updated?",
@@ -70,16 +82,6 @@ const faq: FaqItem[] = [
 export default async function UpdatesPage() {
   const updates = await listPublishedPolicyUpdates();
 
-  const byYear = new Map<string, typeof updates>();
-  for (const u of updates) {
-    const year = u.announced_date.slice(0, 4);
-    const list = byYear.get(year) ?? [];
-    list.push(u);
-    byYear.set(year, list);
-  }
-  const years = [...byYear.keys()].sort().reverse();
-
-  const latest = updates.find((u) => !u.is_estimated) ?? updates[0] ?? null;
   const latestVerified =
     updates
       .map((u) => u.last_verified_at)
@@ -104,145 +106,56 @@ export default async function UpdatesPage() {
 
       <Breadcrumbs items={breadcrumbs} />
 
-      <h1 className="page-title">
-        Australia student &amp; visa updates
-      </h1>
-      <p className="mt-3 max-w-2xl font-body text-base text-ink/80">
-        A dated log of policy changes that affect applying to study in
-        Australia: student visa charges, processing priorities, post-study
-        work, English-test recognition, and the international-student planning
-        level. Every entry links its official source and carries the date we
-        last checked it.
-      </p>
-
-      {latest && (
-        <div className="mt-8 rounded-2xl border border-status-open/30 bg-status-open/5 p-5">
-          <p className="font-body text-[0.8rem] font-semibold tracking-wide text-slate uppercase">
-            Latest update
-          </p>
-          <h2
-            id={`${latest.slug}-latest`}
-            className="mt-2 font-display text-xl font-semibold text-ink"
-          >
-            {latest.title}
-          </h2>
-          <p className="mt-1 font-utility text-xs text-slate">
-            Announced {fmtDate(latest.announced_date)}
-            {effectiveLabel(latest.effective_date)
-              ? ` · ${effectiveLabel(latest.effective_date)}`
-              : ""}
-          </p>
-          <p className="mt-3 font-body text-sm text-ink">{latest.summary}</p>
-        </div>
-      )}
+      <div className="page-hero">
+        <p className="page-eyebrow">
+          <span className="inline-block h-1.5 w-1.5 rounded-full bg-status-open" />
+          {updates.length} dated, sourced changes
+        </p>
+        <h1 className="page-title">Australia student &amp; visa updates</h1>
+        <p>
+          A dated log of policy changes that affect applying to study in
+          Australia: student visa charges, processing priorities, post-study
+          work, English-test recognition, and the international-student
+          planning level. Every entry links its official source and carries the
+          date we last checked it.
+        </p>
+      </div>
 
       {updates.length === 0 ? (
         <p className="mt-8 font-body text-base text-slate">
           No updates logged yet.
         </p>
       ) : (
-        <div className="mt-12 flex flex-col gap-10">
-          {years.map((year) => (
-            <section key={year}>
-              <h2 className="mb-4 font-body text-[0.8rem] font-semibold tracking-wide text-slate uppercase">
-                {year}
-              </h2>
-              <div className="flex flex-col gap-8">
-                {byYear.get(year)!.map((u) => (
-                  <article
-                    key={u.slug}
-                    id={u.slug}
-                    className="scroll-mt-24 border-l-2 border-line pl-4"
-                  >
-                    <div className="flex flex-wrap items-center gap-x-3 gap-y-1 font-utility text-xs text-slate">
-                      <time dateTime={u.announced_date}>
-                        {fmtDate(u.announced_date)}
-                      </time>
-                      <span className="rounded-sm border border-line bg-mist px-1.5 py-0.5 tracking-wide text-slate uppercase">
-                        {CATEGORY_LABEL[u.category]}
-                      </span>
-                      {u.is_estimated && (
-                        <span className="text-status-pending">estimate</span>
-                      )}
-                      {effectiveLabel(u.effective_date) && (
-                        <span>{effectiveLabel(u.effective_date)}</span>
-                      )}
-                    </div>
-
-                    <h3 className="mt-1.5 font-body text-lg font-semibold text-ink">
-                      {u.title}
-                    </h3>
-                    <p className="mt-1.5 font-body text-sm leading-relaxed text-ink/80">
-                      {u.summary}
-                    </p>
-
-                    {u.impact && (
-                      <p className="mt-2 font-body text-sm leading-relaxed text-ink">
-                        <span className="font-semibold">What to do: </span>
-                        {u.impact}
-                      </p>
-                    )}
-
-                    {u.affects && u.affects.length > 0 && (
-                      <ul className="mt-2.5 flex flex-wrap gap-1.5">
-                        {u.affects.map((a) => (
-                          <li
-                            key={a}
-                            className="rounded-full border border-line bg-mist px-2.5 py-0.5 font-body text-xs text-slate"
-                          >
-                            {a}
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-
-                    <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 font-utility text-xs text-slate">
-                      {u.source_urls.length > 0 && (
-                        <span className="flex flex-wrap items-center gap-x-1.5">
-                          Source:
-                          {u.source_urls.map((url, i) => (
-                            <a
-                              key={url}
-                              href={url}
-                              target="_blank"
-                              rel="noopener noreferrer nofollow"
-                              className="underline decoration-slate/40 underline-offset-2 hover:text-ink hover:decoration-ink"
-                            >
-                              [{i + 1}]
-                            </a>
-                          ))}
-                        </span>
-                      )}
-                      {u.last_verified_at && (
-                        <span>
-                          Verified{" "}
-                          <time dateTime={u.last_verified_at}>
-                            {fmtDate(u.last_verified_at)}
-                          </time>
-                        </span>
-                      )}
-                      {u.detail_url && (
-                        <Link
-                          href={u.detail_url}
-                          className="font-medium text-status-open underline underline-offset-2"
-                        >
-                          Read our analysis &rarr;
-                        </Link>
-                      )}
-                    </div>
-                  </article>
-                ))}
-              </div>
-            </section>
-          ))}
+        <div className="mt-10">
+          <UpdatesLog
+            items={updates.map((u, idx) => ({
+              slug: u.slug,
+              title: u.title,
+              summary: u.summary,
+              impact: u.impact ?? null,
+              category: u.category,
+              categoryLabel: CATEGORY_LABEL[u.category],
+              color: CATEGORY_COLOR[u.category],
+              announced: u.announced_date,
+              announcedLabel: fmtDate(u.announced_date),
+              effectiveLabel: effectiveLabel(u.effective_date),
+              estimated: u.is_estimated,
+              affects: u.affects ?? [],
+              sources: u.source_urls,
+              verifiedLabel: u.last_verified_at ? fmtDate(u.last_verified_at) : null,
+              verifiedIso: u.last_verified_at ?? null,
+              detailUrl: u.detail_url ?? null,
+              isNewest: idx === 0,
+            }))}
+          />
         </div>
       )}
 
-      <div className="mt-12 rounded-2xl border border-line bg-mist p-5">
+      <div className="mt-12 rounded-2xl border border-line bg-mist p-6">
         <h2 className="font-display text-lg font-semibold text-ink">
           How to use this page
         </h2>
-        <p className="mt-2 font-body text-sm text-slate">
+        <p className="mt-2 font-body text-base leading-relaxed text-slate">
           Each entry summarises one change and links the official page it comes
           from. Whether a change applies to you usually depends on when you
           lodge, and for processing priorities on your education provider.
