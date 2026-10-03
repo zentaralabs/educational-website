@@ -32,9 +32,11 @@ export default function PrivacyPage() {
         where visitors are located at the country level, and how people
         arrive at the site. This data is used only in aggregate to improve
         content and site structure; we don&rsquo;t attempt to identify
-        individual visitors from it. Analytics only run after you accept
-        the cookie consent banner shown on your first visit; visitors in the
-        UK/EU are shown this choice before any non-essential cookie is set.
+        individual visitors from it. Until you accept the cookie consent
+        banner shown on your first visit, Google Analytics runs in a
+        cookieless mode: no analytics cookie is set and only anonymous,
+        aggregate page-view signals are sent. Accepting enables full
+        analytics cookies.
       </p>
 
       <h2>Cookies</h2>
