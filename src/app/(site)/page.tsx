@@ -470,7 +470,7 @@ export default async function Home() {
                 {countries.map((c, i) => (
                   <span key={c.code}>
                     <Link
-                      href={`/deadlines?country=${c.code}`}
+                      href={countries.length > 1 ? `/deadlines?country=${c.code}` : "/deadlines"}
                       className="underline underline-offset-2 hover:text-ink"
                     >
                       {c.name}

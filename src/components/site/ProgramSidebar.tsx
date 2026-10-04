@@ -98,7 +98,7 @@ export function ProgramSidebar({
   return (
     <div className="grid gap-4 sm:grid-cols-2">
       <div className="flex flex-col gap-2">
-        <Widget title="Cost & duration" icon={<CoinIcon className="h-3.5 w-3.5" />}>
+        <Widget title="Fees & duration" icon={<CoinIcon className="h-3.5 w-3.5" />}>
           <Row label="Duration" value={durationYears ? `${durationYears} yr` : null} />
           <Row label={tuitionLabel} value={formatCurrency(tuitionAmount, currency)} />
           <Row label="Application fee" value={formatCurrency(applicationFee, currency)} />
