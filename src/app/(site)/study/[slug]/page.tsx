@@ -210,22 +210,24 @@ export default async function SubjectPage({
           <ol className="flex flex-col gap-3">
             {strongAt.map((u, i) => (
               <li key={u.slug}>
-                <Link
-                  href={`/universities/${u.slug}`}
-                  className="card card-hover group flex gap-3 p-4"
-                >
+                <div className="card card-hover group relative flex gap-3 p-4">
                   <span className="font-display text-lg font-semibold text-slate">
                     {i + 1}
                   </span>
                   <span>
                     <span className="font-body text-[0.95rem] font-semibold text-ink group-hover:underline">
-                      {u.name}
+                      <Link
+                        href={`/universities/${u.slug}`}
+                        className="after:absolute after:inset-0 after:content-['']"
+                      >
+                        {u.name}
+                      </Link>
                     </span>
                     <span className="mt-0.5 block font-body text-sm text-slate">
                       {u.why}
                     </span>
                   </span>
-                </Link>
+                </div>
               </li>
             ))}
           </ol>

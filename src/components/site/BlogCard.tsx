@@ -28,9 +28,8 @@ export function BlogCard({
   const primaryTag = tags?.[0];
 
   return (
-    <Link
-      href={href}
-      className={`group flex flex-col rounded-2xl border transition-all duration-150 hover:-translate-y-0.5 hover:border-status-open/40 hover:shadow-[0_14px_36px_-18px_rgba(22,35,63,0.28)] ${
+    <div
+      className={`group relative flex flex-col rounded-2xl border transition-all duration-150 hover:-translate-y-0.5 hover:border-status-open/40 hover:shadow-[0_14px_36px_-18px_rgba(22,35,63,0.28)] ${
         featured
           ? "border-status-open/25 bg-status-open/[0.04] p-6 sm:col-span-2 sm:p-8"
           : "border-line bg-paper p-5"
@@ -47,7 +46,9 @@ export function BlogCard({
           featured ? "text-xl sm:text-2xl" : "text-lg"
         }`}
       >
-        {title}
+        <Link href={href} className="after:absolute after:inset-0 after:rounded-2xl after:content-['']">
+          {title}
+        </Link>
       </h3>
 
       {excerpt && (
@@ -84,6 +85,6 @@ export function BlogCard({
         <span aria-hidden className="text-ink/25">·</span>
         <span>{readingMinutes} min</span>
       </div>
-    </Link>
+    </div>
   );
 }

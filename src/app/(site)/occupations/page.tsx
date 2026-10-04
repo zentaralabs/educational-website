@@ -51,7 +51,7 @@ export default async function OccupationsIndexPage() {
         list status (MLTSSL, STSOL, ROL, CSOL), and the assessing authority that
         checks it. Each occupation page also lists the real, published degree
         programs at Australian universities whose graduates typically pursue it,
-        so you can work backwards from a career target to an actual course.
+        so you can work backwards from a target job to an actual course.
       </p>
       <p className="mt-2 max-w-2xl font-body text-sm text-slate">
         New to the list names?{" "}

@@ -59,7 +59,7 @@ export default function BestIndexPage() {
           application fee, automatic scholarships, and more.
         </p>
         <p>
-          Each list ranks on one measurable thing and shows its working, so you
+          Each category ranks on one measurable thing and shows its working, so you
           can see why a university placed where it did and decide whether that
           factor matters to you. They are a starting point, not a league table.
           They do not score teaching quality, research reputation, or graduate

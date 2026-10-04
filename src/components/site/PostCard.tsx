@@ -22,9 +22,8 @@ export function PostCard({
   isNew?: boolean;
 }) {
   return (
-    <Link
-      href={href}
-      className={`group flex flex-col gap-2 rounded-2xl border transition-all duration-150 hover:-translate-y-0.5 hover:border-brand/50 hover:shadow-[0_14px_36px_-18px_rgba(46,91,234,0.35)] ${
+    <div
+      className={`group relative flex flex-col gap-2 rounded-2xl border transition-all duration-150 hover:-translate-y-0.5 hover:border-brand/50 hover:shadow-[0_14px_36px_-18px_rgba(46,91,234,0.35)] ${
         featured
           ? "border-brand/25 bg-gradient-to-br from-brand/[0.08] to-teal/[0.08] p-6 sm:p-8"
           : "post-card border-line bg-paper p-5 sm:p-6"
@@ -46,7 +45,9 @@ export function PostCard({
             featured ? "text-xl sm:text-2xl" : "text-lg"
           }`}
         >
-          {title}
+          <Link href={href} className="after:absolute after:inset-0 after:rounded-2xl after:content-['']">
+            {title}
+          </Link>
         </span>
         <ArrowUpRightIcon className="mt-1.5 h-4 w-4 flex-shrink-0 text-slate transition-colors duration-150 group-hover:text-brand" />
       </span>
@@ -57,6 +58,6 @@ export function PostCard({
           {excerpt}
         </span>
       )}
-    </Link>
+    </div>
   );
 }

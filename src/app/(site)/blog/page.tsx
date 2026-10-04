@@ -104,7 +104,7 @@ export default async function BlogIndexPage({
         Study in Australia: news and analysis
       </h1>
       <p className="mt-2 max-w-2xl font-body text-base text-slate">
-        Deadline changes, policy shifts, and application news as they happen.
+        Deadline changes, policy shifts, and admissions and application news as they happen.
       </p>
       <a
         href="/blog/feed.xml"

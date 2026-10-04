@@ -29,7 +29,8 @@ export default async function QuizPage() {
         Find the right university for me
       </h1>
       <p className="mt-2 font-body text-base text-slate">
-        A few quick questions, matched against real deadlines, costs, English
+        A few quick questions to find the right Australian university, the one
+        that fits you, matched against real deadlines, costs, English
         requirements, and scholarships. Skip anything that does not matter to
         you. Not a lead-gen form.
       </p>

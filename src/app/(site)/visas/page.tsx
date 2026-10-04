@@ -120,9 +120,9 @@ export default async function VisasIndexPage() {
             student visa (subclass 500)
           </Link>
           . If you decide to stay on after your course, a sequence of graduate
-          and skilled visas follows. This page maps that sequence and links each
-          subclass to a full breakdown of its eligibility, cost, and processing
-          time.
+          and skilled visas follows. This page maps that sequence, with every subclass
+          explained and linked to a full breakdown of its eligibility, cost, and
+          processing time.
         </p>
         <p className="text-[0.95rem]">
           Immigration rules change often. Treat this page as orientation and

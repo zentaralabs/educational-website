@@ -162,7 +162,8 @@ export default async function Home() {
                 style={{ animationDelay: "80ms" }}
               >
                 Search Australian universities, programs, visas,
-                scholarships, and guides.
+                scholarships, and guides, with costs and deadlines sorted in one
+                place.
               </p>
 
               <div
