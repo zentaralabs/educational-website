@@ -464,14 +464,20 @@ export default async function ProgramDetailPage({
                 occupation.csol && "CSOL",
               ].filter(Boolean) as string[];
               return (
-                <Link
+                <div
                   key={occupation.slug}
-                  href={`/occupations/${occupation.slug}`}
-                  className="block rounded-xl border border-line bg-mist p-4 transition-all duration-150 hover:-translate-y-0.5 hover:border-status-open/30 hover:shadow-[0_14px_36px_-18px_rgba(22,35,63,0.28)]"
+                  className="relative block rounded-xl border border-line bg-mist p-4 transition-all duration-150 hover:-translate-y-0.5 hover:border-status-open/30 hover:shadow-[0_14px_36px_-18px_rgba(22,35,63,0.28)]"
                 >
                   <div className="flex flex-wrap items-center justify-between gap-2">
                     <p className="font-body text-sm font-semibold text-ink">
-                      {occupation.name}
+                      {/* Stretched link: only the occupation name is the anchor
+                          text; the pseudo-element makes the whole card clickable. */}
+                      <Link
+                        href={`/occupations/${occupation.slug}`}
+                        className="after:absolute after:inset-0 after:rounded-xl after:content-[''] focus-visible:after:ring-2 focus-visible:after:ring-status-open"
+                      >
+                        {occupation.name}
+                      </Link>
                       <span className="ml-2 font-utility text-[11px] font-normal text-slate">
                         ANZSCO {occupation.anzsco_code}
                       </span>
@@ -502,7 +508,7 @@ export default async function ProgramDetailPage({
                       Assessed by {occupation.assessing_authority}
                     </p>
                   )}
-                </Link>
+                </div>
               );
             })}
           </div>

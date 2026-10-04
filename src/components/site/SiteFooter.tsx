@@ -60,7 +60,7 @@ export async function SiteFooter() {
             Browse by country:{" "}
             {countries.map((c, i) => (
               <span key={c.code}>
-                <Link href={`/deadlines?country=${c.code}`} className="underline underline-offset-2 text-white hover:text-sun">
+                <Link href={countries.length > 1 ? `/deadlines?country=${c.code}` : "/deadlines"} className="underline underline-offset-2 text-white hover:text-sun">
                   {c.name}
                 </Link>
                 {i < countries.length - 1 && ", "}

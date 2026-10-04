@@ -355,6 +355,7 @@ export default async function VisaPage({
         Been through the {visa.name.toLowerCase()} yourself?{" "}
         <Link
           href={`/share-your-experience?page=${encodeURIComponent(`/visas/${slug}`)}&label=${encodeURIComponent(`${visa.name} (subclass ${visa.code})`)}`}
+          rel="nofollow"
           className="font-medium text-status-open underline underline-offset-2"
         >
           Share what actually happened
