@@ -13,9 +13,11 @@ import { formatCurrency } from "@/lib/format";
 import { INTAKE_YEAR } from "@/lib/site-config";
 import {
   getPublishedDeadlinesForUniversity,
+  getPublishedScholarshipsForUniversity,
   getPublishedUniversity,
   listPublishedUniversitySlugs,
 } from "@/lib/queries/public-universities";
+import { getPublishedProgramsForUniversity } from "@/lib/queries/public-programs";
 import { JsonLd } from "@/lib/json-ld";
 import { composeTitle, pageMetadata } from "@/lib/page-metadata";
 
@@ -29,9 +31,49 @@ export async function generateStaticParams() {
 async function load(slug: string) {
   const university = await getPublishedUniversity(slug);
   if (!university || university.country?.code !== "AU") return null;
-  const deadlines = await getPublishedDeadlinesForUniversity(university.id);
+  const [deadlines, programs, scholarships] = await Promise.all([
+    getPublishedDeadlinesForUniversity(university.id),
+    getPublishedProgramsForUniversity(university.id),
+    getPublishedScholarshipsForUniversity(university.id),
+  ]);
   if (deadlines.length === 0) return null;
-  return { university, deadlines };
+  return { university, deadlines, programs, scholarships };
+}
+
+type LevelSummary = {
+  level: string;
+  count: number;
+  tuition: [number, number] | null;
+  ielts: [number, number] | null;
+  currency: string;
+};
+
+/** Per degree level: how many published programs, and the real min-max of
+ *  the listed international tuition and IELTS overall across them. Only
+ *  figures actually stored on program rows; nothing is estimated. */
+function summariseLevels(
+  programs: Awaited<ReturnType<typeof getPublishedProgramsForUniversity>>,
+  fallbackCurrency: string,
+): LevelSummary[] {
+  const byLevel = new Map<string, typeof programs>();
+  for (const p of programs) {
+    const key = p.degree_level?.name;
+    if (!key) continue;
+    byLevel.set(key, [...(byLevel.get(key) ?? []), p]);
+  }
+  const range = (xs: number[]): [number, number] | null =>
+    xs.length ? [Math.min(...xs), Math.max(...xs)] : null;
+  return [...byLevel.entries()]
+    .map(([level, ps]) => ({
+      level,
+      count: ps.length,
+      tuition: range(
+        ps.map((p) => p.tuition_international).filter((n): n is number => n != null && n > 0),
+      ),
+      ielts: range(ps.map((p) => p.ielts_overall).filter((n): n is number => n != null)),
+      currency: ps.find((p) => p.currency)?.currency ?? fallbackCurrency,
+    }))
+    .sort((a, b) => b.count - a.count);
 }
 
 export async function generateMetadata({
@@ -66,15 +108,32 @@ export default async function UniversityDeadlinesPage({
   const { slug } = await params;
   const data = await load(slug);
   if (!data) notFound();
-  const { university, deadlines } = data;
+  const { university, deadlines, programs, scholarships } = data;
   const name = university.name;
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const levels = summariseLevels(programs, university.currency ?? "AUD");
+  const topSubjects = [
+    ...programs
+      .reduce((m, p) => {
+        if (p.subject?.name) m.set(p.subject.name, (m.get(p.subject.name) ?? 0) + 1);
+        return m;
+      }, new Map<string, number>())
+      .entries(),
+  ]
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 6)
+    .map(([n]) => n);
+  const nextScholarships = scholarships
+    .filter((sch) => !sch.deadline_date || new Date(sch.deadline_date) >= today)
+    .slice()
+    .sort((a, b) => (a.deadline_date ?? "9999").localeCompare(b.deadline_date ?? "9999"))
+    .slice(0, 5);
 
   // Lead with a published closing date where one exists, and otherwise with
   // our own recommendation. A university without a firm date used to fall
   // through to "Rolling admissions", which answered "when should I apply?"
   // with nothing at all.
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
   const upcoming = deadlines
     .filter((d) => new Date(d.deadline_date) >= today)
     .sort((a, b) => a.deadline_date.localeCompare(b.deadline_date));
@@ -153,7 +212,11 @@ export default async function UniversityDeadlinesPage({
     },
     {
       q: `Can I apply to ${name} after the deadline?`,
-      a: `Often, yes. Australian universities rarely enforce a single hard cut-off. If places remain in your course and there is enough time to arrange a student visa before the intake starts, a late application is usually still considered. Competitive and quota courses (medicine, some design and health programs) are the exception and do close firmly.`,
+      a: allRolling
+        ? `Often, yes. ${name} assesses applications on a rolling basis, so there is no single cut-off to miss. If places remain in your course and there is enough time to arrange a student visa before the intake starts, a late application is usually still considered. Competitive and quota courses (medicine, some design and health programs) are the exception and do close firmly.`
+        : nextIsPublished
+          ? `Possibly, but do not plan on it. ${name} publishes a closing date, and individual courses can close earlier. If places remain and there is time to arrange a student visa, a late application may still be considered. Competitive and quota courses (medicine, some design and health programs) close firmly.`
+          : `Often, yes. ${name} does not publish one hard closing date for every course. If places remain in your course and there is enough time to arrange a student visa before the intake starts, a late application is usually still considered. Competitive and quota courses close firmly.`,
     },
     {
       q: `What intakes does ${name} have?`,
@@ -167,7 +230,15 @@ export default async function UniversityDeadlinesPage({
     },
     {
       q: `How early should I apply to ${name}?`,
-      a: `Three to four months before your intended intake is the usual advice, and earlier for competitive courses or if you are from a country where the student visa takes longer to process. Applying early also means an earlier offer, which helps with scholarships and accommodation.`,
+      a: `${
+        next
+          ? `For ${name}'s next intake${nextIntake}, the ${nextIsPublished ? "published" : "recommended"} date is ${formatDeadlineDateLong(next.deadline_date, next.date_kind)}. `
+          : ""
+      }Three to four months before your intended intake is the usual advice, and earlier for competitive courses or if you are from a country where the student visa takes longer to process.${
+        nextScholarships.length
+          ? ` ${name} lists ${nextScholarships.length === 1 ? "a scholarship" : `${scholarships.length} scholarships`} with their own deadlines, so check those too.`
+          : ""
+      }`,
     },
     ...(feeAnswer
       ? [{ q: `How much does it cost to apply to ${name}?`, a: feeAnswer }]
@@ -276,6 +347,97 @@ export default async function UniversityDeadlinesPage({
             </p>
           ))}
         </div>
+      )}
+
+      {levels.length > 0 && (
+        <section className="mt-8">
+          <h2 className="font-display text-xl font-semibold text-ink">
+            Applying to {name} at a glance
+          </h2>
+          <p className="mt-2 font-body text-sm leading-relaxed text-slate">
+            {name} has {programs.length} published program
+            {programs.length === 1 ? "" : "s"} on this site
+            {topSubjects.length > 0 && <>, most in {new Intl.ListFormat("en").format(topSubjects.slice(0, 4))}</>}.
+            The figures below are the lowest and highest listed across those
+            programs, so check the specific course page for yours.
+          </p>
+          <div className="mt-4 overflow-x-auto rounded-xl border border-line">
+            <table className="w-full min-w-[32rem] border-collapse text-left font-body text-sm text-ink">
+              <thead className="bg-mist text-xs font-semibold tracking-wide text-slate uppercase">
+                <tr>
+                  <th className="px-4 py-2">Level</th>
+                  <th className="px-4 py-2">Programs</th>
+                  <th className="px-4 py-2">International tuition listed</th>
+                  <th className="px-4 py-2">IELTS overall</th>
+                </tr>
+              </thead>
+              <tbody>
+                {levels.map((l) => (
+                  <tr key={l.level} className="border-t border-line">
+                    <td className="px-4 py-2 font-medium">{l.level}</td>
+                    <td className="px-4 py-2">{l.count}</td>
+                    <td className="px-4 py-2">
+                      {l.tuition
+                        ? l.tuition[0] === l.tuition[1]
+                          ? formatCurrency(l.tuition[0], l.currency)
+                          : `${formatCurrency(l.tuition[0], l.currency)} to ${formatCurrency(l.tuition[1], l.currency)}`
+                        : "Not listed"}
+                    </td>
+                    <td className="px-4 py-2">
+                      {l.ielts
+                        ? l.ielts[0] === l.ielts[1]
+                          ? l.ielts[0].toFixed(1)
+                          : `${l.ielts[0].toFixed(1)} to ${l.ielts[1].toFixed(1)}`
+                        : "Not listed"}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-2 font-body text-xs text-slate">
+            <Link
+              href={`/universities/${slug}`}
+              className="underline underline-offset-2"
+            >
+              See every {name} program
+            </Link>
+            .
+          </p>
+        </section>
+      )}
+
+      {nextScholarships.length > 0 && (
+        <section className="mt-8">
+          <h2 className="font-display text-xl font-semibold text-ink">
+            {name} scholarship deadlines
+          </h2>
+          <ul className="mt-3 flex flex-col gap-2">
+            {nextScholarships.map((sch) => (
+              <li
+                key={sch.id}
+                className="rounded-xl border border-line bg-mist px-4 py-3 font-body text-sm text-ink"
+              >
+                {sch.slug ? (
+                  <Link
+                    href={`/scholarships/${sch.slug}`}
+                    className="font-medium underline underline-offset-2"
+                  >
+                    {sch.name}
+                  </Link>
+                ) : (
+                  <span className="font-medium">{sch.name}</span>
+                )}
+                <span className="text-slate">
+                  {sch.amount ? ` · ${sch.amount}` : ""}
+                  {sch.deadline_date
+                    ? ` · closes ${formatDeadlineDateLong(sch.deadline_date, "closing_date")}`
+                    : " · no fixed closing date"}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </section>
       )}
 
       <div className="mt-8 flow-copy flow-lead">
