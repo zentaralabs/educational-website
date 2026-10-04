@@ -90,8 +90,8 @@ export default async function DeadlinesPage() {
           Application deadline calendar
         </h1>
         <p className="mt-2 max-w-2xl font-body text-base text-ink/80">
-          Recommended international application dates for each intake, filterable
-          by country, degree level, and intake.
+          This calendar lists recommended international application dates for
+          each intake, filterable by country, degree level, and intake.
         </p>
       </div>
 

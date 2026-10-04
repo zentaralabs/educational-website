@@ -69,13 +69,17 @@ export function BlogIndexSearch({
           <ul className="flex flex-col gap-3">
             {matches.map((p) => (
               <li key={p.slug}>
-                <Link
-                  href={`/blog/${p.slug}`}
-                  className="group flex flex-col gap-1 rounded-2xl border border-line bg-paper p-5 transition-all duration-150 hover:-translate-y-0.5 hover:border-status-open/40"
+                <div
+                  className="group relative flex flex-col gap-1 rounded-2xl border border-line bg-paper p-5 transition-all duration-150 hover:-translate-y-0.5 hover:border-status-open/40"
                 >
                   <span className="flex items-baseline justify-between gap-4">
                     <span className="font-display text-lg font-semibold text-ink group-hover:underline">
-                      {p.title}
+                      <Link
+                        href={`/blog/${p.slug}`}
+                        className="after:absolute after:inset-0 after:rounded-2xl after:content-['']"
+                      >
+                        {p.title}
+                      </Link>
                     </span>
                     {p.published_at && (
                       <time
@@ -89,7 +93,7 @@ export function BlogIndexSearch({
                   {p.excerpt && (
                     <span className="font-body text-[0.95rem] text-slate">{p.excerpt}</span>
                   )}
-                </Link>
+                </div>
               </li>
             ))}
           </ul>

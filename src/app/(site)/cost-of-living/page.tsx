@@ -50,8 +50,8 @@ export default function CostOfLivingIndexPage() {
         Rent is the one thing that really moves your budget between cities;
         food, transport, and everything else costs about the same across the
         country. These are estimated annual totals sharing accommodation,
-        cheapest city first. The Australian Government&rsquo;s minimum for a
-        student visa is {formatCurrency(29710, "AUD")} a year.
+        cheapest city first. The Australian Government&rsquo;s minimum for an
+        international student visa is {formatCurrency(29710, "AUD")} a year.
       </p>
 
       <ul className="mt-8 flex flex-col gap-3">

@@ -151,13 +151,15 @@ export default async function UniversitiesByStatePage({
         <ol className="mt-8 flex flex-col gap-3">
           {unis.map((u) => (
             <li key={u.slug}>
-              <Link
-                href={`/universities/${u.slug}`}
-                className="card card-hover group flex flex-col gap-1.5 p-5"
-              >
+              <div className="card card-hover group relative flex flex-col gap-1.5 p-5">
                 <span className="flex items-start justify-between gap-3">
                   <span className="font-display text-lg font-semibold text-ink group-hover:underline">
-                    {u.name}
+                    <Link
+                      href={`/universities/${u.slug}`}
+                      className="after:absolute after:inset-0 after:content-['']"
+                    >
+                      {u.name}
+                    </Link>
                   </span>
                   <ArrowUpRightIcon className="mt-1 h-4 w-4 flex-shrink-0 text-slate transition-colors duration-150 group-hover:text-status-open" />
                 </span>
@@ -178,7 +180,7 @@ export default async function UniversitiesByStatePage({
                   )}
                   {u.intakes.includes("July") && <span>Feb &amp; Jul intake</span>}
                 </span>
-              </Link>
+              </div>
             </li>
           ))}
         </ol>

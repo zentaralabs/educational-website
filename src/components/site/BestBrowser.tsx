@@ -77,18 +77,22 @@ export function BestBrowser({
                 <ul className="flex flex-col gap-4">
                   {items.map((c) => (
                     <li key={c.slug}>
-                      <Link
-                        href={`/best/${c.slug}`}
-                        className="group flex flex-col gap-1.5 rounded-2xl border border-line bg-mist p-5 transition-all duration-150 hover:-translate-y-0.5 hover:border-status-open/30 hover:shadow-[0_14px_36px_-18px_rgba(22,35,63,0.28)] sm:p-6"
+                      <div
+                        className="group relative flex flex-col gap-1.5 rounded-2xl border border-line bg-mist p-5 transition-all duration-150 hover:-translate-y-0.5 hover:border-status-open/30 hover:shadow-[0_14px_36px_-18px_rgba(22,35,63,0.28)] sm:p-6"
                       >
                         <span className="flex items-start justify-between gap-3">
                           <h3 className="font-display text-lg font-semibold text-ink text-balance group-hover:underline">
-                            {c.title}
+                            <Link
+                              href={`/best/${c.slug}`}
+                              className="after:absolute after:inset-0 after:rounded-2xl after:content-['']"
+                            >
+                              {c.title}
+                            </Link>
                           </h3>
                           <ArrowUpRightIcon className="mt-1 h-4 w-4 flex-shrink-0 text-slate transition-colors duration-150 group-hover:text-status-open" />
                         </span>
                         <p className="font-body text-base text-slate">{c.blurb}</p>
-                      </Link>
+                      </div>
                     </li>
                   ))}
                 </ul>

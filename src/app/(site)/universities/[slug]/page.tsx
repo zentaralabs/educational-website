@@ -537,7 +537,16 @@ export default async function UniversityProfilePage({
               const inner = (
                 <>
                   <span className="font-body text-base font-medium text-ink">
-                    {s.name}
+                    {s.slug ? (
+                      <Link
+                        href={`/scholarships/${s.slug}`}
+                        className="after:absolute after:inset-0 after:content-['']"
+                      >
+                        {s.name}
+                      </Link>
+                    ) : (
+                      s.name
+                    )}
                   </span>
                   {s.amount && (
                     <span className="font-utility text-xs font-medium text-status-open">
@@ -549,15 +558,12 @@ export default async function UniversityProfilePage({
               return (
                 <li key={s.id}>
                   {s.slug ? (
-                    <Link
-                      href={`/scholarships/${s.slug}`}
-                      className="group flex flex-wrap items-center gap-x-3 gap-y-1 rounded-xl border border-line bg-mist px-4 py-3 transition-all duration-150 hover:-translate-y-0.5 hover:border-status-open/30"
-                    >
+                    <div className="group relative flex flex-wrap items-center gap-x-3 gap-y-1 rounded-xl border border-line bg-mist px-4 py-3 transition-all duration-150 hover:-translate-y-0.5 hover:border-status-open/30">
                       {inner}
                       <span className="ml-auto font-utility text-xs text-slate group-hover:text-status-open">
                         Details →
                       </span>
-                    </Link>
+                    </div>
                   ) : (
                     <div className="flex flex-wrap items-center gap-x-3 gap-y-1 rounded-xl border border-line bg-mist px-4 py-3">
                       {inner}

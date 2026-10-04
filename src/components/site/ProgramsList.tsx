@@ -63,15 +63,21 @@ export function ProgramsList({
 
       <div className="flex flex-col gap-2" hidden={filtered.length === 0}>
         {programs.map((p) => (
-          <Link
+          <div
             key={p.id}
-            href={`/universities/${universitySlug}/programs/${p.slug}`}
             hidden={!(filteredIds.has(p.id) && pageIds.has(p.id))}
-            className="group flex items-center justify-between gap-4 rounded-md border border-ink/10 bg-paper py-3 pr-3 pl-3 text-sm transition-colors duration-150 hover:border-status-open/60 hover:bg-ink/[0.015]"
+            className="group relative flex items-center justify-between gap-4 rounded-md border border-ink/10 bg-paper py-3 pr-3 pl-3 text-sm transition-colors duration-150 hover:border-status-open/60 hover:bg-ink/[0.015]"
             style={{ borderLeftWidth: 3, borderLeftColor: "var(--color-status-open)" }}
           >
             <div className="min-w-0">
-              <p className="truncate text-ink">{p.name}</p>
+              <p className="truncate text-ink">
+                <Link
+                  href={`/universities/${universitySlug}/programs/${p.slug}`}
+                  className="after:absolute after:inset-0 after:content-['']"
+                >
+                  {p.name}
+                </Link>
+              </p>
               <p className="mt-0.5 truncate font-utility text-xs text-slate">
                 {[p.degree_level?.name, p.subject?.name].filter(Boolean).join(" · ")}
               </p>
@@ -82,7 +88,7 @@ export function ProgramsList({
             >
               →
             </span>
-          </Link>
+          </div>
         ))}
       </div>
 
