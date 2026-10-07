@@ -1,5 +1,9 @@
 import pg from "pg";
 import fs from "fs";
+import {
+  SCHOLARSHIP_CORRECTIONS_2026_10_07,
+  VERIFIED_ON as CORRECTIONS_2026_10_07_VERIFIED_ON,
+} from "./scholarship_corrections_2026_10_07.mjs";
 
 const env = Object.fromEntries(
   fs
@@ -1023,6 +1027,21 @@ try {
     );
     console.log("field-fix", slug, Object.keys(patch));
   }
+
+  // 2026-10-07 re-verification against official pages; see the module for
+  // what each row got wrong. Runs after every earlier patch block so it wins.
+  for (const [slug, patch] of Object.entries(SCHOLARSHIP_CORRECTIONS_2026_10_07)) {
+    if (/\u2014/.test(JSON.stringify(patch))) throw new Error(`em dash in ${slug}`);
+    const cols = Object.keys(patch);
+    const setClause = cols.map((c, i) => `${c} = $${i + 1}`).join(", ");
+    await client.query(
+      `update scholarships set ${setClause}, last_verified_at = $${cols.length + 1}, updated_at = now()
+       where slug = $${cols.length + 2}`,
+      [...cols.map((c) => patch[c]), CORRECTIONS_2026_10_07_VERIFIED_ON, slug],
+    );
+    console.log("correction-2026-10-07", slug);
+  }
+
 
   // Destination Australia stopped accepting new applicants from 1 July 2024
   // (see the removed NATIONAL entry above) — archive the existing row so it
