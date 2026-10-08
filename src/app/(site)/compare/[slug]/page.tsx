@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
+import { UniversityScholarships } from "@/components/site/UniversityScholarships";
+import { listPublishedScholarships } from "@/lib/queries/public-scholarships";
 import { ComparisonTable } from "@/components/site/ComparisonTable";
 import { FaqSection } from "@/components/site/FaqSection";
 import { GuideContent } from "@/components/site/GuideContent";
@@ -253,6 +255,12 @@ export default async function ComparisonPage({
       listPublishedUniversityOptions(),
       listCollectionUniversities(),
     ]);
+    // Enabled per pair, only where every listed scholarship has been checked
+    // against the universities' own pages.
+    const showScholarships = slug === "monash-university-vs-unsw-sydney";
+    const scholarships = showScholarships
+      ? await listPublishedScholarships({ scope: "university-specific" })
+      : [];
     const ca = collection.find((c) => c.slug === a.slug);
     const cb = collection.find((c) => c.slug === b.slug);
     if (!ca || !cb) notFound();
@@ -416,6 +424,15 @@ export default async function ComparisonPage({
                   ),
               )}
             </div>
+          )}
+
+          {showScholarships && (
+            <UniversityScholarships
+              heading={`Scholarships at ${a.name} and ${b.name}`}
+              intro="Published tuition is the starting point, not what everyone pays. These are the published scholarships on record for each university, checked against each university's own page. Eligibility usually depends on your academic results and country, and amounts change by intake, so confirm on the linked page before you compare costs."
+              universities={[a, b].map((u) => ({ slug: u.slug, name: u.name }))}
+              scholarships={scholarships}
+            />
           )}
 
           <FaqSection heading={`${a.name} vs ${b.name}: common questions`} items={faq} />

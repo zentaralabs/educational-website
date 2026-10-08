@@ -2,6 +2,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { ArrowUpRightIcon } from "@/components/site/icons";
+import { UniversityScholarships } from "@/components/site/UniversityScholarships";
+import { listPublishedScholarships } from "@/lib/queries/public-scholarships";
 import { breadcrumbJsonLd } from "@/lib/breadcrumb-jsonld";
 import { SITE_YEAR } from "@/lib/site-config";
 import { COLLECTIONS, getCollection } from "@/lib/collections";
@@ -45,6 +47,10 @@ export default async function CollectionPage({
 
   const universities = await listCollectionUniversities();
   const entries = collection.build(universities);
+  // Scholarship section is enabled per page, only where every listed row has been
+  // checked against the university's own page.
+  const showScholarships = slug === "cheapest-universities-in-perth-for-international-students";
+  const scholarships = showScholarships ? await listPublishedScholarships({ scope: "university-specific" }) : [];
 
   const breadcrumbs = [
     { label: "Home", href: "/" },
@@ -157,6 +163,15 @@ export default async function CollectionPage({
             </li>
           ))}
         </ol>
+      )}
+
+      {showScholarships && (
+        <UniversityScholarships
+          heading="Scholarships that lower the Perth figures above"
+          intro="The tuition figures above are before any scholarship. These are the published scholarships on record for the universities in this list, each checked against the university's own page. Amounts, eligible courses and countries change by intake and are often tied to your academic results, so confirm on the linked page before you budget around one."
+          universities={entries.map((e) => ({ slug: e.slug, name: e.name }))}
+          scholarships={scholarships}
+        />
       )}
 
       {collection.sectionsAfterList?.map((s) => (
