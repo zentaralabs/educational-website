@@ -10,6 +10,42 @@ Redirects · Canonical/sitemap/metadata changes · Testing done.**
 
 ---
 
+## 2026-10-08 · Program pages need an 85-word description to be indexed (migration 0039)
+
+**Affected routes:** `/universities/{slug}/programs/{program-slug}` and
+`/sitemap-programs.xml`.
+
+**Why:** impressions are still near zero two weeks after the Sep 24 drop
+(39 impressions Sep 30-Oct 5 vs 4.5K Sep 20-23). Search Console: 1.53K
+indexed, 1,512 "Crawled - currently not indexed", 2,570 "Discovered -
+currently not indexed". Program pages were 4,918 of the 5,296 sitemap URLs
+(~93%). Cause is unproven; this is a bet that a smaller, stronger index set
+helps, following the 2026-09-29 cut of 520 description-only pages.
+
+**What changed:** a parsed curriculum no longer makes a page indexable by
+itself. Every indexable program page now needs a description of at least 85
+words, plus either a curriculum or a filled facts table (unchanged).
+- `isProgramIndexable()` (page robots meta).
+- Migration `0039_program_content_indexable_require_description.sql` re-cuts
+  the `content_indexable` generated column (sitemap filter).
+
+**Measured on production 2026-10-08:** 1,455 of 4,918 sitemap program pages
+leave the index and sitemap (30 no description, 93 at 1-49 words, 1,332 at
+50-84 words); 3,463 stay. Top universities affected: RMIT 119, Tasmania 103,
+Newcastle 92, ECU 88, Adelaide 79. Pages stay live (`noindex, follow`).
+
+**Deploy order:** either order is safe (same column name). Run the migration
+right after deploying so the page meta and the sitemap agree.
+
+**Rollback:** revert the code change and re-run migration 0032.
+
+**SEO impact: MED-HIGH.** Some removed pages earned a few impressions before
+Sep 24 (program pages as a group: 4.83K of 13.1K impressions, Sep 10-23).
+**Testing:** `tsc --noEmit` (only the pre-existing `layout.tsx` error);
+eslint clean; drop count computed against production with the new rule.
+
+---
+
 ## 2026-09-29 · Manual noindex override for program pages (`seo_noindex`), Step A prepared
 
 **Affected routes:** `/universities/{slug}/programs/{program-slug}` and

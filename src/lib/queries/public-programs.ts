@@ -1,25 +1,22 @@
 import { createPublicClient } from "@/lib/supabase/public";
 
 /**
- * Minimum "About this program" word count for a description-only program page
- * to be indexed. Rolled down in bands (see migration 0032 and its successors)
- * as GSC confirms the newly-indexed pages rank without dragging site quality:
- * 100 (original) -> 85 (band 1) -> 70 (band 2) -> 60 (band 3). Keep this in
- * sync with the `content_indexable` generated column's threshold.
+ * Minimum "About this program" word count for any program page to be
+ * indexed (since migration 0039; before that, curriculum pages were exempt).
+ * Keep this in sync with the `content_indexable` generated column's threshold.
  */
 export const PROGRAM_INDEX_MIN_WORDS = 85;
 
 /**
  * Whether a program page carries enough of its own content to be worth
- * indexing (and listing in the sitemap). A page qualifies when it has a
- * parsed `curriculum`, OR a real sourced description of at least
- * `PROGRAM_INDEX_MIN_WORDS` words AND a filled facts table (fees plus a
- * duration or English score) — that combination is a genuinely useful
- * landing page for a `[program] at [university]` query even at ~70-90 words
- * of prose. Rows with no description, or a description on an otherwise-empty
- * shell, stay noindex (still live for users and internal links).
+ * indexing (and listing in the sitemap). Every indexed page needs a real
+ * sourced description of at least `PROGRAM_INDEX_MIN_WORDS` words, plus
+ * either a parsed `curriculum` or a filled facts table (fees plus a duration
+ * or English score). A curriculum alone no longer qualifies: a unit list
+ * under a short description reads mostly as the shared program template.
+ * Rows that fall short stay noindex (still live for users and internal links).
  * Mirrored in SQL by the `content_indexable` generated column (migration
- * 0023, re-cut by 0032). See PROJECT_STATUS.md "Program pages".
+ * 0023, re-cut by 0032 and 0039). See SEO_CHANGELOG.md 2026-10-08.
  */
 export function isProgramIndexable(program: {
   seo_noindex?: boolean | null;
@@ -32,9 +29,9 @@ export function isProgramIndexable(program: {
 }): boolean {
   // Manual per-row override (migration 0038). Wins over every content rule.
   if (program.seo_noindex) return false;
-  if (program.curriculum && program.curriculum.trim()) return true;
   const words = (program.description ?? "").trim().split(/\s+/).filter(Boolean);
   if (words.length < PROGRAM_INDEX_MIN_WORDS) return false;
+  if (program.curriculum && program.curriculum.trim()) return true;
   const hasFees =
     program.tuition_international != null || program.tuition_domestic != null;
   const hasStructure =
