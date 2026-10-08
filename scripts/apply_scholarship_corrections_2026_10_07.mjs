@@ -2,7 +2,14 @@
 // (not the full seed). Safe to re-run. Usage: node scripts/apply_scholarship_corrections_2026_10_07.mjs [--dry]
 import pg from "pg";
 import fs from "fs";
-import { SCHOLARSHIP_CORRECTIONS_2026_10_07 as C, VERIFIED_ON } from "./scholarship_corrections_2026_10_07.mjs";
+import * as m07 from "./scholarship_corrections_2026_10_07.mjs";
+import * as m08 from "./scholarship_corrections_2026_10_08.mjs";
+
+// Each module has its own verified-on date; apply both (idempotent).
+const SETS = [
+  [m07.SCHOLARSHIP_CORRECTIONS_2026_10_07, m07.VERIFIED_ON],
+  [m08.SCHOLARSHIP_CORRECTIONS_2026_10_08, m08.VERIFIED_ON],
+];
 
 const env = Object.fromEntries(
   fs.readFileSync(".env.local", "utf8").split("\n").filter((l) => l.includes("=") && !l.startsWith("#"))
@@ -12,7 +19,7 @@ const dry = process.argv.includes("--dry");
 const client = new pg.Client({ connectionString: env.DATABASE_URL, ssl: { rejectUnauthorized: false } });
 await client.connect();
 await client.query("begin");
-for (const [slug, patch] of Object.entries(C)) {
+for (const [C, VERIFIED_ON] of SETS) for (const [slug, patch] of Object.entries(C)) {
   if (/—/.test(JSON.stringify(patch))) throw new Error(`em dash in ${slug}`);
   const cols = Object.keys(patch);
   const setClause = cols.map((c, i) => `${c} = $${i + 1}`).join(", ");

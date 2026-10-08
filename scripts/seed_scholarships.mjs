@@ -4,6 +4,10 @@ import {
   SCHOLARSHIP_CORRECTIONS_2026_10_07,
   VERIFIED_ON as CORRECTIONS_2026_10_07_VERIFIED_ON,
 } from "./scholarship_corrections_2026_10_07.mjs";
+import {
+  SCHOLARSHIP_CORRECTIONS_2026_10_08,
+  VERIFIED_ON as CORRECTIONS_2026_10_08_VERIFIED_ON,
+} from "./scholarship_corrections_2026_10_08.mjs";
 
 const env = Object.fromEntries(
   fs
@@ -1040,6 +1044,18 @@ try {
       [...cols.map((c) => patch[c]), CORRECTIONS_2026_10_07_VERIFIED_ON, slug],
     );
     console.log("correction-2026-10-07", slug);
+  }
+
+  for (const [slug, patch] of Object.entries(SCHOLARSHIP_CORRECTIONS_2026_10_08)) {
+    if (/\u2014/.test(JSON.stringify(patch))) throw new Error(`em dash in ${slug}`);
+    const cols = Object.keys(patch);
+    const setClause = cols.map((c, i) => `${c} = $${i + 1}`).join(", ");
+    await client.query(
+      `update scholarships set ${setClause}, last_verified_at = $${cols.length + 1}, updated_at = now()
+       where slug = $${cols.length + 2}`,
+      [...cols.map((c) => patch[c]), CORRECTIONS_2026_10_08_VERIFIED_ON, slug],
+    );
+    console.log("correction-2026-10-08", slug);
   }
 
 
