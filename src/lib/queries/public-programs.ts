@@ -32,9 +32,9 @@ export function isProgramIndexable(program: {
 }): boolean {
   // Manual per-row override (migration 0038). Wins over every content rule.
   if (program.seo_noindex) return false;
-  if (program.curriculum && program.curriculum.trim()) return true;
   const words = (program.description ?? "").trim().split(/\s+/).filter(Boolean);
   if (words.length < PROGRAM_INDEX_MIN_WORDS) return false;
+  if (program.curriculum && program.curriculum.trim()) return true;
   const hasFees =
     program.tuition_international != null || program.tuition_domestic != null;
   const hasStructure =
