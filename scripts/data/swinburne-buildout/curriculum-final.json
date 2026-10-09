@@ -1,0 +1,74 @@
+[
+ {
+  "id": "edeb14d1-acb0-467b-9003-392fbf6fa127",
+  "name": "Bachelor of Accounting",
+  "source": "https://www.swinburne.edu.au/course/undergraduate/bachelor-of-accounting/handbook/",
+  "curriculum": "Core units — Financial Information for Decision Making; Contemporary Management Principles; Economics for Business Decision Making; Business Digitalisation; Creative Mindset and Entrepreneurship; Law of Commerce; Sustainable Business Practice; Business Consulting Project\nAccounting major — Financial Information Systems; Financial Statistics; Company Accounting; Financial Management; Management Accounting and Business Intelligence; Auditing; Taxation; Accounting Theory"
+ },
+ {
+  "id": "250a5a5c-e454-4ee9-9efd-458c6ffe8028",
+  "name": "Graduate Certificate of Cybersecurity",
+  "source": "https://www.swinburne.edu.au/course/postgraduate/graduate-certificate-of-cyber-security/handbook/",
+  "curriculum": "Core units — Creating Web Applications; Technology Design Project; Programming Principles and Practices; Internet Security; Advanced Threats in AI and Data Security; Cyber Security Fundamentals and Practices; Network Administration; Networks and Switching"
+ },
+ {
+  "id": "364002a4-e0ed-49c7-9974-d64befe570bf",
+  "name": "Graduate Certificate of Engineering (Advanced Manufacturing Technology)",
+  "source": "https://www.swinburne.edu.au/course/postgraduate/graduate-certificate-of-engineering/handbook/",
+  "curriculum": "Advanced Manufacturing units — Nanofabrication Technologies; Work Systems in Manufacturing; Additive Manufacturing and Tooling; Advanced CAD/CAM; Robotics in Manufacturing; Technology Management; Advanced Manufacturing Processes; Intelligent Inspection Systems; Computer Modelling, Analysis and Visualisation; Additive Manufacturing and Tooling Project; Sustainability and Life Cycle Engineering"
+ },
+ {
+  "id": "2eb937aa-e614-44d6-b289-4df018cf7f47",
+  "name": "Graduate Certificate of Entrepreneurship",
+  "source": "https://www.swinburne.edu.au/course/postgraduate/graduate-certificate-of-entrepreneurship/handbook/",
+  "curriculum": "Core units — Future-Fit Innovation; Responsible Entrepreneurship and Leadership; Startup Foundry; Show Me The Money: Fundamentals of Funding Startups"
+ },
+ {
+  "id": "ae5a219d-de9a-456c-87c3-c7cfa507888d",
+  "name": "Master of Cybersecurity",
+  "source": "https://www.swinburne.edu.au/course/postgraduate/master-of-cyber-security/handbook/",
+  "curriculum": "Core units — Technology Application Project; Offensive Security Engineering\nElective units — Introduction to Data Science; Advanced Software Development; Web Application Development; Software Quality and Testing; Data Visualisation; Network Routing Principles; Secure Networks; Software Managed Networks"
+ },
+ {
+  "id": "d52e8be2-56a2-46d0-af1c-b1299e103758",
+  "name": "Master of Educational Leadership",
+  "source": "https://www.swinburne.edu.au/course/postgraduate/master-of-educational-leadership/handbook/",
+  "curriculum": "Core units — Leadership of Self; Leadership of Teams; Leadership of Communities; Leadership for Innovation"
+ },
+ {
+  "id": "93d8a927-3ed6-4e7e-8359-46464beeab06",
+  "name": "Master of Engineering Practice",
+  "source": "https://www.swinburne.edu.au/course/postgraduate/master-of-engineering-practice/handbook/",
+  "curriculum": "Core units — Engineering Project Management; Research Paper\nAdvanced Manufacturing specialisation — Nanofabrication Technologies; Surface Engineering; Advanced CAD/CAM; Robotics in Manufacturing; Advanced Manufacturing Processes; Intelligent Inspection Systems; Computer Modelling, Analysis and Visualisation; Additive Manufacturing and Tooling Project; Sustainability and Life Cycle Engineering\nCivil Engineering specialisation — Estimating and Project Costing; Sustainable Transport; Advanced Concrete Design; Bridge Design and Strengthening; Infrastructure Deterioration Modelling; Geotechnical Design; Integrated Water Design; Principles of Sustainability; Bridge Design; Building Design Project\nElectrical Engineering specialisation — Programming Principles and Practices; Electrical Power Systems Safety; Operation of Power Systems; Analysis Techniques for Large Scale Power Systems; Renewable Energy; Design of Smart Power Grids; Virtual Instrumentation\nElectronic and Telecommunications specialisation — Programming Principles and Practices; RF Circuit Design Techniques; Virtual Instrumentation; IoT Programming; Networks and Switching; Network Routing Principles; Mobile and Personal Networking\nMechanical Engineering specialisation — Surface Engineering; Advanced CAD/CAM; Intelligent Inspection Systems; Computer Modelling, Analysis and Visualisation; Fluid Waves; Sustainability and Life Cycle Engineering; Introduction to Industry 4.0\nStructural Engineering specialisation — Estimating and Project Costing; Advanced Concrete Design; Bridge Design and Strengthening; Infrastructure Deterioration Modelling; Geotechnical Design; Principles of Sustainability; Finite Element Methods and Applications; Structural Dynamics and Earthquake Engineering; Bridge Design; Building Design Project"
+ },
+ {
+  "id": "ea8f4e0a-2f8b-487f-8847-f2459dae34e4",
+  "name": "Master of Engineering Science (Network Systems and Telecommunications)",
+  "source": "https://www.swinburne.edu.au/course/postgraduate/master-of-engineering-science/handbook/",
+  "curriculum": "Core units (all specialisations) — Engineering Project Management; Professional Practice in Engineering; Engineering Master Major Thesis; Research Methods"
+ },
+ {
+  "id": "d6c7facf-c257-4a6b-a897-be9ca2e29ca0",
+  "name": "Master of Human Resource Management",
+  "source": "https://www.swinburne.edu.au/course/postgraduate/master-of-human-resource-management/handbook/",
+  "curriculum": "Core units — Leading Change; Human Resource Consultancy Project\nFoundation units — Behaviour in Organisations; Management Analysis and Problem Solving; Business Sustainability and Social Impact; Future Management Skills\nSpecialisations — Accounting; Supply Chain Innovation; Research; Project Management; Business Analytics; Business Information Systems; Entrepreneurship; Finance; Financial Technologies; International Business"
+ },
+ {
+  "id": "e8b46b81-50fa-4d69-805d-85d748596ecf",
+  "name": "Master of Project Management",
+  "source": "https://www.swinburne.edu.au/course/postgraduate/master-of-project-management/handbook/",
+  "curriculum": "Core units — Enterprise Project; Six Sigma Lean Green Belt\nFoundation units — Business Information Systems; Governing Technology for Business Environments; Business Sustainability and Social Impact; Future Management Skills\nSpecialisations — Accounting; Business Analytics; Business Information Systems; Digital Marketing; Entrepreneurship; Finance; Financial Technologies; Human Resource Management; International Business; Research; Social impact; Supply Chain Innovation"
+ },
+ {
+  "id": "391a79e2-6724-4688-92b4-033c89305814",
+  "name": "Master of Teaching (Secondary)",
+  "source": "https://www.swinburne.edu.au/course/postgraduate/master-of-teaching-secondary/handbook/",
+  "curriculum": "Core units — Understanding Theories of Teaching, Learning & Development; Curriculum Development, Assessment and Responsive Pedagogy; Secondary Curriculum and Pedagogy 1; Transformative Technologies in Education; Literacy and Numeracy Across the Curriculum; Understanding Indigenous Education and Perspectives; Assessment and Data; Teaching for Diversity, Equity and Inclusion; Innovation for Education; Educational Leadership and Policy; Building and Sustaining Positive Relationships; Teacher Professionalism and Ethical Conduct; Secondary Curriculum and Pedagogy 2; Professional Experience 3 (Ready to Teach); and 2 more units"
+ },
+ {
+  "id": "13e6794a-fbfb-4749-8a4d-ccf3c6a1f279",
+  "name": "Graduate Diploma of Early Childhood Teaching",
+  "source": "https://www.swinburne.edu.au/course/postgraduate/graduate-diploma-of-early-childhood-teaching/handbook/",
+  "curriculum": "Structure — 100 credit points: four core units of 25 credit points each, including 452 hours of supervised professional experience; 1 year of study;\nProfessional recognition — Accredited by the Australian Children's Education and Care Quality Authority (ACECQA); Recognised by the Victorian Institute of Teaching as a VIT registerable Early Childhood Teacher qualification;"
+ }
+]
