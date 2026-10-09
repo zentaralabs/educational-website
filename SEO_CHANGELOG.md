@@ -10,6 +10,27 @@ Redirects · Canonical/sitemap/metadata changes · Testing done.**
 
 ---
 
+## 2026-10-09 · 19 Western Sydney "exit only" awards merged into the course list (migration 0041)
+
+**Affected routes:** 19 `/universities/western-sydney-university/programs/{slug}` URLs (now 308 to
+`/universities/western-sydney-university#programs`).
+
+**Why:** "exit only" awards can only be received by leaving a longer degree early, so nobody
+applies for them; a standalone page for each is thin by definition. Same driver as the entry
+above (AdSense "Low value content").
+
+**What changed:** new `merge_into_list` editor override (the inverse of `keep_own_page`);
+`has_own_page` re-cut to `not merge_into_list and (keep_own_page or 50+ words)`. Set for exactly
+19 rows by id. A name-based rule was rejected on purpose: there are 59 "exit only" rows, 24 of the
+other 40 are currently indexed.
+
+**SEO impact:** LOW. None of the 19 had GSC impressions, none were indexable or in the sitemap.
+Prod now: 479 merged (460 + 19), 0 indexable rows affected.
+
+**Rollback:** `update programs set merge_into_list = false;`
+
+---
+
 ## 2026-10-09 · 460 thin program pages merged into their university course list (migration 0040)
 
 **Affected routes:** `/universities/{slug}/programs/{program-slug}` (460 URLs now 308 to

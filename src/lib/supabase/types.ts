@@ -229,6 +229,9 @@ export interface Database {
           seo_noindex: boolean;
           /** Editor override (migration 0040): keep a thin row on its own page. */
           keep_own_page: boolean;
+          /** Editor override (migration 0041): fold this row into its university
+           * course list even if its description is long enough. */
+          merge_into_list: boolean;
           /** Generated column (migration 0040): 50+ word description or
            * keep_own_page. False = merged into the university course list.
            * Read-only — never written. */
@@ -269,6 +272,7 @@ export interface Database {
           cricos_code?: string | null;
           seo_noindex?: boolean;
           keep_own_page?: boolean;
+          merge_into_list?: boolean;
         }
       >;
       // occupations / program_occupations — see supabase/migrations/0030_add_occupations.sql.
