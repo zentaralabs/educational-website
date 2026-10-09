@@ -67,9 +67,30 @@ export type PublicProgramRow = {
   /** False for thin rows merged into the university's course list (migration
    * 0040): no page of their own, listed as a plain row, old URL redirects. */
   has_own_page: boolean;
+  /** One or two sentences from the description, only for rows without a page of
+   * their own (they are listed as plain rows and need to say what they are).
+   * Computed server-side so full descriptions are never shipped to the client. */
+  blurb: string | null;
   degree_level: { name: string } | null;
   subject: { slug: string; name: string } | null;
 };
+
+/** First one or two sentences of a description, capped, for the course-list rows. */
+export function makeBlurb(description: string | null | undefined, max = 220): string | null {
+  const text = (description ?? "").replace(/\s+/g, " ").trim();
+  if (!text) return null;
+  // Split after . ! ? only when followed by whitespace, so "4.0" or "A$1.5m" never ends a sentence.
+  const sentences = text.split(/(?<=[.!?])\s+/).filter(Boolean);
+  let out = "";
+  for (const s of sentences) {
+    const next = (out ? out + " " : "") + s.trim();
+    if (out && next.length > max) break;
+    out = next;
+    if (out.length >= 120) break;
+  }
+  if (out.length > max) out = out.slice(0, max).replace(/\s+\S*$/, "") + "...";
+  return out || null;
+}
 
 export async function getPublishedProgramsForUniversity(
   universityId: string,
@@ -78,14 +99,17 @@ export async function getPublishedProgramsForUniversity(
   const { data, error } = await supabase
     .from("programs")
     .select(
-      "id, slug, name, duration_years, tuition_international, tuition_domestic, tuition_domestic_is_csp, currency, application_url, admission_requirements, english_requirements, ielts_overall, ielts_listening, ielts_reading, ielts_writing, ielts_speaking, pte_overall, pte_listening, pte_reading, pte_writing, pte_speaking, last_verified_at, source_url, cricos_code, has_own_page, degree_level:degree_levels(name), subject:subjects(slug, name)",
+      "id, slug, name, duration_years, tuition_international, tuition_domestic, tuition_domestic_is_csp, currency, application_url, admission_requirements, english_requirements, ielts_overall, ielts_listening, ielts_reading, ielts_writing, ielts_speaking, pte_overall, pte_listening, pte_reading, pte_writing, pte_speaking, last_verified_at, source_url, cricos_code, has_own_page, description, degree_level:degree_levels(name), subject:subjects(slug, name)",
     )
     .eq("university_id", universityId)
     .eq("status", "published")
     .order("name");
 
   if (error) throw error;
-  return (data ?? []) as unknown as PublicProgramRow[];
+  // Keep only a short blurb for merged rows; never ship full descriptions here.
+  return ((data ?? []) as unknown as (PublicProgramRow & { description: string | null })[]).map(
+    ({ description, ...row }) => ({ ...row, blurb: row.has_own_page ? null : makeBlurb(description) }),
+  );
 }
 
 export type ProgramOccupation = {

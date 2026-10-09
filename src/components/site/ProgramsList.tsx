@@ -3,6 +3,31 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import type { PublicProgramRow } from "@/lib/queries/public-programs";
+import { formatCurrency } from "@/lib/format";
+
+function formatDuration(years: number | null): string | null {
+  if (years == null || years <= 0) return null;
+  const isWholeOrHalf = Math.abs(years * 2 - Math.round(years * 2)) < 0.01;
+  if (isWholeOrHalf && years >= 1) {
+    const v = Math.round(years * 2) / 2;
+    return `${v} year${v === 1 ? "" : "s"}`;
+  }
+  return `${Math.round(years * 12)} months`;
+}
+
+const norm = (v: string) => v.toLowerCase().replace(/[^a-z0-9]/g, "");
+
+/** A saved source link is shown only when its last path segment clearly names
+ * this course. Many saved links point at a parent degree or a sibling award
+ * (about a quarter of the merged rows checked), and a wrong "Official page"
+ * link is worse than none. */
+function linkNamesThisCourse(url: string | null, name: string, slug: string): boolean {
+  if (!url) return false;
+  const last = norm(url.replace(/[?#].*$/, "").replace(/\/+$/, "").split("/").pop() ?? "");
+  if (last.length < 6) return false;
+  const n = norm(name), sl = norm(slug);
+  return n.includes(last) || last.includes(n) || sl.includes(last) || last.includes(sl);
+}
 
 const PAGE_SIZE = 10;
 
@@ -72,18 +97,30 @@ export function ProgramsList({
               </p>
             </div>
           );
+          const facts = [
+            formatDuration(p.duration_years),
+            p.tuition_international != null
+              ? `Tuition ${formatCurrency(p.tuition_international, p.currency ?? "AUD")} (international)`
+              : null,
+          ].filter(Boolean).join(" · ");
           // Merged into this list (migration 0040): no page of our own yet, so
           // the row points at the course on the university's own site.
           if (!p.has_own_page) {
-            const official = p.source_url ?? p.application_url;
+            const official = linkNamesThisCourse(p.source_url, p.name, p.slug) ? p.source_url : null;
             return (
               <div
                 key={p.id}
                 hidden={hidden}
-                className="flex items-center justify-between gap-4 rounded-md border border-ink/10 bg-paper py-3 pr-3 pl-3 text-sm"
+                className="flex items-start justify-between gap-4 rounded-md border border-ink/10 bg-paper py-3 pr-3 pl-3 text-sm"
                 style={{ borderLeftWidth: 3, borderLeftColor: "var(--color-line)" }}
               >
-                {label}
+                <div className="min-w-0">
+                  {label}
+                  {p.blurb && (
+                    <p className="mt-1.5 line-clamp-2 font-body text-xs leading-relaxed text-slate">{p.blurb}</p>
+                  )}
+                  {facts && <p className="mt-1 font-utility text-xs text-slate">{facts}</p>}
+                </div>
                 {official && (
                   <a
                     href={official}
