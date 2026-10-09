@@ -89,7 +89,10 @@ export function parseCurriculumLine(line: string): CurriculumTerm {
       // into one comma list without separating them — strip it so the code
       // match below still fires on the actual unit code that follows.
       const inlineLabelMatch = segment.match(/^([A-Za-z][A-Za-z &]{2,30}):\s*/);
-      if (inlineLabelMatch && !/\d/.test(inlineLabelMatch[1])) {
+      // Only for comma-joined lines: when items are ";"-separated, a colon is part
+      // of a real name ("Foundation Chemistry: Reactions and Structures"), and
+      // stripping the prefix silently truncated it.
+      if (!hasSemicolons && inlineLabelMatch && !/\d/.test(inlineLabelMatch[1])) {
         segment = segment.slice(inlineLabelMatch[0].length);
       }
       // Checked before the code pattern below since a bare "2 electives"
