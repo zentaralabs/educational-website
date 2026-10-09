@@ -1,5 +1,5 @@
 /**
- * Fill the missing subject lists ("curriculum") for 50 University of Melbourne
+ * Fill the missing subject lists ("curriculum") for 70 University of Melbourne
  * coursework programs from the university's own 2026 Handbook
  * (handbook.unimelb.edu.au/2026/courses/<code>/course-structure, read
  * 2026-10-09). Data: scripts/data/melbourne-buildout/curriculum-final.json
@@ -12,8 +12,9 @@
  *   node scripts/apply_melbourne_curriculum_2026-10-09.mjs            # preview
  *   node scripts/apply_melbourne_curriculum_2026-10-09.mjs --apply    # write
  *
- * A row is only written if its live curriculum is still empty; anything else
- * is reported as STALE and skipped, never overwritten.
+ * A row is only written if its live curriculum is still empty (new fill) or still
+ * equals the `previous` text this script wrote earlier (tidy-up); anything else is
+ * reported as STALE and skipped, never overwritten.
  */
 import { createClient } from "@supabase/supabase-js";
 import fs from "fs";
@@ -29,7 +30,7 @@ const reader = createClient(url, env.NEXT_PUBLIC_SUPABASE_ANON_KEY);
 const writer = APPLY ? createClient(url, env.SUPABASE_SERVICE_ROLE_KEY) : null;
 
 const rows = JSON.parse(fs.readFileSync("scripts/data/melbourne-buildout/curriculum-final.json", "utf8"));
-let ok = 0, stale = 0, failed = 0;
+let ok = 0, stale = 0, failed = 0, fills = 0, replaces = 0, same = 0;
 for (const r of rows) {
   if (/[?]|undefined|null/.test(r.curriculum) || !r.curriculum.includes(" — ")) {
     console.log(`BAD      ${r.name}`); failed++; continue;
@@ -37,14 +38,17 @@ for (const r of rows) {
   const { data: live, error } = await reader
     .from("programs").select("id, curriculum, status").eq("id", r.id).single();
   if (error || !live) { console.log(`ERROR    ${r.name}: ${error?.message}`); failed++; continue; }
-  if ((live.curriculum ?? "").trim() !== "") {
-    console.log(`STALE    ${r.name}: curriculum no longer empty, skipped`); stale++; continue;
-  }
-  console.log(`${APPLY ? "WRITE" : "PREVIEW"}  ${r.name} (${r.handbook_code})  ${r.curriculum.split("\n").length} lines, ${r.curriculum.length} chars`);
+  const cur = (live.curriculum ?? "").trim();
+  let mode;
+  if (cur === "") mode = "fill";
+  else if (cur === r.curriculum.trim()) { same++; continue; }
+  else if (r.previous && cur === r.previous.trim()) mode = "replace";
+  else { console.log(`STALE    ${r.name}: curriculum changed since it was written, skipped`); stale++; continue; }
+  console.log(`${APPLY ? "WRITE" : "PREVIEW"}  ${mode.padEnd(7)} ${r.name} (${r.handbook_code})  ${r.curriculum.split("\n").length} lines, ${r.curriculum.length} chars`);
   if (APPLY) {
     const { error: e } = await writer.from("programs").update({ curriculum: r.curriculum }).eq("id", r.id);
     if (e) { console.log(`  FAILED: ${e.message}`); failed++; continue; }
   }
-  ok++;
+  mode === "fill" ? fills++ : replaces++; ok++;
 }
-console.log(`\n${ok} ${APPLY ? "written" : "ready"}, ${stale} stale, ${failed} failed, of ${rows.length}`);
+console.log(`\n${ok} ${APPLY ? "written" : "ready"} (${fills} new, ${replaces} tidied), ${same} already up to date, ${stale} stale, ${failed} failed, of ${rows.length}`);

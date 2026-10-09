@@ -1,6 +1,6 @@
-# Melbourne subject lists, preview (nothing saved to the database yet)
+# Melbourne subject lists (written to the database 2026-10-09)
 
-Source: handbook.unimelb.edu.au/2026 course-structure pages, read 2026-10-09. Long subject lists are capped at 14 names plus a count.
+Source: University of Melbourne 2026 Handbook course-structure pages. 70 courses. Long subject lists are capped at 14 names plus a count; courses whose handbook page only gives point rules (no subject names) show those rules.
 
 ## 1. Master of Urban Planning (MC-URPL)
 
@@ -21,13 +21,13 @@ Source: handbook.unimelb.edu.au/2026 course-structure pages, read 2026-10-09. Lo
 
 ## 3. Graduate Certificate in Evaluation (GC-EVALO)
 
-- Structure — The Graduate Certificate in Evaluation is a 50 point coursework classified course.
+- Structure — The Graduate Certificate in Evaluation is a 50 point coursework classified course.;
 - Compulsory subjects — Applied Research Methodology; Foundations of Evaluation
 - Elective subjects — Developing Evaluation Capacity; Qualitative Methods for Evaluation; Mixed Methods Research & Evaluation; Debates in Evaluation; Practice of Evaluation; Impact Evaluation; Evaluation and Value for Money; Quantitative Methods for Evaluation
 
 ## 4. Graduate Diploma in Genomics and Health (GD-GENOHLT)
 
-- Structure — The Graduate Diploma in Genomics and Health consists of 75 points of compulsory subjects and 25 points of elective subjects.
+- Structure — The Graduate Diploma in Genomics and Health consists of 75 points of compulsory subjects and 25 points of elective subjects.;
 - Compulsory subjects — Human Genetics & Genomics in Healthcare; Societal Implications of Genomics; Foundational Counselling Practice; Healthcare Research-Principles & Designs; Clinical Genomics; Advanced Communication Skills; Clinical Genome Variant Analysis 2; Clinical Genome Variant Analysis 1
 - Elective Subjects (Semester 2) — Health Behaviour Change; Basics of Digital Health for Clinicians; Introduction to Economic Evaluation; Comparative Health Systems; Qualitative Research in Public Health; Health Illness and Society; Science Communication; Scientists,Communication & the Workplace
 
@@ -47,7 +47,7 @@ Source: handbook.unimelb.edu.au/2026 course-structure pages, read 2026-10-09. Lo
 
 ## 7. Bachelor of Medical Science (Degree with Honours) (BH-MEDSCI)
 
-- Structure — The Bachelor of Medical Science (Degree with Honours) requires the successful completion of 100 credit points.
+- Structure — The Bachelor of Medical Science (Degree with Honours) requires the successful completion of 100 credit points.;
 - Subjects — Introduction to Medical Research; Advanced Medical Research; Project in Medical Research
 
 ## 8. Graduate Certificate in Translation (GC-TRANS)
@@ -82,7 +82,7 @@ Source: handbook.unimelb.edu.au/2026 course-structure pages, read 2026-10-09. Lo
 
 ## 13. Master of Science (Bioinformatics) (MC-SCIBIF)
 
-- Structure — Completion of one entry point program is required.Master of Science (Bioinformatics) has two entry point programs: 200pt Program and 150pt Program (Bioinformatics cognate pathway).Exemptions will be granted for students who have completed equivalent subjects in their undergraduate studies.
+- Structure — Completion of one entry point program is required; Two entry point programs: 200pt Program and 150pt Program (Bioinformatics cognate pathway); Exemptions are granted for students who have completed equivalent subjects in their undergraduate studies;
 - Students must take — Elements of Bioinformatics; Algorithms and Complexity; Introduction to Programming; Skills for Data-intensive Research
 - and both of — Thinking and Reasoning with Data; High-Dimensional Omics Data Analysis
 - or both of — Probability for Statistics; Statistics
@@ -110,7 +110,6 @@ Source: handbook.unimelb.edu.au/2026 course-structure pages, read 2026-10-09. Lo
 
 ## 16. Master of TESOL (MC-TESOL)
 
-- Structure — Note: Students who commenced the Master of TESOL prior to 2025, please click here to view your course structure and subject options.
 - Compulsory subjects (50 points) — Education Policy in Context; Literacies in Local and Global Contexts; Understanding the Student as Learner; Engaging with Research in Education
 - Compulsory subjects (25 points) — Key Concepts of Academic Writing; Key Concepts of Language
 - Foundations subjects (25 points) (choice of 2) — Foundations: Curriculum; Foundations: Data & Science of Learning; Foundations: Digital Futures; Foundations: Educational Leadership; Foundations: Policy and Social Change; Foundations: Wellbeing
@@ -120,7 +119,7 @@ Source: handbook.unimelb.edu.au/2026 course-structure pages, read 2026-10-09. Lo
 
 ## 17. Graduate Certificate in Publishing and Communications (Advanced) (GCA-PUBCOM)
 
-- Structure — Duration: 6 months full-time / 1 year part-time Program Requirements -elective subjects (50 points)Total 50 pointsExternal Subject RuleStudent may undertake an external subject (not listed within the program structure) with the permission of the program and subject coordinator.
+- Structure — 6 months full-time or 1 year part-time; Elective subjects (50 points); Total 50 points;
 - 50 points — Structural Editing; Introduction to Copyediting; The Contemporary Publishing Industry; Business and Professional Communications; Writing and Editing for Digital Media; Print Production and Design; The International Publishing Industry
 
 ## 18. Graduate Diploma in Food Science (GD-FOODSC)
@@ -131,12 +130,12 @@ Source: handbook.unimelb.edu.au/2026 course-structure pages, read 2026-10-09. Lo
 
 ## 19. Graduate Diploma in Environment (GD-ENV)
 
-- Structure — Students who undertake the GD-ENV Graduate Diploma in Environment must complete one core subject and choose 87.5 points of subjects selected from an approved subject list in consultation with an academic advisor.
+- Structure — Students who undertake the GD-ENV Graduate Diploma in Environment must complete one core subject and choose 87.5 points of subjects selected from an approved subject list in consultation with an academic advisor.;
 - Students must complete the following subject — Environmental Sustainability
 
 ## 20. Graduate Certificate in Journalism (Advanced) (GCA-JOURN)
 
-- Structure — Please note: students commencing as part of the Mid-Year Intake can only take this program on a part time basis.
+- Note — Students commencing in the Mid-Year Intake can only take this program part time;
 - 50 Points — Researching/Writing Stories; Audio Journalism; Dilemmas in Journalism: Law and Ethics
 
 ## 21. Master of Screenwriting (MC-SCWR)
@@ -146,7 +145,7 @@ Source: handbook.unimelb.edu.au/2026 course-structure pages, read 2026-10-09. Lo
 
 ## 22. Master of Genetic Counselling (MC-GENCOUN)
 
-- Structure — The Master of Genetic Counselling requires the successful completion of 200 credit points.
+- Structure — The Master of Genetic Counselling requires the successful completion of 200 credit points.;
 - Year One — Human Genetics & Genomics in Healthcare; Clinical Genomics; Societal Implications of Genomics; Foundational Counselling Practice; Advanced Counselling Practice; Healthcare Research-Principles & Designs; Research Project in Human Genomics 1; Introduction to Genetic Counselling
 - Year Two — Advanced Clinical Genomics 1; Advanced Clinical Genomics 2; Genetic Counselling Practice 1; Genetic Counselling Practice 2; Clinical Practice; Research Project in Human Genomics 2
 
@@ -171,7 +170,7 @@ Source: handbook.unimelb.edu.au/2026 course-structure pages, read 2026-10-09. Lo
 
 ## 25. Graduate Certificate in Language and Cultural Literacy (GC-LANGCL)
 
-- Structure — The Graduate Certificate in Language and Cultural Literacy comprises 50 points of study in the areas of language and cultural literacy.
+- Structure — The Graduate Certificate in Language and Cultural Literacy comprises 50 points of study in the areas of language and cultural literacy.;
 - 12.5 Points — Transcultural Communication at Work; Concepts in Applied Linguistics
 - Maximum 12.5 points — Wines of the World; A Taste of Europe: Melbourne Intensive; Language and Society in Europe; Languages at Work; Language and Power in Asian Societies; Media and Urban Culture in Asia; Genders and Desires in Asia; Asian Arts: Networks and Hubs
 - Language and Culture Electives — Ancient Egyptian 1; Ancient Egyptian 2; Ancient Egyptian 3; Ancient Egyptian 4
@@ -207,13 +206,13 @@ Source: handbook.unimelb.edu.au/2026 course-structure pages, read 2026-10-09. Lo
 
 ## 26. Graduate Diploma in Arts and Cultural Management (Advanced) (GDA-ACM)
 
-- Structure — Duration: 1 year full-time / 2 years part-time Five compulsory subjects (62.5 points) Elective subjects (37.5 points).
+- Structure — 1 year full-time or 2 years part-time; Five compulsory subjects (62.5 points); Elective subjects (37.5 points);
 - 62.5 points — Principles of Arts Management; Cultural Policy; Audiences and the Arts; Managing Creative Content; Arts Operations
 - 37.5 points — Interpreting Exhibitions; Curating Art in Practice; History and Philosophy of Museums; Biennales, Triennales and Documentas; Partnering and Fundraising in the Arts; Marketing the Arts; The Economics of Culture; Cultural Festivals and Special Events; Applied Research Methods; Global Perspectives on Arts Management; Australian Theatre and Performance; Media Convergence and Digital Culture; Online Community Management; Film Festival Cultures; and 1 more subjects
 
 ## 27. Master of Genomics and Health (MC-GENOHLT)
 
-- Structure — The Master of Genomics and Health will comprise 4 x12.5 pt, 6 x 6.25 pt, and 1 x 37.5 pt (year-long) compulsory subjects, totaling 125 pt AND elective subjects totaling 75 pt.
+- Structure — The Master of Genomics and Health will comprise 4 x12.5 pt, 6 x 6.25 pt, and 1 x 37.5 pt (year-long) compulsory subjects, totaling 125 pt AND elective subjects totaling 75 pt.;
 - Year 1 — Clinical Genome Variant Analysis 1; Human Genetics & Genomics in Healthcare; Societal Implications of Genomics; Foundational Counselling Practice; Healthcare Research-Principles & Designs; Clinical Genomics; Advanced Communication Skills; Clinical Genome Variant Analysis 2
 - Year 2 — Frontiers in Genomics 1; Frontiers in Genomics 2; Genomics and Health Internship
 - Year 1 — Research Project in Human Genomics 1
@@ -222,7 +221,7 @@ Source: handbook.unimelb.edu.au/2026 course-structure pages, read 2026-10-09. Lo
 
 ## 28. Graduate Diploma in Urban Horticulture (GD-URBHORT)
 
-- Structure — The course comprises 100 points, i.e one year of full-time study or equivalent part-time study.
+- Structure — The course comprises 100 points, i.e one year of full-time study or equivalent part-time study.;
 - Students must complete the following four (50 points) of core subjects — Urban Soils, Substrates and Water; Horticultural Plant Science; Plant Production and Establishment; Plants in the Landscape
 - Subjects — Managing Urban Landscapes; Water Sensitive Urban Design; Ecological Restoration; Therapeutic Landscapes; Landscape Design; Landscape Documentation; Food Production for Urban Landscapes; Green Infrastructure for Liveable Cities; Managing Urban Trees; Plant Health; Designing Green Roofs and Walls; Urban Horticulture Issues & Perspectives; Tree Growth and Function; Landscape Ecology; and 4 more subjects
 
@@ -237,7 +236,7 @@ Source: handbook.unimelb.edu.au/2026 course-structure pages, read 2026-10-09. Lo
 
 ## 30. Graduate Diploma in Psychology (Advanced) (GDA-PSYCH)
 
-- Structure — The Graduate Diploma in Psychology (Advanced) program involves the completion of four advanced coursework subjects and a research project subject.Each advanced coursework subject entails 400-level lectures and seminars, literature reviews, oral presentations, and other activities.
+- Structure — The program involves the completion of four advanced coursework subjects and a research project subject; Each advanced coursework subject entails 400-level lectures and seminars, literature reviews, oral presentations, and other activities;
 - Compulsory Subjects — Advanced Design and Data Analysis; Ethics and Evidence-Based Practice; Research Project
 - Elective Subjects (Select Two) — Current Topics in Developmental Psych.; Current Topics in Social Psychology; Behavioural & Cognitive Neuroscience; Models of Psychological Processes
 
@@ -278,7 +277,7 @@ Source: handbook.unimelb.edu.au/2026 course-structure pages, read 2026-10-09. Lo
 
 ## 33. Master of Evaluation (MC-EVALO)
 
-- Structure — The Master of Evaluation is a 100 point coursework classified course.
+- Structure — The Master of Evaluation is a 100 point coursework classified course.;
 - Compulsory subjects — Practice of Evaluation; Applied Research Methodology; Foundations of Evaluation
 - Subjects — Evaluation Capstone
 - Students should choose four elective subjects from the following list. — Debates in Evaluation; Qualitative Methods for Evaluation; Mixed Methods Research & Evaluation; Developing Evaluation Capacity; Impact Evaluation; Evaluation and Value for Money; Quantitative Methods for Evaluation
@@ -293,13 +292,13 @@ Source: handbook.unimelb.edu.au/2026 course-structure pages, read 2026-10-09. Lo
 
 ## 35. Master of Speech Pathology (MC-SPCHPTH)
 
-- Structure — The course consists of formal lectures, seminars, practical work and student presentations along with substantial clinical component.
+- Structure — The course consists of formal lectures, seminars, practical work and student presentations along with substantial clinical component.;
 - Core subjects — Anatomy and Physiology; Clinical Processes A; Communication Across the Lifespan; Linguistics for Speech Pathology; Speech Disorders Across the Lifespan; Language Disorders Across the Lifespan; Swallowing and Voice; Speech Pathology Practice 1; Clinical Processes B
 - Core subjects — Planning and Integrating Intervention; Speech and Language Disorders - Advanced; Speech Pathology Practice 2; Research in Speech Pathology; Disorders of Fluency; Complex Case Models in Speech Pathology; Speech Pathology Practice 3; Speech Pathology Research Project; Practice in Diverse Communities
 
 ## 36. Master of Environmental Engineering (MC-ENVENG)
 
-- Structure — The Master of Environmental Engineering requires the successful completion of 300 credit points.The Master of Environmental Engineering is a three year degree (full time).
+- Structure — 300 credit points; A three year degree (full time);
 - Year 1 compulsory subjects — Sustainable Infrastructure Engineering; Engineering Mathematics; Earth Processes for Engineering; Environmental Eng Systems Capstone; Analysis of Biological Data; Intro to Sustainable Water Management; Fluid Mechanics; Interdisciplinary Design for Engineers
 - Year 2 compulsory subjects — Civil Hydraulics; Quantitative Environmental Modelling; Spatial Data Analytics; Monitoring Environmental Impacts; Environmental Analysis Tools; Engineering Hydrology; Environmental Systems Modelling & Design; Water Planning & an Uncertain Future
 - Year 3 compulsory subjects — Engineering Capstone Project Part 1; Engineering Capstone Project Part 2
@@ -331,7 +330,7 @@ Source: handbook.unimelb.edu.au/2026 course-structure pages, read 2026-10-09. Lo
 
 ## 40. Master of Mechatronics Engineering (MC-MTRNENG)
 
-- Structure — The Master of Mechatronics Engineering requires the successful completion of 300 credit points.The Master of Mechatronics Engineering is a three year degree (full time).
+- Structure — 300 credit points; A three year degree (full time);
 - Year 1 compulsory subjects — Engineering Mechanics; Foundations of Electrical Networks; Engineering Mathematics; Intro. to Numerical Computation in C; Mechanical Systems Design; Systems Modelling and Analysis; Numerical Algorithms in Engineering; Programming and Software Development
 - Year 2 compulsory subjects — Dynamics; Control Systems; Sensor Systems; Introduction to Machine Learning; Mechatronics Systems Design; Embedded System Design; Analog and Digital Electronics Concepts; Interdisciplinary Design for Engineers
 - Year 3 compulsory subjects — Engineering Capstone Project Part 1; Engineering Capstone Project Part 2
@@ -340,7 +339,7 @@ Source: handbook.unimelb.edu.au/2026 course-structure pages, read 2026-10-09. Lo
 
 ## 41. Master of Urban Design (MC-URBDES)
 
-- Structure — All students must complete: 150 points of core subjects, including 25 points of capstone subject(s).
+- Structure — All students must complete: 150 points of core subjects, including 25 points of capstone subject(s).;
 - Students must complete all of the following subjects. — Urban Design Studio A; Urban Design Studio B; Urban Design Theory; Planning Law & Statutory Planning; The Economies of Cities and Regions; Strategic Plan Making; Urban Design Studio C
 - Capstone Subject (25 points) — Urban Design Thesis
 - Urban Design Theory — Inclusive Cities; Cities Without Slums; Informal Settlement
@@ -350,7 +349,7 @@ Source: handbook.unimelb.edu.au/2026 course-structure pages, read 2026-10-09. Lo
 
 ## 42. Master of Environmental Science (MC-ENVSC)
 
-- Structure — notes: EVSC90017 Global Environmental Change and EVSC90014 Environmental Risk Assessment must be taken in the first year of enrolment.
+- Note — Global Environmental Change and Environmental Risk Assessment must be taken in the first year of enrolment;
 - Year 1: (25 credit points) — Global Environmental Change; Environmental Risk Assessment
 - Year 2: (37.5 points) — Graduate Seminar: Environmental Science
 - AND — Environmental Sci. Research Project Pt 1; Environmental Sci. Research Project Pt 2
@@ -361,7 +360,7 @@ Source: handbook.unimelb.edu.au/2026 course-structure pages, read 2026-10-09. Lo
 
 ## 43. Master of Geography (MC-GEOG)
 
-- Structure — Master of Geography is a 200 point program.
+- Structure — Master of Geography is a 200 point program.;
 - All students must take both of the following — Contemporary Geographical Thought; Research Methods in Geography
 - Coursework-only students must also take the following — Geography Practical
 - Physical Geography Stream — The Disaster Resilient City; Riverine Landscapes: Hydrology & Ecology; Local Sites, Global Connections; Climate Change Politics and Policy; Environmental Politics and Policy; Environmental Impact Assessment; Environmental Risk Assessment; Sustainable Food Production; Integrated River & Catchment Management; International Internship in Environment; Coastal Landforms and Management; Global Climate Change In Context; Biogeography and Ecology of Fire; Spatial Data Analytics; and 10 more subjects
@@ -379,18 +378,19 @@ Source: handbook.unimelb.edu.au/2026 course-structure pages, read 2026-10-09. Lo
 
 ## 45. Graduate Diploma in Journalism (Advanced) (GDA-JOURN)
 
-- Structure — Duration: 1 year full-time / up to 2 years part-time Three compulsory subjects (50 points) Elective subjects (50 points) Total 100 pointsSubject optionsCompulsory Subjects50 points Please note: it is recommended students complete JOUR90001 Researching and Writing Stories in their first semester.
+- Structure — 1 year full-time or up to 2 years part-time; Three compulsory subjects (50 points); Elective subjects (50 points); Total 100 points;
+- Note — It is recommended students complete Researching and Writing Stories in their first semester;
 - Subjects — Researching/Writing Stories; Audio Journalism; Dilemmas in Journalism: Law and Ethics
 - 50 points — New Media Storytelling; Video Journalism; Advanced Non Fiction Writing; Data Journalism; Investigative Journalism; Media Convergence and Digital Culture; Fact-checking, Misinformation and AI
 
 ## 46. Graduate Diploma in Energy and Resources Law (GD-ENRSLAW)
 
-- Structure — Students must complete 50 credit points from the prescribed list of subjects.
+- Structure — Students must complete 50 credit points from the prescribed list of subjects.;
 - Subject options — Climate Change Law; Climate Law, Economics and Finance; Indigenous Rights in Global Context; Energy Resources in Emerging Markets; Environmental Law; Government Liability; Impact Investing: Driving Change; International Commercial Arbitration; International Economic Law; International Environmental Law; International Mineral Law; International Petroleum Transactions; International Sustainable Finance; Law and Public Administration; and 20 more subjects
 
 ## 47. Master of Dance (MC-DNCE)
 
-- Structure — 200-point program of seven compulsory subjects.
+- Structure — 200-point program of seven compulsory subjects.;
 - Year 1 — Body Time Space and Place; Inter-Disciplinary Dance Methods; Choreography as Research; Dance Writing, Archives & Documentation
 - Year 2 — Critical Dance Pedagogy; Dance Science & Somatics; Research Project
 
@@ -419,10 +419,130 @@ Source: handbook.unimelb.edu.au/2026 course-structure pages, read 2026-10-09. Lo
 - Two core economics subjects — Advanced Microeconomics; Advanced Macroeconomics
 - One of — Econometrics 2; Econometrics 3
 
-## Still to do by hand
+## 51. Master of Engineering Management (761EM)
 
-Text-only structure (no subject table): MC-JOURN, D-MATHSC, GC-ARTS, MC-INTJOUR, MC-PUBCOM, MC-GMCOM, MC-CONTCS, MC-MKTCOMM, MC-PROP, MC-IT, MC-ENV, MC-TRANINT
+- All students will complete the following Engineering Capstone Project — Engineering Management Capstone
+- Students must select three electives from the below list — Supply Chain Management; Management Competencies; Accounting for Decision Making; Business Analysis and Decision Making; Financial Management; Managerial Economics
+- Students must select three electives from the below list — Operations and Process Management; Human Resource Fundamentals
+- And the following Capstone Project (12.5 points) — Strategic Management
 
-Course code not found automatically (9): creative writing/publishing/editing, engineering management, surgery, health and medical law, biostatistics, criminology, development studies, construction law, international economic law.
+## 52. Graduate Diploma in Health and Medical Law (343AA)
 
-Research degrees (5, description work instead): PhD Law, MPhil Architecture/Building/Planning, MPhil Law, MPhil Psychological Sciences, MPhil Veterinary Science.
+- Structure — Students must complete 50 credit points from the prescribed lists.;
+- Health and Medical Law subjects — Comparative Health Law; Law and Global Health; Trade, Investment, IP and Health; Health Data Governance; Health Law and Human Rights; Health Law: Patient Safety and the Law; Institutional Abuse and Legal Redress; Law and Emerging Health Technologies; Medical Ethics; Medical Litigation; Mental Health and Disability Law; Pandemic Law and Practice; Regulation of Health Practitioners; Gender and Health Law
+- Further subjects relevant to this course — Ageing and Human Rights; Disability Human Rights Law; Expert Evidence; Law, Science and Technology; Legal Leadership Essentials; Privacy Law; Regulatory Design,Compliance&Enforcement; Science & AI: Legal & Ethical Challenges; Workplace Health and Safety; Principles of International Law; Biotechnology and the Law in Asia
+
+## 53. Master of Biostatistics (991AA)
+
+- Students must complete the following core subjects — Epidemiology 1; Introduction to Statistical Computing; Foundations of Regression; Probability & Inference in Biostatistics; Advanced Regression
+- Students must select FIVE electives from the following list — Clinical Biostatistics; Health Indicators and Health Surveys; Longitudinal and Correlated Data; Digital Transformation of Health; Computational Statistics & Data Science; Causal Inference; Design of Randomised Controlled Trials; Infectious Diseases Modelling; Practice of Statistics & Data Science; Epidemiology 2; Database Systems & Data Modelling; Programming and Software Development; Bayesian Statistical Methods; Health Economics 1; and 3 more subjects
+- OPTION ONE — Biostatistics Research Project Part 1; Biostatistics Research Project Part 2; Biostatistics Research Project - D
+- Subjects — Biostatistics Research Project - S
+
+## 54. Graduate Diploma in Construction Law (189AA)
+
+- Structure — Students must complete 50 credit points from the Construction Law and Other subjects lists.;
+- Construction Law - Foundation subjects — Construction Law; Principles of Construction Law
+- Construction Law - Contracting subjects — Construction Contract Analysis, Drafting; Construction Risk; Payment Matters in Construction Projects; Remedies in the Construction Context; Rethinking Construction Contracting Risk
+- Construction Law - Project delivery subjects — Major Project Delivery: Legal Interfaces; Managing Legal Risk in Construction; Planning and Building Sustainable Cities; Public Private Partnerships Law; Residential Construction Law; Law of Construction Delay and Disruption; Specialised Construction Procurement Law; Clean Energy Projects Law and Regulation; Global ESG Law and Construction Projects
+- Construction Law - International subjects — Construction Law and Projects in Asia; Global Perspectives on Construction Law; International Construction Law
+- Construction Law - Dispute avoidance and resolution subjects — Avoid and Manage Construction Disputes; Construction Dispute Resolution
+- Construction Law - Capstone subject — Advanced Construction Law
+- Further subjects relevant to this course — Alternative Dispute Resolution; Australian Consumer Law; Principles of Banking and Finance Law; Bargaining at Work; Business Negotiations and Deal-Making; Civil Appeals; Commercial Arbitration in Practice; Consumer Protection; Contract Interpretation; Contract Termination; Core Principles of Contract; Current Issues in Civil Litigation; Negligence; Disaster Law and Climate Adaptation; and 38 more subjects
+
+## 55. Graduate Diploma in International Economic Law (891AA)
+
+- Structure — Students must complete 50 credit points from the prescribed list.;
+- Subject options — Clean Energy Projects Law and Regulation; Climate Law, Economics and Finance; Commercial Aspects of International Law; Cryptoassets in Global Context; Cyber Security and the Law; International Trade and Development; Digital Technologies and Labour Law; Digital Trade; Global Commercial Contract Law; Global Financial Architecture; Trade, Investment, IP and Health; International Business Transactions; International Commercial Arbitration; International Economic Law; and 20 more subjects
+
+## 56. Master of Journalism (MC-JOURN)
+
+- Structure — 200 point program, 2 years full-time or 4 years part-time; One compulsory subject (25 points); At least 75 points of core subjects; No more than 75 points of elective subjects; One capstone stream (25 or 50 points)
+- Capstone stream 1, minor thesis (50 points) — Research Principles & Practices Graduate; Journalism Thesis Part 1; Journalism Thesis Part 2
+- Capstone stream 2, internship (25 points) — Journalism Internship; Dilemmas in Journalism: Law and Ethics
+- Capstone stream 3, journalism project (25 points) — Journalism Project Part 1; Journalism Project Part 2
+- Please note — The thesis option requires two consecutive semesters of enrolment; The Journalism Project option requires two consecutive semesters of enrolment
+
+## 57. Master of International Journalism (MC-INTJOUR)
+
+- Entry points — 200-point program (two years full-time); 150-point program (one and a half years full-time); 100-point program (one year full-time)
+- 200 point program — One compulsory subject (25 points); A minimum of 37.5 points of core subjects; A maximum of 100 points of elective subjects; One capstone stream (25 or 50 points)
+- Capstone stream 1, minor thesis (50 points) — Journalism Thesis Part 1; Journalism Thesis Part 2; Research Principles & Practices Graduate
+- Capstone stream 2, internship (25 points) — Journalism Internship (12.5 points); Dilemmas in Journalism: Law and Ethics (12.5 points)
+- Capstone stream 3, journalism project (25 points) — Journalism Project Part 1; Journalism Project Part 2
+
+## 58. Master of Global Media Communication (MC-GMCOM)
+
+- Foundation compulsory subjects (37.5 points, taken in the first year) — Understanding Media & Communications; Researching Media & Communications
+- Foundation elective subject — One subject (12.5 points), taken in the first semester;
+- Capstone subjects (25 to 50 points) — Option 1 (50 points): Media and Communications Thesis Part 1; Media and Communications Thesis Part 2; Media & Communication Research Methods; Option 2 (25 points): Internship II (Semester Long)
+
+## 59. Master of Contemporary Chinese Studies (MC-CONTCS)
+
+- 200 point program — Foundational subjects (50 points, completed in the first 100 points); Compulsory subjects (25 points); Capstone subjects (25 to 50 points, completed in the final 100 points); Elective subjects (75 to 100 points)
+- 150 point program — Compulsory subjects (25 points); Capstone subjects (25 to 50 points, completed in the final 100 points); Elective subjects (75 to 100 points)
+- 100 point program — Compulsory subjects (25 points); Capstone subjects (25 to 50 points); Elective subjects (25 to 50 points)
+- Chinese language electives — Up to 25 points of Chinese language study can count towards electives; Graduate Chinese A; Graduate Chinese B
+- Capstone stream 1, Contemporary Chinese Studies project (25 points) — Research Design and Methods (12.5 points); Contemporary Chinese Studies Project (12.5 points)
+
+## 60. Master of Marketing Communications (MC-MKTCOMM)
+
+- 200 point program — 2 years full-time or up to 4 years part-time; Compulsory subjects (125 points); Capstone subjects (25 to 50 points); Elective subjects (25 to 50 points, depending on the capstone option selected)
+- 150 point program — 1.5 years full-time or up to 3 years part-time; Compulsory subjects (75 points); Capstone subjects (25 to 50 points); Elective subjects (25 to 50 points, depending on the capstone option selected)
+- Capstone requirement — All students complete one capstone stream (at least 25 points) in the final 100 points of the program;
+
+## 61. Master of Publishing and Communications (MC-PUBCOM)
+
+- 200 point program — Three compulsory subjects (37.5 points); Capstone subjects (25 to 50 points); Elective subjects (112.5 to 137.5 points, depending on the capstone option selected)
+- 150 point program — 1.5 years full-time or up to 3 years part-time; Three compulsory subjects (37.5 points); Capstone subjects (25 to 50 points); Elective subjects (62.5 to 87.5 points, depending on the capstone option selected)
+- 100 point program — 1 year full-time or up to 2 years part-time; Two compulsory subjects (25 points); Capstone subjects (25 or 50 points); Elective subjects (25 or 50 points, depending on the capstone option selected)
+
+## 62. Master of Property (MC-PROP)
+
+- 300 point entry — 225 points of core subjects; 12.5 points of selective subjects; 50 points of property elective subjects; 12.5 points of multidisciplinary elective subjects
+- 200 point entry — 125 points of core subjects; 12.5 points of selective subjects; 50 points of property elective subjects; 12.5 points of multidisciplinary elective subjects
+
+## 63. Master of Information Technology (MC-IT)
+
+- Entry points — 200-point, 150-point and 100-point programs; Completion of one specialisation is required
+- 200-point program — 50 points of Foundation subjects; 50 points of Specialisation core subjects; Between 50 and 75 points of Advanced Specialisation Selectives; A maximum of 25 points of Advanced CIS Electives; 25 points of Program Capstone subjects
+- 150-point program — 50 points of Specialisation core subjects; Between 50 and 75 points of Advanced Specialisation Selectives; A maximum of 25 points of Advanced CIS Electives; 25 points of Program Capstone subjects
+- 100-point program — 12.5 points of Specialisation core subject; Between 50 and 62.5 points of Advanced Specialisation Selectives; A maximum of 12.5 points of Advanced CIS Electives; 25 points of Program Capstone subjects
+
+## 64. Master of Environment (MC-ENV)
+
+- Specialisations (choose one major field of study) — Development; Conservation and Restoration; Integrated Water Catchment Management; Waste Management; Environment and Public Health; Education and Social Change; Governance, Policy and Markets; Sustainable Cities, Sustainable Regions; Energy Efficiency Modelling and Implementation; Climate Change; Environmental Science; Tailored Specialisation
+- Structure — Each specialisation offers a specific choice of subjects, in addition to two core subjects which all students must complete; In a 200 point pathway, at least 12.5 points from a list of capstone experience subjects; A 100 point pathway is normally exempt from the capstone requirement (eligible students only)
+
+## 65. Master of Translation and Interpreting (MC-TRANINT)
+
+- 200 credit point program — 2 years full time; Six compulsory subjects (75 points); Capstone subjects (25 to 62.5 points); Elective subjects (62.5 to 100 points, depending on the capstone option selected)
+- 150 credit point program — 1.5 years full time; Four compulsory subjects (50 points); Capstone subjects (25 to 62.5 points); Elective subjects (37.5 to 75 points, depending on the capstone option selected)
+
+## 66. Master of Creative Writing, Publishing and Editing (D01LF)
+
+- 200 point program — 2 years full-time or up to 4 years part-time; Foundation Creative Writing subjects (50 points, completed in the first 50 points); 3 compulsory subjects (37.5 points); Capstone subjects (25 to 62.5 points); Elective subjects (50 to 87.5 points, depending on the capstone option selected)
+- 150 point program — 1.5 years full-time or up to 3 years part-time; 3 compulsory subjects (37.5 points); Capstone subjects (25 to 62.5 points); Elective subjects (50 to 87.5 points, depending on the capstone option selected)
+- Capstone requirement — All students complete one capstone stream (at least 25 points) in the final 100 points of the program;
+
+## 67. Master of Criminology (274AB)
+
+- 200 point program — 2 years full-time or up to 4 years part-time; One foundation core subject (12.5 points); Foundation elective subjects (37.5 points); Three compulsory subjects (37.5 points); Capstone subjects (25 to 50 points); Elective subjects (62.5 to 87.5 points, depending on the capstone option selected)
+- 150 point program — 1.5 years full-time or up to 3 years part-time; Three compulsory subjects (37.5 points); Capstone subjects (25 to 50 points); Elective subjects (62.5 to 87.5 points, depending on the capstone option selected)
+- 100 point program — 1 year full-time or up to 3 years part-time; Two compulsory subjects (25 points); Capstone subjects (25 to 50 points); Elective subjects (25 to 50 points, depending on the capstone option selected)
+
+## 68. Master of Development Studies (097AB)
+
+- 200 point program — 2 years full-time or up to 4 years part-time; Six compulsory subjects (75 points); Capstone subjects (25 to 62.5 points); Elective subjects (62.5 to 100 points, depending on the capstone option selected)
+- 150 point program — 1.5 years full-time or up to 3 years part-time; Four compulsory subjects (50 points); Capstone subjects (25 to 62.5 points); Elective subjects (37.5 to 75 points, depending on the capstone option selected)
+- 100 point program — 1 year full-time or up to 2 years part-time; Two compulsory subjects (25 points); Capstone subjects (25 to 62.5 points); Elective subjects (12.5 to 50 points, depending on the capstone option selected)
+- Capstone requirement — All students complete one capstone subject option (at least 25 points) in the final 100 points of the program; A Gender and Development specialisation is also available;
+
+## 69. Diploma in Mathematical Sciences (D-MATHSC)
+
+- Structure — 100 credit points, completed together with an undergraduate degree for a total program of between 350 and 400 points; Up to 50 points of Mathematics and Statistics subjects in the undergraduate degree may also count towards the Diploma; 100 points of Mathematics and Statistics subjects at post-VCE level are required, including 50 points at third year level; Not available to students in the Bachelor of Science majoring in Mathematics and Statistics, Data Science or Mathematical Physics
+
+## 70. Graduate Certificate in Arts (GC-ARTS)
+
+- Structure — Total 50 points; All compulsory, core and capstone subjects must be completed to graduate; One 12.5 point subject at fourth-year level or above; A maximum of one 12.5 point subject at first-year level; Remaining 25 points from subjects at second or third-year level; A specialisation option totals 50 points as outlined in the handbook
+
