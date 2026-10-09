@@ -1,0 +1,72 @@
+[
+ {
+  "id": "89d6d930-7638-45bd-a799-b913129adec1",
+  "name": "Bachelor of Creative Production (Honours)",
+  "handbook_code": "C09130",
+  "handbook_year": 2027,
+  "curriculum": "Structure — 48 credit points;\nCore — 54496 Studio: Project Pre-Production; 54495 Studio: Advanced Professional Practice; 54497 Studio: Project Production"
+ },
+ {
+  "id": "2fda643b-2968-4635-9a64-ab9a48e9863b",
+  "name": "Bachelor of Creative Production in Animation",
+  "handbook_code": "C10460",
+  "handbook_year": 2027,
+  "curriculum": "Structure — 144 credit points;\nCreative Production Core — 54432 Creative Production and Entrepreneurship; 54431 Creative Production and Citizenship; 54430 Creative Production: Sound and Moving Image\nAnimation Stream — 54440 Animation Studio: Drawing from Life; 54449 Animation Industry Project; 54442 Introduction to 2D Animation; 54444 Animation Studio: Animatic Project; 54443 Animation Studio: Stop Motion Project; 54441 Animation Studio: Character Foundations; 54445 Introduction to 3D Animation; 54447 3D Animation Asset Introduction; 54446 Animation Studio: Narrative Investigations ; 54448 Animation Studio: Narrative Experimentation\n2D Animation Stream — 54450 2D Animation Asset Development; 54452 2D Animation Project B; 54451 2D Animation Project A\n3D Animation Stream — 54453 3D Animation Asset Development; 54455 3D Animation Project B; 54454 3D Animation Project A\nAnimation Electives (stream) — 30 credit points;"
+ },
+ {
+  "id": "b501a809-f147-4b24-8fe5-448452a96db2",
+  "name": "Bachelor of Molecular Biotechnology",
+  "handbook_code": "C10172",
+  "handbook_year": 2027,
+  "curriculum": "Structure — 144 credit points;\nMedical Biotechnology: Options 1 — 91180 Immunology and Human Health; 91705 Medical Devices and Diagnostics; 91827 Advanced Medical Biochemistry\nMedical Biotechnology: Options 2 — 22108 Accounting and Accountability; 79006 Intellectual Property Commercialisation\nMedical Biotechnology: Core — 91707 Fundamentals of Pharmacology; 91368 Bioreactors and Bioprocessing; 91369 Biobusiness; 91822 Human Genetics and Precision Medicine; 91817 Medical Biotechnology; 91401 Immunology; 91178 Applications of Molecular Biology; 91314 General Microbiology; 91142 Biotechnology\nTransdisciplinary Electives: Options — 95009 TD: Change-making for social impact; 95007 TD: Pathways to societal transitions; 95008 TD: Transdisciplinary action lab; 95003 TD: Sustainability in an interconnected world; 95002 TD: Reframing, remixing, reimagining society; 95004 TD: Technologies reimagined in a complex world; 95006 TD: Envisioning futures worth wanting; 95005 TD: Shaping technologies that shape us\nScientist's Tool Kit (Life Sciences): Core — 65111 Chemistry 1; 33116 Design, Data, and Decisions; 60006 Scientific Perspectives for Global Issues; 65212 Chemistry 2; 91161 Cell Biology and Genetics; 91132 Molecular Biology; 91400 Human Anatomy and Physiology; 91123 Nature and Evolution"
+ },
+ {
+  "id": "23bd9d6b-9468-4289-ad5b-978e76531a86",
+  "name": "Executive Master of Data Science and Innovation",
+  "handbook_code": "C04370",
+  "handbook_year": 2027,
+  "curriculum": "Structure — 48 credit points;\nCore — 36106 Machine Learning Algorithms and Applications; 36101 Leading Data Science Initiatives; 36100 Data Science for Innovation\nEMDSI Electives: Electives — 36104 Data Visualisation and Narratives; 15336 Systems Thinking for Managers; 94692 Data Science Practice; 42913 Social and Information Network Analysis; 26824 Innovation Lab; 26821 Strategic Transformation; 26822 Sustainable Value Management; 36103 Statistical Thinking for Data Science; 36121 Artificial Intelligence Principles and Applications; 36120 Advanced Machine Learning Application; 94693 Big Data Engineering; 15328 Project Innovation and Entrepreneurship; 21958 Leading Technological Disruption; 36118 Applied Natural Language Processing; and 14 more subjects\nBusiness Innovation: Electives — 21958 Leading Technological Disruption; 26822 Sustainable Value Management; 26814 Strategies and Business Models; 26819 Strategic Design Studio; 26812 Navigating Managerial Dilemmas; 26809 Digital and Social Media Marketing; 26824 Innovation Lab; 26821 Strategic Transformation; 26804 Data Driven Decision Making\nApplied Data Science: Electives — 94691 Deep Learning; 94692 Data Science Practice; 36122 Python Programming; 36103 Statistical Thinking for Data Science; 36118 Applied Natural Language Processing; 94693 Big Data Engineering; 36120 Advanced Machine Learning Application; 36104 Data Visualisation and Narratives; 36121 Artificial Intelligence Principles and Applications\nProject Management: Electives — 15327 Lean and Agile Project Management.; 15328 Project Innovation and Entrepreneurship; 15315 Project Management Principles; 15364 Leading Projects in Organisations; 15336 Systems Thinking for Managers"
+ },
+ {
+  "id": "4b06f5fb-9e32-482a-be48-879801a9bacc",
+  "name": "Graduate Certificate in Engineering Management",
+  "handbook_code": "C11239",
+  "handbook_year": 2027,
+  "curriculum": "Structure — 24 credit points;\nEngineering Management — 42095 Introduction to Building Information Modelling; 49006 Risk Management in Engineering; 49003 Economic Evaluation; 32601 Advanced Project Management; 49004 Systems Engineering for Managers; 49098 Applied Financial Management; 49001 Judgment and Decision Making; 49680 Value Chain Engineering Systems; 49069 Leadership and Responsibility; 49309 Quality Planning and Analysis\nProfessional Engineering — 49006 Risk Management in Engineering; 49001 Judgment and Decision Making; 49004 Systems Engineering for Managers; 32601 Advanced Project Management; 49002 Managing Projects\nElective (Engineering): Options — 42091 Advanced Energy Conversion Systems; 49312 Advanced Flow Modelling; 42092 Advanced Power Electronics; 32009 Advanced Routing Principles; 49254 Advanced Soil Mechanics and Foundation Design; 42991 Advanced Water and Wastewater Treatment; 49049 Air and Noise Pollution; 49098 Applied Financial Management; 49261 Biomedical Instrumentation; 49131 Bridge Design; 49255 Catchment Modelling; 42904 Cloud Computing and Software as a Service; 49202 Communication Protocols; 49325 Computer-aided Mechanical Design; and 54 more subjects"
+ },
+ {
+  "id": "fe7de240-4881-4da8-8734-79e809458eb1",
+  "name": "Graduate Certificate in Information Technology",
+  "handbook_code": "C11142",
+  "handbook_year": 2027,
+  "curriculum": "Structure — 24 credit points;\nCore — 43030 Professional Practice in Computing; 32531 Global Information Systems; 49016 Technology and Innovation Management; 32513 Advanced Data Analytics Algorithms; 32146 Data Visualisation and Visual Analytics; 32570 Enterprise Architecture Practice; 95563 Data Driven Storytelling Studio; 95566 Digital Experience Design Studio; 32524 LANS and Routing; 32547 UNIX Systems Programming\nOptions — 32601 Advanced Project Management; 32558 Business Intelligence; 49003 Economic Evaluation; 49680 Value Chain Engineering Systems; 32113 Advanced Database; 42904 Cloud Computing and Software as a Service; 32130 Fundamentals of Data Analytics; 32998 .NET Application Development; 32509 Advanced Interaction Design; 32571 Enterprise Software Testing; 42017 Fundamentals of Interaction Design; 32516 Internet Programming; 42889 iOS Application Development; 32003 Computer Game Design; and 10 more subjects\nCybersecurity choice 1 — 32548 Cybersecurity; 32547 UNIX Systems Programming\nCybersecurity choice 2 — 42904 Cloud Computing and Software as a Service; 42035 Cloud Security; 42000 Cryptography; 32548 Cybersecurity; 42036 Cybersecurity for Mobile Platforms; 32309 Digital Forensics; 42037 IoT Security; 32524 LANS and Routing; 32310 Network Security Appliances; 49016 Technology and Innovation Management; 32547 UNIX Systems Programming; 42891 Infrastructure for Cloud Computing"
+ },
+ {
+  "id": "30bda6ba-4a75-4e00-bdea-0994fb983e86",
+  "name": "Graduate Certificate in Screen Arts and Production: Drama",
+  "handbook_code": "C11379",
+  "handbook_year": 2027,
+  "curriculum": "Structure — 24 credit points;\nCore — 57685 Studio: Scripted\nElective Subjects (Screen Arts): Electives — 57688 Avid: Editing with Media Composer; 57689 Internship; 57690 ADG: Directing for the Screen; 57691 ARRI: Filming with ALEXA Camera Systems; 57692 Creative Producing; 57693 Screen Curation"
+ },
+ {
+  "id": "321a67da-41a3-46d3-8757-bf100aa0c09d",
+  "name": "Graduate Diploma in Data Science and Innovation",
+  "handbook_code": "C06124",
+  "handbook_year": 2027,
+  "curriculum": "Structure — 48 credit points;\nCore — 36100 Data Science for Innovation; 36103 Statistical Thinking for Data Science; 36106 Machine Learning Algorithms and Applications\nElectives — 36101 Leading Data Science Initiatives; 36104 Data Visualisation and Narratives; 36118 Applied Natural Language Processing; 36120 Advanced Machine Learning Application; 36121 Artificial Intelligence Principles and Applications; 36122 Python Programming; 94691 Deep Learning; 94692 Data Science Practice; 94693 Big Data Engineering"
+ },
+ {
+  "id": "33a649d1-3927-4209-9a38-80ff51b35d4a",
+  "name": "Graduate Diploma in Teaching",
+  "handbook_code": "C06116",
+  "handbook_year": 2027,
+  "curriculum": "Structure — 48 credit points;\nCore — 013105 The Multilingual Learner; 013102 Introducing Knowledge about Language; 010070 Professional Practice 1; 028253 Language Teaching Methodology; 013096 Teaching Language for Meaning\nElectives — 013987 Oral Language Development; 013988 Multiliteracies and Multimodalities; 028289 Numeracy for Lifelong and Lifewide Learning; 013107 Phonology and Pronunciation\nAdult Literacy, Numeracy and English as an Additional Language Education: Core — 028289 Numeracy for Lifelong and Lifewide Learning; 010024 Professional Practice 2: Teaching Literacy and Numeracy in Adult Education\nEnglish as an Additional Language Education or Dialect in School Education: Core — 013107 Phonology and Pronunciation; 010025 Professional Practice 2: Teaching EAL/D in Schools\nInternational English Education: Core — 013107 Phonology and Pronunciation; 013989 Professional Practice 2: Teaching English to International Students"
+ },
+ {
+  "id": "d701e1aa-2397-4168-972f-e7da12ee813d",
+  "name": "Master of TESOL and Applied Linguistics",
+  "handbook_code": "C04305",
+  "handbook_year": 2027,
+  "curriculum": "Structure — 72 credit points;\nCore — 013105 The Multilingual Learner; 013102 Introducing Knowledge about Language; 010070 Professional Practice 1; 028253 Language Teaching Methodology; 013096 Teaching Language for Meaning; 013991 Research Literacies\nElectives A — 013987 Oral Language Development; 013988 Multiliteracies and Multimodalities; 028289 Numeracy for Lifelong and Lifewide Learning; 013107 Phonology and Pronunciation\nElective B — 013987 Oral Language Development; 013988 Multiliteracies and Multimodalities; 028289 Numeracy for Lifelong and Lifewide Learning; 013107 Phonology and Pronunciation; 013095 Global Englishes and Local Language Practices; 013990 Texts in Society; 010026 Topics in Language, Literacy and Numeracy; 59720 Academic English: Communication Fundamentals; 59719 Developing English: Studies of Australian Workplaces; 010068 Neighbourhoods and Stories; 010030 Teaching English for Academic Purposes; 013459 Mathematics for Numeracy Teachers; 013992 Aboriginal Sydney Now; 010301 Think: Learning Theories and Implications for Learning Design; and 11 more subjects\nAdult Literacy, Numeracy and English as an Additional Language Education: Core — 028289 Numeracy for Lifelong and Lifewide Learning; 010024 Professional Practice 2: Teaching Literacy and Numeracy in Adult Education\nEnglish as an Additional Language Education or Dialect in School Education: Core — 013107 Phonology and Pronunciation; 010025 Professional Practice 2: Teaching EAL/D in Schools\nInternational English Education: Core — 013107 Phonology and Pronunciation; 013989 Professional Practice 2: Teaching English to International Students"
+ }
+]
