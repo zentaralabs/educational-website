@@ -1,0 +1,32 @@
+[
+ {
+  "id": "d2bd07b7-877e-4de9-bf7e-86d5d2c64006",
+  "name": "Master of Cultural Studies",
+  "curriculum": "Structure — 72 credit points, including: 12 credit points of core units of study; a minimum of 24 credit points from selective units of study; a maximum of 24 credit points from elective units of study; and a minimum of 12 credit points of capstone units of study (research on a topic of your choice)"
+ },
+ {
+  "id": "2b083160-1701-498a-aa0f-002fd7c5a829",
+  "name": "Graduate Diploma in Criminology",
+  "curriculum": "Structure — 24 credit points, equivalent to 4 units of study; one compulsory unit of study, Explaining Crime; the remaining units of study are selected from a wide range of electives"
+ },
+ {
+  "id": "a908751d-e913-4a4c-9ab7-edade4b5c91f",
+  "name": "Graduate Diploma in Cultural Studies",
+  "curriculum": "Structure — 48 credit points (8 units of study), including: a minimum of 30 credit points from core electives; and a maximum of 18 credit points from elective units of study"
+ },
+ {
+  "id": "a1c99791-258f-43c3-9fa0-33c34aa0bc3a",
+  "name": "Graduate Diploma in English Studies",
+  "curriculum": "Structure — 48 credit points, including: a minimum of 24 credit points of core units of study; and a maximum of 24 credit points from elective units of study\nAreas of literary study — Medieval literature; Early modern literature; 18th- and 19th-century literature; Modern and contemporary literature; British, American and Australian literature; Various aspects of cultural theory; Creative writing units in contemporary poetry, fiction and creative non-fiction (optional)"
+ },
+ {
+  "id": "09561758-4808-4a09-8cb8-7203631b3ac1",
+  "name": "Graduate Diploma in International Law",
+  "curriculum": "Structure — 24 credit points, equivalent to 4 units of study; one compulsory unit of study, International Law I; the remaining units of study are selected from a wide range of relevant electives"
+ },
+ {
+  "id": "83c67423-8a63-4ae9-bfd5-149e083654f4",
+  "name": "Graduate Diploma in Taxation",
+  "curriculum": "Structure — 24 credit points, equivalent to 4 units of study;"
+ }
+]
