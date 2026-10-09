@@ -227,6 +227,12 @@ export interface Database {
           /** Manual noindex override (migration 0038). True = the page is
            * robots noindex and out of the sitemap regardless of content. */
           seo_noindex: boolean;
+          /** Editor override (migration 0040): keep a thin row on its own page. */
+          keep_own_page: boolean;
+          /** Generated column (migration 0040): 50+ word description or
+           * keep_own_page. False = merged into the university course list.
+           * Read-only — never written. */
+          has_own_page: boolean;
           created_at: string;
           updated_at: string;
         },
@@ -262,6 +268,7 @@ export interface Database {
           source_url?: string | null;
           cricos_code?: string | null;
           seo_noindex?: boolean;
+          keep_own_page?: boolean;
         }
       >;
       // occupations / program_occupations — see supabase/migrations/0030_add_occupations.sql.

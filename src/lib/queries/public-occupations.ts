@@ -131,6 +131,8 @@ export type OccupationProgram = {
   program: {
     slug: string;
     name: string;
+    /** False when merged into the university's course list (migration 0040). */
+    has_own_page: boolean;
     degree_level: { name: string } | null;
   };
   university: {
@@ -145,6 +147,7 @@ type ProgramOccupationRow = {
   program: {
     slug: string;
     name: string;
+    has_own_page: boolean;
     degree_level: { name: string } | null;
     university: { slug: string; name: string; city: string | null };
   };
@@ -172,7 +175,7 @@ export async function getProgramsForOccupation(
     const { data, error } = await supabase
       .from("program_occupations")
       .select(
-        "relevance, program:programs!inner(slug, name, status, degree_level:degree_levels(name), university:universities!inner(slug, name, city, status, country:countries!inner(is_launched))), occupation:occupations!inner(slug, status)",
+        "relevance, program:programs!inner(slug, name, status, has_own_page, degree_level:degree_levels(name), university:universities!inner(slug, name, city, status, country:countries!inner(is_launched))), occupation:occupations!inner(slug, status)",
       )
       .eq("occupation.slug", occupationSlug)
       .eq("occupation.status", "published")
@@ -192,6 +195,7 @@ export async function getProgramsForOccupation(
     program: {
       slug: row.program.slug,
       name: row.program.name,
+      has_own_page: row.program.has_own_page,
       degree_level: row.program.degree_level,
     },
     university: row.program.university,

@@ -64,6 +64,9 @@ export type PublicProgramRow = {
   last_verified_at: string | null;
   source_url: string | null;
   cricos_code: string | null;
+  /** False for thin rows merged into the university's course list (migration
+   * 0040): no page of their own, listed as a plain row, old URL redirects. */
+  has_own_page: boolean;
   degree_level: { name: string } | null;
   subject: { slug: string; name: string } | null;
 };
@@ -75,7 +78,7 @@ export async function getPublishedProgramsForUniversity(
   const { data, error } = await supabase
     .from("programs")
     .select(
-      "id, slug, name, duration_years, tuition_international, tuition_domestic, tuition_domestic_is_csp, currency, application_url, admission_requirements, english_requirements, ielts_overall, ielts_listening, ielts_reading, ielts_writing, ielts_speaking, pte_overall, pte_listening, pte_reading, pte_writing, pte_speaking, last_verified_at, source_url, cricos_code, degree_level:degree_levels(name), subject:subjects(slug, name)",
+      "id, slug, name, duration_years, tuition_international, tuition_domestic, tuition_domestic_is_csp, currency, application_url, admission_requirements, english_requirements, ielts_overall, ielts_listening, ielts_reading, ielts_writing, ielts_speaking, pte_overall, pte_listening, pte_reading, pte_writing, pte_speaking, last_verified_at, source_url, cricos_code, has_own_page, degree_level:degree_levels(name), subject:subjects(slug, name)",
     )
     .eq("university_id", universityId)
     .eq("status", "published")
@@ -133,7 +136,7 @@ export type PublicProgramDetail = PublicProgramRow & {
   } | null;
 };
 
-const PROGRAM_DETAIL_SELECT = `id, slug, name, seo_noindex, description, curriculum, degree_level_id, duration_years, tuition_international, tuition_domestic, tuition_domestic_is_csp, currency, application_url, admission_requirements, english_requirements, ielts_overall, ielts_listening, ielts_reading, ielts_writing, ielts_speaking, pte_overall, pte_listening, pte_reading, pte_writing, pte_speaking, last_verified_at, source_url, cricos_code,
+const PROGRAM_DETAIL_SELECT = `id, slug, name, seo_noindex, description, curriculum, degree_level_id, duration_years, tuition_international, tuition_domestic, tuition_domestic_is_csp, currency, application_url, admission_requirements, english_requirements, ielts_overall, ielts_listening, ielts_reading, ielts_writing, ielts_speaking, pte_overall, pte_listening, pte_reading, pte_writing, pte_speaking, last_verified_at, source_url, cricos_code, has_own_page,
       degree_level:degree_levels(name), subject:subjects(slug, name),
       university:universities!inner(id, slug, name, status, city, apply_url, application_fee, tuition_international, tuition_domestic, tuition_domestic_is_csp, currency, ielts_overall, ielts_listening, ielts_reading, ielts_writing, ielts_speaking, pte_overall, pte_listening, pte_reading, pte_writing, pte_speaking, country:countries!inner(code, name, is_launched))`;
 
@@ -257,6 +260,8 @@ export async function getRelatedProgramsBySubject(
     .eq("university.status", "published")
     .eq("university.country.is_launched", true)
     .neq("id", excludeProgramId)
+    // Only siblings that still have a page of their own (migration 0040).
+    .eq("has_own_page", true)
     // Prefer siblings at the same study level (other master's, other
     // bachelor's) — a far more useful cross-link than an alphabetical mix.
     .eq("degree_level_id", degreeLevelId ?? -1);

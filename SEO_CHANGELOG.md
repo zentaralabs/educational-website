@@ -10,6 +10,38 @@ Redirects · Canonical/sitemap/metadata changes · Testing done.**
 
 ---
 
+## 2026-10-09 · 460 thin program pages merged into their university course list (migration 0040)
+
+**Affected routes:** `/universities/{slug}/programs/{program-slug}` (460 URLs now 308 to
+`/universities/{slug}#programs`), `/universities/{slug}` (course list), `/study/{slug}`,
+`/occupations/{slug}`, related-programs block on program pages.
+
+**Why:** the AdSense rejection (status dated 2026-10-04) cites "Low value content" and links
+Google's thin-content spam policy, matching the leading theory for the Sep 24 search drop.
+468 published programs had a description under 50 words (381 empty) but still a full
+standalone template page that visitors and reviewers could reach.
+
+**What changed:** new `keep_own_page` flag and generated `has_own_page` column (50+ word
+description or keep flag). Programs without their own page redirect (308) to the university
+course list, appear there as plain rows (with an "Official page" link when a source URL is on
+file), and are no longer linked from subject tables, occupation pages or related programs.
+8 thin rows that had GSC impressions keep their page via `keep_own_page`. A row that later
+gains a 50+ word description gets its page back automatically.
+
+**SEO impact:** LOW for the index (all 460 were already noindex and out of the sitemap; none
+had impressions in the 3 months to 2026-10-05). Sitemap unchanged at 3,485 program URLs.
+
+**Testing done:** local dev on the branch against production data: merged URL 308 to
+`#programs`, kept and normal program URLs 200, Adelaide list shows merged rows unlinked,
+`/study/business`, an occupation page, UniSC page and sitemap all 200 with no server or
+console errors. Migration applied to prod first (columns unused by the live code until merge):
+460 merged, 8 kept, 0 currently indexable rows affected.
+
+**Rollback:** `update programs set keep_own_page = true;` restores every page without a deploy.
+List: `scripts/data/thin-program-merge-list-2026-10-09.tsv`.
+
+---
+
 ## 2026-10-08 · Program pages need an 85-word description to be indexed (migration 0039)
 
 **Affected routes:** `/universities/{slug}/programs/{program-slug}` and

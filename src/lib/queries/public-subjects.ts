@@ -16,6 +16,7 @@ type ProgRow = {
   currency: string | null;
   duration_years: number | null;
   ielts_overall: number | null;
+  has_own_page: boolean;
   degree_level: { name: string } | null;
   subject: { id: number; slug: string | null; name: string } | null;
   university: {
@@ -29,7 +30,7 @@ type ProgRow = {
 };
 
 const PROG_SELECT =
-  "id, slug, name, tuition_international, currency, duration_years, ielts_overall, " +
+  "id, slug, name, tuition_international, currency, duration_years, ielts_overall, has_own_page, " +
   "degree_level:degree_levels!inner(name), " +
   "subject:subjects!inner(id, slug, name), " +
   "university:universities!inner(slug, name, city, status, ielts_overall, country:countries!inner(is_launched))";
@@ -122,6 +123,9 @@ export type SubjectProgram = {
   universitySlug: string;
   universityName: string;
   universityCity: string | null;
+  /** False when the program was merged into its university's course list
+   * (migration 0040): show it, but don't link to a page it no longer has. */
+  hasOwnPage: boolean;
 };
 
 export type SubjectDetail = {
@@ -152,6 +156,7 @@ export async function getSubjectBySlug(slug: string): Promise<SubjectDetail | nu
       universitySlug: p.university?.slug ?? "",
       universityName: p.university?.name ?? "",
       universityCity: p.university?.city ?? null,
+      hasOwnPage: p.has_own_page,
     }))
     .sort((a, b) => {
       if (a.tuition == null) return 1;

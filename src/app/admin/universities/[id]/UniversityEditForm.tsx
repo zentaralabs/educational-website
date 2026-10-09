@@ -415,6 +415,10 @@ function ProgramsPanel({
               Boolean(fields.curriculum?.trim()) ||
               (fields.description ?? "").trim().split(/\s+/).filter(Boolean).length >= 100,
             seo_noindex: false,
+            keep_own_page: false,
+            // Generated server-side (migration 0040), replaced on refresh.
+            has_own_page:
+              (fields.description ?? "").trim().split(/\s+/).filter(Boolean).length >= 50,
             created_at: new Date().toISOString(),
             updated_at: new Date().toISOString(),
           },
