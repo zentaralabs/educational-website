@@ -1,0 +1,44 @@
+[
+ {
+  "id": "d8cb207b-ea22-45bf-b9ea-d5e8f130c659",
+  "name": "Bachelor of Media and Communication",
+  "slug": "bachelor-of-media-and-communication",
+  "university": "queensland-university-of-technology"
+ },
+ {
+  "id": "748971bb-cdec-446b-a8f4-9c96cc2b79a1",
+  "name": "Master of Applied Finance",
+  "slug": "master-of-applied-finance",
+  "university": "university-of-wollongong"
+ },
+ {
+  "id": "c4a1826b-13b4-40de-85f3-ce89e050074f",
+  "name": "Bachelor of Journalism",
+  "slug": "bachelor-of-journalism",
+  "university": "university-of-wollongong"
+ },
+ {
+  "id": "fef4a5c4-e23e-48c9-bdc7-df38501e17df",
+  "name": "Bachelor of Criminology (Honours)",
+  "slug": "bachelor-of-criminology-honours",
+  "university": "adelaide-university"
+ },
+ {
+  "id": "f363f217-d5e8-4eac-be5a-d61cda4fcb78",
+  "name": "Graduate Diploma in Business (Accounting)",
+  "slug": "graduate-diploma-in-business-accounting",
+  "university": "victoria-university"
+ },
+ {
+  "id": "fd373cef-1a0f-4581-8bda-dae8ab01744c",
+  "name": "Graduate Diploma in Engineering",
+  "slug": "graduate-diploma-in-engineering",
+  "university": "university-of-sydney"
+ },
+ {
+  "id": "4cbfbe17-e22f-4ac3-af9a-2194a7ce5685",
+  "name": "Master of Project and Program Management",
+  "slug": "master-of-project-and-program-management",
+  "university": "university-of-sydney"
+ }
+]
