@@ -1,0 +1,100 @@
+[
+ {
+  "id": "cf7394dc-3614-4517-9c2c-321322a9e534",
+  "name": "Bachelor of Design (Visual Communication)",
+  "handbook_code": 1571,
+  "handbook_year": 2026,
+  "curriculum": "Structure — 320 credit points;\nInteractive — Interactive Design: Games; Interactive Design: Apps\nIllustration — Illustrating Narrative; Illustrating Popular Culture\nDigital Design — Data Visualisation; Motion Design\nPhotomedia — Photomedia: Fashion and Identity; Photomedia: Photographic Practice\nCore - Group 2 — Graphic Design: Interactive Digital Media; Researching the Visual; Graphic Design: The Professional Context; Australian Design; Social Design: Research and Practice; Contextual Design Studies; Graphic Design: Developing a Personal Portfolio; Design Research Project; Major Design Project; Professional Design Experience: The Studio; Professional Design Experience: The Individual Practitioner\nCore - Group 1 — Graphic Design: Understanding the Principles; Design Histories and Futures; Image Design; Graphic Branding and Identity; Visual Storytelling; Web and Time-based Design"
+ },
+ {
+  "id": "a0a3d40c-35a7-4956-b1e4-3f34697c260a",
+  "name": "Bachelor of Screen Media (Arts and Production)",
+  "handbook_code": 1791,
+  "handbook_year": 2026,
+  "curriculum": "Structure — 240 credit points;\nMajor — Screen Media\nCore — Introduction to Screen Media; Graphic Design: Understanding the Principles; News and Media Today; Web and Time-based Design; Screen Media: Capstone Development; Media Law and Ethics; Screen Media: Capstone Production\nDesign Stream — Graphic Design: Interactive Digital Media; Interactive Design: Apps; Data Visualisation; Interactive Design: Games; Motion Design\nJournalism Stream — Feature Writing; News Reporting; News Teams; Digital Journalism Production\nJournalism Stream - Choice — Photo Journalism; Journalism: Research and Investigation"
+ },
+ {
+  "id": "a7a722d0-6357-4cce-bc52-21352aadccb5",
+  "name": "Graduate Certificate in Data Science",
+  "handbook_code": 3751,
+  "handbook_year": 2026,
+  "curriculum": "Structure — 40 credit points;\nCore — Programming for Data Science; The Nature of Data\nAlternate Subjects — Big Data; Data Science; Probabilistic Graphical Models; Predictive Analytics; Social Media Intelligence; Visualisation; Systems Analysis and Database Management Systems; Professional Practice and Communication"
+ },
+ {
+  "id": "72a73304-ae4d-4be8-a3c8-b486052b1430",
+  "name": "Graduate Certificate in Humanitarian and Development Studies",
+  "handbook_code": 1897,
+  "handbook_year": 2026,
+  "curriculum": "Structure — 40 credit points;\nAlternate Subjects — Introduction to Social Research; Public Health in Complex Emergencies; Political Economy of Development; International Disaster Management; Development and Security; Global Health, Migration and Development; Humanitarian and Development Agendas and Progress; Management and Evaluation of Aid Programs"
+ },
+ {
+  "id": "b57e7e8c-0094-4332-bbe7-9831dd1be0ea",
+  "name": "Graduate Certificate in Project Management",
+  "handbook_code": 3787,
+  "handbook_year": 2026,
+  "curriculum": "Structure — 60 credit points;\nCore — Financial Management of Projects; Managing Project Teams and Stakeholders; Project Procurement Systems; Risk Management and Decision Making; Strategic Project Management; Time and Quality Management"
+ },
+ {
+  "id": "e670306f-6c25-4c84-b212-acfa3419be58",
+  "name": "Graduate Certificate in Property Investment",
+  "handbook_code": 2814,
+  "handbook_year": 2026,
+  "curriculum": "Structure — 40 credit points;\nCore — Property Investment and Risk Management; Property Portfolio Analysis\nAlternate Subjects — Commercial Law; Corporate Asset and Property Management; Corporate Finance; Feasibility Modelling; International Finance; International Property Finance; Investment Property Valuation; Strategic Property Market Analysis; Sustainable Property Development; Valuation of Special Premises"
+ },
+ {
+  "id": "d9d817f1-79ab-48de-b45c-ff7ba3326c39",
+  "name": "Graduate Diploma in Aged Care Management",
+  "handbook_code": 4757,
+  "handbook_year": 2026,
+  "curriculum": "Structure — 80 credit points;\nFocus Subjects — Advanced Health Service Management; Health and Socio-political Issues in Aged Care; Building Organisational Capacity in Health Care; Leadership in Clinical Practice\nDomain Subjects — Introduction to Epidemiology; The Social Determinants of Health; Health Systems and Policy; Healthcare Data for Decision-Making"
+ },
+ {
+  "id": "23c93d90-6ccb-46e5-ac5d-d19d7453a39b",
+  "name": "Graduate Diploma in Data Science",
+  "handbook_code": 3750,
+  "handbook_year": 2026,
+  "curriculum": "Structure — 80 credit points;\nAlternate Subjects — Predictive Analytics; Social Media Intelligence; Data Science; Systems Analysis and Database Management Systems; Data Engineering Fundamentals\nCore — Programming for Data Science; The Nature of Data; Big Data; Visualisation"
+ },
+ {
+  "id": "7bbd6d9d-3872-4ae9-9f74-39f15a71ed1c",
+  "name": "Graduate Diploma in Digital Health",
+  "handbook_code": 4778,
+  "handbook_year": 2026,
+  "curriculum": "Structure — 80 credit points;\nDomain Subjects — Introduction to Epidemiology; The Social Determinants of Health; Health Systems and Policy; Healthcare Data for Decision-Making\nFocus Subjects — Patient-centred digital healthcare; Advanced Healthcare Data Environments; Advanced Healthcare Software and Systems; Digital Health Management"
+ },
+ {
+  "id": "f29ce20a-49e2-4b7e-90c5-92ea77867ac0",
+  "name": "Graduate Diploma in Humanitarian and Development Studies",
+  "handbook_code": 1896,
+  "handbook_year": 2026,
+  "curriculum": "Structure — 80 credit points;\nCore — Introduction to Social Research; Public Health in Complex Emergencies; Political Economy of Development; International Disaster Management; Development and Security; Global Health, Migration and Development; Humanitarian and Development Agendas and Progress; Management and Evaluation of Aid Programs"
+ },
+ {
+  "id": "096dc850-0588-4099-9dfb-44545511c89d",
+  "name": "Graduate Diploma in Public Health",
+  "handbook_code": 4704,
+  "handbook_year": 2026,
+  "curriculum": "Structure — 80 credit points;\nFocus Subjects — Introduction to Biostatistics; Infectious Diseases and Outbreak Response; Epidemiology of Non-Communicable Diseases\nDomain Subjects — Introduction to Epidemiology; The Social Determinants of Health; Health Systems and Policy; Health Advancement and Health Promotion"
+ },
+ {
+  "id": "0a7ceeff-e6e7-4331-922a-06232b5d17ff",
+  "name": "Master of Applied Neuromorphic Engineering",
+  "handbook_code": 8124,
+  "handbook_year": 2026,
+  "curriculum": "Structure — 120 credit points;\nCore — Neuromorphic Electronics Design; Mathematics of Signal Processing; Introduction to Neuroscience; Programming for Data Science; Neuromorphic Accelerators; Neuromorphic Algorithms and Computation; Neuromorphic Sensing; Advanced Machine Learning; Applied Project in Neuromorphic Engineering"
+ },
+ {
+  "id": "e0332c00-5e1a-40bd-9f7a-c5fa0e4d1b03",
+  "name": "Master of Business Analytics",
+  "handbook_code": 2816,
+  "handbook_year": 2026,
+  "curriculum": "Structure — 160 credit points;\nCore - Group 1 - 1, 1.5 and 2 year pathways — Business Analytics in Practice; Data Science; Leading for Social Impact; Programming for Data Science; Social Media Intelligence; The Nature of Data; Visualisation\nCore - Group 2 - 1.5 and 2 year pathways — Strategic Business Management\nAlternate Subjects - Group 1 - 1 year pathway — Business Internship; Masters Project\nAlternate Subjects - Business Project — Business Project A; Business Project B\nAlternate Subjects - Internship — Internship A; Internship B\nMajor - 2 year pathway — Finance and Investment; Logistics and Supply Chain Management"
+ },
+ {
+  "id": "0d97fa20-f10d-4aea-8af6-e611ca8315d4",
+  "name": "Master of Creative Music Therapy",
+  "handbook_code": 1650,
+  "handbook_year": 2026,
+  "curriculum": "Structure — 120 credit points;\nCore Subjects — Music Therapy Foundations & Approaches; Music Therapy Theory & Practice 1; Music Therapy Skills & Practice A; Music Therapy Skills & Practice B; Music Therapy Skills & Practice C; Music Therapy Skills & Practice D; Music Therapy Professional Practice & Research; Music Therapy Theory & Practice 2"
+ }
+]

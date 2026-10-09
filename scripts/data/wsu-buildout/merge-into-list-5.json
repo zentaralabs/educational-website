@@ -1,0 +1,27 @@
+[
+ {
+  "id": "495831b0-8498-434a-a983-3266b54a43c9",
+  "name": "Bachelor of Engineering Advanced (Honours)",
+  "slug": "bachelor-of-engineering-advanced-honours"
+ },
+ {
+  "id": "f5999835-a424-4251-a169-18d53a10783c",
+  "name": "Diploma in Business Fast Track",
+  "slug": "diploma-in-business-fast-track"
+ },
+ {
+  "id": "31c9f62d-0418-465a-8b12-a9b195b00234",
+  "name": "Graduate Certificate in Big Data",
+  "slug": "graduate-certificate-in-big-data"
+ },
+ {
+  "id": "1e8651ea-cd2a-4dd6-bf14-a0120a556ca5",
+  "name": "Master of Finance",
+  "slug": "master-of-finance"
+ },
+ {
+  "id": "957ae415-2c96-4e97-9a39-bf792a2f5883",
+  "name": "Master of Research (High Cost)",
+  "slug": "master-of-research-high-cost"
+ }
+]
