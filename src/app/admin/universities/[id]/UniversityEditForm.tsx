@@ -416,6 +416,7 @@ function ProgramsPanel({
               (fields.description ?? "").trim().split(/\s+/).filter(Boolean).length >= 100,
             seo_noindex: false,
             keep_own_page: false,
+            merge_into_list: false,
             // Generated server-side (migration 0040), replaced on refresh.
             has_own_page:
               (fields.description ?? "").trim().split(/\s+/).filter(Boolean).length >= 50,
