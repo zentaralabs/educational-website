@@ -1,0 +1,22 @@
+[
+ {
+  "id": "cb312f7d-d826-437d-a0ce-3cca4a95473e",
+  "name": "Bachelor of Nutrition and Dietetics",
+  "slug": "bachelor-of-nutrition-and-dietetics"
+ },
+ {
+  "id": "067e3124-8b14-4c11-819b-7e967eaffcb0",
+  "name": "Graduate Certificate in Integrated Water Management",
+  "slug": "graduate-certificate-in-integrated-water-management"
+ },
+ {
+  "id": "50735834-e95e-48d1-97c7-a6f87bdcc5d6",
+  "name": "Graduate Certificate in International Law",
+  "slug": "graduate-certificate-in-international-law"
+ },
+ {
+  "id": "d3fb4f9b-dac8-4281-9cc1-f021af31fec0",
+  "name": "Graduate Certificate in Urban and Environmental Planning",
+  "slug": "graduate-certificate-in-urban-and-environmental-planning"
+ }
+]
