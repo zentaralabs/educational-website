@@ -1,0 +1,102 @@
+[
+ {
+  "id": "49ca807d-8fe5-4931-8af4-ec9be2e4ba10",
+  "name": "Associate Degree of Computing Technologies",
+  "slug": "associate-degree-of-computing-technologies"
+ },
+ {
+  "id": "f1b88e0c-7cee-4330-921b-571b649c3ceb",
+  "name": "Associate Degree of Science",
+  "slug": "associate-degree-of-science"
+ },
+ {
+  "id": "0e9e2efb-c475-4777-837f-edc5299b627b",
+  "name": "Bachelor of Business (Professional) - Accounting and Financial Planning",
+  "slug": "bachelor-of-business-professional-accounting-and-financial-planning"
+ },
+ {
+  "id": "e02903c2-7bc0-4e2f-a0ee-d94c7adf1dbb",
+  "name": "Bachelor of Laws Graduate Entry",
+  "slug": "bachelor-of-laws-graduate-entry"
+ },
+ {
+  "id": "a7f7244d-5185-4c18-b715-7ec99a2ffe1d",
+  "name": "Bachelor of Laws Standard Entry",
+  "slug": "bachelor-of-laws-standard-entry"
+ },
+ {
+  "id": "c2be8e87-4b9b-4fec-9692-f96725d77a85",
+  "name": "Graduate Certificate of Business Management",
+  "slug": "graduate-certificate-of-business-management"
+ },
+ {
+  "id": "4e78f0e3-142e-416e-944e-f481024844d4",
+  "name": "Graduate Certificate of Design Strategy and Innovation",
+  "slug": "graduate-certificate-of-design-strategy-and-innovation"
+ },
+ {
+  "id": "b48d839b-0bac-4d18-a1d9-163e9e8fee86",
+  "name": "Graduate Certificate of Urban Design",
+  "slug": "graduate-certificate-of-urban-design"
+ },
+ {
+  "id": "6cf0a302-ede6-4f15-86b0-c6702768c987",
+  "name": "Graduate Diploma of Business Administration (International)",
+  "slug": "graduate-diploma-of-business-administration-international"
+ },
+ {
+  "id": "e06d4003-0b23-4b47-b511-ec05cc201ff8",
+  "name": "Graduate Diploma of Business Management",
+  "slug": "graduate-diploma-of-business-management"
+ },
+ {
+  "id": "2c84c329-1b7a-4bed-8356-473f1956359f",
+  "name": "Graduate Diploma of Engineering (Civil)",
+  "slug": "graduate-diploma-of-engineering-civil"
+ },
+ {
+  "id": "77bc47a6-39b8-4822-95ea-6b31fbd67890",
+  "name": "Graduate Diploma of Entrepreneurship",
+  "slug": "graduate-diploma-of-entrepreneurship"
+ },
+ {
+  "id": "cdece9bf-e058-4796-9086-73e53f8ce013",
+  "name": "Master of Commerce (By Research)",
+  "slug": "master-of-commerce-by-research"
+ },
+ {
+  "id": "501f44c4-77ac-4016-a274-b9ca958c4899",
+  "name": "Master of Finance and Banking (Global Leadership Program)",
+  "slug": "master-of-finance-and-banking-global-leadership-program"
+ },
+ {
+  "id": "d45cff42-f6b4-4cf5-a120-8c7106b96f67",
+  "name": "Master of Information Systems Management",
+  "slug": "master-of-information-systems-management"
+ },
+ {
+  "id": "cc113964-65e4-4514-899b-d0f1fe3f4201",
+  "name": "Master of Information Technology Project Management",
+  "slug": "master-of-information-technology-project-management"
+ },
+ {
+  "id": "a24b9f3b-4cf9-423d-8f1d-108df1a81297",
+  "name": "Master of Marketing - Advanced",
+  "slug": "master-of-marketing-advanced"
+ },
+ {
+  "id": "1258c6bd-cc72-42fd-ae7e-30a5deab6fa8",
+  "name": "Master of Marketing (Global Leadership Program)",
+  "slug": "master-of-marketing-global-leadership-program"
+ },
+ {
+  "id": "2b3bfc5c-0d76-4f64-b6b6-3682131ad26a",
+  "name": "Master of Practising Accounting",
+  "slug": "master-of-practising-accounting"
+ },
+ {
+  "id": "ab0456cb-e942-4a99-a3c7-64dbd82f669f",
+  "name": "Master of Professional Accounting (Graduate Entry)",
+  "slug": "master-of-professional-accounting-graduate-entry"
+ }
+]
