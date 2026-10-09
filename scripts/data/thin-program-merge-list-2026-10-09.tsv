@@ -1,0 +1,469 @@
+university	program_slug	description_words	id	name	action
+adelaide-university	associate-degree-in-commerce-studies	0	d0fb2167-bd83-4eb4-8ade-427444c128e5	Associate Degree in Commerce Studies	merge
+adelaide-university	associate-degree-in-design-studies	0	4c66d3b5-ef09-46ec-bb36-b892f51414b1	Associate Degree in Design Studies	merge
+adelaide-university	associate-degree-in-economic-studies	0	4cd26f9c-bc4a-44e0-8d8f-04623b562083	Associate Degree in Economic Studies	merge
+adelaide-university	associate-degree-in-education-studies	0	b3509c4f-d60f-4e0d-986c-986398e453d4	Associate Degree in Education Studies	merge
+adelaide-university	associate-degree-in-engineering	0	40b3eb52-a958-415a-9009-c37f024fbdef	Associate Degree in Engineering	merge
+adelaide-university	associate-degree-in-health-studies	0	cdba48d7-6502-4415-83fa-c99072976c19	Associate Degree in Health Studies	merge
+adelaide-university	associate-degree-in-science-studies	0	ffef0544-4c22-4aec-83bc-7b4fbb33253e	Associate Degree in Science Studies	merge
+adelaide-university	bachelor-of-applied-data-analytics	0	5edc7b1e-90f8-4348-9cc7-5b59a81a0fcf	Bachelor of Applied Data Analytics	merge
+adelaide-university	bachelor-of-aviation	0	5a5cfb97-cd53-4562-b668-c0846416ed47	Bachelor of Aviation	merge
+adelaide-university	bachelor-of-biomedical-research-honours	0	db92d169-6b87-4785-bd56-3bad02a8f4cc	Bachelor of Biomedical Research (Honours)	merge
+adelaide-university	bachelor-of-early-childhood-b-5-years	0	6ad46a86-5e49-45af-9d23-61628f539732	Bachelor of Early Childhood (B-5 years)	merge
+adelaide-university	bachelor-of-early-childhood-education-honours	0	1c7c7257-6ce5-436f-8319-7365f68d8a1f	Bachelor of Early Childhood Education (Honours)	merge
+adelaide-university	bachelor-of-education-studies	0	75c0c8ba-4896-4751-838c-3e2acb7c97ee	Bachelor of Education Studies	merge
+adelaide-university	bachelor-of-engineering-honours-petroleum-with-major	0	97a14953-d07b-478d-aa8e-a19c8cd82116	Bachelor of Engineering (Honours)(Petroleum) with major	merge
+adelaide-university	bachelor-of-engineering-technology-chemical	0	8d78690f-fd81-423d-b484-789bb5463077	Bachelor of Engineering Technology (Chemical)	merge
+adelaide-university	bachelor-of-environmental-policy-and-management	0	9224e65d-4348-434b-96b6-6fc6293f603f	Bachelor of Environmental Policy and Management	merge
+adelaide-university	bachelor-of-finance-honours	0	1ab5a128-c9e8-444b-a80d-a6ffdb41dec8	Bachelor of Finance (Honours)	merge
+adelaide-university	bachelor-of-food-and-nutrition-science-honours	0	e7beccd4-c9dc-45df-8058-b424765b82ac	Bachelor of Food and Nutrition Science (Honours)	merge
+adelaide-university	bachelor-of-health-and-medical-science-honours	0	6e53394e-3a9a-43f1-8d9c-054dc2945f88	Bachelor of Health and Medical Science (Honours)	merge
+adelaide-university	bachelor-of-health-and-medical-sciences-advanced	0	26b3f46e-2876-4815-b796-9308a9ac9598	Bachelor of Health and Medical Sciences (Advanced)	merge
+adelaide-university	bachelor-of-health-studies	0	27f6cbf5-d00b-4f53-a316-241784f83820	Bachelor of Health Studies	merge
+adelaide-university	bachelor-of-languages	0	f263d805-196d-4753-9041-f7fa13cbd79d	Bachelor of Languages	merge
+adelaide-university	bachelor-of-legal-studies	0	95c71200-33cc-4e16-bd70-12347e34794a	Bachelor of Legal Studies	merge
+adelaide-university	bachelor-of-mathematical-and-computer-sciences	0	c8556a93-5bb7-4060-b55f-588a73158e82	Bachelor of Mathematical and Computer Sciences	merge
+adelaide-university	bachelor-of-mathematical-sciences-honours	0	4aa19fe3-7103-4c26-b116-2186cb0247b8	Bachelor of Mathematical Sciences (Honours)	merge
+adelaide-university	bachelor-of-media-honours	0	bb08805e-751a-4f64-8eac-ad080db6341f	Bachelor of Media (Honours)	merge
+adelaide-university	bachelor-of-medical-radiation-science-honours	0	74bb9f8e-080f-4902-b5b0-773a8d7234ca	Bachelor of Medical Radiation Science (Honours)	merge
+adelaide-university	bachelor-of-medical-science	0	a60d60fc-6d8b-4e2e-bec5-ed3213d343fa	Bachelor of Medical Science	merge
+adelaide-university	bachelor-of-primary-education-honours	0	14204d2e-3164-484d-8938-f9fe6f272e06	Bachelor of Primary Education (Honours)	merge
+adelaide-university	bachelor-of-science-in-dentistry-honours	0	cf4b41ad-1ea8-48de-9382-0eb85b5efeee	Bachelor of Science in Dentistry (Honours)	merge
+adelaide-university	bachelor-of-secondary-education-honours	0	ea922c51-2de0-4b54-9f76-8e30d444fad6	Bachelor of Secondary Education (Honours)	merge
+adelaide-university	bachelor-of-social-science	0	a9c4a528-3a0a-45c0-a99d-cac580e23025	Bachelor of Social Science	merge
+adelaide-university	bachelor-of-sociology-honours	0	f8afc4c2-0d8b-4417-84df-cba91a92dada	Bachelor of Sociology (Honours)	merge
+adelaide-university	diploma-in-commerce-studies	0	7b1c5ffe-99e2-4dbb-ad65-1b4e9a3b7db1	Diploma in Commerce Studies	merge
+adelaide-university	diploma-in-design-studies	0	0ba6ac2c-89e4-4ddb-bdb7-0ba07a201fb8	Diploma in Design Studies	merge
+adelaide-university	diploma-in-economic-studies	0	39ce7ab3-8a21-469b-933b-34111e68b6bc	Diploma in Economic Studies	merge
+adelaide-university	diploma-in-education-studies	0	d3e9f27a-c7cb-4f59-8e15-32222132c6cb	Diploma in Education Studies	merge
+adelaide-university	diploma-in-engineering	0	743e6422-8a03-4a11-ab22-1e180f5e31e7	Diploma in Engineering	merge
+adelaide-university	diploma-in-health-studies	0	57cd78ab-9ead-42af-b31b-77708f8faf70	Diploma in Health Studies	merge
+adelaide-university	diploma-in-languages	0	384b59cb-60cf-4a1e-86bb-439b8b7ed52c	Diploma in Languages	merge
+adelaide-university	diploma-in-science-studies	0	7ce2708e-add1-431b-8d0d-268fcf576203	Diploma in Science Studies	merge
+adelaide-university	doctor-of-clinical-dentistry	49	b853fb5a-d8e6-4d97-86e3-b41d7694c1f3	Doctor of Clinical Dentistry	merge
+adelaide-university	graduate-certificate-in-advanced-clinical-musculoskeletal-and-sports-physiotherapy	0	6d990599-8383-4159-a74d-b02393747796	Graduate Certificate in Advanced Clinical Musculoskeletal and Sports Physiotherapy	merge
+adelaide-university	graduate-certificate-in-data-analytics	0	9eff9794-549a-48e6-a959-98854eb46b78	Graduate Certificate in Data Analytics	merge
+adelaide-university	graduate-certificate-in-engineering	0	f5055e99-8e1e-4707-b196-5821fbc72b4c	Graduate Certificate in Engineering	merge
+adelaide-university	graduate-certificate-in-information-technology	0	a4566838-463c-4793-9c90-65df9a066bc9	Graduate Certificate in Information Technology	merge
+adelaide-university	graduate-certificate-in-midwifery	28	3837cf57-8628-4a52-bc8c-d9cbab86f142	Graduate Certificate in Midwifery	merge
+adelaide-university	graduate-certificate-in-public-policy	0	a58a1a9d-15f9-44e3-82f6-49ccbf322674	Graduate Certificate in Public Policy	merge
+adelaide-university	graduate-certificate-in-science	0	803d6474-bfaa-4d9e-909f-79b11ea87cdf	Graduate Certificate in Science	merge
+adelaide-university	graduate-certificate-in-strategic-communication	43	fb70e79a-db94-4baa-85d9-d2185ce8c7d1	Graduate Certificate in Strategic Communication	merge
+adelaide-university	graduate-diploma-in-data-analytics	0	09ef09d0-c7b5-446b-b6e5-a852ef3d2e7b	Graduate Diploma in Data Analytics	merge
+adelaide-university	graduate-diploma-in-education-studies	0	99045ea6-f921-4b54-97b8-fcda167f8f43	Graduate Diploma in Education Studies	merge
+adelaide-university	graduate-diploma-in-engineering	0	54dda2a4-2bd0-46a4-a39a-33266813539a	Graduate Diploma in Engineering	merge
+adelaide-university	graduate-diploma-in-health-studies	0	2858da36-5603-45ef-ae58-3f70b23e7eca	Graduate Diploma in Health Studies	merge
+adelaide-university	graduate-diploma-in-information-technology	0	d996c191-e061-47eb-9bdd-62814e91dc92	Graduate Diploma in Information Technology	merge
+adelaide-university	graduate-diploma-in-legal-practice	0	a4b15c04-a292-484a-af8c-743be4a49894	Graduate Diploma in Legal Practice	merge
+adelaide-university	graduate-diploma-in-project-management	49	955ca993-6c65-42be-a7e8-0c3383ac0477	Graduate Diploma in Project Management	merge
+adelaide-university	graduate-diploma-in-public-health	48	eef6362c-11f9-40ee-84e1-b286b93bb704	Graduate Diploma in Public Health	merge
+adelaide-university	graduate-diploma-in-public-policy	0	d068a322-cefd-4b0c-9fd1-cbe7e765ec69	Graduate Diploma in Public Policy	merge
+adelaide-university	graduate-diploma-in-science	0	afee2e43-f225-4980-bb76-9e5a73d8d5d0	Graduate Diploma in Science	merge
+adelaide-university	graduate-diploma-in-visual-effects	0	4d0ab895-17ca-428c-affe-4315d29acad0	Graduate Diploma in Visual Effects	merge
+adelaide-university	graduate-diploma-in-women-s-health	0	548a72d1-f06d-4d32-ade9-7e53a8dbaf55	Graduate Diploma in Women's Health	merge
+adelaide-university	master-of-advanced-clinical-physiotherapy	0	de4c9484-1044-4196-a352-e693be91c767	Master of Advanced Clinical Physiotherapy	merge
+adelaide-university	master-of-applied-economics	0	8484766d-9233-41f2-82e0-b982d8e58fb2	Master of Applied Economics	merge
+adelaide-university	master-of-arts-interpreting-translation-and-transcultural-communication	0	dce5ac70-049e-4e19-b82f-fbd4e791fa48	Master of Arts (Interpreting, Translation and Transcultural Communication)	merge
+adelaide-university	master-of-business-law	0	eaea1d37-48a9-4e69-ab8c-bc64eb30f3bd	Master of Business Law	merge
+adelaide-university	master-of-clinical-nursing	0	8be82511-7aa8-4187-9e49-f146c6bd5631	Master of Clinical Nursing	merge
+adelaide-university	master-of-clinical-science	0	9e273136-9089-4366-9a85-4dee60051a84	Master of Clinical Science	merge
+adelaide-university	master-of-environmental-science	0	ca9dd24a-ab3f-4bf8-8fff-976781a352e4	Master of Environmental Science	merge
+adelaide-university	master-of-finance-and-business-economics	0	047bb60a-70b4-4d6e-9750-da62469367bf	Master of Finance and Business Economics	merge
+adelaide-university	master-of-international-security	0	b3e5a846-a274-4b6f-8a71-8f0ed7e72fd2	Master of International Security	merge
+adelaide-university	master-of-mathematical-sciences	0	0233a4be-7ad1-4aec-866f-572c2ff0239e	Master of Mathematical Sciences	merge
+adelaide-university	master-of-petroleum-engineering	0	a9084e63-709c-40ac-9123-c1c7252b4ebf	Master of Petroleum Engineering	merge
+adelaide-university	master-of-pharmacy	49	027a96fe-2658-4abf-afed-230c63bb6e6b	Master of Pharmacy	merge
+adelaide-university	master-of-philosophy-medical-science	0	eda1e66f-3850-4c2e-b2e9-5cde293fa840	Master of Philosophy (Medical Science)	merge
+adelaide-university	master-of-project-and-program-management	0	153059e5-9940-4e18-924c-7b16fb3962ff	Master of Project and Program Management	merge
+adelaide-university	master-of-property	0	596c1405-352e-4f31-be2c-aac43ea35bc1	Master of Property	merge
+adelaide-university	master-of-public-policy	0	54a96b99-0608-4762-8917-1561cc44d666	Master of Public Policy	merge
+adelaide-university	master-of-research-computer-and-information-science	0	b7828906-b6dd-4821-8e54-ca7c315e5b9d	Master of Research (Computer and Information Science)	merge
+adelaide-university	master-of-science	0	136f9c68-7307-4ba2-980c-6ff4f22fd2e2	Master of Science	merge
+adelaide-university	master-of-strategic-communication	48	c95082a2-0fd7-430f-b83e-e9e8efaab0c2	Master of Strategic Communication	merge
+adelaide-university	master-of-visual-effects	0	deaf7963-6b01-4691-a5a9-f63416dbc049	Master of Visual Effects	merge
+australian-catholic-university	doctor-of-ministry	45	ca8199d1-856b-4d60-a4c7-bdce62a44c7f	Doctor of Ministry	merge
+australian-institute-of-music	associate-degree-of-music-performance	0	286c9328-b7bf-47ab-bd60-bd4d00f0b9a1	Associate Degree of Music (Performance)	merge
+australian-institute-of-music	associate-degree-of-music-theatre	0	931adef6-877f-465f-9bb0-808f8b7515a5	Associate Degree of Music Theatre	merge
+avondale-university	diploma-of-business	46	fc3078bf-65b5-4939-b95c-4a6d1d79a52b	Diploma of Business	merge
+box-hill-institute	associate-degree-in-hospitality-management	0	c239d7fe-83e0-4a2f-8aaa-f6882b953160	Associate Degree in Hospitality Management	merge
+box-hill-institute	associate-degree-of-commerce-applied	0	e6621b1b-5251-4029-a6ce-874b555b1a1f	Associate Degree of Commerce (Applied)	merge
+box-hill-institute	associate-degree-of-design	0	6351823a-1af2-43f5-aa33-635c46b89e36	Associate Degree of Design	merge
+box-hill-institute	associate-degree-of-information-technology	0	6d128c57-137a-4585-a21c-f1860e9784bd	Associate Degree of Information Technology	merge
+box-hill-institute	bachelor-of-biosecurity-science	0	826ce4f4-4aeb-4db5-82e2-4df6faa96f9c	Bachelor of Biosecurity Science	merge
+box-hill-institute	diploma-of-graphic-design	0	2bc598d6-0083-401b-9f2a-ad8cd01c624e	Diploma of Graphic Design	merge
+box-hill-institute	diploma-of-hospitality-management	0	8cf29538-0ae7-40ad-bcee-2d3b82b10edd	Diploma of Hospitality Management	merge
+charles-sturt-university	bachelor-of-physiotherapy-honours-integrated-honours	44	9f11727f-babf-4045-81ef-1079423177c2	Bachelor of Physiotherapy (Honours) Integrated Honours	merge
+charles-sturt-university	master-of-agricultural-science	49	7e95ebd2-a80f-4580-b766-b11b0e34f2db	Master of Agricultural Science	merge
+flinders-university	master-of-business-research	41	1f1912d6-f1b3-4a7d-a3ce-c8b6ab5934ea	Master of Business (Research)	merge
+flinders-university	master-of-surgery-research	36	7686cb8e-1a9c-4db7-8a34-b890e8aa0c09	Master of Surgery (Research)	merge
+griffith-university	bachelor-of-child-youth-and-family-practice	0	70d59fd7-1cc5-4cae-841b-f0245bb982c6	Bachelor of Child, Youth and Family Practice	merge
+griffith-university	bachelor-of-communication-and-journalism	0	41fa7032-24f5-4240-a833-345d5a66f3aa	Bachelor of Communication and Journalism	merge
+griffith-university	bachelor-of-education	0	729a41e2-ace5-4dbb-87f6-7b6d1cd00c8c	Bachelor of Education	merge
+griffith-university	bachelor-of-games-design	0	963a19b0-cd41-4aed-92fe-a5bd2f737979	Bachelor of Games Design	merge
+griffith-university	bachelor-of-intelligent-digital-technologies	0	48ba4baf-130f-41a7-9e24-4ba61c325d6f	Bachelor of Intelligent Digital Technologies	merge
+griffith-university	bachelor-of-music-in-performance	0	cceb00b8-3093-4c27-986a-b31392cdeba7	Bachelor of Music in Performance	merge
+griffith-university	bachelor-of-social-science	0	6641940d-91c4-4aca-965d-09444deaf1b9	Bachelor of Social Science	merge
+griffith-university	diploma-of-technical-screen-production	0	6e6fca64-ffa2-49c1-89e4-26ea98145d08	Diploma of Technical Screen Production	merge
+griffith-university	doctor-of-musical-arts	0	2a74e2b1-fa76-4254-be20-accc69a3fca8	Doctor of Musical Arts	merge
+griffith-university	doctor-of-philosophy	0	285b2111-898c-46e2-9fe5-80208b25a6ae	Doctor of Philosophy	merge
+griffith-university	graduate-certificate-in-professional-accounting	0	4a2d126c-7865-4e58-b084-4908002dc33d	Graduate Certificate in Professional Accounting	merge
+griffith-university	graduate-certificate-in-tesol	0	900cd011-77c4-4966-955e-bcde2a3774d1	Graduate Certificate in TESOL	merge
+griffith-university	graduate-diploma-of-early-childhood-education	0	da071156-cece-48e8-8d92-4716fbf8dbf3	Graduate Diploma of Early Childhood Education	merge
+griffith-university	graduate-diploma-of-integrated-water-management	0	2a5779c2-794a-41f4-a406-f87755b56ce6	Graduate Diploma of Integrated Water Management	merge
+griffith-university	master-of-medical-research	0	17d15d0e-d521-4a67-beb9-13a61bc166b6	Master of Medical Research	merge
+griffith-university	master-of-music-studies	0	bf63deec-612e-4c8c-b5fd-94ebdac0963e	Master of Music Studies	merge
+griffith-university	master-of-philosophy	0	e853f570-7eb1-4041-a49f-12523239ec1e	Master of Philosophy	merge
+griffith-university	master-of-screen-production	0	2235780c-b314-4eed-8498-462d59c34f90	Master of Screen Production	merge
+icms	graduate-certificate-of-accounting	0	aa79f6b5-a188-43ce-9fec-56b0d4101d87	Graduate Certificate of Accounting	merge
+icms	graduate-diploma-of-business-administration	0	657d4ab9-8a44-484b-a928-20caa0cfcc3f	Graduate Diploma of Business Administration	merge
+icms	master-of-professional-accounting	0	cad78f36-e806-4c78-9c85-784f8ed64cb6	Master of Professional Accounting	merge
+james-cook-university	master-of-engineering-professional	46	c9ba014d-4054-476b-954d-a90844664c87	Master of Engineering (Professional)	merge
+james-cook-university	master-of-professional-accounting	33	750fcc86-ee41-48b1-9f12-2bfe7ea07361	Master of Professional Accounting	merge
+james-cook-university	master-of-professional-psychology	47	17b35814-b5c0-440e-bfb9-4158fed34584	Master of Professional Psychology	merge
+james-cook-university	master-of-teaching-and-learning-secondary	45	a51cc243-b80f-41a9-afde-dec3bad0869a	Master of Teaching and Learning (Secondary)	merge
+queensland-university-of-technology	bachelor-of-creative-industries	0	1519264a-4f74-4516-919f-83c725eff1d6	Bachelor of Creative Industries	merge
+queensland-university-of-technology	bachelor-of-entertainment-industries	0	f3270dd2-6b14-4361-bfc1-da2e08c61b2f	Bachelor of Entertainment Industries	merge
+queensland-university-of-technology	bachelor-of-fine-arts	0	dc603768-2608-45ce-82cd-91919c107289	Bachelor of Fine Arts	merge
+queensland-university-of-technology	bachelor-of-health-information-management	0	0d3d2470-153e-4371-b49a-642f9089204b	Bachelor of Health Information Management	merge
+queensland-university-of-technology	bachelor-of-mass-communication	0	bc48289b-237a-4a95-bab8-67be34b33c2a	Bachelor of Mass Communication	merge
+queensland-university-of-technology	bachelor-of-music	0	aa330c67-f25e-4660-8995-07c2b640abef	Bachelor of Music	merge
+queensland-university-of-technology	bachelor-of-nutrition-and-dietetics-honours	0	c4547870-bc6a-4b65-baec-85a9ae8c4f96	Bachelor of Nutrition and Dietetics (Honours)	merge
+queensland-university-of-technology	bachelor-of-public-health	0	5d4c2534-1d53-48c3-a527-ff5e5542fdb6	Bachelor of Public Health	merge
+queensland-university-of-technology	bachelor-of-urban-development-honours	0	60524972-e4eb-4243-a194-790677469732	Bachelor of Urban Development (Honours)	merge
+queensland-university-of-technology	diploma-in-architectural-studies	49	a502fdc1-07ae-4d84-82f0-a9b8f4d246bd	Diploma in Architectural Studies	merge
+queensland-university-of-technology	diploma-in-health-science	0	3e1c5b1d-7e15-446e-ab0f-3ea3acfbda96	Diploma in Health Science	merge
+queensland-university-of-technology	diploma-of-business	0	96e44b72-fb03-44a4-aa45-ef75e56bf1cf	Diploma of Business	merge
+queensland-university-of-technology	doctor-of-creative-industries	0	5d164add-ac1b-49f5-b07e-d55b9f8048c5	Doctor of Creative Industries	merge
+queensland-university-of-technology	doctor-of-education	0	9f383a44-e7ca-4862-9486-5a98a60e1c7d	Doctor of Education	merge
+queensland-university-of-technology	doctor-of-health-science	0	3c0ab4b1-ae59-4c35-8b35-aa9a239d9a0c	Doctor of Health Science	merge
+queensland-university-of-technology	doctor-of-philosophy	0	9f3f1082-3ec9-43b6-9ad6-62c1700465e9	Doctor of Philosophy	merge
+queensland-university-of-technology	graduate-certificate-in-applied-law	0	6f5d2666-447f-48e2-8731-7ae9e083e598	Graduate Certificate in Applied Law	merge
+queensland-university-of-technology	graduate-certificate-in-business	0	88f3dda1-2d92-4051-a97a-cac1faf1b1bc	Graduate Certificate in Business	merge
+queensland-university-of-technology	graduate-certificate-in-business-administration	0	38910806-2f75-4287-95c0-78a3e4c298b8	Graduate Certificate in Business Administration	merge
+queensland-university-of-technology	graduate-certificate-in-business-analysis	0	b258aa6e-d8db-4cb3-8424-76270816472f	Graduate Certificate in Business Analysis	merge
+queensland-university-of-technology	graduate-certificate-in-business-and-communication	0	cb88c390-7b0a-48a6-9c63-ff956eae1ac7	Graduate Certificate in Business and Communication	merge
+queensland-university-of-technology	graduate-certificate-in-communication-for-engineering	0	dd9584cd-2d66-4fe8-865f-9ade9ca3e0fb	Graduate Certificate in Communication for Engineering	merge
+queensland-university-of-technology	graduate-certificate-in-communication-for-health	0	301bcd71-249a-474c-96c4-aa03c1341fae	Graduate Certificate in Communication for Health	merge
+queensland-university-of-technology	graduate-certificate-in-communication-for-information-technology	0	f48192b1-eddd-4a88-add6-6d03992ddf4d	Graduate Certificate in Communication for Information Technology	merge
+queensland-university-of-technology	graduate-certificate-in-computer-science	0	890a7d46-be14-49b3-a3ec-e6ea8f10072d	Graduate Certificate in Computer Science	merge
+queensland-university-of-technology	graduate-certificate-in-cyber-security-and-networks	0	a722d103-e2e2-4c63-bc11-c7e11eb05959	Graduate Certificate in Cyber Security and Networks	merge
+queensland-university-of-technology	graduate-certificate-in-data-analytics	0	563ad6d9-b47b-4252-af3d-4d0f57b92ed5	Graduate Certificate in Data Analytics	merge
+queensland-university-of-technology	graduate-certificate-in-data-science	40	07af5368-27e0-4a35-962c-c622f6579568	Graduate Certificate in Data Science	merge
+queensland-university-of-technology	graduate-certificate-in-digital-business-and-innovation	28	78cd58c5-a9d0-413a-a870-766b6ae4403c	Graduate Certificate in Digital Business and Innovation	merge
+queensland-university-of-technology	graduate-certificate-in-digital-communication	46	39b3c701-327f-464c-ab43-1779e073a97d	Graduate Certificate in Digital Communication	merge
+queensland-university-of-technology	graduate-certificate-in-health-science	0	df00d8fb-e8a4-4344-a05d-4e35d8950b35	Graduate Certificate in Health Science	merge
+queensland-university-of-technology	graduate-certificate-in-information-technology	40	cb99287c-7013-4221-9903-1ed3f072177c	Graduate Certificate in Information Technology	merge
+queensland-university-of-technology	graduate-certificate-in-project-management	40	ce117ad0-2ae3-4900-a72e-716b7c3514eb	Graduate Certificate in Project Management	merge
+queensland-university-of-technology	graduate-certificate-in-strategic-design	43	e685b851-8bc5-4acf-bc75-47eeb8e139e6	Graduate Certificate in Strategic Design	merge
+queensland-university-of-technology	graduate-diploma-in-applied-science	0	7c02a890-58b8-458e-9dd2-80067426015f	Graduate Diploma in Applied Science	merge
+queensland-university-of-technology	graduate-diploma-in-business	0	f47aa4ef-90bd-4bfd-ba0b-6f072a419e38	Graduate Diploma in Business	merge
+queensland-university-of-technology	graduate-diploma-in-environmental-health	40	74c94829-d457-468e-a84d-b8e58d294e69	Graduate Diploma in Environmental Health	merge
+queensland-university-of-technology	graduate-diploma-in-health-management	0	006a6b90-7735-4674-99f8-eba01a45083f	Graduate Diploma in Health Management	merge
+queensland-university-of-technology	graduate-diploma-in-legal-practice	39	b635a8d3-89df-4df8-b3a9-af6a1fb62b2e	Graduate Diploma in Legal Practice	merge
+queensland-university-of-technology	graduate-diploma-in-public-health	40	483667ba-6161-45be-8cb6-1d1a147a55fb	Graduate Diploma in Public Health	merge
+queensland-university-of-technology	master-of-advanced-practice-nursing	0	4a23ebac-6ae2-4c37-8f2f-e99891694349	Master of Advanced Practice Nursing	merge
+queensland-university-of-technology	master-of-applied-science	0	07326c79-86b3-4fe7-a723-c68963ab4c75	Master of Applied Science	merge
+queensland-university-of-technology	master-of-business-process-management	0	144511cf-d2ec-492b-9e23-510de134f68e	Master of Business Process Management	merge
+queensland-university-of-technology	master-of-engineering-research	0	02dc75c4-b36d-4606-b2bd-b91e3eba7316	Master of Engineering (Research)	merge
+queensland-university-of-technology	master-of-engineering-technology	37	703d47f0-fd4a-4273-85f1-698983e9f50f	Master of Engineering Technology	merge
+queensland-university-of-technology	master-of-health-management	0	f86490f9-4552-4f37-8a8e-6ee9759c30d5	Master of Health Management	merge
+queensland-university-of-technology	master-of-landscape-architecture	0	0abf4c70-7947-4b31-b24b-f9aca108b4d8	Master of Landscape Architecture	merge
+queensland-university-of-technology	master-of-laws	0	85112898-908a-42d4-b4b8-973d243b329f	Master of Laws	merge
+queensland-university-of-technology	standard-foundation	0	c58a7d5e-16d1-461f-8a1f-47eb18d0a29d	Standard Foundation	merge
+swinburne-university-of-technology	associate-degree-of-design-studies	0	dc273e5b-87c4-43c8-93a6-6608ae21f456	Associate Degree of Design Studies	merge
+swinburne-university-of-technology	associate-degree-of-health-studies	0	83c00964-d46c-4824-abc5-857465a72094	Associate Degree of Health Studies	merge
+swinburne-university-of-technology	associate-degree-of-information-technologies	0	39160f68-8c29-4965-bc45-e34dd6941779	Associate Degree of Information Technologies	merge
+swinburne-university-of-technology	bachelor-of-business-administration	0	8d1a2662-c360-4a42-bfb2-6efd7b02e702	Bachelor of Business Administration	merge
+swinburne-university-of-technology	bachelor-of-business-information-systems	0	cf11612f-8cf1-488b-b01b-41947a5212b7	Bachelor of Business Information Systems	merge
+swinburne-university-of-technology	bachelor-of-circus-arts	0	563b1efc-adc5-4ef7-a61b-f7e22d316684	Bachelor of Circus Arts	merge
+swinburne-university-of-technology	bachelor-of-engineering-practice-honours	0	c5158926-b4f1-49dd-941b-35d101c1805e	Bachelor of Engineering Practice (Honours)	merge
+swinburne-university-of-technology	bachelor-of-research-honours	0	f88f5623-e3d6-4c1b-89d3-f14def89df80	Bachelor of Research (Honours)	merge
+swinburne-university-of-technology	diploma-of-computing-technologies	0	0df9c1b1-9be1-4f3e-b5a5-cb5cd49d836f	Diploma of Computing Technologies	merge
+swinburne-university-of-technology	diploma-of-design-studies	0	5a1200aa-97b2-4437-98f4-9ee757750d10	Diploma of Design Studies	merge
+swinburne-university-of-technology	diploma-of-health-sciences-unilink	0	5b9fd0e3-0174-4529-a79b-4195805393c9	Diploma of Health Sciences (Unilink)	merge
+swinburne-university-of-technology	diploma-of-health-studies	0	8349cede-4fff-4069-bb10-61f887a147d8	Diploma of Health Studies	merge
+swinburne-university-of-technology	diploma-of-information-technologies	0	aca0df3a-efed-42d5-9e79-86b910d1c5b1	Diploma of Information Technologies	merge
+swinburne-university-of-technology	diploma-of-science-foundations	0	73fb08ea-cd32-44c1-b009-4c30e35f4b89	Diploma of Science Foundations	merge
+swinburne-university-of-technology	doctor-of-philosophy	0	bfa41176-24ef-4f8a-813e-264488eeb511	Doctor of Philosophy	merge
+swinburne-university-of-technology	graduate-certificate-of-applied-statistics	0	cadc51d0-ce2a-4e2a-9f38-041303e8275b	Graduate Certificate of Applied Statistics	merge
+swinburne-university-of-technology	graduate-certificate-of-corporate-governance	0	de593822-55eb-4ade-b03a-6629a5c847c2	Graduate Certificate of Corporate Governance	merge
+swinburne-university-of-technology	graduate-certificate-of-digital-business-management	0	617d2dd4-15f9-452d-92d8-b16a3e261a0d	Graduate Certificate of Digital Business Management	merge
+swinburne-university-of-technology	graduate-certificate-of-digital-business-transformation	0	164883a9-d278-4529-b2bf-982c0ea926b7	Graduate Certificate of Digital Business Transformation	merge
+swinburne-university-of-technology	graduate-certificate-of-financial-planning	0	3b4e0c6c-f470-4e28-a90d-ad2479fd8601	Graduate Certificate of Financial Planning	merge
+swinburne-university-of-technology	graduate-certificate-of-financial-technologies	0	38c770d9-94c6-4425-8ec0-48748584cf06	Graduate Certificate of Financial Technologies	merge
+swinburne-university-of-technology	graduate-certificate-of-information-systems-management	0	88f0dd2b-e9ca-4b65-b67f-245aecdee50c	Graduate Certificate of Information Systems Management	merge
+swinburne-university-of-technology	graduate-certificate-of-international-business	0	978f7385-429d-439f-ac69-a17c45ec45ce	Graduate Certificate of International Business	merge
+swinburne-university-of-technology	graduate-diploma-of-applied-statistics	0	5ef6bcad-16d9-4566-8108-331b2ff347b8	Graduate Diploma of Applied Statistics	merge
+swinburne-university-of-technology	graduate-diploma-of-corporate-governance	0	4d6bd7e0-383b-4d6d-98fd-6453dbba560c	Graduate Diploma of Corporate Governance	merge
+swinburne-university-of-technology	graduate-diploma-of-digital-business-management	0	53a32163-1cbd-4b11-8d35-6514df1fdbdd	Graduate Diploma of Digital Business Management	merge
+swinburne-university-of-technology	graduate-diploma-of-financial-planning	0	9cbc7d3c-eede-436f-8e86-26927dc01e49	Graduate Diploma of Financial Planning	merge
+swinburne-university-of-technology	master-of-applied-statistics	0	3ef13868-c5fe-4ddf-b3e3-10b072deef79	Master of Applied Statistics	merge
+swinburne-university-of-technology	master-of-business-management	0	4b2bc673-f9d8-4b5d-88a4-f8a878aafb66	Master of Business Management	merge
+swinburne-university-of-technology	master-of-corporate-governance	0	2f494d04-b85f-41f3-9834-a20138c71413	Master of Corporate Governance	merge
+swinburne-university-of-technology	master-of-digital-business-management	0	011409bf-e3c0-443b-9416-94b7b865937f	Master of Digital Business Management	merge
+swinburne-university-of-technology	master-of-entrepreneurship-innovation	0	49584c3f-7d25-4f09-8d86-9ff578e79b82	Master of Entrepreneurship & Innovation	merge
+swinburne-university-of-technology	master-of-financial-planning	0	df888954-c59f-41c2-bc27-89c4665e25e7	Master of Financial Planning	merge
+swinburne-university-of-technology	master-of-financial-technologies	0	42fc1344-0761-4572-99d6-db6d1973866b	Master of Financial Technologies	merge
+swinburne-university-of-technology	master-of-international-business	0	a2d00598-a723-4a5c-90f6-f9ceabd65ba2	Master of International Business	merge
+swinburne-university-of-technology	master-of-social-investment-and-philanthropy	0	452dd1dc-8b8f-42c8-a02d-94ebb4d9cd1f	Master of Social Investment and Philanthropy	merge
+swinburne-university-of-technology	swinburne-foundation-program	0	346d19ed-7c6d-4325-8454-cf034cd7590f	Swinburne Foundation Program	merge
+tafe-queensland	bachelor-of-engineering-technologies-advanced-manufacturing	0	8fd3e455-5a03-499d-8081-9fa363c7805b	Bachelor of Engineering Technologies (Advanced Manufacturing)	merge
+torrens-university-australia	undergraduate-certificate-of-photography	0	77fa4a80-e003-423d-8d33-fe2faddd378f	Undergraduate Certificate of Photography	merge
+university-of-notre-dame-australia	bachelor-of-exercise-and-sport-science	47	1a5ddb6d-40f8-4b1b-88b2-811e3b8b48c0	Bachelor of Exercise and Sport Science	merge
+university-of-notre-dame-australia	bachelor-of-health-and-physical-education-primary-honours	44	70e8ea4b-9b61-4943-a234-86c26587e89d	Bachelor of Health and Physical Education (Primary) (Honours)	merge
+university-of-notre-dame-australia	doctor-of-health-sciences	45	ae5fdcf2-513c-422e-920b-b0f674c25c08	Doctor of Health Sciences	merge
+university-of-notre-dame-australia	doctor-of-nursing	45	0e6ed55c-ed6b-462b-a301-fb51856bcb55	Doctor of Nursing	merge
+university-of-notre-dame-australia	doctor-of-physiotherapy-research	46	b93cc64b-9487-4547-b488-c02dd032c0db	Doctor of Physiotherapy Research	keep-had-impressions
+university-of-notre-dame-australia	graduate-diploma-of-computer-science	45	d17689b0-b117-49cd-90a1-5938a6c604bf	Graduate Diploma of Computer Science	merge
+university-of-notre-dame-australia	master-of-health-sciences	35	37293e13-ce1d-43d3-9868-40d8392951a4	Master of Health Sciences	merge
+university-of-notre-dame-australia	master-of-medicine-surgery	41	a5f32e41-f128-4f15-86cb-625b4b3f9606	Master of Medicine/Surgery	merge
+university-of-notre-dame-australia	master-of-nursing-coursework-and-thesis	48	e7026ab8-1fed-4a92-879c-4d20a388f280	Master of Nursing (Coursework and Thesis)	merge
+university-of-notre-dame-australia	master-of-philosophy-college-of-nursing	46	4e4896f6-1c26-43db-8c7c-b1ccbd78082c	Master of Philosophy (College of Nursing)	merge
+university-of-notre-dame-australia	master-of-physiotherapy	42	3c1bd5f6-cbb0-412c-8397-10f20883e0f9	Master of Physiotherapy	merge
+university-of-tasmania	amc-master-of-philosophy	0	e0eadba6-b1e5-4f0e-baeb-0b36ba1db23d	AMC - Master of Philosophy	merge
+university-of-tasmania	associate-degree-in-science	0	4a1d555c-2180-45f9-9078-701129bc8ed9	Associate Degree in Science	merge
+university-of-tasmania	bachelor-of-agricultural-science-with-honours	0	0ac79758-9cec-4797-8af6-cfdbebf3eecd	Bachelor of Agricultural Science with Honours	merge
+university-of-tasmania	bachelor-of-engineering-technology	0	e78648a7-6f47-41f6-9738-3b1a56b633c6	Bachelor of Engineering Technology	merge
+university-of-tasmania	bachelor-of-information-systems	0	b7371ec1-c159-4a11-adff-0bab25776232	Bachelor of Information Systems	merge
+university-of-tasmania	bachelor-of-laboratory-medicine	0	d26463ec-12b1-463c-a6ff-b7b7fb2b2a0f	Bachelor of Laboratory Medicine	merge
+university-of-tasmania	bachelor-of-medical-science	0	29b946cc-064f-4ec3-8a0d-1f70ccd73199	Bachelor of Medical Science	merge
+university-of-tasmania	bachelor-of-natural-environment-and-wilderness	0	5814aa48-a78c-4763-bced-caca54afc746	Bachelor of Natural Environment and Wilderness	merge
+university-of-tasmania	bachelor-of-natural-environment-wilderness-studies-honours	0	e7b247b9-7095-42fa-9c51-6afcba57f84b	Bachelor of Natural Environment & Wilderness Studies (Honours)	merge
+university-of-tasmania	bachelor-of-nutrition-science	0	43a152e2-a35d-4491-b6c5-1521376a7a0d	Bachelor of Nutrition Science	merge
+university-of-tasmania	bachelor-of-surveying-and-spatial-science-with-honours	0	9ac9e9c3-3003-44c9-85fb-f7ec6b189e6e	Bachelor of Surveying and Spatial Science with Honours	merge
+university-of-tasmania	doctor-of-business-administration	0	f835e98f-4f5f-4fd2-9abe-e257bca50ee4	Doctor of Business Administration	merge
+university-of-tasmania	doctor-of-education	0	08ff0804-5aff-43b5-aebd-5ac5b6831ead	Doctor of Education	merge
+university-of-tasmania	doctor-of-health	0	0a2bc49a-4589-4a81-aee2-a476ecbf6368	Doctor of Health	merge
+university-of-tasmania	doctor-of-philosophy-mechanical-engineering	0	07c6e93d-8d3d-4d30-b981-49030e33d534	Doctor of Philosophy (Mechanical Engineering)	merge
+university-of-tasmania	doctor-of-psychology-clinical	0	8dcb5457-7a4b-422a-9b8a-d3f257b998c5	Doctor of Psychology (Clinical)	merge
+university-of-tasmania	graduate-certificate-in-business-studies	0	a7c8acf9-2171-4661-b499-447bf6fa5245	Graduate Certificate in Business Studies	merge
+university-of-tasmania	graduate-certificate-in-social-care-international-pathway	0	ac3f0900-bc16-4bd5-80f1-820fdcca6dde	Graduate Certificate in Social Care (International Pathway)	merge
+university-of-tasmania	graduate-certificate-in-strategic-communication	0	aab9ba8c-9cb4-47f0-bd04-5fb1ad4c87e1	Graduate Certificate in Strategic Communication	merge
+university-of-tasmania	graduate-certificate-in-tourism-environmental-and-cultural-heritage	0	3ca4256a-1060-4e99-96a6-3e17fb40ff5b	Graduate Certificate in Tourism, Environmental and Cultural Heritage	merge
+university-of-tasmania	graduate-diploma-of-financial-planning	0	c038c1b1-fbf9-4997-b8f3-d543b2d2d71b	Graduate Diploma of Financial Planning	merge
+university-of-tasmania	graduate-diploma-of-information-and-communication-technology	0	76bff27e-1300-423d-9fa5-6b73f7ef21ca	Graduate Diploma of Information and Communication Technology	merge
+university-of-tasmania	graduate-diploma-of-strategic-communication	0	94756850-3e25-4189-ab15-db1132460d92	Graduate Diploma of Strategic Communication	merge
+university-of-tasmania	graduate-diploma-of-tourism-environmental-and-cultural-heritage	0	9c2c296c-4b1e-4726-95fd-7b1640904445	Graduate Diploma of Tourism, Environmental and Cultural Heritage	merge
+university-of-tasmania	master-of-agricultural-science	0	6a24161d-d546-43ff-b8bb-72391dfde8c6	Master of Agricultural Science	merge
+university-of-tasmania	master-of-applied-science-in-aquaculture	0	30c61242-a8a9-4e93-b542-de1f0ab2cae8	Master of Applied Science in Aquaculture	merge
+university-of-tasmania	master-of-arts	0	06a2002f-5144-48d3-be5b-6e2cdd729621	Master of Arts	merge
+university-of-tasmania	master-of-biomedical-science	0	0df77598-b2e4-4cff-8ab3-b39ad5a1650d	Master of Biomedical Science	merge
+university-of-tasmania	master-of-business-administration-international	0	13815d1c-6dd4-4da4-bc31-dac3cdf4bd41	Master of Business Administration (International)	merge
+university-of-tasmania	master-of-business-analytics	0	033d3858-3e4b-4792-a1a5-0bca972eb47c	Master of Business Analytics	merge
+university-of-tasmania	master-of-commerce	0	ab05d125-e697-4406-b080-d12bd1b1ebb0	Master of Commerce	merge
+university-of-tasmania	master-of-design	0	7c905d1a-a9a8-4f6a-a42e-93415e26c7ac	Master of Design	merge
+university-of-tasmania	master-of-economics	0	f8996624-161a-4896-abac-b9698fb04682	Master of Economics	merge
+university-of-tasmania	master-of-engineering-science	0	357cb7aa-12ca-4d82-99f2-1b30d2b54691	Master of Engineering Science	merge
+university-of-tasmania	master-of-environmental-studies	0	fafb9317-8061-4744-a680-59151dca48f9	Master of Environmental Studies	merge
+university-of-tasmania	master-of-fine-arts	0	f3f264e1-7ea6-4a3f-b938-44259a17558f	Master of Fine Arts	merge
+university-of-tasmania	master-of-laws	0	f9978ff0-3e92-4b3b-86f6-fe187eabd1a5	Master of Laws	merge
+university-of-tasmania	master-of-medical-science	0	1ad766ac-921d-4793-b463-dd64e8044c1e	Master of Medical Science	merge
+university-of-tasmania	master-of-music	0	e113bacb-08f7-4ff2-bdc3-9356a05e8232	Master of Music	merge
+university-of-tasmania	master-of-nursing	0	33f9a5fd-1dd4-4a30-96ec-1531cf0a3168	Master of Nursing	merge
+university-of-tasmania	master-of-pharmacy	0	3d739e94-12bc-4c69-b4e9-e852165e0db5	Master of Pharmacy	merge
+university-of-tasmania	master-of-philosophy-maritime-engineering	0	570255eb-32c4-465f-b72f-4d5e41ba2962	Master of Philosophy (Maritime Engineering)	merge
+university-of-tasmania	master-of-professional-engineering-specialisation	0	62e6c27b-dcd0-4945-b0cf-51abd00b8103	Master of Professional Engineering (Specialisation)	merge
+university-of-tasmania	master-of-science-computing	0	a7ea8b4b-ca21-4a89-bb90-3cb2da42cc2e	Master of Science (Computing)	merge
+university-of-tasmania	master-of-social-work	0	38bc4796-2c76-4d10-88c1-d3f79c30b504	Master of Social Work	merge
+university-of-tasmania	master-of-tourism-environmental-and-cultural-heritage	0	bf87e8c8-d558-4ed1-a594-486c2e041ea6	Master of Tourism, Environmental and Cultural Heritage	merge
+university-of-tasmania	university-pathway-program-fast-track	0	074128fb-f1ff-4280-bea8-030f5fd165b1	University Pathway Program - Fast Track	merge
+university-of-technology-sydney	bachelor-of-biomedical-science	0	6e67382b-124e-4f0e-8590-7b4a4680ebdf	Bachelor of Biomedical Science	merge
+university-of-technology-sydney	bachelor-of-engineering-honours-diploma-in-professional-engineering-practice	0	94a12d7a-a988-4134-9688-7fc7e5d43746	Bachelor of Engineering (Honours) Diploma in Professional Engineering Practice	merge
+university-of-the-sunshine-coast	associate-degree-in-business	26	f10584a3-698c-4a34-922d-b3bc2fe23676	Associate Degree in Business	merge
+university-of-the-sunshine-coast	bachelor-of-animal-ecology	29	58783e44-58ba-44b3-96ac-8b9d7f1a7749	Bachelor of Animal Ecology	merge
+university-of-the-sunshine-coast	bachelor-of-arts	36	61e90fad-51ca-408b-a6e7-2e2779fa7959	Bachelor of Arts	merge
+university-of-the-sunshine-coast	bachelor-of-biomedical-science	48	437bc1db-9f25-422e-aac9-2162721ae7db	Bachelor of Biomedical Science	merge
+university-of-the-sunshine-coast	bachelor-of-business	27	412d75f9-ef3f-4911-aec3-3adf716e9c96	Bachelor of Business	keep-had-impressions
+university-of-the-sunshine-coast	bachelor-of-computer-science	32	aac41a97-7044-4dd8-8c7f-9b849243df81	Bachelor of Computer Science	merge
+university-of-the-sunshine-coast	bachelor-of-criminology-and-justice	36	e2bba55d-2042-4c65-a902-814b6f0f9496	Bachelor of Criminology and Justice	keep-had-impressions
+university-of-the-sunshine-coast	bachelor-of-engineering-electrical-and-electronic-honours	30	28bf0a1f-0977-4783-a72d-e9bf9cfa9377	Bachelor of Engineering (Electrical and Electronic)(Honours)	merge
+university-of-the-sunshine-coast	bachelor-of-engineering-honours-civil-engineering	30	48d723ff-bba5-4b84-b3a6-0af0f954b4a6	Bachelor of Engineering (Honours) - Civil Engineering	keep-had-impressions
+university-of-the-sunshine-coast	bachelor-of-environmental-management	30	10ad31ec-6bf8-4085-96bf-ffd0eeb3d5f5	Bachelor of Environmental Management	merge
+university-of-the-sunshine-coast	bachelor-of-environmental-science	20	2e12919d-b220-452b-9315-e94cc167cbda	Bachelor of Environmental Science	merge
+university-of-the-sunshine-coast	bachelor-of-health-science	35	e7eff022-b601-4d36-a5c8-bc0b8395986b	Bachelor of Health Science	merge
+university-of-the-sunshine-coast	bachelor-of-human-services	29	c46abaae-a647-4642-81b4-f546ec49338b	Bachelor of Human Services	merge
+university-of-the-sunshine-coast	bachelor-of-information-and-communications-technology	28	5bc6d5a1-2207-4fd4-aae1-1a43d3b11850	Bachelor of Information and Communications Technology	merge
+university-of-the-sunshine-coast	bachelor-of-music	25	9208eeae-d2b2-4e2d-bfd8-b29ba2901865	Bachelor of Music	merge
+university-of-the-sunshine-coast	bachelor-of-nutrition	24	5d4cf3ec-06dc-4362-9531-a8023bcab364	Bachelor of Nutrition	merge
+university-of-the-sunshine-coast	bachelor-of-occupational-therapy-honours	46	a12f3b7a-7721-4ae9-b637-f90b2f776b50	Bachelor of Occupational Therapy (Honours)	merge
+university-of-the-sunshine-coast	bachelor-of-physiotherapy-honours	29	778e1c5e-07a8-4a5c-aad6-480556bd2f35	Bachelor of Physiotherapy (Honours)	merge
+university-of-the-sunshine-coast	bachelor-of-primary-education	17	9a00d048-e4d2-4e04-b98c-55c2bf3a249c	Bachelor of Primary Education	merge
+university-of-the-sunshine-coast	bachelor-of-psychology-honours	24	a04d436c-54be-46ca-bbd2-ecb410d78e8f	Bachelor of Psychology (Honours)	merge
+university-of-the-sunshine-coast	bachelor-of-recreation-and-outdoor-environmental-studies	26	35b29be7-f0bf-414f-b59f-e1a4da825f2c	Bachelor of Recreation and Outdoor Environmental Studies	merge
+university-of-the-sunshine-coast	bachelor-of-social-work	12	f3f50032-158a-4543-ab52-fe0637a53945	Bachelor of Social Work	merge
+university-of-the-sunshine-coast	bachelor-of-sports-studies	33	3bc5363d-36cc-4f36-a42e-1db0304a4935	Bachelor of Sports Studies	merge
+university-of-the-sunshine-coast	bachelor-of-urban-design-and-town-planning-honours	24	d2f50ab9-bdef-4e5e-9c6c-119a9700e7e1	Bachelor of Urban Design and Town Planning (Honours)	merge
+university-of-the-sunshine-coast	diploma-in-business	16	e8a24a8d-6857-41cd-b1c3-0d4b7891a418	Diploma in Business	merge
+university-of-the-sunshine-coast	diploma-in-business-innovation	23	7bf79102-1091-4fbc-8200-4e2057191d18	Diploma in Business Innovation	merge
+university-of-the-sunshine-coast	diploma-in-general-studies	18	b22cd303-cb84-4e9b-8c2d-61f1cac26f98	Diploma in General Studies	merge
+university-of-the-sunshine-coast	diploma-in-outdoor-environmental-studies	11	4a35d236-bdc9-4c47-92d3-1d26243d5854	Diploma in Outdoor Environmental Studies	merge
+university-of-the-sunshine-coast	graduate-certificate-in-business-research	44	70e0b342-8f97-4ffc-ad8f-932747674e94	Graduate Certificate in Business Research	merge
+university-of-the-sunshine-coast	graduate-certificate-in-management	39	5a65cb59-da9c-4f8f-b8f4-527881a6c5a7	Graduate Certificate in Management	merge
+university-of-the-sunshine-coast	master-of-business-administration	26	a775c121-75b7-48b2-836a-e0443967c7b0	Master of Business Administration	keep-had-impressions
+university-of-the-sunshine-coast	master-of-civil-engineering	42	c1ae539c-aba1-4702-9dce-a7bd316dc360	Master of Civil Engineering	merge
+university-of-the-sunshine-coast	master-of-climate-change-adaptation-by-research	48	22c61ea9-2dc8-4982-9143-ffa5a3986bb6	Master of Climate Change Adaptation by Research	merge
+university-of-the-sunshine-coast	master-of-creative-arts	42	32132acf-2235-467e-a68e-546776e05a79	Master of Creative Arts	merge
+university-of-the-sunshine-coast	master-of-dietetics-sports-nutrition	45	ff2d98e1-780e-46e6-aff5-a86012a2d1b6	Master of Dietetics (Sports Nutrition)	merge
+university-of-the-sunshine-coast	master-of-education	30	281f3780-33c2-4cbf-838e-b0b34fa7c919	Master of Education	merge
+university-of-the-sunshine-coast	master-of-engineering-professional	46	e2a7d713-2e9c-4d1b-bec8-2f15eafe8f44	Master of Engineering (Professional)	keep-had-impressions
+university-of-the-sunshine-coast	master-of-engineering-project-management	40	cb62c867-23b9-4907-a9fc-5b89b043383e	Master of Engineering Project Management	merge
+university-of-the-sunshine-coast	master-of-health-promotion	26	3dbdd006-927d-48a6-8bea-5e9ecddf4b23	Master of Health Promotion	keep-had-impressions
+university-of-the-sunshine-coast	master-of-international-business	26	b9f06c26-d77a-4937-86eb-098e57a098b2	Master of International Business	merge
+university-of-the-sunshine-coast	master-of-management	18	89cf436c-cbfa-4571-99d0-847af1d48342	Master of Management	merge
+university-of-the-sunshine-coast	master-of-mechanical-engineering	35	ceb80ee3-29cc-4b98-8d4c-14cb50ee60dc	Master of Mechanical Engineering	merge
+university-of-the-sunshine-coast	master-of-nursing-clinical-leadership	14	fa395ec3-0f93-43ea-9885-a6782ad7ba2c	Master of Nursing (Clinical Leadership)	merge
+university-of-the-sunshine-coast	master-of-professional-psychology	25	c15b8d1f-e21f-4d89-ab21-0df589ecf495	Master of Professional Psychology	keep-had-impressions
+university-of-the-sunshine-coast	master-of-renewable-energy-engineering	48	da2a241b-2ae9-4974-bf88-47b67f7d19fa	Master of Renewable Energy Engineering	merge
+university-of-the-sunshine-coast	master-of-science	14	5e24fb26-2d65-413f-af19-5af5deb4f197	Master of Science	merge
+university-of-the-sunshine-coast	master-of-social-work-qualifying	45	6b48f4d5-802f-447a-8c0b-4773739f20b5	Master of Social Work (Qualifying)	merge
+university-of-the-sunshine-coast	undergraduate-certificate-in-animal-ecology	47	53c575a3-86c9-4bf9-a2a7-d2e1f218df0c	Undergraduate Certificate in Animal Ecology	merge
+university-of-wollongong	associate-degree-in-business	0	4bcbb410-d2c2-4556-93fa-91f717fda63d	Associate Degree in Business	merge
+university-of-wollongong	bachelor-of-applied-analytics	0	344e1bc1-dc93-4278-9aa4-6166de9d4518	Bachelor of Applied Analytics	merge
+university-of-wollongong	bachelor-of-business-administration	0	2cf73f44-5881-45ce-9b54-e945cb86d7ab	Bachelor of Business Administration	merge
+university-of-wollongong	bachelor-of-conservation-biology-honours	0	d8c1e031-759a-4af1-919c-d1f0998a6d7e	Bachelor of Conservation Biology (Honours)	merge
+university-of-wollongong	bachelor-of-data-science-and-analytics	0	d907bb68-8718-44c5-bc01-a8d7e6d3cd6c	Bachelor of Data Science and Analytics	merge
+university-of-wollongong	bachelor-of-education-studies	0	6ed2958e-eb22-428f-8d2a-7bc2eb50c524	Bachelor of Education Studies	merge
+university-of-wollongong	bachelor-of-education-the-early-years	0	41e7e174-ea04-4a46-b6c7-c6b896cdfeb6	Bachelor of Education - The Early Years	merge
+university-of-wollongong	bachelor-of-geography	0	ec3a7f09-bda1-4613-b071-23afda9acd8f	Bachelor of Geography	merge
+university-of-wollongong	bachelor-of-health-and-physical-education	0	52bc46f0-4e60-4351-8086-68d52a196968	Bachelor of Health and Physical Education	merge
+university-of-wollongong	bachelor-of-health-science-indigenous-health	0	1ccb4469-be73-4cf4-bc51-c7f3f8a5888a	Bachelor of Health Science (Indigenous Health)	merge
+university-of-wollongong	bachelor-of-mathematics-and-finance-honours	0	4a72c402-f55b-4873-942e-55e1994cbfe5	Bachelor of Mathematics and Finance (Honours)	merge
+university-of-wollongong	bachelor-of-mathematics-education	0	dbb3f8ec-0a3a-4233-91a1-432c8f9ccd8f	Bachelor of Mathematics Education	merge
+university-of-wollongong	bachelor-of-medical-and-radiation-physics	0	a1833742-3567-4605-a87d-5ba8516be302	Bachelor of Medical and Radiation Physics	merge
+university-of-wollongong	bachelor-of-medical-and-radiation-physics-advanced-honours	0	08e868b5-5e55-4c27-8e6b-8af87da2beac	Bachelor of Medical and Radiation Physics Advanced (Honours)	merge
+university-of-wollongong	bachelor-of-neuroscience	0	e2a488d2-066a-4788-9829-b0b87534748a	Bachelor of Neuroscience	merge
+university-of-wollongong	bachelor-of-performance-and-theatre	0	dbcf7567-8448-4334-b385-4b85659bc897	Bachelor of Performance and Theatre	merge
+university-of-wollongong	bachelor-of-politics-philosophy-and-economics	0	1feb6c2c-8bcf-4dc6-b6a6-d472c8cd61fd	Bachelor of Politics, Philosophy and Economics	merge
+university-of-wollongong	bachelor-of-research	0	fdc3b2f3-4c8f-4767-86b3-75e4d08b7a7e	Bachelor of Research	merge
+university-of-wollongong	bachelor-of-research-2	0	d3189fff-2590-4358-b48c-185c9bb213d9	Bachelor of Research	merge
+university-of-wollongong	bachelor-of-science-advanced-honours	0	18095708-7f4d-4654-bb9c-e6e0a9144873	Bachelor of Science Advanced (Honours)	merge
+university-of-wollongong	bachelor-of-science-education	0	e5cfb9fc-b740-4469-b33c-049f8f432934	Bachelor of Science Education	merge
+university-of-wollongong	bachelor-of-science-honours	0	302955d5-1ed9-4790-a758-47165e5d5d82	Bachelor of Science (Honours)	merge
+university-of-wollongong	bachelor-of-sport	0	3eb593d3-ebf0-4d07-a04a-2ea897bd88c0	Bachelor of Sport	merge
+university-of-wollongong	bachelor-of-sustainability	0	03f5ccce-2645-466f-a897-4e05f8b482fb	Bachelor of Sustainability	merge
+university-of-wollongong	bachelor-of-sustainable-communities	0	818758a0-386e-4ef2-a673-4c767d9f0c01	Bachelor of Sustainable Communities	merge
+university-of-wollongong	bachelor-of-technology	0	71d7fa7a-f31f-47f0-8a58-f3226c1799c1	Bachelor of Technology	merge
+university-of-wollongong	diploma-in-business-administration	0	38b60617-fc0e-438f-a6b9-ad1dc3fabf69	Diploma in Business Administration	merge
+university-of-wollongong	diploma-of-arts-social-science-and-humanities	0	d59b759a-5ed0-4acc-90d6-7ec8120a4360	Diploma of Arts, Social Science and Humanities	merge
+university-of-wollongong	diploma-of-business-fast-track	0	63f49214-64d6-4743-b3df-f6178de5d06b	Diploma of Business (Fast Track)	merge
+university-of-wollongong	diploma-of-engineering	0	0f1c8f7a-34b1-4879-a420-b629ac557175	Diploma of Engineering	merge
+university-of-wollongong	diploma-of-information-technology	0	aed267a4-c420-47c9-afe5-d21615c86c73	Diploma of Information Technology	merge
+university-of-wollongong	diploma-of-science	0	fb3cc366-de68-4d34-9b95-d6b11b72ca39	Diploma of Science	merge
+university-of-wollongong	doctor-of-education	0	c13057e5-2f81-4d9d-a3a4-83639d83e240	Doctor of Education	merge
+university-of-wollongong	foundation-studies-2-sessions	0	bbb956bc-504c-4ba0-84d6-4ec2a5520ea3	Foundation Studies (2 Sessions)	merge
+university-of-wollongong	foundation-studies-extended	0	8e7cc6de-9154-4eaf-b329-3764273c71c5	Foundation Studies - Extended	merge
+university-of-wollongong	graduate-certificate-in-exercise-rehabilitation	0	3009b591-8ce1-42af-b00c-a4b2e5362662	Graduate Certificate in Exercise Rehabilitation	merge
+university-of-wollongong	graduate-certificate-in-health-research	0	a77efd14-0a62-4fde-8bb0-c4205752eb35	Graduate Certificate in Health Research	merge
+university-of-wollongong	graduate-certificate-in-mathematical-studies	0	1f34b506-b306-41e0-848c-0c2254751e3d	Graduate Certificate in Mathematical Studies	merge
+university-of-wollongong	graduate-certificate-in-nursing	0	fd182b0b-a162-4929-82a1-fdc22213790a	Graduate Certificate in Nursing	merge
+university-of-wollongong	graduate-certificate-in-nutrition	0	6f6b0b8a-3841-47c2-b816-269a51be7be5	Graduate Certificate in Nutrition	merge
+university-of-wollongong	graduate-certificate-in-research-studies	0	7afa9cec-dd2f-43b0-ab36-c44fc93f3e91	Graduate Certificate in Research Studies	merge
+university-of-wollongong	graduate-certificate-in-science-and-management	0	532c2536-2ee7-4706-a7ec-6a0c2d245fe0	Graduate Certificate in Science and Management	merge
+university-of-wollongong	graduate-certificate-in-science-communication	0	e1384ba1-d13b-4696-bfd0-9f9492f46e87	Graduate Certificate in Science Communication	merge
+university-of-wollongong	graduate-diploma-in-education-studies	0	462a4d25-cf4e-48d0-b622-f94a03f7cf92	Graduate Diploma in Education Studies	merge
+university-of-wollongong	graduate-diploma-in-international-relations	0	cd842cb0-3355-4d14-87ce-b98e13a1918d	Graduate Diploma in International Relations	merge
+university-of-wollongong	graduate-diploma-in-mathematical-studies	0	0359d1fc-52ff-4897-8c1f-faf04d1a324d	Graduate Diploma in Mathematical Studies	merge
+university-of-wollongong	master-of-business-administration-health	0	01f03831-6ebe-47b7-b09d-9161867187a4	Master of Business Administration Health	merge
+university-of-wollongong	master-of-conservation-biology	0	a80fd9b0-a0ef-40d2-a792-fe95ed2e4e84	Master of Conservation Biology	merge
+university-of-wollongong	master-of-engineering-science	0	fd03947d-454d-4d8c-8cd8-664aee8297e2	Master of Engineering Science	merge
+university-of-wollongong	master-of-financial-management	0	10a67c82-79a2-43da-86fc-fa935684484b	Master of Financial Management	merge
+university-of-wollongong	master-of-global-science-and-management	0	b327e570-d585-4fe0-86a7-16f2bdb20d35	Master of Global Science and Management	merge
+university-of-wollongong	master-of-health-informatics	0	d78b6069-b0c4-414a-9489-0192bfc3473c	Master of Health Informatics	merge
+university-of-wollongong	master-of-information-and-communication-technology-advanced	0	f6ef7324-5d46-415d-8092-65a35e86e57b	Master of Information and Communication Technology Advanced	merge
+university-of-wollongong	master-of-innovation-and-entrepreneurship	0	77dc2f73-ac9c-496e-adc8-9c8025534648	Master of Innovation and Entrepreneurship	merge
+university-of-wollongong	master-of-international-relations	0	228d9b8e-6446-45ad-85b9-8cef104731f3	Master of International Relations	merge
+university-of-wollongong	master-of-management	0	e830d263-ff0d-4663-b8da-c87286a1fc98	Master of Management	merge
+university-of-wollongong	master-of-philosophy	0	14b98082-d743-4ec3-9d4e-adb932596052	Master of Philosophy	merge
+university-of-wollongong	master-of-professional-computing	0	6490f79b-c707-42ff-9354-7792cd39c672	Master of Professional Computing	merge
+university-of-wollongong	master-of-research	0	e90a4bb5-55d1-45ee-95f4-c55b1e00391b	Master of Research	merge
+victoria-university	associate-degree-in-education-studies	0	f83786a6-6761-440a-aaf5-c7080152205a	Associate Degree in Education Studies	merge
+victoria-university	associate-degree-in-educational-studies	0	a0eb6871-f9ed-4ecc-b0e7-a1bafeb05124	Associate Degree in Educational Studies	merge
+victoria-university	bachelor-of-applied-science	0	b5915571-6267-4371-bc9d-a2a0158597a6	Bachelor of Applied Science	merge
+victoria-university	bachelor-of-building-design	0	69f7d788-6a98-4607-873f-3f2d6bbad582	Bachelor of Building Design	merge
+victoria-university	bachelor-of-commerce	0	32ac8d38-1835-41b8-b109-f84cbb3fa271	Bachelor of Commerce	merge
+victoria-university	bachelor-of-educational-studies	0	cebfe377-0836-4bfc-92d7-37a645904bd3	Bachelor of Educational Studies	merge
+victoria-university	bachelor-of-exercise-science-sport-practice	0	52c45ad5-d13e-4ce0-b175-bbc0418ba783	Bachelor of Exercise Science (Sport Practice)	merge
+victoria-university	bachelor-of-music	0	3a7c163f-e99b-4585-bf06-72ff91f9a071	Bachelor of Music	merge
+victoria-university	bachelor-of-psychological-studies-honours	0	20098666-356c-4f87-9aed-371773df8d4a	Bachelor of Psychological Studies (Honours)	merge
+victoria-university	bachelor-of-sport-coaching	0	eeab45d1-4dad-414d-9e24-e6caac24798a	Bachelor of Sport Coaching	merge
+victoria-university	diploma-of-applied-music	0	03d3b2da-0907-4b6b-a71d-91ba26d4a932	Diploma of Applied Music	merge
+victoria-university	diploma-of-applied-science	0	f677c0fc-d683-491c-b32a-8290fe523054	Diploma of Applied Science	merge
+victoria-university	diploma-of-arts	0	87762c2c-e664-4eef-b3c3-e4b7baa579f1	Diploma of Arts	merge
+victoria-university	diploma-of-biomedical-exercise-studies	0	143ba777-ac0a-4874-a94f-0e192843b302	Diploma of Biomedical Exercise Studies	merge
+victoria-university	diploma-of-biomedical-studies	0	f6146f21-94ed-47b7-8f0e-9b14733b3f15	Diploma of Biomedical Studies	merge
+victoria-university	diploma-of-building-studies	0	7de15b45-d3a0-428b-afe7-24985f068b5d	Diploma of Building Studies	merge
+victoria-university	diploma-of-building-surveying	0	7b1d7241-6ed3-445f-aee1-03be553b920c	Diploma of Building (Surveying)	merge
+victoria-university	diploma-of-business-studies	0	64c6745a-a2db-43a9-a842-c4ea18e8a2e1	Diploma of Business Studies	merge
+victoria-university	diploma-of-commerce-studies	0	bf74cbc1-b19c-4cd3-a5a0-5b0fe0456bf8	Diploma of Commerce Studies	merge
+victoria-university	diploma-of-community-studies	0	c43c3b51-52ad-42c4-bb03-80017ea0022a	Diploma of Community Studies	merge
+victoria-university	diploma-of-criminal-justice-and-psychological-studies	0	31dc832f-2541-4f2f-81e9-29d7415f4afc	Diploma of Criminal Justice and Psychological Studies	merge
+victoria-university	diploma-of-criminal-justice-studies	0	cf9f15af-fe79-4c24-8786-5051c17cb3f1	Diploma of Criminal Justice Studies	merge
+victoria-university	diploma-of-dermal-studies	0	bf6e2bab-2b1f-4b0d-9458-671983a503cc	Diploma of Dermal Studies	merge
+victoria-university	diploma-of-educational-studies	0	17a80632-6ff2-4822-9dc4-dee896213196	Diploma of Educational Studies	merge
+victoria-university	diploma-of-engineering	0	7e6fd6b1-d79c-4294-b478-f762116639b3	Diploma of Engineering	merge
+victoria-university	diploma-of-engineering-studies	0	6baa9298-793c-4a92-9ed8-c10e48301876	Diploma of Engineering Studies	merge
+victoria-university	diploma-of-health-science	0	5e45feda-8b87-4e9d-ab45-340870641171	Diploma of Health Science	merge
+victoria-university	diploma-of-human-nutrition	0	4e82d747-bdd0-4b95-8bbb-64a558abcc6f	Diploma of Human Nutrition	merge
+victoria-university	diploma-of-information-technology-studies	0	d8d79649-beee-4c36-94c1-fac2d5c2204f	Diploma of Information Technology Studies	merge
+victoria-university	diploma-of-music-studies	0	25b42da1-3c6b-466d-bf05-b7233f3567ca	Diploma of Music Studies	merge
+victoria-university	diploma-of-osteopathic-studies	0	29909ecc-f096-4eb5-b1fc-81e751cca7a3	Diploma of Osteopathic Studies	merge
+victoria-university	diploma-of-outdoor-leadership	0	925d3b19-2a15-4e33-a7ec-1c10cd997c8f	Diploma of Outdoor Leadership	merge
+victoria-university	diploma-of-paramedic-studies	0	b5fcf658-1578-4f7d-8dbb-939c4f21eddd	Diploma of Paramedic Studies	merge
+victoria-university	diploma-of-physical-education-and-sport-science-studies	0	b5b0ed99-38f4-452a-9203-66545374bb17	Diploma of Physical Education and Sport Science Studies	merge
+victoria-university	diploma-of-screen-media	0	7f76978e-65bb-4728-b6b3-2ee1b148939b	Diploma of Screen Media	merge
+victoria-university	diploma-of-sport-management-studies	0	29aa53c2-38c2-4c0f-aca8-8febd24dad3e	Diploma of Sport Management Studies	merge
+victoria-university	diploma-of-sport-science-studies	0	424c7345-c5c5-4a3b-8bd5-a3eff58fde44	Diploma of Sport Science Studies	merge
+victoria-university	doctor-of-business-administration	0	c2afeab4-0134-4e6d-b39f-95c1f39ea48c	Doctor of Business Administration	merge
+victoria-university	graduate-certificate-in-digital-media	0	b72667f7-12c3-4ec4-9598-633fd4f0a71f	Graduate Certificate in Digital Media	merge
+victoria-university	graduate-certificate-in-industrial-relations-and-human-resource-management	0	fee27f82-aac4-4328-80db-71c2658eda21	Graduate Certificate in Industrial Relations and Human Resource Management	merge
+victoria-university	graduate-certificate-in-management	0	ca5df265-be83-4ff6-a950-478384fdba41	Graduate Certificate in Management	merge
+victoria-university	graduate-certificate-in-organisational-change-management	0	1ce10b27-a278-453c-9392-f9b61566d129	Graduate Certificate in Organisational Change Management	merge
+victoria-university	graduate-certificate-in-sport-business	0	5db6ba29-96bc-4f8f-a918-d91bd6f3544d	Graduate Certificate in Sport Business	merge
+victoria-university	graduate-certificate-in-tesol	0	78fffa33-c835-4a8d-a9cc-a7867384ee47	Graduate Certificate in TESOL	merge
+victoria-university	graduate-certificate-in-tourism-and-destination-management	0	69cb4c87-12e4-456e-99bd-82c0bb7c2fdd	Graduate Certificate in Tourism and Destination Management	merge
+victoria-university	graduate-diploma-in-business-analytics	0	e369a3f9-acc3-4c78-887d-e7661ddcda63	Graduate Diploma in Business Analytics	merge
+victoria-university	graduate-diploma-in-digital-media	0	0fda6151-f3e0-43c0-8051-48d71a4dce5a	Graduate Diploma in Digital Media	merge
+victoria-university	graduate-diploma-in-educational-studies	0	f1258822-9ee8-4a09-beeb-9b94e9582ae5	Graduate Diploma in Educational Studies	merge
+victoria-university	graduate-diploma-in-global-public-health	0	cedaa2ef-b82b-4169-9f11-fe9061dd3e52	Graduate Diploma in Global Public Health	merge
+victoria-university	graduate-diploma-in-professional-accounting	0	ad29fb94-cf8b-48ff-a531-02a6fca3378a	Graduate Diploma in Professional Accounting	merge
+victoria-university	graduate-diploma-in-public-health-global-nutrition-and-active-living	0	740bf42f-bd89-4e06-b6dc-c1d7e61d4a6b	Graduate Diploma in Public Health (Global Nutrition and Active Living)	merge
+victoria-university	graduate-diploma-in-sport-business-and-integrity	0	eb36fded-7e6b-462f-96c5-aed5464e6f42	Graduate Diploma in Sport Business and Integrity	merge
+victoria-university	master-of-applied-science	0	5569a19e-66bb-4737-95af-5d4b01e62f22	Master of Applied Science	merge
+victoria-university	master-of-arts-research	0	2b38123a-a57d-42d4-a39b-daf9bc9f10fe	Master of Arts (Research)	merge
+victoria-university	master-of-business-research	0	9a10ca96-50f9-4f37-a413-8595290b5791	Master of Business (Research)	merge
+victoria-university	master-of-change-innovation-and-leadership	0	e5a38398-b78a-45eb-9007-2dadb8302270	Master of Change, Innovation and Leadership	merge
+victoria-university	master-of-digital-media	0	f2ec1fca-40b1-45d7-9c85-fddbafa6d5bd	Master of Digital Media	merge
+victoria-university	master-of-engineering-research	0	b7c7c51f-6e6e-405c-8200-586f4762d0a2	Master of Engineering (Research)	merge
+victoria-university	master-of-enterprise-resource-planning-management	0	aa0110a4-3ac4-4070-91f3-e14737ed2da8	Master of Enterprise Resource Planning Management	merge
+victoria-university	master-of-finance	0	c367e5c3-b725-4f93-869e-27ef55e525af	Master of Finance	merge
+victoria-university	master-of-health-science-osteopathy	0	60bacfbb-e1b8-4e7d-9b2e-9ef96ec7397e	Master of Health Science (Osteopathy)	merge
+victoria-university	master-of-human-resource-management	0	a31018ba-db1d-4111-8c94-743c7fe500c9	Master of Human Resource Management	merge
+victoria-university	master-of-industrial-relations-and-human-resource-management	0	e145a3c2-f962-4580-b52a-141a6a29a2e7	Master of Industrial Relations and Human Resource Management	merge
+victoria-university	master-of-laws-by-research	0	1b31c2a7-038a-4c6b-a65a-7059b66fe4d0	Master of Laws (by research)	merge
+victoria-university	master-of-management	0	727cbb70-a6d1-4a89-a37f-89e5afab1007	Master of Management	merge
+victoria-university	master-of-nursing-by-research	0	6f9072e7-2084-4dd0-a561-020efb282d6d	Master of Nursing (by Research)	merge
+victoria-university	master-of-public-health-global-nutrition-and-active-living	0	253c120a-2276-41b3-852e-eb0a8015afdd	Master of Public Health (Global Nutrition and Active Living)	merge
+victoria-university	master-of-research-practice	0	1da9c183-3850-4319-9264-bd062be2b1e6	Master of Research Practice	merge
+victoria-university	master-of-science-research	0	87ea34d8-75a2-488e-891b-106eb6118903	Master of Science (Research)	merge
+victoria-university	master-of-sport-business	0	b1243404-e7f1-4e3b-8427-67e6f9f4e5b6	Master of Sport Business	merge
+victoria-university	master-of-sport-business-and-integrity	0	e43b01f1-9e21-4804-b87e-f4b487c5802c	Master of Sport Business and Integrity	merge
+victoria-university	master-of-teaching-primary-education	0	cdf1652a-d089-4914-8db3-017deedbf7dc	Master of Teaching (Primary Education)	merge
+victoria-university	master-of-tourism-and-destination-management	0	c1f09b69-8e92-4260-8a9b-4add55492af8	Master of Tourism and Destination Management	merge
+victoria-university	master-of-tourism-hospitality-and-events-management	0	c579f7a6-628b-4fd0-bf62-b7747b83f135	Master of Tourism Hospitality and Events Management	merge
+victoria-university	undergraduate-certificate-in-entrepreneurial-mindset	0	28bdd3ee-8500-4493-9ca3-5e9d5c3ff1cb	Undergraduate Certificate in Entrepreneurial Mindset	merge
+western-sydney-university	bachelor-of-building-design-management	0	2583bf4d-e7a0-4214-bab5-8900faa3d7e3	Bachelor of Building Design Management	merge
+western-sydney-university	bachelor-of-construction-technology	0	066b9a18-cbad-4879-ac5c-4f73f22110e1	Bachelor of Construction Technology	merge
+western-sydney-university	bachelor-of-creative-industries	0	b5bd3e51-c30c-446a-b087-25a8e5eceda0	Bachelor of Creative Industries	merge
+western-sydney-university	bachelor-of-entrepreneurship-games-design-and-simulation	0	6b935c9e-1110-4709-a48f-dd3ab7157886	Bachelor of Entrepreneurship (Games Design and Simulation)	merge
+western-sydney-university	bachelor-of-graphic-design-pathway-to-teaching-secondary	0	0a20a794-dbfc-41da-9624-62c826eb9b70	Bachelor of Graphic Design (Pathway to Teaching Secondary)	merge
+western-sydney-university	bachelor-of-languages-and-linguistics	0	525bd352-a4d3-420e-bfaf-0e6263fb602d	Bachelor of Languages and Linguistics	merge
+western-sydney-university	bachelor-of-sport-development	0	bdc0f806-c714-4051-9ca7-b8d6f169d9cd	Bachelor of Sport Development	merge
+western-sydney-university	graduate-certificate-in-machine-learning	0	967dcfd9-365a-404a-8715-4b1588bc04f9	Graduate Certificate in Machine Learning	merge
+western-sydney-university	graduate-certificate-in-protected-cropping	0	b484a890-fb4b-49fe-b904-e13ae87833b4	Graduate Certificate in Protected Cropping	merge
+western-sydney-university	graduate-certificate-in-start-up-scale-up	0	82f740f2-ad2f-402f-b72c-0b4e7939b3ea	Graduate Certificate in Start Up Scale Up	merge
+western-sydney-university	graduate-certificate-in-statistical-programming	0	0b4a77e8-0a04-4aa5-9af1-3038a5460bb9	Graduate Certificate in Statistical Programming	merge
+western-sydney-university	graduate-diploma-in-protected-cropping	0	3220ec43-360a-4f4d-a217-a4e66ff5c6af	Graduate Diploma in Protected Cropping	merge
+western-sydney-university	graduate-diploma-in-start-up-scale-up	0	40fbd6d3-284d-43de-8555-8d4caf81f6b2	Graduate Diploma in Start Up Scale Up	merge
+western-sydney-university	master-of-business-operations-management	0	f27ff6dd-02ea-481f-aae6-aa391c7392d4	Master of Business (Operations Management)	merge
+western-sydney-university	master-of-information-governance	0	7ca9621d-f75b-4fc9-aec5-69a20fa64fc1	Master of Information Governance	merge
+western-sydney-university	master-of-management	0	7cfaf00d-cada-4a31-97af-cfa1649a1ac2	Master of Management	merge

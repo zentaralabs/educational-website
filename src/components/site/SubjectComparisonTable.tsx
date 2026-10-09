@@ -109,12 +109,16 @@ export function SubjectComparisonTable({
                   )}
                 </td>
                 <td className="px-3 py-3">
-                  <Link
-                    href={`/universities/${p.universitySlug}/programs/${p.slug}`}
-                    className="text-ink hover:text-status-open hover:underline"
-                  >
-                    {p.name}
-                  </Link>
+                  {p.hasOwnPage ? (
+                    <Link
+                      href={`/universities/${p.universitySlug}/programs/${p.slug}`}
+                      className="text-ink hover:text-status-open hover:underline"
+                    >
+                      {p.name}
+                    </Link>
+                  ) : (
+                    <span className="text-ink">{p.name}</span>
+                  )}
                 </td>
                 <td className="px-3 py-3 text-slate">{p.degreeLevel ?? "—"}</td>
                 <td className="px-3 py-3 whitespace-nowrap text-slate">

@@ -134,6 +134,10 @@ export default async function ProgramDetailPage({
     notFound();
   }
 
+  // Thin rows merged into the university's course list (migration 0040) have
+  // no page of their own; send the old URL to that list.
+  if (!program.has_own_page) permanentRedirect(`/universities/${slug}#programs`);
+
   // Occupations are linked by subject, so the raw list is the same on every
   // program in that subject. Keep only those the program's name evidences.
   const subjectOccupations = await getProgramOccupations(program.id);

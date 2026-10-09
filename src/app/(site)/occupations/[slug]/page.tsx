@@ -261,12 +261,16 @@ export default async function OccupationDetailPage({
                 <ul className="mt-2 flex flex-wrap gap-x-4 gap-y-1.5">
                   {rows.map((r) => (
                     <li key={r.program.slug}>
-                      <Link
-                        href={`/universities/${universitySlug}/programs/${r.program.slug}`}
-                        className="font-body text-sm text-slate underline decoration-slate/30 underline-offset-2 hover:text-ink hover:decoration-ink"
-                      >
-                        {r.program.name}
-                      </Link>
+                      {r.program.has_own_page ? (
+                        <Link
+                          href={`/universities/${universitySlug}/programs/${r.program.slug}`}
+                          className="font-body text-sm text-slate underline decoration-slate/30 underline-offset-2 hover:text-ink hover:decoration-ink"
+                        >
+                          {r.program.name}
+                        </Link>
+                      ) : (
+                        <span className="font-body text-sm text-slate">{r.program.name}</span>
+                      )}
                       {r.program.degree_level?.name && (
                         <span className="ml-1.5 font-utility text-[10px] text-slate/70">
                           {r.program.degree_level.name}

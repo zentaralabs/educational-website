@@ -593,7 +593,9 @@ export default async function UniversityProfilePage({
           )}
 
           {programs.length > 0 && (
-            <ProgramsList programs={programs} universitySlug={university.slug} />
+            <div id="programs" className="scroll-mt-24">
+              <ProgramsList programs={programs} universitySlug={university.slug} />
+            </div>
           )}
 
           <p className="mt-4 font-body text-sm text-slate">
